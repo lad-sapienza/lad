@@ -1,10 +1,11 @@
 ---
 title: Codifica digitale della cronologia
 autore: Julian Bogdani
-email: 'julian.bogdani@uniroma1.it'
 licenza: CC BY 4.0 International
 livello: avanzato
 sezione: riflessioni a appunti
+img: './b-dus-db.png'
+date: 01 Feb 2020
 ---
 
 ## Introduzione

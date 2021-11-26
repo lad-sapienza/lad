@@ -6,33 +6,62 @@ import { graphql } from "gatsby";
 import styled from "styled-components";
 
 //Bootstap
-import { Container, Row, Col } from "react-bootstrap";
+import { Row, Col } from "react-bootstrap";
 
 //Components
 import Layout from "../templates/Layout";
 import BlogPreview from "../components/BlogPreview";
+import AboutUs from "../components/AboutUs"
 
-const Index = ({ data }) => {
+const Index = ({data}) => {
+  
   return (
     <Layout>
-      <BlogPreview/>
+      <Wrapper>
+        <AboutUs></AboutUs>
+        <Row xs={1} md={3}>
+          {data.allMarkdownRemark.nodes.map((node, i) => (
+            <Col xs={6} md={6} key={i}>
+              <BlogPreview
+                author={node.frontmatter.autore}
+                excerpt={node.excerpt}
+                img={node.frontmatter.img.childImageSharp.gatsbyImageData}
+                title={node.frontmatter.title}
+              />
+            </Col>
+          ))}
+        </Row>
+      </Wrapper>
     </Layout>
   );
 };
 
+const Wrapper = styled.section`
+.row {
+  margin: 0 3rem 0 3rem;
+}
+`
+
 export const query = graphql`
   {
-    allMarkdownRemark(sort: { fields: id, order: DESC }, limit: 1) {
+    allMarkdownRemark(sort: { fields: id, order: DESC }, limit: 2) {
       nodes {
         frontmatter {
           autore
-          email
           licenza
           livello
           sezione
           title
+          date
           img {
-            absolutePath
+            childImageSharp {
+              gatsbyImageData(
+                layout: CONSTRAINED
+                quality: 80
+                width: 1500
+                formats: AUTO
+              )
+            }
           }
         }
         excerpt(pruneLength: 600)

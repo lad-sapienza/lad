@@ -1,5 +1,5 @@
 const { createFilePath } = require("gatsby-source-filesystem");
-/* const path = require("path"); */
+const path = require("path");
 exports.onCreateNode = ({ node, getNode, actions }) => {
   const { createNodeField } = actions;
   if (node.internal.type === "MarkdownRemark") {
@@ -12,7 +12,7 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
   }
 };
 
-/* exports.createPages = ({ graphql, actions }) => {
+exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions;
   return graphql(`
     {
@@ -31,7 +31,7 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
     result.data.allMarkdownRemark.edges.forEach((edge) => {
       createPage({
         path: edge.node.fields.slug,
-        component: path.resolve("./src/templates/SitesLayout.js"),
+        component: path.resolve("./src/templates/Layout.js"),
         context: {
           slug: edge.node.fields.slug,
           absolutePathRegex: `/^${path.dirname(edge.node.fileAbsolutePath)}/`,
@@ -39,7 +39,7 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
       });
     });
   });
-}; */
+};
 
 /* exports.createSchemaCustomization = ({ actions }) => {
   const { createFieldExtension, createTypes } = actions;

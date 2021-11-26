@@ -1,11 +1,11 @@
 ---
 title: Sistema di citazione bibliografica per GitHub e non solo
 autore: Julian Bogdani
-email: 'julian.bogdani@uniroma1.it'
 licenza: CC BY 4.0 International
 livello: medio
 sezione: notizie
-img: b-dus-db.png
+img: './b-dus-db.png'
+date: 01 Feb 2020
 ---
 
 ## Introduzione
