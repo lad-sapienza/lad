@@ -1,42 +1,62 @@
-import * as React from "react"
-import PropTypes from "prop-types"
-import { Link } from "gatsby"
+//React
+import React from 'react'
 
-const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
-    </div>
-  </header>
-)
+//Gatsby
+import { withPrefix } from "gatsby"
+import styled from 'styled-components'
 
-Header.propTypes = {
-  siteTitle: PropTypes.string,
+//Bootstrap
+import "bootstrap/dist/css/bootstrap.min.css"
+import { Navbar, Nav } from "react-bootstrap"
+
+//Images
+import LadBlu from "../../static/logos/lad-blue.png"
+
+//styles
+const Lad = {
+  width: "100px",
+  marginLeft: 50,
+};
+
+const Header = () => {
+    return (
+      <Wrapper>
+        <Navbar fixed="top" expand="lg">
+          <Navbar.Brand href={withPrefix(`/`)}>
+            <img
+              style={Lad}
+              src={LadBlu}
+              className="d-md-inline-block align-top d-none"
+              alt=""
+            />
+          </Navbar.Brand>
+          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Collapse
+            className="justify-content-center"
+            id="basic-navbar-nav"
+          >
+            <Nav>
+              <Nav.Link href={withPrefix(`/`)}>Home</Nav.Link>
+              <Nav.Link href={withPrefix(`/blog/`)}>Blog</Nav.Link>
+              <Nav.Link href={withPrefix(`/blog/`)}>Project</Nav.Link>
+              <Nav.Link href={withPrefix(`/team/`)}>Team</Nav.Link>
+            </Nav>
+          </Navbar.Collapse>
+        </Navbar>
+      </Wrapper>
+    );
 }
 
-Header.defaultProps = {
-  siteTitle: ``,
-}
+//styles
+const Wrapper = styled.section`
+  .nav-link:hover {
+   text-decoration-line: underline;
+  }
+  .nav-link {
+    font-family: "Cormorant Garamond", serif !important;
+    padding-right: 4rem !important;
+    color: #151241 !important;
+  }
+`;
 
 export default Header
