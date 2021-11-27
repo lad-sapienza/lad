@@ -5,7 +5,7 @@ licenza: CC BY 4.0 International
 livello: medio
 sezione: notizie
 img: './b-dus-db.png'
-date: 01 Feb 2020
+date: "22/08/2021"
 ---
 
 ## Introduzione

@@ -33,8 +33,9 @@ const Index = ({data}) => {
               <BlogPreview
                 author={node.frontmatter.autore}
                 excerpt={node.excerpt}
-                /* img={} */
+                date={node.date}
                 title={node.frontmatter.title}
+                readMore={node.fields.slug}
               />
             </Col>
           ))}

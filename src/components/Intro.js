@@ -19,7 +19,7 @@ const Intro = () => {
           </div>
           <div className="intro">
             <Row>
-              <Col md={{ span: 6, offset: 3 }}>
+              <Col md={{ span: 8, offset: 2 }}>
                 <p className="card-title">
                   LAD Laboratorio di Archeologia Digitale alla Sapienza promuove
                   la ricerca, la sperimentazione e la didattica delle tecnologie
@@ -39,7 +39,7 @@ const Intro = () => {
     );
 }
 const Wrapper = styled.section`
-  .col-md-6 {
+  .col-md-8 {
     border-left: solid;
     border-width: 0.1rem;
     border-color: rgb(145, 145, 145);
@@ -48,7 +48,6 @@ const Wrapper = styled.section`
     font-family: "Raleway", sans-serif;
     font-weight: 300;
     font-size: 1rem;
-    text-indent: 3%;
   }
   .intro {
     margin-top: 5rem;

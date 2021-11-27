@@ -69,7 +69,6 @@ const Wrapper = styled.section`
     font-family: "Raleway", sans-serif;
     font-weight: 300;
     font-size: 1rem;
-    text-indent: 3%;
   }
   .intro {
     margin-top: 5rem;

@@ -37,17 +37,17 @@ const AboutUs = () => {
                     Ricercatore di Metodologie della Ricerca Archeologica,
                     Dipartimento SARAS
                   </p>
+                  <p>
+                    <FaUniversity className="icon"></FaUniversity>
+                    <FaGithub className="icon"></FaGithub>
+                    <SiAcademia className="icon"></SiAcademia>
+                    <GiIceIris className="icon"></GiIceIris>
+                    <SiResearchgate className="icon"></SiResearchgate>
+                    <FaTwitter className="icon"></FaTwitter>
+                  </p>
                 </Card.Text>
               </Card.Text>
             </Card.Body>
-            <Card.Footer>
-              <FaUniversity className="icon"></FaUniversity>
-              <FaGithub className="icon"></FaGithub>
-              <SiAcademia className="icon"></SiAcademia>
-              <GiIceIris className="icon"></GiIceIris>
-              <SiResearchgate className="icon"></SiResearchgate>
-              <FaTwitter className="icon"></FaTwitter>
-            </Card.Footer>
           </Card>
           <Card>
             <Card.Img variant="top" src={Domizia} />
@@ -59,15 +59,15 @@ const AboutUs = () => {
                   Assegnista di ricerca di Metodologie della Ricerca
                   Archeologica, Dipartimento SARAS
                 </p>
+                <p>
+                  <FaGithub className="icon"></FaGithub>
+                  <SiAcademia className="icon"></SiAcademia>
+                  <GiIceIris className="icon"></GiIceIris>
+                  <SiResearchgate className="icon"></SiResearchgate>
+                  <FaTwitter className="icon"></FaTwitter>
+                </p>
               </Card.Text>
             </Card.Body>
-            <Card.Footer>
-              <FaGithub className="icon"></FaGithub>
-              <SiAcademia className="icon"></SiAcademia>
-              <GiIceIris className="icon"></GiIceIris>
-              <SiResearchgate className="icon"></SiResearchgate>
-              <FaTwitter className="icon"></FaTwitter>
-            </Card.Footer>
           </Card>
           <Card>
             <Card.Img variant="top" src={Paolo} />
@@ -79,13 +79,13 @@ const AboutUs = () => {
                   Assegnista di ricerca del progetto <em>PAThs</em>,
                   Dipartimento SARAS
                 </p>
+                <p>
+                  <FaGithub className="icon"></FaGithub>
+                  <SiAcademia className="icon"></SiAcademia>
+                  <SiResearchgate className="icon"></SiResearchgate>
+                </p>
               </Card.Text>
             </Card.Body>
-            <Card.Footer>
-              <FaGithub className="icon"></FaGithub>
-              <SiAcademia className="icon"></SiAcademia>
-              <SiResearchgate className="icon"></SiResearchgate>
-            </Card.Footer>
           </Card>
         </CardGroup>
       </Container>
@@ -95,16 +95,11 @@ const AboutUs = () => {
 
 const Wrapper = styled.section`
   .card {
-    margin-right: 1rem;
+    margin-right: 0.4rem;
     border: none;
-  }
-  .card-footer {
-    background-color: white !important;
-    border-color: rgb(145, 145, 145);
   }
   .card-group {
     padding-top: 3rem;
-    margin: 0 3rem 0 3rem;
   }
   .card-img {
     width: 100%;

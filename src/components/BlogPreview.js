@@ -3,7 +3,7 @@ import React from 'react'
 
 //Gatsby
 import styled from 'styled-components'
-import Title from './Title';
+import { Link } from 'gatsby';
 
 //Bootstrap
 import "bootstrap/dist/css/bootstrap.min.css"
@@ -14,17 +14,22 @@ const BlogPreview = (props) => {
   return (
     <Wrapper>
       <Container fluid="xl" className="divider">
-        <Card>
-          <Card.Img variant="top" src={props.img} />
-          <Card.Body>
-            <Row>
-              <Col className="record-1">{props.date}</Col>
-              <Col className="author">{props.author}</Col>
-            </Row>
-            <Card.Title>{props.title}</Card.Title>
-            <Card.Text>{props.excerpt}</Card.Text>
-          </Card.Body>
-        </Card>
+        <Link
+          to={props.readMore}
+          style={{ textDecoration: "none", color: "#212529" }}
+        >
+          <Card>
+            <Card.Img variant="top" src={props.img} />
+            <Card.Body>
+              <Row>
+                <Col className="date">{props.date}</Col>
+                <Col className="author">{props.author}</Col>
+              </Row>
+              <Card.Title>{props.title}</Card.Title>
+              <Card.Text>{props.excerpt}</Card.Text>
+            </Card.Body>
+          </Card>
+        </Link>
       </Container>
     </Wrapper>
   );
@@ -53,15 +58,16 @@ const Wrapper = styled.section`
     font-weight: 800;
     font-size: 1.8rem;
   }
-  .record-1 {
+  .date {
     font-family: "Raleway", sans-serif;
     font-weight: 100;
     font-size: 0.8rem;
-    text-align: left;
+    text-align: right;
     color: rgb(145, 145, 145);
   }
   .divider {
     padding-top: 5rem;
+    margin-bottom: 5rem;
   }
 
   .nav-link {

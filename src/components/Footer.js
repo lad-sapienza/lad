@@ -62,9 +62,14 @@ const Wrapper = styled.section`
     font-weight: 300;
     font-size: 0.9rem;
   }
+  .container {
+    border-top: solid;
+    border-width: 0.1rem;
+    border-color: rgb(145, 145, 145);
+  }
   .row {
-      margin-top: 6rem;
-      margin-bottom: 3rem;
+    margin-top: 6rem;
+    margin-bottom: 3rem;
   }
   .icon {
     margin-right: 1rem;

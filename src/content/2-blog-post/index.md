@@ -5,7 +5,7 @@ licenza: CC BY 4.0 International
 livello: avanzato
 sezione: riflessioni a appunti
 img: './b-dus-db.png'
-date: 01 Feb 2020
+date: "30/07/2021"
 ---
 
 ## Introduzione
