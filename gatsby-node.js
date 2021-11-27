@@ -31,7 +31,7 @@ exports.createPages = ({ graphql, actions }) => {
     result.data.allMarkdownRemark.edges.forEach((edge) => {
       createPage({
         path: edge.node.fields.slug,
-        component: path.resolve("./src/templates/Layout.js"),
+        component: path.resolve("./src/templates/PostLayout.js"),
         context: {
           slug: edge.node.fields.slug,
           absolutePathRegex: `/^${path.dirname(edge.node.fileAbsolutePath)}/`,

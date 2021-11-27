@@ -4,10 +4,11 @@ import React from "react";
 //Gatsby
 import { withPrefix } from "gatsby";
 import styled from "styled-components";
+import Title from "../components/Title"
 
 //Bootstrap
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 import { Card, CardGroup } from "react-bootstrap";
 
 import { FaGithub, FaTwitter, FaUniversity } from "react-icons/fa";
@@ -23,6 +24,7 @@ const AboutUs = () => {
   return (
     <Wrapper>
       <Container>
+        <Title title="Chi siamo" align="right" />
         <CardGroup className="card-group">
           <Card>
             <Card.Img variant="top" src={Julian} />
@@ -74,7 +76,8 @@ const AboutUs = () => {
               <Card.Text>
                 <p className="position">Tutor</p>
                 <p>
-                  Assegnista di ricerca del progetto PAThs, Dipartimento SARAS
+                  Assegnista di ricerca del progetto <em>PAThs</em>,
+                  Dipartimento SARAS
                 </p>
               </Card.Text>
             </Card.Body>
@@ -91,13 +94,6 @@ const AboutUs = () => {
 };
 
 const Wrapper = styled.section`
-  .author {
-    font-family: "Raleway", sans-serif;
-    font-weight: 100;
-    font-size: 1rem;
-    text-align: right;
-    color: rgb(145, 145, 145);
-  }
   .card {
     margin-right: 1rem;
     border: none;
@@ -107,6 +103,7 @@ const Wrapper = styled.section`
     border-color: rgb(145, 145, 145);
   }
   .card-group {
+    padding-top: 3rem;
     margin: 0 3rem 0 3rem;
   }
   .card-img {
@@ -123,7 +120,7 @@ const Wrapper = styled.section`
     font-size: 1.5rem;
   }
   .container {
-    padding-top: 10rem;
+    padding-top: 2rem;
   }
   .icon {
     margin-right: 1rem;

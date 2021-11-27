@@ -13,7 +13,7 @@ import { Card } from "react-bootstrap";
 const BlogPreview = (props) => {
   return (
     <Wrapper>
-      <Container fluid="xl" className="divider">
+      <Container className="divider">
         <Card>
           <Card.Img variant="top" src={props.img} />
           <Card.Body>
@@ -41,7 +41,6 @@ const Wrapper = styled.section`
   }
   .card {
     border: none;
-    flex-direction: row;
   }
   .card-text {
     font-family: "Raleway", sans-serif;
@@ -61,9 +60,8 @@ const Wrapper = styled.section`
     color: rgb(145, 145, 145);
   }
   .divider {
-    padding-top: 5rem;
+    padding-top: 10rem;
   }
-
   .nav-link {
     font-family: "Cormorant Garamond", serif !important;
     padding-right: 4rem !important;
