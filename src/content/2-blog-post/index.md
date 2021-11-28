@@ -1,4 +1,5 @@
 ---
+id: 1
 title: Codifica digitale della cronologia
 autore: Julian Bogdani
 licenza: CC BY 4.0 International

@@ -13,20 +13,15 @@ const Title = (props) => {
 
   return (
     <Wrapper>
-      <Container>
         <div className={`title ${align}`}>
           <h2>{title}</h2>
         </div>
-      </Container>
     </Wrapper>
   );
 };
 
 //styles
 const Wrapper = styled.section`
-  .container {
-    margin-right: 5rem;
-  }
   .title {
   }
   .title.right {

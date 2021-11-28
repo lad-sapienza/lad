@@ -1,4 +1,5 @@
 ---
+id: 2
 title: Sistema di citazione bibliografica per GitHub e non solo
 autore: Julian Bogdani
 licenza: CC BY 4.0 International
