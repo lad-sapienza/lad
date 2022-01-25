@@ -16,6 +16,7 @@ import Title from "../components/Title";
 import Intro from "../components/Intro";
 import WhatWeDo from "../components/WhatWeDo"
 
+
 const Index = ({data}) => {
   
   return (

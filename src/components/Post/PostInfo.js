@@ -3,30 +3,22 @@ import React from "react";
 
 //Gatsby
 import styled from "styled-components";
-import { Link } from "gatsby";
 
-//Bootstrap
-import "bootstrap/dist/css/bootstrap.min.css";
-import { Container, Row, Col } from "react-bootstrap";
-import { Card } from "react-bootstrap";
-
-//Components 
+//Components
+import { Container } from "react-bootstrap";
 import {GiFeather} from "react-icons/gi"
 
 const PostLayout = (props) => {
   return (
     <Wrapper>
-      <Container fluid="md" className="divider">
-          <Card>
-            <Card.Img variant="top" src={props.img} />
-            <Card.Body>
-              <Card.Title>{props.title}</Card.Title>
-              <Card.Title className="author">
-                <GiFeather className="icons" />
-                {props.author}
-              </Card.Title>
-            </Card.Body>
-          </Card>
+      <Container>
+        <div className="post-info">
+          <h1>{props.title}</h1>
+          <h2>
+            <GiFeather className="icon" />
+            {props.autore}
+          </h2>
+        </div>
       </Container>
     </Wrapper>
   );
@@ -34,47 +26,23 @@ const PostLayout = (props) => {
 
 //styles
 const Wrapper = styled.section`
-  .card-title.author {
-    font-family: "Cormorant Garamond", serif !important;
+  h1 {
+    font-family: "Cormorant Garamond", serif;
     font-weight: 800;
-    font-size: 1.5rem !important;
-    text-align: left;
+    font-size: 2.5rem;
+    text-align: center;
   }
-  .card {
-    border: none;
-    flex-direction: row;
-  }
-  .card-text {
-    font-family: "Raleway", sans-serif;
-    font-weight: 300;
-    font-size: 1rem;
-  }
-  .card-title {
-    font-family: "Cormorant Garamond", serif !important;
+  h2 {
+    font-family: "Cormorant Garamond", serif;
     font-weight: 800;
-    font-size: 1.8rem;
+    font-size: 1.5rem ;
+    text-align: center;
   }
-  .date {
-    font-family: "Raleway", sans-serif;
-    font-weight: 100;
-    font-size: 0.8rem;
-    text-align: right;
-    color: rgb(145, 145, 145);
+  .container {
+    margin: 5rem 0 3rem 0;
   }
-  .divider {
-    padding-top: 5rem;
-    margin-bottom: 5rem;
-  }
-  .icons {
+  .icon {
     margin-right: 1rem;
-  }
-  .nav-link {
-    font-family: "Cormorant Garamond", serif !important;
-    padding-right: 4rem !important;
-    color: #151241 !important;
-  }
-  .row {
-    padding-bottom: 1.5rem;
   }
 `;
 

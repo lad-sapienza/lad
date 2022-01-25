@@ -5,7 +5,7 @@ autore: Julian Bogdani
 licenza: CC BY 4.0 International
 livello: medio
 sezione: notizie
-img: './b-dus-db.png'
+img: b-dus-db.png
 date: "22/08/2021"
 ---
 
@@ -46,7 +46,7 @@ La guida completa al formato è disponibile a questo indirizzo: [https://github.
 
 Anche se non viene riportato nella documentazione ufficiale, CFF utilizza il formato [YAML](https://yaml.org/) per la scrittura dei dati.
 
-## Esempio di implementazione
+### Esempio di implementazione
 
 Per illustrare in maniera pratica e molto semplice un'implementazione di questa nuova funzionalità in GitHub si porta l'esempio della repository di Bradypus, il sistema di gestione di banche dati archeologiche sul Web, uno dei progetti principali del LAD.
 

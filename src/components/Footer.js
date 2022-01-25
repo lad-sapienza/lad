@@ -68,8 +68,8 @@ const Wrapper = styled.section`
     border-color: rgb(145, 145, 145);
   }
   .row {
-    margin-top: 6rem;
-    margin-bottom: 3rem;
+      margin-top: 6rem;
+      margin-bottom: 3rem;
   }
   .icon {
     margin-right: 1rem;
