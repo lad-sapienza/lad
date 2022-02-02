@@ -1,190 +1,141 @@
 //React
 import React from "react";
-
 //Gatsby
+import { graphql } from "gatsby";
 import styled from "styled-components";
 import { GatsbyImage } from "gatsby-plugin-image";
-
-//Bootstrap
-import "bootstrap/dist/css/bootstrap.min.css";
-import { Container, Row, Col } from "react-bootstrap";
-
 //Components
+import { Container } from "react-bootstrap";
+import { GiFeather } from "react-icons/gi";
+//Template
 import Layout from "../templates/Layout";
-import PostInfo from "../components/Post/PostInfo";
 
-const PostLayout = ({ data }) => {
-  const content = data.markdownRemark;
-  const images = data.allFile.edges;
+export default function BlogPost({ data }) {
+  const post = data.markdownRemark;
+
   return (
-    <>
-      <Layout>
-        <Container fluid="md" className="divider">
-          <PostInfo
-            title={content.frontmatter.title}
-            autore={content.frontmatter.autore}
-          />
-        </Container>
-        <Wrapper>
-          <Container>
-            <Row xs={1}>
-              {images.map((image, key) => (
-                <a
-                  className="image"
-                  href={image.node.childImageSharp.gatsbyImageData.src}
-                >
+    <Layout>
+      <Wrapper>
+        <div>
+          <Container className="post-container">
+            <div className="post-info">
+              <h1>{post.frontmatter.title}</h1>
+              <h2>
+                {post.frontmatter.autore}
+              </h2>
+              <h3>{post.frontmatter.date}</h3>
+            </div>
+            {post.frontmatter.img && (
+              <div className="post-image">
+                <figure>
                   <GatsbyImage
-                    image={image.node.childImageSharp.gatsbyImageData}
-                    style={{ margin: "3rem 0", height: "500px" }}
-                    imgStyle={{ objectFit: "scale-down" }}
-                    alt={image.node.base.split(".").slice(0, -1).join(".")}
+                    image={post.frontmatter.img.childImageSharp.gatsbyImageData}
+                    key={
+                      post.frontmatter.img.childImageSharp.gatsbyImageData.src
+                    }
+                    alt=""
                   />
-                  <p className="caption">
-                    {image.node.base.split(".").slice(0, -1).join(".")}
-                  </p>
-                </a>
-              ))}
-            </Row>
+                </figure>
+                <p>{post.frontmatter.img.base}</p>
+              </div>
+            )}
+            <div className="post-content">
+              <div dangerouslySetInnerHTML={{ __html: post.html }} />
+            </div>
           </Container>
-          <Container>
-            <Row xs={1}>
-              <Col sm={3}>
-                <ul className="ul-indice">
-                  {content.headings.map((h, i) => {
-                    return (
-                      <li key={i}>
-                        <a href={`#${h.id}`} className={`indice-h${h.depth}`}>
-                          {h.value}
-                        </a>
-                      </li>
-                    );
-                  })}
-                </ul>
-              </Col>
-              <Col sm={8}>
-                <div
-                  className="text"
-                  dangerouslySetInnerHTML={{ __html: content.html }}
-                ></div>
-              </Col>
-            </Row>
-          </Container>
-        </Wrapper>
-      </Layout>
-    </>
+        </div>
+      </Wrapper>
+    </Layout>
   );
-};
+}
 
 //styles
 const Wrapper = styled.section`
-  .image {
-    border-top: solid;
-    border-width: 0.1rem;
-    border-color: rgb(145, 145, 145);
+  body {
+    background-color: rgba(135, 135, 135) !important;
   }
-  .caption {
+  h1 {
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 800;
+    font-size: 3rem;
     text-align: center;
-    font-family: "Raleway", sans-serif;
-    font-weight: 300;
-    font-size: 1rem;
     font-style: italic;
   }
+  h2,
+  h3 {
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 800;
+    text-align: center;
+  }
+  img {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  table,
+  thead,
+  tbody,
+  td,
+  tr,
+  th {
+    border: 0.1px solid;
+    padding: 8px 8px 8px 8px;
+  }
 
-  .divider {
-    padding-top: 5rem;
-    margin-bottom: 5rem;
+  .icon {
+    margin-right: 1rem;
   }
-  .nav-link {
-    font-family: "Cormorant Garamond", serif !important;
-    padding-right: 4rem !important;
-    color: #151241 !important;
+  .post-image p {
+    text-align: center;
   }
-  .col {
-    font-family: "Cormorant Garamond", serif !important;
-    font-weight: 800;
-    font-size: 1.5rem !important;
+  .post-container {
+    margin-top: 3rem;
+  }
+  .post-content {
+    margin-left: 10rem;
+    margin-right: 10rem;
+  }
+  .post-content h2 {
+    font-size: 2.5rem;
+    margin-top: 1rem;
+    margin-bottom: 1.3rem;
+  }
+  .post-content h3 {
+    font-size: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  .post-content h2,
+  .post-content h3 {
     text-align: left;
-  }
-  .row {
-    padding-bottom: 1.5rem;
-  }
-  .indice-1,
-  .indice-2,
-  .indice-3,
-  .indice-4 {
-    font-family: "Cormorant Garamond", serif !important;
-    font-weight: 700;
-    font-size: 1rem;
-  }
-  .indice-1:hover,
-  .indice-2:hover,
-  .indice-3:hover,
-  .indice-4:hover {
-    font-family: "Cormorant Garamond", serif !important;
-    font-weight: 800;
-    font-size: 1rem;
-  }
-  .indice-h2 {
-    font-family: "Cormorant Garamond", serif !important;
-    font-weight: 800;
-    font-size: 1rem;
-  }
-  .text h2 {
-    font-family: "Cormorant Garamond", serif !important;
-    font-weight: 800;
-    font-size: 2rem !important;
-  }
-  .text p {
-    font-family: "Raleway", sans-serif;
-    font-weight: 300;
-    font-size: 1rem;
-  }
-  ul {
-    border-right: solid;
-    border-width: 0.1rem;
-    border-color: rgb(145, 145, 145);
   }
 `;
 
-export default PostLayout;
-
+//graphql
 export const query = graphql`
-  query ($slug: String!, $absolutePathRegex: String!) {
-    allFile(
-      filter: {
-        absolutePath: { regex: $absolutePathRegex }
-        extension: { regex: "/(jpg)|(png)|(tif)|(tiff)|(webp)|(jpeg)/" }
-      }
-      sort: { fields: base, order: ASC }
-    ) {
-      edges {
-        node {
-          base
-          name
-          childImageSharp {
-            gatsbyImageData(layout: CONSTRAINED, quality: 80, width: 1500)
-          }
-        }
-      }
-    }
+  query BlogQuery($slug: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
       html
-      headings {
-        value
-        depth
-        id
-      }
-      timeToRead
       frontmatter {
-        id
         autore
         date
+        id
         licenza
         livello
         sezione
         title
+        img {
+          base
+          childImageSharp {
+            gatsbyImageData(
+              placeholder: BLURRED
+              layout: CONSTRAINED
+              quality: 100
+              formats: [AUTO, AVIF, WEBP]
+            )
+          }
+        }
       }
-      excerpt
     }
   }
 `;

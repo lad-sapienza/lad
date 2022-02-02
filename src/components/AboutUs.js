@@ -2,7 +2,7 @@
 import React from "react";
 
 //Gatsby
-import { withPrefix } from "gatsby";
+import { Link} from "gatsby";
 import styled from "styled-components";
 import Title from "../components/Title"
 
@@ -16,7 +16,7 @@ import { SiAcademia, SiResearchgate } from "react-icons/si";
 import {GiIceIris} from "react-icons/gi"
 
 //Images
-import Domizia from "../../static/images/dderasmo.jpg"
+import Domizia from "../../static/images/d_erasmo.png"
 import Julian from "../../static/images/jbogdani.jpeg"
 import Paolo from "../../static/images/prosati.jpg"
 
@@ -24,8 +24,9 @@ const AboutUs = () => {
   return (
     <Wrapper>
       <Container>
-        <Title title="Chi siamo" align="right" />
+        <Title title="Chi siamo" align="left" />
         <CardGroup className="card-group">
+          {/* Julian */}
           <Card>
             <Card.Img variant="top" src={Julian} />
             <Card.Body>
@@ -38,17 +39,31 @@ const AboutUs = () => {
                     Dipartimento SARAS
                   </p>
                   <p>
-                    <FaUniversity className="icon"></FaUniversity>
-                    <FaGithub className="icon"></FaGithub>
-                    <SiAcademia className="icon"></SiAcademia>
-                    <GiIceIris className="icon"></GiIceIris>
-                    <SiResearchgate className="icon"></SiResearchgate>
-                    <FaTwitter className="icon"></FaTwitter>
+                    <Link to="https://www.lettere.uniroma1.it/users/julian-bogdani">
+                      <FaUniversity className="icon" />
+                    </Link>
+                    <Link to="https://github.com/jbogdani">
+                      <FaGithub className="icon" />
+                    </Link>
+                    <Link to="https://uniroma1.academia.edu/JulianBogdani">
+                      <SiAcademia className="icon" />
+                    </Link>
+                    <Link to="https://iris.uniroma1.it/browse?type=author&authority=rp62440&authority_lang=en">
+                      <GiIceIris className="icon" />
+                    </Link>
+                    <Link to="https://www.researchgate.net/profile/Julian-Bogdani">
+                      <SiResearchgate className="icon" />
+                    </Link>
+                    <Link to="https://twitter.com/JulianBogdani">
+                      <FaTwitter className="icon" />
+                    </Link>
                   </p>
                 </Card.Text>
               </Card.Text>
             </Card.Body>
           </Card>
+
+          {/* Domizia */}
           <Card>
             <Card.Img variant="top" src={Domizia} />
             <Card.Body>
@@ -60,15 +75,27 @@ const AboutUs = () => {
                   Archeologica, Dipartimento SARAS
                 </p>
                 <p>
-                  <FaGithub className="icon"></FaGithub>
-                  <SiAcademia className="icon"></SiAcademia>
-                  <GiIceIris className="icon"></GiIceIris>
-                  <SiResearchgate className="icon"></SiResearchgate>
-                  <FaTwitter className="icon"></FaTwitter>
+                  <Link to="https://github.com/ddomizia">
+                    <FaGithub className="icon" />
+                  </Link>
+                  <Link to="https://uniroma1.academia.edu/domiziaderasmo">
+                    <SiAcademia className="icon" />
+                  </Link>
+                  <Link to="https://iris.uniroma1.it/simple-search?query=Domizia+D%27Erasmo&needescape=1">
+                    <GiIceIris className="icon" />
+                  </Link>
+                  <Link to="https://www.researchgate.net/profile/Domizia_Derasmo">
+                    <SiResearchgate className="icon" />
+                  </Link>
+                  <Link to="https://twitter.com/DomiziaDErasmo">
+                    <FaTwitter className="icon" />
+                  </Link>
                 </p>
               </Card.Text>
             </Card.Body>
           </Card>
+
+          {/* Paolo */}
           <Card>
             <Card.Img variant="top" src={Paolo} />
             <Card.Body>
@@ -80,9 +107,15 @@ const AboutUs = () => {
                   Dipartimento SARAS
                 </p>
                 <p>
-                  <FaGithub className="icon"></FaGithub>
-                  <SiAcademia className="icon"></SiAcademia>
-                  <SiResearchgate className="icon"></SiResearchgate>
+                  <Link to="">
+                    <FaGithub className="icon" />
+                  </Link>
+                  <Link to="https://uniroma1.academia.edu/RosatiPaolo">
+                    <SiAcademia className="icon" />
+                  </Link>
+                  <Link to="https://www.researchgate.net/profile/Paolo-Rosati-2">
+                    <SiResearchgate className="icon" />
+                  </Link>
                 </p>
               </Card.Text>
             </Card.Body>

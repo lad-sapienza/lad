@@ -5,8 +5,8 @@ autore: Julian Bogdani
 licenza: CC BY 4.0 International
 livello: medio
 sezione: notizie
-img: b-dus-db.png
-date: "22/08/2021"
+img: ./b-dus-db.png
+date: "22-08-2021"
 ---
 
 ## Introduzione
@@ -15,7 +15,7 @@ Il 19 agosto 2021 [GitHub](https://github.com/), la più grande piattaforma per 
 
 GitHub è un'azienda che offre servizi agli sviluppatori, aiutando la loro collaborazione, la risoluzione di problemi comuni e lo sviluppo delle tecnologie _open source_. Per questo è stato creata una piattaforma che permette l'_hosting_ di codice open source e un sistema integrato di versionamento utilizzando [Git](https://git-scm.com/), il software _open source_ per la gestione delle versioni [ideato e svilupato da Linus Torvalds](https://en.wikipedia.org/wiki/Git). GitHub è stato acquistato nel 2018 da Microsoft, che ha [sborsato 7,5 miliardi di USD](https://news.microsoft.com/2018/06/04/microsoft-to-acquire-github-for-7-5-billion/) per entrare in possesso della piattforma attivamente frequentata da più di 29 milioni di sviluppatori.
 
-## Perchè è necessario un sistema di citazioni per il codice
+## Perché è necessario un sistema di citazioni per il codice
 
 La scrittura di codice, la programmazione ovvero il _coding_, è sempre più una pratica diffusa, entrata a fare parte della metodologia corrente di molte branchie della scienza. La creazione di algoritmi, la loro implementazione e applicazione, la creazione di interfaccie di visualizzzione e analisi dei dati sono a pieno titoli prodotti della ricerca che richiedono un importante investimento in termini di preparazione e di tempo di implementazione. Questo investimento, però, molto raramente (e quasi mai per quanto riguarda le scienze umanistiche) riceve un riconoscimento da parte dell'accademia. Si vengono a creare in questo modo delle vere e proprie barriere alle carriere dei ricercatori che investono parte importante dei loro sforzi in effettivi prodotti della ricerca che vengono ignorati ed esclusi dai sistemi di valutazione della _performance_ scientifica. Eppure lo sviluppo _open source_ è per definizione sottoposto al sistema di [revisione paritara](https://it.wikipedia.org/wiki/Revisione_paritaria), il principale strumento oggi di valutazione della ricerca.
 

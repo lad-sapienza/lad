@@ -1,25 +1,27 @@
-const { createFilePath } = require("gatsby-source-filesystem");
-const path = require("path");
+const path = require(`path`);
+const { createFilePath } = require(`gatsby-source-filesystem`);
+
 exports.onCreateNode = ({ node, getNode, actions }) => {
   const { createNodeField } = actions;
-  if (node.internal.type === "MarkdownRemark") {
-    const slug = createFilePath({ node, getNode, basePath: "content" });
+
+  if (node.internal.type === `MarkdownRemark`) {
+    const slug = createFilePath({ node, getNode, basePath: `pages` });
+
     createNodeField({
       node,
-      name: "slug",
+      name: `slug`,
       value: slug,
     });
   }
 };
 
-exports.createPages = ({ graphql, actions }) => {
+exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions;
-  return graphql(`
-    {
+  const result = await graphql(`
+    query {
       allMarkdownRemark {
         edges {
           node {
-            fileAbsolutePath
             fields {
               slug
             }
@@ -27,52 +29,18 @@ exports.createPages = ({ graphql, actions }) => {
         }
       }
     }
-  `).then((result) => {
-    result.data.allMarkdownRemark.edges.forEach((edge) => {
-      createPage({
-        path: edge.node.fields.slug,
-        component: path.resolve("./src/templates/PostLayout.js"),
-        context: {
-          slug: edge.node.fields.slug,
-          absolutePathRegex: `/^${path.dirname(edge.node.fileAbsolutePath)}/`,
-        },
-      });
+  `);
+
+  result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+    createPage({
+      path: node.fields.slug,
+      component: path.resolve(`./src/templates/PostLayout.js`),
+      context: {
+        // Data passed to context is available
+        // in page queries as GraphQL variables.
+        slug: node.fields.slug,
+        absolutePathRegex: `/^${path.dirname(edge.node.fileAbsolutePath)}/`,
+      },
     });
   });
 };
-
-/* exports.createSchemaCustomization = ({ actions }) => {
-  const { createFieldExtension, createTypes } = actions;
-  createFieldExtension({
-    name: `defaultArray`,
-    extend() {
-      return {
-        resolve(source, args, context, info) {
-          if (source[info.fieldName] == null) {
-            return [];
-          }
-          return source[info.fieldName];
-        },
-      };
-    },
-  });
-  const typeDefs = `
-    type Site implements Node {
-      siteMetadata: SiteMetadata
-    }
-    type SiteMetadata {
-      menuLinks: [MenuLinks]!
-    }
-    type MenuLinks {
-      name: String!
-      link: String!
-      subMenu: [SubMenu] @defaultArray
-    }
-    type SubMenu {
-      name: String
-      link: String
-    }
-  `;
-  createTypes(typeDefs);
-};
- */

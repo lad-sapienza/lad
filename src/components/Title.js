@@ -22,29 +22,18 @@ const Title = (props) => {
 
 //styles
 const Wrapper = styled.section`
-  .title {
+  h2 {
+    font-family: "Cormorant Garamond", serif !important;
+    font-size: 2.5rem !important;
+    /* text-transform: uppercase; */
+    font-weight: 900;
+    border-bottom: 1px solid;
   }
   .title.right {
     text-align: right;
-    font-family: "Cormorant Garamond", serif !important;
-    font-weight: 800;
-    font-size: 2rem;
-    border-top: solid;
-    border-bottom: solid;
-    border-width: 0.1rem;
-    border-color: rgb(145, 145, 145);
-    text-transform: uppercase;
   }
   .title.left {
     text-align: left;
-    font-family: "Cormorant Garamond", serif !important;
-    font-weight: 800;
-    font-size: 2rem;
-    border-top: solid;
-    border-bottom: solid;
-    border-width: 0.1rem;
-    border-color: rgb(145, 145, 145);
-    text-transform: uppercase;
   }
 `;
 
