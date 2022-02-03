@@ -1,10 +1,6 @@
-//React
+//import
 import React from "react";
-
-//Gatsby
 import styled from "styled-components";
-
-import { Container } from "react-bootstrap";
 
 //markup
 const Title = (props) => {
@@ -25,7 +21,6 @@ const Wrapper = styled.section`
   h2 {
     font-family: "Cormorant Garamond", serif !important;
     font-size: 2.5rem !important;
-    /* text-transform: uppercase; */
     font-weight: 900;
     border-bottom: 1px solid;
   }

@@ -1,9 +1,7 @@
-//React
+//import
 import React from 'react'
-//Gatsby
 import styled from 'styled-components'
 import { Link } from 'gatsby';
-//Bootstrap
 import "bootstrap/dist/css/bootstrap.min.css"
 import { Container, Card } from "react-bootstrap";
 

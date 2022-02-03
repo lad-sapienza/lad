@@ -1,34 +1,24 @@
-//React
+//import
 import React from "react";
-
-//Gatsby
-import { Link} from "gatsby";
+import { Link } from "gatsby";
 import styled from "styled-components";
-import Title from "../components/Title"
-
-//Bootstrap
-import "bootstrap/dist/css/bootstrap.min.css";
-import { Container } from "react-bootstrap";
-import { Card, CardGroup } from "react-bootstrap";
-
+//components
+import Title from "./title";
+//other
+import { Container, Card, CardGroup } from "react-bootstrap";
 import { FaGithub, FaTwitter, FaUniversity } from "react-icons/fa";
 import { SiAcademia, SiResearchgate } from "react-icons/si";
-import {GiIceIris} from "react-icons/gi"
-
-//Images
-import Domizia from "../../static/images/d_erasmo.png"
-import Julian from "../../static/images/jbogdani.jpeg"
-import Paolo from "../../static/images/prosati.jpg"
+import { GiIceIris } from "react-icons/gi";
 
 const AboutUs = () => {
   return (
     <Wrapper>
       <Container>
         <Title title="Chi siamo" align="left" />
-        <CardGroup className="card-group">
+        <CardGroup>
           {/* Julian */}
           <Card>
-            <Card.Img variant="top" src={Julian} />
+            <Card.Img variant="top" src="images/jbogdani.jpeg" />
             <Card.Body>
               <Card.Title>Julian Bogdani</Card.Title>
               <Card.Text>
@@ -65,7 +55,7 @@ const AboutUs = () => {
 
           {/* Domizia */}
           <Card>
-            <Card.Img variant="top" src={Domizia} />
+            <Card.Img variant="top" src="images/d_erasmo.png" />
             <Card.Body>
               <Card.Title>Domizia D'Erasmo</Card.Title>
               <Card.Text>
@@ -97,7 +87,7 @@ const AboutUs = () => {
 
           {/* Paolo */}
           <Card>
-            <Card.Img variant="top" src={Paolo} />
+            <Card.Img variant="top" src="images/prosati.jpg" />
             <Card.Body>
               <Card.Title>Paolo Rosati</Card.Title>
               <Card.Text>
@@ -131,12 +121,6 @@ const Wrapper = styled.section`
     margin-right: 0.4rem;
     border: none;
   }
-  .card-group {
-    padding-top: 3rem;
-  }
-  .card-img {
-    width: 100%;
-  }
   .card-text p {
     font-family: "Raleway", sans-serif;
     font-weight: 300;
@@ -146,9 +130,6 @@ const Wrapper = styled.section`
     font-family: "Cormorant Garamond", serif !important;
     font-weight: 800;
     font-size: 1.5rem;
-  }
-  .container {
-    padding-top: 2rem;
   }
   .icon {
     margin-right: 1rem;

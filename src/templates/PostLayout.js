@@ -1,15 +1,12 @@
-//React
+//import
 import React from "react";
-//Gatsby
 import { graphql } from "gatsby";
 import styled from "styled-components";
 import { GatsbyImage } from "gatsby-plugin-image";
-//Components
 import { Container } from "react-bootstrap";
-import { GiFeather } from "react-icons/gi";
-//Template
 import Layout from "../templates/Layout";
 
+//markup
 export default function BlogPost({ data }) {
   const post = data.markdownRemark;
 
@@ -117,8 +114,9 @@ export const query = graphql`
     markdownRemark(fields: { slug: { eq: $slug } }) {
       html
       frontmatter {
+        date(formatString: "YYYY, MMM DD")
+        categoria
         autore
-        date
         id
         licenza
         livello

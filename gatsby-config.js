@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
     title: `LAD`,
-    description: `Laboratorio di archeologia digitale`,
-    author: `@ddomizia`,
+    description: `Laboratorio di Archeologia Digitale`,
+    author: `LAD team`,
     siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
   },
   plugins: [
@@ -10,6 +10,7 @@ module.exports = {
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
+    `gatsby-transformer-remark`,
     `gatsby-transformer-sharp`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -41,10 +42,9 @@ module.exports = {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "markdown",
-        path: `${__dirname}/src/content/`,
+        path: `${__dirname}/posts/`,
       },
     },
-    `gatsby-transformer-remark`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {

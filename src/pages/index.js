@@ -1,22 +1,17 @@
-//React
+//import
 import React from "react";
-//Gatsby
 import { graphql } from "gatsby";
 import styled from "styled-components";
-//Bootstap
-import "bootstrap/dist/css/bootstrap.min.css";
-import { Row, Col, Container, Card } from "react-bootstrap";
-//Components
-import AboutUs from "../components/AboutUs"
-import Title from "../components/Title";
-//Template
+//components
+import Persone from "../components/team"
+import Title from "../components/title";
 import Layout from "../templates/Layout";
-import BlogPreview from "../components/BlogPreview";
+import BlogPreview from "../components/blogpost";
+//others
+import { Row, Col, Container } from "react-bootstrap";
 
-//Markup
+//markup
 const Index = ({data}) => {
-
-const posts = data.allMarkdownRemark.nodes;
   
   return (
     <Layout>
@@ -43,7 +38,7 @@ const posts = data.allMarkdownRemark.nodes;
 
               {/* A proposito di noi */}
               <section>
-                <AboutUs></AboutUs>
+                <Persone></Persone>
               </section>
 
               {/* Che cosa facciamo */}
@@ -88,12 +83,12 @@ const posts = data.allMarkdownRemark.nodes;
 
             </Col>
 
+            {/* Ultimi articoli */}
             <Col sm={4}>
 
               <Container>
                 <Title title="Ultimi articoli" align="left" />
               </Container>
-              
               {data.allMarkdownRemark.nodes.map((node, i) => (
                 <BlogPreview
                   key={i}
@@ -102,11 +97,10 @@ const posts = data.allMarkdownRemark.nodes;
                   date={node.frontmatter.date}
                   title={node.frontmatter.title}
                   readMore={node.fields.slug}
-  
                 />
               ))}
-            </Col>
 
+            </Col>
           </Row>
         </Container>
       </Wrapper>
@@ -114,7 +108,7 @@ const posts = data.allMarkdownRemark.nodes;
   );
 };
 
-//Style
+//style
 const Wrapper = styled.section`
   .row {
     margin: 0 3rem 0 3rem;
@@ -132,18 +126,19 @@ const Wrapper = styled.section`
   }
 `;
 
-//GraphQL
+//graphQL
 export const query = graphql`
   {
     allMarkdownRemark(
       sort: { fields: frontmatter___title, order: ASC }
       limit: 4
+      filter: { frontmatter: { categoria: { eq: "blog" } } }
     ) {
       nodes {
         excerpt(pruneLength: 400)
         frontmatter {
           autore
-          date
+          date(formatString: "YYYY, MMM DD")
           id
           licenza
           livello

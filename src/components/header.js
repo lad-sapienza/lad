@@ -1,33 +1,42 @@
-//React
+//import
 import React from 'react'
-//Gatsby
 import { withPrefix } from "gatsby"
 import styled from 'styled-components'
-//Bootstrap
-import "bootstrap/dist/css/bootstrap.min.css"
 import { Navbar, Nav } from "react-bootstrap"
-//Images
-import LadBlu from "../../static/logos/lad-blue.png"
 
-//Styles
+//styles
 const Lad = {
   width: "100px",
   marginLeft: 50,
 };
+const Sapienza = {
+  width: "200px",
+  marginLeft: 40,
+};
 
-//Markup
+//markup
 const Header = () => {
     return (
       <Wrapper>
-        <Navbar expand="lg">
+        <Navbar className="intestazione-loghi" expand="lg">
           <Navbar.Brand href={withPrefix(`/`)}>
             <img
-              style={Lad}
-              src={LadBlu}
+              style={Sapienza}
+              src="logos/sapienza.png"
               className="d-md-inline-block align-top d-none"
-              alt=""
+              alt="logo sapienza"
             />
           </Navbar.Brand>
+          <Navbar.Brand className="" href={withPrefix(`/`)}>
+            <img
+              style={Lad}
+              src="logos/lad-blue.png"
+              className="d-md-inline-block align-top d-none"
+              alt="logo LAD"
+            />
+          </Navbar.Brand>
+        </Navbar>
+        <Navbar className="navbar-lad" expand="lg">
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse
             className="justify-content-center"
@@ -36,8 +45,8 @@ const Header = () => {
             <Nav>
               <Nav.Link href={withPrefix(`/`)}>Home</Nav.Link>
               <Nav.Link href={withPrefix(`/blog/`)}>Blog</Nav.Link>
-              <Nav.Link href={withPrefix(`/blog/`)}>Ricerca</Nav.Link>
-              <Nav.Link href={withPrefix(`/team/`)}>Didattica</Nav.Link>
+              <Nav.Link href={withPrefix(`/ricerca/`)}>Ricerca</Nav.Link>
+              <Nav.Link href={withPrefix(`/didattica/`)}>Didattica</Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Navbar>
@@ -45,14 +54,17 @@ const Header = () => {
     );
 }
 
-//Styles
+//styles
 const Wrapper = styled.section`
+  .navbar-lad.navbar {
+    background-color: rgba(247,246,249) !important;
+  }
   .nav-link:hover {
-   text-decoration-line: underline;
+    text-decoration-line: underline;
   }
   .nav-link {
     font-family: "Cormorant Garamond", serif !important;
-    font-size: 1.3rem!important;
+    font-size: 1.3rem !important;
     padding-right: 4rem !important;
     color: #151241 !important;
   }

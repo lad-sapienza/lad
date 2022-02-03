@@ -1,12 +1,13 @@
 ---
 id: 2
 title: Sistema di citazione bibliografica per GitHub e non solo
+categoria: blog
 autore: Julian Bogdani
 licenza: CC BY 4.0 International
 livello: medio
 sezione: notizie
 img: ./b-dus-db.png
-date: "22-08-2021"
+date: 2021-08-22
 ---
 
 ## Introduzione

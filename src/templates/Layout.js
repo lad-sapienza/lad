@@ -2,8 +2,8 @@
 import React from "react";
 
 //Components
-import Header from "../components/Header";
-import Footer from "../components/Footer";
+import Header from "../components/header";
+import Footer from "../components/footer";
 
 
 //markup
