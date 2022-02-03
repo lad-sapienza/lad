@@ -26,7 +26,7 @@ const AboutUs = () => {
                   <p className="position">Responsabile del laboratorio</p>
                   <p>
                     Ricercatore di Metodologie della Ricerca Archeologica,
-                    Dipartimento SARAS
+                    Dip. SARAS
                   </p>
                   <p>
                     <Link to="https://www.lettere.uniroma1.it/users/julian-bogdani">
@@ -62,7 +62,7 @@ const AboutUs = () => {
                 <p className="position">Tutor</p>
                 <p>
                   Assegnista di ricerca di Metodologie della Ricerca
-                  Archeologica, Dipartimento SARAS
+                  Archeologica, Dip. SARAS
                 </p>
                 <p>
                   <Link to="https://github.com/ddomizia">
@@ -94,7 +94,7 @@ const AboutUs = () => {
                 <p className="position">Tutor</p>
                 <p>
                   Assegnista di ricerca del progetto <em>PAThs</em>,
-                  Dipartimento SARAS
+                  Dip. SARAS
                 </p>
                 <p>
                   <Link to="">
@@ -136,15 +136,20 @@ const Wrapper = styled.section`
     font-family: "Cormorant Garamond", serif !important;
     font-weight: 800;
     font-size: 1.5rem;
+    text-align: center;
   }
   .icon {
     margin-right: 1rem;
   }
-  .position {
+  p .position {
     font-family: "Cormorant Garamond", serif !important;
     font-weight: 800;
     font-style: italic;
-    font-size: 1.2rem !important;
+    font-size: 1rem !important;
+  }
+  p {
+    font-size: 0.8rem !important;
+    text-align: center;
   }
 `;
 
