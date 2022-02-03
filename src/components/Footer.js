@@ -1,12 +1,12 @@
 //import
 import React from "react";
-import { withPrefix } from "gatsby";
 import styled from "styled-components";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Container, Row, Col } from "react-bootstrap";
-import { FaGithub, FaTwitter, FaUniversity } from "react-icons/fa";
+import { FaGithub, FaTwitter} from "react-icons/fa";
 import { SiAcademia, SiResearchgate } from "react-icons/si";
 import {GiIceIris} from "react-icons/gi"
+import LAD from "../../static/logos/lad-blue.png";
 
 const Footer = () => {
     return (
@@ -16,7 +16,7 @@ const Footer = () => {
             <Row>
               <Col>
                 <img
-                  src="logos/lad-blue.png"
+                  src={LAD}
                   className="d-md-inline-block align-top d-none"
                   alt="logo LAD"
                 />

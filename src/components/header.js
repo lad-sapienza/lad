@@ -3,13 +3,15 @@ import React from 'react'
 import { withPrefix } from "gatsby"
 import styled from 'styled-components'
 import { Navbar, Nav } from "react-bootstrap"
+import Sapienza from "../../static/logos/sapienza.png";
+import LAD from "../../static/logos/lad-blue.png"
 
 //styles
-const Lad = {
+const LadLogo = {
   width: "100px",
   marginLeft: 50,
 };
-const Sapienza = {
+const SapLogo = {
   width: "200px",
   marginLeft: 40,
 };
@@ -18,19 +20,19 @@ const Sapienza = {
 const Header = () => {
     return (
       <Wrapper>
-        <Navbar className="intestazione-loghi" expand="lg">
+        <Navbar expand="lg">
           <Navbar.Brand href={withPrefix(`/`)}>
             <img
-              style={Sapienza}
-              src="logos/sapienza.png"
+              style={SapLogo}
+              src={Sapienza}
               className="d-md-inline-block align-top d-none"
               alt="logo sapienza"
             />
           </Navbar.Brand>
-          <Navbar.Brand className="" href={withPrefix(`/`)}>
+          <Navbar.Brand href={withPrefix(`/`)}>
             <img
-              style={Lad}
-              src="logos/lad-blue.png"
+              style={LadLogo}
+              src={LAD}
               className="d-md-inline-block align-top d-none"
               alt="logo LAD"
             />
