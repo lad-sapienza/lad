@@ -17,30 +17,32 @@ const Ricerca = ({data}) => {
           return (
             <Container>
               <Row>
-                <Col>
-                  {node.frontmatter.img &&
-                    node.frontmatter.img.childImageSharp &&
-                    node.frontmatter.img.childImageSharp.gatsbyImageData && (
-                      <Link to={node.fields.slug} className="post-thumbnail">
-                        <GatsbyImage
-                          image={
-                            node.frontmatter.img.childImageSharp.gatsbyImageData
-                          }
-                          className="page-image"
-                          key={
-                            node.frontmatter.img.childImageSharp.gatsbyImageData
-                              .src
-                          }
-                          alt=""
-                        />
-                      </Link>
-                    )}
-                </Col>
-                <Col>
-                  <h2>{node.frontmatter.title}</h2>
-                  <p>{node.timeToRead} minuti di lettura</p>
-                  <p>{node.excerpt}</p>
-                </Col>
+                  <Col xs={2}>
+                    {node.frontmatter.img &&
+                      node.frontmatter.img.childImageSharp &&
+                      node.frontmatter.img.childImageSharp.gatsbyImageData && (
+                        <Link to={node.fields.slug}>
+                          <GatsbyImage
+                            image={
+                              node.frontmatter.img.childImageSharp
+                                .gatsbyImageData
+                            }
+                            key={
+                              node.frontmatter.img.childImageSharp
+                                .gatsbyImageData.src
+                            }
+                            alt={node.frontmatter.img.base}
+                          />
+                        </Link>
+                      )}
+                  </Col>
+                  <Col xs={12} md={10}>
+                    <Link to={node.fields.slug}>
+                      <h2>{node.frontmatter.title}</h2>
+                      <p>{node.timeToRead} minuti di lettura</p>
+                      <p>{node.excerpt}</p>
+                    </Link>
+                  </Col>
               </Row>
             </Container>
           );})}
@@ -50,10 +52,15 @@ const Ricerca = ({data}) => {
 
   //style
 const Wrapper = styled.section`
+  a,
+  a:hover {
+    text-decoration: none !important;
+    color: currentColor;
+  }
   .container {
-    margin: 3rem 3rem;
-    margin-left: 5rem;
-    margin-right: 5rem;
+    margin: auto !important;
+    margin-bottom: 3rem !important;
+    margin-top: 3rem !important;
   }
 `;
 
@@ -75,11 +82,13 @@ export const query = graphql`
             categoria
             title
             img {
+              base
               childImageSharp {
                 gatsbyImageData(
                   placeholder: BLURRED
-                  layout: CONSTRAINED
+                  layout: FULL_WIDTH
                   formats: [AUTO, AVIF, WEBP]
+                  quality: 100
                 )
               }
             }

@@ -17,7 +17,7 @@ const Index = ({data}) => {
     <Layout>
       <Wrapper>
         <Container>
-          <Row>
+          <Row className="index">
             <Col className="col-intro" sm={8}>
 
              {/*  Introduzione */}
@@ -87,7 +87,7 @@ const Index = ({data}) => {
             <Col sm={4}>
 
               <Container>
-                <Title title="Ultimi articoli" align="left" />
+                <Title title="Ultime notizie" align="left" />
               </Container>
               {data.allMarkdownRemark.nodes.map((node, i) => (
                 <BlogPreview
@@ -110,8 +110,16 @@ const Index = ({data}) => {
 
 //style
 const Wrapper = styled.section`
-  .row {
-    margin: 0 3rem 0 3rem;
+  a {
+    text-decoration: none !important;
+    color: currentColor;
+  }
+  a:hover {
+    text-decoration: none !important;
+    color: rgba(21,71,254,0.7);
+  }
+  .index {
+    margin: auto !important;
   }
   .container {
     padding-top: 2rem;
@@ -121,8 +129,7 @@ const Wrapper = styled.section`
   }
   .col.col-intro {
     margin-bottom: 0;
-
-    border-right: 1px solid!important;
+    border-right: 1px solid !important;
   }
 `;
 

@@ -6,7 +6,7 @@ import styled from "styled-components";
 //components
 import Layout from "../templates/Layout";
 //others
-import { Row, Col, Container} from "react-bootstrap";
+import { Row, Col, Container } from "react-bootstrap";
 
 const Ricerca = ({ data }) => {
   const posts = data.allMarkdownRemark.edges;
@@ -75,7 +75,7 @@ export const query = graphql`
   {
     allMarkdownRemark(
       sort: { fields: frontmatter___title, order: DESC }
-      filter: { frontmatter: { categoria: { eq: "blog" } } }
+      filter: { frontmatter: { categoria: { eq: "didattica" } } }
     ) {
       edges {
         node {
