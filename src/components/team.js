@@ -117,6 +117,12 @@ const AboutUs = () => {
 };
 
 const Wrapper = styled.section`
+  img {
+    filter: grayscale(100%);
+  }
+  img:hover {
+    filter: none;
+  }
   .card {
     margin-right: 0.4rem;
     border: none;
