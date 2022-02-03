@@ -8,7 +8,7 @@ import Layout from "../templates/Layout";
 //others
 import { Row, Col, Container} from "react-bootstrap";
 
-const Ricerca = ({data}) => {
+const Ricerca = ({ data }) => {
   const posts = data.allMarkdownRemark.edges;
   return (
     <Layout>
@@ -38,20 +38,25 @@ const Ricerca = ({data}) => {
                 </Col>
                 <Col>
                   <h2>{node.frontmatter.title}</h2>
-                  <p>{node.timeToRead} minuti di lettura</p>
+                  <Row>
+                    <Col>{node.frontmatter.date}</Col>
+                    <Col>{node.timeToRead} minuti di lettura</Col>
+                  </Row>
                   <p>{node.excerpt}</p>
                 </Col>
               </Row>
             </Container>
-          );})}
+          );
+        })}
       </Wrapper>
     </Layout>
-  );};
+  );
+};
 
-  //style
+//style
 const Wrapper = styled.section`
   .container {
-    margin: 3rem 3rem;
+    margin: 3rem 5rem;
     margin-left: 5rem;
     margin-right: 5rem;
   }
@@ -60,8 +65,8 @@ const Wrapper = styled.section`
 export const query = graphql`
   {
     allMarkdownRemark(
-      sort: { fields: frontmatter___title, order: ASC }
-      filter: { frontmatter: { categoria: { eq: "progetti" } } }
+      sort: { fields: frontmatter___title, order: DESC }
+      filter: { frontmatter: { categoria: { eq: "blog" } } }
     ) {
       edges {
         node {
@@ -74,7 +79,10 @@ export const query = graphql`
             id
             categoria
             title
+            autore
+            date(formatString: "YYYY, MMM DD")
             img {
+              base
               childImageSharp {
                 gatsbyImageData(
                   placeholder: BLURRED

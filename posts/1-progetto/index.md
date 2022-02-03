@@ -2,6 +2,7 @@
 id: 1
 title: Missione Archeologica della Sapienza a Çuka e Ajtoit (Albania)
 categoria: progetti
+img: ./cuka_ajtoit.jpg
 ---
 
 La Missione Archeologica della Sapienza a Çuka e Ajtoit (antica _Kestría_) in Albania meridionale prende vita nel 2021 grazie a una convenzione di ricerca tra il [Dipartimento SARAS della Sapienza Università di Roma](https://saras.uniroma1.it/) e l'Istituto Archeologico di Tirana, parte dell'Accademia degli Studi Albanologici d'Albania.
