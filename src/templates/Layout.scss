@@ -1,0 +1,34 @@
+$blueLad: #1963F7;
+
+a {
+    text-decoration: none !important;
+    &:hover {
+        text-decoration: none;
+        color: $blueLad;
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+    font-family: "Cormorant Garamond", serif !important;
+    font-weight: 900 !important;
+    a{
+        color: rgb(33, 37, 41) !important;
+        &:hover{
+            color: $blueLad !important;
+        }
+    }
+}
+
+h1{
+    font-size: 3.5rem !important;
+    margin-bottom: 5rem !important;
+    text-decoration: underline;
+}
+h2{
+    font-size: 2.5rem !important;
+}

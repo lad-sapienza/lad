@@ -3,8 +3,7 @@ import React from "react";
 import { graphql } from "gatsby";
 import styled from "styled-components";
 //components
-import Persone from "../components/team"
-import Title from "../components/title";
+import Team from "../components/Team"
 import Layout from "../templates/Layout";
 import BlogPreview from "../components/blogpost";
 //others
@@ -23,7 +22,7 @@ const Index = ({data}) => {
              {/*  Introduzione */}
               <section>
                 <Container>
-                  <Title title="Presentazione" align="left" />
+                  <h2 className="border-bottom">Presentazione</h2>
                   <p>
                     LAD Laboratorio di Archeologia Digitale alla Sapienza
                     promuove la ricerca, la sperimentazione e la didattica delle
@@ -38,13 +37,13 @@ const Index = ({data}) => {
 
               {/* A proposito di noi */}
               <section>
-                <Persone/>
+                <Team />
               </section>
 
               {/* Che cosa facciamo */}
               <section>
                 <Container>
-                  <Title title="Cosa facciamo" align="left" />
+                  <h2 className="border-bottom">Cosa facciamo</h2>
                   <p>
                     Il LAD sperimenta l'applicazione delle tecnologie alla
                     ricerca archeologica. Negli ultimi decenni Internet e il suo
@@ -87,7 +86,7 @@ const Index = ({data}) => {
             <Col sm={4}>
 
               <Container>
-                <Title tag="h2" align="left">Ultime dal Blog</Title>
+                <h2 className="border-bottom">Ultime dal Blog</h2>
               </Container>
               {data.allMarkdownRemark.nodes.map((node, i) => (
                 <BlogPreview
@@ -118,18 +117,8 @@ const Wrapper = styled.section`
     text-decoration: none !important;
     color: rgba(21,71,254,0.7);
   }
-  .index {
-    margin: auto !important;
-  }
   .container {
     padding-top: 2rem;
-  }
-  .col {
-    margin-bottom: 0;
-  }
-  .col.col-intro {
-    margin-bottom: 0;
-    border-right: 1px solid !important;
   }
 `;
 

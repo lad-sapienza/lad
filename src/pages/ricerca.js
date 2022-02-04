@@ -2,7 +2,6 @@
 import React from "react";
 import { Link, graphql } from "gatsby";
 import { GatsbyImage } from "gatsby-plugin-image";
-import styled from "styled-components";
 //components
 import Layout from "../templates/Layout";
 //others
@@ -12,58 +11,48 @@ const Ricerca = ({data}) => {
   const posts = data.allMarkdownRemark.edges;
   return (
     <Layout>
-      <Wrapper>
-        {posts.map(({ node }) => {
-          return (
-            <Container>
-              <Row>
-                <Col xs={2}>
-                  {node.frontmatter.img &&
-                    node.frontmatter.img.childImageSharp &&
-                    node.frontmatter.img.childImageSharp.gatsbyImageData && (
-                      <Link to={node.fields.slug}>
-                        <GatsbyImage
-                          image={
-                            node.frontmatter.img.childImageSharp.gatsbyImageData
-                          }
-                          key={
-                            node.frontmatter.img.childImageSharp.gatsbyImageData
-                              .src
-                          }
-                          alt={node.frontmatter.img.base}
-                        />
-                      </Link>
-                    )}
-                </Col>
-                <Col xs={12} md={10}>
+
+      <h1 className="text-center">Ricerca</h1>
+
+      {posts.map(({ node }) => {
+        return (
+          <Container>
+            <Row className="my-5">
+              <Col sm={3}>
+                {node.frontmatter.img &&
+                  node.frontmatter.img.childImageSharp &&
+                  node.frontmatter.img.childImageSharp.gatsbyImageData && (
+                    <Link to={node.fields.slug}>
+                      <GatsbyImage
+                        image={
+                          node.frontmatter.img.childImageSharp.gatsbyImageData
+                        }
+                        key={
+                          node.frontmatter.img.childImageSharp.gatsbyImageData
+                            .src
+                        }
+                        alt={node.frontmatter.img.base}
+                      />
+                    </Link>
+                  )}
+              </Col>
+              <Col sm={9}>
+                <h2>
                   <Link to={node.fields.slug}>
-                    <h2>{node.frontmatter.title}</h2>
-                    <p className="text-secondary">
-                      {node.timeToRead} minuti di lettura
-                    </p>
-                    <p>{node.excerpt}</p>
+                  {node.frontmatter.title}
                   </Link>
-                </Col>
-              </Row>
-            </Container>
-          );})}
-      </Wrapper>
+                </h2>
+                <p className="text-secondary">
+                  {node.timeToRead} minuti di lettura
+                </p>
+                <p>{node.excerpt}</p>
+              </Col>
+            </Row>
+          </Container>
+        );})}
     </Layout>
   );};
 
-  //style
-const Wrapper = styled.section`
-  a,
-  a:hover {
-    text-decoration: none !important;
-    color: currentColor;
-  }
-  .container {
-    margin: auto !important;
-    margin-bottom: 3rem !important;
-    margin-top: 3rem !important;
-  }
-`;
 
 export const query = graphql`
   {

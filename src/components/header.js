@@ -38,20 +38,20 @@ const Header = () => {
             </Navbar.Brand>
           </Navbar>
         </Container>
-        <Navbar className="navbar-lad" expand="lg">
-        <Container>
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
-          <Navbar.Collapse
-            className="justify-content-center"
-            id="basic-navbar-nav"
-          >
-            <Nav>
-              <Nav.Link href={withPrefix(`/`)}>Home</Nav.Link>
-              <Nav.Link href={withPrefix(`/blog/`)}>Blog</Nav.Link>
-              <Nav.Link href={withPrefix(`/ricerca/`)}>Ricerca</Nav.Link>
-              <Nav.Link href={withPrefix(`/didattica/`)}>Didattica</Nav.Link>
-            </Nav>
-          </Navbar.Collapse>
+        <Navbar className="navbar-lad mb-5" expand="lg">
+          <Container>
+            <Navbar.Toggle aria-controls="basic-navbar-nav" />
+            <Navbar.Collapse
+              className="justify-content-center"
+              id="basic-navbar-nav"
+            >
+              <Nav>
+                <Nav.Link href={withPrefix(`/`)}>Home</Nav.Link>
+                <Nav.Link href={withPrefix(`/blog/`)}>Blog</Nav.Link>
+                <Nav.Link href={withPrefix(`/ricerca/`)}>Ricerca</Nav.Link>
+                <Nav.Link href={withPrefix(`/didattica/`)}>Didattica</Nav.Link>
+              </Nav>
+            </Navbar.Collapse>
           </Container>
         </Navbar>
       </Wrapper>

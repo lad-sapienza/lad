@@ -1,19 +1,18 @@
 //import
 import React from "react";
 import styled from "styled-components";
-//components
-import Title from "./title";
+
 //other
 import { Container, Card, CardGroup } from "react-bootstrap";
 import { FaGithub, FaTwitter, FaUniversity } from "react-icons/fa";
 import { SiAcademia, SiResearchgate } from "react-icons/si";
 import { GiIceIris } from "react-icons/gi";
 
-const AboutUs = () => {
+const Team = () => {
   return (
     <Wrapper>
       <Container>
-        <Title title="Chi siamo" align="left" />
+        <h2 className="border-bottom">Chi siamo</h2>
         <CardGroup>
           {/* Julian */}
           <Card>
@@ -155,4 +154,4 @@ const Wrapper = styled.section`
   }
 `;
 
-export default AboutUs;
+export default Team;
