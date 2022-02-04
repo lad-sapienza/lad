@@ -1,6 +1,5 @@
 //import
 import React from "react";
-import { Link } from "gatsby";
 import styled from "styled-components";
 //components
 import Title from "./title";
@@ -29,24 +28,24 @@ const AboutUs = () => {
                     Dip. SARAS
                   </p>
                   <p>
-                    <Link to="https://www.lettere.uniroma1.it/users/julian-bogdani">
+                    <a href="https://www.lettere.uniroma1.it/users/julian-bogdani">
                       <FaUniversity className="icon" />
-                    </Link>
-                    <Link to="https://github.com/jbogdani">
+                    </a>
+                    <a href="https://github.com/jbogdani">
                       <FaGithub className="icon" />
-                    </Link>
-                    <Link to="https://uniroma1.academia.edu/JulianBogdani">
+                    </a>
+                    <a href="https://uniroma1.academia.edu/JulianBogdani">
                       <SiAcademia className="icon" />
-                    </Link>
-                    <Link to="https://iris.uniroma1.it/browse?type=author&authority=rp62440&authority_lang=en">
+                    </a>
+                    <a href="https://iris.uniroma1.it/browse?type=author&authority=rp62440&authority_lang=en">
                       <GiIceIris className="icon" />
-                    </Link>
-                    <Link to="https://www.researchgate.net/profile/Julian-Bogdani">
+                    </a>
+                    <a href="https://www.researchgate.net/profile/Julian-Bogdani">
                       <SiResearchgate className="icon" />
-                    </Link>
-                    <Link to="https://twitter.com/JulianBogdani">
+                    </a>
+                    <a href="https://twitter.com/JulianBogdani">
                       <FaTwitter className="icon" />
-                    </Link>
+                    </a>
                   </p>
                 </Card.Text>
               </Card.Text>
@@ -65,21 +64,21 @@ const AboutUs = () => {
                   Archeologica, Dip. SARAS
                 </p>
                 <p>
-                  <Link to="https://github.com/ddomizia">
+                  <a href="https://github.com/ddomizia">
                     <FaGithub className="icon" />
-                  </Link>
-                  <Link to="https://uniroma1.academia.edu/domiziaderasmo">
+                  </a>
+                  <a href="https://uniroma1.academia.edu/domiziaderasmo">
                     <SiAcademia className="icon" />
-                  </Link>
-                  <Link to="https://iris.uniroma1.it/simple-search?query=Domizia+D%27Erasmo&needescape=1">
+                  </a>
+                  <a href to="https://iris.uniroma1.it/simple-search?query=Domizia+D%27Erasmo&needescape=1">
                     <GiIceIris className="icon" />
-                  </Link>
-                  <Link to="https://www.researchgate.net/profile/Domizia_Derasmo">
+                  </a>
+                  <a href to="https://www.researchgate.net/profile/Domizia_Derasmo">
                     <SiResearchgate className="icon" />
-                  </Link>
-                  <Link to="https://twitter.com/DomiziaDErasmo">
+                  </a>
+                  <a href="https://twitter.com/DomiziaDErasmo">
                     <FaTwitter className="icon" />
-                  </Link>
+                  </a>
                 </p>
               </Card.Text>
             </Card.Body>
@@ -97,15 +96,15 @@ const AboutUs = () => {
                   Dip. SARAS
                 </p>
                 <p>
-                  <Link to="">
+                  <a href="">
                     <FaGithub className="icon" />
-                  </Link>
-                  <Link to="https://uniroma1.academia.edu/RosatiPaolo">
+                  </a>
+                  <a href="https://uniroma1.academia.edu/RosatiPaolo">
                     <SiAcademia className="icon" />
-                  </Link>
-                  <Link to="https://www.researchgate.net/profile/Paolo-Rosati-2">
+                  </a>
+                  <a href="https://www.researchgate.net/profile/Paolo-Rosati-2">
                     <SiResearchgate className="icon" />
-                  </Link>
+                  </a>
                 </p>
               </Card.Text>
             </Card.Body>

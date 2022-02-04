@@ -21,7 +21,7 @@ const Index = ({data}) => {
             <Col className="col-intro" sm={8}>
 
              {/*  Introduzione */}
-              <setion>
+              <section>
                 <Container>
                   <Title title="Presentazione" align="left" />
                   <p>
@@ -34,7 +34,7 @@ const Index = ({data}) => {
                     accesso aperto di dati e risultati della ricerca.
                   </p>
                 </Container>
-              </setion>
+              </section>
 
               {/* A proposito di noi */}
               <section>
@@ -87,7 +87,7 @@ const Index = ({data}) => {
             <Col sm={4}>
 
               <Container>
-                <Title title="Ultime dal Blog" align="left" />
+                <Title tag="h2" align="right">Ultime dal Blog"</Title>
               </Container>
               {data.allMarkdownRemark.nodes.map((node, i) => (
                 <BlogPreview
