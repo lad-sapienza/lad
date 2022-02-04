@@ -51,16 +51,18 @@ Per illustrare in maniera pratica e molto semplice un'implementazione di questa 
 
 Nella repository principale è stato creato il file LICENSE.cff con il seguente contenuto:
 
->cff-version: 1.2.0  
->message: "If you use this software, please cite it as below."  
->authors:  
-  >>family-names: Bogdani  
-  >>given-names: Julian  
-  >>orcid: https://orcid.org/0000-0001-5250-927X  
->title: "BraDypUS"  
->version: 4.1.2  
->doi: 10.5281/zenodo.1467904  
->date-released: 2021-08-22  
+```yml
+cff-version: 1.2.0  
+message: "If you use this software, please cite it as below."  
+authors:  
+  family-names: Bogdani  
+  given-names: Julian  
+  orcid: https://orcid.org/0000-0001-5250-927X  
+title: "BraDypUS"  
+version: 4.1.2  
+doi: 10.5281/zenodo.1467904  
+date-released: 2021-08-22  
+```
 
 In questo caso, l'autore è unico, e in caso fossero più di uno il blocco delle linee 4-6 sarebbe ripetuto per ogni autore.
 
