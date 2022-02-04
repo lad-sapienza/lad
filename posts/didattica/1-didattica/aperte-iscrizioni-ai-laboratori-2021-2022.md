@@ -1,8 +1,6 @@
 ---
-id: 1
 title: Aperte le iscrizioni ai laboratori 2021-2022
-categoria: didattica
-date: 2021-01-01
+sort: 100
 img: 
 ---
 

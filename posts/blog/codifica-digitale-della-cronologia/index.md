@@ -1,11 +1,9 @@
 ---
-id: 1
 title: Codifica digitale della cronologia
-categoria: blog
 autore: Julian Bogdani
 licenza: CC BY 4.0 International
 livello: avanzato
-sezione: riflessioni a appunti
+tags: [riflessioni a appunti]
 img: ./b-dus-db.png
 date: 2021-07-30
 ---

@@ -1,7 +1,6 @@
 ---
-id: 5
 title: ⲘⲞvⲈⲒⲦ Grafo stradale dell'Egitto tardoantico e medievale
-categoria: progetti
+sort: 6
 img: ./moveit.png
 ---
 

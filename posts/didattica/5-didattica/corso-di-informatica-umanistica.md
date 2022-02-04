@@ -1,8 +1,6 @@
 ---
-id: 5
 title: Corso di Informatica umanistica
-categoria: didattica
-date: 2021-01-03
+sort: 9
 img: 
 ---
 

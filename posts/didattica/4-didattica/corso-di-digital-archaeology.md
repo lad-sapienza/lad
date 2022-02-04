@@ -1,8 +1,6 @@
 ---
-id: 4
 title: Corso di Digital Archaeology (inglese)
-categoria: didattica
-date: 2021-01-03
+sort: 10
 img: 
 ---
 

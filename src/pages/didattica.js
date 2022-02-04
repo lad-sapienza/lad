@@ -40,10 +40,6 @@ const Ricerca = ({ data }) => {
                   <Link to={node.fields.slug}>
                     <h2>{node.frontmatter.title}</h2>
                   </Link>
-                  <Row>
-                    <Col>{node.frontmatter.date}</Col>
-                    <Col>{node.timeToRead} minuti di lettura</Col>
-                  </Row>
                   <Link to={node.fields.slug}>
                     <p>{node.excerpt}</p>
                   </Link>
@@ -74,22 +70,19 @@ const Wrapper = styled.section`
 export const query = graphql`
   {
     allMarkdownRemark(
-      sort: { fields: frontmatter___title, order: DESC }
-      filter: { frontmatter: { categoria: { eq: "didattica" } } }
+      sort: { fields: frontmatter___sort, order: DESC }
+      filter: {fileAbsolutePath: {regex: "/posts\\/didattica/"}}
     ) {
       edges {
         node {
           excerpt(pruneLength: 500)
-          timeToRead
           fields {
             slug
           }
           frontmatter {
-            id
-            categoria
             title
             autore
-            date(formatString: "YYYY, MMM DD")
+            sort
             img {
               base
               childImageSharp {

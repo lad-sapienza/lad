@@ -17,11 +17,25 @@ export default function BlogPost({ data }) {
           <Container className="post-container">
             <div className="post-info">
               <h1>{post.frontmatter.title}</h1>
+
+              {post.frontmatter.tags && (
+                <div className="text-center">
+                  <div className="bg-light mb-5 p-3 text-muted text-center d-inline-block">
+                    Tag:&nbsp;
+                    { post.frontmatter.tags.map(t => <span>{t} </span>) }
+                    |
+                    Licenza: {post.frontmatter.licenza } |
+                    Livello: {post.frontmatter.livello }
+                  </div>
+                </div>
+              )}
               <h2>
                 {post.frontmatter.autore}
               </h2>
-              <h3>{post.frontmatter.date}</h3>
+              <p class="text-center">{post.frontmatter.date}</p>
             </div>
+
+
             {post.frontmatter.img && (
               <div className="post-image">
                 <figure>
@@ -30,10 +44,9 @@ export default function BlogPost({ data }) {
                     key={
                       post.frontmatter.img.childImageSharp.gatsbyImageData.src
                     }
-                    alt=""
+                    alt={`${post.frontmatter.title} di ${post.frontmatter.autore}`}
                   />
                 </figure>
-                <p>{post.frontmatter.img.base}</p>
               </div>
             )}
             <div className="post-content">
@@ -86,11 +99,8 @@ const Wrapper = styled.section`
     text-align: center;
   }
   .post-container {
+    max-width: 1000px;
     margin-top: 3rem;
-  }
-  .post-content {
-    margin-left: 10rem;
-    margin-right: 10rem;
   }
   .post-content h2 {
     font-size: 2.5rem;
@@ -114,14 +124,12 @@ export const query = graphql`
     markdownRemark(fields: { slug: { eq: $slug } }) {
       html
       frontmatter {
-        date(formatString: "YYYY, MMM DD")
-        categoria
+        date(formatString: "DD MMMM YYYY", locale: "it-IT")
         autore
-        id
         licenza
         livello
-        sezione
         title
+        tags
         img {
           base
           childImageSharp {

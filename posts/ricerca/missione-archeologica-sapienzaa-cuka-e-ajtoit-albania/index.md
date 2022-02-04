@@ -1,7 +1,6 @@
 ---
-id: 1
 title: Missione Archeologica della Sapienza a Çuka e Ajtoit (Albania)
-categoria: progetti
+sort: 10
 img: ./cuka_ajtoit.jpg
 ---
 

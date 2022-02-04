@@ -1,7 +1,6 @@
 ---
-id: 4
-title: Atlante del progetto - Sacri lapides Aegypti (dir. Paola Buzi, Sapienza)
-categoria: progetti
+title: Atlante Sacri lapides Aegypti (dir. Paola Buzi, Sapienza)
+sort: 7
 img: ./sla-logo.png
 ---
 

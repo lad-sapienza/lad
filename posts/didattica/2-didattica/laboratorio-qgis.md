@@ -1,8 +1,6 @@
 ---
-id: 2
 title: Laboratorio (Q)GIS
-categoria: didattica
-date: 2021-01-02
+sort: 9
 img: 
 ---
 

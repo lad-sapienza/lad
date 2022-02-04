@@ -1,8 +1,6 @@
 ---
-id: 6
 title: Incontri, seminari, workshop, ecc.
-categoria: didattica
-date: 2021-01-03
+sort: 7
 img: 
 ---
 

@@ -17,8 +17,9 @@ const BlogPreview = (props) => {
           <Card>
             <Card.Body>
               <Card.Text className="title">{props.title}</Card.Text>
-              <Card.Text className="author">{props.author}</Card.Text>
-              <Card.Text className="date">{props.date}</Card.Text>
+              <Card.Text className="author">
+                {props.author} | {props.date}
+              </Card.Text>
               <Card.Text>{props.excerpt}</Card.Text>
             </Card.Body>
           </Card>

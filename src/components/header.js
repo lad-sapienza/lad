@@ -4,7 +4,7 @@ import { withPrefix } from "gatsby"
 import styled from 'styled-components'
 import { Navbar, Nav, Container } from "react-bootstrap"
 import Sapienza from "../../static/logos/sapienza.png";
-import LAD from "../../static/logos/lad-blue.png"
+import LAD      from "../../static/logos/lad-blue.png"
 
 //styles
 const LadLogo = {
@@ -24,7 +24,7 @@ const Header = () => {
               <img
                 style={SapLogo}
                 src={Sapienza}
-                className="d-md-inline-block align-top d-none"
+                className="d-md-inline-block align-top"
                 alt="logo sapienza"
               />
             </Navbar.Brand>
@@ -32,7 +32,7 @@ const Header = () => {
               <img
                 style={LadLogo}
                 src={LAD}
-                className="d-md-inline-block align-top d-none"
+                className="d-md-inline-block align-top"
                 alt="logo LAD"
               />
             </Navbar.Brand>

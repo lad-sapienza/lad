@@ -1,5 +1,5 @@
 module.exports = {
-  pathPrefix: '/lad/public/',
+  pathPrefix: '/lad/',
   siteMetadata: {
     title: `LAD`,
     description: `Laboratorio di Archeologia Digitale alla Sapienza`,

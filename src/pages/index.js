@@ -87,7 +87,7 @@ const Index = ({data}) => {
             <Col sm={4}>
 
               <Container>
-                <Title title="Ultime notizie" align="left" />
+                <Title title="Ultime dal Blog" align="left" />
               </Container>
               {data.allMarkdownRemark.nodes.map((node, i) => (
                 <BlogPreview
@@ -137,19 +137,17 @@ const Wrapper = styled.section`
 export const query = graphql`
   {
     allMarkdownRemark(
-      sort: { fields: frontmatter___title, order: ASC }
+      sort: { fields: frontmatter___date, order: DESC }
       limit: 4
-      filter: { frontmatter: { categoria: { eq: "blog" } } }
+      filter: {fileAbsolutePath: {regex: "/posts\\/blog/"}}
     ) {
       nodes {
-        excerpt(pruneLength: 400)
+        excerpt(pruneLength: 200)
         frontmatter {
           autore
-          date(formatString: "YYYY, MMM DD")
-          id
+          date(formatString: "DD MMMM YYYY", locale: "it-IT")
           licenza
           livello
-          sezione
           title
           img {
             childImageSharp {

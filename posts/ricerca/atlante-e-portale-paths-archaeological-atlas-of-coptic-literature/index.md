@@ -1,7 +1,6 @@
 ---
-id: 3
 title: Atlante e portale web di PAThs An Archaeological Atlas of Coptic Literature (dir. Paola Buzi, Sapienza)
-categoria: progetti
+sort: 8
 img: ./paths.jpg
 ---
 

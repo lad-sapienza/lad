@@ -74,8 +74,8 @@ const Wrapper = styled.section`
 export const query = graphql`
   {
     allMarkdownRemark(
-      sort: { fields: frontmatter___title, order: DESC }
-      filter: { frontmatter: { categoria: { eq: "blog" } } }
+      sort: { fields: frontmatter___date, order: DESC }
+      filter: {fileAbsolutePath: {regex: "/posts\\/blog/"}}
     ) {
       edges {
         node {
@@ -85,11 +85,9 @@ export const query = graphql`
             slug
           }
           frontmatter {
-            id
-            categoria
             title
             autore
-            date(formatString: "YYYY, MMM DD")
+            date(formatString: "DD MMMM YYYY", locale: "it-IT")
             img {
               base
               childImageSharp {

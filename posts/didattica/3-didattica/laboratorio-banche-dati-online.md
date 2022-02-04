@@ -1,8 +1,6 @@
 ---
-id: 3
 title: Laboratorio Banche dati online
-categoria: didattica
-date: 2021-01-02
+sort: 8
 img: 
 ---
 

@@ -1,7 +1,6 @@
 ---
-id: 2
 title: Bradypus cloud databases
-categoria: progetti
+sort: 9
 img: ./bdus.png
 ---
 
