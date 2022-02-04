@@ -42,11 +42,12 @@ const Ricerca = ({ data }) => {
                   </Link>
                   <Row>
                     <Col className="text-secondary">
-                      Pubblicato il {node.frontmatter.date} | {node.timeToRead}{" "}
-                      minuti di lettura
+                      Pubblicato il {node.frontmatter.date} da{" "}
+                      {node.frontmatter.autore} | {node.timeToRead} minuti di
+                      lettura
                     </Col>
                   </Row>
-                    <p>{node.excerpt}</p>
+                  <p>{node.excerpt}</p>
                 </Col>
               </Row>
             </Container>
