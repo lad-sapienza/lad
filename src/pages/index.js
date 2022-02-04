@@ -87,7 +87,7 @@ const Index = ({data}) => {
             <Col sm={4}>
 
               <Container>
-                <Title tag="h2" align="right">Ultime dal Blog"</Title>
+                <Title tag="h2" align="left">Ultime dal Blog</Title>
               </Container>
               {data.allMarkdownRemark.nodes.map((node, i) => (
                 <BlogPreview
