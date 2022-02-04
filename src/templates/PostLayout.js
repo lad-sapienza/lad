@@ -5,6 +5,8 @@ import styled from "styled-components";
 import { GatsbyImage } from "gatsby-plugin-image";
 import { Container } from "react-bootstrap";
 import Layout from "../templates/Layout";
+import { defineCustomElements as deckDeckGoHighlightElement } from "@deckdeckgo/highlight-code/dist/loader";
+deckDeckGoHighlightElement();
 
 //markup
 export default function BlogPost({ data }) {

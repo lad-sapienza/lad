@@ -5,6 +5,7 @@
   "version": "0.1.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
+    "@deckdeckgo/highlight-code": "^3.6.0",
     "@react-icons/all-files": "^4.1.0",
     "babel-plugin-styled-components": "^2.0.1",
     "bootstrap": "^5.1.3",
@@ -17,8 +18,9 @@
     "gatsby-plugin-react-helmet": "^5.2.0",
     "gatsby-plugin-sharp": "^4.2.0",
     "gatsby-plugin-styled-components": "^5.2.0",
+    "gatsby-remark-highlight-code": "^3.2.0",
     "gatsby-source-filesystem": "^4.2.0",
-    "gatsby-transformer-remark": "^5.2.0",
+    "gatsby-transformer-remark": "^5.6.0",
     "gatsby-transformer-sharp": "^4.2.0",
     "prop-types": "^15.7.2",
     "react": "^17.0.1",
@@ -38,11 +40,11 @@
   "scripts": {
     "build": "gatsby build --prefix-paths",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
-    "start"  : "gatsby develop",
+    "start": "gatsby develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
-    "deploy": "gatsby build --prefix-paths && rsync -arvzu --delete --filter='P .ssh' --filter='P .bash_history' --filter='P .screenrc' public/ lad:"
+    "deploy": "gatsby clean && gatsby build --prefix-paths && rsync -arvzu --delete --filter='P .ssh' --filter='P .bash_history' --filter='P .screenrc' public/ lad:"
   },
   "repository": {
     "type": "git",
