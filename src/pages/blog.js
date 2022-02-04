@@ -41,12 +41,12 @@ const Ricerca = ({ data }) => {
                     <h2>{node.frontmatter.title}</h2>
                   </Link>
                   <Row>
-                    <Col>{node.frontmatter.date}</Col>
-                    <Col>{node.timeToRead} minuti di lettura</Col>
+                    <Col className="text-secondary">
+                      Pubblicato il {node.frontmatter.date} | {node.timeToRead}{" "}
+                      minuti di lettura
+                    </Col>
                   </Row>
-                  <Link to={node.fields.slug}>
                     <p>{node.excerpt}</p>
-                  </Link>
                 </Col>
               </Row>
             </Container>
@@ -59,10 +59,13 @@ const Ricerca = ({ data }) => {
 
 //style
 const Wrapper = styled.section`
-  a,
-  a:hover {
+  a {
     text-decoration: none !important;
     color: currentColor;
+  }
+  a:hover {
+    text-decoration: none !important;
+    color: rgb(21, 71, 274, 0.8)!important;
   }
   .container {
     margin: auto !important;

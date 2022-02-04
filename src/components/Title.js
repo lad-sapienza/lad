@@ -10,7 +10,7 @@ const Title = (props) => {
   return (
     <Wrapper>
         <div className={`title ${align}`}>
-          <h2>{title}</h2>
+          <h3>{title}</h3>
         </div>
     </Wrapper>
   );
@@ -18,7 +18,7 @@ const Title = (props) => {
 
 //styles
 const Wrapper = styled.section`
-  h2 {
+  h3 {
     font-family: "Cormorant Garamond", serif !important;
     font-size: 2.5rem !important;
     font-weight: 900;

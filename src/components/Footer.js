@@ -1,11 +1,9 @@
 //import
 import React from "react";
 import styled from "styled-components";
+import { Link } from "gatsby";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Container, Row, Col } from "react-bootstrap";
-import { FaGithub, FaTwitter} from "react-icons/fa";
-import { SiAcademia, SiResearchgate } from "react-icons/si";
-import {GiIceIris} from "react-icons/gi"
 import LAD from "../../static/logos/lad-blue.png";
 
 const Footer = () => {
@@ -17,30 +15,24 @@ const Footer = () => {
               <Col>
                 <img
                   src={LAD}
-                  className="d-md-inline-block align-top d-none"
+                  className="d-md-inline-block align-top"
                   alt="logo LAD"
                 />
               </Col>
               <Col>
-                <h2>About</h2>
-                <h3>Laboratorio di Archeologia Digitale alla Sapienza</h3>
-                <p>Responsabile: Julian Bogdani</p>
-                <p>Dipartimento SARAS · Sapienza Università di Roma</p>
+                <Link to="https://saras.uniroma1.it/" alt="SARAS">
+                  <h4 className="dipartimento">
+                    Dipartimento di Storia Antropologia Religioni Arte
+                    Spettacolo (SARAS)
+                  </h4>
+                </Link>
               </Col>
               <Col>
-                <h2>Contact</h2>
-                <p> Julian Bogdani</p>
-                <p> Domizia D'Erasmo</p>
-                <p> Paolo Rosati</p>
-                <div className="social">
-                  <p>
-                    <FaGithub className="icon"></FaGithub>
-                    <SiAcademia className="icon"></SiAcademia>
-                    <GiIceIris className="icon"></GiIceIris>
-                    <SiResearchgate className="icon"></SiResearchgate>
-                    <FaTwitter className="icon"></FaTwitter>
-                  </p>
-                </div>
+                <h3>Laboratorio di Archeologia Digitale alla Sapienza</h3>
+                <p>Responsabile: Julian Bogdani</p>
+                <a href="mailto:julian.bogdani@uniroma1.it">
+                  julian.bogdani@uniroma1.it
+                </a>
               </Col>
             </Row>
           </Container>
@@ -49,6 +41,14 @@ const Footer = () => {
     );
 }
 const Wrapper = styled.section`
+  a {
+    text-decoration: none !important;
+    color: currentColor;
+  }
+  a:hover {
+    text-decoration: none !important;
+    color: #0d6efd;
+  }
   footer {
     /* background-color: rgba(247, 246, 249) !important; */
   }
@@ -63,11 +63,10 @@ const Wrapper = styled.section`
     font-size: 1.1rem;
   }
   img {
-    width: 65% !important;
+    max-width: 200px !important;
   }
   p {
     margin: 0;
-    font-family: "Raleway", sans-serif;
     font-weight: 300;
     font-size: 0.9rem;
   }
@@ -75,6 +74,10 @@ const Wrapper = styled.section`
     border-top: solid;
     border-width: 0.1rem;
     border-color: rgb(145, 145, 145);
+  }
+  .dipartimento {
+    color: rgba(21, 71, 82, 0.8);
+    font-size: 1.5rem;
   }
   .icon {
     margin-right: 1rem;

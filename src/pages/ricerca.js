@@ -17,32 +17,33 @@ const Ricerca = ({data}) => {
           return (
             <Container>
               <Row>
-                  <Col xs={2}>
-                    {node.frontmatter.img &&
-                      node.frontmatter.img.childImageSharp &&
-                      node.frontmatter.img.childImageSharp.gatsbyImageData && (
-                        <Link to={node.fields.slug}>
-                          <GatsbyImage
-                            image={
-                              node.frontmatter.img.childImageSharp
-                                .gatsbyImageData
-                            }
-                            key={
-                              node.frontmatter.img.childImageSharp
-                                .gatsbyImageData.src
-                            }
-                            alt={node.frontmatter.img.base}
-                          />
-                        </Link>
-                      )}
-                  </Col>
-                  <Col xs={12} md={10}>
-                    <Link to={node.fields.slug}>
-                      <h2>{node.frontmatter.title}</h2>
-                      <p>{node.timeToRead} minuti di lettura</p>
-                      <p>{node.excerpt}</p>
-                    </Link>
-                  </Col>
+                <Col xs={2}>
+                  {node.frontmatter.img &&
+                    node.frontmatter.img.childImageSharp &&
+                    node.frontmatter.img.childImageSharp.gatsbyImageData && (
+                      <Link to={node.fields.slug}>
+                        <GatsbyImage
+                          image={
+                            node.frontmatter.img.childImageSharp.gatsbyImageData
+                          }
+                          key={
+                            node.frontmatter.img.childImageSharp.gatsbyImageData
+                              .src
+                          }
+                          alt={node.frontmatter.img.base}
+                        />
+                      </Link>
+                    )}
+                </Col>
+                <Col xs={12} md={10}>
+                  <Link to={node.fields.slug}>
+                    <h2>{node.frontmatter.title}</h2>
+                    <p className="text-secondary">
+                      {node.timeToRead} minuti di lettura
+                    </p>
+                    <p>{node.excerpt}</p>
+                  </Link>
+                </Col>
               </Row>
             </Container>
           );})}
