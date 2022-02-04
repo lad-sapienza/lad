@@ -2,43 +2,44 @@
 import React from 'react'
 import { withPrefix } from "gatsby"
 import styled from 'styled-components'
-import { Navbar, Nav } from "react-bootstrap"
+import { Navbar, Nav, Container } from "react-bootstrap"
 import Sapienza from "../../static/logos/sapienza.png";
 import LAD from "../../static/logos/lad-blue.png"
 
 //styles
 const LadLogo = {
-  width: "100px",
-  marginLeft: 50,
+  height: "70px"
 };
 const SapLogo = {
-  width: "200px",
-  marginLeft: 40,
+  height: "80px"
 };
 
 //markup
 const Header = () => {
     return (
       <Wrapper>
-        <Navbar expand="lg">
-          <Navbar.Brand href={withPrefix(`/`)}>
-            <img
-              style={SapLogo}
-              src={Sapienza}
-              className="d-md-inline-block align-top d-none"
-              alt="logo sapienza"
-            />
-          </Navbar.Brand>
-          <Navbar.Brand href={withPrefix(`/`)}>
-            <img
-              style={LadLogo}
-              src={LAD}
-              className="d-md-inline-block align-top d-none"
-              alt="logo LAD"
-            />
-          </Navbar.Brand>
-        </Navbar>
+        <Container>
+          <Navbar expand={true}>
+            <Navbar.Brand href="https://www.uniroma1.it">
+              <img
+                style={SapLogo}
+                src={Sapienza}
+                className="d-md-inline-block align-top d-none"
+                alt="logo sapienza"
+              />
+            </Navbar.Brand>
+            <Navbar.Brand href={withPrefix(`/`)} className="ms-auto">
+              <img
+                style={LadLogo}
+                src={LAD}
+                className="d-md-inline-block align-top d-none"
+                alt="logo LAD"
+              />
+            </Navbar.Brand>
+          </Navbar>
+        </Container>
         <Navbar className="navbar-lad" expand="lg">
+        <Container>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse
             className="justify-content-center"
@@ -51,6 +52,7 @@ const Header = () => {
               <Nav.Link href={withPrefix(`/didattica/`)}>Didattica</Nav.Link>
             </Nav>
           </Navbar.Collapse>
+          </Container>
         </Navbar>
       </Wrapper>
     );
