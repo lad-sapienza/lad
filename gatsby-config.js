@@ -1,9 +1,10 @@
 module.exports = {
+  pathPrefix: '/lad/public/',
   siteMetadata: {
     title: `LAD`,
-    description: `Laboratorio di Archeologia Digitale`,
+    description: `Laboratorio di Archeologia Digitale alla Sapienza`,
     author: `LAD team`,
-    siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
+    siteUrl: `https://lad.saras.uniroma1.it/`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -12,13 +13,6 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-transformer-remark`,
     `gatsby-transformer-sharp`,
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `images`,
-        path: `${__dirname}/src/images`,
-      },
-    },
     {
       resolve: "gatsby-source-filesystem",
       options: {
