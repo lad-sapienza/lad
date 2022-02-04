@@ -38,4 +38,4 @@ Il laboratorio è rivolto a studenti interessati di qualsiasi livello (triennale
 
 I tre moduli della durata totale di 24 ore rilasciano un attestato di frequenza che può essere usato per l’ottenimento di 1 CFU da verbalizzare presso i referenti di ciascun corso di laurea. È possibile concordare ore di lavoro aggiuntive da svolgere autonomamento per il raggiungimento di ulteriori CFU.
 
-Maggiori informazioni e locandina (con preghiera di diffusione): [https://linktr.ee/labLAD](https://linktr.ee/labLAD)
+Maggiori informazioni e locandina (con preghiera di diffusione): [https://linktr.ee/labLAD](https://linktr.ee/labLAD).
