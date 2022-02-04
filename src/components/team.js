@@ -20,34 +20,32 @@ const AboutUs = () => {
             <Card.Img variant="top" src="images/jbogdani.jpeg" />
             <Card.Body>
               <Card.Title>Julian Bogdani</Card.Title>
-              <Card.Text>
-                <Card.Text>
-                  <p className="position">Responsabile del laboratorio</p>
-                  <p>
-                    Ricercatore di Metodologie della Ricerca Archeologica,
-                    Dip. SARAS
-                  </p>
-                  <p>
-                    <a href="https://www.lettere.uniroma1.it/users/julian-bogdani">
-                      <FaUniversity className="icon" />
-                    </a>
-                    <a href="https://github.com/jbogdani">
-                      <FaGithub className="icon" />
-                    </a>
-                    <a href="https://uniroma1.academia.edu/JulianBogdani">
-                      <SiAcademia className="icon" />
-                    </a>
-                    <a href="https://iris.uniroma1.it/browse?type=author&authority=rp62440&authority_lang=en">
-                      <GiIceIris className="icon" />
-                    </a>
-                    <a href="https://www.researchgate.net/profile/Julian-Bogdani">
-                      <SiResearchgate className="icon" />
-                    </a>
-                    <a href="https://twitter.com/JulianBogdani">
-                      <FaTwitter className="icon" />
-                    </a>
-                  </p>
-                </Card.Text>
+              <Card.Text className="position">
+                Responsabile del laboratorio
+              </Card.Text>
+              <Card.Text className="dipartimento">
+                Ricercatore di Metodologie della Ricerca Archeologica, Dip.
+                SARAS
+              </Card.Text>
+              <Card.Text className="icon">
+                <a href="https://www.lettere.uniroma1.it/users/julian-bogdani">
+                  <FaUniversity />
+                </a>
+                <a href="https://github.com/jbogdani">
+                  <FaGithub />
+                </a>
+                <a href="https://uniroma1.academia.edu/JulianBogdani">
+                  <SiAcademia />
+                </a>
+                <a href="https://iris.uniroma1.it/browse?type=author&authority=rp62440&authority_lang=en">
+                  <GiIceIris />
+                </a>
+                <a href="https://www.researchgate.net/profile/Julian-Bogdani">
+                  <SiResearchgate />
+                </a>
+                <a href="https://twitter.com/JulianBogdani">
+                  <FaTwitter />
+                </a>
               </Card.Text>
             </Card.Body>
           </Card>
@@ -57,30 +55,34 @@ const AboutUs = () => {
             <Card.Img variant="top" src="images/d_erasmo.png" />
             <Card.Body>
               <Card.Title>Domizia D'Erasmo</Card.Title>
-              <Card.Text>
-                <p className="position">Tutor</p>
-                <p>
+              <Card.Text className="position">Tutor</Card.Text>
+                <Card.Text className="dipartimento">
                   Assegnista di ricerca di Metodologie della Ricerca
                   Archeologica, Dip. SARAS
-                </p>
-                <p>
+                </Card.Text>
+                <Card.Text className="icon">
                   <a href="https://github.com/ddomizia">
-                    <FaGithub className="icon" />
+                    <FaGithub />
                   </a>
                   <a href="https://uniroma1.academia.edu/domiziaderasmo">
-                    <SiAcademia className="icon" />
+                    <SiAcademia />
                   </a>
-                  <a href to="https://iris.uniroma1.it/simple-search?query=Domizia+D%27Erasmo&needescape=1">
-                    <GiIceIris className="icon" />
+                  <a
+                    href
+                    to="https://iris.uniroma1.it/simple-search?query=Domizia+D%27Erasmo&needescape=1"
+                  >
+                    <GiIceIris />
                   </a>
-                  <a href to="https://www.researchgate.net/profile/Domizia_Derasmo">
-                    <SiResearchgate className="icon" />
+                  <a
+                    href
+                    to="https://www.researchgate.net/profile/Domizia_Derasmo"
+                  >
+                    <SiResearchgate />
                   </a>
                   <a href="https://twitter.com/DomiziaDErasmo">
-                    <FaTwitter className="icon" />
+                    <FaTwitter />
                   </a>
-                </p>
-              </Card.Text>
+                </Card.Text>
             </Card.Body>
           </Card>
 
@@ -89,23 +91,20 @@ const AboutUs = () => {
             <Card.Img variant="top" src="images/prosati.jpg" />
             <Card.Body>
               <Card.Title>Paolo Rosati</Card.Title>
-              <Card.Text>
-                <p className="position">Tutor</p>
-                <p>
-                  Assegnista di ricerca del progetto <em>PAThs</em>,
-                  Dip. SARAS
-                </p>
-                <p>
-                  <a href="">
-                    <FaGithub className="icon" />
-                  </a>
-                  <a href="https://uniroma1.academia.edu/RosatiPaolo">
-                    <SiAcademia className="icon" />
-                  </a>
-                  <a href="https://www.researchgate.net/profile/Paolo-Rosati-2">
-                    <SiResearchgate className="icon" />
-                  </a>
-                </p>
+              <Card.Text className="position">Tutor</Card.Text>
+              <Card.Text className="dipartimento">
+                Assegnista di ricerca del progetto <em>PAThs</em>, Dip. SARAS
+              </Card.Text>
+              <Card.Text className="icon">
+                <a href="">
+                  <FaGithub />
+                </a>
+                <a href="https://uniroma1.academia.edu/RosatiPaolo">
+                  <SiAcademia />
+                </a>
+                <a href="https://www.researchgate.net/profile/Paolo-Rosati-2">
+                  <SiResearchgate />
+                </a>
               </Card.Text>
             </Card.Body>
           </Card>
@@ -122,14 +121,17 @@ const Wrapper = styled.section`
   img:hover {
     filter: none;
   }
+  svg {
+    margin-right: 1rem;
+  }
+  p .card-text {
+    font-family: "Raleway", sans-serif;
+    font-weight: 300;
+    font-size: 1rem;
+  }
   .card {
     margin-right: 0.4rem;
     border: none;
-  }
-  .card-text p {
-    font-family: "Raleway", sans-serif;
-    font-weight: 300;
-    font-size: 0.9rem;
   }
   .card-title {
     font-family: "Cormorant Garamond", serif !important;
@@ -137,17 +139,18 @@ const Wrapper = styled.section`
     font-size: 1.5rem;
     text-align: center;
   }
-  .icon {
-    margin-right: 1rem;
+  .card-text.dipartimento {
+    font-size: 1rem !important;
+    text-align: center;
   }
-  p .position {
+  .icon {
+    text-align: center;
+  }
+  .card-text.position {
     font-family: "Cormorant Garamond", serif !important;
     font-weight: 800;
     font-style: italic;
     font-size: 1rem !important;
-  }
-  p {
-    font-size: 0.8rem !important;
     text-align: center;
   }
 `;

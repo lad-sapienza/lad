@@ -38,7 +38,7 @@ const Index = ({data}) => {
 
               {/* A proposito di noi */}
               <section>
-                <Persone></Persone>
+                <Persone/>
               </section>
 
               {/* Che cosa facciamo */}
