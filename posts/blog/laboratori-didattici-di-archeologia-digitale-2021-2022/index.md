@@ -8,9 +8,9 @@ img: ./lab-lad.png
 date: 2022-02-04
 ---
 
-Responsabile: **Julian Bogdani** ([julian.bogdani@uniroma1.it](julian.bogdani@uniroma1.it))
+Responsabile: **Julian Bogdani** ([julian.bogdani@uniroma1.it](mailto:julian.bogdani@uniroma1.it))
 
-Tutor: **Domizia D'Erasmo** ([domizia.derasmo@uniroma1.it](domizia.derasmo@uniroma1.it))
+Tutor: **Domizia D'Erasmo** ([domizia.derasmo@uniroma1.it](mailto:domizia.derasmo@uniroma1.it))
 
 Sono aperte le iscrizioni ai laboratori didattici di Archeologia Digitale, organizzati nell’ambito dei corsi di Informatica Umanistica e di Digital Archaeology, in collaborazione con il progetto [ERC Advanced PAThs dell’Atlante Archeologico dell’Egitto tardoantico](https://atlas.paths-erc.eu/) e [DigiLab](https://digilab.uniroma1.it/).
 
@@ -28,7 +28,7 @@ I laboratori si pongono l’obiettivo di fornire le basi teoriche e pratiche nec
 
 ## Iscrizione
 
-Per iscrivervi ai laboratori vi preghiamo di compilare il modulo Google al link [https://forms.gle/AUpWNsgakPoBZgiS9](https://forms.gle/AUpWNsgakPoBZgiS9). In caso di sopravvenute complicazioni è fondamentale notificare all’indirizzo [julian.bogdani@uniroma1.it](julian.bogdani@uniroma1.it).
+Per iscrivervi ai laboratori vi preghiamo di compilare il modulo Google al link [https://forms.gle/AUpWNsgakPoBZgiS9](https://forms.gle/AUpWNsgakPoBZgiS9). In caso di sopravvenute complicazioni è fondamentale notificare all’indirizzo [julian.bogdani@uniroma1.it](mailto:julian.bogdani@uniroma1.it).
 
 ## Profilo
 
