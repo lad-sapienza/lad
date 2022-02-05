@@ -49,7 +49,7 @@ const Ricerca = ({ data }) => {
                     lettura
                   </Col>
                 </Row>
-                <p>{node.excerpt}</p>
+                <p>{node.frontmatter.sommario ? node.frontmatter.sommario : node.excerpt}</p>
               </Col>
             </Row>
           </Container>
@@ -76,6 +76,7 @@ export const query = graphql`
             title
             autore
             date(formatString: "DD MMMM YYYY", locale: "it-IT")
+            sommario
             img {
               base
               childImageSharp {
