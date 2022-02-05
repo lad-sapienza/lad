@@ -1,5 +1,5 @@
 ---
-title: "Aperte le iscirizioni ai laboratori didattici di Archeologia Digitale 2021-2022: GIS e Banche Dati"
+title: "Aperte le iscrizioni ai laboratori didattici di Archeologia Digitale 2021-2022: GIS e Banche Dati"
 autore: Domizia D'Erasmo
 licenza: CC BY 4.0 International
 tags: [notizie]
