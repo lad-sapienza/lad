@@ -1,42 +1,37 @@
 //import
 import React from 'react'
-import { withPrefix } from "gatsby"
+import { Link, withPrefix } from "gatsby"
 import styled from 'styled-components'
-import { Navbar, Nav, Container } from "react-bootstrap"
+import { Navbar, Nav, Container, Row, Col } from "react-bootstrap"
 import Sapienza from "../../static/logos/sapienza.png";
 import LAD      from "../../static/logos/lad-blue.png"
 
-//styles
-const LadLogo = {
-  height: "70px"
-};
-const SapLogo = {
-  height: "80px"
-};
 
 //markup
 const Header = () => {
     return (
       <Wrapper>
         <Container>
-          <Navbar expand={true}>
-            <Navbar.Brand href="https://www.uniroma1.it">
-              <img
-                style={SapLogo}
-                src={Sapienza}
-                className="d-md-inline-block align-top"
-                alt="logo sapienza"
-              />
-            </Navbar.Brand>
-            <Navbar.Brand href={withPrefix(`/`)} className="ms-auto">
-              <img
-                style={LadLogo}
-                src={LAD}
-                className="d-md-inline-block align-top"
-                alt="logo LAD"
-              />
-            </Navbar.Brand>
-          </Navbar>
+          <Row className="my-3">
+            <Col>
+              <a href="https://www.uniroma1.it" title="Sapienza Università di Roma">
+                <img
+                    src={Sapienza}
+                    className="d-md-inline-block align-top logo sapienza"
+                    alt="Sapienza Università di Roma"
+                  />
+                </a>
+            </Col>
+            <Col className="text-end">
+              <Link to="/" title="Pagina iniziale">
+                <img
+                    src={LAD}
+                    className="logo lad"
+                    alt="Laboratorio di Archeologia Digitale alla Sapienza"
+                  />
+              </Link>
+            </Col>
+          </Row>
         </Container>
         <Navbar className="navbar-lad mb-5" expand="lg">
           <Container>
@@ -71,6 +66,10 @@ const Wrapper = styled.section`
     font-size: 1.3rem !important;
     padding-right: 4rem !important;
     color: #151241 !important;
+  }
+  img.logo{
+    max-width: 45% !important;
+    max-height: 70px;
   }
 `;
 
