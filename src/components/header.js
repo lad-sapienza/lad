@@ -13,7 +13,7 @@ const Header = () => {
       <Wrapper>
         <Container>
           <Row className="my-3">
-            <Col>
+            <Col xs={6}>
               <a href="https://www.uniroma1.it" title="Sapienza Università di Roma">
                 <img
                     src={Sapienza}
@@ -22,7 +22,7 @@ const Header = () => {
                   />
                 </a>
             </Col>
-            <Col className="text-end">
+            <Col  xs={6} className="text-end">
               <Link to="/" title="Pagina iniziale">
                 <img
                     src={LAD}
@@ -68,8 +68,11 @@ const Wrapper = styled.section`
     color: #151241 !important;
   }
   img.logo{
-    max-width: 45% !important;
-    max-height: 70px;
+    max-width: 100% !important;
+    @media (min-width: 768px) {
+      max-width: 45% !important;
+    }
+    
   }
 `;
 
