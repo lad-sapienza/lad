@@ -12,9 +12,9 @@ const Ricerca = ({ data }) => {
   return (
     <Layout>
       <h1 className="text-center">Didattica</h1>
-      {posts.map(({ node }) => {
+      {posts.map(({ node }, k) => {
         return (
-          <Container>
+          <Container key={k}>
             <Row>
               <Col xs={2}>
                 {node.frontmatter.img &&

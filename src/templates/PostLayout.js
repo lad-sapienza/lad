@@ -17,24 +17,24 @@ export default function BlogPost({ data }) {
       <Wrapper>
         <div>
           <Container className="post-container">
-            <div className="post-info">
+            <div className="post-info text-center">
               <h1>{post.frontmatter.title}</h1>
 
               {post.frontmatter.tags && (
                 <div className="text-center">
-                  <div className="bg-light mb-5 p-3 text-muted text-center d-inline-block">
+                  <div className="bg-light mb-5 p-3 text-muted d-inline-block">
                     Tag:&nbsp;
-                    { post.frontmatter.tags.map(t => <span>{t} </span>) }
+                    { post.frontmatter.tags.map((t,k) => <span key={k}>{t} </span>) }
                     |
                     Licenza: {post.frontmatter.licenza } |
                     Livello: {post.frontmatter.livello }
                   </div>
                 </div>
               )}
-              <h2>
-                {post.frontmatter.autore}
-              </h2>
-              <p class="text-center">{post.frontmatter.date}</p>
+              <p className="author">
+                di {post.frontmatter.autore}
+              </p>
+              <p className="text-center">{post.frontmatter.date}</p>
             </div>
 
 
@@ -63,26 +63,10 @@ export default function BlogPost({ data }) {
 
 //styles
 const Wrapper = styled.section`
-  body {
-    background-color: rgba(135, 135, 135) !important;
-  }
-  h1 {
-    font-family: "Cormorant Garamond", serif;
-    font-weight: 800;
-    font-size: 3rem;
-    text-align: center;
-    font-style: italic;
-  }
-  h2,
-  h3 {
-    font-family: "Cormorant Garamond", serif;
-    font-weight: 800;
-    text-align: center;
-  }
-  img {
-    width: 70%;
-    margin-left: auto;
-    margin-right: auto;
+  p.author{
+    font-family: "Cormorant Garamond", serif !important;
+    font-weight: 900 !important;
+    font-size: 1.5rem;
   }
   table,
   thead,
@@ -94,29 +78,9 @@ const Wrapper = styled.section`
     padding: 8px 8px 8px 8px;
   }
 
-  .icon {
-    margin-right: 1rem;
-  }
-  .post-image p {
-    text-align: center;
-  }
   .post-container {
     max-width: 1000px;
     margin-top: 3rem;
-  }
-  .post-content h2 {
-    font-size: 2.5rem;
-    margin-top: 1rem;
-    margin-bottom: 1.3rem;
-  }
-  .post-content h3 {
-    font-size: 2rem;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-  }
-  .post-content h2,
-  .post-content h3 {
-    text-align: left;
   }
 `;
 

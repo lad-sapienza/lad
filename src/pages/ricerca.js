@@ -14,9 +14,9 @@ const Ricerca = ({data}) => {
 
       <h1 className="text-center">Ricerca</h1>
 
-      {posts.map(({ node }) => {
+      {posts.map(({ node }, k) => {
         return (
-          <Container>
+          <Container key={k}>
             <Row className="my-5">
               <Col sm={3}>
                 {node.frontmatter.img &&

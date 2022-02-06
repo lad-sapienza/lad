@@ -67,14 +67,12 @@ const Team = () => {
                     <SiAcademia />
                   </a>
                   <a
-                    href
-                    to="https://iris.uniroma1.it/simple-search?query=Domizia+D%27Erasmo&needescape=1"
+                    href="https://iris.uniroma1.it/simple-search?query=Domizia+D%27Erasmo&needescape=1"
                   >
                     <GiIceIris />
                   </a>
                   <a
-                    href
-                    to="https://www.researchgate.net/profile/Domizia_Derasmo"
+                    href="https://www.researchgate.net/profile/Domizia_Derasmo"
                   >
                     <SiResearchgate />
                   </a>
@@ -95,7 +93,7 @@ const Team = () => {
                 Assegnista di ricerca del progetto <em>PAThs</em>, Dip. SARAS
               </Card.Text>
               <Card.Text className="icon">
-                <a href="">
+                <a href="#">
                   <FaGithub />
                 </a>
                 <a href="https://uniroma1.academia.edu/RosatiPaolo">
