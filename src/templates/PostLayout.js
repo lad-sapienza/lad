@@ -5,6 +5,7 @@ import styled from "styled-components";
 import { GatsbyImage } from "gatsby-plugin-image";
 import { Container } from "react-bootstrap";
 import Layout from "../templates/Layout";
+import { Helmet } from "react-helmet";
 import { defineCustomElements as deckDeckGoHighlightElement } from "@deckdeckgo/highlight-code/dist/loader";
 deckDeckGoHighlightElement();
 
@@ -14,6 +15,10 @@ export default function BlogPost({ data }) {
 
   return (
     <Layout>
+      <Helmet>
+        <title>{ post.frontmatter.title }</title>
+        <meta name="description" content={ post.frontmatter.sommario ? post.frontmatter.sommario : post.excerpt } />
+      </Helmet>
       <Wrapper>
         <div>
           <Container className="post-container">
@@ -31,9 +36,11 @@ export default function BlogPost({ data }) {
                   </div>
                 </div>
               )}
-              <p className="author">
-                di {post.frontmatter.autore}
-              </p>
+              { post.frontmatter.autore && 
+                <p className="author">
+                  di {post.frontmatter.autore}
+                </p>
+              }
               <p className="text-center">{post.frontmatter.date}</p>
             </div>
 
@@ -95,6 +102,7 @@ export const query = graphql`
         licenza
         livello
         title
+        sommario
         tags
         img {
           base

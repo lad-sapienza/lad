@@ -7,10 +7,18 @@ import Layout from "../templates/Layout";
 //others
 import { Row, Col, Container} from "react-bootstrap";
 
+import { Helmet } from "react-helmet";
+
 const Ricerca = ({data}) => {
   const posts = data.allMarkdownRemark.edges;
   return (
     <Layout>
+
+      <Helmet>
+        <title>Ricerca del LAD</title>
+        <meta name="description" content="Ricerca di LAD: Linee di ricerca, progetti sul campo e in laboratorio, idee collaborazioni e molto altro" />
+        <link rel="canonical" href="https://lad.saras.uniroma1.it/blog" />
+      </Helmet>
 
       <h1 className="text-center">Ricerca</h1>
 

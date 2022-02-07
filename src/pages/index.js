@@ -8,12 +8,18 @@ import Layout from "../templates/Layout";
 import BlogPreview from "../components/blogpost";
 //others
 import { Row, Col, Container } from "react-bootstrap";
+import { Helmet } from "react-helmet"
 
 //markup
 const Index = ({data}) => {
   
   return (
     <Layout>
+        <Helmet>
+          <title>LAD Laboratorio di Archeologia Digitale alla Sapienza, responsabile Julian Bogdani</title>
+          <meta name="description" content="LAD Laboratorio di Archeologia Digitale alla Sapienza promuove la ricerca, la sperimentazione e la didattica delle tecnologie digitali FLOS per l'archeologia e più in generale per gli studi umanistici." />
+          <link rel="canonical" href="https://lad.saras.uniroma1.it" />
+        </Helmet>
       <Wrapper>
         <Container>
           <Row className="index">

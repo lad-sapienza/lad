@@ -1,5 +1,5 @@
 ---
-title: Corso di Digital Archaeology (inglese)
+title: Corso di Digital Archaeology (in inglese)
 sort: 10
 img: 
 ---

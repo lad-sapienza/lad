@@ -6,14 +6,15 @@ import { GatsbyImage } from "gatsby-plugin-image";
 import Layout from "../templates/Layout";
 //others
 import { Row, Col, Container} from "react-bootstrap";
+import { Helmet } from "react-helmet";
 
 const Blog = ({ data }) => {
   const posts = data.allMarkdownRemark.edges;
 
   let tags = [];
 
-  posts.map( ({node}) => {
-    node.frontmatter.tags.map( t => {
+  posts.forEach( ({node}) => {
+    node.frontmatter.tags.forEach( t => {
       if(!tags.includes(t)){
         tags.push(t);
       }
@@ -22,6 +23,13 @@ const Blog = ({ data }) => {
 
   return (
     <Layout>
+
+        <Helmet>
+          <title>Il blog di LAD: notizie, appunti, recensioni, tutorial sulle applicazioni informatiche per l'archeologia</title>
+          <meta name="description" content="Il blog di LAD raccoglie recensioni, notizie, tutorial, appunti e note relatice a progetti, tecnologie, strummenti, standard in uso nel campo della ricerca archeologica." />
+          <link rel="canonical" href="https://lad.saras.uniroma1.it/blog" />
+        </Helmet>
+
 
       <h1 className="text-center">Blog</h1>
 

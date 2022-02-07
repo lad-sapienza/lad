@@ -7,10 +7,18 @@ import Layout from "../templates/Layout";
 //others
 import { Row, Col, Container } from "react-bootstrap";
 
+import { Helmet } from "react-helmet";
+
 const Didattica = ({ data }) => {
   const posts = data.allMarkdownRemark.edges;
   return (
     <Layout>
+      <Helmet>
+        <title>Didattica del LAD</title>
+        <meta name="description" content="Didattica di LAD: tutte le attività del LAD rivolte alla didattica a vari livelli: corsi, seminari, tutorial, laboratori" />
+        <link rel="canonical" href="https://lad.saras.uniroma1.it/blog" />
+      </Helmet>
+
       <h1 className="text-center">Didattica</h1>
       {posts.map(({ node }, k) => {
         return (

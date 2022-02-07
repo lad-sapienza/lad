@@ -36,6 +36,7 @@ const Team = () => {
                 <a href="https://uniroma1.academia.edu/JulianBogdani">
                   <SiAcademia />
                 </a>
+                <br />
                 <a href="https://iris.uniroma1.it/browse?type=author&authority=rp62440&authority_lang=en">
                   <GiIceIris />
                 </a>
@@ -93,9 +94,9 @@ const Team = () => {
                 Assegnista di ricerca del progetto <em>PAThs</em>, Dip. SARAS
               </Card.Text>
               <Card.Text className="icon">
-                <a href="#">
+                {/* <a href="#">
                   <FaGithub />
-                </a>
+                </a> */}
                 <a href="https://uniroma1.academia.edu/RosatiPaolo">
                   <SiAcademia />
                 </a>
