@@ -7,7 +7,7 @@ import Layout from "../templates/Layout";
 //others
 import { Row, Col, Container } from "react-bootstrap";
 
-const Ricerca = ({ data }) => {
+const Didattica = ({ data }) => {
   const posts = data.allMarkdownRemark.edges;
   return (
     <Layout>
@@ -85,4 +85,4 @@ export const query = graphql`
   }
 `;
 
-export default Ricerca;
+export default Didattica;

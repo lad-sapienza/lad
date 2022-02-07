@@ -16,7 +16,7 @@ const Team = () => {
         <CardGroup>
           {/* Julian */}
           <Card>
-            <Card.Img variant="top" src="images/jbogdani.jpeg" />
+            <Card.Img variant="top" src="images/jbogdani.jpg" />
             <Card.Body>
               <Card.Title>Julian Bogdani</Card.Title>
               <Card.Text className="position">
@@ -51,7 +51,7 @@ const Team = () => {
 
           {/* Domizia */}
           <Card>
-            <Card.Img variant="top" src="images/d_erasmo.png" />
+            <Card.Img variant="top" src="images/dderasmo.jpg" />
             <Card.Body>
               <Card.Title>Domizia D'Erasmo</Card.Title>
               <Card.Text className="position">Tutor</Card.Text>

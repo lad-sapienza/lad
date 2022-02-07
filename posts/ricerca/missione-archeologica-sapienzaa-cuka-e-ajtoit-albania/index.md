@@ -1,5 +1,6 @@
 ---
 title: Missione Archeologica della Sapienza a Çuka e Ajtoit (Albania)
+autore: Julian Bogdani
 sort: 10
 img: ./cuka_ajtoit.jpg
 ---
@@ -48,11 +49,11 @@ Per quanto riguarda gli aspetti urbanistici e architettonici, lo studio della ed
 
 - Baçe, A. dhe V. Bushati. 1989. “Vështrim mbi banesën prehistorike dhe qytetare në Iliri dhe Epir.” Monumentet, 1, 5-48 (20 segg.)
 - Bogdani. 2006. “Le fortificazioni di età ellenistica di Çuka e Aitoit.” Ocnus, 14, 43-59
--———. 2009. “Çuka e Aitoit: një kontribut i ri (Çuka e Aitoit: a new assessement).” Iliria 33, 233-258.
--———. 2012. “Le residenze rurali della Caonia ellenistica. Note per una nuova lettura.” Agri Centuriati 8, 121-144.
+- Bogdani. 2009. “Çuka e Aitoit: një kontribut i ri (Çuka e Aitoit: a new assessement).” Iliria 33, 233-258.
+- Bogdani. 2012. “Le residenze rurali della Caonia ellenistica. Note per una nuova lettura.” Agri Centuriati 8, 121-144.
 - Bogdani, J. e E. Giorgi. 2012. Il territorio di Phoinike in Caonia. Bologna: Ante Quem (249-252).
 - Budina, Dh. 1971. “Harta arkeologjike e bregdetit Jon dhe e pellgut të Delvinës.” Iliria I, 275-342 (317-321)
--———. 1974. “Gjetje Rasti. Rrethi i Sarandës.” Buletini Arkeologjik, 235-244 (235-236 e tab.II, 241).
+- Bogdani. 1974. “Gjetje Rasti. Rrethi i Sarandës.” Buletini Arkeologjik, 235-244 (235-236 e tab.II, 241).
 - Cabanes, P., M. Korkuti, A. Baçe dhe N. Ceka. 2008. Carte archéologique de l’Albanie. Tirana (88-91).
 - Ceka, N. 1976. “Fortifikimi antik i Butrintit dhe i territorit të presaibëve.” Monumentet 12, 27-44 (33-35 e tabb.I, III-IV, 40, 42-43)
 - I. Lyse Hansen, O.J. Gilkes e A. Crowson, Kalivo and Çuka e Aitoit, Albania. Interim report on survey and excavations 1928-2004 http://www.butrintfoundation.co.uk/publications.htm.

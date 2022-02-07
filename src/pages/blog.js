@@ -7,12 +7,29 @@ import Layout from "../templates/Layout";
 //others
 import { Row, Col, Container} from "react-bootstrap";
 
-const Ricerca = ({ data }) => {
+const Blog = ({ data }) => {
   const posts = data.allMarkdownRemark.edges;
+
+  let tags = [];
+
+  posts.map( ({node}) => {
+    node.frontmatter.tags.map( t => {
+      if(!tags.includes(t)){
+        tags.push(t);
+      }
+    });
+  });
+
   return (
     <Layout>
 
       <h1 className="text-center">Blog</h1>
+
+      <Container>
+        <Row className="mb-5 border-bottom bg-light text-secondary p-2">
+          <Col className="text-center">Tag disponibili: { tags.join(', ')}</Col>
+        </Row>
+        </Container>
 
       {posts.map(({ node }, k) => {
         return (
@@ -41,15 +58,13 @@ const Ricerca = ({ data }) => {
                 <h2>
                   <Link to={node.fields.slug}>{node.frontmatter.title}</Link>
                 </h2>
-                
+                <p>{node.frontmatter.sommario ? node.frontmatter.sommario : node.excerpt}</p>
                 <Row>
-                  <Col className="text-secondary">
-                    Pubblicato il {node.frontmatter.date} da{" "}
-                    {node.frontmatter.autore} | {node.timeToRead} minuti di
-                    lettura
+                  <Col className="bg-light text-secondary p-2 my-2">
+                    Pubblicato il {node.frontmatter.date} da {node.frontmatter.autore} | {node.timeToRead} minuti di
+                    lettura | tags: {node.frontmatter.tags.join(', ')}
                   </Col>
                 </Row>
-                <p>{node.frontmatter.sommario ? node.frontmatter.sommario : node.excerpt}</p>
               </Col>
             </Row>
           </Container>
@@ -77,6 +92,7 @@ export const query = graphql`
             autore
             date(formatString: "DD MMMM YYYY", locale: "it-IT")
             sommario
+            tags
             img {
               base
               childImageSharp {
@@ -94,4 +110,4 @@ export const query = graphql`
   }
 `;
 
-export default Ricerca;
+export default Blog;
