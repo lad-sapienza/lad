@@ -3,7 +3,7 @@ title: "Migration towards v4: a roadmap and guide"
 autore: Julian Bogdani
 licenza: CC BY 4.0 International
 livello: avanzato
-tags: [news, bdus4]
+tags: [notizie, bdus4]
 img: ./bdus.png
 date: 2021-01-14
 ---

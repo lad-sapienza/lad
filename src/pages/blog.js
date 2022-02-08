@@ -25,29 +25,24 @@ const Blog = ({ data }) => {
 
   const [state, setState] = useState({
     filteringTags: [],
-    posts: []
+    posts: allPosts || []
   });
 
   const filterPosts = event => {
-    const posts = data.allMarkdownRemark.edges || [];
-
     const tag = event.target.innerText;
 
     const filteringTags = state.filteringTags;
 
     if (filteringTags.includes(tag)){
-      console.log(`removing ${tag}`);
       filteringTags.splice(filteringTags.indexOf(tag), 1);
     } else {
-      console.log(`adding ${tag}`);
       filteringTags.push(tag);
     }
     
-    const filteredPosts = posts.filter( post => {
+    const filteredPosts = filteringTags.length < 1 ? allPosts : state.posts.filter( post => {
       const ret = filteringTags.every( ft => post.node.frontmatter.tags.includes(ft));
       return ret ? post : false;
     });
-    console.log(filteringTags);
 
     setState({
       filteringTags: filteringTags,

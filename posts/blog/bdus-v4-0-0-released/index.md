@@ -3,7 +3,7 @@ title: "BDUS v4.0.0 released"
 autore: Julian Bogdani
 licenza: CC BY 4.0 International
 livello: avanzato
-tags: [news, bdus4]
+tags: [notizie, bdus4]
 img: ./bdus.png
 date: 2021-03-28
 ---
