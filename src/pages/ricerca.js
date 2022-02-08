@@ -1,6 +1,6 @@
 //import
 import React from "react";
-import { Link, graphql } from "gatsby";
+import { Link, graphql, withPrefix } from "gatsby";
 import { GatsbyImage } from "gatsby-plugin-image";
 //components
 import Layout from "../templates/Layout";
@@ -17,7 +17,17 @@ const Ricerca = ({data}) => {
       <Helmet>
         <title>Ricerca del LAD</title>
         <meta name="description" content="Ricerca di LAD: Linee di ricerca, progetti sul campo e in laboratorio, idee collaborazioni e molto altro" />
-        <link rel="canonical" href="https://lad.saras.uniroma1.it/blog" />
+        <link rel="canonical" href="https://lad.saras.uniroma1.it/ricerca" />
+
+        <meta property="og:title" content="Ricerca del LAD" />
+        <meta property="og:description" content="Ricerca di LAD: Linee di ricerca, progetti sul campo e in laboratorio, idee collaborazioni e molto altro" />
+        <meta property="og:url" content="https://lad.saras.uniroma1.it/ricerca" />
+        <meta property="og:image" content={ withPrefix(`static/logos/lad-blue.png`) } />
+      
+        <meta property="twitter:title" content="Ricerca del LAD" />
+        <meta property="twitter:description" content="Ricerca di LAD: Linee di ricerca, progetti sul campo e in laboratorio, idee collaborazioni e molto altro" />
+        <meta property="twitter:url" content="https://lad.saras.uniroma1.it/ricerca" />
+        <meta property="twitter:image" content={ withPrefix(`static/logos/lad-blue.png`) } />
       </Helmet>
 
       <h1 className="text-center">Ricerca</h1>

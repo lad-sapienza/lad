@@ -11,6 +11,7 @@ deckDeckGoHighlightElement();
 
 //markup
 export default function BlogPost({ data }) {
+  console.log(data);
   const post = data.markdownRemark;
 
   return (
@@ -18,6 +19,16 @@ export default function BlogPost({ data }) {
       <Helmet>
         <title>{ post.frontmatter.title }</title>
         <meta name="description" content={ post.frontmatter.sommario ? post.frontmatter.sommario : post.excerpt } />
+
+        <meta property="og:title" content={ post.frontmatter.title } />
+        <meta property="og:description" content={ post.frontmatter.sommario ? post.frontmatter.sommario : post.excerpt } />
+        <meta property="og:url" content={`https://lad.saras.uniroma1.it${post.fields.slug}`} />
+        <meta property="og:image" content={post.frontmatter.img.publicURL} />
+      
+        <meta property="twitter:title" content={ post.frontmatter.title } />
+        <meta property="twitter:description" content={ post.frontmatter.sommario ? post.frontmatter.sommario : post.excerpt } />
+        <meta property="twitter:url" content={`https://lad.saras.uniroma1.it${post.fields.slug}`} />
+        <meta property="twitter:image" content={post.frontmatter.img.publicURL} />
       </Helmet>
       <Wrapper>
         <div>
@@ -96,6 +107,9 @@ export const query = graphql`
   query BlogQuery($slug: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
       html
+      fields {
+        slug
+      }
       frontmatter {
         date(formatString: "DD MMMM YYYY", locale: "it-IT")
         autore
@@ -114,6 +128,7 @@ export const query = graphql`
               formats: [AUTO, AVIF, WEBP]
             )
           }
+          publicURL
         }
       }
     }

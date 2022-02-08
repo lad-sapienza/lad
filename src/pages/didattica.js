@@ -1,6 +1,6 @@
 //import
 import React from "react";
-import { Link, graphql } from "gatsby";
+import { Link, graphql, withPrefix } from "gatsby";
 import { GatsbyImage } from "gatsby-plugin-image";
 //components
 import Layout from "../templates/Layout";
@@ -9,6 +9,7 @@ import { Row, Col, Container } from "react-bootstrap";
 
 import { Helmet } from "react-helmet";
 
+
 const Didattica = ({ data }) => {
   const posts = data.allMarkdownRemark.edges;
   return (
@@ -16,8 +17,18 @@ const Didattica = ({ data }) => {
       <Helmet>
         <title>Didattica del LAD</title>
         <meta name="description" content="Didattica di LAD: tutte le attività del LAD rivolte alla didattica a vari livelli: corsi, seminari, tutorial, laboratori" />
-        <link rel="canonical" href="https://lad.saras.uniroma1.it/blog" />
-      </Helmet>
+        <link rel="canonical" href="https://lad.saras.uniroma1.it/didattica" />
+
+        <meta property="og:title" content="Didattica del LAD" />
+        <meta property="og:description" content="Didattica di LAD: tutte le attività del LAD rivolte alla didattica a vari livelli: corsi, seminari, tutorial, laboratori" />
+        <meta property="og:url" content="https://lad.saras.uniroma1.it/didattica" />
+        <meta property="og:image" content={ withPrefix(`static/logos/lad-blue.png`) } />
+      
+        <meta property="twitter:title" content="Didattica del LAD" />
+        <meta property="twitter:description" content="Didattica di LAD: tutte le attività del LAD rivolte alla didattica a vari livelli: corsi, seminari, tutorial, laboratori." />
+        <meta property="twitter:url" content="https://lad.saras.uniroma1.it/didattica" />
+        <meta property="twitter:image" content={ withPrefix(`static/logos/lad-blue.png`) } />
+    </Helmet>
 
       <h1 className="text-center">Didattica</h1>
       {posts.map(({ node }, k) => {
