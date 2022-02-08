@@ -6,7 +6,7 @@ tags: [notizie]
 livello: base
 img: ./lab-lad.png
 date: 2022-02-04
-sommario: "Sono state aperte le iscrizioni ai laboratori didattici di Archeologia digitale per l'anno accademico 2021-2022. Quest'anno sono disponibili tre moduli: GIS di Base, Banche dati web e GIS avanzato. A causa degli spazi a disposizione, il laboratorio prevede un numero limitato di partecipanti"
+sommario: "Sono state aperte le iscrizioni ai laboratori didattici di Archeologia digitale per l'anno accademico 2021-2022. Quest'anno sono disponibili tre moduli: GIS di Base, Banche dati web e GIS avanzato. A causa degli spazi a disposizione, il laboratorio prevede un numero limitato di partecipanti."
 ---
 
 Responsabile: **Julian Bogdani** ([julian.bogdani@uniroma1.it](mailto:julian.bogdani@uniroma1.it))

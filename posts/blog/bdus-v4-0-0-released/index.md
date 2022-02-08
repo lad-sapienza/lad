@@ -6,15 +6,19 @@ livello: avanzato
 tags: [notizie, bdus4]
 img: ./bdus.png
 date: 2021-03-28
+sommario: "Version 4 has finally been released and the good ol’
+version 3 has been deprecated after 8 years of distinguished service.
+While common ysers will notice onlyb minor graphical changes,
+an almost total rewrite of the project is done under the hood."
 ---
 
 
-Version 4 has finally been released and the good ol’ 
+Version 4 has finally been released and the good ol’
 version 3 has been deprecated after 8 years of distinguished service.
-While common ysers will notice onlyb minor graphical changes, 
+While common ysers will notice onlyb minor graphical changes,
 an almost total rewrite of the project is done under the hood.
 
-A huge effort has been spent on keeping things working and making 
+A huge effort has been spent on keeping things working and making
 the migration of the available applications as smooth as possibile.
 This new version opens the door to future rewriting of the GUI, by
 clearly separatng the application logic from the data presentation.

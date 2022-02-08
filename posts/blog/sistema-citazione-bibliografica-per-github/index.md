@@ -6,7 +6,7 @@ livello: medio
 tags: [riflessioni a appunti, open standard]
 img: ./b-dus-db.png
 date: 2021-08-22
-sommario: La ricerca scientifica passa sempre di più attraverso la programmazione e la scrittura di codice. Per questo motivo è nato uno standard di citazione bibliografica per le repository digitali che ne permette il riconoscimento academico.
+sommario: "La ricerca scientifica passa sempre di più attraverso la programmazione e la scrittura di codice. Per questo motivo è nato uno standard di citazione bibliografica per le repository digitali che ne permette il riconoscimento academico."
 ---
 
 ## Introduzione

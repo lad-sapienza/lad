@@ -15,17 +15,22 @@ const Index = ({data}) => {
   
   return (
     <Layout>
-        <Helmet>
-          <title>LAD Laboratorio di Archeologia Digitale alla Sapienza, responsabile Julian Bogdani</title>
-          <meta name="description" content="LAD Laboratorio di Archeologia Digitale alla Sapienza promuove la ricerca, la sperimentazione e la didattica delle tecnologie digitali FLOS per l'archeologia e più in generale per gli studi umanistici." />
-          <link rel="canonical" href="https://lad.saras.uniroma1.it" />
-        </Helmet>
+      <Helmet>
+        <title>
+          LAD Laboratorio di Archeologia Digitale alla Sapienza, responsabile
+          Julian Bogdani
+        </title>
+        <meta
+          name="description"
+          content="LAD Laboratorio di Archeologia Digitale alla Sapienza promuove la ricerca, la sperimentazione e la didattica delle tecnologie digitali FLOS per l'archeologia e più in generale per gli studi umanistici."
+        />
+        <link rel="canonical" href="https://lad.saras.uniroma1.it" />
+      </Helmet>
       <Wrapper>
         <Container>
           <Row className="index">
             <Col className="col-intro" sm={8}>
-
-             {/*  Introduzione */}
+              {/*  Introduzione */}
               <section>
                 <Container>
                   <h2 className="border-bottom">Presentazione</h2>
@@ -85,12 +90,10 @@ const Index = ({data}) => {
                   </p>
                 </Container>
               </section>
-
             </Col>
 
             {/* Ultimi articoli */}
             <Col sm={4}>
-
               <Container>
                 <h2 className="border-bottom">Ultime dal Blog</h2>
               </Container>
@@ -98,13 +101,12 @@ const Index = ({data}) => {
                 <BlogPreview
                   key={i}
                   author={node.frontmatter.autore}
-                  excerpt={node.excerpt}
+                  excerpt={node.frontmatter.sommario}
                   date={node.frontmatter.date}
                   title={node.frontmatter.title}
                   readMore={node.fields.slug}
                 />
               ))}
-
             </Col>
           </Row>
         </Container>
@@ -144,6 +146,7 @@ export const query = graphql`
           licenza
           livello
           title
+          sommario
           img {
             childImageSharp {
               gatsbyImageData(
