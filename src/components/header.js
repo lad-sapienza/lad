@@ -33,7 +33,7 @@ const Header = () => {
             </Col>
           </Row>
         </Container>
-        <Navbar className="navbar-lad mb-5" expand="lg">
+        <Navbar className="navbar-lad mb-5" expand={true}>
           <Container>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse
@@ -58,15 +58,23 @@ const Wrapper = styled.section`
   .navbar-lad.navbar {
     background-color: rgba(247,246,249) !important;
   }
-  .nav-link:hover {
-    text-decoration-line: underline;
-  }
-  .nav-link {
+  a.nav-link {
     font-family: "Cormorant Garamond", serif !important;
     font-size: 1.3rem !important;
-    padding-right: 4rem !important;
+    font-weight: 900;
     color: #151241 !important;
+    padding-right: 1rem !important;
+    @media (min-width: 300px) {
+      padding-right: .2rem !important;
+    }
+    @media (min-width: 768px) {
+      padding-right: 4rem !important;
+    }
+    &:hover{
+      color: #1963F7 !important;
+    }
   }
+  
   img.logo{
     max-width: 100% !important;
     @media (min-width: 768px) {
