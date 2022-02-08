@@ -1,7 +1,7 @@
 ---
 title: Laboratorio (Q)GIS
 sort: 9
-img: 
+img: ./lab.png
 ---
 
 Dal 2017 viene organizzato presso la Sapienza un laboratorio pratico di alfabetizzazione sulle tecnologie relative ai Sistemi Informativi Geografici (GIS), con particolare riguardo al software libero QGIS. Il laboratorio si pone l’obiettivo di fornire le basi teoriche e pratiche necessarie per impostare e sviluppare indipendentemente i propri progetti GIS e affrontare il mondo della cartografia numerica.

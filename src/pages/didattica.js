@@ -2,6 +2,7 @@
 import React from "react";
 import { Link, graphql, withPrefix } from "gatsby";
 import { GatsbyImage } from "gatsby-plugin-image";
+import styled from "styled-components";
 //components
 import Layout from "../templates/Layout";
 //others
@@ -34,41 +35,46 @@ const Didattica = ({ data }) => {
       {posts.map(({ node }, k) => {
         return (
           <Container key={k}>
-            <Row>
-              <Col xs={2}>
-                {node.frontmatter.img &&
-                  node.frontmatter.img.childImageSharp &&
-                  node.frontmatter.img.childImageSharp.gatsbyImageData && (
-                    <Link to={node.fields.slug}>
-                      <GatsbyImage
-                        image={
-                          node.frontmatter.img.childImageSharp.gatsbyImageData
-                        }
-                        key={
-                          node.frontmatter.img.childImageSharp.gatsbyImageData
-                            .src
-                        }
-                        alt={node.frontmatter.title}
-                      />
-                    </Link>
-                  )}
-              </Col>
+            <Wrapper>
+              <Row>
+                <Col xs={2}>
+                  {node.frontmatter.img &&
+                    node.frontmatter.img.childImageSharp &&
+                    node.frontmatter.img.childImageSharp.gatsbyImageData && (
+                      <Link to={node.fields.slug}>
+                        <GatsbyImage
+                          image={
+                            node.frontmatter.img.childImageSharp.gatsbyImageData
+                          }
+                          key={
+                            node.frontmatter.img.childImageSharp.gatsbyImageData
+                              .src
+                          }
+                          alt={node.frontmatter.title}
+                        />
+                      </Link>
+                    )}
+                </Col>
 
-              <Col xs={12} md={10}>
-                <h2>
-                  <Link to={node.fields.slug}>
-                    {node.frontmatter.title}
-                  </Link>
-                </h2>
-                <p>{node.excerpt}</p>
-              </Col>
-            </Row>
+                <Col xs={12} md={10}>
+                  <h2>
+                    <Link to={node.fields.slug}>{node.frontmatter.title}</Link>
+                  </h2>
+                  <p>{node.excerpt}</p>
+                </Col>
+              </Row>
+            </Wrapper>
           </Container>
         );
       })}
       </Layout>
   );
 };
+
+const Wrapper = styled.section`
+img {
+  max-width: 100px!important;
+}`;
 
 
 export const query = graphql`
