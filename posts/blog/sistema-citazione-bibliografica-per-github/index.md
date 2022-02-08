@@ -3,14 +3,15 @@ title: Sistema di citazione bibliografica per GitHub e non solo
 autore: Julian Bogdani
 licenza: CC BY 4.0 International
 livello: medio
-tags: [riflessioni a appunti]
+tags: [riflessioni a appunti, open standard]
 img: ./b-dus-db.png
 date: 2021-08-22
+sommario: La ricerca scientifica passa sempre di più attraverso la programmazione e la scrittura di codice. Per questo motivo è nato uno standard di citazione bibliografica per le repository digitali che ne permette il riconoscimento academico.
 ---
 
 ## Introduzione
 
-Il 19 agosto 2021 [GitHub](https://github.com/), la più grande piattaforma per l'hosting di codice _open source_ basata sul [sistema di versionamento Git](https://git-scm.com/), ha [annunciato attraverso un blog-post](https://github.blog/2021-08-19-enhanced-support-citations-github/) l'introduzione di un sistema integrato di citazione bibliografica, che permette agli sviluppatori di indicare in maniera chiara come debba essere citato in ambito academicoil loro lavoro di sviluppo.
+Il 19 agosto 2021 [GitHub](https://github.com/), la più grande piattaforma per l'hosting di codice _open source_ basata sul [sistema di versionamento Git](https://git-scm.com/), ha [annunciato attraverso un blog-post](https://github.blog/2021-08-19-enhanced-support-citations-github/) l'introduzione di un sistema integrato di citazione bibliografica, che permette agli sviluppatori di indicare in maniera chiara come debba essere citato in ambito academico il loro lavoro di sviluppo.
 
 GitHub è un'azienda che offre servizi agli sviluppatori, aiutando la loro collaborazione, la risoluzione di problemi comuni e lo sviluppo delle tecnologie _open source_. Per questo è stato creata una piattaforma che permette l'_hosting_ di codice open source e un sistema integrato di versionamento utilizzando [Git](https://git-scm.com/), il software _open source_ per la gestione delle versioni [ideato e svilupato da Linus Torvalds](https://en.wikipedia.org/wiki/Git). GitHub è stato acquistato nel 2018 da Microsoft, che ha [sborsato 7,5 miliardi di USD](https://news.microsoft.com/2018/06/04/microsoft-to-acquire-github-for-7-5-billion/) per entrare in possesso della piattforma attivamente frequentata da più di 29 milioni di sviluppatori.
 
