@@ -39,7 +39,7 @@ const Blog = ({ data }) => {
       filteringTags.push(tag);
     }
     
-    const filteredPosts = filteringTags.length < 1 ? allPosts : state.posts.filter( post => {
+    const filteredPosts = filteringTags.length < 1 ? allPosts : allPosts.filter( post => {
       const ret = filteringTags.every( ft => post.node.frontmatter.tags.includes(ft));
       return ret ? post : false;
     });
