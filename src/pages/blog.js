@@ -76,8 +76,7 @@ const Blog = ({ data }) => {
 
       <Container>
         <div className="mb-5 text-secondary p-2 text-center">
-          Tag disponibili, clicca per filtrare gli articoli<br /> 
-          {state.posts.length} articoli
+          Tag disponibili, clicca per filtrare gli articoli | {state.posts.length} articoli
           <br />
           { tags.map( (t, k) => <button key={k} className={`btn mx-1 ${state.filteringTags.includes(t) ? 'btn-success' : 'btn-light'}`} onClick={filterPosts}>{t}</button>
           )}
