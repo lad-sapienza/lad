@@ -1,5 +1,7 @@
 //import
 import React from "react";
+import { useState } from "react";
+
 import { Link, graphql } from "gatsby";
 import { GatsbyImage } from "gatsby-plugin-image";
 //components
@@ -9,17 +11,52 @@ import { Row, Col, Container} from "react-bootstrap";
 import { Helmet } from "react-helmet";
 
 const Blog = ({ data }) => {
-  const posts = data.allMarkdownRemark.edges;
+  const allPosts = data.allMarkdownRemark.edges;
 
   let tags = [];
 
-  posts.forEach( ({node}) => {
+  allPosts.forEach( ({node}) => {
     node.frontmatter.tags.forEach( t => {
       if(!tags.includes(t)){
         tags.push(t);
       }
     });
   });
+
+  const [state, setState] = useState({
+    filteringTags: [],
+    posts: []
+  });
+
+  const filterPosts = event => {
+    const posts = data.allMarkdownRemark.edges || [];
+
+    const tag = event.target.innerText;
+
+    const filteringTags = state.filteringTags;
+
+    if (filteringTags.includes(tag)){
+      console.log(`removing ${tag}`);
+      filteringTags.splice(filteringTags.indexOf(tag), 1);
+    } else {
+      console.log(`adding ${tag}`);
+      filteringTags.push(tag);
+    }
+    
+    const filteredPosts = posts.filter( post => {
+      const ret = filteringTags.every( ft => post.node.frontmatter.tags.includes(ft));
+      return ret ? post : false;
+    });
+    console.log(filteringTags);
+
+    setState({
+      filteringTags: filteringTags,
+      posts: filteredPosts
+    });
+
+    
+    
+  };
 
   return (
     <Layout>
@@ -34,12 +71,17 @@ const Blog = ({ data }) => {
       <h1 className="text-center">Blog</h1>
 
       <Container>
-        <Row className="mb-5 border-bottom bg-light text-secondary p-2">
-          <Col className="text-center">Tag disponibili: { tags.join(', ')}</Col>
-        </Row>
-        </Container>
+        <div className="mb-5 text-secondary p-2 text-center">
+          Tag disponibili, clicca per filtrare gli articoli<br /> 
+          {state.posts.length} articoli
+          <br />
+          { tags.map( (t, k) => <button key={k} className={`btn mx-1 ${state.filteringTags.includes(t) ? 'btn-success' : 'btn-light'}`} onClick={filterPosts}>{t}</button>
+          )}
+          
+        </div>
+      </Container>
 
-      {posts.map(({ node }, k) => {
+      {state.posts.map(({ node }, k) => {
         return (
           <Container key={k}>
             <Row className="my-5">
