@@ -4,6 +4,7 @@ import { useState } from "react";
 
 import { Link, graphql, withPrefix } from "gatsby";
 import { GatsbyImage } from "gatsby-plugin-image";
+import styled from "styled-components";
 //components
 import Layout from "../templates/Layout";
 //others
@@ -71,7 +72,7 @@ const Blog = ({ data }) => {
           <meta property="twitter:image" content={ withPrefix(`static/logos/lad-blue.png`) } />
         </Helmet>
 
-
+      <Wrapper>
       <h1 className="text-center">Blog</h1>
 
       <Container>
@@ -121,11 +122,28 @@ const Blog = ({ data }) => {
               </Col>
             </Row>
           </Container>
+          
         );
       })}
+      </Wrapper>
     </Layout>
   );
 };
+
+const Wrapper = styled.section`
+  .btn,
+  .btn-light {
+    margin-top: 1rem;
+    box-shadow: none !important;
+  }
+  .btn:hover,
+  .btn:active:after,
+  .btn-success {
+    background-color: rgba(21, 71, 244, 0.5);
+    border: none !important;
+    box-shadow: none !important;
+  }
+`;
 
 export const query = graphql`
   {
