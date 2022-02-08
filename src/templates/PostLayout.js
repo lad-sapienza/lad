@@ -23,12 +23,12 @@ export default function BlogPost({ data }) {
         <meta property="og:title" content={ post.frontmatter.title } />
         <meta property="og:description" content={ post.frontmatter.sommario ? post.frontmatter.sommario : post.excerpt } />
         <meta property="og:url" content={`https://lad.saras.uniroma1.it${post.fields.slug}`} />
-        <meta property="og:image" content={post.frontmatter.img.publicURL} />
+        {/* <meta property="og:image" content={post.frontmatter.img.publicURL} /> */}
       
         <meta property="twitter:title" content={ post.frontmatter.title } />
         <meta property="twitter:description" content={ post.frontmatter.sommario ? post.frontmatter.sommario : post.excerpt } />
         <meta property="twitter:url" content={`https://lad.saras.uniroma1.it${post.fields.slug}`} />
-        <meta property="twitter:image" content={post.frontmatter.img.publicURL} />
+        {/* <meta property="twitter:image" content={post.frontmatter.img.publicURL} /> */}
       </Helmet>
       <Wrapper>
         <div>
@@ -128,7 +128,6 @@ export const query = graphql`
               formats: [AUTO, AVIF, WEBP]
             )
           }
-          publicURL
         }
       }
     }
