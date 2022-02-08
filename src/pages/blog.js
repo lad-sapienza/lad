@@ -4,6 +4,7 @@ import { useState } from "react";
 
 import { Link, graphql, withPrefix } from "gatsby";
 import { GatsbyImage } from "gatsby-plugin-image";
+import styled from "styled-components";
 //components
 import Layout from "../templates/Layout";
 //others
@@ -71,13 +72,12 @@ const Blog = ({ data }) => {
           <meta property="twitter:image" content={ withPrefix(`static/logos/lad-blue.png`) } />
         </Helmet>
 
-
+      <Wrapper>
       <h1 className="text-center">Blog</h1>
 
       <Container>
         <div className="mb-5 text-secondary p-2 text-center">
-          Tag disponibili, clicca per filtrare gli articoli<br /> 
-          {state.posts.length} articoli
+          Tag disponibili, clicca per filtrare gli articoli | {state.posts.length} articoli
           <br />
           { tags.map( (t, k) => <button key={k} className={`btn mx-1 ${state.filteringTags.includes(t) ? 'btn-success' : 'btn-light'}`} onClick={filterPosts}>{t}</button>
           )}
@@ -122,17 +122,34 @@ const Blog = ({ data }) => {
               </Col>
             </Row>
           </Container>
+          
         );
       })}
+      </Wrapper>
     </Layout>
   );
 };
+
+const Wrapper = styled.section`
+  .btn,
+  .btn-light {
+    margin-top: 1rem;
+    box-shadow: none !important;
+  }
+  .btn:hover,
+  .btn:active:after,
+  .btn-success {
+    background-color: rgba(21, 71, 244, 0.5);
+    border: none !important;
+    box-shadow: none !important;
+  }
+`;
 
 export const query = graphql`
   {
     allMarkdownRemark(
       sort: { fields: frontmatter___date, order: DESC }
-      filter: {fileAbsolutePath: {regex: "/posts\\/blog/"}}
+      filter: { fileAbsolutePath: { regex: "/posts/blog/" } }
     ) {
       edges {
         node {

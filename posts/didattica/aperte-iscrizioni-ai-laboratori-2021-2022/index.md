@@ -1,7 +1,7 @@
 ---
 title: Aperte le iscrizioni ai laboratori 2021-2022
 sort: 100
-img: 
+img: ./calendar.png
 ---
 
 Sono aperte le iscrizioni ai laboratori didattici di Archeologia Digitale per l'anno 2021-2022. Il calendario prevede l'attivazione di tre moduli:
