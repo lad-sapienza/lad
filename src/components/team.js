@@ -52,7 +52,7 @@ const Team = () => {
 
           {/* Domizia */}
           <Card>
-            <Card.Img variant="top" src="images/dderasmo.JPG" />
+            <Card.Img variant="top" src="images/dderasmo.jpg" />
             <Card.Body>
               <Card.Title>Domizia D'Erasmo</Card.Title>
               <Card.Text className="position">Tutor</Card.Text>
