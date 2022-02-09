@@ -11,7 +11,6 @@ deckDeckGoHighlightElement();
 
 //markup
 export default function BlogPost({ data }) {
-  console.log(data);
   const post = data.markdownRemark;
 
   return (
