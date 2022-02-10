@@ -7,29 +7,19 @@ import Layout from "../templates/Layout";
 //others
 import { Row, Col, Container} from "react-bootstrap";
 
-import { Helmet } from "react-helmet";
+import Seo from "../components/Seo";
 
 const Ricerca = ({data}) => {
   const posts = data.allMarkdownRemark.edges;
   return (
     <Layout>
 
-      <Helmet>
-        <title>Ricerca del LAD</title>
-        <meta name="description" content="Ricerca di LAD: Linee di ricerca, progetti sul campo e in laboratorio, idee collaborazioni e molto altro" />
-        <link rel="canonical" href="https://lad.saras.uniroma1.it/ricerca" />
-
-        <meta property="og:title" content="Ricerca del LAD" />
-        <meta property="og:description" content="Ricerca di LAD: Linee di ricerca, progetti sul campo e in laboratorio, idee collaborazioni e molto altro" />
-        <meta property="og:url" content="https://lad.saras.uniroma1.it/ricerca" />
-        <meta property="og:image" content={ withPrefix(`static/logos/lad-blue.png`) } />
+      <Seo
+        title="Ricerca del LAD"
+        description="Ricerca di LAD: Linee di ricerca, progetti sul campo e in laboratorio, idee collaborazioni e molto altro"
+        url="https://lad.saras.uniroma1.it/ricerca"
+        image={ withPrefix(`static/logos/lad-blue.png`) } />
       
-        <meta property="twitter:title" content="Ricerca del LAD" />
-        <meta property="twitter:description" content="Ricerca di LAD: Linee di ricerca, progetti sul campo e in laboratorio, idee collaborazioni e molto altro" />
-        <meta property="twitter:url" content="https://lad.saras.uniroma1.it/ricerca" />
-        <meta property="twitter:image" content={ withPrefix(`static/logos/lad-blue.png`) } />
-      </Helmet>
-
       <h1 className="text-center">Ricerca</h1>
 
       {posts.map(({ node }, k) => {

@@ -9,7 +9,7 @@ import styled from "styled-components";
 import Layout from "../templates/Layout";
 //others
 import { Row, Col, Container} from "react-bootstrap";
-import { Helmet } from "react-helmet";
+import Seo from "../components/Seo";
 
 const Blog = ({ data }) => {
   const allPosts = data.allMarkdownRemark.edges;
@@ -56,22 +56,11 @@ const Blog = ({ data }) => {
 
   return (
     <Layout>
-
-        <Helmet>
-          <title>Il blog di LAD: notizie, appunti, recensioni, tutorial sulle applicazioni informatiche per l'archeologia</title>
-          <meta name="description" content="Il blog di LAD raccoglie recensioni, notizie, tutorial, appunti e note relatice a progetti, tecnologie, strummenti, standard in uso nel campo della ricerca archeologica." />
-
-          <meta property="og:title" content="Il blog di LAD: notizie, appunti, recensioni, tutorial sulle applicazioni informatiche per l'archeologia" />
-          <meta property="og:description" content="Il blog di LAD raccoglie recensioni, notizie, tutorial, appunti e note relatice a progetti, tecnologie, strummenti, standard in uso nel campo della ricerca archeologica." />
-          <meta property="og:url" content="https://lad.saras.uniroma1.it/blog" />
-          <meta property="og:image" content={ withPrefix(`static/logos/lad-blue.png`) } />
-        
-          <meta property="twitter:title" content="Il blog di LAD: notizie, appunti, recensioni, tutorial sulle applicazioni informatiche per l'archeologia" />
-          <meta property="twitter:description" content="Il blog di LAD raccoglie recensioni, notizie, tutorial, appunti e note relatice a progetti, tecnologie, strummenti, standard in uso nel campo della ricerca archeologica." />
-          <meta property="twitter:url" content="https://lad.saras.uniroma1.it/blog" />
-          <meta property="twitter:image" content={ withPrefix(`static/logos/lad-blue.png`) } />
-        </Helmet>
-
+        <Seo 
+          title="Il blog di LAD: notizie, appunti, recensioni, tutorial sulle applicazioni informatiche per l'archeologia"
+          description="Il blog di LAD raccoglie recensioni, notizie, tutorial, appunti e note relatice a progetti, tecnologie, strummenti, standard in uso nel campo della ricerca archeologica."
+          url="https://lad.saras.uniroma1.it/blog"
+          image={ withPrefix(`static/logos/lad-blue.png`) } />
       <Wrapper>
       <h1 className="text-center">Blog</h1>
 
