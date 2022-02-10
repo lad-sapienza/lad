@@ -79,7 +79,7 @@ const Blog = ({ data }) => {
         <div className="mb-5 text-secondary p-2 text-center">
           Tag disponibili, clicca per filtrare gli articoli | {state.posts.length} articoli
           <br />
-          { tags.map( (t, k) => <button key={k} className={`btn mx-1 ${state.filteringTags.includes(t) ? 'btn-success' : 'btn-light'}`} onClick={filterPosts}>{t}</button>
+          { tags.map( (t, k) => <button key={k} className={`btn mx-1 mt-1 btn-light tags ${state.filteringTags.includes(t) ? 'selected' : ''}`} onClick={filterPosts}>{t}</button>
           )}
           
         </div>
@@ -131,17 +131,16 @@ const Blog = ({ data }) => {
 };
 
 const Wrapper = styled.section`
-  .btn,
-  .btn-light {
-    margin-top: 1rem;
+  .tags {
     box-shadow: none !important;
-  }
-  .btn:hover,
-  .btn:active:after,
-  .btn-success {
-    background-color: rgba(21, 71, 244, 0.5);
     border: none !important;
-    box-shadow: none !important;
+
+    &:hover{
+      background-color: rgba(21, 71, 244, 0.2);
+    }
+    &.selected {
+      background-color: rgba(21, 71, 244, 0.5);
+    }
   }
 `;
 
