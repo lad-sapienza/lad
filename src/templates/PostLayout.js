@@ -5,7 +5,7 @@ import styled from "styled-components";
 import { GatsbyImage } from "gatsby-plugin-image";
 import { Container } from "react-bootstrap";
 import Layout from "../templates/Layout";
-import { Helmet } from "react-helmet";
+import Seo from "../components/Seo"
 import { defineCustomElements as deckDeckGoHighlightElement } from "@deckdeckgo/highlight-code/dist/loader";
 deckDeckGoHighlightElement();
 
@@ -15,20 +15,11 @@ export default function BlogPost({ data }) {
 
   return (
     <Layout>
-      <Helmet>
-        <title>{ post.frontmatter.title }</title>
-        <meta name="description" content={ post.frontmatter.sommario ? post.frontmatter.sommario : post.excerpt } />
-
-        <meta property="og:title" content={ post.frontmatter.title } />
-        <meta property="og:description" content={ post.frontmatter.sommario ? post.frontmatter.sommario : post.excerpt } />
-        <meta property="og:url" content={`https://lad.saras.uniroma1.it${post.fields.slug}`} />
-        {/* <meta property="og:image" content={post.frontmatter.img.publicURL} /> */}
-      
-        <meta property="twitter:title" content={ post.frontmatter.title } />
-        <meta property="twitter:description" content={ post.frontmatter.sommario ? post.frontmatter.sommario : post.excerpt } />
-        <meta property="twitter:url" content={`https://lad.saras.uniroma1.it${post.fields.slug}`} />
-        {/* <meta property="twitter:image" content={post.frontmatter.img.publicURL} /> */}
-      </Helmet>
+      <Seo
+        title={ post.frontmatter.title }
+        description={ post.frontmatter.sommario ? post.frontmatter.sommario : post.excerpt }
+        url={`https://lad.saras.uniroma1.it${post.fields.slug}`}
+        />
       <Wrapper>
         <div>
           <Container className="post-container">

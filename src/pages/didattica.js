@@ -8,28 +8,18 @@ import Layout from "../templates/Layout";
 //others
 import { Row, Col, Container } from "react-bootstrap";
 
-import { Helmet } from "react-helmet";
+import Seo from "../components/Seo";
 
 
 const Didattica = ({ data }) => {
   const posts = data.allMarkdownRemark.edges;
   return (
     <Layout>
-      <Helmet>
-        <title>Didattica del LAD</title>
-        <meta name="description" content="Didattica di LAD: tutte le attività del LAD rivolte alla didattica a vari livelli: corsi, seminari, tutorial, laboratori" />
-        <link rel="canonical" href="https://lad.saras.uniroma1.it/didattica" />
-
-        <meta property="og:title" content="Didattica del LAD" />
-        <meta property="og:description" content="Didattica di LAD: tutte le attività del LAD rivolte alla didattica a vari livelli: corsi, seminari, tutorial, laboratori" />
-        <meta property="og:url" content="https://lad.saras.uniroma1.it/didattica" />
-        <meta property="og:image" content={ withPrefix(`static/logos/lad-blue.png`) } />
-      
-        <meta property="twitter:title" content="Didattica del LAD" />
-        <meta property="twitter:description" content="Didattica di LAD: tutte le attività del LAD rivolte alla didattica a vari livelli: corsi, seminari, tutorial, laboratori." />
-        <meta property="twitter:url" content="https://lad.saras.uniroma1.it/didattica" />
-        <meta property="twitter:image" content={ withPrefix(`static/logos/lad-blue.png`) } />
-    </Helmet>
+      <Seo
+        title="Didattica del LAD"
+        description="Didattica di LAD: tutte le attività del LAD rivolte alla didattica a vari livelli: corsi, seminari, tutorial, laboratori"
+        url="https://lad.saras.uniroma1.it/didattica"
+        image={ withPrefix(`static/logos/lad-blue.png`) } />
 
       <h1 className="text-center">Didattica</h1>
       {posts.map(({ node }, k) => {
