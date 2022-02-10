@@ -1,9 +1,6 @@
 ---
 title: "Inaugurazione dell'RDR Lab: Laboratorio di Risorse Digitali per la Ricerca"
-autore: Domizia D'Erasmo
 licenza: CC BY 4.0 International
-tags: [notizie]
-livello: base
 img: ./rdr_lab_dottorato_sar.jpg
 date: 2022-02-10
 sommario: "Nel panorama del dottorato in Storia Antropologia Religioni della Sapienza Università di Roma, a partire dal 7 marzo 2022, sarà inaugurato l'RDR Lab: Laboratorio di Risorse Digitali per la Ricerca."

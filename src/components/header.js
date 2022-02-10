@@ -41,7 +41,8 @@ const Header = () => {
               id="basic-navbar-nav"
             >
               <Nav>
-                <Nav.Link href={withPrefix(`/`)}>Home</Nav.Link>
+                <Nav.Link href={withPrefix(`/`)}>Inizio</Nav.Link>
+                <Nav.Link href={withPrefix(`/notizie/`)}>Notizie</Nav.Link>
                 <Nav.Link href={withPrefix(`/blog/`)}>Blog</Nav.Link>
                 <Nav.Link href={withPrefix(`/ricerca/`)}>Ricerca</Nav.Link>
                 <Nav.Link href={withPrefix(`/didattica/`)}>Didattica</Nav.Link>
