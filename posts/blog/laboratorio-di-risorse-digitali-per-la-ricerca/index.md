@@ -25,8 +25,8 @@ Attraverso una serie di incontri a cadenza bimensile saranno affrontate tematich
 - **2 maggio, h. 13-15**: Alessandra Celati (Università di Verona), _L’eresia corre sul network_ (diario di ricerca per il volume: A. Celati, _The World of Girolamo Donzellini. A Network of Heterodox Physicians in Sixteenth-Century Venice_, Routledge, New York, 2022)
 - **16 maggio, h. 13-15**: Enzo Cocca (CNR-ISPC): _‘R’. Un ambiente software per il calcolo statistico_
 
-### Info
+### Informazioni
 
-informazioni e iscrizioni: [julian.bogdani@uniroma1.it](mailto:julian.bogdani@uniroma1.it); [federica.favino@uniroma1.it](mailto:federica.favino@uniroma1.it)
+Informazioni e iscrizioni: [julian.bogdani@uniroma1.it](mailto:julian.bogdani@uniroma1.it); [federica.favino@uniroma1.it](mailto:federica.favino@uniroma1.it)
 
 Gli incontri si terranno nell'aula di Egittologia della Sapienza Università di Roma (Facoltà di Lettere e Filosofia, 2 piano) e saranno trasmessi online tramite il link: [https://uniroma1.zoom.us/j/83808083152?pwd=Z0FWbGM5TmJqRGZXaVZBWUJ6d0xVUT09](https://uniroma1.zoom.us/j/83808083152?pwd=Z0FWbGM5TmJqRGZXaVZBWUJ6d0xVUT09)
