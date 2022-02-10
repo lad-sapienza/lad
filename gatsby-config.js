@@ -3,7 +3,7 @@ module.exports = {
   siteMetadata: {
     title: `LAD`,
     description: `Laboratorio di Archeologia Digitale alla Sapienza`,
-    author: `LAD team`,
+    author: `Julian Bogdani`,
     siteUrl: `https://lad.saras.uniroma1.it/`,
   },
   plugins: [
