@@ -1,12 +1,8 @@
 ---
 title: "Migration towards v4: a roadmap and guide"
-autore: Julian Bogdani
-licenza: CC BY 4.0 International
-livello: avanzato
-tags: [notizie, bdus4]
 img: ./bdus.png
 date: 2021-01-14
-sommario: "Version 4 is an **almost** total rewrite of the previous glorious version 3
+sommario: "Version 4 is an almost total rewrite of the previous glorious version 3
 that has been around since 2013. In these many years multiple features have been added 
 and many buges have been fixed, making v3 extremly stable and reliable."
 ---
