@@ -43,38 +43,61 @@ const Team = () => {
       "researchgate": "https://www.researchgate.net/profile/Paolo-Rosati-2"
     },
   ];
+
+  const iconList = [
+    {
+      "id": "uni",
+      "label": "Sito istituzionale",
+      "icon": <FaUniversity />
+    },
+    {
+      "id": "github",
+      "label": "GitHub",
+      "icon": <FaGithub />
+    },
+    {
+      "id": "academia",
+      "label": "Academia.edu",
+      "icon": <SiAcademia />
+    },
+    {
+      "id": "iris",
+      "label": "Repository IRIS",
+      "icon": <GiIceIris />
+    },
+    {
+      "id": "researchgate",
+      "label": "Research Gate",
+      "icon": <SiResearchgate />
+    },
+    {
+      "id": "twitter",
+      "label": "Twitter",
+      "icon": <FaTwitter />
+    },
+  ];
+
   return (
     <Wrapper>
       <Container>
         <h2 className="border-bottom">Chi siamo</h2>
         <CardGroup>
-          {teamData.map( m => {
+          {teamData.map( (m, mk) => {
             return (
-            <Card>
+            <Card key={mk}>
               <Card.Img variant="top" src={ m.image } />
               <Card.Body>
                 <Card.Title>{ m.name }</Card.Title>
                 <Card.Text className="position">{ m.position }</Card.Text>
                 <Card.Text className="dipartimento">{ m.affiliation }</Card.Text>
                 <Card.Text className="icon">
-                  { m.uni && <a href={ m.uni } title="Sito istituzionale">
-                    <FaUniversity />
-                  </a>}
-                  { m.github && <a href={ m.github } title="Github">
-                    <FaGithub />
-                  </a>}
-                  { m.academia && <a href={ m.academia } title="Academia.edu">
-                    <SiAcademia />
-                  </a>}
-                  { m.iris && <a href={ m.iris } title="Catalogo IRIS">
-                    <GiIceIris />
-                  </a>}
-                  { m.researchgate && <a href={ m.researchgate } title="Research Gate">
-                    <SiResearchgate />
-                  </a>}
-                  { m.twitter && <a href={ m.twitter } title="Twitter">
-                    <FaTwitter />
-                  </a>}
+                  { iconList.map( (i, ik) => {
+                    if (m[i.id]) {
+                      return <a href={ m[i.id] } title={i.label} key={ik}>{i.icon}</a>
+                    } else {
+                      return ''
+                    }
+                  })}
                 </Card.Text>
               </Card.Body>
             </Card>
