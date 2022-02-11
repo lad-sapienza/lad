@@ -58,7 +58,8 @@ const StyledLogo = styled.img`
 `;
 const Wrapper = styled.div`
   width: 100% !important;
-  max-width: 800px !important;
+  max-width: 600px !important;
+  margin: auto;
 
   a.nav-link {
     font-family: "Cormorant Garamond", serif !important;
