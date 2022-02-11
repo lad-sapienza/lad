@@ -64,7 +64,7 @@ const Wrapper = styled.div`
   a.nav-link {
     font-family: "Cormorant Garamond", serif !important;
     font-size: 1.2rem !important;
-    font-weight: 900;
+    font-weight: 700;
     color: #151241 !important;
     
     &:hover{

@@ -14,6 +14,8 @@ Sono aperte le iscrizioni ai laboratori didattici di Archeologia Digitale, organ
 
 I laboratori si terranno in presenza, con la possibilità (da valutare) di una canale a distanza, presso Sapienza Università di Roma. Aula III, Edificio di Lettere e Filosofia, CU003, nei giorni di 2, 3, 4, 5, 6, 9, 10 Maggio 2022.
 
+[**Scarica la locandina con il programma completo in formato PDF**](./LAD-GIS-DB-2021-2022.pdf)
+
 ## Descrizione
 
 I laboratori si pongono l’obiettivo di fornire le basi teoriche e pratiche necessarie per impostare e sviluppare in autonomia i propri progetti GIS e affrontare il mondo della cartografia numerica, della creazione e gestione di banche dati online (DB, SQL e BraDypUS).
