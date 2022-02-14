@@ -4,7 +4,7 @@ autore: Domizia D’Erasmo
 licenza: CC BY 4.0 International
 livello: base
 tags: [notizie, cartografia, fonti]
-img: 
+img: ./maps.jpg
 date: 2022-02-14
 sommario: "È ormai noto come la cartografia storica sia sempre più da supporto per le ricerche archeologiche (Landscape Archaeology) e, più in generale, per quelle rientranti nella sfera delle discipline umanistiche. In questo articolo – in continuo aggiornamento –, saranno elencate le principali librerie online di cartografia storica disponibili attraverso varie tipologie di licenze e modalità di download."
 ---
