@@ -16,7 +16,7 @@ sommario: "È ormai noto come la cartografia storica sia sempre più da supporto
   _Licenza_: [CC BY-NC-SA 3.0](https://www.davidrumsey.com/about/copyright-and-permissions)  
   _Data aggiornameto_: 14-02-2022
 
-  La collezione di [David Rumsey](https://en.wikipedia.org/wiki/David_Rumsey), collezionista di cartografie statunitense, è ad oggi una delle più ricche sul web. L’intera raccolta conta più di 150.000 mappe, atlanti, mappamondi, mappe nautiche, scolastiche, tascabili, libri di esplorazione, carte marittime e una varietà di materiali cartografici e manoscritti provenienti da tutto il mondo.
+  La collezione cartografica di [David Rumsey](https://en.wikipedia.org/wiki/David_Rumsey) è a oggi una delle più ricche sul web. L’intera raccolta conta più di 150.000 mappe, atlanti, mappamondi, mappe nautiche, scolastiche, tascabili, libri di esplorazione, carte marittime e una varietà di materiali cartografici e manoscritti provenienti da tutto il mondo.
   
   La digitalizzazione della collezione ebbe inizio nel 1996 e continua regolarmente ancora oggi [http://www.davidrumsey.com/rumsey.pdf](http://www.davidrumsey.com/rumsey.pdf). Il sito fornisce la possibilità di scaricare ogni mappa gratuitamente e in diverse dimensioni (da un minimo di 96px a un massimo di 12288px) oppure possono essere acquistate in formato cartaceo.
 
@@ -26,6 +26,15 @@ sommario: "È ormai noto come la cartografia storica sia sempre più da supporto
   _Data aggiornamento_: 14-02-2022  
 
   L'Instanbul Urban database è un progetto creato da Nil Tuzcu volto alla digitalizzazione degli archivi storici urbanistici di Instanbul. A oggi l'IUDB è il più completo archivio digitale della storia urbana di Instanbul.
+
+- **Interactive Nolli Map Website**  
+  _Url_: [https://nolli.stanford.edu/](https://nolli.stanford.edu/)  
+  _Licenza_: Vari tipi di licenze  
+  _Data aggiornamento_: 14-02-2022  
+
+  Il sito web _Interactive Nolli map_ dell'Università dell'Oregon è stato creato nel 2005 da James Tice ed Erik Steiner, assistiti da Allan Ceen. All'interno del sito è presente una versione interattiva della celebre mappa _Nuova Topografia di Roma_ (1748) del Giovanbattista Nolli.  
+  
+  Avendo acquisito e digitalizzato tutti i dati presenti nell'indice che correda la suddetta mappa, gli ideatori del progetto hanno reso possibile ricercare singolarmente luoghi, edifici, strade, rendendo il progetto una delle fonti più importanti per lo studio della mappa del Nolli.
 
 - **Library of Congress Maps**  
   _Url_: [https://www.loc.gov/maps/](https://www.loc.gov/maps/)  
