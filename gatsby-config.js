@@ -18,6 +18,10 @@ module.exports = {
       options: {
         gfm: true,
         footnotes: true,
+        plugins: [
+          "gatsby-remark-autolink-headers",
+          "gatsby-remark-highlight-code"
+        ]
       },
     },
     {
@@ -51,16 +55,6 @@ module.exports = {
         path: `${__dirname}/src/pages/`,
       },
       
-    },
-    {
-      resolve: `gatsby-transformer-remark`,
-      options: {
-        plugins: [
-          {
-            resolve: `gatsby-remark-highlight-code`,
-          },
-        ],
-      },
     },
   ],
 };
