@@ -16,28 +16,29 @@ D
 ---
 ---
 
-- **David Rumsey Map Collection**  
+- **DAVID RUMSEY MAP COLLECTION**  
   _Url_: [https://www.davidrumsey.com/](https://www.davidrumsey.com/)  
   _Licenza_: [CC BY-NC-SA 3.0](https://www.davidrumsey.com/about/copyright-and-permissions)  
   _Data aggiornameto_: 14-02-2022
 
   La collezione cartografica di [David Rumsey](https://en.wikipedia.org/wiki/David_Rumsey) è a oggi una delle più ricche sul web. L’intera raccolta conta più di 150.000 mappe, atlanti, mappamondi, mappe nautiche, scolastiche, tascabili, libri di esplorazione, carte marittime e una varietà di materiali cartografici e manoscritti provenienti da tutto il mondo.
   
-  La digitalizzazione della collezione ebbe inizio nel 1996 e continua regolarmente ancora oggi [http://www.davidrumsey.com/rumsey.pdf](http://www.davidrumsey.com/rumsey.pdf). Il sito fornisce la possibilità di scaricare ogni mappa gratuitamente e in diverse dimensioni (da un minimo di 96px a un massimo di 12288px) oppure possono essere acquistate in formato cartaceo.
+  La digitalizzazione della collezione ebbe inizio nel 1996 e continua regolarmente ancora oggi [http://www.davidrumsey.com/rumsey.pdf](http://www.davidrumsey.com/rumsey.pdf). Il sito fornisce la possibilità di scaricare le mappe gratuitamente oppure di acquistarle in formato cartaceo.  
+  **IMPORTANTE**: La collezione di David Rumsey dal 2021 è ospitata anche all'interno della collezione online della [Stanford Libraires](https://searchworks-lb.stanford.edu/view/xh235dd9059).
 
 ---
 I
 ---
 ---
 
-- **Instanbul Urban database (IUDB)**  
+- **INSTANBUL URBAN DATABASE (IUDB)**  
   _Url_: [http://www.istanbulurbandatabase.com/](http://www.istanbulurbandatabase.com/)  
   _Licenza_: Vari tipi di licenze  
   _Data aggiornamento_: 14-02-2022  
 
   L'Instanbul Urban database è un progetto creato da [Nil Tuzcu](http://www.niltuzcu.net/about/) volto alla digitalizzazione degli archivi storici urbanistici di Instanbul. A oggi l'IUDB è il più completo archivio digitale della storia urbana di Instanbul.
 
-- **Interactive Nolli Map Website**  
+- **INTERACTIVE NOLLI MAP**  
   _Url_: [https://nolli.stanford.edu/](https://nolli.stanford.edu/)  
   _Licenza_: Vari tipi di licenze  
   _Data aggiornamento_: 14-02-2022  
@@ -51,7 +52,7 @@ L
 ---
 ---
 
-- **Library of Congress Maps**  
+- **LIBRARY OF CONGRESS MAPS**  
   _Url_: [https://www.loc.gov/maps/](https://www.loc.gov/maps/)  
   _Licenza_: CC BY-SA-NC  
   _Data aggiornameto_: 14-02-2022
@@ -63,14 +64,14 @@ M
 ---
 ---
 
-- **mapstor.com**  
+- **MAPSTOR.COM**  
   _Url_: [https://mapstor.com/](https://mapstor.com/)  
   _Licenza_: Vari tipi di licenze  
   _Data aggiunta_: 14-02-2022  
 
   Mapstor.com è un sito web a pagamento che ospita a oggi circa 95.020 mappe topografiche pubblicate da agenzie militari e statali europee, statutinensi e russe tra il XIX e il XX secolo a partire da € 1,00. Nel sito web è possibile visionare anche cartografia georiferita e corredata da metadati.  
 
-- **Mappa Mundi**  
+- **MAPPA MUNDI**  
   _Url_: [https://www.flickr.com/photos/quadralectics/sets/72157631634890887/with/8029130443/](https://www.flickr.com/photos/quadralectics/sets/72157631634890887/with/8029130443/)  
   _Licenza_: Vari tipi di licenza  
   _Data aggiornamento_: 14-02-2022  
@@ -82,14 +83,14 @@ N
 ---
 ---
 
-- **National Library of Australia**  
+- **NATIONAL LIBRARY OF AUSTRALIA**  
   _Url_: [https://www.nla.gov.au/copyright-and-the-maps-collection](https://www.nla.gov.au/copyright-and-the-maps-collection#)  
   _Licenza_: The National Library of Australia  
   _Data aggiornameto_: 14-02-2022  
 
   La collezione della National Library of Australia ospita circa 1 milione di mappe sia in formato cartaceo che digitale. Le cartografie online (circa 42.585) sono liberamente scaricabili in alta risoluzione.  
 
-- **New York Public Libray**  
+- **NEW YORK PUBLIC LIBRARY**  
   _Url_: [https://digitalcollections.nypl.org/](https://digitalcollections.nypl.org/)  
   _Licenza_: Vari tipi di licenze  
   _Data aggiornameto_: 14-02-2022  
@@ -103,7 +104,7 @@ O
 ---
 ---
 
-- **Old Maps online**  
+- **OLD MAPS ONLINE**  
   _Url_: [https://www.oldmapsonline.org/](https://www.oldmapsonline.org/)  
   _Licenza_: [Tutti i diritti riservati alle istituzioni ospitanti mappe e metadati](https://www.oldmapsonline.org/terms/)  
   _Data aggiornameto_: 14-02-2022  
@@ -118,16 +119,16 @@ P
 ---
 ---
 
-- **PAThs Tacking Papyrus and Parchment Paths repository**  
+- **PAThs: TRACKING PAPYRUS AND PARCHMENT PAThs REPOSITORY**  
   _Url_: [https://docs.paths-erc.eu/data/](https://docs.paths-erc.eu/data)  
-  _Licenza_: Vari tipi di licenze
+  _Licenza_: Vari tipi di licenze  
   _Data aggiornameto_: 14-02-2022  
 
   Il progetto ERC Advanced 2015 _PAThs_, diretto da [Paola Buzi](https://www.lettere.uniroma1.it/users/paola-buzi) e ospitato dalla Sapienza Università di Roma, è volto alla comprensione diacronica e alla rappresentazione della geografia della produzione letteraria copta del _corpus_ di testi, in lingua copta, prodotti in Egitto tra il III e il XIII secolo.
   
   Il progetto ha un [repository](https://docs.paths-erc.eu/data/) che ospita diverse tipologie di data set, sia vettoriali che raster. Per quanto riguarda la cartografia storica, a oggi _PAThs_ è certamente uno dei pricipali siti di riferimento per la documentazione relativa all'Egitto, ospitando serie topografiche georiferite redatte a partire dal 1800 fino ad alcune pubblicate nel 1985.
 
-- **Petro Vlasenko Maps**  
+- **PETRO VLASENKO MAPS**  
   _Url_: [https://maps.vlasenko.net/](https://maps.vlasenko.net/)  
   _Licenza_: Petro Vlasenko  
   _Data aggiornameto_: 14-02-2022  
@@ -137,15 +138,27 @@ P
   **IMPORTANTE:** Al fine di rispettare i requisiti della legislazione, le mappe dell'Ucraina 1:50000, 1:100000 e le mappe della Russia 1:50000 sono state rimosse dal sito.
 
 ---
+S
+---
+---
+
+- **STANFORD LIBRARIES**  
+  _Url_: [https://searchworks-lb.stanford.edu/](https://searchworks-lb.stanford.edu/)  
+  _Licenze_: Vari tipi di licenze  
+  _Data aggiunta_: 14-02-2022  
+
+  La Stanford Libraries ospita a oggi 30 data set cartografici all'interno della sezione [_Digital collections_](https://searchworks-lb.stanford.edu/catalog?f%5Bcollection_type%5D%5B%5D=Digital+Collection). Questi ultimi fanno riferimento a collezioni o repository di documentazione geografica che afferiscono alla banca dati dalla biblioteca, da cui è possibile scaricare direttamente i materiali.
+
+---
 T
 ---
 ---
 
-- **Texas GeoData portal**  
+- **TEXAS GEODATA PORTAL**  
   _Url_: [https://geodata.lib.utexas.edu/](https://geodata.lib.utexas.edu/)  
   _Licenza_: Vari tipi di licenze  
   _Data aggiornameto_: 14-02-2022  
 
-  Di recentissima pubblicazione, il geoportale dell'Università del Texas raccoglie tutti i dati geospaziali presenti nei documenti delle biblioteche di questa Università. Tra le collezioni cartografiche vi è anche la celebre **Perry-Castañeda Library Map Collection**,precedentemente ospitata [in un altro sito web](https://maps.lib.utexas.edu/maps/imw/) appartenente alla stessa istituzione accademica.
+  Di recentissima pubblicazione, il geoportale dell'Università del Texas raccoglie tutti i dati geospaziali presenti nei documenti delle biblioteche di questa Università. Tra le collezioni cartografiche vi è anche la celebre **Perry-Castañeda Library Map Collection**, precedentemente ospitata [in un altro sito web](https://maps.lib.utexas.edu/maps/imw/) appartenente alla stessa istituzione accademica.
 
   Il geoportale continente sia data set raster che vettoriali, condivisi anche da altre università tramite [GeoBlacklight](https://geoblacklight.org/) e la collaborazione [OpenGeoMetadata](https://github.com/OpenGeoMetadata).
