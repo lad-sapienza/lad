@@ -46,7 +46,7 @@ I
 
   Il sito web _Interactive Nolli map_ dell'Università dell'Oregon è stato creato nel 2005 da James Tice ed Erik Steiner, assistiti da Allan Ceen. All'interno del sito è presente una versione interattiva della celebre mappa _Nuova Topografia di Roma_ (1748) del Giovanbattista Nolli.  
   
-  Avendo acquisito e digitalizzato tutti i dati presenti nell'indice che correda la suddetta mappa, gli ideatori del progetto hanno reso possibile ricercare singolarmente luoghi, edifici, strade, rendendo il progetto una delle fonti più importanti per lo studio della mappa del Nolli.
+  Avendo acquisito e digitalizzato tutti i dati presenti nell'indice che correda la suddetta mappa, gli ideatori del progetto hanno reso possibile ricercare singolarmente luoghi, edifici, strade, rendendo il progetto una delle fonti più importanti per lo studio della mappa del Nolli e dell'urbanistica romana.
 
 ---
 L
