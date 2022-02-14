@@ -11,9 +11,15 @@ module.exports = {
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
-    `gatsby-transformer-remark`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sass`,
+    {
+      resolve: "gatsby-transformer-remark",
+      options: {
+        gfm: true,
+        footnotes: true,
+      },
+    },
     {
       resolve: "gatsby-source-filesystem",
       options: {
