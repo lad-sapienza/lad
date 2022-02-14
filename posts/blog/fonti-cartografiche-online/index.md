@@ -20,12 +20,12 @@ sommario: "È ormai noto come la cartografia storica sia sempre più da supporto
   
   La digitalizzazione della collezione ebbe inizio nel 1996 e continua regolarmente ancora oggi [http://www.davidrumsey.com/rumsey.pdf](http://www.davidrumsey.com/rumsey.pdf). Il sito fornisce la possibilità di scaricare ogni mappa gratuitamente e in diverse dimensioni (da un minimo di 96px a un massimo di 12288px) oppure possono essere acquistate in formato cartaceo.
 
-- **Instambul Urban database (IUDB)**  
+- **Instanbul Urban database (IUDB)**  
   _Url_: [http://www.istanbulurbandatabase.com/](http://www.istanbulurbandatabase.com/)  
   _Licenza_: Vari tipi di licenze  
   _Data aggiornamento_: 14-02-2022  
 
-  L'Instanbul Urban database è un progetto creato da Nil Tuzcu volto alla digitalizzazione degli archivi storici urbanistici di Instanbul. A oggi l'IUDB è il più completo archivio digitale della storia urbana di Instanbul.
+  L'Instanbul Urban database è un progetto creato da [Nil Tuzcu](http://www.niltuzcu.net/about/) volto alla digitalizzazione degli archivi storici urbanistici di Instanbul. A oggi l'IUDB è il più completo archivio digitale della storia urbana di Instanbul.
 
 - **Interactive Nolli Map Website**  
   _Url_: [https://nolli.stanford.edu/](https://nolli.stanford.edu/)  
@@ -55,7 +55,7 @@ sommario: "È ormai noto come la cartografia storica sia sempre più da supporto
   _Licenza_: Vari tipi di licenza  
   _Data aggiornamento_: 14-02-2022  
 
-  La raccolta Mappa Mundi di Marten Kuilman è ospitata all'interno di [Flickr](https://www.flickr.com/), un sito web che permette agli utenti iscritti di condividere fotografie personali. Le mappe e i manoscritti scansionati e pubblicati dall'autore non sono molti e per lo più a bassa risoluzione.
+  La raccolta Mappa Mundi di [Marten Kuilman](https://www.flickr.com/photos/quadralectics) è ospitata all'interno di [Flickr](https://www.flickr.com/), un sito web che permette agli utenti iscritti di condividere fotografie personali. Le mappe e i manoscritti scansionati e pubblicati dall'autore non sono molti e per lo più a bassa risoluzione.
 
 - **National Library of Australia**  
   _Url_: [https://www.nla.gov.au/copyright-and-the-maps-collection](https://www.nla.gov.au/copyright-and-the-maps-collection#)  
@@ -80,7 +80,7 @@ sommario: "È ormai noto come la cartografia storica sia sempre più da supporto
 
   Progetto nato dalla collaborazione tra la [Klokan Technologies GmbH (Svizzera)](https://www.klokantech.com/) e il progetto The Great Britain Historical GIS (Università di Portsmouth, Inghilterra) finanziato dalla società no-profit [Jisc](https://en.wikipedia.org/wiki/Jisc).
   
-  Nel sito sono indicizzate più di 400.000 mappe di tutto il mondo così come i collegamenti ai siti di associazioni, istituzioni accademiche, fondazioni, biblioteche ecc.. in cui è possibile scaricarle, acquistarle oppure richiederle in consultazione. 
+  Nel sito sono indicizzate più di 400.000 mappe di tutto il mondo così come i collegamenti ai siti di associazioni, istituzioni accademiche, fondazioni, biblioteche ecc.. in cui è possibile scaricarle, acquistarle oppure richiederle in consultazione.
   al 2013 il sito è gestito da volontari della Klokan Technologies GmbH (Svizzera) ed è aggiornato frequentemente con il materiale messo a disposizione da nuove [istituzioni partecipanti](https://www.oldmapsonline.org/about/).
 
 - **Petro Vlasenko Maps**  
