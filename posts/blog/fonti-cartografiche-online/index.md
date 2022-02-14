@@ -24,6 +24,7 @@ D
   La collezione cartografica di [David Rumsey](https://en.wikipedia.org/wiki/David_Rumsey) è a oggi una delle più ricche sul web. L’intera raccolta conta più di 150.000 mappe, atlanti, mappamondi, mappe nautiche, scolastiche, tascabili, libri di esplorazione, carte marittime e una varietà di materiali cartografici e manoscritti provenienti da tutto il mondo.
   
   La digitalizzazione della collezione ebbe inizio nel 1996 e continua regolarmente ancora oggi [http://www.davidrumsey.com/rumsey.pdf](http://www.davidrumsey.com/rumsey.pdf). Il sito fornisce la possibilità di scaricare le mappe gratuitamente oppure di acquistarle in formato cartaceo.  
+
   **IMPORTANTE**: La collezione di David Rumsey dal 2021 è ospitata anche all'interno della collezione online della [Stanford Libraires](https://searchworks-lb.stanford.edu/view/xh235dd9059).
 
 ---
@@ -111,8 +112,7 @@ O
 
   Progetto nato dalla collaborazione tra la [Klokan Technologies GmbH (Svizzera)](https://www.klokantech.com/) e il progetto The Great Britain Historical GIS (Università di Portsmouth, Inghilterra) finanziato dalla società no-profit [Jisc](https://en.wikipedia.org/wiki/Jisc).
   
-  Nel sito sono indicizzate più di 400.000 mappe di tutto il mondo così come i collegamenti ai siti di associazioni, istituzioni accademiche, fondazioni, biblioteche ecc.. in cui è possibile scaricarle, acquistarle oppure richiederle in consultazione.
-  al 2013 il sito è gestito da volontari della Klokan Technologies GmbH (Svizzera) ed è aggiornato frequentemente con il materiale messo a disposizione da nuove [istituzioni partecipanti](https://www.oldmapsonline.org/about/).
+  Nel sito sono indicizzate più di 400.000 mappe di tutto il mondo così come i collegamenti ai siti di associazioni, istituzioni accademiche, fondazioni, biblioteche ecc.. in cui è possibile scaricarle, acquistarle oppure richiederle in consultazione. Dal 2013 il sito è gestito da volontari della Klokan Technologies GmbH (Svizzera) ed è aggiornato frequentemente con il materiale messo a disposizione da nuove [istituzioni partecipanti](https://www.oldmapsonline.org/about/).
 
 ---
 P
