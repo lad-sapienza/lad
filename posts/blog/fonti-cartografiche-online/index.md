@@ -15,6 +15,7 @@ sommario: "È ormai noto come la cartografia storica sia sempre più da supporto
 D
 ---
 ---
+
 - **David Rumsey Map Collection**  
   _Url_: [https://www.davidrumsey.com/](https://www.davidrumsey.com/)  
   _Licenza_: [CC BY-NC-SA 3.0](https://www.davidrumsey.com/about/copyright-and-permissions)  
@@ -28,6 +29,7 @@ D
 I
 ---
 ---
+
 - **Instanbul Urban database (IUDB)**  
   _Url_: [http://www.istanbulurbandatabase.com/](http://www.istanbulurbandatabase.com/)  
   _Licenza_: Vari tipi di licenze  
@@ -48,6 +50,7 @@ I
 L
 ---
 ---
+
 - **Library of Congress Maps**  
   _Url_: [https://www.loc.gov/maps/](https://www.loc.gov/maps/)  
   _Licenza_: CC BY-SA-NC  
@@ -59,6 +62,7 @@ L
 M
 ---
 ---
+
 - **mapstor.com**  
   _Url_: [https://mapstor.com/](https://mapstor.com/)  
   _Licenza_: Vari tipi di licenze  
@@ -77,6 +81,7 @@ M
 N
 ---
 ---
+
 - **National Library of Australia**  
   _Url_: [https://www.nla.gov.au/copyright-and-the-maps-collection](https://www.nla.gov.au/copyright-and-the-maps-collection#)  
   _Licenza_: The National Library of Australia  
@@ -97,6 +102,7 @@ N
 O
 ---
 ---
+
 - **Old Maps online**  
   _Url_: [https://www.oldmapsonline.org/](https://www.oldmapsonline.org/)  
   _Licenza_: [Tutti i diritti riservati alle istituzioni ospitanti mappe e metadati](https://www.oldmapsonline.org/terms/)  
@@ -111,6 +117,16 @@ O
 P
 ---
 ---
+
+- **PAThs Tacking Papyrus and Parchment Paths repository**  
+  _Url_: [https://docs.paths-erc.eu/data/](https://docs.paths-erc.eu/data)  
+  _Licenza_: Vari tipi di licenze
+  _Data aggiornameto_: 14-02-2022  
+
+  Il progetto ERC Advanced 2015 _PAThs_, diretto da [Paola Buzi](https://www.lettere.uniroma1.it/users/paola-buzi) e ospitato dalla Sapienza Università di Roma, è volto alla comprensione diacronica e alla rappresentazione della geografia della produzione letteraria copta del _corpus_ di testi, in lingua copta, prodotti in Egitto tra il III e il XIII secolo.
+  
+  Il progetto ha un [repository](https://docs.paths-erc.eu/data/) che ospita diverse tipologie di data set, sia vettoriali che raster. Per quanto riguarda la cartografia storica, a oggi _PAThs_ è certamente uno dei pricipali siti di riferimento per la documentazione relativa all'Egitto, ospitando serie topografiche georiferite redatte a partire dal 1800 fino ad alcune pubblicate nel 1985.
+
 - **Petro Vlasenko Maps**  
   _Url_: [https://maps.vlasenko.net/](https://maps.vlasenko.net/)  
   _Licenza_: Petro Vlasenko  
@@ -124,6 +140,7 @@ P
 T
 ---
 ---
+
 - **Texas GeoData portal**  
   _Url_: [https://geodata.lib.utexas.edu/](https://geodata.lib.utexas.edu/)  
   _Licenza_: Vari tipi di licenze  
