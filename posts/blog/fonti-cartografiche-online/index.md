@@ -3,18 +3,17 @@ title: Fonti di cartografie storiche online
 autore: Julian Bogdani, Domizia D’Erasmo
 licenza: CC BY 4.0 International
 livello: base
-tags: [cartografia, risorse]
+tags: [risorse, cartografia, geodati]
 img: ./maps.jpg
 date: 2022-02-15
 sommario: "È ormai fatto noto come la cartografia storica sia sempre più uno strumento prezioso per le ricerche archeologiche. Ecco allora un un elenco ragionato e commentato di varie fonti di cartografa storica online, di accesso libero.."
 ---
 
-È ormai fatto noto come la cartografia storica sia sempre più uno strumento prezioso per le ricerche archeologiche e in particolare quel ramo della disciplina che è maggiormente focalizzata sullo studio del cambiamnto del paesaggio nel tempo, l'Archeologia dei Paesaggi (Landscape Archaeology). Vieppiù, però, la carta storica è un documento fondamentale in sé e come tale è considerato no solo nell'àambito archeologico ma più in generale per tutte le discipline umanistiche. In questo articolo — **in continuo aggiornamento** –, vengono elencate in ordine alfabetico le principali biblioteche online che contengono documenti relativi alla  cartografia storica disponibili attraverso varie tipologie di licenze e modalità di scaricamento.
+È ormai fatto noto come la cartografia storica sia sempre più uno strumento prezioso per le ricerche archeologiche e in particolare quel ramo della disciplina che è maggiormente focalizzata sullo studio del cambiamnto del paesaggio nel tempo, l'Archeologia dei Paesaggi (Landscape Archaeology). Vieppiù, però, la carta storica è un documento fondamentale in sé e come tale è considerato non solo nell'ambito archeologico ma più in generale per tutte le discipline umanistiche. In questo articolo — **in continuo aggiornamento** –, vengono elencate in ordine alfabetico le principali biblioteche online che contengono documenti relativi alla  cartografia storica disponibili attraverso varie tipologie di licenze e modalità di scaricamento.
 
 Si tratta di una selezione di fonti che ci siamo trovati ad usare quasi quotidianamente nel nostro laboratorio, ma che è lntanto dall'essere completo. Segnalateci eventuali aggiunte o correzioni scrivendoci all'indirizzo [julian.bogdani@uniroma1.it](mailto:julian.bogdani@uniroma1.it).
 
 ---
-
 
 ## David Rumsey Map Collection
 - Url: [https://www.davidrumsey.com/](https://www.davidrumsey.com/)
@@ -28,7 +27,6 @@ La digitalizzazione della collezione ebbe inizio nel 1996 e continua regolarment
 Per lo più le immagini sono disponibili in diversi formati digitali a varie risoluzioni, non georiferite. È quindi compito del singolo ricercatore che voglia usare queste cartografie sulle proprie piattaforme GIS georiferirle correttamente prima di usarle. È però in atto un'importante iniziativa collaborativa che prevede uno strumento interamente online e _web-based_ in collaborazione con [georeferencer.com](https://georeferencer.com) per il [georifreimanto collaborativo delle cartografie](https://www.davidrumsey.com/view/georeferencer). Lo strumento permette di georiferire un'immagine in ambiente grafico, mediante il riconoscimento e la collimazione di punti omologhi (GCP: Ground Control Points) e salvare il risultato ottenuto sulla nuvola. L'immagine georiferita si può visualizzare in _overlay_ su una base cartografica web e inoltre si può usare anche im progetti GIS desktop, in fari formati: scaricando un file [GeoTIFF](https://it.wikipedia.org/wiki/GeoTIFF) oppure come servizio web (Web Map service) usando protcolli aperti come [WMTS](https://it.wikipedia.org/wiki/Web_Map_Tile_Service), [TileJSON](https://docs.mapbox.com/help/glossary/tilejson/) oppure [XYZ](https://en.wikipedia.org/wiki/Tiled_web_map#Standards). Attualmente, l servizio cloud contiene circa 66.781 mappe georiferite dagli utenti e un utilissimo strumento di ricerca geografico per la loro esplorazione.
 
 **IMPORTANTE**: La collezione di David Rumsey dal 2021 è ospitata anche all'interno della collezione online delle [Stanford Libraries](./#stanford-libraries).
-
 
 ---
 

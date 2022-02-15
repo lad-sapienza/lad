@@ -3,7 +3,7 @@ title: Codifica digitale della cronologia
 autore: Julian Bogdani
 licenza: CC BY 4.0 International
 livello: avanzato
-tags: [riflessioni a appunti, open standard]
+tags: [riflessioni a appunti, open standard, cronologia]
 img: ./tempo.jpg
 date: 2021-07-30
 sommario: "La codifica digitale della cronologia nele banche dati è un problema ben noto in ambito archeologico e più in generale umanistico. Oltre ai problmi concreti della ricercabilità, anche la possibilità di codificare in maniera formale l'incertezza e l'approssimazione sono questioni rilevanti. Lo standard EDTF introduce dello soluzioni molto interessanti, anche snon pienamente mature per l'utilizzo diffuso."
@@ -30,8 +30,8 @@ Qualche esempio, meglio di molte parole, potrebbe aiutare a inquadrare il proble
 - 23 settembre 63 a.C. - 19 agosto 14 d.C.: è un altro intervallo, con precisione al giorno, che rappresenta la vita di Gaio Ottavio Turino, meglio noto come Gaio Giulio Cesare Augusto, il fondatore dell'Impero romano;
 - Prima metà del I sec. a.C.: un tipo di indicazione molto diffusa, con precsione al decennio
 - 24 agosto 79 _oppure_ 24 ottobre 79: data dell'eruzione del Vesuvio, due date puntuali (precisione al giorno) che si esclusono a l'un l'altra e che coinvolgono, anche se in maniera molto puntuale, il concetto di incertezza;
-- 42000 BP (2000) – 12001 BP (2000): Paleolotico superiore relativamente alla Sicilia, come definito dal progetto ARIADNE nel 2015 e pubblicato su PeriodO al permalink: [http://n2t.net/ark:/99152/p0qhb66j7jg](http://n2t.net/ark:/99152/p0qhb66j7jg). Da notare che le date sono da intendere non relativamente all'anno zero ma dal presente (BP: before present) e dove con presente si intende l'anno 2000.
-- ca. 3345 AEC - ca. 3300 AEC: arco di vita approssimativo e che può varirare di uno o più centinaio di anni, della [mummia del Similaun, o Ötsi](https://it.wikipedia.org/wiki/Mummia_del_Similaun), dove AEC/EC (avanti era comune / era comune) è una indicazione alternativa, ma svincolata da riferimenti religiosi, al sistema a.C./d.C., equivalenet all'inglese BCE/CE. Il secondo termine è dato dalle misurazioni al radiocarbone e segue le oscillazioni di questo strumento (~200 anni in questo caso), il primo, invece è legato al secondo attraverso la determinazione dell'età di morte, un dato piuttosto sicuro.
+- 42000 BP[^1] (2000) – 12001 BP (2000): Paleolotico superiore relativamente alla Sicilia, come definito dal progetto ARIADNE nel 2015 e pubblicato su PeriodO al permalink: [http://n2t.net/ark:/99152/p0qhb66j7jg](http://n2t.net/ark:/99152/p0qhb66j7jg). Da notare che le date sono da intendere non relativamente all'anno zero ma dal presente (BP: before present) e dove con presente si intende l'anno 2000.
+- ca. 3345 AEC[^2] - ca. 3300 AEC: arco di vita approssimativo e che può varirare di uno o più centinaio di anni, della [mummia del Similaun, o Ötsi](https://it.wikipedia.org/wiki/Mummia_del_Similaun). Il secondo termine è dato dalle misurazioni al radiocarbone e segue le oscillazioni di questo strumento (~200 anni in questo caso), il primo, invece è legato al secondo attraverso la determinazione dell'età di morte, un dato piuttosto sicuro.
 
 ## Soluzione 1: codificare la data con un intervallo
 
@@ -56,21 +56,25 @@ Va ricordato che la possibile aggiunta di un campo di testo con la datazione in 
 
 ## Esempi di codifica come intervallo
 
-- 2 settembre 31 a.C.
+**2 settembre 31 a.C.**
 
 | data_da | data_a |
 | ------- | ------ |
 | -31     | -31    |
 
-Non è dunque possibile indicare mese e anno con granularità annuale.
+Com'è chiaro dall'esempio sopra non è possibile scendere in un dettaglio inferiore all'anno, ma è possibile indicare date puntuali riportando lo stesso valore in entrambe le celle.
 
-- 44 a.C. - 31 a.C.
+---
+
+**44 a.C. - 31 a.C.**
 
 | data_da | data_a |
 | ------- | ------ |
 | -44     | -31    |
 
-- 23 settembre 63 a.C. - 19 agosto 14 d.C.
+---
+
+**23 settembre 63 a.C. - 19 agosto 14 d.C.**
 
 | data_da | data_a |
 | ------- | ------ |
@@ -78,7 +82,9 @@ Non è dunque possibile indicare mese e anno con granularità annuale.
 
 Ancora una volta, si perde ogni informazione di durata inferiore all'anno.
 
-- Prima metà del I sec. a.C
+---
+
+**Prima metà del I sec. a.C**
 
 | data_da | data_a |
 | ------- | ------ |
@@ -86,29 +92,36 @@ Ancora una volta, si perde ogni informazione di durata inferiore all'anno.
 
 In questo caso gli anni d'inizio e di fine sono convenzionali e approssimativi, anche se questa informazione non è indicata espressamente nei dati.
 
-- 24 agosto 79 oppure 24 ottobre 79
+---
+
+**24 agosto 79 *oppure* 24 ottobre 79**
 
 Non è possibile indicare con questo sistema date alternative, come quella sopra.
 
-- 42000 BP (2000) – 12001 BP (2000)
+---
+
+**42000 BP (2000) – 12001 BP (2000)**
 
 | data_da | data_a |
 | ------- | ------ |
 | -4000   | -10001 |
 
-È fortemente consigliato di usare un unico sistema cronologico per un determinato database e quindi convertire le date in sistemi diversi. In questo caso sono state transformate le dare BP (2000) in date AEC.
+È fortemente consigliato di usare un unico sistema cronologico per un determinato database e quindi convertire le date in sistemi diversi. In questo caso sono state transformate le date BP (2000) in date AEC.
 
-- ca. 3345 AEC - ca. 3300 AEC
+---
+
+**ca. 3345 AEC - ca. 3300 AEC**
 
 | data_da | data_a |
 | ------- | ------ |
 | -3345   | -3300  |
 
-In questo caso non c'è modo di esplicitare l'approssimazione della data di morte della mummia di Similaun. Probabilmente, se si tratasse di un database prosopografico, potrebbe essere utile registrare non l'intervallo di vita, ma le due date di nascita e morte, ciascuna definita da un intervallo. Questo permetterebbe di registrare l'approssimazione, a scapito della sintesi:
+In questo caso non c'è modo di esplicitare l'approssimazione della data di morte della mummia di Similaun. Probabilmente, se si tratasse di un database prosopografico, potrebbe essere utile registrare non l'intervallo di vita, ma le due date di nascita e morte, ciascuna definita da un intervallo. Questo permetterebbe di registrare l'approssimazione, a scapito della sintesi e della facilità di ricerca:
 
 | nato_da | nato_a | morto_da | morto_a |
 | ------- | ------ | -------- | ------- |
 | -3345   | -3145  | -3300    | -3100   |
+
 
 ## Soluzione 2: Extended Date/Time Format
 
@@ -268,26 +281,28 @@ Oltre a comprendere tutte le funzioni del livello precedente, il livello 1 aggiu
 
 Per ritornare al nostro “banco di prova”, si elencano di seguito le codifiche delle date già viste:
 
-- **2 settembre 31 a.C.**
-  - Y-31-09-02`
-  - La Y davanti all'anno è necessaria perché altrimenti EDTF si aspetta un anno a 4 cifre. Per rappresentare questa data è necessario il Livello 1.  
-- **44 a.C. - 31 a.C.**
-  - `Y-44/Y-31`
+**2 settembre 31 a.C.**
+- Y-31-09-02
+- La Y davanti all'anno è necessaria perché altrimenti EDTF si aspetta un anno a 4 cifre.
+- Per rappresentare questa data è necessario il Livello 1.  
 
-- **23 settembre 63 a.C. - 19 agosto 14 d.C.**
-  - `Y-63-09-23/Y14-08-19`
+**44 a.C. - 31 a.C.**
+- `Y-44/Y-31`
 
-- **Prima metà del I sec. a.C**
-  - `Y-100/Y-51`
+**23 settembre 63 a.C. - 19 agosto 14 d.C.**
+- `Y-63-09-23/Y14-08-19`
 
-- **24 agosto 79 oppure 24 ottobre 79**
-  - `[Y79-08-24,Y79-19-24]`
+**Prima metà del I sec. a.C**
+- `Y-100/Y-51`
 
-- **42000 BP (2000) – 12001 BP (2000)**
-  - `Y-40000/Y-12001`
+**24 agosto 79 oppure 24 ottobre 79**
+- `[Y79-08-24,Y79-19-24]`
 
-- **ca. 3345 AEC - ca. 3300 AEC**
-  - `Y-3345~/Y-3300~`
+**42000 BP (2000) – 12001 BP (2000)**
+- `Y-40000/Y-12001`
+
+**ca. 3345 AEC - ca. 3300 AEC**
+- `Y-3345~/Y-3300~`
 
 ### Attenzione
 
@@ -354,3 +369,10 @@ In ogni caso, è sconsigliato integrare in un database di lavoro, caratterizzato
 - Servizio di validazione per EDTF: [https://digital2.library.unt.edu/edtf/](https://digital2.library.unt.edu/edtf/)
 
 - Lista delle implementazioni nel sito della Library of Congress [https://www.loc.gov/standards/datetime/implementations.html](https://www.loc.gov/standards/datetime/implementations.html)
+
+---
+
+### Note
+
+[^1]: La sigla BP sta per Before Present e usa una scala della misurazione del tempo, in anni, a partire dal “presente” dove per presente si intende l'inizio dell'utilizzo del radiocarbonio come strumento di datazione, gorssomodo coincidente con gli anni Cinquanta del secolo scorso. Per convenzione, quando non diversamente indicato, il “presente” del sistema BP è l'anno 1950. Altrimenti, come in questo caso, deve essere fornito in maniera chiara l'anno di inizio del conteggio, per cui `42000 BP (2000)` indica una distanza di 4200 anni dal presente, stabilito nell'anno 2000 EC: si tratta quindi dell'anno 2200 AEC.
+[^2]: Il sistema AEC/EC (Avanti Era Comune / Era Comune) è una indicazione alternativa del conteggio del tempo al diffuso sistema a.C./d.C., equivalenet all'inglese BCE/CE (Before Common Era / Common Era). Questo sistema è svincolato riferimenti religiosi ma mantiene piena compatibilità con quello, per cui `31 AEC = 31 a.C.` e `476 EC = 476 d.C.`.
