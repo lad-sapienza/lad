@@ -18,11 +18,17 @@ Il portale è stato ufficialmente presentazione il 16 dicembre 2021 all'aula Mag
 Citando il sito, 
 > Lazio Antico offre una mappatura digitale completa dei beni archeologici, dei siti e delle emergenze riferibili al mondo Antico in un periodo compreso tra la metà del sec. IX a.C. e la metà del sec. VI d.C. Lazio Antico copre, oggi, tutto il territorio del Lazio a sud del Tevere e potrà essere esteso a tutta la Regione con una seconda fase di progetto.
 
-Il portale, si articola in due sezioni, una prima pagina di benvenuto che offre informazioni istituzionali e un importante riassunto dei dati finora contenuti (v. sotto); inoltre vi è contenuto un video che mostra in maniera molto efficace l'utilizzo dello stesso. L'atlante vero e proprio si articola come un [Single Page Application](https://developer.mozilla.org/en-US/docs/Glossary/SPA) che ha alla sua base la mappa dinamica del Lazio antico, sulla quale sono rappresetate in maniera 
+Il portale, si articola in due sezioni, una prima pagina di benvenuto che offre informazioni istituzionali e un importante riassunto dei dati finora contenuti (v. sotto); inoltre vi è contenuto un video che mostra in maniera molto efficace l'utilizzo dello stesso. L'atlante vero e proprio si articola come un [Single Page Application](https://developer.mozilla.org/en-US/docs/Glossary/SPA) che ha alla sua base la mappa dinamica del Lazio antico, sulla quale sono rappresetate in maniera dettagliata e non simbolica le evidenze archeologiche.
 
+La mappa dinamica ha varie funzioni di consultazione, sia in 2D, con la classica vista zenitale, che in 3D con la possibilità di inclinare il unto di vista quasi a sfiorare il terreno. Le evidenze archeologiche sono posizionate su una mappa di base che ricostruisce quello che doveva essere il paesaggio antico, sulla quale sono materializzate le aree pertinenti ai singoli cerntro, calcolati—ad eccezione del territorio dell'Urbe—usando i [poligoni di Voronoi](https://it.wikipedia.org/wiki/Diagramma_di_Voronoi). È inoltre possibile sostiture la mappa di base con una base fotografica odierna, uno strumento molto utile per confrontare i cambiamenti nel tempo: l'esempio della foce del Tevere è un caso molto didattico.
 
+È inoltre possibile visualizzare a video delle brevi schede riassuntive per ciascuno dei territori, usando il menu a pie' di pagina (voce _Territori_) e selezionando il territorio dall'elenco che si apre a destra. Quest'elenco è sincronizzato con la mappa, quindi è sufficiente spostarsi nella mappa o zoomare per aggiornare l'elenco.
 
-## La ricerca
+In maniera simile è possibile sfogliare e consultare le schede dedicate ai molto monumenti ricostruiti (voce _Ricostruzioni_). IN questo caso, la breve descrizione testuale è accompagnata da uno o più allegati sotto forma di immagini raster che contengono le tavole plano-altimetriche dedicate alla singola struttura, utilizzando lo stesso linguaggio grafico messo a punto ed efficacemente utilizzato nel precedente [Atlante di Roma (Princeton University Press 2017)](https://www.worldcat.org/title/atlante-di-roma-antica-biografia-e-ritratti-della-citta/oclc/1006032427).
+
+È possibile filtrare i dati secondo la cronologia, utilizzando un utilissimo _widget_ localizzato nella parte bassa dello schermo, con il semplice trascinamento dei lati corti e/o il trascinemento della finestra attiva delle cronologia. In tempo reale, le evidenze visualizzate a schermo vengono filtrate, nascoste o visualizzate. Si tratta di una funzione molto utile che permette di visualizzare in maniera estrememente semplice anche la quarta dimensione, ovvero il tempo.
+
+La mappa, infine, è implementata utilizzando una serie di icone che facilitano la lettura della tipologia dei resti visualizzati. Ad ogni elemento archeologico mostrato sulla mappa è accopiato, infatti, un elemento puntiforme al quale sono gollegate le informazioni principali per ogni elemento: l'identificativo, la cronoogia, quando è disponibile, la tipologia, e le schede grafiche quando sono disponibili.
 
 ## I dati
 Al momento della redazione di questa recensione (febbrario 2022), e secondo le informazioni pubblicate nella pagina iniziale del sito, il portale raccoglie e pubblica:
@@ -34,14 +40,13 @@ Al momento della redazione di questa recensione (febbrario 2022), e secondo le i
 
 Questi dati si riferiscono all'area del Lazio che si trova a sud del fiume Tevere, che è stato considerato uno dei confini geografici del presente progetto. Questo limite verrà presto eliminato dal proseguimento delle ricerche, come'è stato anticipato nella presentazione ufficiale del progetto del 16 dicembre 2021.
 
-Allo stato attuale i dati sono visualizzabili attraverso il Web Application e non è possibile fruirli come servizio esternamento (WFS/WCS/API ecc.).
-
-- carte statiche
-- ricostruzioni
-
- Si prevede la realizzazione di una mappatura digitale dei beni archeologici e dei siti in un periodo compreso tra la metà del IX sec. a.C. e la metà del VI sec. d.C. nel territorio del Lazio a sud del Tevere. La campagna di censimento e restituzione amplierà quanto già prodotto dalla Sapienza con il precedente Atlante di Roma (Princeton University Press 2017), costituendone un ideale sviluppo in chiave digitale. È in corso di realizzazione un’Infrastruttura di Dati Territoriali (IDT) basata su un sistema informatico che raccoglie tutta la documentazione relativa ai ritrovamentieffettuati dall’età rinascimentale ai giorni nostri. I dati prodotti saranno resi disponibili in modalità aperta e gratuita attraverso il portale OpenData Lazio a favore di cittadini, ricercatori e studiosi, istituzioni ed enti locali, espandendo e arricchendo la cartografia digitale che la Regione distribuisce e aggiorna.
+Allo stato attuale i dati sono visualizzabili attraverso la pagina Web ma non è possibile fruirli come servizio esternamento in un Desktop GIS o in altre applicazioni web o meno (WFS/WCS/API ecc.).
 
 ## La piattaforma
+
+Non sono state pubblicate sul sito informazioni sulla tecnologia con la quale è costruita l'applicazione web, ma chiaramente si tratta di una applicazione basata su JavaScript. In particolare, per le funzionalità della mappa viene usato [Mapbox GL JS](https://www.mapbox.com/mapbox-gljs) una libreria JavaScript fino a poco tempo fa open source.
+
+Anche per la distribuzione dei dati geografici ci si affida ad un servizio di Mapbox, ovvero [Mapbox Tiling Service](https://www.mapbox.com/mts).
 
 ---
 
