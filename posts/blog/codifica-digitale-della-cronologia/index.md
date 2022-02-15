@@ -3,7 +3,7 @@ title: Codifica digitale della cronologia
 autore: Julian Bogdani
 licenza: CC BY 4.0 International
 livello: avanzato
-tags: [riflessioni a appunti, open standard]
+tags: [riflessioni a appunti, open standard, cronologia]
 img: ./tempo.jpg
 date: 2021-07-30
 sommario: "La codifica digitale della cronologia nele banche dati è un problema ben noto in ambito archeologico e più in generale umanistico. Oltre ai problmi concreti della ricercabilità, anche la possibilità di codificare in maniera formale l'incertezza e l'approssimazione sono questioni rilevanti. Lo standard EDTF introduce dello soluzioni molto interessanti, anche snon pienamente mature per l'utilizzo diffuso."

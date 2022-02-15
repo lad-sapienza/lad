@@ -3,7 +3,7 @@ title: Fonti di cartografie storiche online
 autore: Julian Bogdani, Domizia D’Erasmo
 licenza: CC BY 4.0 International
 livello: base
-tags: [cartografia, risorse]
+tags: [risorse, cartografia, geodati]
 img: ./maps.jpg
 date: 2022-02-15
 sommario: "È ormai fatto noto come la cartografia storica sia sempre più uno strumento prezioso per le ricerche archeologiche. Ecco allora un un elenco ragionato e commentato di varie fonti di cartografa storica online, di accesso libero.."
