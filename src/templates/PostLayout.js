@@ -26,9 +26,16 @@ export default function BlogPost({ data }) {
             <div className="post-info text-center">
               <h1>{post.frontmatter.title}</h1>
 
+              { post.frontmatter.autore && 
+                <p className="author">
+                  di {post.frontmatter.autore}
+                </p>
+              }
+              
+
               {post.frontmatter.tags && (
                 <div className="text-center">
-                  <div className="bg-light mb-5 p-3 text-muted d-inline-block">
+                  <div className="bg-light mb-3 p-3 text-muted d-inline-block">
                     Tag:&nbsp;
                     { post.frontmatter.tags.map((t,k) => <span key={k}>{t} </span>) }
                     |
@@ -37,12 +44,7 @@ export default function BlogPost({ data }) {
                   </div>
                 </div>
               )}
-              { post.frontmatter.autore && 
-                <p className="author">
-                  di {post.frontmatter.autore}
-                </p>
-              }
-              <p className="text-center">{post.frontmatter.date}</p>
+              <p className="text-center text-secondary">Articolo pubblicato il {post.frontmatter.date}</p>
             </div>
 
 
