@@ -5,7 +5,7 @@ import styled from "styled-components";
 //components
 import Team from "../components/Team"
 import Layout from "../templates/Layout";
-import BlogPreview from "../components/blogpost";
+import BlogPreview from "../components/BlogPreview";
 //others
 import { Row, Col, Container } from "react-bootstrap";
 
@@ -84,17 +84,17 @@ const Index = ({data}) => {
             <Col sm={4}>
               <Container>
                 <h2 className="border-bottom">Ultime dal Blog</h2>
+                {data.allMarkdownRemark.nodes.map((node, i) => (
+                  <BlogPreview
+                    key={i}
+                    author={node.frontmatter.autore}
+                    excerpt={node.frontmatter.sommario}
+                    date={node.frontmatter.date}
+                    title={node.frontmatter.title}
+                    readMore={node.fields.slug}
+                  />
+                ))}
               </Container>
-              {data.allMarkdownRemark.nodes.map((node, i) => (
-                <BlogPreview
-                  key={i}
-                  author={node.frontmatter.autore}
-                  excerpt={node.frontmatter.sommario}
-                  date={node.frontmatter.date}
-                  title={node.frontmatter.title}
-                  readMore={node.fields.slug}
-                />
-              ))}
             </Col>
           </Row>
         </Container>
@@ -140,7 +140,7 @@ export const query = graphql`
               gatsbyImageData(
                 layout: CONSTRAINED
                 placeholder: BLURRED
-                quality: 100
+                quality: 80
               )
             }
           }

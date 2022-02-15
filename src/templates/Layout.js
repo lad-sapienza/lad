@@ -12,6 +12,8 @@ import Footer from "../components/Footer";
 import Favicon_32 from "../../static/favicon/favicon-32x32.png";
 import Favicon_ico from "../../static/favicon/favicon-32x32.png";
 
+import "bootstrap/dist/css/bootstrap.min.css"
+
 
 
 //markup
