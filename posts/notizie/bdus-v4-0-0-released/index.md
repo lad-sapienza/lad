@@ -1,6 +1,5 @@
 ---
 title: "BDUS v4.0.0 released"
-licenza: CC BY 4.0 International
 img: ./bdus.png
 date: 2021-03-28
 sommario: "Version 4 has finally been released and the good ol’

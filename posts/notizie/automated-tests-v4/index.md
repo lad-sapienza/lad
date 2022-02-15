@@ -1,6 +1,5 @@
 ---
 title: "Automated tests are now available for BDUS v4"
-licenza: CC BY 4.0 International
 img: ./bdus.png
 date: 2021-03-14
 sommario: "Finally, thanks to the help of Domizia D'Erasmo, a new

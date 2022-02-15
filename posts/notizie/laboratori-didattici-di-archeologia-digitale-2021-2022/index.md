@@ -1,6 +1,5 @@
 ---
 title: "Aperte le iscrizioni ai laboratori didattici di Archeologia Digitale 2021-2022: GIS e Banche Dati"
-licenza: CC BY 4.0 International
 img: ./lab-lad.png
 date: 2022-02-04
 sommario: "Sono state aperte le iscrizioni ai laboratori didattici di Archeologia digitale per l'anno accademico 2021-2022. Quest'anno sono disponibili tre moduli: GIS di Base, Banche dati web e GIS avanzato. A causa degli spazi a disposizione, il laboratorio prevede un numero limitato di partecipanti."
