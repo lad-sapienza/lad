@@ -92,6 +92,11 @@ const Wrapper = styled.section`
     max-width: 1000px;
     margin-top: 3rem;
   }
+
+  .post-image{
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+  }
 `;
 
 //graphql
