@@ -127,31 +127,12 @@ export const query = graphql`
       filter: {fileAbsolutePath: {regex: "/posts\\/blog/"}}
     ) {
       nodes {
-        excerpt(pruneLength: 200)
         frontmatter {
           autore
           date(formatString: "DD MMMM YYYY", locale: "it-IT")
-          licenza
-          livello
           title
           sommario
-          img {
-            childImageSharp {
-              gatsbyImageData(
-                layout: CONSTRAINED
-                placeholder: BLURRED
-                quality: 80
-              )
-            }
-          }
         }
-        html
-        headings {
-          depth
-          id
-          value
-        }
-        timeToRead
         fields {
           slug
         }
