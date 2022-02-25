@@ -47,7 +47,7 @@ const Blog = ({ data }) => {
               </Col>
 
               <Col sm={8}>
-                <p class="mb-0 text-secondary">{node.frontmatter.date} · {node.timeToRead} minuti di
+                <p className="mb-0 text-secondary">{node.frontmatter.date} · {node.timeToRead} minuti di
                     lettura</p>
 
                 <h2>
