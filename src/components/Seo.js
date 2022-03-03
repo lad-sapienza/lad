@@ -22,6 +22,8 @@ const Seo = (props) => {
       {props.img && <meta property="twitter:image" content={props.img} />}
 
       {props.children}
+      { props.url.indexOf('/blog/') > -1 && <script src="https://hypothes.is/embed.js" async></script> }
+
     </Helmet>
   );
 };

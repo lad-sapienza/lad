@@ -26,7 +26,7 @@ const Blog = ({ data }) => {
 
       {allPosts.map(({ node }, k) => {
         return (
-            <Row className="my-5" key={k}>
+            <Row className="my-5 py-5" key={k}>
               <Col sm={4}>
                 {node.frontmatter.img &&
                   node.frontmatter.img.childImageSharp &&
@@ -47,7 +47,7 @@ const Blog = ({ data }) => {
               </Col>
 
               <Col sm={8}>
-                <p class="mb-0 text-secondary">{node.frontmatter.date} · {node.timeToRead} minuti di
+                <p className="mb-0 text-secondary">{node.frontmatter.date} · {node.timeToRead} minuti di
                     lettura</p>
 
                 <h2>
