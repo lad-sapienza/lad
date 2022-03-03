@@ -13,7 +13,7 @@ In questo breve articolo si descrive l'uso dell'asserzione `CASE` del linguaggio
 
 `CASE` è un costrutto molto potente e spesso trascurato del linguaggio SQL, che permette di attraversare varie possibili condizioni fornite e restituisce un valore quando la prima condizione viene soddisfatta, esattamente come le asserzioni `if-then-else` in molti altri linguaggi di programmazione.
 
-Quando una condizione si verifica, il ciclio si fermerà e restituirà il risultato corrispondente fornito. Se nessuna condizione viene siddisfatta, verrà restituito il valore contenuto nalla clausola `ELSE`.
+Quando una condizione si verifica, il ciclo si fermerà e restituirà il risultato corrispondente fornito. Se nessuna condizione viene soddisfatta, verrà restituito il valore contenuto nalla clausola `ELSE`.
 
 Se, infine, la parte `ELSE` non viene fornita, verrà restituito il valore `NULL` (che è diverso dalla stringa `'NULL'`).
 
@@ -30,9 +30,9 @@ END
 
 Un esempio vale più di mille spiegazioni, ecco allora che nei prossimi paragrafi introduco un caso di studio reale, lo stesso che mi ha fatto scoprire questa funzione.
 
-In concreto, stavo lavorando su una banca dati relativa alla necropoli romana della [città romana di Suasa](https://it.wikipedia.org/wiki/Suasa) e avevo bisogno di estrarre alcuni dati per creare dei grafici piuttosto semplici. In particolare, avevo bisogno di estrarre in maniera veloce il totale delle tombe divise per fase, e all'interno di ogna fase il totale delle tombe a inumazioneo e di quelle a cremazione. La necessità finale era quella di ottenere un grafico a barre, che per ogni fase visualizzasse il numero totale di tombe per ciascuno dei due riti.
+In concreto, stavo lavorando su una banca dati relativa alla necropoli romana della [città romana di Suasa](https://it.wikipedia.org/wiki/Suasa) e avevo bisogno di estrarre alcuni dati per creare dei grafici piuttosto semplici. In particolare, avevo bisogno di estrarre in maniera veloce il totale delle tombe divise per fase, e all'interno di ogna fase il totale delle tombe a inumazione e di quelle a cremazione. La necessità finale era quella di ottenere un grafico a barre, che per ogni fase visualizzasse il numero totale di tombe per ciascuno dei due riti.
 
-Di seguito, fornisco un estratto della struttura della tabella di riferimento dalla quale estrarre queta informazione. La tabella è più complessa, ma estraggo qui solo le colonne che ci interessano.
+Di seguito, fornisco un estratto della struttura della tabella di riferimento dalla quale estrarre questa informazione. La tabella è più complessa, ma estraggo qui solo le colonne che ci interessano.
 
 Query:
 
