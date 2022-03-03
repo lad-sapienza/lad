@@ -20,7 +20,7 @@ const Footer = () => {
                   />
                   <h5 className="text-center">Laboratorio di Archeologia Digitale alla Sapienza</h5>
                   <p>
-                    Responsabile: Julian Bogdani<br />
+                    Responsabile scientifico: Julian Bogdani<br />
                     <a href="mailto:julian.bogdani@uniroma1.it">
                       julian.bogdani@uniroma1.it
                     </a>

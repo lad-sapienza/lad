@@ -14,7 +14,7 @@ const Team = () => {
     {
       "name": "Julian Bogdani",
       "image": "images/jbogdani.jpg",
-      "position": "Responsabile del laboratorio",
+      "position": "Responsabile scientifico del laboratorio",
       "affiliation": "Ricercatore di Metodologie della Ricerca Archeologica, Dip. SARAS",
       "uni": "https://www.lettere.uniroma1.it/users/julian-bogdani",
       "github": "https://github.com/jbogdani",
