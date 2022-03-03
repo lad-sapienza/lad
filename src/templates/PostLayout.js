@@ -33,7 +33,7 @@ export default function BlogPost({ data }) {
               }
               
 
-              {post.frontmatter.tags && (
+              { post.frontmatter.tags && (
                 <div className="text-center">
                   <div className="bg-light mb-3 p-3 text-muted d-inline-block">
                     Tag:&nbsp;
@@ -44,7 +44,12 @@ export default function BlogPost({ data }) {
                   </div>
                 </div>
               )}
-              <p className="text-center text-secondary">Articolo pubblicato il {post.frontmatter.date}</p>
+
+              { post.frontmatter.date &&
+                <p className="text-center text-secondary">
+                  Articolo pubblicato il {post.frontmatter.date}
+                </p>
+              }
             </div>
 
 
