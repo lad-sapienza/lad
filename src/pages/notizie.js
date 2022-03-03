@@ -26,7 +26,7 @@ const Blog = ({ data }) => {
 
       {allPosts.map(({ node }, k) => {
         return (
-            <Row className="my-5" key={k}>
+            <Row className="my-5 py-5" key={k}>
               <Col sm={4}>
                 {node.frontmatter.img &&
                   node.frontmatter.img.childImageSharp &&
