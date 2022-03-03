@@ -3,9 +3,9 @@ title: "Uso si CASE per estrarre con SQL dal database dati utili ad analisi stat
 autore: Julian Bogdani
 licenza: CC BY 4.0 International
 livello: avanzato
-tags: [sql, coding, database]
+tags: [sql, coding, database, riflessioni e appunti]
 img: ./sql-snippets.jpg
-date: 2022-03-02
+date: 2022-03-03
 sommario: "In questo breve articolo si descrive l'uso dell'asserzione `CASE` del linguaggio SQL, offrendo un caso di studio archeologico"
 ---
 
@@ -30,7 +30,7 @@ END
 
 Un esempio vale più di mille spiegazioni, ecco allora che nei prossimi paragrafi introduco un caso di studio reale, lo stesso che mi ha fatto scoprire questa funzione.
 
-In concreto, stavo lavorando su una banca dati relativa alla necropoli romana della [città romana di Suasa](https://it.wikipedia.org/wiki/Suasa) e avevo bisogno di estrarre alcuni dati per creare dei grafici molto semplici. In particolare, avevo bisogno di estrarre in maniera semplice il totale delle tombe divise per rito (inumazioneo e cremazione) e per fase. La necessità finale era quella di ottenere un grafico a barre, che per ogni fase visualizzasse il numero totale di tombe per ciascuno dei due riti.
+In concreto, stavo lavorando su una banca dati relativa alla necropoli romana della [città romana di Suasa](https://it.wikipedia.org/wiki/Suasa) e avevo bisogno di estrarre alcuni dati per creare dei grafici piuttosto semplici. In particolare, avevo bisogno di estrarre in maniera veloce il totale delle tombe divise per fase, e all'interno di ogna fase il totale delle tombe a inumazioneo e di quelle a cremazione. La necessità finale era quella di ottenere un grafico a barre, che per ogni fase visualizzasse il numero totale di tombe per ciascuno dei due riti.
 
 Di seguito, fornisco un estratto della struttura della tabella di riferimento dalla quale estrarre queta informazione. La tabella è più complessa, ma estraggo qui solo le colonne che ci interessano.
 
@@ -45,7 +45,7 @@ SELECT id,
 
 ```
 
-Risultato
+Risultato: 
 
 |id|numero tomba|rito|fase|
 |-|-|-|-|
@@ -150,7 +150,7 @@ SELECT SUM(CASE WHEN rito = 'inumazione' THEN 1 ELSE 0 END) AS inumazioni,
  GROUP BY fase;
 ```
 
-Ed ecco i risultati della query, printi per essere trasformati in un grafico:
+Ed ecco infine i risultati della query, pronti per essere trasformati in un grafico:
 |inumazioni|cremazioni|fase|
 |-|-|-|
 0|22|10
@@ -165,15 +165,13 @@ Ed ecco i risultati della query, printi per essere trasformati in un grafico:
 
 In questo caso stiamo usando l'asserzione `CASE` nella definizione delle colonne e lo stiamo usando insieme alla funzione `SUM`, che calcola le somme.
 
-In dettaglio `SUM(CASE WHEN rito = 'inumazione' THEN 1 ELSE 0 END) AS inumazioni` e la definizione di una colonna alla quale viene attribuita l'etichetta `inumazioni`, come da asserzione `AS`, all'unico fine di facilitare la lettura dei dati in uscita.
+In dettaglio, `SUM(CASE WHEN rito = 'inumazione' THEN 1 ELSE 0 END) AS inumazioni` e la definizione di una colonna alla quale viene attribuita l'etichetta o l'_alias_ `inumazioni`, come da asserzione `AS` ([segui questo collegamento per avere più informazioni su `AS`](https://www.w3schools.com/sql/sql_ref_as.asp)), all'unico fine di facilitare la lettura dei dati in uscita.
 
-La colonna contiene le una somma,le cui componenti vengono definiti da `CASE`. Per ogni riga della banca dati verrà valutata l'espressione `rito = 'inumazione'`, ovvero verrà valutato se il campo `rito` contiene esattamente il valore `inumazione`. 
+La colonna contiene una somma, le cui elementi vengono definiti da `CASE`. Per ogni riga della banca dati verrà valutata se l'espressione booleana `rito = 'inumazione'` risulta vera o false, in altre parole verrà valutato se il campo `rito` contiene esattamente il valore `inumazione`. Se la risposta è positiva (valore booleano `VERO`), allora (`THEN`) viene restituito alla funzione somma in numero `1` (al conteggio delle inumazioni viene aggiunto una unità), altrimenti (`ELSE`) viene restituito 0 (al conteggio delle inumazioni non viene in sostanza aggiunto nulla).
 
-Se la risposta è positiva, allora viene restituito alla funzione somma in numero `1` (al conteggio delle inumazioni viene aggiunto una unità), altrimenti viene restituito 0 (al conteggio delle inumazioni non viene aggiunto nulla).
+Lo stesso discorso vale per la seconda colonna, definita come: `SUM(CASE WHEN rito = 'cremazione' THEN 1 ELSE 0 END) AS cremazioni`, cambia solo l'etichetta e naturalmente il valore di riferimento del campo `rito`.
 
-Lo stesso discorso vale per la seconda colonna, definita come: `SUM(CASE WHEN rito = 'cremazione' THEN 1 ELSE 0 END) AS cremazioni`, cambia solo l'etichetta e naturalmente il valore del campo `rito`.
-
-Abbiamo parlato sopra di _conteggio_ di valori, per ogni riga perché in questa query stiamo raggruppando valori, e nello specifico li stiamo raggruppando per il campo `fase`, com'è chiara dall'ultima parte della query principale `GROUP BY fase`, che aggiunge un principio di aggregazione.
+Abbiamo parlato sopra di _conteggio_ di valori, per ogni riga perché in questa query stiamo **raggruppando** valori, e nello specifico li stiamo raggruppando per il campo `fase`, com'è chiara dall'ultima parte della query principale `GROUP BY fase`, che aggiunge un principio di aggregazione ([segui questo collegamento per avere più informazioni su `GROUP BY`](https://www.w3schools.com/sql/sql_groupby.asp)).
 
 Con `CASE` si possono usare tutti gli operatori SQL (es. `=`, `<`, `>`, `<=`, `>=`, `LIKE`, ecc.) ed è possibile concatenare più condizioni usando i soliti `AND` o `OR`. La cosa impotante che l'espressione tra `WHEN` e `THEN` restitusca un valore booleando di `VERO` o `FALSO`. Il nostro caso era semplice, ma è possibile anche prevedere più asserzione `WHEN...THEN`.
 
