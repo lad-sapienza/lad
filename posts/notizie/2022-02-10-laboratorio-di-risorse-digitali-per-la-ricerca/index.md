@@ -5,9 +5,11 @@ date: 2022-02-10
 sommario: "Nel panorama del dottorato in Storia Antropologia Religioni della Sapienza Università di Roma, a partire dal 7 marzo 2022, sarà inaugurato l'RDR Lab: Laboratorio di Risorse Digitali per la Ricerca."
 ---
 
-Nel panorama del dottorato in Storia Antropologia Religioni della Sapienza Università di Roma, a partire dal 7 marzo 2022, sarà inaugurato l'RDR Lab: Laboratorio di Risorse Digitali per la Ricerca. Il laboratorio 2022, dal titolo "Esperienze. Progetti. Strumenti", sarà curato da Julian Bogdani e Federica Favino, entrambi ricercatori della Sapienza Università di Roma e membri del Dipartimento SARAS.
+Nel panorama del dottorato in Storia Antropologia Religioni della Sapienza Università di Roma, a partire dal 7 marzo 2022, sarà inaugurato l'RDR Lab: Laboratorio di Risorse Digitali per la Ricerca. Il laboratorio 2022, dal titolo "Esperienze. Progetti. Strumenti", sarà curato da [Julian Bogdani](https://www.lettere.uniroma1.it/users/julian-bogdani) e [Federica Favino](https://www.lettere.uniroma1.it/users/federica-favino), entrambi ricercatori della Sapienza Università di Roma e membri del [Dipartimento SARAS](https://saras.uniroma1.it/).
 
 Attraverso una serie di incontri a cadenza bimensile saranno affrontate tematiche legate all'utilizzo delle risorse digitali applicate alla ricerca in campo umanistico.
+
+Gli incontri saranno tenuti **in presenza** all'Aula 2 del Dipartimento SARAS (Facoltà di Lettere e Filosofia - CU003, piano I, sez. Arte) e **a distanza** via [Zoom](https://uniroma1.zoom.us/j/83808083152?pwd=Z0FWbGM5TmJqRGZXaVZBWUJ6d0xVUT09).
 
 ### Calendario dell'RDR Lab 2022
 
