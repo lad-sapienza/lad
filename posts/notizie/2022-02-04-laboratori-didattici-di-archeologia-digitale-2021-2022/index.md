@@ -21,9 +21,16 @@ I laboratori si pongono l’obiettivo di fornire le basi teoriche e pratiche nec
 
 ## Calendario
 
-- Modulo GIS base: 2, 3, 4 Maggio (10 ore)
-- Modulo banche dati relazionali: 5, 6 Maggio (6 ore)
-- Modulo GIS avanzato: 9, 10 Maggio (8 ore)
+- Modulo **GIS base** (10 ore):
+  - 2 Maggio, ore 11.00-13.00/15.00-17-00
+  - 3 Maggio, ore 11.00-13.00/15.00-17-00
+  - 4 Maggio, ore 15.00-17-00
+  - 5 Maggio, ore 11.00-13-00
+- Modulo **banche dati relazionali** (6 ore):
+  - 6 Maggio, ore 11.00-13.00/15.00-17-00
+- Modulo **GIS avanzato** (8 ore):
+  - 9 Maggio, ore 11.00-13.00/15.00-17-00
+  - 10 Maggio, ore 15.00-17-00
 
 ## Iscrizione
 
