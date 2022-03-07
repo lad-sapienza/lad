@@ -15,6 +15,14 @@ Si tratta di una selezione di fonti che ci siamo trovati ad usare quasi quotidia
 
 ---
 
+## 3rd Military Mapping Survey of Austria-Hungary
+- URL: http://lazarus.elte.hu/hun/digkonyv//topo/3felmeres.htm
+- Licenza: non specificata.
+- Data aggiornamento: 2022-03-07
+
+Si tratta della collezione completa della terza campagna di rilievo militare dell'Austro-Ungheria, redatta in scala 1:200.000 e composta di circa 265 tavole. Mancano all'inventario circa 17 tavole che probabilmente non sono mai state publicate. La longitudie di tutte le carte è riferita la meridiano di Ferro ([MGI(Ferro)EPSG:4805](http://epsg.io/4805)).
+Il dataset è offerto dall'[Istituto Ungherese di cartografie e geoinformatica](http://lazarus.elte.hu/gb/gbindex.html).
+
 ## David Rumsey Map Collection
 - Url: [https://www.davidrumsey.com/](https://www.davidrumsey.com/)
 - Licenza: [CC BY-NC-SA 3.0](https://www.davidrumsey.com/about/copyright-and-permissions)
