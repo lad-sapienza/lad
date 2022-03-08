@@ -19,6 +19,7 @@ export default function BlogPost({ data }) {
         title={ post.frontmatter.title }
         description={ post.frontmatter.sommario ? post.frontmatter.sommario : post.excerpt }
         url={`https://lad.saras.uniroma1.it${post.fields.slug}`}
+        image={post.frontmatter.img.childImageSharp.gatsbyImageData.images.fallback.src}
         />
       <Wrapper>
         <div>
