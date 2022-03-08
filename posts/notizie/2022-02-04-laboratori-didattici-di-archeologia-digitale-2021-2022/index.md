@@ -21,7 +21,7 @@ I laboratori si pongono l’obiettivo di fornire le basi teoriche e pratiche nec
 
 ## Calendario
 
-- Modulo **GIS base** (10 ore):
+- Modulo **GIS base** (12 ore):
   - 2 Maggio, ore 11.00-13.00/15.00-17-00
   - 3 Maggio, ore 11.00-13.00/15.00-17-00
   - 4 Maggio, ore 15.00-17-00
