@@ -1,17 +1,45 @@
 ---
 title: Fonti di cartografie storiche online
-autore: Julian Bogdani, Domizia D’Erasmo
+autore: Julian Bogdani, Domizia D’Erasmo, Valeria Vitale
 licenza: CC BY 4.0 International
 livello: base
 tags: [risorse, cartografia, geodati]
 img: ./maps.jpg
-date: 2022-02-15
+date: 2022-03-05
 sommario: "È ormai fatto noto come la cartografia storica sia sempre più uno strumento prezioso per le ricerche archeologiche. Ecco allora un un elenco ragionato e commentato di varie fonti di cartografa storica online, di accesso libero.."
 ---
 
 È ormai fatto noto come la cartografia storica sia sempre più uno strumento prezioso per le ricerche archeologiche e in particolare quel ramo della disciplina che è maggiormente focalizzata sullo studio del cambiamnto del paesaggio nel tempo, l'Archeologia dei Paesaggi (Landscape Archaeology). Vieppiù, però, la carta storica è un documento fondamentale in sé e come tale è considerato non solo nell'ambito archeologico ma più in generale per tutte le discipline umanistiche. In questo articolo — **in continuo aggiornamento** –, vengono elencate in ordine alfabetico le principali biblioteche online che contengono documenti relativi alla  cartografia storica disponibili attraverso varie tipologie di licenze e modalità di scaricamento.
 
 Si tratta di una selezione di fonti che ci siamo trovati ad usare quasi quotidianamente nel nostro laboratorio, ma che è lntanto dall'essere completo. Segnalateci eventuali aggiunte o correzioni scrivendoci all'indirizzo [julian.bogdani@uniroma1.it](mailto:julian.bogdani@uniroma1.it).
+
+---
+
+## 3rd Military Mapping Survey of Austria-Hungary
+- URL: http://lazarus.elte.hu/hun/digkonyv//topo/3felmeres.htm
+- Licenza: non specificata.
+- Data aggiornamento: 2022-03-07
+
+Si tratta della collezione completa della terza campagna di rilievo militare dell'Austro-Ungheria, redatta in scala 1:200.000 e composta di circa 265 tavole. Mancano all'inventario circa 17 tavole che probabilmente non sono mai state publicate. La longitudie di tutte le carte è riferita la meridiano di Ferro ([MGI(Ferro)EPSG:4805](http://epsg.io/4805)).
+Il dataset è offerto dall'[Istituto Ungherese di cartografie e geoinformatica](http://lazarus.elte.hu/gb/gbindex.html).
+
+---
+
+## Biblioteque Nationale de France
+- Url: [https://gallica.bnf.fr/html/und/cartes/cartes?mode=desktop](https://gallica.bnf.fr/html/und/cartes/cartes?mode=desktop)
+- Licenza: Vari tipi di licenze
+- Data aggiornamento: 04-03-2022
+
+La [Bibliotheque Nationale de France](https://www.bnf.fr/fr) ha una ricchissima collezione di mappe storiche, ordinate per paese e accompagnate da metadati dettagliati. Molte mappe sono in pubblico dominio e possono essere riutilizzate liberamente. I documenti possono essere scaricati a una risoluzione media o condivisi in formato IIIF. Oltre ai metadati tecnici e storici, le mappe sono anche corredate di tag semantici e link ad altre mappe della collezione che incoraggiano la scoperta.
+
+---
+
+## British Library
+- Url: [https://www.flickr.com/photos/britishlibrary/albums/72157716220271206](https://www.flickr.com/photos/britishlibrary/albums/72157716220271206)
+- Licenza: Vari tipi di licenza
+- Data aggiornamento: 03-03-2022
+
+La [British Library](https://www.bl.uk/) ha recentemente reso disponibili in OA su [Flickr](https://www.flickr.com/) le scansioni della prestigiosa KTop collection, la collezione personale di carte topografiche, stampate e manoscritte, di re [Giorgio III](https://it.wikipedia.org/wiki/Giorgio_III_del_Regno_Unito). La collezione include documenti prodotti tra il 1500 e il 1800 e copre luoghi in tutto il mondo, così come varia è la granularità delle mappe: da _mappae mundi_ a dettagliate rappresentazioni di singole città o persino edifici. Ogni immagine è accompagnata da ricchi metadati che rendono la collezione altamente fruibile.
 
 ---
 
@@ -44,7 +72,7 @@ L'Instanbul Urban database è un progetto creato da [Nil Tuzcu](http://www.niltu
 - Licenza: Vari tipi di licenze
 - Data aggiornamento: 14-02-2022
 
-Il sito web _Interactive Nolli map_ dell'Università dell'Oregon è stato creato nel 2005 da James Tice ed Erik Steiner, assistiti da Allan Ceen. All'interno del sito è presente una versione interattiva della celebre mappa _Nuova Topografia di Roma_ (1748) del Giovanbattista Nolli.
+Il sito web Interactive Nolli map dell'Università dell'Oregon è stato creato nel 2005 da James Tice ed Erik Steiner, assistiti da Allan Ceen. All'interno del sito è presente una versione interattiva della celebre mappa _Nuova Topografia di Roma_ (1748) del Giovanbattista Nolli.
 
 Avendo acquisito e digitalizzato tutti i dati presenti nell'indice che correda la suddetta mappa, gli ideatori del progetto hanno reso possibile ricercare singolarmente luoghi, edifici, strade, rendendo il progetto una delle fonti più importanti per lo studio della mappa del Nolli e dell'urbanistica romana.
 
@@ -55,7 +83,7 @@ Avendo acquisito e digitalizzato tutti i dati presenti nell'indice che correda l
 - Licenza: CC BY-SA-NC
 - Data aggiornameto: 14-02-2022
 
-La _Library of Congress_, fondata nel 1800 si trova attualmente a Capitol Hill (Washington D.C. - Stati Uniti) ed è uno dei luoghi più importanti per la ricerca del Congresso degli Stati Uniti oltre che la sede dell'_U.S. Copyright Office_. La sua collezione ospita milioni di libri, registrazioni, fotografie, giornali e documenti manoscritti e cartografici [aggiornamento in tempo reale](https://www.loc.gov/about/general-information/#year-at-a-glance). Per quanto riguarda questi ultimi, in totale la biblioteca ne ospita _in situ_ all'incirca 433.861, mentre il [sito web](https://www.loc.gov/maps/) mette a disposizione (attualmente) 56.202 mappe scaricabili/consultabili online.
+La Library of Congress, fondata nel 1800 si trova attualmente a Capitol Hill (Washington D.C. - Stati Uniti) ed è uno dei luoghi più importanti per la ricerca del Congresso degli Stati Uniti oltre che la sede dell'U.S. Copyright Office. La sua collezione ospita milioni di libri, registrazioni, fotografie, giornali e documenti manoscritti e cartografici [aggiornamento in tempo reale](https://www.loc.gov/about/general-information/#year-at-a-glance). Per quanto riguarda questi ultimi, in totale la biblioteca ne ospita _in situ_ all'incirca 433.861, mentre il [sito web](https://www.loc.gov/maps/) mette a disposizione (attualmente) 56.202 mappe scaricabili/consultabili online.
 
 Le mappe sono scricabili in una varietà di formati e risoluzioni, ottimizate per vari usi, compreso anche le scansioni originali in formati _lossless_, quali il TIFF. Molto curata la sezione di metadati legata a ciascun file che spesso comprende anche il file Manifest (JSON/LD) per l'utilizzo con servizi di utilizzo IIIF.
 
@@ -76,6 +104,15 @@ Mapstor.com è un sito web che ospita a oggi circa 95.020 mappe topografiche pub
 - Data aggiornameto: 14-02-2022
 
 La collezione della National Library of Australia ospita circa 1 milione di mappe sia in formato cartaceo che digitale. Le cartografie online (circa 42.585) sono liberamente scaricabili in alta risoluzione.
+
+---
+
+## National Library of Scotland
+- Url: [https://maps.nls.uk/](https://maps.nls.uk/)
+- Licenza: Vari tipi di licenze
+- Data aggiornamento: 03/03/2022
+
+La [National Library of Scotland](https://www.nls.uk/) offre un'ampia collezione digitale di mappe storiche – dal 1700 in poi –, che coprono la quasi totalità del Regno Unito e alcuni ex territori del Commonwelath. Molte delle mappe sono georiferite, e disponibili in formato WMTS ad alta qualità. Le licenze variano a seconda della data di pubblicazione, ma, in generale, la NLS incoraggia il riuso dei propri dati e diverse iniziative di crowd sourcing sulla trascrizione di mappe storiche (spesso manoscritte). In particolare, per la serie Ordnance Survey (OS), le diverse mappe che rappresentano l'intero territorio della Gran Bretagna sono state unite, per creare un unico livello continuo, zoommabile e completamente georiferito. Le mappe della serie OS hanno la peculiarità di rappresentare un alto numero di elementi storici e archeologici.
 
 ---
 

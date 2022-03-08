@@ -14,12 +14,12 @@ const Seo = (props) => {
       <meta property="og:title" content={props.title} />
       <meta property="og:description" content={props.description} />
       <meta property="og:url" content={props.url} />
-      {props.img && <meta property="og:image" content={props.img} />}
+      {props.image && <meta property="og:image" content={props.image} />}
     
       <meta property="twitter:title" content={props.title} />
       <meta property="twitter:description" content={props.description} />
       <meta property="twitter:url" content={props.url} />
-      {props.img && <meta property="twitter:image" content={props.img} />}
+      {props.image && <meta property="twitter:image" content={props.image} />}
 
       {props.children}
       { props.url.indexOf('/blog/') > -1 && <script src="https://hypothes.is/embed.js" async></script> }

@@ -21,9 +21,16 @@ I laboratori si pongono l’obiettivo di fornire le basi teoriche e pratiche nec
 
 ## Calendario
 
-- Modulo GIS base: 2, 3, 4 Maggio (10 ore)
-- Modulo banche dati relazionali: 5, 6 Maggio (6 ore)
-- Modulo GIS avanzato: 9, 10 Maggio (8 ore)
+- Modulo **GIS base** (12 ore):
+  - 2 Maggio, ore 11.00-13.00/15.00-17-00
+  - 3 Maggio, ore 11.00-13.00/15.00-17-00
+  - 4 Maggio, ore 15.00-17-00
+  - 5 Maggio, ore 11.00-13-00
+- Modulo **banche dati relazionali** (6 ore):
+  - 6 Maggio, ore 11.00-13.00/15.00-17-00
+- Modulo **GIS avanzato** (8 ore):
+  - 9 Maggio, ore 11.00-13.00/15.00-17-00
+  - 10 Maggio, ore 15.00-17-00
 
 ## Iscrizione
 
@@ -37,4 +44,4 @@ Il laboratorio è rivolto a studenti interessati di qualsiasi livello (triennale
 
 I tre moduli della durata totale di 24 ore rilasciano un attestato di frequenza che può essere usato per l’ottenimento di 1 CFU da verbalizzare presso i referenti di ciascun corso di laurea. È possibile concordare ore di lavoro aggiuntive da svolgere autonomamento per il raggiungimento di ulteriori CFU.
 
-Maggiori informazioni e locandina (con preghiera di diffusione): [https://linktr.ee/labLAD](https://linktr.ee/labLAD).
+Maggiori informazioni e locandina (con preghiera di diffusione): [clicca qui](./LAD-GIS-DB-2021-2022.pdf).

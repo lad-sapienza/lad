@@ -19,6 +19,7 @@ export default function BlogPost({ data }) {
         title={ post.frontmatter.title }
         description={ post.frontmatter.sommario ? post.frontmatter.sommario : post.excerpt }
         url={`https://lad.saras.uniroma1.it${post.fields.slug}`}
+        image={post.frontmatter.img.childImageSharp.gatsbyImageData.images.fallback.src}
         />
       <Wrapper>
         <div>
@@ -33,7 +34,7 @@ export default function BlogPost({ data }) {
               }
               
 
-              {post.frontmatter.tags && (
+              { post.frontmatter.tags && (
                 <div className="text-center">
                   <div className="bg-light mb-3 p-3 text-muted d-inline-block">
                     Tag:&nbsp;
@@ -44,7 +45,12 @@ export default function BlogPost({ data }) {
                   </div>
                 </div>
               )}
-              <p className="text-center text-secondary">Articolo pubblicato il {post.frontmatter.date}</p>
+
+              { post.frontmatter.date &&
+                <p className="text-center text-secondary">
+                  Articolo pubblicato il {post.frontmatter.date}
+                </p>
+              }
             </div>
 
 

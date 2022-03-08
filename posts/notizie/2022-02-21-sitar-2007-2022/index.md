@@ -7,7 +7,7 @@ sommario: "Sono state aperte le iscrizioni ai laboratori didattici di Archeologi
 
 A 15 anni dall'avvio del progetto SITAR e in occasione del recente riconoscimento dell'[European Archaeological Heritage Prize](https://www.e-a-a.org/HeritagePrize), la [Soprintendenza Speciale Roma](http://www.soprintendenzaspecialeroma.it/) è lieta di promuovere una giornata di studi. Sarà un momento di sintesi e riflessione sulle potenzialità delle politiche di libero accesso ai dati archeologici, l'interoperabilità di sistemi tecnologici complessi e l'accessibilità e la trasparenza della Pubblica Amministrazione.
 
-All'interno della giornata avverràanche la presentaizone da parte di P. Moscati e F. Nicolis del volume curato da J. Bogdani, R. Montalbano e P. Rosati, “**ArcheoFOSS XIV 2020:OPen Software, Hardware, Processes, Data and Formats in Archaeological Research**”, Oxfordd: Archaeopress 2021.
+All'interno della giornata avverràanche la presentaizone da parte di P. Moscati e F. Nicolis del volume curato da J. Bogdani, R. Montalbano e P. Rosati, “**ArcheoFOSS XIV 2020: Open Software, Hardware, Processes, Data and Formats in Archaeological Research**”, Oxford: Archaeopress 2021.
 
 L'incontro si terrà giovedì 10 marzo dalle 9.15 presso il Museo Ninfeo, nella sede dell'Enpam a Piazza Vittorio Emanuele, n. 78.
 

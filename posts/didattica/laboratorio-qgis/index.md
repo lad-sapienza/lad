@@ -10,6 +10,8 @@ Il laboratorio è destinato principalmente agli iscritti alla Sapienza Universit
 
 Il laboratorio è coordinato da Julian Bogdani in collaborazione con Domizia D'Erasmo e Paolo Rosati.
 
-## Edizioni precedenti
+## Edizione 2022
+Sono aperte le iscrizioni ai laboratori QGIS e Database per l'anno accademico 2021-2022. Per il programma e i dettagli seguire [questo collegamento](/notizie/2022-02-04-laboratori-didattici-di-archeologia-digitale-2021-2022/)
 
-[Scarica]((https://www.dropbox.com/s/ti686ac6mfm61ig/locandina-labgis-2021.pdf?dl=0)) la locandina dell'edizione 2020/2021
+## Edizioni precedenti
+- [Scarica]((https://www.dropbox.com/s/ti686ac6mfm61ig/locandina-labgis-2021.pdf?dl=0)) la locandina dell'edizione 2020/2021
