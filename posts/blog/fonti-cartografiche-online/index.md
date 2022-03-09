@@ -20,7 +20,7 @@ Si tratta di una selezione di fonti che ci siamo trovati ad usare quasi quotidia
 - Licenza: Vari tipi di licenze
 - Data aggiornamento: 04-03-2022
 
-La [Bibliotheque Nationale de France](https://www.bnf.fr/fr) ha una ricchissima collezione di mappe storiche, ordinate per paese e accompagnate da metadati dettagliati. Molte mappe sono in pubblico dominio e possono essere riutilizzate liberamente. I documenti possono essere scaricati a una risoluzione media o condivisi in formato IIIF. Oltre ai metadati tecnici e storici, le mappe sono anche corredate di tag semantici e link ad altre mappe della collezione che incoraggiano la scoperta.
+La [Bibliotheque Nationale de France](https://www.bnf.fr/fr) ha una ricchissima collezione di mappe storiche, ordinate per paese e accompagnate da metadati dettagliati. Molte mappe sono di pubblico dominio e possono essere riutilizzate liberamente. I documenti possono essere scaricati a una risoluzione media o condivisi in formato IIIF. Oltre ai metadati tecnici e storici, le mappe sono anche corredate di tag semantici e link ad altre mappe della collezione che incoraggiano la scoperta.
 
 ---
 
