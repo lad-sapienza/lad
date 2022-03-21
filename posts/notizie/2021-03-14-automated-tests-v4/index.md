@@ -1,6 +1,6 @@
 ---
 title: "Automated tests are now available for BDUS v4"
-img: ./bdus.png
+img: ./bdus-automated-tests.png
 date: 2021-03-14
 sommario: "Finally, thanks to the help of Domizia D'Erasmo, a new
 set of fully automated unit tests have been written for bdus4. These tests cover the entire lifecyce of the application, from the creation from scratch of a new aplication, to the configuration and data entry."
