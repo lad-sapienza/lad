@@ -5,7 +5,7 @@ licenza: CC BY 4.0 International
 livello: base
 tags: [recensioni, applicaizoni web, dati geografici, webGIS]
 img: ./portale-lazio-antico.jpg
-date: 2022-02-11
+date: 2022-03-21
 sommario: "Il portale Lazio Antico, a cura della Sapienza UnIversità di Roma e Regione Lazio offre una mappatura digitale completa dei beni archeologici, dei siti e delle emergenze riferibili al mondo Antico in un periodo compreso tra la metà del sec. IX a.C. e la metà del sec. VI d.C. ."
 ---
 
