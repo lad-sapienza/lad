@@ -76,6 +76,10 @@ const Index = ({data}) => {
                     nostri progetti sono distribuiti con licenze aperte e
                     pubblicati in repository ad accesso aperto!
                   </p>
+
+                  <h2 className="border-bottom">Quadro istituzionale e collaborazioni</h2>
+                  <p>Il LAD è un laboratorio stabile ufficiale del <a href="https://saras.uniroma1.it/" title="Dipartimento SARAS">Dipartimento SARAS</a> della <a href="https://www.uniroma1.it/" title="Sapienza Università di Roma">Sapienza Università di Roma</a>.</p>
+                  <p>Dal 2022 il LAD ha attivato una convenzione di ricerca scientifica con il <a href="https://www.garr.it/" title="Consortium GARR">Consortium GARR</a> per la fornitura di servizi istituzionali relativi alla <a href="https://www.garr.it/it/infrastrutture/infrastruttura-cloud/infrastruttura-cloud" title="piattaforma Cloud GARR">piattaforma Cloud GARR.</a>, con <em>data center</em> localizzati in Italia.</p>
                 </Container>
               </section>
             </Col>
