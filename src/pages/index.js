@@ -124,6 +124,14 @@ const Index = ({data}) => {
                       'Debian',
                       'git',
                       'Bash',
+
+                      'e-publishing',
+                      'Adobe Illustrator',
+                      'Inkscape',
+                      'Adobe Indesign',
+                      'Adobe Photoshop',
+                      'Gimp',
+                      'Imagemagick',
                     ].sort().join(', ')
                     }
                     .</p>
