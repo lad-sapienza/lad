@@ -87,6 +87,7 @@ const Index = ({data}) => {
                     
                     {[
                       'QGIS',
+                      'GRASS',
                       'AutoCAD',
                       'ArcGIS',
 
