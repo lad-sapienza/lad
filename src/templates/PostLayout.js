@@ -79,7 +79,8 @@ export default function BlogPost({ data }) {
 
 //styles
 const Wrapper = styled.section`
-  p.author{
+ 
+  p.author {
     font-family: "Cormorant Garamond", serif !important;
     font-weight: 900 !important;
     font-size: 1.5rem;
@@ -99,7 +100,7 @@ const Wrapper = styled.section`
     margin-top: 3rem;
   }
 
-  .post-image{
+  .post-image {
     margin-top: 5rem;
     margin-bottom: 5rem;
   }
