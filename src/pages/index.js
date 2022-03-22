@@ -123,10 +123,10 @@ const Index = ({data}) => {
                       'Web Server',
                       'Linux',
                       'Debian',
-                      'git',
+                      'Git',
                       'Bash',
 
-                      'e-publishing',
+                      'E-publishing',
                       'Adobe Illustrator',
                       'Inkscape',
                       'Adobe Indesign',
