@@ -25,7 +25,7 @@ const Ricerca = ({data}) => {
       {posts.map(({ node }, k) => {
         return (
           <Container key={k}>
-            <Row className="my-5">
+            <Row className="my-5 mx-5 py-5">
               <Col sm={3}>
                 {node.frontmatter.img &&
                   node.frontmatter.img.childImageSharp &&
@@ -46,9 +46,7 @@ const Ricerca = ({data}) => {
               </Col>
               <Col sm={9}>
                 <h2>
-                  <Link to={node.fields.slug}>
-                  {node.frontmatter.title}
-                  </Link>
+                  <Link to={node.fields.slug}>{node.frontmatter.title}</Link>
                 </h2>
                 <p className="text-secondary">
                   {node.timeToRead} minuti di lettura

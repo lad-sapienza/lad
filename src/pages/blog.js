@@ -77,7 +77,7 @@ const Blog = ({ data }) => {
       {state.posts.map(({ node }, k) => {
         return (
           <Container key={k}>
-            <Row className="my-5 py-5">
+            <Row className="my-5 mx-5 py-5">
               <Col sm={4}>
                 {node.frontmatter.img &&
                   node.frontmatter.img.childImageSharp &&

@@ -26,37 +26,45 @@ const Blog = ({ data }) => {
 
       {allPosts.map(({ node }, k) => {
         return (
-            <Row className="my-5 py-5" key={k}>
-              <Col sm={4}>
-                {node.frontmatter.img &&
-                  node.frontmatter.img.childImageSharp &&
-                  node.frontmatter.img.childImageSharp.gatsbyImageData && (
-                    <Link to={node.fields.slug}>
-                      <GatsbyImage
-                        image={
-                          node.frontmatter.img.childImageSharp.gatsbyImageData
-                        }
-                        key={
-                          node.frontmatter.img.childImageSharp.gatsbyImageData
-                            .src
-                        }
-                        alt={node.frontmatter.title}
-                      />
-                    </Link>
-                  )}
-              </Col>
+          <Row className="my-5 mx-5 py-5" key={k}>
+            <Col sm={4}>
+              {node.frontmatter.img &&
+                node.frontmatter.img.childImageSharp &&
+                node.frontmatter.img.childImageSharp.gatsbyImageData && (
+                  <Link to={node.fields.slug}>
+                    <GatsbyImage
+                      image={
+                        node.frontmatter.img.childImageSharp.gatsbyImageData
+                      }
+                      key={
+                        node.frontmatter.img.childImageSharp.gatsbyImageData.src
+                      }
+                      alt={node.frontmatter.title}
+                    />
+                  </Link>
+                )}
+            </Col>
 
-              <Col sm={8}>
-                <p className="mb-0 text-secondary">{node.frontmatter.date} · {node.timeToRead} minuti di
-                    lettura</p>
+            <Col sm={8}>
+              <p className="mb-0 text-secondary">
+                {node.frontmatter.date} · {node.timeToRead} minuti di lettura
+              </p>
 
-                <h2>
-                  <Link to={node.fields.slug} title={node.frontmatter.title}>{node.frontmatter.title}</Link>
-                </h2>
-                <p>{node.frontmatter.sommario ? node.frontmatter.sommario : node.excerpt}</p>
-                <Link to={node.fields.slug} title={node.frontmatter.title}>Leggi tutto...</Link>
-              </Col>
-            </Row>
+              <h2>
+                <Link to={node.fields.slug} title={node.frontmatter.title}>
+                  {node.frontmatter.title}
+                </Link>
+              </h2>
+              <p>
+                {node.frontmatter.sommario
+                  ? node.frontmatter.sommario
+                  : node.excerpt}
+              </p>
+              <Link to={node.fields.slug} title={node.frontmatter.title}>
+                Leggi tutto...
+              </Link>
+            </Col>
+          </Row>
         );
       })}
       </Container>
