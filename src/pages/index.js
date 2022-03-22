@@ -3,15 +3,14 @@ import React from "react";
 import { graphql } from "gatsby";
 import styled from "styled-components";
 //components
-import Team from "../components/Team"
+import Team from "../components/Team";
 import Layout from "../templates/Layout";
 import BlogPreview from "../components/BlogPreview";
 //others
 import { Row, Col, Container } from "react-bootstrap";
 
 //markup
-const Index = ({data}) => {
-  
+const Index = ({ data }) => {
   return (
     <Layout>
       <Wrapper>
@@ -48,11 +47,11 @@ const Index = ({data}) => {
                     pandemia. Da vari anni, anche la ricerca archeologica ha
                     sperimentato i canali comunicativi offerti dalla Rete,
                     all'inizio esclusivamente per raccontarsi e allargare il
-                    proprio pubblico, e successivamente anche per potenziare la
+                    proprio pubblico e, successivamente, anche per potenziare la
                     propria ricerca. Banche dati online, webGIS, cloud computing
                     e ora anche intelligenza artificiale sono solo alcune delle
-                    parole chiave che stanno diventando vieppiù più familiari
-                    anche per le ricerche più “tradizionali”.
+                    parole chiave che stanno diventando sempre più familiari
+                    anche per le ricerche “tradizionali”.
                   </p>
                   <p>
                     Il LAD è rivolto all'esplorazione di queste potenzialità, a
@@ -72,83 +71,125 @@ const Index = ({data}) => {
                     pubblicati in repository ad accesso aperto!
                   </p>
 
-                <section>
-                  <h2 className="border-bottom">Metodologie e strumenti</h2>
+                  <section>
+                    <h2 className="border-bottom">Metodologie e strumenti</h2>
+                    <p>
+                      Il LAD ha matrurato una lunga esperienza nell'ideazione,
+                      creazione e implementazioni di 
+                      <strong>Sistemi Informativi Archeologici</strong>
+                      sperimentando e consolidando strumenti relativi alla
+                      gestione di banche dati relazionali, piattaforme
+                      <strong>GIS</strong>, <strong>WebGIS</strong> e strummenti
+                      innovativi per la gestione e pubblicazione digitale dei
+                      dati archeologici attraverso tecnologie Web.
+                    </p>
+                    <p>
+                      Inoltre il LAD ha maturato nel tempo molta esperienza nel
+                      rilievo archeologico tradizionale e strumentale, diretto e
+                      indiretto. <em>Total station</em> e droni per il rilievo
+                      fotogrammetrico fanno parte del nostro strumentario di
+                      ricerca sul campo.
+                    </p>
+                    <p>
+                      Ecco una lista non ragionata e in ordine alfabetico di
+                      strumenti, linguaggi, standard, software, ecc. con i quali
+                      ci troviamo estremamente a nostro agio e che usiamo
+                      quotidianemente:
+                    </p>
+                    <p className="bg-light p-3">
+                      {[
+                        "QGIS",
+                        "GRASS",
+                        "AutoCAD",
+                        "ArcGIS",
+
+                        "PostgreSQL",
+                        "MySQL",
+                        "SQLite",
+                        "BraDypUS",
+
+                        "HTML",
+                        "CSS",
+                        "PHP",
+                        "JavaScript",
+                        "React",
+                        "Gatsby",
+                        "Jekyll",
+
+                        "WebMapping",
+                        "GeoNode",
+                        "WebTiles",
+                        "Vector Tiles",
+                        "Leaflet",
+                        "MapLibre",
+                        "WebGIS",
+                        "Cartografia Storica Digitale",
+
+                        "Fotogrammetria",
+                        "Agisoft Metashape",
+
+                        "Droni",
+                        "Stazione Totale",
+                        "Laser Scanner",
+                        "GPS differenziale",
+
+                        "GARR Cloud",
+                        "Web Server",
+                        "Linux",
+                        "Debian",
+                        "Git",
+                        "Bash",
+
+                        "E-publishing",
+                        "Adobe Illustrator",
+                        "Inkscape",
+                        "Adobe Indesign",
+                        "Adobe Photoshop",
+                        "Gimp",
+                        "Imagemagick",
+                      ]
+                        .sort()
+                        .join(", ")}
+                      .
+                    </p>
+                  </section>
+
+                  <h2 className="border-bottom">
+                    Quadro istituzionale e collaborazioni
+                  </h2>
                   <p>
-                    Il LAD ha matrurato una lunga esperienza nella ideazione, creazione e implementazioni di <strong>Sistemi Informativi Archeologici</strong> sperimentando e consolidando strumenti relativi alla gestione di banche dati relazionili, piattaforme <strong>GIS</strong>, <strong>WebGIS</strong> e strummenti innovativi per la gestione e pubblicazione digitale dei dati archeologici attraverso tecnologie Web.
+                    Il LAD è un laboratorio stabile ufficiale del{" "}
+                    <a
+                      href="https://saras.uniroma1.it/"
+                      title="Dipartimento SARAS"
+                    >
+                      Dipartimento SARAS
+                    </a>{" "}
+                    della{" "}
+                    <a
+                      href="https://www.uniroma1.it/"
+                      title="Sapienza Università di Roma"
+                    >
+                      Sapienza Università di Roma
+                    </a>
+                    .
                   </p>
                   <p>
-                    Inoltre il LAD ha maturato nel tempo molta esperienza nel rilievo archeologico tradizionale e strumentale, diretto e indiretto. <em>Total station</em> e droni per il rilievo fotogrammetrico fanno parte del nostro strumentario di ricerca sul campo.
+                    Dal 2022 il LAD ha attivato una convenzione di ricerca
+                    scientifica con il{" "}
+                    <a href="https://www.garr.it/" title="Consortium GARR">
+                      Consortium GARR
+                    </a>{" "}
+                    per la fornitura di servizi istituzionali relativi alla{" "}
+                    <a
+                      href="https://www.garr.it/it/infrastrutture/infrastruttura-cloud/infrastruttura-cloud"
+                      title="piattaforma Cloud GARR"
+                    >
+                      piattaforma Cloud GARR.
+                    </a>
+                    , con <em>data center</em> localizzati in Italia.
                   </p>
-                  <p>
-                    Ecco una lista non ragionata e in ordine alfabetico di strumenti, linguaggi, standard, software, ecc. con i quali ci troviamo estremamente a nostro agio e che usiamo quotidianemente:
-                  </p>
-                  <p className="bg-light p-3">
-                    
-                    {[
-                      'QGIS',
-                      'GRASS',
-                      'AutoCAD',
-                      'ArcGIS',
-
-                      'PostgreSQL',
-                      'MySQL',
-                      'SQLite',
-                      'BraDypUS',
-                      
-                      'HTML',
-                      'CSS',
-                      'PHP', 
-                      'JavaScript',
-                      'React',
-                      'Gatsby',
-                      'Jekyll',
-
-                      'WebMapping',
-                      'GeoNode',
-                      'WebTiles',
-                      'Vector Tiles',
-                      'Leaflet',
-                      'MapLibre',
-                      'WebGIS',
-                      'Cartografia Storica Digitale',
-                      
-                      'Fotogrammetria',
-                      'Agisoft Metashape',
-                      
-                      'Droni',
-                      'Stazione Totale',
-
-                      'GARR Cloud',
-                      'Web Server',
-                      'Linux',
-                      'Debian',
-                      'Git',
-                      'Bash',
-
-                      'E-publishing',
-                      'Adobe Illustrator',
-                      'Inkscape',
-                      'Adobe Indesign',
-                      'Adobe Photoshop',
-                      'Gimp',
-                      'Imagemagick',
-                    ].sort().join(', ')
-                    }
-                    .</p>
                 </section>
-
-
-                  <h2 className="border-bottom">Quadro istituzionale e collaborazioni</h2>
-                  <p>
-                    Il LAD è un laboratorio stabile ufficiale del <a href="https://saras.uniroma1.it/" title="Dipartimento SARAS">Dipartimento SARAS</a> della <a href="https://www.uniroma1.it/" title="Sapienza Università di Roma">Sapienza Università di Roma</a>.
-                  </p>
-                  <p>
-                    Dal 2022 il LAD ha attivato una convenzione di ricerca scientifica con il <a href="https://www.garr.it/" title="Consortium GARR">Consortium GARR</a> per la fornitura di servizi istituzionali relativi alla <a href="https://www.garr.it/it/infrastrutture/infrastruttura-cloud/infrastruttura-cloud" title="piattaforma Cloud GARR">piattaforma Cloud GARR.</a>, con <em>data center</em> localizzati in Italia.
-                  </p>
-                </section>
-                
-                
               </Container>
             </Col>
 
@@ -183,7 +224,7 @@ const Wrapper = styled.section`
   }
   a:hover {
     text-decoration: none !important;
-    color: rgba(21,71,254,0.7);
+    color: rgba(21, 71, 254, 0.7);
   }
   .container {
     padding-top: 2rem;
@@ -196,7 +237,7 @@ export const query = graphql`
     allMarkdownRemark(
       sort: { fields: frontmatter___date, order: DESC }
       limit: 4
-      filter: {fileAbsolutePath: {regex: "/posts\\/blog/"}}
+      filter: { fileAbsolutePath: { regex: "/posts/blog/" } }
     ) {
       nodes {
         frontmatter {
