@@ -15,7 +15,7 @@ Il portale Lazio Antico ([https://www.lazioantico.it/](https://www.lazioantico.i
 
 Il portale è stato ufficialmente presentazione il 16 dicembre 2021 all'aula Magna della Sapienza Università di Roma, alla presenza del Ministro della Cultura  Dario Franceschini, il Presidente della Regione Lazio Nicola Zingaretti, la Magnifica Rettrice della Sapienza Università di Roma Antonella Polimeni, il Prorettore al Patrimonio Archeologico della Sapienza Università di Roma Paolo Carafa, la Prorettrice alla Ricerca della Sapienza Università di Roma Maria Sabrina Sarto e il Presidente del FAI, professore emerito Andrea Carandini.
 
-Citando il sito, 
+Citando il sito: 
 > Lazio Antico offre una mappatura digitale completa dei beni archeologici, dei siti e delle emergenze riferibili al mondo Antico in un periodo compreso tra la metà del sec. IX a.C. e la metà del sec. VI d.C. Lazio Antico copre, oggi, tutto il territorio del Lazio a sud del Tevere e potrà essere esteso a tutta la Regione con una seconda fase di progetto.
 
 Il portale, si articola in due sezioni, una prima pagina di benvenuto che offre informazioni istituzionali e un importante riassunto dei dati finora contenuti (v. sotto); inoltre vi è contenuto un video che mostra in maniera molto efficace l'utilizzo dello stesso. L'atlante vero e proprio si articola come un [Single Page Application](https://developer.mozilla.org/en-US/docs/Glossary/SPA) che ha alla sua base la mappa dinamica del Lazio antico, sulla quale sono rappresetate in maniera dettagliata e non simbolica le evidenze archeologiche.
