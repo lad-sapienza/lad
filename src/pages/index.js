@@ -18,9 +18,8 @@ const Index = ({data}) => {
         <Container>
           <Row className="index">
             <Col className="col-intro" sm={8}>
-              {/*  Introduzione */}
-              <section>
-                <Container>
+              <Container>
+                <section>
                   <h2 className="border-bottom">Presentazione</h2>
                   <p>
                     LAD Laboratorio di Archeologia Digitale alla Sapienza
@@ -31,17 +30,13 @@ const Index = ({data}) => {
                     <em>free, libre e open source</em>) e alla pubblicazione ad
                     accesso aperto di dati e risultati della ricerca.
                   </p>
-                </Container>
-              </section>
+                </section>
 
-              {/* A proposito di noi */}
-              <section>
-                <Team />
-              </section>
+                <section>
+                  <Team />
+                </section>
 
-              {/* Che cosa facciamo */}
-              <section>
-                <Container>
+                <section>
                   <h2 className="border-bottom">Cosa facciamo</h2>
                   <p>
                     Il LAD sperimenta l'applicazione delle tecnologie alla
@@ -77,11 +72,75 @@ const Index = ({data}) => {
                     pubblicati in repository ad accesso aperto!
                   </p>
 
+                <section>
+                  <h2 className="border-bottom">Metodologie e strumenti</h2>
+                  <p>
+                    Il LAD ha matrurato una lunga esperienza nella ideazione, creazione e implementazioni di <strong>Sistemi Informativi Archeologici</strong> sperimentando e consolidando strumenti relativi alla gestione di banche dati relazionili, piattaforme <strong>GIS</strong>, <strong>WebGIS</strong> e strummenti innovativi per la gestione e pubblicazione digitale dei dati archeologici attraverso tecnologie Web.
+                  </p>
+                  <p>
+                    Inoltre il LAD ha maturato nel tempo molta esperienza nel rilievo archeologico tradizionale e strumentale, diretto e indiretto. <em>Total station</em> e droni per il rilievo fotogrammetrico fanno parte del nostro strumentario di ricerca sul campo.
+                  </p>
+                  <p>
+                    Ecco una lista non ragionata e in ordine alfabetico di strumenti, linguaggi, standard, software, ecc. con i quali ci troviamo estremamente a nostro agio e che usiamo quotidianemente:
+                  </p>
+                  <p className="bg-light p-3">
+                    
+                    {[
+                      'QGIS',
+                      'AutoCAD',
+                      'ArcGIS',
+
+                      'PostgreSQL',
+                      'MySQL',
+                      'SQLite',
+                      'BraDypUS',
+                      
+                      'HTML',
+                      'CSS',
+                      'PHP', 
+                      'JavaScript',
+                      'React',
+                      'Gatsby',
+                      'Jekyll',
+
+                      'WebMapping',
+                      'GeoNode',
+                      'WebTiles',
+                      'Vector Tiles',
+                      'Leaflet',
+                      'MapLibre',
+                      'WebGIS',
+                      'Cartografia Storica Digitale',
+                      
+                      'Fotogrammetria',
+                      'Agisoft Metashape',
+                      
+                      'Droni',
+                      'Stazione Totale',
+
+                      'GARR Cloud',
+                      'Web Server',
+                      'Linux',
+                      'Debian',
+                      'git',
+                      'Bash',
+                    ].sort().join(', ')
+                    }
+                    .</p>
+                </section>
+
+
                   <h2 className="border-bottom">Quadro istituzionale e collaborazioni</h2>
-                  <p>Il LAD è un laboratorio stabile ufficiale del <a href="https://saras.uniroma1.it/" title="Dipartimento SARAS">Dipartimento SARAS</a> della <a href="https://www.uniroma1.it/" title="Sapienza Università di Roma">Sapienza Università di Roma</a>.</p>
-                  <p>Dal 2022 il LAD ha attivato una convenzione di ricerca scientifica con il <a href="https://www.garr.it/" title="Consortium GARR">Consortium GARR</a> per la fornitura di servizi istituzionali relativi alla <a href="https://www.garr.it/it/infrastrutture/infrastruttura-cloud/infrastruttura-cloud" title="piattaforma Cloud GARR">piattaforma Cloud GARR.</a>, con <em>data center</em> localizzati in Italia.</p>
-                </Container>
-              </section>
+                  <p>
+                    Il LAD è un laboratorio stabile ufficiale del <a href="https://saras.uniroma1.it/" title="Dipartimento SARAS">Dipartimento SARAS</a> della <a href="https://www.uniroma1.it/" title="Sapienza Università di Roma">Sapienza Università di Roma</a>.
+                  </p>
+                  <p>
+                    Dal 2022 il LAD ha attivato una convenzione di ricerca scientifica con il <a href="https://www.garr.it/" title="Consortium GARR">Consortium GARR</a> per la fornitura di servizi istituzionali relativi alla <a href="https://www.garr.it/it/infrastrutture/infrastruttura-cloud/infrastruttura-cloud" title="piattaforma Cloud GARR">piattaforma Cloud GARR.</a>, con <em>data center</em> localizzati in Italia.
+                  </p>
+                </section>
+                
+                
+              </Container>
             </Col>
 
             {/* Ultimi articoli */}

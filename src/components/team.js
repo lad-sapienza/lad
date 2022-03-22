@@ -79,32 +79,30 @@ const Team = () => {
 
   return (
     <Wrapper>
-      <Container>
-        <h2 className="border-bottom">Chi siamo</h2>
-        <CardGroup>
-          {teamData.map( (m, mk) => {
-            return (
-            <Card key={mk}>
-              <Card.Img variant="top" src={ m.image } />
-              <Card.Body>
-                <Card.Title>{ m.name }</Card.Title>
-                <Card.Text className="position">{ m.position }</Card.Text>
-                <Card.Text className="dipartimento">{ m.affiliation }</Card.Text>
-                <Card.Text className="icon">
-                  { iconList.map( (i, ik) => {
-                    if (m[i.id]) {
-                      return <a href={ m[i.id] } title={i.label} key={ik}>{i.icon}</a>
-                    } else {
-                      return ''
-                    }
-                  })}
-                </Card.Text>
-              </Card.Body>
-            </Card>
-          )
-          })}
-        </CardGroup>
-      </Container>
+      <h2 className="border-bottom">Chi siamo</h2>
+      <CardGroup>
+        {teamData.map( (m, mk) => {
+          return (
+          <Card key={mk}>
+            <Card.Img variant="top" src={ m.image } />
+            <Card.Body>
+              <Card.Title>{ m.name }</Card.Title>
+              <Card.Text className="position">{ m.position }</Card.Text>
+              <Card.Text className="dipartimento">{ m.affiliation }</Card.Text>
+              <Card.Text className="icon">
+                { iconList.map( (i, ik) => {
+                  if (m[i.id]) {
+                    return <a href={ m[i.id] } title={i.label} key={ik}>{i.icon}</a>
+                  } else {
+                    return ''
+                  }
+                })}
+              </Card.Text>
+            </Card.Body>
+          </Card>
+        )
+        })}
+      </CardGroup>
     </Wrapper>
   );
 };
