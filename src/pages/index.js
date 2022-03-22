@@ -75,11 +75,11 @@ const Index = ({ data }) => {
                     <h2 className="border-bottom">Metodologie e strumenti</h2>
                     <p>
                       Il LAD ha matrurato una lunga esperienza nell'ideazione,
-                      creazione e implementazioni di 
-                      <strong>Sistemi Informativi Archeologici</strong>
+                      creazione e implementazioni di
+                       <strong> Sistemi Informativi Archeologici </strong>
                       sperimentando e consolidando strumenti relativi alla
                       gestione di banche dati relazionali, piattaforme
-                      <strong>GIS</strong>, <strong>WebGIS</strong> e strummenti
+                      <strong> GIS </strong>, <strong> WebGIS </strong> e strummenti
                       innovativi per la gestione e pubblicazione digitale dei
                       dati archeologici attraverso tecnologie Web.
                     </p>
@@ -185,7 +185,7 @@ const Index = ({ data }) => {
                       href="https://www.garr.it/it/infrastrutture/infrastruttura-cloud/infrastruttura-cloud"
                       title="piattaforma Cloud GARR"
                     >
-                      piattaforma Cloud GARR.
+                      piattaforma Cloud GARR
                     </a>
                     , con <em>data center</em> localizzati in Italia.
                   </p>
@@ -228,6 +228,10 @@ const Wrapper = styled.section`
   }
   .container {
     padding-top: 2rem;
+  }
+  h2 {
+    color: rgba(21, 71, 154, 0.7);
+    font-weight: 200!important;
   }
 `;
 
