@@ -20,7 +20,7 @@ const Layout = ({ children }) => {
         title="LAD: Laboratorio di Archeologia Digitale alla Sapienza"
         description="LAD Laboratorio di Archeologia Digitale alla Sapienza  promuove la ricerca, la sperimentazione e la didattica delle tecnologie digitali FLOS per l'archeologia e più in generale per gli studi archeologici e umanistici."
         url="https://lad.saras.uniroma1.it"
-        image={ withPrefix(`static/logos/lad-blue.png`) }
+        image={ withPrefix(`/logos/lad-blue.png`) }
       >
         <link rel="shortcut icon" href={ withPrefix("/favicon/favicon.ico")} />
         <link rel="icon" type="image/x-icon" href={ withPrefix(`/favicon/favicon.ico`) } />
