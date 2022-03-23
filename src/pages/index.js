@@ -74,17 +74,17 @@ const Index = ({ data }) => {
                   <section>
                     <h2 className="border-bottom">Metodologie e strumenti</h2>
                     <p>
-                      Il LAD ha matrurato una lunga esperienza nell'ideazione,
+                      Il LAD ha maturato una lunga esperienza nell'ideazione,
                       creazione e implementazioni di
                        <strong> Sistemi Informativi Archeologici </strong>
                       sperimentando e consolidando strumenti relativi alla
                       gestione di banche dati relazionali, piattaforme
-                      <strong> GIS </strong>, <strong> WebGIS </strong> e strummenti
+                      <strong> GIS</strong>, <strong> WebGIS </strong> e strumenti
                       innovativi per la gestione e pubblicazione digitale dei
                       dati archeologici attraverso tecnologie Web.
                     </p>
                     <p>
-                      Inoltre il LAD ha maturato nel tempo molta esperienza nel
+                      Inoltre, il LAD ha maturato nel tempo molta esperienza nel
                       rilievo archeologico tradizionale e strumentale, diretto e
                       indiretto. <em>Total station</em> e droni per il rilievo
                       fotogrammetrico fanno parte del nostro strumentario di
