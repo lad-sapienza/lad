@@ -38,7 +38,7 @@ const Team = () => {
       "name": "Paolo Rosati",
       "image": "images/prosati.jpg",
       "position": "Tutor",
-      "affiliation": "Assegnista di ricerca del progetto PAThs, Dip. SARAS",
+      "affiliation": "Assegnista di ricerca presso il centro di ricerca DigiLab Sapienza",
       "academia": "https://uniroma1.academia.edu/RosatiPaolo",
       "researchgate": "https://www.researchgate.net/profile/Paolo-Rosati-2"
     },
