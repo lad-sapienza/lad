@@ -19,9 +19,9 @@ const Index = ({ data }) => {
             <Col className="col-intro" sm={8}>
               <Container>
                 <section>
-                  <h2 className="border-bottom">Presentazione</h2>
+                  <h2 className="border-bottom">LAD: Laboratorio di Archeologia Digitale alla Sapienza</h2>
                   <p>
-                    LAD Laboratorio di Archeologia Digitale alla Sapienza
+                    LAD: Laboratorio di Archeologia Digitale alla Sapienza
                     promuove la ricerca, la sperimentazione e la didattica delle
                     tecnologie digitali per l'archeologia e più in generale per
                     gli studi umanistici. Il LAD contribuisce allo sviluppo e
