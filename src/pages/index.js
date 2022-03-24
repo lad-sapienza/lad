@@ -1,6 +1,6 @@
 //import
 import React from "react";
-import { graphql } from "gatsby";
+import { graphql, Link } from "gatsby";
 import styled from "styled-components";
 //components
 import Team from "../components/Team";
@@ -19,7 +19,9 @@ const Index = ({ data }) => {
             <Col className="col-intro" sm={8}>
               <Container>
                 <section>
-                  <h2 className="border-bottom">LAD: Laboratorio di Archeologia Digitale alla Sapienza</h2>
+                  <h2 className="border-bottom">
+                    LAD: Laboratorio di Archeologia Digitale alla Sapienza
+                  </h2>
                   <p>
                     LAD: Laboratorio di Archeologia Digitale alla Sapienza
                     promuove la ricerca, la sperimentazione e la didattica delle
@@ -76,12 +78,12 @@ const Index = ({ data }) => {
                     <p>
                       Il LAD ha maturato una lunga esperienza nell'ideazione,
                       creazione e implementazioni di
-                       <strong> Sistemi Informativi Archeologici </strong>
+                      <strong> Sistemi Informativi Archeologici </strong>
                       sperimentando e consolidando strumenti relativi alla
                       gestione di banche dati relazionali, piattaforme
-                      <strong> GIS</strong>, <strong> WebGIS </strong> e strumenti
-                      innovativi per la gestione e pubblicazione digitale dei
-                      dati archeologici attraverso tecnologie Web.
+                      <strong> GIS</strong>, <strong> WebGIS </strong> e
+                      strumenti innovativi per la gestione e pubblicazione
+                      digitale dei dati archeologici attraverso tecnologie Web.
                     </p>
                     <p>
                       Inoltre, il LAD ha maturato nel tempo molta esperienza nel
@@ -208,6 +210,9 @@ const Index = ({ data }) => {
                   />
                 ))}
               </Container>
+              <Container className="link-blog text-center">
+                <Link to="/blog/">VAI ALL'ELENCO COMPLETO DEGLI ARTICOLI</Link>
+              </Container>
             </Col>
           </Row>
         </Container>
@@ -231,7 +236,14 @@ const Wrapper = styled.section`
   }
   h2 {
     color: rgba(21, 71, 154, 0.7);
-    font-weight: 200!important;
+    font-weight: 200 !important;
+  }
+  .link-blog {
+    color: rgba(21, 71, 154, 0.7);
+  }
+  .link-blog:hover {
+    color: rgba(21, 71, 154, 0.7);
+    font-weight: 600;
   }
 `;
 
