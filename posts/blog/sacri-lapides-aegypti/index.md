@@ -16,7 +16,7 @@ Pubblicato online il 21 marzo 2022, _Sacri lapides Aegypti_, adottando una licen
 
 Il sito web si apre con una pagina di benvenuto in cui viene presentato il progetto e ne vengono delineate le linee guida. Proseguendo si trova una sezione dedicata alla metodologia adottata per lo studio dei contesti archeologici cui fa seguito un elenco, in ordine alfabetico, di tutti i siti contenuti nel catalogo. Da questa lista riassuntiva si può accedere alle singole schede dei siti (9), raggiungibili, in alternativa, anche da un menù a tendina della navbar alla voce _places_.
 
-Entrando nel vivo delle schede, queste sono 9 e, al loro interno, racchiudono sia informazioni di carattere generale sui siti sia approfondimenti puntuali sui singoli contesti/monumenti archeologici indagati.  
+Entrando nel vivo delle nove schede presentate, queste racchiudono sia informazioni di carattere generale sui siti, la loro toponomastica storica, la localizzazione, ecc., sia approfondimenti puntuali sui singoli contesti/monumenti archeologici indagati.
 
 Ogni scheda si apre con uno specchietto introduttivo in cui vengono, sotto forma di elenco, segnalate le informazioni principali sui singoli luoghi: informazioni toponomastiche, geografiche, cronologiche e sullo status del completamento delle schede (complete o _in progress_). Importante sottolineare che, in questa sezione, particolare attenzione viene prestata al collegamento di SLA con le principali banche dati di luoghi antichi attive ad oggi. Infatti, per ogni luogo indagato viene fornito l'identificativo corrispettivo in [Trismegistos](https://www.trismegistos.org/geo/index.php), [Pleiades](https://pleiades.stoa.org/places), [PAThs](https://atlas.paths-erc.eu/places) e [ToposText](https://topostext.org/). Lo specchietto informativo è affiancato da una mappa in cui è possibile visualizzare la posizione del luogo descritto nella scheda.
 
@@ -62,7 +62,7 @@ Al momento della redazione di questa recensione (marzo 2022), il catalogo di _Sa
 
 ## La piattaforma
 
-La teconologia utilizzata per realizzare il sito web è [Gatsby](https://www.gatsbyjs.com/), un generatore di siti statici open source basato su [React](https://it.reactjs.org/). Per quanto riguarda le funzionalità delle mappe utilizzate, viene usata [Leaflet](https://leafletjs.com/), una libreria JavaScript open source. Le gallerie invece utilizzano la libreria open source [Lightbox.js](https://victordiego.com/lightbox/).
+La teconologia utilizzata per realizzare il sito web è [Gatsby](https://www.gatsbyjs.com/), un generatore di siti statici _open source_ basato sul framework [React](https://it.reactjs.org/), sempre _open source_, sviluppato da Facebook. Per quanto riguarda le funzionalità delle mappe utilizzate, viene usata [Leaflet](https://leafletjs.com/), una libreria JavaScript open source. Le gallerie invece utilizzano la libreria open source [Lightbox.js](https://victordiego.com/lightbox/).
 
 ## Riferimenti
 
