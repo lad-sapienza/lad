@@ -64,6 +64,7 @@ export default function BlogPost({ data }) {
                     alt={`${post.frontmatter.title} di ${post.frontmatter.autore}`}
                   />
                 </figure>
+                <p>{post.frontmatter.didascalia}</p>
               </div>
             )}
             <div className="post-content">
@@ -78,7 +79,6 @@ export default function BlogPost({ data }) {
 
 //styles
 const Wrapper = styled.section`
- 
   p.author {
     font-family: "Cormorant Garamond", serif !important;
     font-weight: 900 !important;
@@ -103,6 +103,12 @@ const Wrapper = styled.section`
     margin-top: 5rem;
     margin-bottom: 5rem;
   }
+  .post-image p {
+    font-family: "Cormorant Garamond", serif !important;
+    font-weight: 300 !important;
+    font-size: 1rem;
+    text-align: center;
+  }
 `;
 
 //graphql
@@ -121,6 +127,7 @@ export const query = graphql`
         title
         sommario
         tags
+        didascalia
         img {
           base
           childImageSharp {
