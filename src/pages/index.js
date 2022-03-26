@@ -211,7 +211,7 @@ const Index = ({ data }) => {
                 ))}
               </Container>
               <Container className="link-blog text-center">
-                <Link to="/blog/">VAI ALL'ELENCO COMPLETO DEGLI ARTICOLI</Link>
+                <Link to="/blog/" className="btn btn-primary text-white">Vai all'elenco completo degli articoli della sezione Blog</Link>
               </Container>
             </Col>
           </Row>
@@ -237,13 +237,6 @@ const Wrapper = styled.section`
   h2 {
     color: rgba(21, 71, 154, 0.7);
     font-weight: 200 !important;
-  }
-  .link-blog {
-    color: rgba(21, 71, 154, 0.7);
-  }
-  .link-blog:hover {
-    color: rgba(21, 71, 154, 0.7);
-    font-weight: 600;
   }
 `;
 

@@ -38,8 +38,7 @@ export default function BlogPost({ data }) {
                 <div className="text-center">
                   <div className="bg-light mb-3 p-3 text-muted d-inline-block">
                     Tag:&nbsp;
-                    { post.frontmatter.tags.map((t,k) => <span key={k}>{t} </span>) }
-                    |
+                    { post.frontmatter.tags.join(', ') } |
                     Licenza: {post.frontmatter.licenza } |
                     Livello: {post.frontmatter.livello }
                   </div>
