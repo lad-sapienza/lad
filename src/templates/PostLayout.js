@@ -64,7 +64,7 @@ export default function BlogPost({ data }) {
                     alt={`${post.frontmatter.title} di ${post.frontmatter.autore}`}
                   />
                 </figure>
-                <p>{post.frontmatter.didascalia}</p>
+                { post.frontmatter.didascalia && <p>{post.frontmatter.didascalia}</p> }
               </div>
             )}
             <div className="post-content">
