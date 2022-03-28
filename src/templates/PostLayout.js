@@ -98,7 +98,11 @@ const Wrapper = styled.section`
     max-width: 1000px;
     margin-top: 3rem;
   }
-
+  .post-content img {
+    max-width: 400px;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
   .post-image {
     margin-top: 5rem;
     margin-bottom: 5rem;

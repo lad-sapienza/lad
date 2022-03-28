@@ -37,3 +37,31 @@ Ci sentiamo di segnalare, per le tematiche affrontate in questo blog, alcune lib
 - [Water Flow](https://plugins.qgis.org/styles/60/).
 
 La lista non si esaurisce sicuramente con queste voci, che vogliono essere solo uno spunto delle possibilità offerte da questa risorsa completamente open source con **licenza Creative Commons Attribution-ShareAlike 3.0 licence (CC BY-SA)**.
+
+### Test:  download, importazione e uso dello stile `legend patches set`
+
+![Test Patches set](./legend-patches-set.jpeg)
+
+- Scaricare il pacchetto dal repository di QGIS Style al link [https://plugins.qgis.org/styles/9/](https://plugins.qgis.org/styles/9/).
+- Una volta effettuato il download decomprimere la cartella zip `basic-legend-patches-set.zip`. Si otterrà una cartella denominata `Basic Legend Patches Set`.
+- **Utilizzare la risorsa in un layout in QGIS**:
+  - Aprire il progetto GIS;
+  - Nel pannello dei `Layer` selezionare uno dei layer vettoriali presenti;
+  - Nel `Pannello delle proprietà del layer` selezionare la voce `Simbologia` nel menù verticale a sinistra;
+  - Selezionare la funzione `Style manager`;
+  - Dallo `Style manager` importare il file `patch.xml` contenuto nella cartella `Basic Legend Patches Set`;
+  - Potete utilizzare questo nuovo set di icone aggiungendo la legenda dei layer contenuti nel vostro progetto GIS in un `layout di stampa` e modificando, sotto la voce `Elementi della legenda`, l'icona di ogni singolo file vettoriale cliccando due volte sul simbolo desiderato.
+
+### Test:  download, importazione e uso dello stile `water flow`
+
+![water-flow.jpeg](water-flow.jpeg)
+
+- Scaricare il pacchetto dal repository di QGIS Style al link [https://plugins.qgis.org/styles/60/](https://plugins.qgis.org/styles/60/).
+- Una volta effettuato il download decomprimere la cartella zip `water-flow.zip`. Si otterrà una cartella denominata `Water Flow`.
+- **Utilizzare la risorsa in un layout in QGIS**:
+  - Aprire il progetto GIS;
+  - Nel pannello dei `Layer` selezionare uno dei layer vettoriali presenti;
+  - Nel `Pannello delle proprietà del layer` selezionare la voce `Simbologia` nel menù verticale a sinistra;
+  - Selezionare la funzione `Style manager`;
+  - Dallo `Style manager` importare il file `water-flow.xml` contenuto nella cartella `Water Flow`;
+  - Potete utilizzare questa simbologia selezionando nel vostro progetto GIS il layer di linee/polilinee che rappresenta l'idrografia del territorio oggetto di studio e applicando la simbologia `water flow` che troverete ora nell'elenco delle simbologie disponibili per le geometrie di linee.  
