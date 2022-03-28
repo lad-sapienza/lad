@@ -3,7 +3,7 @@ title: Cookbook e risorse QGIS per archeologi e non solo...
 autore: Domizia D'Erasmo
 licenza: CC BY 4.0 International
 livello: base, medio, avanzato
-tags: [gis, dati geografici, stili e simbologie, risorse]
+tags: [gis, dati geografici, stili e simbologie, risorse, tutorial]
 img: ./polygon-dimension-mike-elstermann.png
 didascalia: QGIS Hub. Polygon_Dimension_QGIS3x di Mike Elstermann
 date: 2022-04-01
