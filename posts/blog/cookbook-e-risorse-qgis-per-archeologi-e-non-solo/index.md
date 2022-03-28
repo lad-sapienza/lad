@@ -3,10 +3,10 @@ title: Cookbook e risorse QGIS per archeologi e non solo...
 autore: Domizia D'Erasmo
 licenza: CC BY 4.0 International
 livello: base, medio, avanzato
-tags: [gis, dati geografici, stili e simbologie, risorse open source]
+tags: [gis, dati geografici, stili e simbologie, risorse]
 img: ./polygon-dimension-mike-elstermann.png
 didascalia: QGIS Hub. Polygon_Dimension_QGIS3x di Mike Elstermann
-date: 2022-03-26
+date: 2022-04-01
 sommario: I Sistemi Informativi Geografici (GIS) sono un mondo vasto e spesso complesso da affrontare e saper gestire. In questo articolo vi suggeriamo alcune risorse open source che possono correre in aiuto di utenti di vari gradi e livelli. L'elenco è in continuo aggiornamento ed è incentrato sulle risorse disponibili per il software QGIS..
 ---
 
