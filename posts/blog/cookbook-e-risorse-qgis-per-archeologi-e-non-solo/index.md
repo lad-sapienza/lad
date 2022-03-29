@@ -1,5 +1,5 @@
 ---
-title: Cookbook e risorse QGIS per archeologi e non solo...
+title: Guide e risorse QGIS per archeologi e non solo...
 autore: Domizia D'Erasmo
 licenza: CC BY 4.0 International
 livello: base, medio, avanzato
