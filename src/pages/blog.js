@@ -77,7 +77,7 @@ const Blog = ({ data }) => {
       {state.posts.map(({ node }, k) => {
         return (
           <Container key={k}>
-            <Row className="my-5 mx-5 py-5">
+            <Row className="my-5 mx-md-5 py-5">
               <Col sm={4}>
                 {node.frontmatter.img &&
                   node.frontmatter.img.childImageSharp &&
@@ -102,12 +102,12 @@ const Blog = ({ data }) => {
                   <Link to={node.fields.slug}>{node.frontmatter.title}</Link>
                 </h2>
                 <p>{node.frontmatter.sommario ? node.frontmatter.sommario : node.excerpt}</p>
-                <Row>
-                  <Col className="bg-light text-secondary p-2 my-2">
+               
+                  <div className="bg-light text-secondary p-2 my-2">
                     Pubblicato il {node.frontmatter.date} da {node.frontmatter.autore} | {node.timeToRead} minuti di
                     lettura | tags: {node.frontmatter.tags.join(', ')}
-                  </Col>
-                </Row>
+                  </div>
+               
               </Col>
             </Row>
           </Container>
