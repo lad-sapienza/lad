@@ -15,7 +15,10 @@ const Seo = (props) => {
           title: props.title,
           description: props.description,
           images: [
-            { url: props.image }
+            { 
+              url: props.image,
+              alt: props.title
+            }
           ],
         }}
       />
