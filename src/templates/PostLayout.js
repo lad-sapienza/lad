@@ -18,8 +18,9 @@ export default function BlogPost({ data }) {
       <Seo
         title={ post.frontmatter.title }
         description={ post.frontmatter.sommario ? post.frontmatter.sommario : post.excerpt }
-        url={`${data.site.siteMetadata.siteUrl}}/${post.fields.slug}`}
-        image={`${data.site.siteMetadata.siteUrl}}${post.frontmatter.img.childImageSharp.gatsbyImageData.images.fallback.src}`}
+        // https://stackoverflow.com/a/24381515
+        url={`${data.site.siteMetadata.siteUrl}${post.fields.slug}`.replace(/([^:]\/)\/+/g, "$1")}
+        image={`${data.site.siteMetadata.siteUrl}${post.frontmatter.img.childImageSharp.gatsbyImageData.images.fallback.src}`.replace(/([^:]\/)\/+/g, "$1")}
         />
       <Wrapper>
         <div>
