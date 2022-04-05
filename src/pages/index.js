@@ -19,9 +19,9 @@ const Index = ({ data }) => {
             <Col className="col-intro" sm={8}>
               <Container>
                 <section>
-                  <h2 className="border-bottom">
+                  <h1 className="border-bottom">
                     LAD: Laboratorio di Archeologia Digitale alla Sapienza
-                  </h2>
+                  </h1>
                   <p>
                     LAD: Laboratorio di Archeologia Digitale alla Sapienza
                     promuove la ricerca, la sperimentazione e la didattica delle
