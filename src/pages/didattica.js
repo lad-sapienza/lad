@@ -30,8 +30,6 @@ const Didattica = ({ data }) => {
         <hr />
       
 
-        <h1 className="text-center">Didattica</h1>
-
         <div className="p-5 m-5 border bg-light text-center">
           <p>
             Sono  <strong>chiuse le iscrizioni</strong> laboratori QGIS e
