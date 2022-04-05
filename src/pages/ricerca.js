@@ -17,15 +17,20 @@ const Ricerca = ({data}) => {
       <Seo
         title="Ricerca del LAD"
         description="Ricerca di LAD: Linee di ricerca, progetti sul campo e in laboratorio, idee collaborazioni e molto altro"
-        url="https://lad.saras.uniroma1.it/ricerca"
-        image={ withPrefix(`static/logos/lad-blue.png`) } />
+        url={ `${data.site.siteMetadata.siteUrl}/ricerca` }
+        image={`${data.site.siteMetadata.siteUrl}${withPrefix(`/logos/lad-blue.png`)}`.replace(/([^:]\/)\/+/g, "$1")}
+      />
       
-      <h1 className="text-center">Ricerca</h1>
+      <Container>
+        <h1 className="text-center">Ricerca</h1>
 
-      {posts.map(({ node }, k) => {
-        return (
-          <Container key={k}>
-            <Row className="my-5 mx-5 py-5">
+        <p className="lead text-center">Le linee di ricerca del LAD: Laboratorio di Archeologia Digitale alla Sapienza coprono varie tematiche e aree applicative: dalla ricerca sul campo, allo sviluppo, laboratori e vari servizi web. Di seguitio riportiamo i nostri più importanti progetti.</p>
+
+        <hr />
+
+        {posts.map(({ node }, k) => {
+          return (
+            <Row  key={k} className="my-5 mx-5 py-5">
               <Col sm={3}>
                 {node.frontmatter.img &&
                   node.frontmatter.img.childImageSharp &&
@@ -54,14 +59,19 @@ const Ricerca = ({data}) => {
                 <p>{node.excerpt}</p>
               </Col>
             </Row>
-          </Container>
-        );})}
+          );})}
+        </Container>
     </Layout>
   );};
 
 
 export const query = graphql`
   {
+    site {
+      siteMetadata {
+        siteUrl
+      }
+    }
     allMarkdownRemark(
       sort: { fields: frontmatter___sort, order: DESC }
       filter: {fileAbsolutePath: {regex: "/posts\\/ricerca/"}}

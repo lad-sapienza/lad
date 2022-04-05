@@ -1,6 +1,6 @@
 //import
 import React from "react";
-import { graphql, Link } from "gatsby";
+import { graphql, Link, withPrefix } from "gatsby";
 import styled from "styled-components";
 //components
 import Team from "../components/Team";
@@ -8,11 +8,18 @@ import Layout from "../templates/Layout";
 import BlogPreview from "../components/BlogPreview";
 //others
 import { Row, Col, Container } from "react-bootstrap";
+import Seo from "../components/Seo";
 
 //markup
 const Index = ({ data }) => {
   return (
     <Layout>
+      <Seo
+        title="Home page ufficiale del LAD: Laboratorio di Archeologia Digitale alla Sapienza"
+        description="Benvenuti al sto del LAD: Laboratorio di Archeologia Digitale alla Sapienza  promuove la ricerca, la sperimentazione e la didattica delle tecnologie digitali FLOS per l'archeologia."
+        url={ data.site.siteMetadata.siteUrl }
+        image={`${data.site.siteMetadata.siteUrl}${withPrefix(`/logos/lad-blue.png`)}`.replace(/([^:]\/)\/+/g, "$1")}
+      />
       <Wrapper>
         <Container>
           <Row className="index">
@@ -243,6 +250,11 @@ const Wrapper = styled.section`
 //graphQL
 export const query = graphql`
   {
+    site {
+      siteMetadata {
+        siteUrl
+      }
+    }
     allMarkdownRemark(
       sort: { fields: frontmatter___date, order: DESC }
       limit: 4

@@ -3,11 +3,13 @@ import React from "react";
 import Layout from "../templates/Layout";
 import { Container} from "react-bootstrap";
 
-const Errore404 = ({ data }) => {
+const Errore404 = () => {
   return (
     <Layout>
       <Container>
-          <p>Siamo spiacenti, ma il contenuto richiesto non è stato trovato...</p>
+        <h1>Errore: risorsa non trovata</h1>
+          <p>Siamo spiacenti, ma non è stato possibile trovare il contenuto richiesto.</p>
+          <p>Si prega di segnalare questo errore all'indirizzo <a href="julian.bogdani@uniroma1.it" title="Segnalateci un errore">julian.bogdani@uniroma1.it</a> e cercheremo di risolverlo il prima possibile.</p>
       </Container>
     </Layout>
   );

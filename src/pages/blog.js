@@ -59,12 +59,20 @@ const Blog = ({ data }) => {
         <Seo 
           title="Il blog di LAD: notizie, appunti, recensioni, tutorial sulle applicazioni informatiche per l'archeologia"
           description="Il blog di LAD raccoglie recensioni, notizie, tutorial, appunti e note relatice a progetti, tecnologie, strummenti, standard in uso nel campo della ricerca archeologica."
-          url="https://lad.saras.uniroma1.it/blog"
-          image={ withPrefix(`static/logos/lad-blue.png`) } />
+          url={ `${data.site.siteMetadata.siteUrl}/blog/` }
+          image={`${data.site.siteMetadata.siteUrl}${withPrefix(`/logos/lad-blue.png`)}`.replace(/([^:]\/)\/+/g, "$1")}
+        />
       <Wrapper>
-      <h1 className="text-center">Blog</h1>
 
       <Container>
+
+        <h1 className="text-center">Blog</h1>
+
+        <p className="lead text-center">Il blog è una delle sezioni più dinamiche del LAD: Laboratorio di Archeologia Digitale alla Sapienza in quanto raccoglie contributo di varia lunghezza conteneneti recensioni, notizie, tutorial, appunti e note relative a progetti, tecnologie, strummenti, standard in uso nel campo della ricerca archeologica.
+        Si tratta di uno spazio aperto e collaboratico, per il quale accettiamo e stimoliamo contribuzioni esterne, per le quali vi preghiamo di scrivere a <a href="julian.bogdani@uniroma1.it" title="Segnalateci una notizia via email">julian.bogdani@uniroma1.it</a>.</p>
+        <hr />
+
+
         <div className="mb-5 text-secondary p-2 text-center">
           Tag disponibili, clicca per filtrare gli articoli | {state.posts.length} articoli
           <br />
@@ -135,6 +143,11 @@ const Wrapper = styled.section`
 
 export const query = graphql`
   {
+    site {
+      siteMetadata {
+        siteUrl
+      }
+    }
     allMarkdownRemark(
       sort: { fields: frontmatter___date, order: DESC }
       filter: { fileAbsolutePath: { regex: "/posts/blog/" } }

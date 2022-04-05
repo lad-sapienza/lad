@@ -16,13 +16,17 @@ const Blog = ({ data }) => {
     <Layout>
       <Seo 
         title="Le notizie di LAD"
-        description="Notizie e avvisi dal LAD"
-        url="https://lad.saras.uniroma1.it/blog"
-          image={ withPrefix(`static/logos/lad-blue.png`) } />
+        description="La sezione del sito ufficiale del LAD: Laboratorio di Archeologia Digitale alla Sapienza dedicata alle notizie di eventi interni e esterni inerenti le tematiche del laboratorio"
+        url={ `${data.site.siteMetadata.siteUrl}/notizie/` }
+        image={`${data.site.siteMetadata.siteUrl}${withPrefix(`/logos/lad-blue.png`)}`.replace(/([^:]\/)\/+/g, "$1")}
+        />
         
-          
-      <h1 className="text-center">Notizie</h1>
       <Container>
+
+      <h1 className="text-center">Notizie</h1>
+
+      <p className="lead text-center">Questa sezione del sito del LAD: Laboratorio di Archeologia Digitale alla Sapienza raccoglie notizie di eventi, conferenze, lezioni, seminari, ecc. inerenti alle tematiche del laboratorio. Per le segnalazioni scriveteci a <a href="julian.bogdani@uniroma1.it" title="Segnalateci una notizia via email">julian.bogdani@uniroma1.it</a>.</p>
+      <hr />
 
       {allPosts.map(({ node }, k) => {
         return (
@@ -74,6 +78,11 @@ const Blog = ({ data }) => {
 
 export const query = graphql`
   {
+    site {
+      siteMetadata {
+        siteUrl
+      }
+    }
     allMarkdownRemark(
       sort: { fields: frontmatter___date, order: DESC }
       filter: { fileAbsolutePath: { regex: "/posts/notizie/" } }

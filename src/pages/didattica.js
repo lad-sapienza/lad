@@ -18,13 +18,16 @@ const Didattica = ({ data }) => {
       <Seo
         title="Didattica del LAD"
         description="Didattica di LAD: tutte le attività del LAD rivolte alla didattica a vari livelli: corsi, seminari, tutorial, laboratori"
-        url="https://lad.saras.uniroma1.it/didattica"
-        image={ withPrefix(`static/logos/lad-blue.png`) } />
+        url={ `${data.site.siteMetadata.siteUrl}/didattica/` }
+        image={`${data.site.siteMetadata.siteUrl}${withPrefix(`/logos/lad-blue.png`)}`.replace(/([^:]\/)\/+/g, "$1")}
+      />
       
       <Container>
       
-
         <h1 className="text-center">Didattica</h1>
+
+        <p className="lead text-center">La didattica è un'attività centrale del LAD: Laboratorio di Archeologia Digitale alla Sapienza, in quanto tutti i nostri progetti prevedono la partecipazione e la condivisione di conoscenza e competenze con i più giovani. La didattica è organizzata in corsi tradizionali, laboratori pratici, seminari, tutorial e attività di tirocinio. Di seguito si elencano alcune ooprtunità di collaborare con noi.</p>
+        <hr />
       
         <div className="p-5 m-5 border bg-light text-center">
           <p>
@@ -81,6 +84,11 @@ img {
 
 export const query = graphql`
   {
+    site {
+      siteMetadata {
+        siteUrl
+      }
+    }
     allMarkdownRemark(
       sort: { fields: frontmatter___sort, order: DESC }
       filter: {fileAbsolutePath: {regex: "/posts\\/didattica/"}}
