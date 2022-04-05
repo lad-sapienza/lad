@@ -19,19 +19,29 @@ const Didattica = ({ data }) => {
         title="Didattica del LAD"
         description="Didattica di LAD: tutte le attività del LAD rivolte alla didattica a vari livelli: corsi, seminari, tutorial, laboratori"
         url="https://lad.saras.uniroma1.it/didattica"
-        image={ withPrefix(`static/logos/lad-blue.png`) } />
-      
-      <Container>
-      
+        image={withPrefix(`static/logos/lad-blue.png`)}
+      />
 
+      <Container>
         <h1 className="text-center">Didattica</h1>
-      
+
         <div className="p-5 m-5 border bg-light text-center">
           <p>
-            Sono aperte le iscrizioni ai laboratori QGIS e Database per l'anno <strong>accademico 2021-2022</strong>.
+            Sono  <strong>chiuse le iscrizioni</strong> laboratori QGIS e
+            Database per l'anno <strong>accademico 2021-2022</strong> causa
+            raggiungimento del numero dei partecipanti.
           </p>
           <p>
-            Per il programma e i dettagli seguire <a href={ withPrefix(`notizie/2022-02-04-laboratori-didattici-di-archeologia-digitale-2021-2022/`) } title="Aperte le iscrizioni ai laboratori QGIS e Database a.a. 2021-2022">questo collegamento</a>.
+            Per il programma e i dettagli seguire{" "}
+            <a
+              href={withPrefix(
+                `notizie/2022-02-04-laboratori-didattici-di-archeologia-digitale-2021-2022/`
+              )}
+              title="Aperte le iscrizioni ai laboratori QGIS e Database a.a. 2021-2022"
+            >
+              questo collegamento
+            </a>
+            .
           </p>
         </div>
 
@@ -68,8 +78,8 @@ const Didattica = ({ data }) => {
             </Wrapper>
           );
         })}
-        </Container>
-      </Layout>
+      </Container>
+    </Layout>
   );
 };
 
