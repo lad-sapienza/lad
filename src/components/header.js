@@ -36,11 +36,11 @@ const Header = () => {
       <Container>
         <Wrapper>
           <Nav className='d-flex justify-content-around'>
-            <Nav.Link href={withPrefix(`/`)}>Inizio</Nav.Link>
-            <Nav.Link href={withPrefix(`/notizie/`)}>Notizie</Nav.Link>
-            <Nav.Link href={withPrefix(`/blog/`)}>Blog</Nav.Link>
-            <Nav.Link href={withPrefix(`/ricerca/`)}>Ricerca</Nav.Link>
-            <Nav.Link href={withPrefix(`/didattica/`)}>Didattica</Nav.Link>
+            <Nav.Link href={withPrefix(`/`)} title="Inizio">Inizio</Nav.Link>
+            <Nav.Link href={withPrefix(`/notizie/`)} title="Notizie">Notizie</Nav.Link>
+            <Nav.Link href={withPrefix(`/blog/`)} title="Blog">Blog</Nav.Link>
+            <Nav.Link href={withPrefix(`/ricerca/`)} title="Ricerca">Ricerca</Nav.Link>
+            <Nav.Link href={withPrefix(`/didattica/`)} title="Didattica">Didattica</Nav.Link>
           </Nav>
         </Wrapper>
       </Container>

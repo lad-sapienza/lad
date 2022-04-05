@@ -211,7 +211,7 @@ const Index = ({ data }) => {
                 ))}
               </Container>
               <Container className="link-blog text-center">
-                <Link to="/blog/" className="btn btn-primary text-white">Vai all'elenco completo degli articoli della sezione Blog</Link>
+                <Link to="/blog/" className="btn btn-primary text-white" title="Vai al Blog del LAD">Vai all'elenco completo degli articoli della sezione Blog</Link>
               </Container>
             </Col>
           </Row>

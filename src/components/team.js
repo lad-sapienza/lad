@@ -84,7 +84,7 @@ const Team = () => {
         {teamData.map( (m, mk) => {
           return (
           <Card key={mk}>
-            <Card.Img variant="top" src={ m.image } />
+            <Card.Img variant="top" src={ m.image } alt={ m.name } />
             <Card.Body>
               <Card.Title>{ m.name }</Card.Title>
               <Card.Text className="position">{ m.position }</Card.Text>
