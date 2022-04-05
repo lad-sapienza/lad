@@ -14,6 +14,7 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sass`,
     `gatsby-plugin-sitemap`,
+    'gatsby-plugin-robots-txt',
     {
       resolve: `gatsby-plugin-next-seo`,
       options: {
