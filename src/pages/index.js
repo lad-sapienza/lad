@@ -211,7 +211,13 @@ const Index = ({ data }) => {
                 ))}
               </Container>
               <Container className="link-blog text-center">
-                <Link to="/blog/" className="btn btn-primary text-white" title="Vai al Blog del LAD">Vai all'elenco completo degli articoli della sezione Blog</Link>
+                <Link
+                  to="/blog/"
+                  className="btn btn-primary text-white"
+                  title="Vai al Blog del LAD"
+                >
+                  Vai all'elenco completo degli articoli della sezione Blog
+                </Link>
               </Container>
             </Col>
           </Row>
@@ -234,6 +240,7 @@ const Wrapper = styled.section`
   .container {
     padding-top: 2rem;
   }
+  h1,
   h2 {
     color: rgba(21, 71, 154, 0.7);
     font-weight: 200 !important;
