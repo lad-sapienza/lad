@@ -12,14 +12,15 @@ deckDeckGoHighlightElement();
 //markup
 export default function BlogPost({ data }) {
   const post = data.markdownRemark;
-
+  
   return (
     <Layout>
       <Seo
         title={ post.frontmatter.title }
         description={ post.frontmatter.sommario ? post.frontmatter.sommario : post.excerpt }
-        url={`https://lad.saras.uniroma1.it${post.fields.slug}`}
-        image={post.frontmatter.img.childImageSharp.gatsbyImageData.images.fallback.src}
+        // https://stackoverflow.com/a/24381515
+        url={`${data.site.siteMetadata.siteUrl}${post.fields.slug}`.replace(/([^:]\/)\/+/g, "$1")}
+        image={`${data.site.siteMetadata.siteUrl}${post.frontmatter.img.childImageSharp.gatsbyImageData.images.fallback.src}`.replace(/([^:]\/)\/+/g, "$1")}
         />
       <Wrapper>
         <div>
@@ -118,6 +119,11 @@ const Wrapper = styled.section`
 //graphql
 export const query = graphql`
   query BlogQuery($slug: String!) {
+    site {
+      siteMetadata {
+        siteUrl
+      }
+    }
     markdownRemark(fields: { slug: { eq: $slug } }) {
       html
       fields {

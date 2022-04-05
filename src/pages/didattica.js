@@ -38,7 +38,7 @@ const Didattica = ({ data }) => {
         {posts.map(({ node }, k) => {
           return (
             <Wrapper key={k}>
-              <Row className="my-5 mx-5 py-5">
+              <Row className="my-5 mx-md-5 py-5">
                 <Col xs={2}>
                   {node.frontmatter.img &&
                     node.frontmatter.img.childImageSharp &&
