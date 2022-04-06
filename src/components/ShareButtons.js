@@ -14,12 +14,11 @@ import {
 
 const size = 40;
 
-const ShareButtons = ({ twitterHandle, url, title, tags }) => (
+const ShareButtons = ({ url, title, tags }) => (
     <div>
       <TwitterShareButton className='mx-1'
         url={url}
         title={title}
-        via={twitterHandle}
         hashtags={tags}
       >
         <TwitterIcon size={size} round={true} />

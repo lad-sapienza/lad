@@ -56,9 +56,8 @@ export default function BlogPost({ data }) {
 
               <ShareButtons 
                 url={pageUrl} 
-                twitterHandle= 'JulianBogdani'
                 title={ post.frontmatter.title } 
-                tags={ post.frontmatter.tags || null }
+                tags={ post.frontmatter.tags || [] }
               />
 
             </div>
