@@ -6,12 +6,14 @@ import { GatsbyImage } from "gatsby-plugin-image";
 import { Container } from "react-bootstrap";
 import Layout from "../templates/Layout";
 import Seo from "../components/Seo"
+import ShareButtons from "../components/ShareButtons";
 import { defineCustomElements as deckDeckGoHighlightElement } from "@deckdeckgo/highlight-code/dist/loader";
 deckDeckGoHighlightElement();
 
 //markup
 export default function BlogPost({ data }) {
   const post = data.markdownRemark;
+  const pageUrl = `${data.site.siteMetadata.siteUrl}${post.fields.slug}`.replace(/([^:]\/)\/+/g, "$1");
   
   return (
     <Layout>
@@ -19,7 +21,7 @@ export default function BlogPost({ data }) {
         title={ post.frontmatter.title }
         description={ post.frontmatter.sommario ? post.frontmatter.sommario : post.excerpt }
         // https://stackoverflow.com/a/24381515
-        url={`${data.site.siteMetadata.siteUrl}${post.fields.slug}`.replace(/([^:]\/)\/+/g, "$1")}
+        url={ pageUrl }
         image={`${data.site.siteMetadata.siteUrl}${post.frontmatter.img.childImageSharp.gatsbyImageData.images.fallback.src}`.replace(/([^:]\/)\/+/g, "$1")}
         />
       <Wrapper>
@@ -51,6 +53,14 @@ export default function BlogPost({ data }) {
                   Articolo pubblicato il {post.frontmatter.date}
                 </p>
               }
+
+              <ShareButtons 
+                url={pageUrl} 
+                twitterHandle= 'JulianBogdani'
+                title={ post.frontmatter.title } 
+                tags={ post.frontmatter.tags || null }
+              />
+
             </div>
 
 
