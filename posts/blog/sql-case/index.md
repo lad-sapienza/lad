@@ -1,5 +1,5 @@
 ---
-title: "Uso si CASE per estrarre con SQL dal database dati utili ad analisi statistiche"
+title: "Uso di CASE per estrarre con SQL dal database dati utili ad analisi statistiche"
 autore: Julian Bogdani
 licenza: CC BY 4.0 International
 livello: avanzato
