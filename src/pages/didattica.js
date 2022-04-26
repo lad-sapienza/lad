@@ -29,27 +29,6 @@ const Didattica = ({ data }) => {
         <p className="lead text-center">La didattica è un'attività centrale del LAD: Laboratorio di Archeologia Digitale alla Sapienza, in quanto tutti i nostri progetti prevedono la partecipazione e la condivisione di conoscenza e competenze con i più giovani. La didattica è organizzata in corsi tradizionali, laboratori pratici, seminari, tutorial e attività di tirocinio. Di seguito si elencano alcune ooprtunità di collaborare con noi.</p>
         <hr />
       
-
-        <div className="p-5 m-5 border bg-light text-center">
-          <p>
-            Sono  <strong>chiuse le iscrizioni</strong> laboratori QGIS e
-            Database per l'anno <strong>accademico 2021-2022</strong> causa
-            raggiungimento del numero dei partecipanti.
-          </p>
-          <p>
-            Per il programma e i dettagli seguire{" "}
-            <a
-              href={withPrefix(
-                `notizie/2022-02-04-laboratori-didattici-di-archeologia-digitale-2021-2022/`
-              )}
-              title="Aperte le iscrizioni ai laboratori QGIS e Database a.a. 2021-2022"
-            >
-              questo collegamento
-            </a>
-            .
-          </p>
-        </div>
-
         {posts.map(({ node }, k) => {
           return (
             <Wrapper key={k}>
