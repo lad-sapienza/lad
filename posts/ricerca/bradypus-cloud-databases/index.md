@@ -152,9 +152,9 @@ Per garantire l'integrità dei dati, è possibile “congelare“ la versione in
 ---
 
 ## Bibliografia 
-Bogdani, Julian. (2006) 2021. BraDypUS Relational Web Database Managing System for Cultural Heritage. Bologna, Rome. https://doi.org/10.5281/zenodo.1467905.
-‘BraDypUS Official Guide’. (2020) 2021. 2021. https://docs.bdus.cloud/.
-Bogdani, Julian, and Erika Vecchietti. 2010. ‘From “Text” to “Con-Text”: Using the Web in the Archaeological Research’. In Vesuviana. Archeologie a Confronto, Atti Del Convegno Internazionale (Bologna, 14-16 Gennaio 2008), 809–18. Bologna.
+- Bogdani, Julian. (2006) 2021. BraDypUS Relational Web Database Managing System for Cultural Heritage. Bologna, Rome. https://doi.org/10.5281/zenodo.1467905.
+- ‘BraDypUS Official Guide’. (2020) 2021. 2021. https://docs.bdus.cloud/.
+- Bogdani, Julian, and Erika Vecchietti. 2010. ‘From “Text” to “Con-Text”: Using the Web in the Archaeological Research’. In Vesuviana. Archeologie a Confronto, Atti Del Convegno Internazionale (Bologna, 14-16 Gennaio 2008), 809–18. Bologna.
 
 
 ## Risorse online
