@@ -5,9 +5,13 @@ licenza: CC BY 4.0 International
 livello: avanzato
 tags: [riflessioni e appunti, open source, git, versionamento, tutorial, coding]
 img: ./git-logo.png
-date: 2022-04-22
+date: 2022-04-26
 sommario: "Git è oggi il software più famoso e usato per il controllo delle versioni, usato nella stragrande maggioranaza dei progetti di sviluppo software, ma può tornare estremamente utile in tanti scenari diversi che non hanno a che fare propriamente con lo sviluppo."
 ---
+
+## Premessa
+
+Questo articolo è il primo di una serie dedicato a Git, un software per il controllo di versione _open source_. Man mano che i prossimi articoli saranno pronti verrano elencati, per facilità, di seguito. Verrà usato come esempio la creazione di un diario di scavo usando file testuali scritti in [Markdown](https://daringfireball.net/projects/markdown/), perciò questa guida ha la doppia valenza di spiegare il funzionamento base di Git e contemporaneamete forire un esempio di buone pratiche per la redazione collaborativa di un possibile diario di scavo.
 
 ## Introduzione
 
