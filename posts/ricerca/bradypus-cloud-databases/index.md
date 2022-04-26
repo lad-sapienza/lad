@@ -6,7 +6,6 @@ img: ./bdus.png
 
 Bradypus è un software libero e open-source sviluppato alla Sapienza Università di Roma da Julian Bogdani e rilasciato con la licenza [GNU AGPL-3.0](https://www.gnu.org/licenses/agpl-3.0.en.html). È finalizzato alla creazione, implementazione e pubblicazione di banche dati relazionali sul  Web. Allo stato attuale è attivamente usato da circa 30 progetti di ricerca italiani e internazionali, per lo più di carattere archeologico e più in generale relativi ai Beni Culturali.
 
-
 ## Filosofia di base e funzioni principali
 - Bradypus si basa sull'idea di usare un set minimale di configurazioni per implementare un [RDBMS,Relational database management system](https://it.wikipedia.org/wiki/Relational_database_management_system) basato su interfaccie web, pienamente funzionante, con la possibilità di avere record strutturati anche con tabelle dipendenti 1-n, chiamate plugin. 
 - Inoltre, viene offerta la possibilità per un amministratore di modificare in tempo reale la struttura del db, la politica di inserimento dati (tipi di campo e fonte di dati per campi che prevedono una qualsiasi froma di indicizzazione) e la validazione dei dati immessi in tempo reale. 
@@ -67,107 +66,95 @@ Ciascun utente che ha acesso alla bancadati (da `lettura` in su) può modificare
 ## Configurazioni personalizzate utente
 Tutti gli utenti possono persnalizzare la propria esperienza di lavoro con la banca dati, configurando opzioni personalizzate che valgono perla sessione corrente (fino al logout) oppure che possono essere salvate nel database ed essere disponibili per tutte le future sessionidi lavoro.
 
-Allo stato attuale, le opzioni personalizzabili sono:
-- Impaginazione dei risultati delle query, che possono essere divise per pagine o infinite scroll
-- Lingua dell'interfaccia: attualmente italiano e inglese
-- Selezione di quali maschere di visualizzazione/inserimento vuole usare per ciascuna tabella e per ciascun contesto, tra lettura e modifica/inserimento
-- Selezionare quali campi vuole visualizzare nell'anteprima dei risultati di una query 
+Allo stato attuale (v4.2.x), le opzioni personalizzabili sono:
+- libera scelta della lingua dell'interfaccia, attualmente (v. 4.2.x) sono pienemanete supportate l'italiano e l'inglese;
+- modo di impaginare i risultati di una interrogazione (query); attualmente sono disponibilela divisione in pagne (scelta predefinita) oppure il caricamento automatico allo scorrere dei risultati (infinite scroll);
+- selezione delle maschere di visualizzazione/inserimento da usare per ciascuna tabella e per ciascun contesto (lettura e/o modifica/inserimento);
+- selezionare dei campi da visualizzare nell'anteprima dei risultati di una interrogazione (query).
 
-## CRUD
-Accesso grafico a funzioni CRUD su ogni record di ogni tabella
-Possibilità di allegare file drag&drop
-Possibilità di inserire dati geografici come testo e via GUI webGIS
-Possibilità di modifiche multiple di più record
-Layout di stampa semplificato
-Possibilità di duplicare record (save as new) limitata ai campi della tabella principale e non anche dei dati delle tabelle figlie, 1-n (cd. plugin)
-Funzione trova/sostituisci a livello cella
-Bdus5: sarebbe comodo passare ad una modalità autosalva in fase di modifica
+## CRUD e gestione dati
+È possibile eseguire tutte le operazioni cosiddette CRUD, ovvero creazione, lettura, aggiornamento e cancellazione, su tutti i record di tutte le entità da interfacce grafiche. È anche possibile usare la funzione di duplicazione di record, per record particolarmnete complessi e ripetitivi, nonché modificare più record contemporanamente, sempre per inserimenti ripetitivi.
 
-## Ricerca
-Tutte le funzioni di ricerca sono ora basate sulla singola entità/tabella
-bdus5: sarebbe bello avere funzioni di ricerca full-text che cercano su tutte le entità in contemporanea 
-Possibilità di ricerca veloce: per stringa su tutti i campi di una tabella (LIKE)
-Possibilità di ricerca avanzata (campo - operatore - valore), con possibilità di concatenare n asserzioni legate da AND|OR
-Possibilità di ricerca per esperti SQL inserendo codice SQL, con possibilità anche di fare JOIN. Qui c'è un sistema rudimentale di protezione dei dati che vieta l'uso di asserzioni pericolose
-Possibilità di salvare delle ricerche/filtri, assegnare a ogni "segnalibro" un nome e condividerli con gli altri utenti
-Possibilità di esporre i segnalibri all'API
+Inoltre, c'è la possibilità di eseguire modifiche su gruppi di record (modifiche multiple), in caso sia necessario insere lo stesso valore in uno o più campi su un numero grande di record. Sempre per la gestione massiva dei dati, è possibile avviare una procedure di cerca e sostiuisci in maniera molto mirata,su un campo specifico di una entità, su tutto il database.
 
-## Esportazione dati
-È possibile esportare i dati relativi ad una entità (ma non delle tabelle 1-m ad essa collegate, plugin) o di un sottoinsieme (risultati di una ricerca) in:
-JSON
-XLS
-SQL (INSERT)
-CSV
-HTML
-XML
-
-## Interfaccia Geografica
-È disponibile una interfaccia geografica per la visualizzazione di dati geografici. Questi sono salvati in formato WKT in una tabella apposita che può essere collegata in n-1 con ogni altra tabella dati. 
-Le operazioni CRUD sono disponibili sia sotto forma testuale, che da interfaccia GIS integrata. 
-È stato scelto di lavorare con WKT invece che con le estensioni spaziale per mantenere basso il numero delle dipendenze. Attualmente bdus non richiede postgis o spatialite. 
-Possibilità di usare più mappe di base, ma la funzione è attualmente hard coded e non personalizzabile. 
-Possibilità di visualizzare altri temi in geojson, funzione non documentata e che richiede accesso al filesystem. Mai implementata da GUI perché poco richiesta. 
-Possibilità di bulk upload di dati geografici, via geojson, e collegati ai dati presenti 
-Bdus5: valutare se conviene affidare la gestione geografica ad estensioni spaziali o se mettere in piedi soluzioni ibride, con trigger che convertono il wkt in geometrie in altri campi ad ogni modifica. 
-Bdus5: sicuramente implementare la possibilità di caricare wms, wmts, e simili custom e layer vettoriali statici, tipo geojson, disponibili localmente o via http.
-
-## Harris Matrix
-Disponibile plugin di sistema, attivabile per n entità per la codifica e la visualizzazione dei rapporti stratigrafici. Prima si usava l'eseguibile di Graphiz, che doveva essere quindi presente nel sistema (dipendenza), ora si un un port dello stesso in JS, con d3.js
-Oltre alla costruzione del grafo, viene offerta come funziona la validazione della coerenza dei dati, impedendo di definire un rapporto più volte
-Costruzione di grafici quantitativi
-C'è la possibilità di costruire grafici a barre a partire da dati quantitativi contenuti nelle tabelle, ma il procedimento, pur essendoci un GUI apposita è piuttosto complesso. I grafici sono disponibili per la totalità dei record di una tabella oppure per un sottoinsieme (risultati di ricerca)
-Possibilità di salvare un dato grafico e quindi eseguirlo al volo, senza doverlo ricomporre nuovamente.
-Possibilità di condividere i grafici salvati con altri utenti
-
-
-
-## Internazionalizzazione
-Il sistema è disponibile in due lingue, italiano e inglese.
-c'è la possibilità di aggiungerne altre
-la traduzione si può fare attraverso interfaccia grafica
-in mancanza di una indicazione dell'utente, viene usata la lingua del browser/sistema
-
-## Gestione vocabolari
-Esiste una gestione centralizzata dei vocabolari, gestita attraverso un'unica tabella
-Un amministratore può aggiungere nuovi vocabolari, modificare le voci di vocabolari pre-esistenti, riordinarle e/o cancellarle
-Il sistema non esegue controlli sui dati al momento della modifica dei vocabolari.
-I vocabolari gestiscono stringhe: i campi che usano i vocabolari vengono valorizzati con le stringhe, non con le chiavi esterne
-Altre fonti di valori per campi indicizzati
-Esistono vari modi per creare tendine di suggerimenti per i campi indicizzati, che siano select, multiselect, tag, oppure select opzionali con possibilità di valori personalizzati, ecc.:
-uso di vocabolari
-recuperare valori unici da un determinato campo di una determinata tabella (può essere anche se stesso)
-id di un record di un'altra tabella (FK): nel db viene inserito l'id, ma viene visualizzato il campo della tabella di destinazione che viene definito come id_field, ovvero una specie di chiave primaria per l'utente, che può o meno coincidere con la vera chiave primaria
-
-## Sistema di messaggistica 
-È possibile inviare email di gruppo, a singoli utenti o a gruppi di utenti (per privilegio). Viene usata la funzione email di php e non è fornito un server SMPT.
-Bdus5: prevedere la possibilità di fornire una configurazione di server SMPT per l'invio della posta
+In fase di imissionedei dati, quando si trata di entità complesse chepresentano dati simili (es. la schedatura della ceramica), è possibile sfruttare la funzione della duplicazione del record.
 
 ## Tipologie di campi disponibili per i moduli di inserimento/modifica
-Le seguenti tipologia di campi sono disponibili
-text: input di una sola linea, semplice
-date: campo data. Viene usato il widget del sistema (HTML5) per l'inserimento; prima c'era un plugin jquery
-long_text: un textarea multilinea
-select: un menu a tendina, select, semplice
-combo_select: menu a tendina, con possibilità di aggiungere valori personalizzati
-multi_select: possibilità di inserire più di un valore da un menu a tendina, tipo tag. Nel db i valori vengono salvati come stringa, separati da punto-e-virgola
-boolean: menu a tendina con valori si/no o yes/no (ecc,, a seconda della lingua) e nel db viene inserito 0/1
+L'inserimento e modifica è facilitato da un ampio spettro di tipologie diverse di widget grafici per i singoli campi, facimente configurabli:
+- `text`: una casella di inserimento semplice, di una sola linea;
+- `long_text`: una casella di inserimento semplice, multilinea
+- `date`: campo data, che visualizza un calendario (viene usato il widget di sistema del browser)
+- `select`: un menu a tendina, semplice; i valori possono essere recuperati da un vocabolario oppure dai valori usati in qualsiasi campo di qualsiasi entità del database;
+- `combo_select`: menu a tendina, con possibilità di aggiungere valori personalizzati e non previsti inizialmente; i valori indicizzati seguono quanto detto per `select`;
+- `multi_select`: possibilità di inserire più di un valore da un menu a tendina, tipo tag; nel database i valori vengono salvati come stringa, separati da punto-e-virgola; i valori indicizzati seguono quanto detto per `select`;
+- `boolean`: menu a tendina con valori si/no; nel db viene inserito 0/1
+
+## Gestione vocabolari
+È disponibile un sistema di gestione centralizzata dei vocabolari. Un amministratore può aggiungere nuovi vocabolari, modificare le voci di vocabolari preesistenti, riordinarle e/o cancellarle.  
+Alla versione attuale (4.2.x) il sistema non esegue controlli sui dati già inseriti al momento della modifica delle singole voci di vocabolari.
 
 ## Validazione dei dati 
+È possibile, per ciascun campo, definire una politica di validazione dei dati in fase di inserimento e di modifica. Attualmente (v4.2.x) ipossibili controlli dui dati inseriti possono essere una o combinazioni delle seguenti voci:
+- `int`: il valore inserito deve essere un numero;
+- `email`: il valore inserito deve essere un indirizzo email formalmente valido (non viene controllato che effettivamente esista);
+- `no_dupl`: il valore inserito non deve essere già presente in questo campo, ovvero non devono esserci duplicati;
+- `not_empty`: il campo deve essere valorizzato e non può essere vuoto;
+- `range`: il valore (numerico) deve essere compreso in una scala numerica della quale vengono forniti gli estremi;
+- `regex`: il valore inseito deve rispettare una espressione regolare, che dovrà essere specificata;
+- `valid_wkt`: la stringa deve essere una coordinata [WKT](https://en.wikipedia.org/wiki/Well-known_text_representation_of_geometry) valida.
 
-È possibile, per ciascun campo, definire una politica di validazione dei dati in inserimento. Attualmente la validazione avviene nel client e solo parzialmente anche nel server
-int: numerico
-email: stringa email
-no_dupl: il valore inserito non deve essere già presente in questo campo: non devono esserci duplicati
-not_empty: il camp non può essere vuoto
-range: il valore deve essere compreso in un range numerico del quale vengono forniti gli estremi
-regex: viene fornita una espressione regolare per la validazione
-valid_wkt: la stringa deve essere una coordinata WKT valida. La validazione avviene attraverso una chiamata al server
+
+## Ricerca
+Il sistema implementa vari tipi di ricerca, tutte basate sulla singola entità: dalla semplice ricerca per una stringa alla possibilità di costruire interrogazioni SQL molto complesse da interfaccia grafica, senza la necessità di conoscere il linguaggio SQL. Attraveso menu a tendina popolati con i nomi dei campo da ricercare e sistemi dinamici di estrazione di valori unici nelle tabelle, è possibile costruire una o più asserzioni semplici e concatenarle usando gli operatori logici di `AND` od `OR`.
+
+Inoltre, per gli utenti esperti è disponibile la possibilità di scrivere frammenti di SQL e interrogare più entità in contemporanea, utilizzando  gli [JOIN di SQL](https://it.wikipedia.org/wiki/Join_(SQL)).
+
+La funzione di salvare le query, permette di creare una sorta di segnalibro per ricerche particolarmente complesse, caraterrizate da un nome e per le quali è disponibile la possibilità di condividere con altri utenti. Si tratta di una finzionalità particolarmente adatta per analisi piuttosto complesse e lunghe da comporre, che rende i risultati facilmente consultabili anche da parte di utenti poco esperti.
+
+## Esportazione dati
+È possibile esportare i dati relativi ad una entità di un suo sottoinsieme (ovvero i risultati di una ricerca) in vari formati, quali:
+- JSON
+- XLS
+- SQL (INSERT)
+- CSV
+- Tabella HTML
+- XML
+Le esportazioni sono salvate come file statici ed è possibile sia slvarle sulla propria machina locale, sia condividerle con altri utenti.
+Inoltre, è disponible la possibilita di creare record completi di record in sequenza, in lettura adatti per la stampa, su file PDF o verso dispositivi di stampa.
+
+## Interfaccia Geografica
+BraDypUS è completato da un'interfaccia geografica chiamata GeoFace, per la visualizzazione, analisi e modifica di dati geografici, collegati ai record. Le geometrie sono salvate in formato [WKT: Well Known Text](https://en.wikipedia.org/wiki/Well-known_text_representation_of_geometry) in una tabella apposita che può essere collegata in n-1 con ogni altra tabella dati. 
+Le operazioni CRUD sono disponibili sia sotto forma testuale, che da interfaccia grafica su base GIS integrata nel sistema. 
+
+È inoltre possibile di usare più mappe di base, anche sela funzione non è attualmente (v4.2.x) personalizzabile dagli utenti. Oltre alle geometrie e alle mappe di base, è possibile visualizzare altri temi in codificati in formato [GeoJSON](https://geojson.org/).
+
+Per semplificare il lavoro con data set strutturati esternamente, es. in QGIS,è possibile caricare massivamente dati geografici e collegarli in automatico ai record presenti.
+
+## Harris Matrix
+È disponibile un plugin di sistema, attivabile per più entità, per la codifica e la visualizzazione dei rapporti stratigrafici. Il plugin prevede un modulo di inserimento dei dati, che permette di inserire le relazioni una alla volta, effettuando un controllo di consistenza che impedisce di definire una relazione già definita. A livello del singolo record, è possibile  visualizzare sotto forma di semplice tabella tutti i rapporti già definiti: in alto i record più recenti, sullo stesso livello i contemporanei e in basso i più antichi. Al centro della tabella è il record corrente.
+È poi possibile costruire rappresentanzioni grafiche ben più complesse del matrix di Harris, dei grafi orientati, zoomabili, navigabili e interattivi (il click sul nodo apre la scheda del record relativo) per sottoinsieme o totali dei dati, attraverso la costruzione di qualsiasi tipo di ricerca.
+
+
+## Costruzione di grafici quantitativi
+C'è la possibilità di costruire grafici a barre a partire da dati quantitativi contenuti nelle varie entità. I grafici possono essere construiti per la totalità dei record di un'entità, oppure per un sottoinsieme, ovvero i risultati di una ricerca. Come se singole ricerche, anche i grafici possono essere salvati e condivisi facilmente con gli altri utenti. Come le matrici di Harris, anche i grafici sono entità dinamiche: una volta definiti, cambiaano con il variare dei dati.
+
+## Internazionalizzazione
+Il sistema è disponibile con un'interfaccia in due lingue, italiano e inglese. È possibile per un super-amministratore aggiunere altre traduzioni in maniera facile, da interfccia grafica, come, sempre da interfaccia grafica, è possibile aggiornare e manutenere le lingue attualmente disponibili. La lingua di utilizzo viene desunta dalla impostazione linguista del browser dell'utente, il quale però la può cambiare a piacimento, come configurazione personale.
+
+## Sistema di messaggistica 
+Il sistema permette ad un amministratore di inviare email a singoli utenti o a gruppi di utenti (per privilegio), per comunicaizoni interne.
 
 ## Uso offline (locale)
+Alla versione attuale (v4.2.x) BraDypUS è un pacchetto senza dipendenze esterne dipendenti da una connessione Internet. Questo significa che è possibile eseguire il software in una macchina o rete locale senza una connessione alla Rete. Questo lo rende particolarmente addatto all'uso nei cantieri archeologici, depositi o archivi dove la connessione non è sempre disponibile. In gerenrale, è possibile eseguire il software come programma a singolo utente, ma è anche possibile creare una rete locale e usarlo in gruppo.
+Per garantire l'integrità dei dati, è possibile “congelare“ la versione in cloud mentre è disponibile una versione locale. Il congelamento permette l'accesso in sola lettura ai dati, ma non lo loro modifica, da parte di tutti gli utenti attivi. Alla chiusura dei lavori sul campo è possibile sincronizzare la versione locale con quellla online e “scongelare” quest'ultima.zo
+
 
 ---
 
-## Bibliografia
+## Bibliografia 
+Bogdani, Julian. (2006) 2021. BraDypUS Relational Web Database Managing System for Cultural Heritage. Bologna, Rome. https://doi.org/10.5281/zenodo.1467905.
+‘BraDypUS Official Guide’. (2020) 2021. 2021. https://docs.bdus.cloud/.
+Bogdani, Julian, and Erika Vecchietti. 2010. ‘From “Text” to “Con-Text”: Using the Web in the Archaeological Research’. In Vesuviana. Archeologie a Confronto, Atti Del Convegno Internazionale (Bologna, 14-16 Gennaio 2008), 809–18. Bologna.
 
 
 ## Risorse online
