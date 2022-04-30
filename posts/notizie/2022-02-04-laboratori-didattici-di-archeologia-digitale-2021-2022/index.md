@@ -1,8 +1,8 @@
 ---
-title: "Aperte le iscrizioni ai laboratori didattici di Archeologia Digitale 2021-2022: GIS e Banche Dati"
+title: "Laboratori didattici di Archeologia Digitale 2021-2022: GIS e Banche Dati"
 img: ./lab-lad.png
 date: 2022-02-04
-sommario: "Sono state aperte le iscrizioni ai laboratori didattici di Archeologia digitale per l'anno accademico 2021-2022. Quest'anno sono disponibili tre moduli: GIS di Base, Banche dati web e GIS avanzato. A causa degli spazi a disposizione, il laboratorio prevede un numero limitato di partecipanti."
+sommario: "L'offerta formativa del LAD: laboratori didattici di GIS e Banche Dati per l'anno accademico 2021-2022. Iscrizione, partecipazione, calendario, programma...."
 ---
 
 Responsabile: **Julian Bogdani** ([julian.bogdani@uniroma1.it](mailto:julian.bogdani@uniroma1.it))
@@ -26,8 +26,8 @@ I laboratori si pongono l’obiettivo di fornire le basi teoriche e pratiche nec
   - 3 Maggio, ore 11:00-13:00; 15:00-17:00
   - 4 Maggio, ore 15:00-17:00
   - 5 Maggio, ore 11:00-13:00
-- Modulo **banche dati relazionali** (6 ore):
-  - 6 Maggio, ore 11:00-13:00; 15:00-17:00
+- Modulo **banche dati relazionali** (4 ore):
+  - 6 Maggio, ore 11:00-15:00
 - Modulo **GIS avanzato** (8 ore):
   - 9 Maggio, ore 11:00-13:00; 15:00-17:00
   - 10 Maggio, ore 15:00-17:00
