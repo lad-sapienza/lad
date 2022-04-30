@@ -1,7 +1,7 @@
 ---
 title: "Convegno “Landscape 3: una sintesi di elementi diacronici”, Bologna-Ravenna, 5-6 maggio 2022"
 img: ./landscape-3.jpg
-date: 2022-03-08
+date: 2022-04-30
 sommario: "“Landscape: una sintesi di elementi diacronici” è un’iniziativa nata da dottorandi in Topografia Antica e materie affini, in sinergia con la Consulta di Topografia Antica, con l’obiettivo di mettere in contatto i giovani ricercatori che lavorano su argomenti che riguardano il paesaggio, le città e l’ambiente nell’antichità, al fine di stimolare la circolazione e lo scambio di idee su queste tematiche"
 ---
 
@@ -19,4 +19,6 @@ Anche le scelte delle società antiche potevano talvolta essere determinate da c
 
 L'obiettivo finale del convegno di quest’anno sarà quello di riuscire a dare forma concreta a questa domanda attraverso le esperienze e i risultati delle ricerche che verranno proposti dai partecipanti.
 
-Maggiori dettagli sono disponibili nel sito web dell'iniziativa: [http://archeolandscape.it/](http://archeolandscape.it/).
+- [Scarica il programma in versione PDF](http://www.archeolandscape.it/images/Format%20A4_programma_Landscape3.pdf)
+- [Scarica il Book of abstracts in versione PDF](http://www.archeolandscape.it/images/LANDSCAPE%203_Abstract%20Book.pdf)
+- Maggiori dettagli sono disponibili nel sito web dell'iniziativa: [http://archeolandscape.it/](http://archeolandscape.it/).
