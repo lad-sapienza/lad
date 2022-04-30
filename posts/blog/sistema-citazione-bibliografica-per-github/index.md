@@ -50,7 +50,7 @@ Anche se non viene riportato nella documentazione ufficiale, CFF utilizza il for
 
 Per illustrare in maniera pratica e molto semplice un'implementazione di questa nuova funzionalità in GitHub si porta l'esempio della repository di Bradypus, il sistema di gestione di banche dati archeologiche sul Web, uno dei progetti principali del LAD.
 
-Nella repository principale è stato creato il file LICENSE.cff con il seguente contenuto:
+Nella repository principale è stato creato il file CITATION.cff con il seguente contenuto:
 
 ```yml
 cff-version: 1.2.0  

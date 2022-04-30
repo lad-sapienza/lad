@@ -1,8 +1,8 @@
 ---
-title: "Aperte le iscrizioni ai laboratori didattici di Archeologia Digitale 2021-2022: GIS e Banche Dati"
+title: "Laboratori didattici di Archeologia Digitale 2021-2022: GIS e Banche Dati"
 img: ./lab-lad.png
 date: 2022-02-04
-sommario: "Sono state aperte le iscrizioni ai laboratori didattici di Archeologia digitale per l'anno accademico 2021-2022. Quest'anno sono disponibili tre moduli: GIS di Base, Banche dati web e GIS avanzato. A causa degli spazi a disposizione, il laboratorio prevede un numero limitato di partecipanti."
+sommario: "L'offerta formativa del LAD: laboratori didattici di GIS e Banche Dati per l'anno accademico 2021-2022. Iscrizione, partecipazione, calendario, programma...."
 ---
 
 Responsabile: **Julian Bogdani** ([julian.bogdani@uniroma1.it](mailto:julian.bogdani@uniroma1.it))
@@ -13,7 +13,7 @@ Sono aperte le iscrizioni ai laboratori didattici di Archeologia Digitale, organ
 
 I laboratori si terranno in presenza, con la possibilità (da valutare) di una canale a distanza, presso Sapienza Università di Roma. Aula III, Edificio di Lettere e Filosofia, CU003, nei giorni di 2, 3, 4, 5, 6, 9, 10 Maggio 2022.
 
-[**Scarica la locandina con il programma completo in formato PDF**](./LAD-GIS-DB-2021-2022.pdf)
+[**Scarica la locandina con il programma completo in formato PDF**](../../didattica/laboratorio-gis-db/lab-gis-2021-2022.pdf)
 
 ## Descrizione
 
@@ -22,15 +22,24 @@ I laboratori si pongono l’obiettivo di fornire le basi teoriche e pratiche nec
 ## Calendario
 
 - Modulo **GIS base** (12 ore):
+<<<<<<< HEAD
   - 2 Maggio, ore 11.00-13.00/15.00-17-00
   - 3 Maggio, ore 11.00-13.00/15.00-17-00
   - 4 Maggio, ore 15.00-17-00
   - 5 Maggio, ore 11.00-13-00
 - Modulo **banche dati relazionali** (4 ore):
   - 6 Maggio, ore 11.00-15  **variazione d'orario**
+=======
+  - 2 Maggio, ore 11:00-13:00; 15:00-17:00
+  - 3 Maggio, ore 11:00-13:00; 15:00-17:00
+  - 4 Maggio, ore 15:00-17:00
+  - 5 Maggio, ore 11:00-13:00
+- Modulo **banche dati relazionali** (4 ore):
+  - 6 Maggio, ore 11:00-15:00
+>>>>>>> 59f717f6ebe0a7e39444f232b331853ee4aa2916
 - Modulo **GIS avanzato** (8 ore):
-  - 9 Maggio, ore 11.00-13.00/15.00-17-00
-  - 10 Maggio, ore 15.00-17-00
+  - 9 Maggio, ore 11:00-13:00; 15:00-17:00
+  - 10 Maggio, ore 15:00-17:00
 
 ## Iscrizione
 
@@ -44,6 +53,7 @@ Il laboratorio è rivolto a studenti interessati di qualsiasi livello (triennale
 
 I tre moduli della durata totale di 24 ore rilasciano un attestato di frequenza che può essere usato per l’ottenimento di 1 CFU da verbalizzare presso i referenti di ciascun corso di laurea. È possibile concordare ore di lavoro aggiuntive da svolgere autonomamento per il raggiungimento di ulteriori CFU.
 
+<<<<<<< HEAD
 Maggiori informazioni e locandina (con preghiera di diffusione): [clicca qui](./LAD-GIS-DB-2021-2022.pdf).
 
 ## Elenco delle comunicazioni
@@ -52,3 +62,6 @@ Maggiori informazioni e locandina (con preghiera di diffusione): [clicca qui](./
 - 17/03/2022 termine ultimo per la conferma di partecipazione ai laboratori
 - 17/03/2022 comunicazione variazione orario del Laboratorio di banche dati 
 - 28/04/2022 invio mail promemoria per la partecipazione al Laboratorio GIS base
+=======
+Maggiori informazioni e locandina (con preghiera di diffusione): [clicca qui](../../didattica/laboratorio-gis-db/lab-gis-2021-2022.pdf).
+>>>>>>> 59f717f6ebe0a7e39444f232b331853ee4aa2916
