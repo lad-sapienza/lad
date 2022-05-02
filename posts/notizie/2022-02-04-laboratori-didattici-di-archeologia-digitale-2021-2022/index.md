@@ -29,7 +29,7 @@ I laboratori si pongono l’obiettivo di fornire le basi teoriche e pratiche nec
   - 5 Maggio, ore 11.00-13:00
 - Modulo **banche dati relazionali** (4 ore):
   - 6 Maggio, ore 11.00-15:00 **variazione d'orario**
-- Modulo **GIS avanzato** (8 ore):
+- Modulo **GIS avanzato** (6 ore):
   - 9 Maggio, ore 11.00-13.00; 15.00-17:00
   - 10 Maggio, ore 15.00-17:00
 
