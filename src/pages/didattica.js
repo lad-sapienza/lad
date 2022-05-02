@@ -1,14 +1,14 @@
 //import
 import React from "react";
-import { Link, graphql, withPrefix } from "gatsby";
-import { GatsbyImage } from "gatsby-plugin-image";
-import styled from "styled-components";
+import { graphql, withPrefix } from "gatsby";
 //components
 import Layout from "../templates/Layout";
 //others
-import { Row, Col, Container } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 
 import Seo from "../components/Seo";
+import ItemPreview from "../components/ItemPreview";
+
 
 
 const Didattica = ({ data }) => {
@@ -31,47 +31,13 @@ const Didattica = ({ data }) => {
       
         {posts.map(({ node }, k) => {
           return (
-            <Wrapper key={k}>
-              <Row className="my-5 mx-md-5 py-5">
-                <Col xs={2}>
-                  {node.frontmatter.img &&
-                    node.frontmatter.img.childImageSharp &&
-                    node.frontmatter.img.childImageSharp.gatsbyImageData && (
-                      <Link to={node.fields.slug}>
-                        <GatsbyImage
-                          image={
-                            node.frontmatter.img.childImageSharp.gatsbyImageData
-                          }
-                          key={
-                            node.frontmatter.img.childImageSharp.gatsbyImageData
-                              .src
-                          }
-                          alt={node.frontmatter.title}
-                        />
-                      </Link>
-                    )}
-                </Col>
-
-                <Col xs={12} md={10}>
-                  <h2>
-                    <Link to={node.fields.slug}>{node.frontmatter.title}</Link>
-                  </h2>
-                  <p>{node.excerpt}</p>
-                </Col>
-              </Row>
-            </Wrapper>
+            <ItemPreview key={k} node={node} />
           );
         })}
       </Container>
     </Layout>
   );
 };
-
-const Wrapper = styled.section`
-img {
-  max-width: 100px!important;
-}`;
-
 
 export const query = graphql`
   {

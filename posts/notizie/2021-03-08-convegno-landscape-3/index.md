@@ -3,6 +3,7 @@ title: "Convegno “Landscape 3: una sintesi di elementi diacronici”, Bologna-
 img: ./landscape-3.jpg
 date: 2022-04-30
 sommario: "“Landscape: una sintesi di elementi diacronici” è un’iniziativa nata da dottorandi in Topografia Antica e materie affini, in sinergia con la Consulta di Topografia Antica, con l’obiettivo di mettere in contatto i giovani ricercatori che lavorano su argomenti che riguardano il paesaggio, le città e l’ambiente nell’antichità, al fine di stimolare la circolazione e lo scambio di idee su queste tematiche"
+pinned: true
 ---
 
 
