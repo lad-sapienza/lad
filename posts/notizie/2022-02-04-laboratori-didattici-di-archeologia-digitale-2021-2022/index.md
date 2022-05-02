@@ -1,8 +1,8 @@
 ---
-title: "Aperte le iscrizioni ai laboratori didattici di Archeologia Digitale 2021-2022: GIS e Banche Dati"
+title: "Laboratori didattici di Archeologia Digitale 2021-2022: GIS e Banche Dati"
 img: ./lab-lad.png
 date: 2022-04-30
-sommario: "L'offerta formativa del LAD: laboratori didattici di GIS e Banche Dati per l'anno accademico 2021-2022. Iscrizione, partecipazione, calendario, programma...."
+sommario: "L'offerta formativa del LAD: laboratori didattici di piattaforme GIS e Banche Dati per l'archeologia per l'anno accademico 2021-2022. Iscrizione, partecipazione, calendario, programma..."
 ---
 
 Responsabile: **Julian Bogdani** ([julian.bogdani@uniroma1.it](mailto:julian.bogdani@uniroma1.it))
@@ -13,7 +13,7 @@ Sono aperte le iscrizioni ai laboratori didattici di Archeologia Digitale, organ
 
 I laboratori si terranno in presenza, con la possibilità (da valutare) di una canale a distanza, presso Sapienza Università di Roma. Aula III, Edificio di Lettere e Filosofia, CU003, nei giorni di 2, 3, 4, 5, 6, 9, 10 Maggio 2022.
 
-[**Scarica la locandina con il programma completo in formato PDF**](./LAD-GIS-DB-2021-2022.pdf)
+[**Scarica la locandina con il programma completo in formato PDF**](../../didattica/laboratorio-gis-db/lab-gis-2021-2022.pdf)
 
 ## Descrizione
 
