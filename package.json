@@ -5,7 +5,7 @@
   "version": "0.1.0",
   "author": "Julian Bogdani <julian.bogdani@uniroma1.it>",
   "dependencies": {
-    "@deckdeckgo/highlight-code": "^4.2.0",
+    "@deckdeckgo/highlight-code": "^3.2.0",
     "@react-icons/all-files": "^4.1.0",
     "babel-plugin-styled-components": "^2.0.6",
     "bootstrap": "^5.1.3",
