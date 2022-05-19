@@ -5,6 +5,12 @@ sort: 10
 img: ./cuka_ajtoit.jpg
 ---
 
+## Novità
+La missione archeologica a Çuka e Ajtoit opera con il **riconoscimento ufficiale del Ministero degli Affari Esteri e della Cooperazione Internazionale**.
+
+![Ministero degli Affari Esteri e della Cooperazione Internazionale](./maeci.jpg)
+
+## Introduzione
 La Missione Archeologica della Sapienza a Çuka e Ajtoit (antica _Kestría_) in Albania meridionale prende vita nel 2021 grazie a una convenzione di ricerca tra il [Dipartimento SARAS della Sapienza Università di Roma](https://saras.uniroma1.it/) e l'Istituto Archeologico di Tirana, parte dell'Accademia degli Studi Albanologici d'Albania.
 
 La missione è finalizzata alla documentazione, scavo e studio storico-archeologico del centro ellenistico fortificato di _Kestría_, localizzato sulla collina di Çuka e Ajtoit, in Albania meridionale e del suo territorio.
