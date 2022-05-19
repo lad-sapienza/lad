@@ -1,5 +1,5 @@
 ---
-title: "La missione della Sapienza a Çuka e Ajtoit è stata riconosciuta dal MAECI"
+title: "La missione della Sapienza a Çuka e Ajtoit riconosciuta ufficialmente dal MAECI"
 img: ./caj-maeci.jpg
 date: 2022-05-12
 sommario: "La missione archeologica a Çuka e Ajtoit opererà nel 2022 con il riconoscimento ufficiale del Ministero degli Affari Esteri e della Cooperazione Internazionale."
