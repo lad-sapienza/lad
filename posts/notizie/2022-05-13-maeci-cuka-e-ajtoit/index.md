@@ -6,7 +6,7 @@ sommario: "La missione archeologica a Çuka e Ajtoit opererà nel 2022 con il ri
 ---
 
 
-La missione [archeologica a italo-albanese Çuka e Ajtoit, Konispoli, Albania](../ricerca/missione-archeologica-sapienza-a-cuka-e-ajtoit-albania/) della Sapienza Università di Roma opererà nel 2022 con il **riconoscimento ufficiale del Ministero degli Affari Esteri e della Cooperazione Internazionale**.
+La missione [archeologica a italo-albanese Çuka e Ajtoit, Konispoli, Albania](../../ricerca/missione-archeologica-sapienza-a-cuka-e-ajtoit-albania/) della Sapienza Università di Roma opererà nel 2022 con il **riconoscimento ufficiale del Ministero degli Affari Esteri e della Cooperazione Internazionale**.
 
 La concessione del **Riconoscimento Istituzionale** è stata deliberata dal Ministero degli Affari Esteri e della Cooperazione Internazionale, sentito il Gruppo di Lavoro Consultivo per la Promozione della Cultura e della Lingua italiana all’estero, sezione per le Missioni Archeologiche.
 
