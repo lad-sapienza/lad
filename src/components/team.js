@@ -27,7 +27,7 @@ const Team = () => {
       "name": "Domizia D'Erasmo",
       "image": "images/dderasmo.jpg",
       "position": "Tutor",
-      "affiliation": "Assegnista di ricerca di Metodologie della Ricerca Archeologica, Dip. SARAS",
+      "affiliation": "Assegnista di ricerca di Metodologie della Ricerca Archeologica, Dip. SARAS, Sapienza",
       "github": "https://github.com/ddomizia",
       "academia": "https://uniroma1.academia.edu/domiziaderasmo",
       "iris": "https://iris.uniroma1.it/simple-search?query=Domizia+D%27Erasmo&needescape=1",
@@ -41,6 +41,16 @@ const Team = () => {
       "affiliation": "Assegnista di ricerca presso il centro di ricerca DigiLab Sapienza",
       "academia": "https://uniroma1.academia.edu/RosatiPaolo",
       "researchgate": "https://www.researchgate.net/profile/Paolo-Rosati-2"
+    },
+    {
+      "name": "Eleonora Iacopini",
+      "image": "images/eiacopini.jpg",
+      "position": "Tutor",
+      "affiliation": "Assegnista di ricerca di Metodologie di Ricerca Archeologica, Dip. SARAS, Sapienza",
+      "iris": "https://iris.uniroma1.it/simple-search?query=iacopini+eleonora&needescape=1",
+      "academia": "https://uniroma1.academia.edu/EleonoraIacopini",
+      "researchgate": "https://www.researchgate.net/profile/Eleonora_Iacopini",
+      "github": "https://github.com/eiacopini"
     },
   ];
 
