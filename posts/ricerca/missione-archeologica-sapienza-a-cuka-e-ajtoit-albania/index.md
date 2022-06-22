@@ -51,6 +51,17 @@ La diacronia è un'altra caratteristica importante di questo centro. Gli scavi p
 
 Per quanto riguarda gli aspetti urbanistici e architettonici, lo studio della edilizia residenziale privata e non acquista un'importanza di primo piano in questo sito, grazie alla presenza di decine di unità residenziali, sia dentro la cinta delle fortificazioni, che al suo esterno, nella “città bassa”, come lo chiama S. Islami o “il Palazzo”, come viene chiamato dagli abitanti della zona. Le soluzioni planimetriche sono per lo più molto semplici, almeno per quanto riguarda le abitazioni dell'“acropoli” (sempre usando la terminologia di S. Islami), dove la mancanza di spazio utile e il terreno fortemente accidentato limitano moltissimo lo spazio utile alla costruzione. Diversa è la situazione presso “il Palazzo”, delle cui strutture piuttosto monumentali (una porta in opera poligonale, con copertura a finto arco è stata trasportata e rimontata nel cortile del Museo Nazionale di Tirana) ancora non disponiamo di una interpretazione certa.
 
+## Supporto
+
+La Missione Archeologica della Sapienza a Çuka e Ajtoit ringrazia per il suo continuo e fondamentale supporto **Past & Present Journeys**, Tirana.
+
+![Past & Present Journeys](./pastandpresent.png)
+- Sito web: [https://pastandpresent.al/](https://pastandpresent.al/)
+- Facebook: [http://www.facebook.com/pages/PastandPresent-Travel-Company/106348866175295](http://www.facebook.com/pages/PastandPresent-Travel-Company/106348866175295)
+- Twitter: [@PastPresentTrav](https://twitter.com/PastPresentTrav)
+
+***
+
 ## Bibliografia
 
 - Baçe, A. dhe V. Bushati. 1989. “Vështrim mbi banesën prehistorike dhe qytetare në Iliri dhe Epir.” Monumentet, 1, 5-48 (20 segg.)
