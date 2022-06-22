@@ -55,7 +55,7 @@ Per quanto riguarda gli aspetti urbanistici e architettonici, lo studio della ed
 
 La Missione Archeologica della Sapienza a Çuka e Ajtoit ringrazia per il suo continuo e fondamentale supporto **Past & Present Journeys**, Tirana.
 
-![Past & Present Journeys](./pastandpresent.png)
+[![Past & Present Journeys](./pastandpresent.png)](https://pastandpresent.al/)
 - Sito web: [https://pastandpresent.al/](https://pastandpresent.al/)
 - Facebook: [http://www.facebook.com/pages/PastandPresent-Travel-Company/106348866175295](http://www.facebook.com/pages/PastandPresent-Travel-Company/106348866175295)
 - Twitter: [@PastPresentTrav](https://twitter.com/PastPresentTrav)
