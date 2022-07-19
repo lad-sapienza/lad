@@ -3,17 +3,14 @@ title: Missione Archeologica della Sapienza a Çuka e Ajtoit (Albania)
 autore: Julian Bogdani
 sort: 10
 img: ./cuka_ajtoit.jpg
+sommario: La Missione Archeologica della Sapienza a Çuka e Ajtoit (Albania) è un progetto congiunto in collaborazione con l'Istituto Archeologico Albanese di Tirana e l'Accademia degli Studi Albanologici e opera sul terreno con il riconoscimento ufficiale del Ministero degli Affari Esteri e della Cooperazione Internazionale della Repubblica Italiana. Opera sul terreno da 2021 ed è diretta da Julian Bogdani (Sapienza, Roma) e Albana Meta (IA, Tirana).
 ---
 
-## Novità
-La missione archeologica a Çuka e Ajtoit opera con il **riconoscimento ufficiale del Ministero degli Affari Esteri e della Cooperazione Internazionale**.
-
-![Ministero degli Affari Esteri e della Cooperazione Internazionale](./maeci.jpg)
 
 ## Introduzione
-La Missione Archeologica della Sapienza a Çuka e Ajtoit (antica _Kestría_) in Albania meridionale prende vita nel 2021 grazie a una convenzione di ricerca tra il [Dipartimento SARAS della Sapienza Università di Roma](https://saras.uniroma1.it/) e l'Istituto Archeologico di Tirana, parte dell'Accademia degli Studi Albanologici d'Albania.
+La Missione Archeologica della Sapienza a Çuka e Ajtoit (antica _Kestría_) in Albania meridionale prende vita nel 2021 grazie a una convenzione di ricerca tra il [Dipartimento SARAS della Sapienza Università di Roma](https://saras.uniroma1.it/) e l'Istituto Archeologico di Tirana, parte dell'Accademia degli Studi Albanologici d'Albania. La missione, diretta da Julian Bogdani (Sapienza, Roma) e Albana Meta (IA, Tirana), opera con il riconoscimento ufficiale del Ministero degli Affari Esteri e della Cooperazione Internazionale.
 
-La missione è finalizzata alla documentazione, scavo e studio storico-archeologico del centro ellenistico fortificato di _Kestría_, localizzato sulla collina di Çuka e Ajtoit, in Albania meridionale e del suo territorio.
+Il progetto è finalizzato alla documentazione, scavo e studio storico-archeologico del centro ellenistico fortificato di _Kestría_, localizzato sulla collina di Çuka e Ajtoit, in Albania meridionale e del suo territorio.
 
 ## Introduzione
 
@@ -59,6 +56,20 @@ La Missione Archeologica della Sapienza a Çuka e Ajtoit ringrazia per il suo co
 - Sito web: [https://pastandpresent.al/](https://pastandpresent.al/)
 - Facebook: [http://www.facebook.com/pages/PastandPresent-Travel-Company/106348866175295](http://www.facebook.com/pages/PastandPresent-Travel-Company/106348866175295)
 - Twitter: [@PastPresentTrav](https://twitter.com/PastPresentTrav)
+
+***
+<img src="../../logos/lad-blue.png" style="max-width:300px"><br>  
+Laboratorio di Archeologia Digitale alla Sapienza
+
+![Sapienza Università di Roma](../../logos/sapienza.png)  
+Sapienza Università di Roma
+
+![Ministero degli Affari Esteri e della Cooperazione Internazionale](./maeci.jpg)  
+Con il riconoscimento ufficiale del Ministero degli Affari Esteri e della Cooperazione Internazionale.
+
+[![Past & Present Journeys](./pastandpresent.png)](https://pastandpresent.al/)  
+Con il supporto di [Past & Present Journeys](https://pastandpresent.al/), Tirana, Albania
+
 
 ***
 

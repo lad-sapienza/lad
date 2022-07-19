@@ -56,6 +56,7 @@ export const query = graphql`
           frontmatter {
             title
             sort
+            sommario
             img {
               base
               childImageSharp {
