@@ -6,6 +6,45 @@ img: ./cuka_ajtoit.jpg
 sommario: La Missione Archeologica della Sapienza a Çuka e Ajtoit (Albania) è un progetto congiunto in collaborazione con l'Istituto Archeologico Albanese di Tirana e l'Accademia degli Studi Albanologici e opera sul terreno con il riconoscimento ufficiale del Ministero degli Affari Esteri e della Cooperazione Internazionale della Repubblica Italiana. Opera sul terreno da 2021 ed è diretta da Julian Bogdani (Sapienza, Roma) e Albana Meta (IA, Tirana).
 ---
 
+## Novità: conclusa la campagna 2022
+Il 18 luglio 2022 si è chiusa la seconda campagna di ricerche archeologiche sul campo presso il sito di Çuka e Ajtoit (Albania), che ha visto la partecipazione di ricercatori italiani della Sapienza Università di Roma e dell'Istituto di Archeologia di Tirana. Quest'anno si è attivata anche una proficua collaborazione con l'Università di Tirana che ha reso possibile la partacipazione alle indagini di studenti di questo Ateneo.
+
+La campagna si è svolta tra 22 giugno e il 18 luglio 2022 e ha avuto diversi obiettivi, tra i quali i principali sono stati il completamento del rilievo della collina e dei resti archeologici, utilizzando riprese fotografiche da drone ed eleborazione fotogrammetriche. Inoltre, la campagna 2022, ha visto l'affiancamento di rilievi a terra tramite GNSS in modalità RTK, reso possibile dalla collaborazione della Missione con la ditta Rilievi srl per la strumentazione GNSS e con il programma ALBCORS del Geoportale Nazionale Albanese (ASIG). Questo ha reso possibile il georiferimento con alta precisione (ca. 2cm) di tutti i rilievi eseguiti.
+
+Inoltre, si è proceduto alla verifica e schedatura archeologica dei resti archeologici identificati dai rilievi della campagna precedente (2021). Attraverso un paziente lavoro di identificazione, schedatura, documentazione fotografica e analisi sono stati documentati grande parte dei settori della città, un lavoro reso particolarmente difficoltoso dalla natura accidentata e in forte pendenza del terreno. Questa importantissima verifica ha portato da un lato all'esclusione dal quadro di interesse archeologico di alcune tracce individuate dalla fotorafia aerea, da attribuire alla naturale conformazione del terreno, dall'altra alla conferma della stragrande maggioranza degli altri rilievi e all'identificazione di altre strutture e complessi la cui identificazione dall'alto era resa difficile o impossibile per diversi fattori. Si dispone, a questo punto, di una base archeologica molto solida per la ricostruzione della planimetrie del centro antico, comprendente non solo le fortificazioni ma anche le numerose abitazione e altri terrazzi edificati che sono stati individuati.
+
+Sono stati inoltre eseguiti due saggi stratigrafici, uno nel cosiddetto “Palazzo”, la struttura a mezza costa e fuori dalle mura che si trova lungo le pendici ovest della collina, dove è stato possibile individuare e documentare stratigraficamente alcuni depositi stratigrafici sigillati, molto utili per la datazione delle strutture poligonali del “Palazzo”.
+
+Il secondo saggio è stato eseguito presso una delle struttre del cd. villaggio ottomano, su un pianoro rialzato ai piedi delle pendici nordorientali della collina, individuato nella precedente campagna. Anche in questo caso il sondaggio aveva il fine di verificare la consistenza e bontà dei depositi archeologici e fornire qualche indicazione funzionale e cronologica delle strutture. 
+
+Il lavoro di questa campagna si prolungherà nei prossimi mesi con lo studio del materiale archeologico, principalmente ceramico, ora conservato presso i depositi dell'Istituto Archeologico albanese di Saranda. Il materiale è stato raccolto nelle stratigrafie dei saggi, ma anche in superficie, con raccolte a campione in aree diverse della città, al fine di offrire un panorama quanto più completo delle diverse fasi di vita del centro antico. Lo studio è ancora in una fase molto preliminare, ma qualche primo risultato riguarda il rinvenimento di frammenti ceramici ad impasto, probabilmente risalente all'età del Bronzo finale, in più aree della collina, a testimoniare una presenza probabilmente insediativa e non solo sporadica in questo periodo. Fondamentale in questa direzione è stata la partecipazione alla prima parte della missione del prof. Alessandro Vanzetti della Sapienza. Inoltre, sembrano confermate le ipotesi cronologiche circa il villaggio ottomano, avanzate inizialmente unicamente su basi topografiche. Il materiale raccolto in superficie e quello proveniente dal saggio sembrano confermare una datazione delle strutture a partire almeno dal 1600 con continuità fino alle soglie del 1900. Anche in questo caso lo studio approfondito del materiale archeologico porterà nel futuro un contributo importante alla comprensione di questa parte del sito antico.
+
+Un ringraziamento particolare va infine a Halil Shabani, archeologo locale ora in pensione che ha dato un contributo importante per la conoscenza e documentazione della ricca area di Konispoli. Con lui abbiamo effettuato dei sopralluoghi nel territorio utili alla conoscenza di siti segnalati ma poco noti nella bibliografia in lingua albanese e del tutto ignoti in quella internazionele. Inoltre è stato possibile verificare positivamente alcune segnalazioni locali di altri siti archeologici, del tutto sconosciuti, come la strada terrazzata e basolata nei pressi della collina di Çuka e Ajtoit.
+
+Oltre che da colleghi e amici, i lavori della Missione sono stati visitati e segnalati anche dai media albanesi, nazionali e locali, i quali hanno prodotto servizi e documentari, come quello della rete nazionale Top Channel (disponibile all'indirizzo [https://youtu.be/5kCHIahg4CA](https://youtu.be/5kCHIahg4CA)) e il servizio di Report TV, ripreso da [SarandaWeb](https://sarandaweb.net/ekspedita-arkeologjike-shqiptaro-italiane-germime-ne-qytetin-antik-kestria/) e da [Shqiptarja.com](https://shqiptarja.com/lajm/report-tv-ne-cuke-te-sarandes-arkeologu-italian-rrefen-kestrian-kerkime-ne-pallatin-helenistik-zbuluam-shtepine-mesjetare).
+
+**Partecipanti**
+
+Direzione missione:
+- Julian Bogdani (Sapienza, Roma, Italia)
+- Albana Meta (Istituto di Archeologia, Tirana, Albania)
+
+Senior:
+- Domizia D'Erasmo (Sapienza, Roma, Italia)
+- Nomei Giovino (Sapienza, Roma, Italia)
+- Paolo Rosati (Sapienza, Roma, Italia)
+
+BA, MA:
+- Halil Braho (Università di Tirana, Albania)
+- Dea Hate (Università di Tirana, Albania)
+- Klea Mufali (Università di Tirana, Albania)
+
+Ospiti
+- Alessandro Vanzetti  (Sapienza, Roma, Italia)
+- Halil Shabani (Archeologo e storico, Saranda, Albania)
+- Giuseppe Valentini (MA, Sapienza, Roma, Italia)
+
+***
 
 ## Introduzione
 La Missione Archeologica della Sapienza a Çuka e Ajtoit (antica _Kestría_) in Albania meridionale prende vita nel 2021 grazie a una convenzione di ricerca tra il [Dipartimento SARAS della Sapienza Università di Roma](https://saras.uniroma1.it/) e l'Istituto Archeologico di Tirana, parte dell'Accademia degli Studi Albanologici d'Albania. La missione, diretta da Julian Bogdani (Sapienza, Roma) e Albana Meta (IA, Tirana), opera con il riconoscimento ufficiale del Ministero degli Affari Esteri e della Cooperazione Internazionale.
@@ -50,25 +89,55 @@ Per quanto riguarda gli aspetti urbanistici e architettonici, lo studio della ed
 
 ## Supporto
 
+Le attività della Missione Archeologica della Sapienza a Çuka e Ajtoit sono state rese possibili anche grazie ad una proficua collaborazione con enti istituzionali e imprese italiiane e albanesi, alle quali va tutta la nostra gratitudine per il continuo supporto.
+
+***
+
 La Missione Archeologica della Sapienza a Çuka e Ajtoit ringrazia per il suo continuo e fondamentale supporto **Past & Present Journeys**, Tirana.
 
-[![Past & Present Journeys](./pastandpresent.png)](https://pastandpresent.al/)
+[![Past & Present Journeys](./pastandpresent.png)](https://pastandpresent.al/)  
 - Sito web: [https://pastandpresent.al/](https://pastandpresent.al/)
 - Facebook: [http://www.facebook.com/pages/PastandPresent-Travel-Company/106348866175295](http://www.facebook.com/pages/PastandPresent-Travel-Company/106348866175295)
 - Twitter: [@PastPresentTrav](https://twitter.com/PastPresentTrav)
 
 ***
-<img src="../../logos/lad-blue.png" style="max-width:300px"><br>  
+
+Si ringrazia Rilievi srl per la strumentazione GNSS e per il continuo supporto con strumentazione di rilievo e consigli  
+[![Rilievi srl](../../logos/rilievi.jpg)](https://rilievi.srl/)
+
+***
+
+Infine, si ringrazia il programma ALBCORS del [Geoportale Nazionale Albanese (ASIG)](https://asig.gov.al) per il servizio RTK e per il supporto sul campo al rilievo topografico con strumentazione GNSS.
+
+
+***
+
+## Enti istituzionali 
+
+<div class="row text-center">
+<div class="col-sm-3">
+<img src="../../logos/lad-blue.png" style="max-width: 100%" class="img-fluid"><br>
 Laboratorio di Archeologia Digitale alla Sapienza
-
-![Sapienza Università di Roma](../../logos/sapienza.png)  
+</div>
+<div class="col-sm-3">
+<img src="../../logos/sapienza.png" style="max-width: 100%" class="img-fluid"><br>
 Sapienza Università di Roma
-
-![Ministero degli Affari Esteri e della Cooperazione Internazionale](./maeci.jpg)  
+</div>
+<div class="col-sm-3">
+<img src="../../logos/iat.png" style="max-width: 100%" class="img-fluid"><br>
+Instituti i Arkeologjisë Tiranë (Albania)
+</div>
+<div class="col-sm-3">
+<img src="../../logos/asa.jpg" style="max-width: 100%" class="img-fluid"><br>
+Academia e Studimeve Arkeologjike, Tiranë (Albania)
+</div>
+</div>
+<div class="row text-center">
+<div class="col-sm-6 offset-sm-3">
+<img src="../../logos/maeci.jpg" style="max-width: 100%" class="img-fluid"><br>
 Con il riconoscimento ufficiale del Ministero degli Affari Esteri e della Cooperazione Internazionale.
-
-[![Past & Present Journeys](./pastandpresent.png)](https://pastandpresent.al/)  
-Con il supporto di [Past & Present Journeys](https://pastandpresent.al/), Tirana, Albania
+</div>
+</div>
 
 
 ***
