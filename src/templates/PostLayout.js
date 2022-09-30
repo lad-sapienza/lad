@@ -109,7 +109,7 @@ const Wrapper = styled.section`
     margin-top: 3rem;
   }
   .post-content img {
-    max-width: 400px;
+    max-width: 100%;
     margin-top: 2rem;
     margin-bottom: 2rem;
   }
