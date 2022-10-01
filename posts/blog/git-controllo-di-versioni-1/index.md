@@ -76,7 +76,7 @@ E avremo come risposta qualcosa di simile:
 Initialized empty Git repository in /qualche/percorso/diario-di-scavo/.git/
 ```
 
-Abbiamo avviato la nostra prima repository Git, adesso aggiungiam qualche file. Per questa guida useremo dei file di testo scritti in [Markdown](https://daringfireball.net/projects/markdown/) un linguaggio di marcatura estremamente semmplice da scrivere e leggere.
+Abbiamo avviato la nostra prima repository Git, adesso aggiungiam qualche file. Per questa guida useremo dei file di testo scritti in [Markdown](https://daringfireball.net/projects/markdown/) un linguaggio di marcatura estremamente semplice da scrivere e leggere.
 
 Creiamo dentro la cartella un nuovo file chiamato `index.md`*
 ```bash
@@ -95,7 +95,7 @@ Questo repository contiene il diario di scavo diviso per settori e in ordine cro
 ```
 Poi salviamo e chiudiamo il file premendo `ctr+x` e rispondendo `y` alla domanda se vogliamo salvare o meno, poi invio, confermando il nome del file.
 
-Abbiamo aggiunto un nuovo file, ma Git ancora non ha salvato nel proprio database queste modifiche. Git non traccia le modifiche in maniera automatica e dobbiamo essre sempre noi, in maniera esplicita, ad addiungere ciascuna modifica alla sua storia delle modifiche.
+Abbiamo aggiunto un nuovo file, ma Git ancora non ha salvato nel proprio database queste modifiche. Git non traccia le modifiche in maniera automatica e dobbiamo essere sempre noi, in maniera esplicita, ad addiungere ciascuna modifica alla sua storia delle modifiche.
 
 In ogni momento è possibile controllare lo stato del nostro repository con `git status`, anche in questa fase iniziale quando ancora non stiamo tracciando alcun file:
 
@@ -112,7 +112,7 @@ Untracked files:
 nothing added to commit but untracked files present (use "git add" to track)
 ```
 
-Il _report_ ci informa che ci troviamo sul ramo master (`On branch master`). Anche se non abbiamo fornito alcuna informazione su come si intendeva organizzare il _repository_, Git crea per noi un `branch` iniziale e principale che chiama `master`.  
+Il _report_ ci informa che ci troviamo sul ramo master (`On branch master`). Anche se non abbiamo fornito alcuna informazione su come si intendeva organizzare il _repository_, Git crea per noi un `branch` iniziale che chiama `master`.  
 Inoltre il report ci informa che non ci sono ancora `commit` disponibili (`No commits yet`).  
 Successivamente ci fornisce una lista dei file presenti nella cartella che non sono ancora stati segnalati a Git per il traccamento, in questo caso si tratta del file `index.md`.  
 Il commando ci fornisce, infine, anche qualche suggerimento per come proseguire a tracciare i file.
@@ -123,7 +123,7 @@ Questa azione si articola in due passaggi: aggiungere ciascuno dei file modifica
 git add index.md
 ```
 
-`add` aggiunge un file all'istantanea, indice o `stage`. Possono essere elencati di seguito al commando singolarmente i singoli file (come abbiamo fatto per `index.md`) oppure può essere usato il carattere `*` per intendere tutti i file modificati.
+`git add` aggiunge un file all'istantanea, indice o `stage`. Possono essere elencati di seguito al commando singolarmente i singoli file (come abbiamo fatto per `index.md`) oppure può essere usato il carattere `*` per intendere tutti i file modificati.
 
 Se invece si vuole togliere un file specifico dallo `stage` allora è disponibile il commando `git reset -- <nome file>`. A **scopo puramente esemplificativo**, il commando per togliere index.md dallo `stage` sarebbe (per ora non lo dobbiamo eseguire):
 
@@ -149,3 +149,5 @@ Nello specifico `c5bea7e` sono i primi 7 caratteri dello `hash` o impronta del `
 Il report prosegue dicendoci chè e stato mofificato 1 solo file (`1 file changed`) e nello specifico sono state inserite 3 nuove righe (`3 insertions(+)`).
 
 Ogni volta che si introduce qualche nuova modifica dei file sottoposti al versionamento, sarà possibile aggiungere queste modifiche allo storico generale con i commandi `git add <nome file>` e `git commit -m "Messagio di commit>`.
+
+Complimenti, avete percorso i vostri primi passi nel mondo di `git` e della collaborazione.
