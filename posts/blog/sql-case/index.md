@@ -173,7 +173,7 @@ Lo stesso discorso vale per la seconda colonna, definita come: `SUM(CASE WHEN ri
 
 Abbiamo parlato sopra di _conteggio_ di valori, per ogni riga perché in questa query stiamo **raggruppando** valori, e nello specifico li stiamo raggruppando per il campo `fase`, com'è chiara dall'ultima parte della query principale `GROUP BY fase`, che aggiunge un principio di aggregazione ([segui questo collegamento per avere più informazioni su `GROUP BY`](https://www.w3schools.com/sql/sql_groupby.asp)).
 
-Con `CASE` si possono usare tutti gli operatori SQL (es. `=`, `<`, `>`, `<=`, `>=`, `LIKE`, ecc.) ed è possibile concatenare più condizioni usando i soliti `AND` o `OR`. La cosa impotante che l'espressione tra `WHEN` e `THEN` restitusca un valore booleando di `VERO` o `FALSO`. Il nostro caso era semplice, ma è possibile anche prevedere più asserzione `WHEN...THEN`.
+Con `CASE` si possono usare tutti gli operatori SQL (es. `=`, `<`, `>`, `<=`, `>=`, `LIKE`, ecc.) ed è possibile concatenare più condizioni usando i soliti `AND` o `OR`. La cosa importante è che l'espressione tra `WHEN` e `THEN` restitusca sempre un valore booleando di `VERO` o `FALSO`. Il caso esposto sopra era piuttosto semplice, ma è possibile prevedere anche più asserzioni `WHEN...THEN`.
 
 ## Riferimenti
 - SQL Tutorial: [https://www.sqltutorial.org/sql-case/](https://www.sqltutorial.org/sql-case/)
