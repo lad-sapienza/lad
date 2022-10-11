@@ -27,12 +27,12 @@ const Team = () => {
       "name": "Domizia D'Erasmo",
       "image": "images/dderasmo.jpg",
       "position": "Tutor",
-      "affiliation": "Assegnista di ricerca di Metodologie della Ricerca Archeologica, Dip. SARAS, Sapienza",
+      "affiliation": "PhD student in Archeologia, Dip. Scienze dell'Antichità, Sapienza",
       "github": "https://github.com/ddomizia",
       "academia": "https://uniroma1.academia.edu/domiziaderasmo",
       "iris": "https://iris.uniroma1.it/simple-search?query=Domizia+D%27Erasmo&needescape=1",
       "researchgate": "https://www.researchgate.net/profile/Domizia_Derasmo",
-      "twitter": "https://twitter.com/DomiziaDErasmo"
+      "twitter": "https://twitter.com/domizzzia"
     },
     {
       "name": "Paolo Rosati",
