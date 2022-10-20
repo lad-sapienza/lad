@@ -1,5 +1,5 @@
 ---
-title: "Guida all'installazione di Geonode su server linux"
+title: "Guida all'installazione di GeoNode su server linux"
 autore: Eleonora Iacopini
 licenza: CC BY 4.0 International
 livello: avanzato
@@ -9,9 +9,19 @@ date: 2022-10-18
 sommario: "Git è oggi il software più famoso e usato per il controllo delle versioni, usato nella stragrande maggioranaza dei progetti di sviluppo software, ma può tornare estremamente utile in tanti scenari diversi che non hanno a che fare propriamente con lo sviluppo."
 ---
 
-## Geonode
+## Introduzione
 
-Nel presente articolo vedremo come installare l’ultima versione di Geonode disponibile nel repository [github](https://github.com/GeoNode/geonode/) su un server con sistema operativo [Ubuntu 20.4](https://www.ubuntu-it.org) attraverso [Docker](https://www.docker.com/). 
+Questo articolo è il secondo di una serie di contributi dedicati alle metodologie e software per la pubblicazione online dei dati archeologici geografici. Si rimanda, pertanto, all'articolo specifico per un'introduzione sugli [software open source per la condivisione di dati geografici online](../softwater-os-condivisione-dati-geografici-online).
+
+Nel presente articolo si affronterà in maniera molto pratica e concreta il processo di installazione della più recente versione di [GeoNode](https://geonode.org/), il cui codice sorgente è disponibile nel relativo repository di [GitHub](https://github.com/GeoNode/geonode/). Al momento in cui pubblichiamo questo contributo (ottobre 2022) la versione dispnibile più recente di GeoNode è la **4.0.0**.
+
+Come ben noto, è possibile installare GeoNode su diversi sistemi operativi e piattaforme e presenza dei requisiti minimi dell'amiente di produzione piuttosto importanti, ovvero un'a 'architettura a **64-bit**, **16GB di RAM**, un processore **2.2GHz** con **4 core**, un minimo di **30GB** di spazio disco per il solo software.
+
+In questa guida si descriverà l'installazione su un sistema operativo [Linux](https://it.wikipedia.org/wiki/Linux) della famiglia [Debian](https://www.debian.org/index.it.html), nello specifico [Ubuntu 20.4](https://www.ubuntu-it.org). Questa scelta è dettata dalla grandissima diffusione oggi dei sistemi operativi Debian/Ubuntu nel settore server, per qui è molto facile che, se si acquista un servizio [VPS](https://it.wikipedia.org/wiki/Virtual_private_server), ci si trovi davanti a questi sistemi operativi.
+
+Infine, esistono vari modi di installare GeoNode e in questa guids si seguirà quello che prevede l'utilizzo di [Docker](https://www.docker.com/), raccomndato anche nella [guida ufficiale](https://github.com/GeoNode/geonode/#install). Docker è una piattaforma software che permette di creare, testare e distribuire applicazioni con la massima rapidità, in quanto raccoglie il software in unità standardizzate chiamate _**container**_ che offrono tutto il necessario per la loro corretta esecuzione, incluse librerie, strumenti di sistema, codice e _runtime_. Con Docker, è possibile distribuire e ricalibrare le risorse per un'applicazione in qualsiasi ambiente, tenendo sempre sotto controllo il codice eseguito. In altre parole, con Docker è possibile creare ambienti di esecuzione del tutto simili o identici su piattaforme (hardware e sistema operativo) anche molto diversi tra loro.
+
+## Requisiti
 Per fare questo è necessario avere familiarità con i comandi da console del server su cui stiamo operando. Partendo dal presupposto di avere una nuova installazione di Ubuntu 20.4 su un vostro computer o su uno spazio cloud a pagamento come [Hetzner](https://www.hetzner.com), dovremmo accedere al server tramite la console di comando inserendo la propria username e password.
 
 1.	Il primo step che dobbiamo compiere è quello di installare il repository [Ubuntugis](https://wiki.ubuntu.com/UbuntuGIS), il quale consente di dotare il server di tutti i pacchetti necessari per poter lavorare con i dati geografici.
@@ -57,7 +67,7 @@ sudo apt install -y sqlite3 spatialite-bin libsqlite3-mod-spatialite
 ```
 
 
-4.	Come accennato all’inizio del tutorial per installare Geonode sulla nostra macchina andremo ad utilizzare Docker. Docker è un sistema che consente di raccoglie un software in un container, nel quale è contenuto tutto ciò che serve per eseguire l’applicazione (librerie, strumenti di sistema, codice di programmazione etc..). Oltre a questo metodo di installazione ce ne sono anche altri, come indicato nella guida al seguente [link](https://docs.geonode.org/en/master/install/advanced/core/index.html).
+4.	Come accennato all’inizio del tutorial per installare GeoNode sulla nostra macchina andremo ad utilizzare Docker. Docker è un sistema che consente di raccoglie un software in un container, nel quale è contenuto tutto ciò che serve per eseguire l’applicazione (librerie, strumenti di sistema, codice di programmazione etc..). Oltre a questo metodo di installazione ce ne sono anche altri, come indicato nella guida al seguente [link](https://docs.geonode.org/en/master/install/advanced/core/index.html).
 
 Per prima cosa installiamo i pacchetti necessari per l’utilizzo di Docker.
 
@@ -112,7 +122,7 @@ sudo usermod -aG docker ${USER}
 su ${USER}
 ```
 
-6.	Creiamo la cartella sul nostro sistema operativo dove clonare la versione di Geonode che vogliamo, in questo caso noi utilizzeremo l’ultima release 4.0.0post1.
+6.	Creiamo la cartella sul nostro sistema operativo dove clonare la versione di GeonNde che vogliamo, in questo caso noi utilizzeremo l’ultima release 4.0.0post1.
 
 ```bash
 sudo mkdir -p /opt/geonode/
@@ -138,7 +148,7 @@ cd /opt
 git clone https://github.com/GeoNode/geonode.git -b 4.0.0post1
 ```
 
-7.	Una volta clonato il programma nella cartella Geonode, navighiamo fino alla cartella principale e lanciamo il comando per costruire il programma ovvero "build”.
+7.	Una volta clonato il programma nella cartella GeoNode, navighiamo fino alla cartella principale e lanciamo il comando per costruire il programma ovvero "build”.
 
 ```bash
 cd /opt/geonode
@@ -154,7 +164,7 @@ docker-compose build --no-cache
 docker-compose up –d
 ```
 
-9.	L’ultimo step richiede di modificare il file .env (Fig. da 1 a 7) che si trova nella cartella Geonode, per impostare i parametri personalizzati riguardanti l’hosting.
+9.	L’ultimo step richiede di modificare il file .env (Fig. da 1 a 7) che si trova nella cartella GeoNode, per impostare i parametri personalizzati riguardanti l’hosting.
 
 ```bash
 cd/opt/geonode
@@ -197,11 +207,18 @@ docker-compose logs -f geonode
 
 ### Riferimenti
 
-- Geonode, https://geonode.org/
-- Geoserver, https://geoserver.org/
-- Geonode github https://github.com/GeoNode/geonode
-- Ubuntu https://www.ubuntu-it.org
-- Docker  https://www.docker.com/
+Docker
+- Docker  sito ufficiale, [https://www.docker.com/](https://www.docker.com/)
+- Cos'è Docker? AWS, [https://aws.amazon.com/it/docker/](https://aws.amazon.com/it/docker/)
+- Docker su Wikipedia, [https://it.wikipedia.org/wiki/Docker](https://it.wikipedia.org/wiki/Docker)
+Geonode
+- GeoNode, sito ufficiale, [https://geonode.org/](https://geonode.org/)
+- GeoNode, su GitHub, [https://github.com/GeoNode/geonode](https://github.com/GeoNode/geonode)
+Linux, Debian, Ubuntu
+- Debian, sito ufficiale in italiano, [https://www.debian.org/index.it.html](https://www.debian.org/index.it.html)
+- Linux su Wikipedia, [https://it.wikipedia.org/wiki/Linux](https://it.wikipedia.org/wiki/Linux)
+- Sistema operativo Ubuntu, sito italiano, [https://www.ubuntu-it.org](https://www.ubuntu-it.org)
+
 - Hetzner  https://www.hetzner.com
 - Ubuntu Gis  https://wiki.ubuntu.com/UbuntuGIS
 - https://docs.geonode.org/en/master/install/advanced/core/index.html#docker
