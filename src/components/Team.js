@@ -27,7 +27,7 @@ const Team = () => {
       "name": "Domizia D'Erasmo",
       "image": "images/dderasmo.jpg",
       "position": "Tutor",
-      "affiliation": "PhD student in Archeologia, Dip. Scienze dell'Antichità, Sapienza",
+      "affiliation": "Dottoranda in Archeologia, Dip. Scienze dell'Antichità, Sapienza",
       "github": "https://github.com/ddomizia",
       "academia": "https://uniroma1.academia.edu/domiziaderasmo",
       "iris": "https://iris.uniroma1.it/simple-search?query=Domizia+D%27Erasmo&needescape=1",
