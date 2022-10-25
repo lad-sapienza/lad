@@ -129,7 +129,7 @@ Instituti i Arkeologjisë Tiranë (Albania)
 </div>
 <div class="col-sm-3">
 <img src="../../logos/asa.jpg" style="max-width: 100%" class="img-fluid"><br>
-Academia e Studimeve Arkeologjike, Tiranë (Albania)
+Akademia e Studimeve Albanologike, Tiranë (Albania)
 </div>
 </div>
 <div class="row text-center">
