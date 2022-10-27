@@ -1,227 +1,423 @@
 ---
-title: "Guida all'installazione di GeoNode su server linux"
+title: "Guida all'installazione di Geonode su server Linux"
 autore: Eleonora Iacopini
 licenza: CC BY 4.0 International
 livello: avanzato
 tags: [geodati, open source, gis, webGIS, tutorial]
 img: ./geonode.png
 date: 2022-10-18
-sommario: "Git è oggi il software più famoso e usato per il controllo delle versioni, usato nella stragrande maggioranaza dei progetti di sviluppo software, ma può tornare estremamente utile in tanti scenari diversi che non hanno a che fare propriamente con lo sviluppo."
+sommario: "Geonode è un software molto diffuso per la condivisione dei dati geografici, utilizzato da numerosi enti pubblici e privati per la gestione e la distribuzione di varie tipologie di risorse cartografiche e non solo."
 ---
 
 ## Introduzione
 
-Questo articolo è il secondo di una serie di contributi dedicati alle metodologie e software per la pubblicazione online dei dati archeologici geografici. Si rimanda, pertanto, all'articolo specifico per un'introduzione sugli [software open source per la condivisione di dati geografici online](../softwater-os-condivisione-dati-geografici-online).
+Questo articolo è il secondo di una serie di contributi dedicati alle metodologie e software per la pubblicazione online dei dati archeologici geografici. Si rimanda, pertanto, all'articolo specifico per un'introduzione sui [software open source per la condivisione di dati geografici online](../softwater-os-condivisione-dati-geografici-online).
 
 Nel presente articolo si affronterà in maniera molto pratica e concreta il processo di installazione della più recente versione di [GeoNode](https://geonode.org/), il cui codice sorgente è disponibile nel relativo repository di [GitHub](https://github.com/GeoNode/geonode/). Al momento in cui pubblichiamo questo contributo (ottobre 2022) la versione dispnibile più recente di GeoNode è la **4.0.0**.
 
-Come ben noto, è possibile installare GeoNode su diversi sistemi operativi e piattaforme e presenza dei requisiti minimi dell'amiente di produzione piuttosto importanti, ovvero un'a 'architettura a **64-bit**, **16GB di RAM**, un processore **2.2GHz** con **4 core**, un minimo di **30GB** di spazio disco per il solo software.
+Come ben noto, è possibile installare GeoNode su diversi sistemi operativi e piattaforme, tutttavia è necessario avere un ambiente di produzione con dei requisiti piuttosto alti; infatti il software per poter essere performante necessita di una architettura a **64-bit**, **16GB di RAM**, un processore **2.2GHz** con **4 core**, un minimo di **30GB** di spazio disco dedicato solo al programma.
 
-In questa guida si descriverà l'installazione su un sistema operativo [Linux](https://it.wikipedia.org/wiki/Linux) della famiglia [Debian](https://www.debian.org/index.it.html), nello specifico [Ubuntu 20.4](https://www.ubuntu-it.org). Questa scelta è dettata dalla grandissima diffusione oggi dei sistemi operativi Debian/Ubuntu nel settore server, per qui è molto facile che, se si acquista un servizio [VPS](https://it.wikipedia.org/wiki/Virtual_private_server), ci si trovi davanti a questi sistemi operativi.
+In questa guida si descriverà l'installazione su un sistema operativo [Linux](https://it.wikipedia.org/wiki/Linux) della famiglia [Debian](https://www.debian.org/index.it.html), nello specifico [Ubuntu 20.4](https://www.ubuntu-it.org). Questa scelta è dettata dalla grandissima diffusione oggi dei sistemi operativi Debian/Ubuntu nel settore server, per cui è molto facile che, se si acquista un servizio [VPS](https://it.wikipedia.org/wiki/Virtual_private_server), ci si trovi davanti a questi sistemi operativi.
 
-Infine, esistono vari modi di installare GeoNode e in questa guids si seguirà quello che prevede l'utilizzo di [Docker](https://www.docker.com/), raccomndato anche nella [guida ufficiale](https://github.com/GeoNode/geonode/#install). Docker è una piattaforma software che permette di creare, testare e distribuire applicazioni con la massima rapidità, in quanto raccoglie il software in unità standardizzate chiamate _**container**_ che offrono tutto il necessario per la loro corretta esecuzione, incluse librerie, strumenti di sistema, codice e _runtime_. Con Docker, è possibile distribuire e ricalibrare le risorse per un'applicazione in qualsiasi ambiente, tenendo sempre sotto controllo il codice eseguito. In altre parole, con Docker è possibile creare ambienti di esecuzione del tutto simili o identici su piattaforme (hardware e sistema operativo) anche molto diversi tra loro.
+Infine, esistono vari modi di installare GeoNode e in questa guida si seguirà quello che prevede l'utilizzo di [Docker](https://www.docker.com/), raccomandato anche nella [guida ufficiale](https://github.com/GeoNode/geonode/#install). Docker è una piattaforma software che permette di creare, testare e distribuire applicazioni con la massima rapidità, in quanto raccoglie il software in unità standardizzate chiamate _**container**_ che offrono tutto il necessario per la loro corretta esecuzione, incluse librerie, strumenti di sistema, codice e _**runtime**_. Con Docker, è possibile distribuire e ricalibrare le risorse per un'applicazione in qualsiasi ambiente, tenendo sempre sotto controllo il codice eseguito. In altre parole, con Docker è possibile creare ambienti di esecuzione del tutto simili o identici su piattaforme (hardware e sistema operativo) anche molto diversi tra loro.
 
 ## Requisiti
-Per fare questo è necessario avere familiarità con i comandi da console del server su cui stiamo operando. Partendo dal presupposto di avere una nuova installazione di Ubuntu 20.4 su un vostro computer o su uno spazio cloud a pagamento come [Hetzner](https://www.hetzner.com), dovremmo accedere al server tramite la console di comando inserendo la propria username e password.
+Per seguire il processo di installazione che verrà spiegata di seguito, è necessario avere già a propria disposizione una macchina virtuale o reale con preinstallato la più recente versione di Ubuntu, ovvero la versione 20.10. Sarà necessario avere accesso al terminale della macchina, dal momento che per tutte le operazioni di installazione e configurazione richiedono accesso al terminale. Se  si tratta di una macchina remota, sarà dunque necessario avere accesso `ssh`. Questa guida non copre la fase di installazione del sistema operativo e il primo accesso alla macchina. Esistono oggi moltissime soluzioni cloud-based, di costo anche esiguo, che vi permettono di acquistare un servizio [VPS (Virtual Private Server)](https://it.wikipedia.org/wiki/Virtual_private_server) molto efficiente. A scopo semplificativo, si possono elencare, tra le tantissime opzioni disponibili, [OVH Cloud](https://www.ovhcloud.com/it/) e [Hetzner](https://www.hetzner.com), aziende con le quali non abbiamo nessun legame, se non l'esperienza di utilizzo per progetti di varia scala.
 
-1.	Il primo step che dobbiamo compiere è quello di installare il repository [Ubuntugis](https://wiki.ubuntu.com/UbuntuGIS), il quale consente di dotare il server di tutti i pacchetti necessari per poter lavorare con i dati geografici.
+**Attenzione**  
+Alcuni dei commandi che vendono elencati necessitano per poter essere eseguiti di un livello di accesso di amministratore del sistema. Tali commandi sono facili da individuare, in quanto sono preceduti dalla parola `sudo`, acronimo della frase inglese _Super User Do_ (utente amministratore esegui). A seconda da com'è impostato il sisteme è possibile che la richiesta di eseguire un commando cons `sudo` sia accompagnata dalla richiesta della password. In alcune configurazione all'utente `root` non viene richiesta la password.
+
+## Guida all'installazione
+
+### 1. Aggiunta del repository UbuntuGIS per la facila installazione dei pacchetti
+
+
+Il primo passaggio che dobbiamo compiere è quello di aggiungere il repository [Ubuntugis](https://wiki.ubuntu.com/UbuntuGIS) alla  lista di fonti del nostro sistema operativo per l'installazione dei pacchetti. Si tratta di un repository ufficiale e specializata per il mondo GIS che rende possibile installare in maniera facilitata i software e pacchetti necessari per poter lavorare con i dati geografici.
+
+Più informazioni su cosa sono i _repository_ nel mondo Linux sono disponibili all'indirizzo [https://itsfoss.com/ubuntu-repositories/](https://itsfoss.com/ubuntu-repositories/).
+
+Inseriamo dunque il primo commando:
 
 ```bash
 sudo add-apt-repository ppa:ubuntugis/ppa
 ```
 
-2.	Aggiorniamo dunque il package index files.
+Questo comando permette di installare il repository più aggiornato specifico di UbuntuGis contenuto in un `PPA`, ovvero un  _Personal Package Archive_.
+Tra i numerosi contenuti a cui dà accesso questo pacchetto ricordiamo
+- la libreria [GDAL](https://gdal.org/) che serve per leggere e scrivere numerosi formati dati geografici, 
+- [GRASS](https://gdal.org/), 
+- [Mapnik](https://mapnik.org/), 
+- [Leaflet](https://leafletjs.com/) che è una libreria JavaScript per lo sviluppo di mappe geografiche interattive,
+- [Mapserver](https://mapserver.org/)
+- ecc.
+
+### 2. Aggiornamento dell'indice
+
+Dopo l'installazione di UbuntuGis è necessario aggiornare il nostro indice dei software disponibili: il server con il seguente comando:
 
 ```bash
 sudo apt update –y
 ```
 
-3.	Installazione delle dipendenze.
+Ricordiamo che `-y` sta per `yes` e permette di sopprimere eventuali richieste di conferme da parte del programma di installazione, rispondendo a tutte positivamente.
+
+
+### 3. Installazione delle dipendenze
+
+
+Siamo ora pronti per installati una serie di pacchetti e librerie, necessari all'installazione di Geonode. Anche in questo caso forniamo la risposta di default `-y` per velocizzare il processo di installazione.
 
 ```bash
-sudo apt install -y python3-gdal=3.3.2+dfsg-2~focal2 gdal-bin=3.3.2+dfsg-2~focal2 libgdal-dev=3.3.2+dfsg-2~focal2
+sudo apt install -y python3-gdal=3.3.2+dfsg-2~focal2 gdal-bin=3.3.2+dfsg-2~focal2 libgdal-dev=3.3.2+dfsg-2~focal2 python3-pip python3-dev python3-virtualenv python3-venv virtualenvwrapper libxml2 libxml2-dev gettext libxslt1-dev libjpeg-dev libpng-dev libpq-dev software-properties-common build-essential git unzip gcc zlib1g-dev libgeos-dev libproj-dev sqlite3 spatialite-bin libsqlite3-mod-spatialite
 ```
 
-```bash
-sudo apt install -y python3-pip python3-dev python3-virtualenv python3-venv virtualenvwrapper
-```
-
-```bash
-sudo apt install -y libxml2 libxml2-dev gettext
-```
-
-```bash
-sudo apt install -y libxslt1-dev libjpeg-dev libpng-dev libpq-dev
-```
-
-```bash
-sudo apt install -y software-properties-common build-essential
-```
-
-```bash
-sudo apt install -y git unzip gcc zlib1g-dev libgeos-dev libproj-dev
-```
-
-```bash
-sudo apt install -y sqlite3 spatialite-bin libsqlite3-mod-spatialite
-```
+Nel commando appena inserito i vari pacchetti sono elencati separati da spazio. Tra gli altri, il commando sopra installerà:
+- [Python3-gdal](https://packages.debian.org/stretch/python3-gdal) che consente a python di manipolare i dati Gdal (Geospatial Data Abstraction Library),
+- [GEOS](https://packages.debian.org/stretch/libgeos-dev) che fornisce al sistema funzioni geometriche fondamentali sui dati spaziali, 
+- [PROJ](https://packages.debian.org/stretch/libproj-dev) per la gestione delle proiezioni cartografiche e l'estensione geospaziale
+- [SQLite](https://www.sqlite.org/index.html),
+- ecc.
 
 
-4.	Come accennato all’inizio del tutorial per installare GeoNode sulla nostra macchina andremo ad utilizzare Docker. Docker è un sistema che consente di raccoglie un software in un container, nel quale è contenuto tutto ciò che serve per eseguire l’applicazione (librerie, strumenti di sistema, codice di programmazione etc..). Oltre a questo metodo di installazione ce ne sono anche altri, come indicato nella guida al seguente [link](https://docs.geonode.org/en/master/install/advanced/core/index.html).
-
-Per prima cosa installiamo i pacchetti necessari per l’utilizzo di Docker.
-
+### 4. Installazione di Docker
+Come accennato nei paragrafi iniziali, si installerà Geonode come un _conmtainer_ di Docker, dunque è fondamentale installare i pacchetti preliminari necessari. È quindi necessario attivare il _repository_ Universe, che è un repository standard di Ubuntu, che in modo simile al _repository_ Main contiene software FOS (free and open source), ma a differenza di questo non è mantenuto dagli sviluppatori di Ubuntu, i quali non garantiscono aggiornamenti costanti di sicurezza.
 
 ```bash
 sudo add-apt-repository universe
 ```
-
+Successivamente è necessario aggiornare l'indice:
 ```bash
 sudo apt-get update –y
 ```
 
-```bash
-sudo apt-get install -y git-core git-buildpackage debhelper devscripts
-```
+A questo punto siamo pronti per installare le dipendenze di Docker, tra i quali anche [git](../git-controllo-di-versioni-1/) e alcuni pacchetti per la sicurezza dell'installazione:
 
 ```bash
-sudo apt-get install -y apt-transport-https ca-certificates curl gnupg-agent software-properties-common
+sudo apt-get install -y git-core git-buildpackage debhelper devscripts apt-transport-https ca-certificates curl gnupg-agent software-properties-common
 ```
+
+Si è quasi pronti a scaricare Docker per Ubuntu dal [sito ufficiale](https://download.docker.com/linux/ubuntu/gpg); è solo necessario prima scaricare e installare una chiave crittografica di verifica che assicura che il pacchetto che si verrà installato è esattamente quello ufficialmente rilasciato. Si usera [cURL](https://curl.se/) per scaricare la chiave e `apt-key add` per installarla:
 
 ```bash
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 ```
 
-```bash
-sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu focal stable"
-```
+Possiamo quindi aggiungere il _repository_ di Docker e aggiornare l'indice:
 
 ```bash
+sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu focal stable"
 sudo apt-get update –y
 ```
 
+E finalmente è possibile installare Docker:
 ```bash
 sudo apt-get install -y docker-ce docker-ce-cli containerd.io
 ```
 
-5.	A differenza della guida ufficiale, che potrete trovare a questo [link](https://docs.geonode.org/en/master/install/advanced/core/index.html#docker), questa installazione prevede l’aggiornamento del Docker compose alla versione 1.29. Per fare questo è necessario scaricare lo script e renderlo eseguibile mediante questi passaggi.
+A differenza della guida ufficiale, che potrete trovare a questo [link](https://docs.geonode.org/en/master/install/advanced/core/index.html#docker), questa installazione qui descritta prevede l’aggiornamento di `Docker Compose` alla versione 1.29. [Docker Compose](https://docs.docker.com/get-started/08_using_compose/) è uno strumento sviluppato per definire e condividere applicazioni composti da molti _container_:
 
 ```bash
 curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
-```
-
-```bash
 chmod +x /usr/local/bin/docker-compose
-```
-
-```bash
 sudo usermod -aG docker ${USER}
-```
-
-```bash
 su ${USER}
 ```
 
-6.	Creiamo la cartella sul nostro sistema operativo dove clonare la versione di GeonNde che vogliamo, in questo caso noi utilizzeremo l’ultima release 4.0.0post1.
+I quattro commandi sopra, in ordine:
+- scaricano il pacchetto,
+- lo rendono eseguibile, aggiungendo i permessi di esecuzione (`+x`) al file,
+- aggiungiamo all'utente corrente (ovvero il nostro, quello che sta faccendo l'installazione) il gruppo `docker` ([maggiori informazioni qui](https://techoverflow.net/2019/04/30/what-does-sudo-usermod-a-g-docker-user-do-on-linux/)),
+- infine, cambiamo (`su` sta per `switch user`, ovvero appunto cambia utente) l'utente corrente (@Eleonora: questo commando mi sembra che sia tautologico: siamo certi che sia necessario cambiare l'utente loggato con ... l'utente loggato?)
+
+### 5. Installazione di Genode
+
+A questo punto è possibile installare Geonode, per cui si crea la cartella che conterrà l'installazione (l'opzione `-p` consegnte di creare in automatico tutte le sotto cartelle del percorso in oggetto):
 
 ```bash
 sudo mkdir -p /opt/geonode/
 ```
+Si configurano i permessi della cartella appena creata e dell'utente `geonode` come segue:
 
-```bash
+``` bash
 sudo usermod -a -G www-data geonode
-```
-
-```bash
 sudo chown -Rf geonode:www-data /opt/geonode/
-```
-
-```bash
 sudo chmod -Rf 775 /opt/geonode/
 ```
+
+In dettaglio i commandi sopra permettono di:
+- aggiungere al gruppo `www-data`, lo stesso gruppo del server web (`apache`) @Eleonora: ma l'utente `geonode` non è stato ancora creato o mi sono perso un pezzo?
+- si cambia l'utente proprietario e il gruppo principale alla cartella `/opt/geonode`; il nuovo utente proprietario sarà l'utente `geonode` e il nuovo gruppo principale sarà `www-data`
+- si cambiano al directory `opt/geonode`  permessi in `775`, che dignifica che proprietario e membri del gruppo principale possono leggere, scrivere ed eseguire i file della cartella, mentre gli altri utenti possono solo leggere ed eseguire.
+
+Ci si sposta a questo punto dentro la cartella `/opt` e vi si clona la repository ufficiale di GeoNode, usando `git`; nello specifico si installerà la versione **4.0.0post1** di GeoNode:
  
 ```bash
 cd /opt
-```
-
-```bash
 git clone https://github.com/GeoNode/geonode.git -b 4.0.0post1
 ```
 
-7.	Una volta clonato il programma nella cartella GeoNode, navighiamo fino alla cartella principale e lanciamo il comando per costruire il programma ovvero "build”.
+@Eleonora non è più elegante e comprensibile:
+```bash
+cd /opt/geonode
+git clone https://github.com/GeoNode/geonode.git -b 4.0.0post1 .
+```
+
+Ci si sposta delnto la cartella che contiene i file del programma e installiamo (facciamo un _build_) il software:
 
 ```bash
 cd /opt/geonode
-```
-
-```bash
 docker-compose build --no-cache
 ```
 
-8.	Una volta conclusa la fase di installazione, che richiede alcuni minuti è possibile avviare i pacchetti e renderli attivi attraverso il comando.
+Una volta conclusa la fase di installazione, che richiede alcuni minuti è possibile avviare i pacchetti e renderli attivi attraverso il comando.
 
 ```bash
 docker-compose up –d
 ```
 
-9.	L’ultimo step richiede di modificare il file .env (Fig. da 1 a 7) che si trova nella cartella GeoNode, per impostare i parametri personalizzati riguardanti l’hosting.
+### 6. Configurazione di GeoNode
 
+A questo punto GeoNode è installato e avviato, ma è necessario configurarlo con alcuni parametri minimi personalizzati per un utilizzo ottimale. La configurazine di GeoNode è centralizzata e affidata ad un unico file che contiene le configurazioni principali sotto forma di variabili semplici, che vengono caricate all'avvio del programma e fanno farte dell'ambiente di esecuzione.  
+Il file è `/opt/geonode/.env` ed è necessario un semplice editor di testo per modificarlo.  
+Per facilità, si usera in questa guida [`nano`](https://linux.die.net/man/1/nano), un editor che è spesso incluso nelle installazioni Linux.
+
+Per aprire e modificare il file, eseguire:
 ```bash
-cd/opt/geonode
+nano /opt/geonode/.env
 ```
 
-```bash
-nano .env
-```
+@Eleonora, @Julian: arrivato a editare fin qui.
 
 Prima di editare il file è necessario attivare la procedura di riconoscimento della proprietà del dominio che si intende usare con [Google console](https://console.cloud.google.com) e attivare una API per avere [0Auth id client e client secrets](https://docs.geoserver.org/latest/en/user/community/oauth2/index.html).
 
+## Il file ENV
 
-10.	 Una volta finito di compilare il file .env è necessario digitare nuovamente il comando compose up per fare il restart dei servizi.
+```ini
+COMPOSE_PROJECT_NAME=geonode
+DOCKERHOST=
+DOCKER_HOST_IP=
+DOCKER_ENV=production
+DOCKER_API_VERSION="1.24"
+BACKUPS_VOLUME_DRIVER=local
+C_FORCE_ROOT=1
+FORCE_REINIT=false
+INVOKE_LOG_STDOUT=true
+DJANGO_SETTINGS_MODULE=geonode.settings
+GEONODE_INSTANCE_NAME=geonode
+GEONODE_LB_HOST_IP= _**tuo.dominio.com**_
+GEONODE_LB_PORT=_**80**_
+PUBLIC_PORT=80
+NGINX_BASE_URL=
+POSTGRES_USER=postgres
+POSTGRES_PASSWORD=postgres
+GEONODE_DATABASE=geonode
+GEONODE_DATABASE_PASSWORD=geonode
+GEONODE_GEODATABASE=geonode_data
+GEONODE_GEODATABASE_PASSWORD=geonode_data
+GEONODE_DATABASE_SCHEMA=public
+GEONODE_GEODATABASE_SCHEMA=public
+DATABASE_HOST=db
+DATABASE_PORT=5432
+DATABASE_URL=postgis://geonode:geonode@db:5432/geonode
+GEODATABASE_URL=postgis://geonode_data:geonode_data@db:5432/geonode_data
+GEONODE_DB_CONN_MAX_AGE=0
+GEONODE_DB_CONN_TOUT=5
+DEFAULT_BACKEND_DATASTORE=datastore
+BROKER_URL=amqp://guest:guest@rabbitmq:5672/
+CELERY_BEAT_SCHEDULER=celery.beat:PersistentScheduler
+ASYNC_SIGNALS=True
 
-```bash
-docker-compose up –d
+SITEURL=_**https://tuosito.com**_
+
+ALLOWED_HOSTS=['django', '*','tuosito.com']
+DEFAULT_BACKEND_UPLOADER=geonode.importer
+TIME_ENABLED=True
+MOSAIC_ENABLED=False
+HAYSTACK_SEARCH=False
+HAYSTACK_ENGINE_URL=http://elasticsearch:9200/
+HAYSTACK_ENGINE_INDEX_NAME=haystack
+HAYSTACK_SEARCH_RESULTS_PER_PAGE=200
+GEONODE_LB_HOST_IP=_**tuodominio.com**_
+GEONODE_LB_PORT=80
+
+HTTP_HOST=
+HTTPS_HOST=_**tuodominio.com**_
+
+HTTP_PORT=80
+HTTPS_PORT=443
+
+LETSENCRYPT_MODE=disabled
+
+RESOLVER=127.0.0.11
+
+
+GEOSERVER_WEB_UI_LOCATION=http://tuodominio.com/geoserver/
+GEOSERVER_PUBLIC_LOCATION=http://tuodominio.com/geoserver/
+GEOSERVER_LOCATION=http://geoserver:8080/geoserver/
+GEOSERVER_ADMIN_USER=admin
+GEOSERVER_ADMIN_PASSWORD=geoserver
+
+OGC_REQUEST_TIMEOUT=30
+OGC_REQUEST_MAX_RETRIES=1
+OGC_REQUEST_BACKOFF_FACTOR=0.3
+OGC_REQUEST_POOL_MAXSIZE=10
+OGC_REQUEST_POOL_CONNECTIONS=10
+
+
+ENABLE_JSONP=true
+outFormat=text/javascript
+GEOSERVER_JAVA_OPTS="-Djava.awt.headless=true -Xms2G -Xmx4G -XX:+UnlockDiagnosticVMOptions -XX:+LogVMOutput -XX:LogFile=/var/log/jvm.log -XX:PerfDataSamplingInterval=500 -XX:SoftRefLRUPolicyMSPerMB=36000 -XX:-UseGCOverheadLimit -XX:+UseConcMarkSweepGC -XX:ParallelGCThreads=4 -Dfile.encoding=UTF8 -Djavax.servlet.request.encoding=UTF-8 -Djavax.servlet.response.encoding=UTF-8 -Duser.timezone=GMT -Dorg.geotools.shapefile.datetime=false -DGEOSERVER_CSRF_DISABLED=true -DPRINT_BASE_URL=http://geoserver:8080/geoserver/pdf -DALLOW_ENV_PARAMETRIZATION=true -Xbootclasspath/a:/usr/local/tomcat/webapps/geoserver/WEB-INF/lib/marlin-0.9.3-Unsafe.jar -Dsun.java2d.renderer=org.marlin.pisces.MarlinRenderingEngine"
+
+
+ADMIN_USERNAME=admin
+ADMIN_PASSWORD=admin
+ADMIN_EMAIL=admin@tuodominio.com
+
+EMAIL_ENABLE=False
+DJANGO_EMAIL_BACKEND=django.core.mail.backends.smtp.EmailBackend
+DJANGO_EMAIL_HOST=localhost
+DJANGO_EMAIL_PORT=25
+DJANGO_EMAIL_HOST_USER=
+DJANGO_EMAIL_HOST_PASSWORD=
+DJANGO_EMAIL_USE_TLS=False
+DJANGO_EMAIL_USE_SSL=False
+DEFAULT_FROM_EMAIL='GeoNode <no-reply@geonode.org>'
+
+
+LOCKDOWN_GEONODE=False
+CORS_ALLOW_ALL_ORIGINS=True
+X_FRAME_OPTIONS="SAMEORIGIN"
+SESSION_EXPIRED_CONTROL_ENABLED=True
+DEFAULT_ANONYMOUS_VIEW_PERMISSION=True
+DEFAULT_ANONYMOUS_DOWNLOAD_PERMISSION=True
+
+
+ACCOUNT_OPEN_SIGNUP=True
+ACCOUNT_EMAIL_REQUIRED=True
+ACCOUNT_APPROVAL_REQUIRED=False
+ACCOUNT_CONFIRM_EMAIL_ON_GET=False
+ACCOUNT_EMAIL_VERIFICATION=none
+ACCOUNT_EMAIL_CONFIRMATION_EMAIL=False
+ACCOUNT_EMAIL_CONFIRMATION_REQUIRED=False
+ACCOUNT_AUTHENTICATION_METHOD=username_email
+AUTO_ASSIGN_REGISTERED_MEMBERS_TO_REGISTERED_MEMBERS_GROUP_NAME=True
+
+
+OAUTH2_API_KEY= _**INSERIRE LA API KEY CREATA NELLA GOOGLE CONSOLE**_
+OAUTH2_CLIENT_ID=_**INSERIRE IL CLIENT ID CREATO NELLA GOOGLE CONSOLE**_
+OAUTH2_CLIENT_SECRET=_**INSERIRE IL CLIENT SECRET CREATO NELLA GOOGLE CONSOLE**_
+
+
+API_LOCKDOWN=False
+TASTYPIE_APIKEY=
+
+DEBUG=False
+
+SECRET_KEY='_**INSERIRE LA SECRET KEY CREATA NELLA GOOGLE CONSOLE**_'
+
+STATIC_ROOT=/mnt/volumes/statics/static/
+MEDIA_ROOT=/mnt/volumes/statics/uploaded/
+GEOIP_PATH=/mnt/volumes/statics/geoip.db
+
+CACHE_BUSTING_STATIC_ENABLED=False
+
+MEMCACHED_ENABLED=False
+MEMCACHED_BACKEND=django.core.cache.backends.memcached.MemcachedCache
+MEMCACHED_LOCATION=127.0.0.1:11211
+MEMCACHED_LOCK_EXPIRE=3600
+MEMCACHED_LOCK_TIMEOUT=10
+
+MAX_DOCUMENT_SIZE=2
+CLIENT_RESULTS_LIMIT=5
+API_LIMIT_PER_PAGE=1000
+
+
+GEONODE_CLIENT_LAYER_PREVIEW_LIBRARY=mapstore
+MAPBOX_ACCESS_TOKEN=
+BING_API_KEY=
+GOOGLE_API_KEY=
+
+
+MONITORING_ENABLED=True
+MONITORING_DATA_TTL=365
+USER_ANALYTICS_ENABLED=True
+USER_ANALYTICS_GZIP=True
+CENTRALIZED_DASHBOARD_ENABLED=False
+MONITORING_SERVICE_NAME=local-geonode
+MONITORING_HOST_NAME=geonode
+
+
+MODIFY_TOPICCATEGORY=True
+AVATAR_GRAVATAR_SSL=True
+EXIF_ENABLED=True
+CREATE_LAYER=True
+FAVORITE_ENABLED=True
+
+
+RESOURCE_PUBLISHING=False
+ADMIN_MODERATE_UPLOADS=False
+
+POSTGRESQL_MAX_CONNECTIONS=200
+
+
+DEFAULT_MAX_UPLOAD_SIZE=5368709120
+DEFAULT_MAX_PARALLEL_UPLOADS_PER_USER=100
+
+
+LDAP_ENABLED=False
+LDAP_SERVER_URL=ldap://<the_ldap_server>
+LDAP_BIND_DN=uid=ldapinfo,cn=users,dc=ad,dc=example,dc=org
+LDAP_BIND_PASSWORD=<something_secret>
+LDAP_USER_SEARCH_DN=dc=ad,dc=example,dc=org
+LDAP_USER_SEARCH_FILTERSTR=(&(uid=%(user)s)(objectClass=person))
+LDAP_GROUP_SEARCH_DN=cn=groups,dc=ad,dc=example,dc=org
+LDAP_GROUP_SEARCH_FILTERSTR=(|(cn=abt1)(cn=abt2)(cn=abt3)(cn=abt4)(cn=abt5)(cn=abt6))
+LDAP_GROUP_PROFILE_MEMBER_ATTR=uniqueMember
 ```
 
-### Procedure di controllo della corretta attivazione dei servizi:
 
-```bash
-docker-compose ps
-```
 
-```bash
-docker-compose logs -f django
-```
+### 15.	 Una volta finito di compilare il 
+file .env è necessario digitare nuovamente il comando compose up per fare il restart dei servizi.
 
-```bash
-docker-compose logs -f geoserver
-```
+`docker-compose up –d`
+
+## Procedure di controllo della corretta attivazione dei servizi:
+
+`docker-compose ps`
+
+`docker-compose logs -f django`
+
+`docker-compose logs -f geoserver`
  
-```bash
-docker-compose logs -f db
-```
+`docker-compose logs -f db`
  
-```bash
-docker-compose logs -f geonode
-```
+`docker-compose logs -f geonode`
 
-### Riferimenti
-
-Docker
+## Riferimenti
+**Docker**
 - Docker  sito ufficiale, [https://www.docker.com/](https://www.docker.com/)
 - Cos'è Docker? AWS, [https://aws.amazon.com/it/docker/](https://aws.amazon.com/it/docker/)
 - Docker su Wikipedia, [https://it.wikipedia.org/wiki/Docker](https://it.wikipedia.org/wiki/Docker)
-Geonode
+- Guida ufficiale su Docker compose, [https://docs.docker.com/get-started/08_using_compose/](https://docs.docker.com/get-started/08_using_compose/)
+
+**Geonode**
 - GeoNode, sito ufficiale, [https://geonode.org/](https://geonode.org/)
 - GeoNode, su GitHub, [https://github.com/GeoNode/geonode](https://github.com/GeoNode/geonode)
-Linux, Debian, Ubuntu
+
+**Linux, Debian, Ubuntu**
 - Debian, sito ufficiale in italiano, [https://www.debian.org/index.it.html](https://www.debian.org/index.it.html)
 - Linux su Wikipedia, [https://it.wikipedia.org/wiki/Linux](https://it.wikipedia.org/wiki/Linux)
 - Sistema operativo Ubuntu, sito italiano, [https://www.ubuntu-it.org](https://www.ubuntu-it.org)
+- UbuntuGIS  [https://wiki.ubuntu.com/UbuntuGIS](https://wiki.ubuntu.com/UbuntuGIS)
+- Guida alle repositories di Linux, [https://itsfoss.com/ubuntu-repositories/](https://itsfoss.com/ubuntu-repositories/)
+- Manuale ufficiale del text editor nano, [https://linux.die.net/man/1/nano](https://linux.die.net/man/1/nano)
 
-- Hetzner  https://www.hetzner.com
-- Ubuntu Gis  https://wiki.ubuntu.com/UbuntuGIS
+**Cloud provider**
+- Hetzner [https://www.hetzner.com](https://www.hetzner.com)
+- OVH Cloud, [https://www.ovhcloud.com/it/](https://www.ovhcloud.com/it/)
+
+
 - https://docs.geonode.org/en/master/install/advanced/core/index.html#docker
 - https://console.cloud.google.com
 - https://docs.geoserver.org/latest/en/user/community/oauth2/index.html
-
