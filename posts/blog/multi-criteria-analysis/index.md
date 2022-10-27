@@ -51,12 +51,12 @@ Per calcolare queste variabili abbiamo dunque bisogno di:
 7. **La rete di insediamenti noti di età romana imperiale** è stata invece scaricata da [Pleiades](https://pleiades.stoa.org/), all'indirizzo: [http://atlantides.org/downloads/pleiades/kml/pleiades-latest.kmz](http://atlantides.org/downloads/pleiades/kml/pleiades-latest.kmz)
 8. Infine, il modello digitale del terreno (DEM) con risoluzione di 30m è stato scaricato da [https://opentopography.org/](https://opentopography.org/), attraverso il plugin di `QGIS OpenTopography DEM Downloader`
 
-[Accesso ai dati](https://github.com/lab-archeologia-digitale/mcwoa-archeo/) > Dataset `adv`
+[Accesso ai dati](https://github.com/lab-archeologia-digitale/mcwoa-archeo/) > Dataset utile allo svolgimento dell'esercizio
 
-1. Creare un nuovo progetto in QGIS e importare i dati elencati precedentemente
-> Il primo step consiste nella conversione di ogni layer vettoriale in formato raster. Ai fini della buona riuscita dell'analisi è importante è tenere presente che tutti i file raster che da qui in poi saranno convertiti dovranno avere necessariamente la stessa estensione che, nel nostro caso, sarà quella del vettore `confine-lazio`.  
+1. Creare un nuovo progetto in QGIS e importare i dati elencati precedentemente e presenti nelle cartelle del repository del LAD al seguente link: [https://github.com/lab-archeologia-digitale/mcwoa-archeo/](https://github.com/lab-archeologia-digitale/mcwoa-archeo/)
+> Il primo step dell'esercizio consiste nella conversione di ogni layer vettoriale in formato raster. Ai fini della buona riuscita dell'analisi è importante tenere presente che tutti i file raster che da qui in poi saranno convertiti dovranno avere necessariamente la stessa estensione che, nel nostro caso, sarà quella del vettore `confine-lazio`.  
 
-> Da qui in avanti, fino alla fine della conversione dei file vettoriali, il nostro intento sarà quello di creare dei raster di output assegnando ai pixel il valore di `1` quando ci troviamo di fronte a una strada, un fiume, un lago o un insediamento imperiale e il valore `0` laddove questi elementi non sono presenti.
+> Il nostro intento è quello di creare dei raster di output assegnando ai pixel il valore di `1` quando ci troviamo di fronte a una strada, un fiume, un lago o un insediamento imperiale e il valore `0` laddove questi elementi non sono presenti.
 2. Raggruppare i livelli vettoriali (`fiumi-lazio`, `strade-lazio`, `acque-interne-lazio` e `insediamenti-imperiali`) in un gruppo chiamato `Step-1`
 3. Rasterizzare i vettori del gruppo `Step-1`
    1. Menu `Processing` > `Strumenti`
@@ -71,28 +71,26 @@ Per calcolare queste variabili abbiamo dunque bisogno di:
       8. In `rasterizzato` salvare il nuovo file come `strade-raster`
          ![rasterizza-strade-1.png](./rasterizza-strade-1.png)
          ![rasterizza-strade-2.png](./rasterizza-strade-2.png)
-        > È molto importante che nel campo `attribuisci un determinato valore nullo alle bande in uscita` si assegni `non impostato` (in origine il valore dovrebbe essere impostato su `nodata`). Questa scelta deve essere fatta in prospettiva dell'utilizzo successivo del `calcolatore raster`: quando il `calcolatore raster` incontra un pixel con valore `nodata` imposta anche l'output su `nodata` generando quindi un risultato sbagliato.
+    > È molto importante che nel campo `attribuisci un determinato valore nullo alle bande in uscita` si assegni `non impostato` (in origine il valore dovrebbe essere impostato su `nodata`). Questa scelta deve essere fatta in prospettiva dell'utilizzo successivo del `calcolatore raster`: quando il `calcolatore raster` incontra un pixel con valore `nodata` imposta anche l'output su `nodata` generando quindi un risultato sbagliato ai fini della nostra analisi.
    3. Ripetere l'operazione sopra per gli altri layer: `fiumi-lazio`, `acque-interne-lazio` e `insediamenti-imperiali` , utilizzando gli stessi parametri. Per quest'ultimo cambiare la risoluzione a 30x30m.
 
    
-   > A questo punto nel progetto GIS saranno presenti 4 file raster e due di questi fanno riferimento a fiumi e laghi. Al fine di ottenere un unico file che rappresenti l'idrografia della regione lazio procederemo, attraverso il `calcolatore raster` all'unione dei file `acque-interne-raster` e `fiumi-raster`.
+   > A questo punto nel progetto GIS saranno presenti 4 file raster e due di questi fanno riferimento a fiumi e laghi. Al fine di ottenere un unico file che rappresenti l'idrografia della regione lazio procederemo, attraverso il `calcolatore raster`, all'unione dei file `acque-interne-raster` e `fiumi-raster`.
    4. Creare un gruppo di layer chiamato `Step-2` e includervi tutti i raster creati in questo passaggio
 4. Creare un unico raster per l'idrografia
    1. Cercare e aprire nel panello processing `Calcolatore raster` (sotto `GDAL` > `Raster miscellanea`)
    2. Inserire l'espressione: `"acque-interne-raster@1" + "fiumi-raster@1"`
    3. Utilizzare `confine-raster` come `layer di riferimento`
-   4. Salvare il file come `idrografia-3-valori`
+   4. Salvare il file come `idrografia-3-valori`  
       ![unione-fiumi-acque-interne.png](./unione-fiumi-acque-interne.png)
-      Il raster in uscita e cioè `raster_idrografia` avrà valore 1 nei pixel dove è presente un corso d'acqua.
-
-
-      >**Importante**: le aree in cui si trovano sia corsi d'acqua (fiumi) che laghi avranno invece valore 2. Per correggere questo errore e riportare tutte le aree con laghi e fiumi al valore 1 seguire il prossimo step:
+Il raster in uscita e cioè `raster_idrografia` avrà valore 1 nei pixel dove è presente un corso d'acqua.
+>**Importante**: le aree in cui si trovano sia corsi d'acqua che laghi avranno invece valore 2 e questo accade perchè il `calcolatore raster` avrà giustamente sommato i valori riportati nei pixel di `1` ( per un fiume) e `1` ( per un lago). Per correggere questo "errore" e ottenere un output in cui tutte le aree contenenti sia laghi che fiumi avranno il solo valore  di `1` seguire il prossimo step:
 5. Eliminare valore 2 e sostituirlo con 1 nel layer `idrografia-3-valori`
    1. Aprire nuovamente il `Calcolatore raster`
    2. Utilizzare la seguente espressione: `"idrografia-3-valori@1" > 0`
    3. Salvare il file come `idrografia-raster`
 6. Creare un gruppo di layer chiamato `Step-3` e includervi tutti i raster creati in questo passaggio
-> I layer ottenuti fin'ora rappresentano attraverso pixel di valori differenti (o,1) strade, idrografia ed insediamenti della regione Lazio. Il prossimo obiettivo è quello di creare un `raster di prossimità` (_proximity raster_) attraverso un'analisi di prossimità ottenibile in QGIS attraverso l'algoritmo `distanza raster`. Questo procedimento creerà una mappa di prossimità raster in cui ogni pixel rappresenterà la distanza dal pixel più vicino nel raster sorgente. Il `raster di prossimità` potrà quindi essere utilizzato per determinaree le aree che si trovano a una certa distanza dall'imput rispondendo, quindi, alla domanda formulata nell'introduzione della guida.
+> I raster ottenuti fin'ora rappresentano attraverso pixel di valori differenti (`0`,`1`) strade, idrografia ed insediamenti della regione Lazio. Il prossimo obiettivo sarà quindi quello di creare un `raster di prossimità` (_proximity raster_) attraverso un'analisi di prossimità attraverso l'algoritmo `distanza raster`. Questo procedimento creerà una mappa di prossimità raster in cui ogni pixel rappresenterà la distanza dal pixel più vicino nel raster sorgente. Il `raster di prossimità` potrà quindi essere utilizzato per determinaree le aree che si trovano a una certa distanza dall'imput rispondendo, quindi, alla domanda formulata nell'introduzione della guida.
 7. Analisi di prossimità (distanza raster)
    1. Aprire lo strumento `Prossimità (distanza raster)` (sotto `GDAL` > `Analisi raster`)
    2. In `layer di ingresso` selezionare `strade-raster`
@@ -104,7 +102,7 @@ Per calcolare queste variabili abbiamo dunque bisogno di:
    7. Aprire il pannello dello `stile dei layer`
    8. In `gradiente colore` impostare come valore massimo (max) `6000`
    9. Ripetere le stesse operazioni per i layer `idrografia-raster` e `insediamenti-raster`
-> Allo stato attuale tutti i raster elaborati tramite l'algoritmo `distanza raster` presentano un _continuum_ di valori da 0 a 5000. Per poter procedere all'analisi di sovrapposizione ponderata multi-criteri è opportuno riclassificare i raster per creare dei valori discreti che rappresenteranno rispettivamente l'idoneità relativa ai pixel in relazione alla distanza da strade, idrografia e insediamenti.
+> Allo stato attuale tutti i raster elaborati tramite l'algoritmo `distanza raster` presentano un _continuum_ di valori da 0 a 5000. Per poter procedere all'analisi di sovrapposizione ponderata multi-criteri è opportuno riclassificare i raster per creare dei valori discreti che rappresentino rispettivamente l'idoneità relativa ai pixel in relazione alla distanza da strade, idrografia e insediamenti.
 8. Ricalssificazione strade, definendo tre classi, rispettivamente:
    - **100** che raccoglie le aree fino a 1km di distanza,
    - **50** che raccoglie le aree tra 1km e 5 km e
@@ -142,13 +140,14 @@ Per calcolare queste variabili abbiamo dunque bisogno di:
     2. Inserire la seguente espressione:  
        `("strade-riclassificato@1" + "idrografia-riclassificato@1")*("insediamenti-riclassificato@1" != 1 ) * "confine-raster@1"`
     3. In `Referencelayer(s)` selezionare `confine-lazio`
-    4. 4. salvare il file come `overlay`
-> I valori dei pixel del raster `oerlay` vanno da 0 a 300: 0 è l'area considerata meno ottimale allo sviluppo di insediamenti di età romana imperiale nel Lazio mentre 300 è quella considerata più adatta. Volendo visualizzare al meglio il risultato dell'analisi si può procedere all'assegnazione di una simbologia che riporti una scala gradiente di colori per il raster `overlay` e che, soprattutto, rappresenti al meglio le sfumature che intercorrono tra i valori `0` e `300`.
+    4. Salvare il file come `overlay`
+> I valori dei pixel del raster `oerlay` vanno da 0 a 300: 0 è l'area considerata meno ottimale allo sviluppo di insediamenti di età romana imperiale nel Lazio mentre 300 è quella considerata più adatta. Volendo visualizzare al meglio il risultato dell'analisi si può procedere all'assegnazione di una simbologia che riporti una scala gradiente di colori per il raster `overlay` e che, soprattutto, permetta di rappresentare al meglio le sfumature che intercorrono tra i valori `0` e `300`.
 12. Impostare simbologia `banda singola falso colore`
     - Aprire le proprietà del layer
     - In tipo di visualizzazione impostare `banda singola falso colore`
     - Classificare
       ![overlay.png](./overlay-finale.png)
+> Da quì in avanti procedere con l'interpretazione dei dati da parte dell'archeologo!
 
 ## Sitografia
 
