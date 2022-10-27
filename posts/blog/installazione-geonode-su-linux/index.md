@@ -195,8 +195,6 @@ Per aprire e modificare il file, eseguire:
 nano /opt/geonode/.env
 ```
 
-**`@Eleonora: arrivato a editare fin qui.`**
-
 
 #### 4.1. Il file .env
 
