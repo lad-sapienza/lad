@@ -38,7 +38,14 @@ module.exports = {
         footnotes: true,
         plugins: [
           "gatsby-remark-autolink-headers",
-          "gatsby-remark-highlight-code"
+          {
+            resolve: `gatsby-remark-highlight-code`,
+            options: {
+              terminal: "carbon",
+              theme: "one-dark",
+              lineNumbers: true
+            }
+          }
         ]
       },
     },
