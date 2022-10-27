@@ -178,19 +178,20 @@ Per facilità, si userà in questa guida [`nano`](https://linux.die.net/man/1/na
 
 Per comprendere la compilazione di alcuni di questi parametri è opportuno spiegare brevemente il sistema di autenticazione e autorizzazione di Geonode ed il suo rapporto con le componenti esterne che utilizza per determinate operazioni, come ad esempio Geoserver.
 Geonode ha un sistema di autenticazione che si basa sul sistema di sicurezza di [Django](https://www.djangoproject.com/), il framework con il quale è stato realizzato il software, che consente al programma di gestire utenti, gruppi, ruoli e permessi, mentre le componenti esterne come Geoserver, hanno il loro sistema di autenticazione che deve essere sincronizzato con quello di Geonode. Geonode interagisce con Geoserver utilizzando un sistema di sicurezza basato sul protocollo [OAuth2](https://it.wikipedia.org/wiki/OAuth), questo consente agli utenti registrati su Geonode di poter accedere direttamente a Geoserver. 
-Geonode è abilitato per fare da _**OAuth Provider**_ per certificare la veridicità dell'identità dell'utente, consentendo così al sistema di lavorare in un ambiente isolato e consentire al software stesso di autenticare utenti privati gestiti dal sottosistema di autenticazione DJango.
-Dunque nel file .env troveremo tre campi che si riferiscono al sistema di autenticazione:
+Geonode è abilitato per fare da `OAuth Provider` per certificare la veridicità dell'identità dell'utente, consentendo così al sistema di lavorare in un ambiente isolato e consentire al software stesso di autenticare utenti privati gestiti dal sottosistema di autenticazione Django.
+
+Dunque nel file .env troveremo tre voci che si riferiscono al sistema di autenticazione:
 - OAUTH2_CLIENT_ID
 - OAUTH2_CLIENT_SECRET
 - SECRET_KEY
 
-L'installazione di Geonode normalmente assegna a questi campi dei valori di default:
+L'installazione di Geonode normalmente assegna a queste voci dei valori di default:
 
 - OAUTH2_CLIENT_ID=Jrchz2oPY3akmzndmgUTYrs9gczlgoV20YPSvqaV
 - OAUTH2_CLIENT_SECRET=rCnp5txobUo83EpQEblM8fVj3QT5zb5qRfxNsuPzCqZaiRyIoxM4jdgMiZKFfePBHYXCLd7B8NlkfDBY9HKeIQPcy5Cp08KQNpRHQbjpLItDHv12GvkSeXp6OxaUETv3
 - SECRET_KEY='myv-y4#7j-d*p-__@j#*3z@!y24fz8%^z2v6atuy4bo9vqr1_a'
 
-Valori che poi ritroveremo nell'area di amministrazione nella sezione _**Home - Django OAuth Toolkit - Applications - GeoServer**_ . che consigliamo di modificare una volta finita l'installazione sia nel file .env che nella parte amministrativa.
+Valori che poi ritroveremo nell'area di amministrazione nella sezione **Home > Django OAuth Toolkit > Applications > GeoServer**, che consigliamo di modificare una volta finita l'installazione sia nel file `.env` che nella parte amministrativa.
 Per maggiori informazioni potete leggere il capitolo specifico di Geonode in cui parla del sistema di Autenticazione e Autorizzazioni a questo [link](https://docs.geonode.org/en/master/advanced/components/index.html).
 
 
@@ -272,8 +273,6 @@ HAYSTACK_SEARCH=False
 HAYSTACK_ENGINE_URL=http://elasticsearch:9200/
 HAYSTACK_ENGINE_INDEX_NAME=haystack
 HAYSTACK_SEARCH_RESULTS_PER_PAGE=200
-GEONODE_LB_HOST_IP=_**tuodominio.com**_ @Eleonora: ma questo l'avevamo già definito sopra! @Julian Effettivamente è vero, ma mi sono accorta che è cosi anche nel file originale. Forse è un loro refuso quindi possiamo togliere
-GEONODE_LB_PORT=80 @Eleonora: anche questo l'avevamo definito sopra, no? @Julian idem
 
 HTTP_HOST=
 HTTPS_HOST=https://geonode.example.com
