@@ -29,21 +29,14 @@ Alcuni dei commandi che vendono elencati necessitano per poter essere eseguiti d
 
 ## Guida all'installazione
 
-### 1. Aggiunta del repository UbuntuGIS per la facila installazione dei pacchetti
+### 1. Installazione delle dipendenze generiche
+
+Per poter funzionare, GeoNode ha bisogno di alcuni pacchetti software generici legati alle funzionalità GIS. Per quanto generici, queste librerie e software sono comunque settoriali, relativi alla visualizzzione e analisi spaziale, e quindi non sono disponibili nel _repository_ principale di Ubuntu, chiamato **Main**. Si può considerare il _reposotory_ Linux come un registro centralizzato dove vengono elencati e resi disponibili software e librerie per una installazione facilitata e se si vuole approfondire l'argomento si rimanda all'rticolo in inglese disponibile a l seguente indirizzo:[https://itsfoss.com/ubuntu-repositories/](https://itsfoss.com/ubuntu-repositories/).
 
 
-Il primo passaggio che dobbiamo compiere è quello di aggiungere il repository [Ubuntugis](https://wiki.ubuntu.com/UbuntuGIS) alla  lista di fonti del nostro sistema operativo per l'installazione dei pacchetti. Si tratta di un repository ufficiale e specializata per il mondo GIS che rende possibile installare in maniera facilitata i software e pacchetti necessari per poter lavorare con i dati geografici.
+#### 1.1. Aggiunta del repository UbuntuGIS
 
-Più informazioni su cosa sono i _repository_ nel mondo Linux sono disponibili all'indirizzo [https://itsfoss.com/ubuntu-repositories/](https://itsfoss.com/ubuntu-repositories/).
-
-Inseriamo dunque il primo commando:
-
-```bash
-sudo add-apt-repository ppa:ubuntugis/ppa
-```
-
-Questo comando permette di installare il repository più aggiornato specifico di UbuntuGis contenuto in un `PPA`, ovvero un  _Personal Package Archive_.
-Tra i numerosi contenuti a cui dà accesso questo pacchetto ricordiamo
+I pacchetti necessari sono mantenuti nel _repository_ [Ubuntugis](https://wiki.ubuntu.com/UbuntuGIS). Si tratta di un _repository_ ufficiale e specializato per il mondo GIS che rende possibile installare in maniera facilitata software e pacchetti necessari per poter lavorare con i dati geografici. Tra i numerosi contenuti a cui dà accesso questo pacchetto ricordiamo:
 - la libreria [GDAL](https://gdal.org/) che serve per leggere e scrivere numerosi formati dati geografici, 
 - [GRASS](https://gdal.org/), 
 - [Mapnik](https://mapnik.org/), 
@@ -51,9 +44,13 @@ Tra i numerosi contenuti a cui dà accesso questo pacchetto ricordiamo
 - [Mapserver](https://mapserver.org/)
 - ecc.
 
-### 2. Aggiornamento dell'indice
+Si aggiunge il _repository_ alla lista delle _repository_ disponibili e attive:
 
-Dopo l'installazione di UbuntuGis è necessario aggiornare il nostro indice dei software disponibili: il server con il seguente comando:
+```bash
+sudo add-apt-repository ppa:ubuntugis/ppa
+```
+
+E quindi si aggiorna l'indice:
 
 ```bash
 sudo apt update –y
@@ -62,8 +59,7 @@ sudo apt update –y
 Ricordiamo che `-y` sta per `yes` e permette di sopprimere eventuali richieste di conferme da parte del programma di installazione, rispondendo a tutte positivamente.
 
 
-### 3. Installazione delle dipendenze
-
+#### 1.2. Installazione delle dipendenze generiche
 
 Siamo ora pronti per installati una serie di pacchetti e librerie, necessari all'installazione di Geonode. Anche in questo caso forniamo la risposta di default `-y` per velocizzare il processo di installazione.
 
@@ -79,9 +75,10 @@ Nel commando appena inserito i vari pacchetti sono elencati separati da spazio. 
 - ecc.
 
 
-### 4. Installazione di Docker
+### 2. Installazione di Docker
 Come accennato nei paragrafi iniziali, si installerà Geonode come un _conmtainer_ di Docker, dunque è fondamentale installare i pacchetti preliminari necessari. È quindi necessario attivare il _repository_ Universe, che è un repository standard di Ubuntu, che in modo simile al _repository_ Main contiene software FOS (free and open source), ma a differenza di questo non è mantenuto dagli sviluppatori di Ubuntu, i quali non garantiscono aggiornamenti costanti di sicurezza.
 
+#### 2.1 Aggiungiamo il repository Universe
 ```bash
 sudo add-apt-repository universe
 ```
@@ -90,30 +87,34 @@ Successivamente è necessario aggiornare l'indice:
 sudo apt-get update –y
 ```
 
+#### 2.2. Installiamo le dipendenze di Docker
 A questo punto siamo pronti per installare le dipendenze di Docker, tra i quali anche [git](../git-controllo-di-versioni-1/) e alcuni pacchetti per la sicurezza dell'installazione:
 
 ```bash
 sudo apt-get install -y git-core git-buildpackage debhelper devscripts apt-transport-https ca-certificates curl gnupg-agent software-properties-common
 ```
 
+#### 2.3. Installazione della chiave crittografica di Docker
 Si è quasi pronti a scaricare Docker per Ubuntu dal [sito ufficiale](https://download.docker.com/linux/ubuntu/gpg); è solo necessario prima scaricare e installare una chiave crittografica di verifica che assicura che il pacchetto che si verrà installato è esattamente quello ufficialmente rilasciato. Si usera [cURL](https://curl.se/) per scaricare la chiave e `apt-key add` per installarla:
 
 ```bash
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 ```
 
+#### 2.4. Aggiungiamo il repository specifico di Docker
 Possiamo quindi aggiungere il _repository_ di Docker e aggiornare l'indice:
 
 ```bash
 sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu focal stable"
 sudo apt-get update –y
 ```
-
+#### 2.5 Installiamo Docker
 E finalmente è possibile installare Docker:
 ```bash
 sudo apt-get install -y docker-ce docker-ce-cli containerd.io
 ```
 
+#### 2.6. Installiamo Docker Composer
 A differenza della guida ufficiale, che potrete trovare a questo [link](https://docs.geonode.org/en/master/install/advanced/core/index.html#docker), questa installazione qui descritta prevede l’aggiornamento di `Docker Compose` alla versione 1.29. [Docker Compose](https://docs.docker.com/get-started/08_using_compose/) è uno strumento sviluppato per definire e condividere applicazioni composti da molti _container_:
 
 ```bash
@@ -127,11 +128,14 @@ I quattro commandi sopra, in ordine:
 - scaricano il pacchetto,
 - lo rendono eseguibile, aggiungendo i permessi di esecuzione (`+x`) al file,
 - aggiungiamo all'utente corrente (ovvero il nostro, quello che sta faccendo l'installazione) il gruppo `docker` ([maggiori informazioni qui](https://techoverflow.net/2019/04/30/what-does-sudo-usermod-a-g-docker-user-do-on-linux/)),
-- infine, cambiamo (`su` sta per `switch user`, ovvero appunto cambia utente) l'utente corrente (@Eleonora: questo commando mi sembra che sia tautologico: siamo certi che sia necessario cambiare l'utente loggato con ... l'utente loggato?)
+- infine, cambiamo (`su` sta per `switch user`, ovvero appunto cambia utente) l'utente corrente
 
-### 5. Installazione di Genode
+**`@Eleonora: questo commando mi sembra che sia tautologico: siamo certi che sia necessario cambiare l'utente loggato con ... l'utente loggato?`**
 
-A questo punto è possibile installare Geonode, per cui si crea la cartella che conterrà l'installazione (l'opzione `-p` consegnte di creare in automatico tutte le sotto cartelle del percorso in oggetto):
+### 3. Installazione di Genode
+
+#### 3.1. Creazione cartella e configurazione permessi
+A questo punto è possibile installare GeoNode, per cui si crea la cartella che conterrà l'installazione (l'opzione `-p` consegnte di creare in automatico tutte le sotto cartelle del percorso in oggetto):
 
 ```bash
 sudo mkdir -p /opt/geonode/
@@ -145,24 +149,25 @@ sudo chmod -Rf 775 /opt/geonode/
 ```
 
 In dettaglio i commandi sopra permettono di:
-- aggiungere al gruppo `www-data`, lo stesso gruppo del server web (`apache`) @Eleonora: ma l'utente `geonode` non è stato ancora creato o mi sono perso un pezzo?
+- aggiungere al gruppo `www-data`, lo stesso gruppo del server web (`apache`) **`@Eleonora: ma l'utente `geonode` non è stato ancora creato o mi sono perso un pezzo?`**
 - si cambia l'utente proprietario e il gruppo principale alla cartella `/opt/geonode`; il nuovo utente proprietario sarà l'utente `geonode` e il nuovo gruppo principale sarà `www-data`
 - si cambiano al directory `opt/geonode`  permessi in `775`, che dignifica che proprietario e membri del gruppo principale possono leggere, scrivere ed eseguire i file della cartella, mentre gli altri utenti possono solo leggere ed eseguire.
 
 Ci si sposta a questo punto dentro la cartella `/opt` e vi si clona la repository ufficiale di GeoNode, usando `git`; nello specifico si installerà la versione **4.0.0post1** di GeoNode:
- 
+
+#### 3.2. Scaricamento, installazione e avvio di GeoNode
 ```bash
 cd /opt
 git clone https://github.com/GeoNode/geonode.git -b 4.0.0post1
 ```
 
-@Eleonora non è più elegante e comprensibile:
+**`@Eleonora non è forse più elegante e comprensibile:`**
 ```bash
 cd /opt/geonode
 git clone https://github.com/GeoNode/geonode.git -b 4.0.0post1 .
 ```
 
-Ci si sposta delnto la cartella che contiene i file del programma e installiamo (facciamo un _build_) il software:
+Ci si sposta dentro la cartella che contiene i file del programma e installiamo (facciamo un _build_) il software:
 
 ```bash
 cd /opt/geonode
@@ -175,22 +180,46 @@ Una volta conclusa la fase di installazione, che richiede alcuni minuti è possi
 docker-compose up –d
 ```
 
-### 6. Configurazione di GeoNode
+### 4. Configurazione di GeoNode
 
 A questo punto GeoNode è installato e avviato, ma è necessario configurarlo con alcuni parametri minimi personalizzati per un utilizzo ottimale. La configurazine di GeoNode è centralizzata e affidata ad un unico file che contiene le configurazioni principali sotto forma di variabili semplici, che vengono caricate all'avvio del programma e fanno farte dell'ambiente di esecuzione.  
 Il file è `/opt/geonode/.env` ed è necessario un semplice editor di testo per modificarlo.  
 Per facilità, si usera in questa guida [`nano`](https://linux.die.net/man/1/nano), un editor che è spesso incluso nelle installazioni Linux.
+
+Per una maggiore sicurezza, è necessario fornite a GeoNode delle chiavi crittografiche che verranno usati internamente per la comunicazioni tra le varie parti del programma ed anche per l'autenticazione degli utenti. È quindi necessario seguire la seguente guida per attivare la procedura di riconoscimento della proprietà del dominio che si intende usare con [Google console](https://console.cloud.google.com) e attivare una API per avere [0Auth id client e client secrets](https://docs.geoserver.org/latest/en/user/community/oauth2/index.html).
+
+**`@Eleonora: questo non è chiarissimo. Magari me lo spieghi a voce`**
 
 Per aprire e modificare il file, eseguire:
 ```bash
 nano /opt/geonode/.env
 ```
 
-@Eleonora, @Julian: arrivato a editare fin qui.
+**`@Eleonora: arrivato a editare fin qui.`**
 
-Prima di editare il file è necessario attivare la procedura di riconoscimento della proprietà del dominio che si intende usare con [Google console](https://console.cloud.google.com) e attivare una API per avere [0Auth id client e client secrets](https://docs.geoserver.org/latest/en/user/community/oauth2/index.html).
 
-## Il file ENV
+#### 4.1. Il file .env
+
+Nei prossimi paragrafi verranno proposte alcune modifiche al file `.env` utili a personalizzare GeoNode, senza pretesa di essere esaustivi.
+
+**Attenzione**: è molto importante tenere segreto in fase di produzione il file `.env`, dal momento che contiene le password, chiavi crittografiche e altri dati sensibili della vostra applicazione.
+
+Iniziamo con un breve elenco delle voci da cambiare e, poi, diamo una versione completa del file, dopo i cambaimenti.
+
+- `GEONODE_LB_HOST_IP` (circa linea 3 del file): andrebbe valorizzato la con il nome del dominio dove sarà disponibile l'installazione. Solo per fornire un esempio, indichiamo un dominio fasullo: **geonode.example.com**
+- `GEONODE_LB_PORT` (circa linea 4 del file): andrebbe valorizzato la porta dove sarà disponibile l'installazione. Di norma la porta di default del protocollo `http` è l'80 e viene spesso ommessa. Solo per fornire un esempio, indichiamo la porta **80**
+**`@Eleonora: ma POSTGRES_USER, POSTGRES_PASSWORD, GEONODE_DATABASE, GEONODE_DATABASE_PASSWORD, GEONODE_GEODATABASE, GEONODE_GEODATABASE_PASSWORD, GEOSERVER_ADMIN_USER, GEOSERVER_ADMIN_PASSWORD, ADMIN_USERNAME, ADMIN_PASSWORD, ADMIN_EMAIL, DEFAULT_FROM_EMAIL non andrebbero anch'essi personalizati?`**
+- `SITEURL` (circa linea 35 del file): andrebbe valorizzato la con l'URL completo del dominio dove sarà disponibile l'installazione. Solo per riprendere l'esempio di prima, indichiamo un URL fasullo: **https://geonode.example.com**
+@Julian: il resto da fare
+- ALLOWED_HOSTS=['django', '*','geonode.example.com']
+- HTTPS_HOST=https://geonode.example.com
+- GEOSERVER_WEB_UI_LOCATION=https://geonode.example.com/geoserver/
+- GEOSERVER_PUBLIC_LOCATION=https://geonode.example.com/geoserver/
+- GEOSERVER_LOCATION=http://geoserver:8080/geoserver/
+- OAUTH2_API_KEY
+- OAUTH2_CLIENT_ID
+- OAUTH2_CLIENT_SECRET
+- SECRET_KEY
 
 ```ini
 COMPOSE_PROJECT_NAME=geonode
@@ -204,8 +233,8 @@ FORCE_REINIT=false
 INVOKE_LOG_STDOUT=true
 DJANGO_SETTINGS_MODULE=geonode.settings
 GEONODE_INSTANCE_NAME=geonode
-GEONODE_LB_HOST_IP= _**tuo.dominio.com**_
-GEONODE_LB_PORT=_**80**_
+GEONODE_LB_HOST_IP=geonode.example.com
+GEONODE_LB_PORT=80
 PUBLIC_PORT=80
 NGINX_BASE_URL=
 POSTGRES_USER=postgres
@@ -227,9 +256,9 @@ BROKER_URL=amqp://guest:guest@rabbitmq:5672/
 CELERY_BEAT_SCHEDULER=celery.beat:PersistentScheduler
 ASYNC_SIGNALS=True
 
-SITEURL=_**https://tuosito.com**_
+SITEURL=https://geonode.example.com
 
-ALLOWED_HOSTS=['django', '*','tuosito.com']
+ALLOWED_HOSTS=['django', '*','geonode.example.com']
 DEFAULT_BACKEND_UPLOADER=geonode.importer
 TIME_ENABLED=True
 MOSAIC_ENABLED=False
@@ -237,11 +266,11 @@ HAYSTACK_SEARCH=False
 HAYSTACK_ENGINE_URL=http://elasticsearch:9200/
 HAYSTACK_ENGINE_INDEX_NAME=haystack
 HAYSTACK_SEARCH_RESULTS_PER_PAGE=200
-GEONODE_LB_HOST_IP=_**tuodominio.com**_
-GEONODE_LB_PORT=80
+GEONODE_LB_HOST_IP=_**tuodominio.com**_ @Eleonora: ma questo l'avevamo già definito sopra!
+GEONODE_LB_PORT=80 @Eleonora: anche questo l'avevamo definito sopra, no?
 
 HTTP_HOST=
-HTTPS_HOST=_**tuodominio.com**_
+HTTPS_HOST=https://geonode.example.com
 
 HTTP_PORT=80
 HTTPS_PORT=443
@@ -251,8 +280,8 @@ LETSENCRYPT_MODE=disabled
 RESOLVER=127.0.0.11
 
 
-GEOSERVER_WEB_UI_LOCATION=http://tuodominio.com/geoserver/
-GEOSERVER_PUBLIC_LOCATION=http://tuodominio.com/geoserver/
+GEOSERVER_WEB_UI_LOCATION=https://geonode.example.com/geoserver/
+GEOSERVER_PUBLIC_LOCATION=https://geonode.example.com/geoserver/
 GEOSERVER_LOCATION=http://geoserver:8080/geoserver/
 GEOSERVER_ADMIN_USER=admin
 GEOSERVER_ADMIN_PASSWORD=geoserver
@@ -377,22 +406,47 @@ LDAP_GROUP_PROFILE_MEMBER_ATTR=uniqueMember
 
 
 
-### 15.	 Una volta finito di compilare il 
-file .env è necessario digitare nuovamente il comando compose up per fare il restart dei servizi.
+#### 4.2. Riavvio di Genode
 
-`docker-compose up –d`
+Una volta finito di modificare il file `.env` è necessario riavviare i servizi, affinche le nuove configurazoini vengano recepite:
 
-## Procedure di controllo della corretta attivazione dei servizi:
+```bash
+docker-compose up –d
+```
 
-`docker-compose ps`
+## Procedure di controllo della corretta attivazione dei servizi
 
-`docker-compose logs -f django`
+È possibile eseguire dei controlli a verificare che tutti i servizi installati e attivati stiano funzinando correttamente.
 
-`docker-compose logs -f geoserver`
+
+```bash
+docker-compose ps
+```
+
+Fornisce una lista dei _containers_ di un progetto di Compose, con lo stato corrente e le porte esposte. Maggiori informazioni: [https://docs.docker.com/engine/reference/commandline/compose_ps/](https://docs.docker.com/engine/reference/commandline/compose_ps/)
+
+```bash
+docker-compose logs -f django
+```
+
+Visualizza a schermo i log del framework django con il quale è stata realizzata l'applicazione. L'opzione `-f` fa in modo di visualizzare in tempo reale i cambiamenti al file, di fatto “seguendolo” (f = follow). Per uscire dalla visualizzazione usate la combinazione `CTRL+C`.
+Maggiori informazioni sul commando `docker-compose logs` sono disponibili nella guida ufficiale, all'indirizzo: [https://docs.docker.com/engine/reference/commandline/compose_logs/](https://docs.docker.com/engine/reference/commandline/compose_logs/).
+
+```bash
+docker-compose logs -f geoserver
+```
+
+Visualizza a schermo, aggiornandoli in tempo reale, i log di geoserver.
  
-`docker-compose logs -f db`
- 
-`docker-compose logs -f geonode`
+```bash
+docker-compose logs -f db
+```
+Visualizza a schermo, aggiornandoli in tempo reale, i log del database.
+
+```bash
+docker-compose logs -f geonode
+```
+Visualizza a schermo, aggiornandoli in tempo reale, i log di GeoNode.
 
 ## Riferimenti
 **Docker**
