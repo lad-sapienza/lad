@@ -15,22 +15,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: RunAll
-        run: |
-            mkdir -p /home/runner/.ssh
-            echo "$DEPLOY_KEY" > /home/runner/.ssh/github_actions
-            chmod 600 /home/runner/.ssh/github_actions
-            ssh-keyscan -T 20 $SSH_HOST >> /home/runner/.ssh/known_hosts
-            cat >>~/.ssh/config <<END
-            Host LAD
-              HostName $SSH_HOST
-              User $SSH_USER
-              IdentityFile ~/.ssh/github_actions
-              StrictHostKeyChecking no
-            END
-            cat /home/runner/.ssh/github_actions
-            ssh LAD 'ls -la'
-        env:
-          SSH_USER: bogdani
-          SSH_HOST: digilab4.let.uniroma1.it
-          DEPLOY_KEY: ${{ secrets.DEPLOY_KEY }}
+      - name: ls -a via ssh
+        uses: garygrossgarten/github-action-ssh@release
+        with:
+          command: ls -a
+          host: digilab4.let.uniroma1.it
+          username: bogdani
+          privateKey: ${{ secrets.DEPLOY_KEY }}
