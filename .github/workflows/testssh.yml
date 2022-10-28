@@ -1,24 +1,18 @@
-name: TEST
+name: Command via SSH
 
-on:
-  push:
-    branches: [ main ]
-    
-  workflow_dispatch:
-  
+on: push
 
-  repository_dispatch:
-    types: [ publish_blog ]
-    
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-      - name: ls -a via ssh
+      - name: ls -a via OPEN SSH Private Key
         uses: garygrossgarten/github-action-ssh@release
         with:
           command: ls -a
           host: digilab4.let.uniroma1.it
           username: bogdani
-          privateKey: ${{ secrets.DEPLOY_KEY }}
+          privateKey: ${{ secrets.DEPLOY_KEY}}
+        env:
+          CI: true
