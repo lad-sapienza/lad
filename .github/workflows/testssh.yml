@@ -30,6 +30,7 @@ jobs:
               HostKeyAlgorithms +ssh-rsa
               KexAlgorithms diffie-hellman-group14-sha1
               PubkeyAcceptedKeyTypes +ssh-rsa
+              PubkeyAcceptedKeyTypes +ssh-dss
             END
             ssh LAD 'ls -la'
         env:
