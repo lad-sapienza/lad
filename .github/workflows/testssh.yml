@@ -7,14 +7,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Test variables
-        run: "echo ${{ secrets.DEPLOY_KEY}}"
       - name: ls -a via OPEN SSH Private Key
         uses: garygrossgarten/github-action-ssh@release
         with:
           command: ls -a
-          host: digilab4.let.uniroma1.it
-          username: bogdani
+          host: ${{ secrets.DEPLOY_HOST }}
+          username: ${{ secrets.SSH_USER }}
           privateKey: ${{ secrets.DEPLOY_KEY}}
         env:
           CI: true
