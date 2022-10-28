@@ -25,11 +25,16 @@ jobs:
               HostName $SSH_HOST
               User $SSH_USER
               IdentityFile ~/.ssh/github_actions
-              StrictHostKeyChecking no
+              ssh-keyscan $SSH_HOST >> /home/runner/.ssh/known_hosts
             END
         env:
-          SSH_USER: ${{secrets.SSH_USER}}
-          SSH_HOST: ${{secrets.SSH_HOST}}
+          SSH_USER: bogdani
+          SSH_HOST: digilab4.let.uniroma1.it
           DEPLOY_KEY: ${{ secrets.DEPLOY_KEY }}
       - name: List content
-        run: ssh LAD 'ls -la'
+        run: |
+          echo "github_actions contents:"
+          cat /home/runner/.ssh/github_actions
+          echo "known hosts:"
+          cat /home/runner/.ssh/known_hosts
+          ssh LAD 'ls -la'
