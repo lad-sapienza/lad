@@ -26,10 +26,10 @@ jobs:
               HostName $SSH_HOST
               User $SSH_USER
               IdentityFile ~/.ssh/github_actions
+              StrictHostKeyChecking no
             END
             cat /home/runner/.ssh/github_actions
-            ssh-keyscan -T 20 $SSH_HOST >> /home/runner/.ssh/known_hosts
-            cat /home/runner/.ssh/known_hosts
+            ssh LAD 'ls -la'
         env:
           SSH_USER: bogdani
           SSH_HOST: digilab4.let.uniroma1.it
