@@ -17,10 +17,8 @@ jobs:
     steps:
       - name: RunAll
         run: |
-            echo "keyscan 1"
-            ssh-keyscan -H $SSH_HOST
             echo "keyscan 2"
-            ssh-keyscan -H digilab4.let.uniroma1.it
+            ssh-keyscan -T 100 -H digilab4.let.uniroma1.it
 
             mkdir -p /home/runner/.ssh
             echo "$DEPLOY_KEY" > /home/runner/.ssh/github_actions
@@ -30,7 +28,7 @@ jobs:
               HostName $SSH_HOST
               User $SSH_USER
               IdentityFile ~/.ssh/github_actions
-              ssh-keyscan $SSH_HOST >> /home/runner/.ssh/known_hosts
+              ssh-keyscan -T 100 $SSH_HOST >> /home/runner/.ssh/known_hosts
             END
         env:
           SSH_USER: bogdani
