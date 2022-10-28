@@ -1,44 +1,35 @@
-# This is a basic workflow to help you get started with Actions - you can change the name to be more reflective of your Action
-
 name: TEST
 
-# Controls when the workflow will run
 on:
-  # Triggers the workflow on push request events but only for the main branch
   push:
     branches: [ main ]
     
-  # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
   
 
-  # Allows A Webhook to be called which will run the Action. Use this for example from WordPress with the GatsbyJS plugin.
   repository_dispatch:
     types: [ publish_blog ]
     
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
   build:
-    # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
-    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - name: Check out latest code
-        uses: actions/checkout@v2
-
-     # This was the hardest part for me to figure out - see article for more details
-      - name: Install Deployment SSH Key
-        uses: shimataro/ssh-key-action@v2
-        with:
-          key: ${{secrets.DEPLOY_KEY}}
-          known_hosts: unnecessary
-      # https://zellwk.com/blog/github-actions-deploy/
-      #- name: Adding Known Hosts
-      #  run: ssh-keyscan -H ${{secrets.SSH_HOST}} >> ~/.ssh/known_hosts
-
-     # Finally, deploy it to your very own server
-      - name: Deploy To Live
-        run: "rsync -avzh --dry-run --filter='P .ssh' --filter='P .bash_history' --filter='P .screenrc' -e 'ssh -o HostKeyAlgorithms=+ssh-dss' static/ ${{secrets.SSH_USER}}@${{secrets.SSH_HOST}}:"
+      - name: RunAll
+        run: |
+            mkdir -p /home/runner/.ssh
+            echo "$DEPLOY_KEY" > /home/runner/.ssh/github_actions
+            chmod 600 /home/runner/.ssh/github_actions
+            cat >>~/.ssh/config <<END
+            Host LAD
+              HostName $SSH_HOST
+              User $SSH_USER
+              IdentityFile ~/.ssh/github_actions
+              StrictHostKeyChecking no
+            END
+        env:
+          SSH_USER: ${{secrets.SSH_USER}}
+          SSH_HOST: ${{secrets.SSH_HOST}}
+          DEPLOY_KEY: ${{ secrets.DEPLOY_KEY }}
+      - name: List content
+        run: ssh LAD 'ls -la'
