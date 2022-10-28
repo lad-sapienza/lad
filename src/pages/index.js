@@ -205,7 +205,7 @@ const Index = ({ data }) => {
             {/* Ultimi articoli */}
             <Col sm={4}>
               <Container>
-                <h2 className="border-bottom">Ultime dal Blog</h2>
+                <h2 className="border-bottom">Ultimi post dal blog</h2>
                 {data.allMarkdownRemark.nodes.map((node, i) => (
                   <BlogPreview
                     key={i}
@@ -236,11 +236,10 @@ const Index = ({ data }) => {
 
 //style
 const Wrapper = styled.section`
-  a {
-    text-decoration: none !important;
-    color: currentColor;
+  .col-intro a {
+    color: #1963F7;
   }
-  a:hover {
+  col-intro. a:hover {
     text-decoration: none !important;
     color: rgba(21, 71, 254, 0.7);
   }
@@ -249,7 +248,7 @@ const Wrapper = styled.section`
   }
   h1,
   h2 {
-    color: rgba(21, 71, 154, 0.7);
+    color: rgba(0, 45, 137, .9);
     font-weight: 200 !important;
   }
 `;
@@ -264,7 +263,7 @@ export const query = graphql`
     }
     allMarkdownRemark(
       sort: { fields: frontmatter___date, order: DESC }
-      limit: 4
+      limit: 5
       filter: { fileAbsolutePath: { regex: "/posts/blog/" } }
     ) {
       nodes {
