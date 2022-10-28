@@ -5,7 +5,7 @@ licenza: CC BY 4.0 International
 livello: avanzato
 tags: [geodati, open source, gis, webGIS, tutorial]
 img: ./geonode.png
-date: 2022-10-18
+date: 2022-10-28
 sommario: "Geonode è un software molto diffuso per la condivisione dei dati geografici, utilizzato da numerosi enti pubblici e privati per la gestione e la distribuzione di varie tipologie di risorse cartografiche e non solo."
 ---
 
@@ -176,22 +176,26 @@ A questo punto GeoNode è installato e avviato, ma è necessario configurarlo co
 Il file è `/opt/geonode/.env` ed è necessario un semplice editor di testo per modificarlo.  
 Per facilità, si userà in questa guida [`nano`](https://linux.die.net/man/1/nano), un editor che è spesso incluso nelle installazioni Linux.
 
-Per comprendere la compilazione di alcuni di questi parametri è opportuno spiegare brevemente il sistema di autenticazione e autorizzazione di Geonode ed il suo rapporto con le componenti esterne che utilizza per determinate operazioni, come ad esempio Geoserver.
-Geonode ha un sistema di autenticazione che si basa sul sistema di sicurezza di [Django](https://www.djangoproject.com/), il framework con il quale è stato realizzato il software, che consente al programma di gestire utenti, gruppi, ruoli e permessi, mentre le componenti esterne come Geoserver, hanno il loro sistema di autenticazione che deve essere sincronizzato con quello di Geonode. Geonode interagisce con Geoserver utilizzando un sistema di sicurezza basato sul protocollo [OAuth2](https://it.wikipedia.org/wiki/OAuth), questo consente agli utenti registrati su Geonode di poter accedere direttamente a Geoserver. 
+#### 4.1. Sistema di autenticazione e sutorizzazione
+
+Per comprendere la compilazione di alcuni di questi parametri è opportuno spiegare brevemente il sistema di autenticazione e autorizzazione di Geonode ed il suo rapporto con le altre componenti che utilizza per determinate operazioni, come ad esempio Geoserver.
+Geonode ha un sistema di autenticazione che si basa sul sistema di sicurezza di [Django](https://www.djangoproject.com/), il framework con il quale è stato realizzato il software, che consente al programma di gestire utenti, gruppi, ruoli e permessi, mentre le altre componenti integrate come Geoserver, hanno il loro sistema di autenticazione che deve essere sincronizzato con quello di Geonode. Geonode interagisce con Geoserver utilizzando un sistema di sicurezza basato sul protocollo [OAuth2](https://it.wikipedia.org/wiki/OAuth), questo consente agli utenti registrati su Geonode di poter accedere direttamente a Geoserver. 
 Geonode è abilitato per fare da `OAuth Provider` per certificare la veridicità dell'identità dell'utente, consentendo così al sistema di lavorare in un ambiente isolato e consentire al software stesso di autenticare utenti privati gestiti dal sottosistema di autenticazione Django.
 
-Dunque nel file .env troveremo tre voci che si riferiscono al sistema di autenticazione:
+Dunque nel file `.env` troveremo tre voci che si riferiscono al sistema di autenticazione:
 - OAUTH2_CLIENT_ID
 - OAUTH2_CLIENT_SECRET
 - SECRET_KEY
 
-L'installazione di Geonode normalmente assegna a queste voci dei valori di default:
+L'installazione di Geonode normalmente assegna a queste voci i seguenti valori di default:
 
-- OAUTH2_CLIENT_ID=Jrchz2oPY3akmzndmgUTYrs9gczlgoV20YPSvqaV
-- OAUTH2_CLIENT_SECRET=rCnp5txobUo83EpQEblM8fVj3QT5zb5qRfxNsuPzCqZaiRyIoxM4jdgMiZKFfePBHYXCLd7B8NlkfDBY9HKeIQPcy5Cp08KQNpRHQbjpLItDHv12GvkSeXp6OxaUETv3
-- SECRET_KEY='myv-y4#7j-d*p-__@j#*3z@!y24fz8%^z2v6atuy4bo9vqr1_a'
+```
+OAUTH2_CLIENT_ID=Jrchz2oPY3akmzndmgUTYrs9gczlgoV20YPSvqaV
+OAUTH2_CLIENT_SECRET=rCnp5txobUo83EpQEblM8fVj3QT5zb5qRfxNsuPzCqZaiRyIoxM4jdgMiZKFfePBHYXCLd7B8NlkfDBY9HKeIQPcy5Cp08KQNpRHQbjpLItDHv12GvkSeXp6OxaUETv3
+SECRET_KEY='myv-y4#7j-d*p-__@j#*3z@!y24fz8%^z2v6atuy4bo9vqr1_a'
+```
 
-Valori che poi ritroveremo nell'area di amministrazione nella sezione **Home > Django OAuth Toolkit > Applications > GeoServer**, che consigliamo di modificare una volta finita l'installazione sia nel file `.env` che nella parte amministrativa.
+Questi valori sono accessibili anche attraverso l'interfaccia grafica, nell'area di amministrazione nella sezione **Home > Django OAuth Toolkit > Applications > GeoServer**, che consigliamo di modificare una volta finita l'installazione sia nel file `.env` che nella parte amministrativa.
 Per maggiori informazioni potete leggere il capitolo specifico di Geonode in cui parla del sistema di Autenticazione e Autorizzazioni a questo [link](https://docs.geonode.org/en/master/advanced/components/index.html).
 
 
@@ -209,23 +213,13 @@ Nei prossimi paragrafi verranno proposte alcune modifiche al file `.env` utili a
 
 Iniziamo con un breve elenco delle voci da cambiare e, poi, diamo una versione completa del file, dopo i cambiamenti.
 
-- `GEONODE_LB_HOST_IP` (circa linea 3 del file): andrebbe valorizzato la con il nome del dominio dove sarà disponibile l'installazione. Solo per fornire un esempio, indichiamo un dominio fasullo: **geonode.example.com**
-- `GEONODE_LB_PORT` (circa linea 4 del file): andrebbe valorizzato la porta dove sarà disponibile l'installazione. Di norma la porta di default del protocollo `http` è l'80 e viene spesso ommessa. Solo per fornire un esempio, indichiamo la porta **80**
+- `GEONODE_LB_HOST_IP` (circa linea 12 del file): andrebbe valorizzato la con il nome del dominio dove sarà disponibile l'installazione. Solo per fornire un esempio, indichiamo un dominio fasullo: **geonode.example.com**
+- `GEONODE_LB_PORT` (circa linea 13 del file): andrebbe valorizzato la porta dove sarà disponibile l'installazione. Di norma la porta di default del protocollo `http` è l'80 e viene spesso ommessa. Solo per fornire un esempio, indichiamo la porta **80**
 - `SITEURL` (circa linea 35 del file): andrebbe valorizzato la con l'URL completo del dominio dove sarà disponibile l'installazione. Solo per riprendere l'esempio di prima, indichiamo un URL fasullo: **https://geonode.example.com**
-@Julian: il resto da fare
-- ALLOWED_HOSTS=['django', '*','geonode.example.com']
-- HTTPS_HOST=https://geonode.example.com
-- GEOSERVER_WEB_UI_LOCATION=https://geonode.example.com/geoserver/
-- GEOSERVER_PUBLIC_LOCATION=https://geonode.example.com/geoserver/
-- GEOSERVER_LOCATION=http://geoserver:8080/geoserver/
 - ADMIN_EMAIL=admin@geonode.example.com
 - DEFAULT_FROM_EMAIL='GeoNode <no-reply@geonode.example.com>'
 
-Per questi ultimi tre campi si veda il paragrafo precedente.
-- OAUTH2_CLIENT_ID=Jrchz2oPY3akmzndmgUTYrs9gczlgoV20YPSvqaV
-- OAUTH2_CLIENT_SECRET=rCnp5txobUo83EpQEblM8fVj3QT5zb5qRfxNsuPzCqZaiRyIoxM4jdgMiZKFfePBHYXCLd7B8NlkfDBY9HKeIQPcy5Cp08KQNpRHQbjpLItDHv12GvkSeXp6OxaUETv3
-- SECRET_KEY='myv-y4#7j-d*p-__@j#*3z@!y24fz8%^z2v6atuy4bo9vqr1_a'
-
+Delle tre configurazioni relative a `OAUTH2_CLIENT_ID`, `OAUTH2_CLIENT_SECRET` e `SECRET_KEY`, si è hià detto nel paragrafo precedente.
 
 
 ```ini
@@ -265,7 +259,7 @@ ASYNC_SIGNALS=True
 
 SITEURL=https://geonode.example.com
 
-ALLOWED_HOSTS=['django', '*','geonode.example.com']
+ALLOWED_HOSTS=['django', '*']
 DEFAULT_BACKEND_UPLOADER=geonode.importer
 TIME_ENABLED=True
 MOSAIC_ENABLED=False
@@ -285,8 +279,8 @@ LETSENCRYPT_MODE=disabled
 RESOLVER=127.0.0.11
 
 
-GEOSERVER_WEB_UI_LOCATION=https://geonode.example.com/geoserver/
-GEOSERVER_PUBLIC_LOCATION=https://geonode.example.com/geoserver/
+GEOSERVER_WEB_UI_LOCATION=http://localhost/geoserver/
+GEOSERVER_PUBLIC_LOCATION=http://localhost/geoserver/
 GEOSERVER_LOCATION=http://geoserver:8080/geoserver/
 GEOSERVER_ADMIN_USER=admin
 GEOSERVER_ADMIN_PASSWORD=geoserver
