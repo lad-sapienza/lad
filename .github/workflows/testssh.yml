@@ -1,18 +1,37 @@
-name: Command via SSH
+name: TEST
 
-on: push
+on:
+  push:
+    branches: [ main ]
+    
+  workflow_dispatch:
+  
 
+  repository_dispatch:
+    types: [ publish_blog ]
+    
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-      - name: ls -a via OPEN SSH Private Key
-        uses: garygrossgarten/github-action-ssh@release
-        with:
-          command: ls -a
-          host: ${{ secrets.DEPLOY_HOST }}
-          username: ${{ secrets.SSH_USER }}
-          privateKey: ${{ secrets.DEPLOY_KEY}}
+      - name: RunAll
+        run: |
+            mkdir -p /home/runner/.ssh
+            echo "$DEPLOY_KEY" > /home/runner/.ssh/github_actions
+            chmod 600 /home/runner/.ssh/github_actions
+            cat >>~/.ssh/config <<END
+            Host LAD
+              HostName $SSH_HOST
+              User $SSH_USER
+              IdentityFile ~/.ssh/github_actions
+              StrictHostKeyChecking no
+              HostKeyAlgorithms=+ssh-dss
+              HostKeyAlgorithms +ssh-rsa
+              PubkeyAcceptedKeyTypes +ssh-rsa
+            END
+            ssh LAD 'ls -la'
         env:
-          CI: true
+          SSH_USER: bogdani
+          SSH_HOST: digilab4.let.uniroma1.it
+          DEPLOY_KEY: ${{ secrets.DEPLOY_KEY }}
