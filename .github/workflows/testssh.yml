@@ -37,5 +37,9 @@ jobs:
           cat /home/runner/.ssh/github_actions
           echo "known hosts:"
           cat /home/runner/.ssh/known_hosts
-      - name: LS remote
-        run: ssh LAD 'ls -la'
+          echo "keyscan 1"
+          ssh-keyscan -H $SSH_HOST
+          echo "keyscan 2"
+          ssh-keyscan -H digilab4.let.uniroma1.it
+        env:
+          SSH_HOST: digilab4.let.uniroma1.it
