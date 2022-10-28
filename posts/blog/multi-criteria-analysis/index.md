@@ -5,7 +5,7 @@ licenza: CC BY 4.0 International
 livello: avanzato
 tags: [gis, spatial analysis, landscape archaeology, tutorial]
 img: ./mca.png
-date: 2022-10-25
+date: 2022-10-28
 sommario: "In questa guida sarà affrontato un caso di utilizzo di multi criteria weighted-overlay analysis tramite software QGIS. Verrà preso in considerazione un caso di studio concreto, una domanda di tipo archeologico relativa ad un ambito cronologico e geografico ben preciso..."
 ---
 
