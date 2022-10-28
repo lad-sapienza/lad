@@ -41,4 +41,4 @@ jobs:
 
      # Finally, deploy it to your very own server
       - name: Deploy To Live
-        run: "rsync -avzh --dry-run --filter='P .ssh' --filter='P .bash_history' --filter='P .screenrc' -e 'ssh -o ssh HostKeyAlgorithms=+ssh-dss' static/ ${{secrets.SSH_USER}}@${{secrets.SSH_HOST}}:"
+        run: "rsync -avzh --dry-run --filter='P .ssh' --filter='P .bash_history' --filter='P .screenrc' -e 'ssh -o HostKeyAlgorithms=+ssh-dss' static/ ${{secrets.SSH_USER}}@${{secrets.SSH_HOST}}:"
