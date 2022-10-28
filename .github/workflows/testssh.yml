@@ -17,6 +17,11 @@ jobs:
     steps:
       - name: RunAll
         run: |
+            echo "keyscan 1"
+            ssh-keyscan -H $SSH_HOST
+            echo "keyscan 2"
+            ssh-keyscan -H digilab4.let.uniroma1.it
+
             mkdir -p /home/runner/.ssh
             echo "$DEPLOY_KEY" > /home/runner/.ssh/github_actions
             chmod 600 /home/runner/.ssh/github_actions
@@ -35,11 +40,5 @@ jobs:
         run: |
           echo "github_actions contents:"
           cat /home/runner/.ssh/github_actions
-          echo "known hosts:"
-          cat /home/runner/.ssh/known_hosts
-          echo "keyscan 1"
-          ssh-keyscan -H $SSH_HOST
-          echo "keyscan 2"
-          ssh-keyscan -H digilab4.let.uniroma1.it
         env:
           SSH_HOST: digilab4.let.uniroma1.it
