@@ -26,8 +26,9 @@ jobs:
               User $SSH_USER
               IdentityFile ~/.ssh/github_actions
               StrictHostKeyChecking no
-              HostKeyAlgorithms=+ssh-dss
+              HostKeyAlgorithms +ssh-dss
               HostKeyAlgorithms +ssh-rsa
+              KexAlgorithms diffie-hellman-group14-sha1
               PubkeyAcceptedKeyTypes +ssh-rsa
             END
             ssh LAD 'ls -la'
