@@ -89,7 +89,7 @@ nano index.md
 ```
 
 E scriviamo*
-```
+```md
 # Diario di scavo
 Questo repository contiene il diario di scavo diviso per settori e in ordine cronologico.
 ```
