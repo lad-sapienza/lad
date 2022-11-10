@@ -31,7 +31,7 @@ Direzione missione:
 
 Senior:
 - Domizia D'Erasmo (Sapienza, Roma, Italia)
-- Nomei Giovino (Sapienza, Roma, Italia)
+- Noemi Giovino (Sapienza, Roma, Italia)
 - Paolo Rosati (Sapienza, Roma, Italia)
 
 BA, MA:
