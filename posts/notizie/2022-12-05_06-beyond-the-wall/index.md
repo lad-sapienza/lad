@@ -2,7 +2,7 @@
 title: "Workshop: Beyond the Wall: City Walls & Urban planning"
 img: ./beyond_the_wall.jpg
 date: 2022-12-05
-sommario: "Presentazione del progetto Çuka e Ajtoit al convegno “Epirus in the Roman World and the New Research on the Acropolis of Butrint by the Albanian Institute of Archaeology and the University of Bologna”"
+sommario: "Partecipazione di Julian Bogdani al workshop internazionale ““Beyond the Wall: City Walls & Urban planning”"
 ---
 
 
