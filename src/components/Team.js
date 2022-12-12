@@ -42,6 +42,14 @@ const Team = () => {
       "researchgate": "https://www.researchgate.net/profile/Paolo-Rosati-2"
     },
     {
+      "name": "Nadia Aleotti",
+      "image": "images/naleotti.jpg",
+      "position": "Membro del laboratorio",
+      "affiliation": "Assegnista di ricerca Metodologie di Ricerca Archeologica, Dip. SARAS, Sapienza",
+      "academia": "https://uniroma1.academia.edu/NadiaAleotti",
+      "researchgate": "https://www.researchgate.net/profile/Nadia-Aleotti"
+    },
+    {
       "name": "Domizia D'Erasmo",
       "image": "images/dderasmo.jpg",
       "position": "Membro del laboratorio",
