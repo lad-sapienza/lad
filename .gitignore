@@ -68,3 +68,6 @@ yarn-error.log
 .pnp.js
 # Yarn Integrity file
 .yarn-integrity
+static/blog/statistiche-metrologiche-automatiche-con-qgis/rilievo.gpkg-wal
+static/blog/statistiche-metrologiche-automatiche-con-qgis/rilievo.gpkg-shm
+.gitignore
