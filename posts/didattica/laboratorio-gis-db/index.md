@@ -12,10 +12,11 @@ Nelle ultime edizioni, il laboratorio GIS è stato affiancato da incontri dedica
 
 Il laboratorio è coordinato da **Julian Bogdani** in collaborazione con **Domizia D'Erasmo** e **Paolo Rosati**.
 
-## Edizione 2022
-Sono completate le iscrizioni ai laboratori QGIS e Database per l'anno accademico 2021-2022. Per il programma e i dettagli seguire [questo collegamento](/notizie/2022-02-04-laboratori-didattici-di-archeologia-digitale-2021-2022/)
+## Edizione 2023
+Sono aperte le iscrizioni ai laboratori didattici di archeologia digitale (GIS e Database) per l'anno accademico 2021-2022. Per il programma e i dettagli seguire [questo collegamento](/notizie/2022-12-20-laboratori-didattici-di-archeologia-digitale-2022-2023/).
 
 ## Edizioni precedenti
+- [Scarica la locandina dell'edizione 2022/2023](../../didattica/laboratorio-gis-db/lab-gis-2022-2023.pdf)
 - [Scarica la locandina dell'edizione 2021/2022](../../didattica/laboratorio-gis-db/lab-gis-2021-2022.pdf)
 - [Scarica la locandina dell'edizione 2020/2021](lab-gis-2020-2021.pdf)
 - [Scarica la locandina dell'edizione 2019/2020](lab-gis-2019-2020.pdf)
