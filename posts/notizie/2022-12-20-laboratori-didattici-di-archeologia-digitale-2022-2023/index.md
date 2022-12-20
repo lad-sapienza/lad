@@ -8,7 +8,7 @@ sommario: "L'offerta formativa del Laboratorio di Archeologia Digitale per l'ann
 Sono aperte le iscrizioni ai laboratori didattici di Archeologia Digitale, organizzati nell’ambito dei corsi di Metodologie della ricerca Archeologica, Digital Archaeology e Informatica Umanistica, in collaborazione con il progetto [ERC Advanced PAThs](https://atlas.paths-erc.eu/) e [la missione archeologica della Sapienza in Albania](https://lad.saras.uniroma1.it/ricerca/missione-archeologica-sapienza-a-cuka-e-ajtoit-albania/), che si pongono l’obiettivo di fornire le basi teoriche e pratiche necessarie per impostare e sviluppare in autonomia i propri progetti **GIS** e affrontare il mondo della cartografia numerica, della creazione e gestione di **banche dati** online (DB, SQL e BraDypUS).
 
 
-I laboratori si terranno in presenza presso Sapienza Università di Roma. I piano, Aula III multimediale, Edificio di Lettere e Filosofia, CU003, nei giorni di 27, 28 Aprile e 4, 5, 11, 12 Maggio 2023.
+I laboratori si terranno in presenza presso Sapienza Università di Roma, Aula III multimediale, al primo piano dell'edificio di Lettere e Filosofia (CU003), nei giorni di 27, 28 Aprile e 4, 5, 11, 12 Maggio 2023.
 
 Responsabile: Julian Bogdani ([julian.bogdani@uniroma1.it](mailto:julian.bogdani@uniroma1.it))  
 Tutor: Domizia D'Erasmo ([domizia.derasmo@uniroma1.it](mailto:domizia.derasmo@uniroma1.it))
@@ -18,8 +18,8 @@ Tutor: Domizia D'Erasmo ([domizia.derasmo@uniroma1.it](mailto:domizia.derasmo@un
 ## Calendario
 
 - Modulo **GIS base** (15 ore):
-  - 27 Aprile, ore 13.00-18.00; 15.00-17:00
-  - 28 Aprile, ore 13.00-18.00; 15.00-17:00
+  - 27 Aprile, ore 13.00-18.00
+  - 28 Aprile, ore 13.00-18.00
   - 4 Maggio, ore 13.00-18:00
 - Modulo **banche dati relazionali** (5 ore):
   - 5 Maggio, ore 13.00-18:00
@@ -30,7 +30,7 @@ Tutor: Domizia D'Erasmo ([domizia.derasmo@uniroma1.it](mailto:domizia.derasmo@un
 
 ## Iscrizione
 
-Per iscrivervi ai laboratori è necessario compilare il modulo Google al link [https://forms.gle/zPH9PBXnap3w9uzf7](https://forms.gle/zPH9PBXnap3w9uzf7).  
+Per iscriversi ai laboratori è necessario compilare il modulo Google al link [https://forms.gle/zPH9PBXnap3w9uzf7](https://forms.gle/zPH9PBXnap3w9uzf7).  
 In caso di sopravvenute complicazioni è fondamentale notificare all’indirizzo [julian.bogdani@uniroma1.it](mailto:julian.bogdani@uniroma1.it).  
 **Ogni modulo avrà un limite massimo di 50 partecipanti**
 
@@ -46,4 +46,4 @@ I quattro moduli della durata totale di 26 ore rilasciano un attestato di freque
 
 ### Elenco delle comunicazioni
 
-- 20/12/2022: Pubblicazione online della call per i laboratori didattiti 2022-2023
+- 20/12/2022: Pubblicazione online della call per i laboratori didattici 2022-2023
