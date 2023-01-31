@@ -3,6 +3,7 @@ title: "Laboratori didattici di Archeologia Digitale 2022-2023"
 img: ./lab-lad.png
 date: 2022-12-20
 sommario: "L'offerta formativa del Laboratorio di Archeologia Digitale per l'anno accademico 2022-2023. Iscrizione, partecipazione, calendario..."
+pinned: true
 ---
 
 Sono aperte le iscrizioni ai laboratori didattici di Archeologia Digitale, organizzati nell’ambito dei corsi di Metodologie della ricerca Archeologica, Digital Archaeology e Informatica Umanistica, in collaborazione con il progetto [ERC Advanced PAThs](https://atlas.paths-erc.eu/) e [la missione archeologica della Sapienza in Albania](https://lad.saras.uniroma1.it/ricerca/missione-archeologica-sapienza-a-cuka-e-ajtoit-albania/), che si pongono l’obiettivo di fornire le basi teoriche e pratiche necessarie per impostare e sviluppare in autonomia i propri progetti **GIS** e affrontare il mondo della cartografia numerica, della creazione e gestione di **banche dati** online (DB, SQL e BraDypUS).
