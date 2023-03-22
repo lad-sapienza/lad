@@ -101,7 +101,7 @@ const Team = () => {
       <Row className="py-5">
         <Col md="6" lg="4">
           <Card>
-            <Card.Img variant="top" src={ jb.image } alt={ jb.name } />
+            <Card.Img variant="top" src={ jb.image } alt={ `LAD ${jb.position}: ${jb.name}` } />
           </Card>
         </Col>
         <Col>
@@ -129,7 +129,7 @@ const Team = () => {
         {teamData.map( (m, mk) => {
           return (
           <Card key={mk}>
-            <Card.Img variant="top" src={ m.image } alt={ m.name } />
+            <Card.Img variant="top" src={ m.image } alt={ `LAD ${m.position}: ${m.name}` } />
             <Card.Body>
               <Card.Title>{ m.name }</Card.Title>
               <Card.Text className="position">{ m.position }</Card.Text>
