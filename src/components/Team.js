@@ -15,7 +15,7 @@ const Team = () => {
     "image": "images/jbogdani.jpg",
     "position": "Responsabile scientifico del laboratorio",
     "affiliation": "Ricercatore di Metodologie della Ricerca Archeologica, Dip. SARAS",
-    "uni": "https://www.lettere.uniroma1.it/users/julian-bogdani",
+    "uni": "https://purl.org/lad/jb",
     "github": "https://github.com/jbogdani",
     "academia": "https://uniroma1.academia.edu/JulianBogdani",
     "iris": "https://iris.uniroma1.it/browse?type=author&authority=rp62440&authority_lang=en",

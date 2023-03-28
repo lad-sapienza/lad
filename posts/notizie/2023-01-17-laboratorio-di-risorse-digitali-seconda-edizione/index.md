@@ -5,7 +5,7 @@ date: 2023-01-17
 sommario: "Laboratorio di Risorse Digitali per la Ricerca Esperienze e Progetti a cura di Julian Bogdani e Federica Favino DigiLab - Vetrerie Sciarra - Via dei Volsci, 122 Sala conferenze (primo piano) - h. 13-15..."
 ---
 
-Nel panorama del dottorato in Storia Antropologia Religioni della Sapienza Università di Roma, a partire dal 18 gennaio 2023, si terrà la seconda edizione dell'RDR Lab: Laboratorio di Risorse Digitali per la Ricerca. Il laboratorio 2023, dal titolo "Esperienze. Progetti. Strumenti", sarà curato da [Julian Bogdani](https://www.lettere.uniroma1.it/users/julian-bogdani) e [Federica Favino](https://www.lettere.uniroma1.it/users/federica-favino), entrambi ricercatori della Sapienza Università di Roma e membri del [Dipartimento SARAS](https://saras.uniroma1.it/).
+Nel panorama del dottorato in Storia Antropologia Religioni della Sapienza Università di Roma, a partire dal 18 gennaio 2023, si terrà la seconda edizione dell'RDR Lab: Laboratorio di Risorse Digitali per la Ricerca. Il laboratorio 2023, dal titolo "Esperienze. Progetti. Strumenti", sarà curato da [Julian Bogdani](https://purl.org/lad/jb) e [Federica Favino](https://corsidilaurea.uniroma1.it/it/users/federicafavinouniroma1it), entrambi ricercatori della Sapienza Università di Roma e membri del [Dipartimento SARAS](https://saras.uniroma1.it/).
 
 Attraverso una serie di incontri saranno affrontate tematiche legate all'utilizzo delle risorse digitali applicate alla ricerca in campo umanistico.
 

@@ -146,7 +146,7 @@ Il portale offre diverse possibilità di ricrcae consultazione: per toponimo (te
 - Licenza: Vari tipi di licenze
 - Data aggiornamento: 14-02-2022
 
-Il progetto ERC Advanced 2015 _PAThs_, diretto da [Paola Buzi](https://www.lettere.uniroma1.it/users/paola-buzi) e ospitato dalla Sapienza Università di Roma, è volto alla comprensione diacronica e alla rappresentazione della geografia della produzione letteraria copta del _corpus_ di testi, in lingua copta, prodotti in Egitto tra il III e il XIII secolo.
+Il progetto ERC Advanced 2015 _PAThs_, diretto da [Paola Buzi](https://corsidilaurea.uniroma1.it/it/users/paolabuziuniroma1it) e ospitato dalla Sapienza Università di Roma, è volto alla comprensione diacronica e alla rappresentazione della geografia della produzione letteraria copta del _corpus_ di testi, in lingua copta, prodotti in Egitto tra il III e il XIII secolo.
 
 Il progetto ha un [repository](https://docs.paths-erc.eu/data/) che ospita diverse tipologie di data set, sia vettoriali che raster. Per quanto riguarda la cartografia storica, a oggi _PAThs_ è certamente uno dei pricipali siti di riferimento per la documentazione relativa all'Egitto, ospitando serie topografiche georiferite redatte a partire dal 1800 fino ad alcune pubblicate nel 1985. Tutti i dati sono rilasciati con licenze aperte ed è possibile usarli in progetti terzi grazie allaloro distribuzione con formati o protocolli aperti.
 
