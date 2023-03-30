@@ -13,7 +13,6 @@ Il workshop ha come scopo il problema della definizione di relazioni tra testi e
 Il workshop sarà trasmesso anche online attraverso al piattafoema Zoom.us allp'indirizzo [https://us02web.zoom.us/j/83847249558](https://us02web.zoom.us/j/83847249558).
 
 ## Programma
-Programme
 
 1. Introduzione e presentazioni – 13 Aprile, 9:30–13:00 (con pausa); 14:30–15:30
   - Michele Cammarosano (University of Naples ‘L’Orientale’): *Introduction*
