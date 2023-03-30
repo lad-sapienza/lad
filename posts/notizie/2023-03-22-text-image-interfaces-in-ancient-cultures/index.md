@@ -10,6 +10,8 @@ Il respondabile del LAD: Laboratorio di Archeologia Digitale alla Sapienza parte
 
 Il workshop ha come scopo il problema della definizione di relazioni tra testi e immagini sia dal punto di vista teoretico che dal punto di vista pratico. A questo fine, intervengono un gruppo di ricercatori attivi in Italia e all'estero nel campo degli studi visuali, multimodalità e modellazione al computer di fonti testuali e archeologiche, con un'attenzione particolare alla loro interazione.
 
+Il workshop sarà trasmesso anche online attraverso al piattafoema Zoom.us allp'indirizzo [https://us02web.zoom.us/j/83847249558](https://us02web.zoom.us/j/83847249558).
+
 ## Programma
 Programme
 
