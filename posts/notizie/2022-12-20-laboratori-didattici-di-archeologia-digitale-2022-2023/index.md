@@ -17,10 +17,10 @@ Tutor: Domizia D'Erasmo ([domizia.derasmo@uniroma1.it](mailto:domizia.derasmo@un
 
 ## Calendario
 
-- Modulo **GIS base** (15 ore):
+- Modulo **GIS base** (14 ~~15~~ ore):
   - 27 Aprile, ore 13.00-18.00
   - 28 Aprile, ore 13.00-18.00
-  - 4 Maggio, ore 13.00-18:00
+  - 4 Maggio, ore 13.00-17:00 ~~18:00~~
 - Modulo **banche dati relazionali** (5 ore):
   - 5 Maggio, ore 13.00-18:00
 - Modulo **GIS avanzato** (5 ore):
