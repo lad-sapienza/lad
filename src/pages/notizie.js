@@ -27,13 +27,13 @@ const Blog = ({ data }) => {
       <p className="lead text-center">Questa sezione del sito del LAD: Laboratorio di Archeologia Digitale alla Sapienza raccoglie notizie di eventi, conferenze, lezioni, seminari, ecc. inerenti alle tematiche del laboratorio. Per le segnalazioni scriveteci a <a href="julian.bogdani@uniroma1.it" title="Segnalateci una notizia via email">julian.bogdani@uniroma1.it</a>.</p>
       <hr />
 
-      {allPosts.filter( n => n.node.frontmatter.pinned !== null ).map(({ node }, k) => {
+      {allPosts.filter( n => n.node.frontmatter.pinned === true ).map(({ node }, k) => {
         return (
           <ItemPreview node={node} key={k} pinned="true"/>
         );
       })}
 
-      {allPosts.filter( n => n.node.frontmatter.pinned === null ).map(({ node }, k) => {
+      {allPosts.filter( n => n.node.frontmatter.pinned === false || n.node.frontmatter.pinned === null ).map(({ node }, k) => {
         return (
           <ItemPreview node={node} key={k}/>
         );
