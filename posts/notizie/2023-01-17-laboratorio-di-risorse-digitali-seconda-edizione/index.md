@@ -9,7 +9,7 @@ Nel panorama del dottorato in Storia Antropologia Religioni della Sapienza Unive
 
 Attraverso una serie di incontri saranno affrontate tematiche legate all'utilizzo delle risorse digitali applicate alla ricerca in campo umanistico.
 
-Gli incontri saranno tenuti **in presenza** alla Sapienza Università di Roma, DigiLab, edificio di Ex Vetrerie Sciarra, Sala conferenze (primo piano), 13.00-15.00 e **a distanza** via [Google Meet](meet.google.com/wmp-xffy-njv).
+Gli incontri saranno tenuti **in presenza** alla Sapienza Università di Roma, DigiLab, edificio di Ex Vetrerie Sciarra, Sala conferenze (primo piano), 13.00-15.00 e **a distanza** via [Google Meet](https://meet.google.com/wmp-xffy-njv).
 
 [**Scarica la locandina del laboratorio in formato pdf**](./RDR_Lab2_2023.pdf)
 
@@ -21,7 +21,7 @@ Gli incontri saranno tenuti **in presenza** alla Sapienza Università di Roma, D
 - 8 marzo: Umberto **Longo**, _Tecnologie digitali e storia del territorio_.
 - 22 marzo: Antonella **Ghignoli**, _I segni grafici tra parole e simboli: la documentazione tardoantica e altomedievale nel progetto NOTAE_.
 - 5 aprile: Federica **Perazzini**, _Computational criticism: da distant reading a falso movimento_.
-- 19 aprile: Damiano **Garofalo** - Valerio **Coladonato**, _Le Digital Humanities per lo studio del cinema: due esperienze di ricerca e didattica_.
+- ~~19~~ 26 aprile: Damiano **Garofalo** - Valerio **Coladonato**, _Le Digital Humanities per lo studio del cinema: due esperienze di ricerca e didattica_.
 - 3 maggio: Elisabetta **Corsi** - Silvia **Piccini** (CNR, Pisa) - Simone **Marchi** (CNR, Pisa), _La biblioteca digitale 'Unus non sufficit orbis': lo sviluppo del portale e le applicazioni lessicografiche_. 
 - 17 maggio: Maria Grazia **Berlangieri**, _Ontologia dei dati digitali: dalle fonti all’interpolazione dell’intelligenza artificiale_.
 
