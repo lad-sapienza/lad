@@ -10,7 +10,7 @@ sommario: Progetto di ricerca, P.I. Julian Bogdani, finanziato dal programma “
 ## Dettagli del progetto di ricerca
 
 - **P.I.**: Julian Bogdani
-- **Finanziamento**: Programma “Progetti per Avvio alla Ricerca” della Sapienza Università di Roma
+- **Finanziamento**: Programma “Progetti di Ricerca: Progetti Piccoli” della Sapienza Università di Roma
 - **Anno**: 2022
 - **Nr. prot.**: AR2221816BB57DE4
 - **Partecipanti**:
