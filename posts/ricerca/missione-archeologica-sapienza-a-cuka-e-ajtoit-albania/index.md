@@ -6,7 +6,84 @@ img: ./cuka_ajtoit.jpg
 sommario: La Missione Archeologica della Sapienza a Çuka e Ajtoit (Albania) è un progetto congiunto in collaborazione con l'Istituto Archeologico Albanese di Tirana e l'Accademia degli Studi Albanologici e opera sul terreno con il riconoscimento ufficiale del Ministero degli Affari Esteri e della Cooperazione Internazionale della Repubblica Italiana. Opera sul terreno da 2021 ed è diretta da Julian Bogdani (Sapienza, Roma) e Albana Meta (IA, Tirana).
 ---
 
-## Novità: conclusa la campagna 2022
+
+## Novità: conclusa la campagna 2023
+
+Il 13 giugno si è conclusa la terza campagna archeologica della missione congionta della Sapienza Università di Roma e l'Istituto Archeologico di Tirana a Çuka e Ajtoit che ha visto la partecipazione di ricercatori e studenti delle due nazioni.
+
+La campagna si è svolta tra il 14 maggio e il 13 giugno e ha avuto molteplici obiettivi, quali il completamento del rilievo della collina attraverso la ormai collaudata metodologia del rilievo fotogrammetrico con drone. A queste attività è stata affiancata quella di documentazione e rilievo a terra con metodologie tradizionali dei resti osservati nei modelli digitali e il completamento di un secondo saggio di scavo nell'area del Palazzo, che ha portato alla luce materiali ceramici di iV secolo a.C., che al momento definiscono la fase più antica di questo complesso.
+
+Ai piedi della collina, un'attenzione particolare è stata dedicata alle strutture della Basilica medievale presso Çiflik. La chiesa è stata pulita ed è stato eseguito un attento rilievo tridimensionale sempre per mezzo fotogrammetrico. Il modello è alla base si uno [studio stratigrafico delle strutture che è in corso di svolgimento](../rilievo-monastero-ciflik-abania/). Al fine di verificare le straigrafie, sono statio eseguiti due saggi stratigrafici in quest'area, uno all'interno della chiesa e uno in una posizine esterna, nei pressi di una struttura probabilmente legata alla chiesa. L'esame preliminare delle stratigraie e dei materiali conferma per ora la datazione al XIII secolo delle strutture della chiesa.
+
+Infine, sono state condotte ricerche nel sito noto con il toponimo di Kisha e Psarit (lett. Chiesa [alb. kisha] del pesce [gr. ψάρι]). Il sito era stato visitato brevenmente l'nno precedente e vi erano state notate tracce di strutture in opera rettangolare e strutture con uso di malta di calce probabilmente medievale. Anche in questo caso è stata efettuata una pulizia superficiale (non completa e approfondita a causa del ridotto tempo a disposizione) e un saggio di scavo che ha messo in evidenza la presenza di una fase di età romana imperiale. I muri in opera reppangolare definiscono un edificio in pianta rettangolare, mentre quelli di dimensioni minori con uso di malta probabilmente fanno riferimento ad un edificio minore absidato, quasi certamente la chiesa che ha dato il nome al sito. La conoscenza di questo sito dovrà essere approfondita nelle prossime campagne. Questo sito non era conosciuto precedentemente nella letteratura archeologica.
+
+Come ogni anno, le ricerche puntuali sono state affiancate da ricognizioni nel territorio su segnalazione degli abitanti della zona, che hanno portato alla nostra conoscenza nuove e importanti tracce di interessa archeologico, che sarnno oggetto di ricerche approfondite nelle prossime campagne.
+
+**Partecipanti**
+
+Direzione missione:
+- Julian Bogdani (Sapienza, Roma, Italia)
+- Albana Meta (Istituto di Archeologia, Tirana, Albania)
+
+Senior staff:
+- Nadia Aleotti (Sapienza, Roma, Italia)
+- Domizia D'Erasmo (Sapienza, Roma, Italia)
+- Noemi Giovino (Sapienza, Roma, Italia)
+- Eleonora Iacopini (Sapienza, Roma, Italia)
+- Paolo Rosati (Sapienza, Roma, Italia)
+
+BA, MA:
+- Halil Braho (Università di Tirana, Albania)
+- Dea Hate (Università di Tirana, Albania)
+- Antonio Maria Fini (Sapienza, Roma, Italia)
+- Filippo Josić (Sapienza, Roma, Italia)
+- Noemi Lerro (Sapienza, Roma, Italia)
+
+***
+
+## La Missione Archeologica
+La Missione Archeologica della Sapienza a Çuka e Ajtoit (antica _Kestría_) in Albania meridionale prende vita nel 2021 grazie a una convenzione di ricerca tra il [Dipartimento SARAS della Sapienza Università di Roma](https://saras.uniroma1.it/) e l'Istituto Archeologico di Tirana, parte dell'Accademia degli Studi Albanologici d'Albania. La missione, diretta da Julian Bogdani (Sapienza, Roma) e Albana Meta (IA, Tirana), opera con il riconoscimento ufficiale del Ministero degli Affari Esteri e della Cooperazione Internazionale.
+
+Il progetto è finalizzato alla documentazione, scavo e studio storico-archeologico del centro ellenistico fortificato di _Kestría_, localizzato sulla collina di Çuka e Ajtoit, in Albania meridionale e del suo territorio.
+
+## Introduzione al sito
+
+Le fortificazioni di Çuka e Ajtoit si trovano sulla collina omonima vicino all'abitato di Çiflik, nel comune di Konispoli, in Albania meridionale e sono stati dichiarato di Monumento di Interesse Culturale con legge 6 del 15.01.1963, su proposta del Rettorato dell'allora Università Statale di Tirana. La collina domina con il suo profilo affilato la piana di Vrina a nord e quella di Vardhari a sud, trovandosi a metà strada tra Butrinto e Konispoli, a diretto controllo del punto dove il fiume Pavlla esce dalla stretta gola di Bogazi (il toponimo significa strettoia, gola in turco e persiano) e, con una inversione di 90 gradi, si dirige verso la piana di Vrina. Dal punto di vista archeologico, si tratta di un'area estremamente ricca, con testimonianze che vanno dalla Preistoria (la grotta di Konispoli, quella di Shën Marena, Vagalati) al periodo ellenistico e romano (Malathrea, la cava di Shkalla, Bregu i Sterës, il passo di Kato Aetos) e del periodo tardoantico e medievele (il monastero di Çiflik), senza comprendere in questo breve elenco l'interessantissima e vicina area di Mursia, Xara e Vrina.
+
+## Storia degli studi
+
+Il sito archeologico è stato visitato da William M. Leake nel gennaio del 1805 durante la sua visita a Konispoli e da François C.H.L. Pouqueville, il quale, oltre alle fortificazioni in opera poligonale, fa menzione anche della cinta tardoantica. Çuka e Ajtoit fu rilevata topograficamente e scavata per la prima volte negli anni Venti del secolo scorso dalla missione italiana  diretta da Luigi Maria Ugolini, che chiusi i lavori a Phoinike si era spostata nella vicina Butrinto, dove aveva intrapreso scavi estensivi.
+
+Il topografo della missione italiana, Dario Roversi Monaco, ha compilato il rilievo generale della collina, delle mura e degli altri resti archeologici all'epoca visibili. Sfortunatamente queste campagne non furono pubblicate e per moltissimo tempo i manoscritti furono ritenuti perduti, mentre invece erano custoditi in uno degli archivi della missione a Roma. Questa situazione perdura fino al 2005 quando vennero parzialmente pubblicati dalla missione inglese che in quegli anni svolgeva le proprie attività a Butrinto.
+
+Dopo la Seconda Guerra Mondiale, le ricerche sul campo vennero riprese solo verso fine degli anni Cinquanta, in collaborazione con gli archeologi russi, i consorti Blavatski. Çuka e Ajtoit venne ricognita nel 1958 e scavata nel 1959 e i lavori erano seguiti per la parte albanese da Hasan Ceka. Neppure queste indagini videro la luce della stampa, ma dal lungo articolo di Dh. Budina (1971) che costituisce la Carta archeologica della costa dello Ionio e del bacino di Delvina, e che recepisce in forma sintetica la documentazione d'archivio disponibile, sappiamo che l'attenzione degli archeologi si concentrò nel cosiddetto Palazzo e nella porta della cinta muraria nei suoi pressi. Merito importante di questa spedizione è la redazione di una planimetria generale dei resti della collina, l'unica a lungo disponibile.
+
+I lavori sul terreno vennero ripresi nel 1978 da parte dell'allora direttore dell'Istituto di Archeologia Selim Islami e oltre al cd. Palazzo e la cinta ellenistica vennero indagate anche circa 40 abitazioni. Inoltre anche le fortificazioni tardoantiche furono oggetto di un approfondimento. Ancora una volta, i lavori non vennero pubblicati per lunghi anni e pochissime sono le notizie edite circa queste attività. È solo nel 2008 che viene pubblicato un volume postumo che raccoglie vari studi e ricerche di Selim Islami, editi e inediti, tra i quali figurano anche le campagne di Çuka e Ajtoit.
+
+Questi studi sul terreno vengono completati da alcune ricerche specifiche che gettano una luce importante sul sito, come le fortificazioni ellenistiche (Ceka 1976), le fasi tardoantiche (Lako 1982, 1982b), le abitazioni (Baçe, Bushati 1989), ecc. Negli anni Novanta del secolo scorso anche la missione archeologica inglese attiva nel sito di Butrinto rivolge il suo interesse a questo sito, sia con ricerche d'archivio che con riscontri sul terreno. Pubblicati in formato digitale nel 2005, questi risultati, vennero pubblicati nel 2020 in forma definitiva (Hernandez, Hodges 2020).
+
+Nell'ambito della Missione Italiana dell'Università di Bologna a Phoinike e in occasione della mia tesi di Specializzazione in Archeologia presso la stessa università, mi sono occupato in maniera approfondita di questo sito, cercando di ricostruire la storia degli studi, con una particolare attenzione sugli scavi di Ugolini e sui rilievi di Roversi Monaco, che benché non completati costituiscono a tutt'oggi la base planimetrica più dettagliata della collina.
+
+Questi lavori sono stati pubblicati in maniera sintetica in italiano (Bogdani 2006) e albanese (Bogdani 2009).
+
+## Finalità del progetto
+
+Com'è chiaro dalla sintesi dei paragrafi precedenti, Çuka e Ajtoit non è un sito sconosciuto alla ricerca archeologica albanese e internazionale. Ma è anche vero che le edizioni di queste ricerche hanno visto la luce della stampa in maniera sintetica e per lo più moltissimi anni dopo la chiusura degli scavi, e anche molti anni dopo la scomparsa dei loro autori. In ogni caso queste pubblicazioni costituiscono oggi una base indispensabile per la conoscenza del sito antico e delle sue vasi di vita.
+
+Negli ultimi decenni le nostre conoscenza sulla regione della Caonia hanno fatto importanti passi in avanti grazie alle pubblicazioni dei lavori a Phoinike, Butrinto e nella valle del Drinos. Da questi studi emerge sempre più chiaramente l'importanza dei cosiddetti **insediamenti di secondo ordine**, seguendo una classificazione che si basa unicamente sulla superficie difesa da mura, come Melani, Malçani, Borshi dhe Çuka e Ajtoit. Questi centri sono senza dubbio una parte importantissima del sistema di fortificazione regionale realizzato in età ellenistica dai centri urbani principali (principalmente Phoinike e Antigonea), e nello stesso tempo sono punti di riferimento importanti per le comunità locali, _koinà_, i cui nomi spesso rimangono a noi sconosciuti a causa della mancanza del dato epigrafico. Nel caso di Çuka e Ajtoit, gli studi di Luis Robert portano alla nostra conoscenza la presenza in quest'area della tribù dei Pergamioi. Lo stesso studioso, come successivamente N. Hammond hanno quindi identificato il sito di Çuka e Ajtoit con l'antica _Kestría_, il centro principale della regione di _Kestríne_ la cui ascendenza mitica viene fatta risalire a Kestrînos, figlio degli esuli troiani Eleno e Andromaca, che governano la regione dopo la morte di Neottolemo (Paus. 1.11.1. , 2.23.6).
+
+Nessuno di questi centri secondari è stato indagato in maniera sistematica e dettagliata e la ripresa delle ricerche a Çuka e Ajtoit permetterebbe di gettare una luce importante sull'organizzazione della regione di _Kestríne_ e della valle del fiume Pavlla, un'area di confine tra le tribù caone e tesprote. I grandi centri urbani, che hanno tradizionalmente monopolizzato l'attenzione degli studiosi, costituiscono l'eccezione per l'area epirota, anche durante il periodo ellenistico e quello romano. È dunque fondamentale per la conoscenza del sistema regionale approfondire archeologicamente la conoscenza dei centri secondari, tra i quali _Kestría_ costituisce l'esempio di gran lunga più monumentale.
+
+In quest'ottica, lo studio della storia e della topografia di Çuka e Ajtoit da una parte, e della regione di _Kestríne_ dall'altra, sono fondamentali. Questo studio verrà compiuto nel pieno rispetto di tutte le fasi di vita dell'antico sito, cercando di contestualizzare non solo i resti monumentali del periodo ellenistico o tardoantico, ma con un'attenzione particolare anche per le fasi meno note archeologicamente, come quella pre-ellenistiche (età del Ferro e periodo Classico) e anche romana.
+
+Per quanto riguarda gli aspetti particolari, le fortificazioni di Çuka e Ajtoit sono un palinsesto oltremodo interessante e monumentale delle varie tecniche edilizie usate in regione per la costruzione di opere di fortificazione e uno dei rari casi dell'uso del poligonale in Caonia. Per questo motivo il sito costituisce un laboratorio unico per lo studio delle tecniche di fortificazione nella regione. La datazione delle sue mura è stato fatto fino ad oggi su basi prettamente stilistiche, ma gli studi dell'ultimo decennio nelle limitrofe regioni della Caonia e della Tesprozia, e più oltre in tutto il bacino del Mediterraneo, ci spingono a riconsiderare con attenzione  i criteri metodologici e di ridiscutere dalle fondamenta la questione cronologica. Nuovi auspicabili dati stratigrafici da saggi mirati e l'approfondita analisi delle tecniche di costruzione porteranno certamente nuovo materiale per lo studio diacronico delle opere murarie.
+
+La diacronia è un'altra caratteristica importante di questo centro. Gli scavi precedenti hanno messo in risalto la presenza di altre fasi oltre a quella ellenistica, come quella romana, tardoantica e medievale. Più labili, ma non assenti, le tracce di fasi più antiche, finora mai del tutto contestualizzate. Continuità e cesure indagabili archeologicamente rendono particolarmente adatto il sito di Çuka e Ajtoit all'analisi e ricostruzione nella longue durée.
+
+Per quanto riguarda gli aspetti urbanistici e architettonici, lo studio della edilizia residenziale privata e non acquista un'importanza di primo piano in questo sito, grazie alla presenza di decine di unità residenziali, sia dentro la cinta delle fortificazioni, che al suo esterno, nella “città bassa”, come lo chiama S. Islami o “il Palazzo”, come viene chiamato dagli abitanti della zona. Le soluzioni planimetriche sono per lo più molto semplici, almeno per quanto riguarda le abitazioni dell'“acropoli” (sempre usando la terminologia di S. Islami), dove la mancanza di spazio utile e il terreno fortemente accidentato limitano moltissimo lo spazio utile alla costruzione. Diversa è la situazione presso “il Palazzo”, delle cui strutture piuttosto monumentali (una porta in opera poligonale, con copertura a finto arco è stata trasportata e rimontata nel cortile del Museo Nazionale di Tirana) ancora non disponiamo di una interpretazione certa.
+
+
+## Campagna 2022
 Il 18 luglio 2022 si è chiusa la seconda campagna di ricerche archeologiche sul campo presso il sito di Çuka e Ajtoit (Albania), che ha visto la partecipazione di ricercatori italiani della Sapienza Università di Roma e dell'Istituto di Archeologia di Tirana. Quest'anno si è attivata anche una proficua collaborazione con l'Università di Tirana che ha reso possibile la partacipazione alle indagini di studenti di questo Ateneo.
 
 La campagna si è svolta tra 22 giugno e il 18 luglio 2022 e ha avuto diversi obiettivi, tra i quali i principali sono stati il completamento del rilievo della collina e dei resti archeologici, utilizzando riprese fotografiche da drone ed eleborazione fotogrammetriche. Inoltre, la campagna 2022, ha visto l'affiancamento di rilievi a terra tramite GNSS in modalità RTK, reso possibile dalla collaborazione della Missione con la ditta Rilievi srl per la strumentazione GNSS e con il programma ALBCORS del Geoportale Nazionale Albanese (ASIG). Questo ha reso possibile il georiferimento con alta precisione (ca. 2cm) di tutti i rilievi eseguiti.
@@ -45,47 +122,6 @@ Ospiti
 - Giuseppe Valentini (MA, Sapienza, Roma, Italia)
 
 ***
-
-## Introduzione
-La Missione Archeologica della Sapienza a Çuka e Ajtoit (antica _Kestría_) in Albania meridionale prende vita nel 2021 grazie a una convenzione di ricerca tra il [Dipartimento SARAS della Sapienza Università di Roma](https://saras.uniroma1.it/) e l'Istituto Archeologico di Tirana, parte dell'Accademia degli Studi Albanologici d'Albania. La missione, diretta da Julian Bogdani (Sapienza, Roma) e Albana Meta (IA, Tirana), opera con il riconoscimento ufficiale del Ministero degli Affari Esteri e della Cooperazione Internazionale.
-
-Il progetto è finalizzato alla documentazione, scavo e studio storico-archeologico del centro ellenistico fortificato di _Kestría_, localizzato sulla collina di Çuka e Ajtoit, in Albania meridionale e del suo territorio.
-
-## Introduzione
-
-Le fortificazioni di Çuka e Ajtoit si trovano sulla collina omonima vicino all'abitato di Çiflik, nel comune di Konispoli, in Albania meridionale e sono stati dichiarato di Monumento di Interesse Culturale con legge 6 del 15.01.1963, su proposta del Rettorato dell'allora Università Statale di Tirana. La collina domina con il suo profilo affilato la piana di Vrina a nord e quella di Vardari a sud, trovandosi a metà strada tra Butrinto e Konispoli, a diretto controllo del punto dove il fiume Pavlla esce dalla stretta gola di Bogazi (il toponimo significa strettoia, gola in turco e persiano) e, con una inversione di 90 gradi, si dirige verso la piana di Vrina. Dal punto di vista archeologico, si tratta di un'area estremamente ricca, con testimonianze che vanno dalla Preistoria (la grotta di Konispoli, quella di Shën Marena, Vagalati) al periodo ellenistico e romano (Malathrea, la cava di Shkalla, Bregu i Sterës, il passo di Kato Aetos) e del periodo tardoantico e medievele (il monastero di Çiflik), senza comprendere in questo breve elenco l'interessantissima e vicina area di Mursia, Xara e Vrina.
-
-## Storia degli studi
-
-Il sito archeologico è stato visitato da William M. Leake nel gennaio del 1805 durante la sua visita a Konispoli e da François C.H.L. Pouqueville, il quale, oltre alle fortificazioni in opera poligonale, fa menzione anche della cinta tardoantica. Çuka e Ajtoit fu rilevata topograficamente e scavata per la prima volte negli anni Venti del secolo scorso dalla missione italiana  diretta da Luigi Maria Ugolini, che chiusi i lavori a Phoinike si era spostata nella vicina Butrinto, dove aveva intrapreso scavi estensivi.
-
-Il topografo della missione italiana, Dario Roversi Monaco, ha compilato il rilievo generale della collina, delle mura e degli altri resti archeologici all'epoca visibili. Sfortunatamente queste campagne non furono pubblicate e per moltissimo tempo i manoscritti furono ritenuti perduti, mentre invece erano custoditi in uno degli archivi della missione a Roma. Questa situazione perdura fino al 2005 quando vennero parzialmente pubblicati dalla missione inglese che in quegli anni svolgeva le proprie attività a Butrinto.
-
-Dopo la Seconda Guerra Mondiale, le ricerche sul campo vennero riprese solo verso fine degli anni Cinquanta, in collaborazione con gli archeologi russi, i consorti Blavatski. Çuka e Ajtoit venne ricognita nel 1958 e scavata nel 1959 e i lavori erano seguiti per la parte albanese da Hasan Ceka. Neppure queste indagini videro la luce della stampa, ma dal lungo articolo di Dh. Budina (1971) che costituisce la Carta archeologica della costa dello Ionio e del bacino di Delvina, e che recepisce in forma sintetica la documentazione d'archivio disponibile, sappiamo che l'attenzione degli archeologi si concentrò nel cosiddetto Palazzo e nella porta della cinta muraria nei suoi pressi. Merito importante di questa spedizione è la redazione di una planimetria generale dei resti della collina, l'unica a lungo disponibile.
-
-I lavori sul terreno vennero ripresi nel 1978 da parte dell'allora direttore dell'Istituto di Archeologia Selim Islami e oltre al cd. Palazzo e la cinta ellenistica vennero indagate anche circa 40 abitazioni. Inoltre anche le fortificazioni tardoantiche furono oggetto di un approfondimento. Ancora una volta, i lavori non vennero pubblicati per lunghi anni e pochissime sono le notizie edite circa queste attività. È solo nel 2008 che viene pubblicato un volume postumo che raccoglie vari studi e ricerche di Selim Islami, editi e inediti, tra i quali figurano anche le campagne di Çuka e Ajtoit.
-
-Questi studi sul terreno vengono completati da alcune ricerche specifiche che gettano una luce importante sul sito, come le fortificazioni ellenistiche (Ceka 1976), le fasi tardoantiche (Lako 1982, 1982b), le abitazioni (Baçe, Bushati 1989), ecc. Negli anni Novanta del secolo scorso anche la missione archeologica inglese attiva nel sito di Butrinto rivolge il suo interesse a questo sito, sia con ricerche d'archivio che con riscontri sul terreno. Pubblicati in formato digitale nel 2005, questi risultati, vennero pubblicati nel 2020 in forma definitiva (Hernandez, Hodges 2020).
-
-Nell'ambito della Missione Italiana dell'Università di Bologna a Phoinike e in occasione della mia tesi di Specializzazione in Archeologia presso la stessa università, mi sono occupato in maniera approfondita di questo sito, cercando di ricostruire la storia degli studi, con una particolare attenzione sugli scavi di Ugolini e sui rilievi di Roversi Monaco, che benché non completati costituiscono a tutt'oggi la base planimetrica più dettagliata della collina.
-
-Questi lavori sono stati pubblicati in maniera sintetica in italiano (Bogdani 2006) e albanese (Bogdani 2009).
-
-## Finalità del progetto
-
-Com'è chiaro dalla sintesi dei paragrafi precedenti, Çuka e Ajtoit non è un sito sconosciuto alla ricerca archeologica albanese e internazionale. Ma è anche vero che le edizioni di queste ricerche hanno visto la luce della stampa in maniera sintetica e per lo più moltissimi anni dopo la chiusura degli scavi, e anche molti anni dopo la scomparsa dei loro autori. In ogni caso queste pubblicazioni costituiscono oggi una base indispensabile per la conoscenza del sito antico e delle sue vasi di vita.
-
-Negli ultimi decenni le nostre conoscenza sulla regione della Caonia hanno fatto importanti passi in avanti grazie alle pubblicazioni dei lavori a Phoinike, Butrinto e nella valle del Drinos. Da questi studi emerge sempre più chiaramente l'importanza dei cosiddetti **insediamenti di secondo ordine**, seguendo una classificazione che si basa unicamente sulla superficie difesa da mura, come Melani, Malçani, Borshi dhe Çuka e Ajtoit. Questi centri sono senza dubbio una parte importantissima del sistema di fortificazione regionale realizzato in età ellenistica dai centri urbani principali (principalmente Phoinike e Antigonea), e nello stesso tempo sono punti di riferimento importanti per le comunità locali, _koinà_, i cui nomi spesso rimangono a noi sconosciuti a causa della mancanza del dato epigrafico. Nel caso di Çuka e Ajtoit, gli studi di Luis Robert portano alla nostra conoscenza la presenza in quest'area della tribù dei Pergamioi. Lo stesso studioso, come successivamente N. Hammond hanno quindi identificato il sito di Çuka e Ajtoit con l'antica _Kestría_, il centro principale della regione di _Kestríne_ la cui ascendenza mitica viene fatta risalire a Kestrînos, figlio degli esuli troiani Eleno e Andromaca, che governano la regione dopo la morte di Neottolemo (Paus. 1.11.1. , 2.23.6).
-
-Nessuno di questi centri secondari è stato indagato in maniera sistematica e dettagliata e la ripresa delle ricerche a Çuka e Ajtoit permetterebbe di gettare una luce importante sull'organizzazione della regione di _Kestríne_ e della valle del fiume Pavlla, un'area di confine tra le tribù caone e tesprote. I grandi centri urbani, che hanno tradizionalmente monopolizzato l'attenzione degli studiosi, costituiscono l'eccezione per l'area epirota, anche durante il periodo ellenistico e quello romano. È dunque fondamentale per la conoscenza del sistema regionale approfondire archeologicamente la conoscenza dei centri secondari, tra i quali _Kestría_ costituisce l'esempio di gran lunga più monumentale.
-
-In quest'ottica, lo studio della storia e della topografia di Çuka e Ajtoit da una parte, e della regione di _Kestríne_ dall'altra, sono fondamentali. Questo studio verrà compiuto nel pieno rispetto di tutte le fasi di vita dell'antico sito, cercando di contestualizzare non solo i resti monumentali del periodo ellenistico o tardoantico, ma con un'attenzione particolare anche per le fasi meno note archeologicamente, come quella pre-ellenistiche (età del Ferro e periodo Classico) e anche romana.
-
-Per quanto riguarda gli aspetti particolari, le fortificazioni di Çuka e Ajtoit sono un palinsesto oltremodo interessante e monumentale delle varie tecniche edilizie usate in regione per la costruzione di opere di fortificazione e uno dei rari casi dell'uso del poligonale in Caonia. Per questo motivo il sito costituisce un laboratorio unico per lo studio delle tecniche di fortificazione nella regione. La datazione delle sue mura è stato fatto fino ad oggi su basi prettamente stilistiche, ma gli studi dell'ultimo decennio nelle limitrofe regioni della Caonia e della Tesprozia, e più oltre in tutto il bacino del Mediterraneo, ci spingono a riconsiderare con attenzione  i criteri metodologici e di ridiscutere dalle fondamenta la questione cronologica. Nuovi auspicabili dati stratigrafici da saggi mirati e l'approfondita analisi delle tecniche di costruzione porteranno certamente nuovo materiale per lo studio diacronico delle opere murarie.
-
-La diacronia è un'altra caratteristica importante di questo centro. Gli scavi precedenti hanno messo in risalto la presenza di altre fasi oltre a quella ellenistica, come quella romana, tardoantica e medievale. Più labili, ma non assenti, le tracce di fasi più antiche, finora mai del tutto contestualizzate. Continuità e cesure indagabili archeologicamente rendono particolarmente adatto il sito di Çuka e Ajtoit all'analisi e ricostruzione nella longue durée.
-
-Per quanto riguarda gli aspetti urbanistici e architettonici, lo studio della edilizia residenziale privata e non acquista un'importanza di primo piano in questo sito, grazie alla presenza di decine di unità residenziali, sia dentro la cinta delle fortificazioni, che al suo esterno, nella “città bassa”, come lo chiama S. Islami o “il Palazzo”, come viene chiamato dagli abitanti della zona. Le soluzioni planimetriche sono per lo più molto semplici, almeno per quanto riguarda le abitazioni dell'“acropoli” (sempre usando la terminologia di S. Islami), dove la mancanza di spazio utile e il terreno fortemente accidentato limitano moltissimo lo spazio utile alla costruzione. Diversa è la situazione presso “il Palazzo”, delle cui strutture piuttosto monumentali (una porta in opera poligonale, con copertura a finto arco è stata trasportata e rimontata nel cortile del Museo Nazionale di Tirana) ancora non disponiamo di una interpretazione certa.
 
 ## Supporto
 
@@ -135,7 +171,7 @@ Akademia e Studimeve Albanologike, Tiranë (Albania)
 <div class="row text-center">
 <div class="col-sm-6 offset-sm-3">
 <img src="../../logos/maeci.jpg" style="max-width: 100%" class="img-fluid"><br>
-Con il riconoscimento ufficiale del Ministero degli Affari Esteri e della Cooperazione Internazionale.
+Con il riconoscimento ufficiale e il supporto finanziario del Ministero degli Affari Esteri e della Cooperazione Internazionale.
 </div>
 </div>
 
