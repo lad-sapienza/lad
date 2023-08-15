@@ -15,6 +15,7 @@ module.exports = {
     `gatsby-plugin-sass`,
     `gatsby-plugin-sitemap`,
     'gatsby-plugin-robots-txt',
+    'gatsby-plugin-mdx',
     {
       resolve: `gatsby-plugin-next-seo`,
       options: {
@@ -79,7 +80,6 @@ module.exports = {
         name: `pages`,
         path: `${__dirname}/src/pages/`,
       },
-      
     },
   ],
 };

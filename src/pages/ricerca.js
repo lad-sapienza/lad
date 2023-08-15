@@ -43,7 +43,7 @@ export const query = graphql`
       }
     }
     allMarkdownRemark(
-      sort: { fields: frontmatter___sort, order: DESC }
+      sort: { frontmatter: {sort: DESC }}
       filter: {fileAbsolutePath: {regex: "/posts\\/ricerca/"}}
     ) {
       edges {

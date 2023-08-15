@@ -262,7 +262,7 @@ export const query = graphql`
       }
     }
     allMarkdownRemark(
-      sort: { fields: frontmatter___date, order: DESC }
+      sort: {frontmatter: {date: DESC}}
       limit: 5
       filter: { fileAbsolutePath: { regex: "/posts/blog/" } }
     ) {
