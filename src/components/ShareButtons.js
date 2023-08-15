@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import {
   FacebookShareButton,
   FacebookIcon,
@@ -10,36 +10,37 @@ import {
   WhatsappIcon,
   TelegramShareButton,
   TelegramIcon,
-} from 'react-share';
+} from "react-share";
 
 const size = 40;
 
 const ShareButtons = ({ url, title, tags }) => (
-    <div>
-      <TwitterShareButton className='mx-1'
-        url={url}
-        title={title}
-        hashtags={tags}
-      >
-        <TwitterIcon size={size} round={true} />
-      </TwitterShareButton>
-  
-      <FacebookShareButton url={url} className='mx-1'>
-        <FacebookIcon size={size} round={true} />
-      </FacebookShareButton>
-  
-      <LinkedinShareButton url={url} className='mx-1'>
-        <LinkedinIcon size={size} round={true} />
-      </LinkedinShareButton>
-  
-      <WhatsappShareButton url={url} title={title} className='mx-1'>
-        <WhatsappIcon size={size} round={true} />
-      </WhatsappShareButton>
-      
-      <TelegramShareButton url={url} title={title} className='mx-1'>
-        <TelegramIcon size={size} round={true} />
-      </TelegramShareButton>
-    </div>
-  );
-  
-  export default ShareButtons;
+  <div>
+    <TwitterShareButton
+      className="mx-1"
+      url={url}
+      title={title}
+      hashtags={tags}
+    >
+      <TwitterIcon size={size} round={true} />
+    </TwitterShareButton>
+
+    <FacebookShareButton url={url} className="mx-1">
+      <FacebookIcon size={size} round={true} />
+    </FacebookShareButton>
+
+    <LinkedinShareButton url={url} className="mx-1">
+      <LinkedinIcon size={size} round={true} />
+    </LinkedinShareButton>
+
+    <WhatsappShareButton url={url} title={title} className="mx-1">
+      <WhatsappIcon size={size} round={true} />
+    </WhatsappShareButton>
+
+    <TelegramShareButton url={url} title={title} className="mx-1">
+      <TelegramIcon size={size} round={true} />
+    </TelegramShareButton>
+  </div>
+);
+
+export default ShareButtons;

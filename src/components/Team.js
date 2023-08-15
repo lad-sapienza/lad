@@ -9,89 +9,93 @@ import { SiAcademia, SiResearchgate } from "react-icons/si";
 import { GiIceIris } from "react-icons/gi";
 
 const Team = () => {
-
   const jb = {
-    "name": "Julian Bogdani",
-    "image": "images/jbogdani.jpg",
-    "position": "Responsabile scientifico del laboratorio",
-    "affiliation": "Professore Associato di Metodologie della Ricerca Archeologica, Dip. SARAS",
-    "uni": "https://purl.org/lad/jb",
-    "github": "https://github.com/jbogdani",
-    "academia": "https://uniroma1.academia.edu/JulianBogdani",
-    "iris": "https://iris.uniroma1.it/browse?type=author&authority=rp62440&authority_lang=en",
-    "researchgate": "https://www.researchgate.net/profile/Julian-Bogdani",
-    "twitter": "https://twitter.com/JulianBogdani"
+    name: "Julian Bogdani",
+    image: "images/jbogdani.jpg",
+    position: "Responsabile scientifico del laboratorio",
+    affiliation:
+      "Professore Associato di Metodologie della Ricerca Archeologica, Dip. SARAS",
+    uni: "https://purl.org/lad/jb",
+    github: "https://github.com/jbogdani",
+    academia: "https://uniroma1.academia.edu/JulianBogdani",
+    iris: "https://iris.uniroma1.it/browse?type=author&authority=rp62440&authority_lang=en",
+    researchgate: "https://www.researchgate.net/profile/Julian-Bogdani",
+    twitter: "https://twitter.com/JulianBogdani",
   };
   const teamData = [
     {
-      "name": "Eleonora Iacopini",
-      "image": "images/eiacopini.jpg",
-      "position": "Membro del laboratorio",
-      "affiliation": "Assegnista di ricerca di Metodologie di Ricerca Archeologica, Dip. SARAS, Sapienza",
-      "iris": "https://iris.uniroma1.it/simple-search?query=iacopini+eleonora&needescape=1",
-      "academia": "https://uniroma1.academia.edu/EleonoraIacopini",
-      "researchgate": "https://www.researchgate.net/profile/Eleonora_Iacopini",
-      "github": "https://github.com/eiacopini"
+      name: "Eleonora Iacopini",
+      image: "images/eiacopini.jpg",
+      position: "Membro del laboratorio",
+      affiliation:
+        "Assegnista di ricerca di Metodologie di Ricerca Archeologica, Dip. SARAS, Sapienza",
+      iris: "https://iris.uniroma1.it/simple-search?query=iacopini+eleonora&needescape=1",
+      academia: "https://uniroma1.academia.edu/EleonoraIacopini",
+      researchgate: "https://www.researchgate.net/profile/Eleonora_Iacopini",
+      github: "https://github.com/eiacopini",
     },
     {
-      "name": "Paolo Rosati",
-      "image": "images/prosati.jpg",
-      "position": "Membro del laboratorio",
-      "affiliation": "Assegnista di ricerca presso il centro di ricerca DigiLab Sapienza",
-      "academia": "https://uniroma1.academia.edu/RosatiPaolo",
-      "researchgate": "https://www.researchgate.net/profile/Paolo-Rosati-2"
+      name: "Paolo Rosati",
+      image: "images/prosati.jpg",
+      position: "Membro del laboratorio",
+      affiliation:
+        "Assegnista di ricerca presso il centro di ricerca DigiLab Sapienza",
+      academia: "https://uniroma1.academia.edu/RosatiPaolo",
+      researchgate: "https://www.researchgate.net/profile/Paolo-Rosati-2",
     },
     {
-      "name": "Nadia Aleotti",
-      "image": "images/naleotti.jpg",
-      "position": "Membro del laboratorio",
-      "affiliation": "Assegnista di ricerca Metodologie di Ricerca Archeologica, Dip. SARAS, Sapienza",
-      "academia": "https://uniroma1.academia.edu/NadiaAleotti",
-      "researchgate": "https://www.researchgate.net/profile/Nadia-Aleotti"
+      name: "Nadia Aleotti",
+      image: "images/naleotti.jpg",
+      position: "Membro del laboratorio",
+      affiliation:
+        "Assegnista di ricerca Metodologie di Ricerca Archeologica, Dip. SARAS, Sapienza",
+      academia: "https://uniroma1.academia.edu/NadiaAleotti",
+      researchgate: "https://www.researchgate.net/profile/Nadia-Aleotti",
     },
     {
-      "name": "Domizia D'Erasmo",
-      "image": "images/dderasmo.jpg",
-      "position": "Membro del laboratorio",
-      "affiliation": "Dottoranda in Archeologia, Dip. Scienze dell'Antichità, Sapienza",
-      "github": "https://github.com/ddomizia",
-      "academia": "https://uniroma1.academia.edu/domiziaderasmo",
-      "iris": "https://iris.uniroma1.it/simple-search?query=Domizia+D%27Erasmo&needescape=1",
-      "researchgate": "https://www.researchgate.net/profile/Domizia_Derasmo",
-      "twitter": "https://twitter.com/domizzzia"
+      name: "Domizia D'Erasmo",
+      image: "images/dderasmo.jpg",
+      position: "Membro del laboratorio",
+      affiliation:
+        "Dottoranda in Archeologia, Dip. Scienze dell'Antichità, Sapienza",
+      github: "https://github.com/ddomizia",
+      academia: "https://uniroma1.academia.edu/domiziaderasmo",
+      iris: "https://iris.uniroma1.it/simple-search?query=Domizia+D%27Erasmo&needescape=1",
+      researchgate: "https://www.researchgate.net/profile/Domizia_Derasmo",
+      twitter: "https://twitter.com/domizzzia",
     },
   ];
 
   const iconList = [
     {
-      "id": "uni",
-      "label": "Sito istituzionale",
-      "icon": <FaUniversity />
+      id: "uni",
+      label: "Sito istituzionale",
+      icon: <FaUniversity />,
     },
     {
-      "id": "github",
-      "label": "GitHub",
-      "icon": <FaGithub />
+      id: "github",
+      label: "GitHub",
+      icon: <FaGithub />,
     },
     {
-      "id": "academia",
-      "label": "Academia.edu",
-      "icon": <SiAcademia />
+      id: "academia",
+      label: "Academia.edu",
+      icon: <SiAcademia />,
     },
     {
-      "id": "iris",
-      "label": "Repository IRIS",
-      "icon": <GiIceIris />
+      id: "iris",
+      label: "Repository IRIS",
+      icon: <GiIceIris />,
     },
     {
-      "id": "researchgate",
-      "label": "Research Gate",
-      "icon": <SiResearchgate />
+      id: "researchgate",
+      label: "Research Gate",
+      icon: <SiResearchgate />,
     },
     {
-      "id": "twitter",
-      "label": "Twitter",
-      "icon": <FaTwitter />
+      id: "twitter",
+      label: "Twitter",
+      icon: <FaTwitter />,
     },
   ];
 
@@ -101,21 +105,29 @@ const Team = () => {
       <Row className="py-5">
         <Col md="6" lg="4">
           <Card>
-            <Card.Img variant="top" src={ jb.image } alt={ `LAD ${jb.position}: ${jb.name}` } />
+            <Card.Img
+              variant="top"
+              src={jb.image}
+              alt={`LAD ${jb.position}: ${jb.name}`}
+            />
           </Card>
         </Col>
         <Col>
           <Card>
             <Card.Body>
-              <Card.Title>{ jb.name }</Card.Title>
-              <Card.Text className="position">{ jb.position }</Card.Text>
-              <Card.Text className="dipartimento">{ jb.affiliation }</Card.Text>
+              <Card.Title>{jb.name}</Card.Title>
+              <Card.Text className="position">{jb.position}</Card.Text>
+              <Card.Text className="dipartimento">{jb.affiliation}</Card.Text>
               <Card.Text className="icon">
-                { iconList.map( (i, ik) => {
+                {iconList.map((i, ik) => {
                   if (jb[i.id]) {
-                    return <a href={ jb[i.id] } title={i.label} key={ik}>{i.icon}</a>
+                    return (
+                      <a href={jb[i.id]} title={i.label} key={ik}>
+                        {i.icon}
+                      </a>
+                    );
                   } else {
-                    return ''
+                    return "";
                   }
                 })}
               </Card.Text>
@@ -124,28 +136,35 @@ const Team = () => {
         </Col>
       </Row>
 
-
       <CardGroup>
-        {teamData.map( (m, mk) => {
+        {teamData.map((m, mk) => {
           return (
-          <Card key={mk}>
-            <Card.Img variant="top" src={ m.image } alt={ `LAD ${m.position}: ${m.name}` } />
-            <Card.Body>
-              <Card.Title>{ m.name }</Card.Title>
-              <Card.Text className="position">{ m.position }</Card.Text>
-              <Card.Text className="dipartimento">{ m.affiliation }</Card.Text>
-              <Card.Text className="icon">
-                { iconList.map( (i, ik) => {
-                  if (m[i.id]) {
-                    return <a href={ m[i.id] } title={i.label} key={ik}>{i.icon}</a>
-                  } else {
-                    return ''
-                  }
-                })}
-              </Card.Text>
-            </Card.Body>
-          </Card>
-        )
+            <Card key={mk}>
+              <Card.Img
+                variant="top"
+                src={m.image}
+                alt={`LAD ${m.position}: ${m.name}`}
+              />
+              <Card.Body>
+                <Card.Title>{m.name}</Card.Title>
+                <Card.Text className="position">{m.position}</Card.Text>
+                <Card.Text className="dipartimento">{m.affiliation}</Card.Text>
+                <Card.Text className="icon">
+                  {iconList.map((i, ik) => {
+                    if (m[i.id]) {
+                      return (
+                        <a href={m[i.id]} title={i.label} key={ik}>
+                          {i.icon}
+                        </a>
+                      );
+                    } else {
+                      return "";
+                    }
+                  })}
+                </Card.Text>
+              </Card.Body>
+            </Card>
+          );
         })}
       </CardGroup>
     </Wrapper>
@@ -160,11 +179,11 @@ const Wrapper = styled.section`
     }
   }
   svg {
-    margin-right: .5rem;
-    margin-left: .5rem;
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
   }
   .card {
-    padding: .5rem;
+    padding: 0.5rem;
     border: none;
   }
   .card-title {

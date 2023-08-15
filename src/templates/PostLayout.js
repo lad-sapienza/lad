@@ -5,7 +5,7 @@ import styled from "styled-components";
 import { GatsbyImage } from "gatsby-plugin-image";
 import { Container } from "react-bootstrap";
 import Layout from "../templates/Layout";
-import Seo from "../components/Seo"
+import Seo from "../components/Seo";
 import ShareButtons from "../components/ShareButtons";
 import { defineCustomElements as deckDeckGoHighlightElement } from "@deckdeckgo/highlight-code/dist/loader";
 deckDeckGoHighlightElement();
@@ -13,55 +13,59 @@ deckDeckGoHighlightElement();
 //markup
 export default function BlogPost({ data }) {
   const post = data.markdownRemark;
-  const pageUrl = `${data.site.siteMetadata.siteUrl}${post.fields.slug}`.replace(/([^:]\/)\/+/g, "$1");
-  
+  const pageUrl =
+    `${data.site.siteMetadata.siteUrl}${post.fields.slug}`.replace(
+      /([^:]\/)\/+/g,
+      "$1"
+    );
+
   return (
     <Layout>
       <Seo
-        title={ post.frontmatter.title }
-        description={ post.frontmatter.sommario ? post.frontmatter.sommario : post.excerpt }
+        title={post.frontmatter.title}
+        description={
+          post.frontmatter.sommario ? post.frontmatter.sommario : post.excerpt
+        }
         // https://stackoverflow.com/a/24381515
-        url={ pageUrl }
-        image={`${data.site.siteMetadata.siteUrl}${post.frontmatter.img.childImageSharp.gatsbyImageData.images.fallback.src}`.replace(/([^:]\/)\/+/g, "$1")}
-        />
+        url={pageUrl}
+        image={`${data.site.siteMetadata.siteUrl}${post.frontmatter.img.childImageSharp.gatsbyImageData.images.fallback.src}`.replace(
+          /([^:]\/)\/+/g,
+          "$1"
+        )}
+      />
       <Wrapper>
         <div>
           <Container className="post-container">
             <div className="post-info text-center">
               <h1>{post.frontmatter.title}</h1>
 
-              { post.frontmatter.autore && 
-                <p className="author">
-                  di {post.frontmatter.autore}
-                </p>
-              }
-              
+              {post.frontmatter.autore && (
+                <p className="author">di {post.frontmatter.autore}</p>
+              )}
 
-              { post.frontmatter.tags && (
+              {post.frontmatter.tags && (
                 <div className="text-center">
                   <div className="bg-light mb-3 p-3 text-muted d-inline-block">
                     Tag:&nbsp;
-                    { post.frontmatter.tags.join(', ') } |
-                    Licenza: {post.frontmatter.licenza } |
-                    Livello: {post.frontmatter.livello }
+                    {post.frontmatter.tags.join(", ")} | Licenza:{" "}
+                    {post.frontmatter.licenza} | Livello:{" "}
+                    {post.frontmatter.livello}
                   </div>
                 </div>
               )}
 
-              { post.frontmatter.date &&
+              {post.frontmatter.date && (
                 <p className="text-center text-secondary">
                   Articolo pubblicato il {post.frontmatter.date}
                 </p>
-              }
+              )}
 
-              <ShareButtons 
-                url={pageUrl} 
-                title={ post.frontmatter.title } 
-                tags={ post.frontmatter.tags || [] }
+              <ShareButtons
+                url={pageUrl}
+                title={post.frontmatter.title}
+                tags={post.frontmatter.tags || []}
               />
-
             </div>
-
 
             {post.frontmatter.img && (
               <div className="post-image">
@@ -74,7 +78,9 @@ export default function BlogPost({ data }) {
                     alt={`${post.frontmatter.title} di ${post.frontmatter.autore}`}
                   />
                 </figure>
-                { post.frontmatter.didascalia && <p>{post.frontmatter.didascalia}</p> }
+                {post.frontmatter.didascalia && (
+                  <p>{post.frontmatter.didascalia}</p>
+                )}
               </div>
             )}
             <div className="post-content">

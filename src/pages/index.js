@@ -17,8 +17,10 @@ const Index = ({ data }) => {
       <Seo
         title="Home page ufficiale del LAD: Laboratorio di Archeologia Digitale alla Sapienza"
         description="Benvenuti al sto del LAD: Laboratorio di Archeologia Digitale alla Sapienza  promuove la ricerca, la sperimentazione e la didattica delle tecnologie digitali FLOS per l'archeologia."
-        url={ data.site.siteMetadata.siteUrl }
-        image={`${data.site.siteMetadata.siteUrl}${withPrefix(`/logos/lad-blue.png`)}`.replace(/([^:]\/)\/+/g, "$1")}
+        url={data.site.siteMetadata.siteUrl}
+        image={`${data.site.siteMetadata.siteUrl}${withPrefix(
+          `/logos/lad-blue.png`
+        )}`.replace(/([^:]\/)\/+/g, "$1")}
       />
       <Wrapper>
         <Container>
@@ -237,7 +239,7 @@ const Index = ({ data }) => {
 //style
 const Wrapper = styled.section`
   .col-intro a {
-    color: #1963F7;
+    color: #1963f7;
   }
   col-intro. a:hover {
     text-decoration: none !important;
@@ -248,7 +250,7 @@ const Wrapper = styled.section`
   }
   h1,
   h2 {
-    color: rgba(0, 45, 137, .9);
+    color: rgba(0, 45, 137, 0.9);
     font-weight: 200 !important;
   }
 `;
@@ -262,7 +264,7 @@ export const query = graphql`
       }
     }
     allMarkdownRemark(
-      sort: {frontmatter: {date: DESC}}
+      sort: { frontmatter: { date: DESC } }
       limit: 5
       filter: { fileAbsolutePath: { regex: "/posts/blog/" } }
     ) {
