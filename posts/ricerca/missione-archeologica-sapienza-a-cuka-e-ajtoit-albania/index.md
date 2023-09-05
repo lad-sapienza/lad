@@ -6,8 +6,8 @@ img: ./cuka_ajtoit.jpg
 sommario: La Missione Archeologica della Sapienza a Çuka e Ajtoit (Albania) è un progetto congiunto in collaborazione con l'Istituto Archeologico Albanese di Tirana e l'Accademia degli Studi Albanologici e opera sul terreno con il riconoscimento ufficiale del Ministero degli Affari Esteri e della Cooperazione Internazionale della Repubblica Italiana. Opera sul terreno da 2021 ed è diretta da Julian Bogdani (Sapienza, Roma) e Albana Meta (IA, Tirana).
 ---
 
-
 **Indice**
+
 - [Novità: conclusa la campagna 2023](#novità-conclusa-la-campagna-2023)
 - [La Missione Archeologica](#la-missione-archeologica)
   - [Introduzione al sito](#introduzione-al-sito)
@@ -19,6 +19,7 @@ sommario: La Missione Archeologica della Sapienza a Çuka e Ajtoit (Albania) è 
 - [Bibliografia](#bibliografia)
 
 ---
+
 ## Novità: conclusa la campagna 2023
 
 Il 13 giugno si è conclusa la terza campagna archeologica della missione congiunta della Sapienza Università di Roma e l'Istituto Archeologico di Tirana a Çuka e Ajtoit (Albania) che ha visto la partecipazione di ricercatori e studenti delle due nazioni.
@@ -35,10 +36,12 @@ Come nelle campagna precedenti, anche quest'anno le ricerche puntuali sono state
 **Partecipanti**
 
 Direzione missione:
+
 - Julian Bogdani (Sapienza, Roma, Italia)
 - Albana Meta (Istituto di Archeologia, Tirana, Albania)
 
 Senior staff:
+
 - Nadia Aleotti (Sapienza, Roma, Italia)
 - Domizia D'Erasmo (Sapienza, Roma, Italia)
 - Noemi Giovino (Sapienza, Roma, Italia)
@@ -46,15 +49,17 @@ Senior staff:
 - Paolo Rosati (Sapienza, Roma, Italia)
 
 BA, MA:
+
 - Halil Braho (Università di Tirana, Albania)
 - Dea Hate (Università di Tirana, Albania)
 - Antonio Maria Fini (Sapienza, Roma, Italia)
 - Filippo Josić (Sapienza, Roma, Italia)
 - Noemi Lerro (Sapienza, Roma, Italia)
 
-***
+---
 
 ## La Missione Archeologica
+
 La Missione Archeologica della Sapienza a Çuka e Ajtoit (antica _Kestría_) in Albania meridionale prende vita nel 2021 grazie a una convenzione di ricerca tra il [Dipartimento SARAS della Sapienza Università di Roma](https://saras.uniroma1.it/) e l'Istituto Archeologico di Tirana, parte dell'Accademia degli Studi Albanologici d'Albania. La missione, diretta da Julian Bogdani (Sapienza, Roma) e Albana Meta (IA, Tirana), opera con il riconoscimento ufficiale del Ministero degli Affari Esteri e della Cooperazione Internazionale.
 
 Il progetto è finalizzato alla documentazione, scavo e studio storico-archeologico del centro ellenistico fortificato di _Kestría_, localizzato sulla collina di Çuka e Ajtoit, in Albania meridionale e del suo territorio.
@@ -65,7 +70,7 @@ Le fortificazioni di Çuka e Ajtoit si trovano sulla collina omonima vicino all'
 
 ## Storia degli studi
 
-Il sito archeologico è stato visitato da William M. Leake nel gennaio del 1805 durante la sua visita a Konispoli e da François C.H.L. Pouqueville, il quale, oltre alle fortificazioni in opera poligonale, fa menzione anche della cinta tardoantica. Çuka e Ajtoit fu rilevata topograficamente e scavata per la prima volte negli anni Venti del secolo scorso dalla missione italiana  diretta da Luigi Maria Ugolini, che chiusi i lavori a Phoinike si era spostata nella vicina Butrinto, dove aveva intrapreso scavi estensivi.
+Il sito archeologico è stato visitato da William M. Leake nel gennaio del 1805 durante la sua visita a Konispoli e da François C.H.L. Pouqueville, il quale, oltre alle fortificazioni in opera poligonale, fa menzione anche della cinta tardoantica. Çuka e Ajtoit fu rilevata topograficamente e scavata per la prima volte negli anni Venti del secolo scorso dalla missione italiana diretta da Luigi Maria Ugolini, che chiusi i lavori a Phoinike si era spostata nella vicina Butrinto, dove aveva intrapreso scavi estensivi.
 
 Il topografo della missione italiana, Dario Roversi Monaco, ha compilato il rilievo generale della collina, delle mura e degli altri resti archeologici all'epoca visibili. Sfortunatamente queste campagne non furono pubblicate e per moltissimo tempo i manoscritti furono ritenuti perduti, mentre invece erano custoditi in uno degli archivi della missione a Roma. Questa situazione perdura fino al 2005 quando vennero parzialmente pubblicati dalla missione inglese che in quegli anni svolgeva le proprie attività a Butrinto.
 
@@ -89,14 +94,14 @@ Nessuno di questi centri secondari è stato indagato in maniera sistematica e de
 
 In quest'ottica, lo studio della storia e della topografia di Çuka e Ajtoit da una parte, e della regione di _Kestríne_ dall'altra, sono fondamentali. Questo studio verrà compiuto nel pieno rispetto di tutte le fasi di vita dell'antico sito, cercando di contestualizzare non solo i resti monumentali del periodo ellenistico o tardoantico, ma con un'attenzione particolare anche per le fasi meno note archeologicamente, come quella pre-ellenistiche (età del Ferro e periodo Classico) e anche romana.
 
-Per quanto riguarda gli aspetti particolari, le fortificazioni di Çuka e Ajtoit sono un palinsesto oltremodo interessante e monumentale delle varie tecniche edilizie usate in regione per la costruzione di opere di fortificazione e uno dei rari casi dell'uso del poligonale in Caonia. Per questo motivo il sito costituisce un laboratorio unico per lo studio delle tecniche di fortificazione nella regione. La datazione delle sue mura è stato fatto fino ad oggi su basi prettamente stilistiche, ma gli studi dell'ultimo decennio nelle limitrofe regioni della Caonia e della Tesprozia, e più oltre in tutto il bacino del Mediterraneo, ci spingono a riconsiderare con attenzione  i criteri metodologici e di ridiscutere dalle fondamenta la questione cronologica. Nuovi auspicabili dati stratigrafici da saggi mirati e l'approfondita analisi delle tecniche di costruzione porteranno certamente nuovo materiale per lo studio diacronico delle opere murarie.
+Per quanto riguarda gli aspetti particolari, le fortificazioni di Çuka e Ajtoit sono un palinsesto oltremodo interessante e monumentale delle varie tecniche edilizie usate in regione per la costruzione di opere di fortificazione e uno dei rari casi dell'uso del poligonale in Caonia. Per questo motivo il sito costituisce un laboratorio unico per lo studio delle tecniche di fortificazione nella regione. La datazione delle sue mura è stato fatto fino ad oggi su basi prettamente stilistiche, ma gli studi dell'ultimo decennio nelle limitrofe regioni della Caonia e della Tesprozia, e più oltre in tutto il bacino del Mediterraneo, ci spingono a riconsiderare con attenzione i criteri metodologici e di ridiscutere dalle fondamenta la questione cronologica. Nuovi auspicabili dati stratigrafici da saggi mirati e l'approfondita analisi delle tecniche di costruzione porteranno certamente nuovo materiale per lo studio diacronico delle opere murarie.
 
 La diacronia è un'altra caratteristica importante di questo centro. Gli scavi precedenti hanno messo in risalto la presenza di altre fasi oltre a quella ellenistica, come quella romana, tardoantica e medievale. Più labili, ma non assenti, le tracce di fasi più antiche, finora mai del tutto contestualizzate. Continuità e cesure indagabili archeologicamente rendono particolarmente adatto il sito di Çuka e Ajtoit all'analisi e ricostruzione nella longue durée.
 
 Per quanto riguarda gli aspetti urbanistici e architettonici, lo studio della edilizia residenziale privata e non acquista un'importanza di primo piano in questo sito, grazie alla presenza di decine di unità residenziali, sia dentro la cinta delle fortificazioni, che al suo esterno, nella “città bassa”, come lo chiama S. Islami o “il Palazzo”, come viene chiamato dagli abitanti della zona. Le soluzioni planimetriche sono per lo più molto semplici, almeno per quanto riguarda le abitazioni dell'“acropoli” (sempre usando la terminologia di S. Islami), dove la mancanza di spazio utile e il terreno fortemente accidentato limitano moltissimo lo spazio utile alla costruzione. Diversa è la situazione presso “il Palazzo”, delle cui strutture piuttosto monumentali (una porta in opera poligonale, con copertura a finto arco è stata trasportata e rimontata nel cortile del Museo Nazionale di Tirana) ancora non disponiamo di una interpretazione certa.
 
-
 ## Campagna 2022
+
 Il 18 luglio 2022 si è chiusa la seconda campagna di ricerche archeologiche sul campo presso il sito di Çuka e Ajtoit (Albania), che ha visto la partecipazione di ricercatori italiani della Sapienza Università di Roma e dell'Istituto di Archeologia di Tirana. Quest'anno si è attivata anche una proficua collaborazione con l'Università di Tirana che ha reso possibile la partacipazione alle indagini di studenti di questo Ateneo.
 
 La campagna si è svolta tra 22 giugno e il 18 luglio 2022 e ha avuto diversi obiettivi, tra i quali i principali sono stati il completamento del rilievo della collina e dei resti archeologici, utilizzando riprese fotografiche da drone ed eleborazione fotogrammetriche. Inoltre, la campagna 2022, ha visto l'affiancamento di rilievi a terra tramite GNSS in modalità RTK, reso possibile dalla collaborazione della Missione con la ditta Rilievi srl per la strumentazione GNSS e con il programma ALBCORS del Geoportale Nazionale Albanese (ASIG). Questo ha reso possibile il georiferimento con alta precisione (ca. 2cm) di tutti i rilievi eseguiti.
@@ -105,7 +110,7 @@ Inoltre, si è proceduto alla verifica e schedatura archeologica dei resti arche
 
 Sono stati inoltre eseguiti due saggi stratigrafici, uno nel cosiddetto “Palazzo”, la struttura a mezza costa e fuori dalle mura che si trova lungo le pendici ovest della collina, dove è stato possibile individuare e documentare stratigraficamente alcuni depositi stratigrafici sigillati, molto utili per la datazione delle strutture poligonali del “Palazzo”.
 
-Il secondo saggio è stato eseguito presso una delle struttre del cd. villaggio ottomano, su un pianoro rialzato ai piedi delle pendici nordorientali della collina, individuato nella precedente campagna. Anche in questo caso il sondaggio aveva il fine di verificare la consistenza e bontà dei depositi archeologici e fornire qualche indicazione funzionale e cronologica delle strutture. 
+Il secondo saggio è stato eseguito presso una delle struttre del cd. villaggio ottomano, su un pianoro rialzato ai piedi delle pendici nordorientali della collina, individuato nella precedente campagna. Anche in questo caso il sondaggio aveva il fine di verificare la consistenza e bontà dei depositi archeologici e fornire qualche indicazione funzionale e cronologica delle strutture.
 
 Il lavoro di questa campagna si prolungherà nei prossimi mesi con lo studio del materiale archeologico, principalmente ceramico, ora conservato presso i depositi dell'Istituto Archeologico albanese di Saranda. Il materiale è stato raccolto nelle stratigrafie dei saggi, ma anche in superficie, con raccolte a campione in aree diverse della città, al fine di offrire un panorama quanto più completo delle diverse fasi di vita del centro antico. Lo studio è ancora in una fase molto preliminare, ma qualche primo risultato riguarda il rinvenimento di frammenti ceramici ad impasto, probabilmente risalente all'età del Bronzo finale, in più aree della collina, a testimoniare una presenza probabilmente insediativa e non solo sporadica in questo periodo. Fondamentale in questa direzione è stata la partecipazione alla prima parte della missione del prof. Alessandro Vanzetti della Sapienza. Inoltre, sembrano confermate le ipotesi cronologiche circa il villaggio ottomano, avanzate inizialmente unicamente su basi topografiche. Il materiale raccolto in superficie e quello proveniente dal saggio sembrano confermare una datazione delle strutture a partire almeno dal 1600 con continuità fino alle soglie del 1900. Anche in questo caso lo studio approfondito del materiale archeologico porterà nel futuro un contributo importante alla comprensione di questa parte del sito antico.
 
@@ -116,80 +121,83 @@ Oltre che da colleghi e amici, i lavori della Missione sono stati visitati e seg
 **Partecipanti**
 
 Direzione missione:
+
 - Julian Bogdani (Sapienza, Roma, Italia)
 - Albana Meta (Istituto di Archeologia, Tirana, Albania)
 
 Senior:
+
 - Domizia D'Erasmo (Sapienza, Roma, Italia)
 - Noemi Giovino (Sapienza, Roma, Italia)
 - Paolo Rosati (Sapienza, Roma, Italia)
 
 BA, MA:
+
 - Halil Braho (Università di Tirana, Albania)
 - Dea Hate (Università di Tirana, Albania)
 - Klea Mufali (Università di Tirana, Albania)
 
 Ospiti
-- Alessandro Vanzetti  (Sapienza, Roma, Italia)
+
+- Alessandro Vanzetti (Sapienza, Roma, Italia)
 - Halil Shabani (Archeologo e storico, Saranda, Albania)
 - Giuseppe Valentini (MA, Sapienza, Roma, Italia)
 
-***
+---
 
 ## Supporto
 
 Le attività della Missione Archeologica della Sapienza a Çuka e Ajtoit sono state rese possibili anche grazie ad una proficua collaborazione con enti istituzionali e imprese italiiane e albanesi, alle quali va tutta la nostra gratitudine per il continuo supporto.
 
-***
+---
 
 La Missione Archeologica della Sapienza a Çuka e Ajtoit ringrazia per il suo continuo e fondamentale supporto **Past & Present Journeys**, Tirana.
 
-[![Past & Present Journeys](./pastandpresent.png)](https://pastandpresent.al/)  
+[![Past & Present Journeys](./pastandpresent.png)](https://pastandpresent.al/)
+
 - Sito web: [https://pastandpresent.al/](https://pastandpresent.al/)
 - Facebook: [http://www.facebook.com/pages/PastandPresent-Travel-Company/106348866175295](http://www.facebook.com/pages/PastandPresent-Travel-Company/106348866175295)
 - Twitter: [@PastPresentTrav](https://twitter.com/PastPresentTrav)
 
-***
+---
 
 Si ringrazia Rilievi srl per la strumentazione GNSS e per il continuo supporto con strumentazione di rilievo e consigli  
 [![Rilievi srl](../../logos/rilievi.jpg)](https://rilievi.srl/)
 
-***
+---
 
 Infine, si ringrazia il programma ALBCORS del [Geoportale Nazionale Albanese (ASIG)](https://asig.gov.al) per il servizio RTK e per il supporto sul campo al rilievo topografico con strumentazione GNSS.
 
+---
 
-***
-
-## Enti istituzionali 
+## Enti istituzionali
 
 <div class="row text-center">
-<div class="col-sm-3">
-<img src="../../logos/lad-blue.png" style="max-width: 100%" class="img-fluid"><br>
-Laboratorio di Archeologia Digitale alla Sapienza
-</div>
-<div class="col-sm-3">
-<img src="../../logos/sapienza.png" style="max-width: 100%" class="img-fluid"><br>
-Sapienza Università di Roma
-</div>
-<div class="col-sm-3">
-<img src="../../logos/iat.png" style="max-width: 100%" class="img-fluid"><br>
-Instituti i Arkeologjisë Tiranë (Albania)
-</div>
-<div class="col-sm-3">
-<img src="../../logos/asa.jpg" style="max-width: 100%" class="img-fluid"><br>
-Akademia e Studimeve Albanologike, Tiranë (Albania)
-</div>
+  <div class="col-sm-3">
+    <img src="../../logos/lad-blue.png" style="max-width: 100%" class="img-fluid" /><br />
+    Laboratorio di Archeologia Digitale alla Sapienza
+  </div>
+  <div class="col-sm-3">
+    <img src="../../logos/sapienza.png" style="max-width: 100%" class="img-fluid" /><br />
+    Sapienza Università di Roma
+  </div>
+  <div class="col-sm-3">
+    <img src="../../logos/iat.png" style="max-width: 100%" class="img-fluid" /><br />
+    Instituti i Arkeologjisë Tiranë (Albania)
+  </div>
+  <div class="col-sm-3">
+    <img src="../../logos/asa.jpg" style="max-width: 100%" class="img-fluid" /><br />
+    Akademia e Studimeve Albanologike, Tiranë (Albania)
+  </div>
 </div>
 <div class="row text-center">
-<div class="col-sm-6 offset-sm-3">
-<img src="../../logos/maeci.jpg" style="max-width: 100%" class="img-fluid"><br>
-Con il riconoscimento ufficiale (dal 2022) e il supporto finanziario (dal 2023) del Ministero degli Affari Esteri e della Cooperazione Internazionale.
-</div>
+  <div class="col-sm-6 offset-sm-3">
+    <img src="./maeci.jpg" style="max-width: 100%" class="img-fluid" /><br />
+    Con il riconoscimento ufficiale (dal 2022) e il supporto finanziario (dal 2023) del Ministero degli Affari Esteri e della Cooperazione Internazionale.
+  </div>
 </div>
 
-
-***
+---
 
 ## Bibliografia
 
@@ -211,7 +219,7 @@ Con il riconoscimento ufficiale (dal 2022) e il supporto finanziario (dal 2023) 
 - Islami, S. 1982.“Qyteza e Çukës së Aitoit.” Saranda. Almanak 2, 9-18.
 - Islami, S. 2008 Historia e Ilirëve. Tirana (263-336).
 - Lako, K. 1982. “Kështjella e antikitetit të vonë në Çukën e Aitoit.” Iliria, XII, 2, 207-219
-- Lako, K.. 1982b. “Një keshtjellë e antikitet të vonë.” Saranda. Almanak, 2,     67-73.
+- Lako, K.. 1982b. “Një keshtjellë e antikitet të vonë.” Saranda. Almanak, 2, 67-73.
 - Leake, W.M. 1935, Travels in Northen Greece I London.
 - Louis, H. 1927. Albanien. Eine Landeskunde vornehmlich auf Grund eigener Reisen. Stuttgart.
 - Pouqueville, F.C.H.L.1936. Voyage dans la Grèce II. Paris.

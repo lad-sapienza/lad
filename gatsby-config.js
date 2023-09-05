@@ -45,7 +45,13 @@ module.exports = {
               theme: "one-dark",
               lineNumbers: true
             }
-          }
+          },
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 800,
+            },
+          },
         ]
       },
     },
