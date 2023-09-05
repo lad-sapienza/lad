@@ -24,8 +24,9 @@ Aule 811-812
 
 **Workshops**
 
-- ```9:00-13:30``` Workshop 1. *The open source platform Recogito (Pelagios Commons): from semantic annotation to LOD creation* with **Valeria Vitale** (University of Sheffield)
-- ```9:00-13:30``` Workshop 2. *Re-shaping LiDAR data for Landscape Archaeology research* with **Giacomo Fontana** (UCL-KNIR)
+```9:00-13:30``` Workshop 1. *The open source platform Recogito (Pelagios Commons): from semantic annotation to LOD creation* with **Valeria Vitale** (University of Sheffield)
+
+```9:00-13:30``` Workshop 2. *Re-shaping LiDAR data for Landscape Archaeology research* with **Giacomo Fontana** (UCL-KNIR)
 
 
 **13th November 2023**  
