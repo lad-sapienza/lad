@@ -3,7 +3,7 @@ title: Linking Pasts And Sharing Knowledge. Mapping Archaeological Heritage, Leg
 autore: Julian Bogdani
 sort: 101
 img: ./linking-pasts-and-sharing-knowledge.jpg
-sommario: La Missione Archeologica della Sapienza a Çuka e Ajtoit (Albania) è un progetto congiunto in collaborazione con l'Istituto Archeologico Albanese di Tirana e l'Accademia degli Studi Albanologici e opera sul terreno con il riconoscimento ufficiale del Ministero degli Affari Esteri e della Cooperazione Internazionale della Repubblica Italiana. Opera sul terreno da 2021 ed è diretta da Julian Bogdani (Sapienza, Roma) e Albana Meta (IA, Tirana).
+sommario: A Hybrid Conference hosted by the University of Naples Federico II, and organised with the Sapienza University of Rome and the University of Sheffield on 13th - 14th November 2023
 ---
 
 ### A Hybrid Conference hosted by the University of Naples Federico II, and organised with the Sapienza University of Rome and the University of Sheffield
