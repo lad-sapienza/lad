@@ -103,56 +103,36 @@ Allo stato attuale, le informazioni relative all'idrografia si trovano su due ra
 1. Salvare il file come `idrografia-3-valori`
 ![unione-fiumi-acque-interne.png](./unione-fiumi-acque-interne.png)
 
-L'espressione inserita, `"acque-interne-raster@1" + "fiumi-raster@1"`, indica una semplice adizione tra i valori dei singoli pixel di ogni elemento che si trovano nelle stesso spazio geografico (che si sovrappongono). Da notare che stiamo qui dando una precisa indicazione della banda da usare per ogni raster, attraverso il suffisso `@1`, anche se questi rsater in particolare hanno una sola banda. Altri tipologie di raster, più complessi possono avere 3 o più bande. È il caso delle immagii RGB, che presenano 3 bande (o canali), per cui `immagine@1` si riferirà ai valori del rosso (la banda 1), `immagine@2` ai valori della banda dei verdi e `immagine@3` ai valori del blu. Questa funzione risulta molto più interessante nei casi delle immagini multi- o iperspettrali, dove il numero di bande può essere anche molto elevato.
+L'espressione inserita, `"acque-interne-raster@1" + "fiumi-raster@1"`, indica una semplice adizione tra i valori dei singoli pixel di ogni elemento che si trovano nelle stesso spazio geografico (che si sovrappongono). Da notare che stiamo qui dando una precisa indicazione della banda da usare per ogni raster, attraverso il suffisso `@1`, anche se questi rsater in particolare hanno una sola banda. Altri tipologie di raster, più complessi possono avere 3 o più bande. È il caso delle immagii RGB, che presenano 3 bande (o canali), per cui `immagine@1` si riferirà ai valori del rosso (la banda 1), `immagine@2` ai valori della banda dei verdi e `immagine@3` ai valori del blu. Questa funzione risulta molto più interessante nei casi delle immagini multi- o iperspettrali, dove il numero di bande pu essere anche molto elevato.
 
-I pixel del raster in uscita, ovvero di `raster_idrografia`, potremmo avere quindi tre possibili valori
-- `null`: quando in entrambi i raster in entrata non c'era un valore disponibilie
-- `1`: quando uno solo dei due raster era valorizzato
-- `2`: quando entrambi i raster presentavano un valore, ovvero quando corsi d'acqua si sovrappongono.
+Il raster in uscita e cioè `raster_idrografia` avrà valore 1 nei pixel dove è presente un corso d'acqua.  
+      **Importante**: le aree in cui si trovano sia corsi d'acqua (fiumi) che laghi avranno invece valore 2. Per correggere questo errore e riportare tutte le aree con laghi e fiumi al valore 1 seguire il prossimo step:
 
-Quest'ultimo è una informazione ridondante e non necessaria, che possiamo eliminare sempre con il Calcolatore dei raster:
-
-1. Aprire nuovamente il `Calcolatore raster`
-1. Utilizzare la seguente espressione: `"idrografia-3-valori@1" > 0`
-1. Salvare il file come `idrografia-raster`
-
-L'espressione `"idrografia-3-valori@1" > 0` verrà valutato per ogni pixel della banda 1 del raster in ingresso (`idrografia-3-valori`) e quando il valore sarà maggiore di 0 (è il caso quindi di 1 e 2) il risultato dell'espressione sarà `1` (o `vero`) e questo valore verrà iscritto nel nuovo raster, altrimenti, il risultato sarà `0` (o `false`). L'espressione `"idrografia-3-valori@1" > 0` è quindi una espressione booleana che può avere solo due valori di output, `0` oppure `1`, estattamente com il raster in uscita.
-
-1. Creare un gruppo di layer chiamato `Step-3` e includervi tutti i raster creati in questo passaggio
-
-### 3. Analisi di prossimità (distanza raster)
-I raster ottenuti fin'ora rappresentano attraverso pixel di valori differenti (`0`,`1`) strade, idrografia ed insediamenti della regione Lazio. Il prossimo obiettivo sarà quindi quello di creare un `raster di prossimità` (_proximity raster_) usando l'analisi di prossimità attraverso l'algoritmo `Distanza raster`. Questo procedimento creerà una mappa di prossimità raster in cui ogni pixel verrà rappresentato la distanza dal pixel più vicino nel raster sorgente. Il `raster di prossimità` potrà quindi essere utilizzato per determinaree le aree che si trovano a una certa distanza dall'input rispondendo, quindi, alla domanda formulata nell'introduzione della guida.
-
-1. Aprire lo strumento `Prossimità (distanza raster)` (sotto `GDAL` > `Analisi raster`)
-1. In `Layer di ingresso` selezionare `strade-raster`
-1. Come `Unità di distanza` impostare `unità georeferenziate`
-1. Impostare come `Massima distanza che deve essere generata` il valore `6000`, che equivale a 6km. Nel caso specifico **non** stiamo prendeno in considerazione distanze maggiori
-1. Impostare `Valore Nodata` a `non impostato`
-1. Salvare il file come `strade-prossimita`
-![prossimita-idrografia.png](./prossimita-idrografia.png)
-
-A questo punto possiamo cambiare lo stile di visualizzazione del layer per rendere più evidente l'analisi effettuata:
-1. Aprire il pannello dello `Stile dei layer`
-1. In `Gradiente colore` impostare come valore massimo (max) `6000`
-
-Completato questo passaggio, si possono ripetere le stesse operazioni anche per i layer `idrografia-raster` e `insediamenti-raster`
-
-### 4. Riclasssificazione dei temi
-
-#### Strade
-Allo stato attuale, tutti i raster elaborati tramite l'algoritmo `Distanza raster` presentano un _continuum_ di valori da 0 a 6000. Per poter procedere all'analisi di sovrapposizione ponderata multi-criteri è opportuno riclassificare i raster per creare dei valori discreti che rappresentino rispettivamente l'idoneità relativa ai pixel in relazione alla distanza da strade, idrografia e insediamenti.
-
-Possiamo quindi riclassificazione strade definendo tre classi, definite in maniera **arbitraria**, rispettivamente:
-   - **100** che raccoglie le aree (i pixel) che si trovano fino a 1km di distanza dalle strade,
-   - **50** che raccoglie le aree tra 1 e 5 km dalle strade, e
-   - **10** che raccoglie le aree distanti più di 6km dalle strade.
-
-La procedura è la seguente:
-1. Aprire il `Calcolatore dei raster`
-1. Inserire la seguente espressione:  
-   `100*("strade-prossimita@1"<=1000) + 50*("strade-prossimita@1">1000)*("strade-prossimita@1"<=6000) + 10*("strade-prossimita@1">6000)`
-1. In `Referencelayer(s)` selezionare `confine-lazio`
-1. Salvare il file come `strade-riclassificato`
+5. Eliminare valore 2 e sostituirlo con 1 nel layer `idrografia-3-valori`
+   1. Aprire nuovamente il `Calcolatore raster`
+   2. Utilizzare la seguente espressione: `"idrografia-3-valori@1" > 0`
+   3. Salvare il file come `idrografia-raster`
+6. Creare un gruppo di layer chiamato `Step-3` e includervi tutti i raster creati in questo passaggio
+7. Analisi di prossimità (distanza raster)
+   1. Aprire lo strumento `Prossimità (distanza raster)` (sotto `GDAL` > `Analisi raster`)
+   2. In `layer di ingresso` selezionare `strade-raster`
+   3. Come `unità di distanza` impostare `unità georeferenziate`
+   4. Impostare come `massima distanza che deve essere generata` il valore `6000` (= 6km)
+   5. Impostare `valore Nodata` a `non impostato`
+   6. Salvare il file come `strade-prossimita`
+      ![prossimita-idrografia.png](./prossimita-idrografia.png)
+   7. Aprire il pannello dello `stile dei layer`
+   8. In `gradiente colore` impostare come valore massimo (max) `6000`
+   9. Ripetere le stesse operazioni per i layer `idrografia-raster` e `insediamenti-raster`
+8. Ricalssificazione strade, definendo tre classi, rispettivamente:
+   - **100** che raccoglie le aree fino a 1km di distanza,
+   - **50** che raccoglie le aree tra 1km e 5 km e
+   - **10** che raccoglie le aree distanti più di 6km.
+   1. Aprire il `calcolatore dei raster`
+   2. Inserire la seguente espressione:  
+      `100*("strade-prossimita@1"<=1000) + 50*("strade-prossimita@1">1000)*("strade-prossimita@1"<=6000) + 10*("strade-prossimita@1">6000)`
+   3. In `Referencelayer(s)` selezionare `confine-lazio`
+   4. Salvare il file come `strade-riclassificato`
       ![strade-classificate.png](./strade-classificate.png)
       ![strade-riclassificate-2.png](./strade-riclassificate-2.png)
 
