@@ -56,7 +56,7 @@ Aula ex Cataloghi Lignei
 
 ```17:00```  
 **Nicola Lercari** (Ludwig-Maximilians-Universität München)  
-*Archaeology of Archaeology at Heloros: Re-interpreting the Urban Layout of a Complex Greek Settlement in Sicily using Proximal Sensing and Data Fusion *
+*Archaeology of Archaeology at Heloros: Re-interpreting the Urban Layout of a Complex Greek Settlement in Sicily using Proximal Sensing and Data Fusion*
 
 ```17:20```  
 **Giuseppina Renda** (Università della Campania ‘Luigi Vanvitelli’), **Pacifico Cofrancesco** (Università degli Studi di Pavia), **Carmine Civale**, **Sabrina Mataluna** (Università della Campania ‘Luigi Vanvitelli’)  
