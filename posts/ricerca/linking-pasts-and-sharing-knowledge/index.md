@@ -94,7 +94,7 @@ Aula ex Cataloghi Lignei
 **Anita Casarotto**, **Tesse D. Stek** (KNIR Royal Netherlands Institute in Rome – University of Groningen)  
 *Mapping, comparing and integrating archaeological survey datasets on a supranational level: a pilot methodology for Italy and Portugal*
 
-```09:40```
+```09:40```  
 **Julian Bogdani**, **Domizia D'Erasmo** (Università di Roma “La Sapienza”)  
 *Old data, old methodology and new research. A case study of legacy data integration from the Kestrine region, Epirus*
 
