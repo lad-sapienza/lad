@@ -1,8 +1,7 @@
 ---
 title: Linking Pasts And Sharing Knowledge. Mapping Archaeological Heritage, Legacy Data Integration and Web Technologies for Modelling Historical Landscapes
-autore: Julian Bogdani
 sort: 101
-img: ./linking-pasts-and-sharing-knowledge.jpg
+img: ./linking-pasts-and-sharing-knowledge.png
 sommario: A Hybrid Conference hosted by the University of Naples Federico II, and organised with the Sapienza University of Rome and the University of Sheffield on 13th - 14th November 2023
 ---
 
@@ -18,23 +17,24 @@ Aula ex Cataloghi Lignei
 
 #### 13th November 2023
 
-Dipartimento di Studi Umanistici  
-Palazzo di via Marina 33  
-Aule 811-812
+> Dipartimento di Studi Umanistici  
+> Palazzo di via Marina 33  
+> Aule 811-812
 
-**Workshops**
+##### Workshops
 
 ```9:00-13:30``` Workshop 1. *The open source platform Recogito (Pelagios Commons): from semantic annotation to LOD creation* with **Valeria Vitale** (University of Sheffield)
 
 ```9:00-13:30``` Workshop 2. *Re-shaping LiDAR data for Landscape Archaeology research* with **Giacomo Fontana** (UCL-KNIR)
 
+---
 
 **13th November 2023**  
 Dipartimento di Studi Umanistici  
 Complesso di San Pietro Martire, via Porta di Massa 1  
 Aula ex Cataloghi Lignei
 
-**Panel 1. Digital Approaches in Archaeological Mapping**
+##### Panel 1. Digital Approaches in Archaeological Mapping
 
 ```15.00```  
 *Greetings and introduction* 
@@ -44,7 +44,7 @@ Aula ex Cataloghi Lignei
 *Landscape visualisation and modelling*
 
 ```15:40```  
-**Ian Haynes** (Newcastle University), **Thea Ravasi** (Newcastle University), **Iwan Peverett** (New Visions), **Stephen Kay** (The British School at Rome), **Elena Pomar** (The British School at Rome), **Elettra Santucci** (Newcastle University), **Phyllida Bailey** (Newcastle University), **Francesca Carboni** (Soprintendenza Speciale PNRR), **David Heslop** (New Visions), **Alex Turner** (Newcastle University), **Matteo Sordini** (Universita’ di Siena), **Francesco Pericci** (Universita’ di Siena), **Carlo Rosa** ( SIGEA Lazio), **Marc Grellert** (Technische Universität Darmstadt), **Mike Simpson** (Newcastle University) and **Simonetta Serra** (Sovrintendenza Capitolina)  
+**Ian Haynes** (Newcastle University), **Thea Ravasi** (Newcastle University), **Iwan Peverett** (New Visions), **Stephen Kay** (The British School at Rome), **Elena Pomar** (The British School at Rome), **Elettra Santucci** (Newcastle University), **Phyllida Bailey** (Newcastle University), **Francesca Carboni** (Soprintendenza Speciale PNRR), **David Heslop** (New Visions), **Alex Turner** (Newcastle University), **Matteo Sordini** (Università di Siena), **Francesco Pericci** (Università di Siena), **Carlo Rosa** ( SIGEA Lazio), **Marc Grellert** (Technische Universität Darmstadt), **Mike Simpson** (Newcastle University) and **Simonetta Serra** (Sovrintendenza Capitolina)  
 *A new approach to historical landscape visualisations. Rome Transformed SCIEDOC and the evolution of Rome’s via Statilia and Arcus Neroniani/Caelemontani in the Roman period*
 
 ```16:00```  
@@ -68,23 +68,23 @@ Aula ex Cataloghi Lignei
 *Integrating lidar and machine learning for archaeological research and heritage management in mountainous and forested landscapes*
 
 ```18:00```  
-**Valentina Limina** (Université catholique de Louvain)
+**Valentina Limina** (Université catholique de Louvain)  
 *Modelling (and Simulating) Ancient Landscapes. RELOAD, a new project for liminal areas in Northern Tuscany*
 
 ```18:20``` **Discussion**
 
 ```20:30``` **Social dinner**
 
-
+---
 
 #### 14th November 2023
 
-Dipartimento di Studi Umanistici  
-Complesso di San Pietro Martire  
-Via Porta di Massa 1  
-Aula ex Cataloghi Lignei
+> Dipartimento di Studi Umanistici  
+> Complesso di San Pietro Martire  
+> Via Porta di Massa 1  
+> Aula ex Cataloghi Lignei
 
-**Panel 2. Digital Integration of Archaeological Legacy Data**
+##### Panel 2. Digital Integration of Archaeological Legacy Data
 
 ```09:00```
 **Jonathan Prag** (Oxford University)  
@@ -117,7 +117,7 @@ Aula ex Cataloghi Lignei
 *The DFG Project Online: a digital Commentary on the Tabula Peutingeriana*
 
 ``11:40``  
-**Valentina Mignosa** (Università degli Studi di Udine)
+**Valentina Mignosa** (Università degli Studi di Udine)  
 *Digital Tools for Ancient History? Opportunities and Challenges of Deep Mapping*
 
 ```12.00``` **Discussion**
@@ -133,11 +133,11 @@ Aula ex Cataloghi Lignei
 *Legacy Pottery Data, GIS, and Statistical Computing: Revamping Archaeological Understanding through Knowledge-Sharing and Digital Technologies*
 
 ```16.10```  
-**Giulia Marsili** (Università di Bologna)
+**Giulia Marsili** (Università di Bologna)  
 *Digital Piazza Armerina: from legacy data to future research*
 
 ```16:30```  
-**Andrea D’Andrea** (Università L’Orientale)
+**Andrea D’Andrea** (Università L’Orientale)  
 *Legacy data or just archaeological data?*
 
 ```16.50``` **Coffee break**
@@ -155,7 +155,7 @@ Aula ex Cataloghi Lignei
 *Use and processing of multispectral images in proximity remote sensing*
 
 ```18.00```  
-**Paola Moscati** (ISPC-CNR)
+**Paola Moscati** (ISPC-CNR)  
 *Concluding remarks: looking back and moving forward to the openness  and interaction of knowledge*
 
 ```18.20``` *Discussion*
