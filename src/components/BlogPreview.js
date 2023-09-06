@@ -9,10 +9,8 @@ const BlogPreview = (props) => {
     <StyledDiv className="shadow p-3 mt-4">
       <Link to={props.readMore} title={props.title}>
         <h5>{props.title}</h5>
-        <p className="pt-1 pb-1 mt-3 border-bottom">
-          {props.author} | {props.date}
-        </p>
-        <p>{props.excerpt}</p>
+        { ( props.author && props.date ) ? <p className="pt-1 pb-1 mt-3 border-bottom">Di {props.author} | {props.date}</p> :  ''} 
+        {props.excerpt && <p>{props.excerpt}</p> }
       </Link>
     </StyledDiv>
   );

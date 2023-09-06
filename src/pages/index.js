@@ -206,9 +206,20 @@ const Index = ({ data }) => {
 
             {/* Ultimi articoli */}
             <Col sm={4}>
+              <Container className="mb-3">
+                <h2 className="border-bottom text-center">Ultime novità</h2>
+                {data.news.nodes.map((node, i) => (
+                  <BlogPreview
+                    key={i}
+                    title={node.frontmatter.title}
+                    readMore={node.fields.slug}
+                  />
+                ))}
+              </Container>
+
               <Container>
                 <h2 className="border-bottom">Ultimi post dal blog</h2>
-                {data.allMarkdownRemark.nodes.map((node, i) => (
+                {data.blog.nodes.map((node, i) => (
                   <BlogPreview
                     key={i}
                     author={node.frontmatter.autore}
@@ -263,10 +274,27 @@ export const query = graphql`
         siteUrl
       }
     }
-    allMarkdownRemark(
+    blog: allMarkdownRemark(
       sort: { frontmatter: { date: DESC } }
       limit: 5
       filter: { fileAbsolutePath: { regex: "/posts/blog/" } }
+    ) {
+      nodes {
+        frontmatter {
+          autore
+          date(formatString: "DD MMMM YYYY", locale: "it-IT")
+          title
+          sommario
+        }
+        fields {
+          slug
+        }
+      }
+    }
+    news: allMarkdownRemark(
+      sort: { frontmatter: { date: DESC } }
+      limit: 5
+      filter: { fileAbsolutePath: { regex: "/posts/notizie/" } }
     ) {
       nodes {
         frontmatter {
