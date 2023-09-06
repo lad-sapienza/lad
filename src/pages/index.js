@@ -27,7 +27,7 @@ const Index = ({ data }) => {
           <Row className="index">
             <Col className="col-intro" sm={8}>
               <Container>
-                <section>
+                <section id="intro">
                   <h1 className="border-bottom">
                     LAD: Laboratorio di Archeologia Digitale alla Sapienza
                   </h1>
@@ -42,11 +42,11 @@ const Index = ({ data }) => {
                   </p>
                 </section>
 
-                <section>
+                <section id="chi-siamo">
                   <Team />
                 </section>
 
-                <section>
+                <section id="cosa-facciamo">
                   <h2 className="border-bottom">Cosa facciamo</h2>
                   <p>
                     Il LAD sperimenta l'applicazione delle tecnologie alla
