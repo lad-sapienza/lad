@@ -41,6 +41,9 @@ const Header = () => {
               <Nav.Link href={withPrefix(`/`)} title="Inizio">
                 Inizio
               </Nav.Link>
+              <Nav.Link href={withPrefix(`/#chi-siamo`)} title="Chi siamo">
+                Chi siamo
+              </Nav.Link>
               <Nav.Link href={withPrefix(`/notizie/`)} title="Notizie">
                 Notizie
               </Nav.Link>

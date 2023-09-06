@@ -27,7 +27,7 @@ const Index = ({ data }) => {
           <Row className="index">
             <Col className="col-intro" sm={8}>
               <Container>
-                <section>
+                <section id="intro">
                   <h1 className="border-bottom">
                     LAD: Laboratorio di Archeologia Digitale alla Sapienza
                   </h1>
@@ -42,11 +42,11 @@ const Index = ({ data }) => {
                   </p>
                 </section>
 
-                <section>
+                <section id="chi-siamo">
                   <Team />
                 </section>
 
-                <section>
+                <section id="cosa-facciamo">
                   <h2 className="border-bottom">Cosa facciamo</h2>
                   <p>
                     Il LAD sperimenta l'applicazione delle tecnologie alla
@@ -215,6 +215,15 @@ const Index = ({ data }) => {
                     readMore={node.fields.slug}
                   />
                 ))}
+                <div class="d-grid gap-2 col-12 mx-auto my-4">
+                  <Link
+                    to="/Notizie/"
+                    className="btn btn-outline-primary"
+                    title="Vai al Blog del LAD"
+                  >
+                    Vai all'elenco completo delle notizie
+                  </Link>
+                </div>
               </Container>
 
               <Container>
@@ -229,15 +238,16 @@ const Index = ({ data }) => {
                     readMore={node.fields.slug}
                   />
                 ))}
-              </Container>
-              <Container className="link-blog text-center">
-                <Link
-                  to="/blog/"
-                  className="btn btn-primary text-white"
-                  title="Vai al Blog del LAD"
-                >
-                  Vai all'elenco completo degli articoli della sezione Blog
-                </Link>
+
+                <div class="d-grid gap-2 col-12 mx-auto my-4">
+                  <Link
+                    to="/blog/"
+                    className="btn btn-outline-primary"
+                    title="Vai al Blog del LAD"
+                  >
+                    Vai all'elenco completo degli articoli della sezione Blog
+                  </Link>
+                </div>
               </Container>
             </Col>
           </Row>
