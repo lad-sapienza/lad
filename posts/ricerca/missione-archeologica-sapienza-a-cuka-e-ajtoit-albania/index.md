@@ -3,6 +3,7 @@ title: Missione Archeologica della Sapienza a Çuka e Ajtoit (Albania)
 autore: Julian Bogdani
 sort: 100
 img: ./cuka_ajtoit.jpg
+pinned: true
 sommario: La Missione Archeologica della Sapienza a Çuka e Ajtoit (Albania) è un progetto congiunto in collaborazione con l'Istituto Archeologico Albanese di Tirana e l'Accademia degli Studi Albanologici e opera sul terreno con il riconoscimento ufficiale del Ministero degli Affari Esteri e della Cooperazione Internazionale della Repubblica Italiana. Opera sul terreno da 2021 ed è diretta da Julian Bogdani (Sapienza, Roma) e Albana Meta (IA, Tirana).
 ---
 

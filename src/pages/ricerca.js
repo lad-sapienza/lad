@@ -10,7 +10,7 @@ import Seo from "../components/Seo";
 import ItemPreview from "../components/ItemPreview";
 
 const Ricerca = ({ data }) => {
-  const posts = data.allMarkdownRemark.edges;
+  const posts = data.ricerca.edges;
   return (
     <Layout>
       <Seo
@@ -35,7 +35,7 @@ const Ricerca = ({ data }) => {
         <hr />
 
         {posts.map(({ node }, k) => (
-          <ItemPreview key={k} node={node} />
+          <ItemPreview key={k} node={node} pinned={node.frontmatter.pinned}/>
         ))}
       </Container>
     </Layout>
@@ -49,7 +49,7 @@ export const query = graphql`
         siteUrl
       }
     }
-    allMarkdownRemark(
+    ricerca: allMarkdownRemark(
       sort: { frontmatter: { sort: DESC } }
       filter: { fileAbsolutePath: { regex: "/posts/ricerca/" } }
     ) {
@@ -64,6 +64,7 @@ export const query = graphql`
             title
             sort
             sommario
+            pinned
             img {
               base
               childImageSharp {
