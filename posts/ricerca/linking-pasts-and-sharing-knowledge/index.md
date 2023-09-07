@@ -124,33 +124,37 @@ Aula ex Cataloghi Lignei
 
 ```13.00``` **Light lunch**
 
-```15:30```  
+```15:00```  
 **Nicola Laneri**, **Chiara Pappalardo**, **Daniele Santamaria**, **Marianna Nicolosi Asmundo** (Università degli Studi di Catania)  
 *Introducing Godscapes: Towards a Model of Material Religion in the Second Millennium BCE Levant via Semantic Web Ontologies*
 
-```15:50```  
+```15:20```  
 **Sergio Giuseppe Russo** (University of Cambridge)  
 *Legacy Pottery Data, GIS, and Statistical Computing: Revamping Archaeological Understanding through Knowledge-Sharing and Digital Technologies*
 
-```16.10```  
-**Giulia Marsili** (Università di Bologna)  
-*Digital Piazza Armerina: from legacy data to future research*
+```15.40```  
+**Irene Rossi** (CNR, ISPC), **Jérémie Schiettecatte** (CNRS, UMR 8167 Orient et Méditerranée, Paris)  
+*The Maparabia project: integrating archaeological, geographic and epigraphic data for synthesizing ancient Arabia*
 
-```16:30```  
+```16:00```  
 **Andrea D’Andrea** (Università L’Orientale)  
 *Legacy data or just archaeological data?*
 
-```16.50``` **Coffee break**
+```16.20``` **Coffee break**
 
-```17:10```  
+```16:60```  
 **Rodolfo Brancato** (Università di Napoli), **Veronica Ferrari** (Unisalento), **Irere Rossi** (ISPC-CNR)  
 *The In.Res.Agri Project: investigating Resilient Roman Agricultural Landscapes in Southern Italy. An integrated and open IT approach to modelling centuriation through archaeology, remotely sensed data, palynology and ancient texts*
 
-```17:30```  
+```17.00```  
+**Giulia Marsili** (Università di Bologna)  
+*Digital Piazza Armerina: from legacy data to future research*
+
+```17:20```  
 **Claudia Lamanna** (Università di Bologna)  
 *Ravenna and its Late Antique and Medieval Epigraphic Landscape: Evaluation of SfM and LiDAR technology for mapping the cultural heritage*
 
-```17:50```  
+```17:40```  
 **Laura Ebanista** (Università di Roma “La Sapienza”)  
 *Use and processing of multispectral images in proximity remote sensing*
 
