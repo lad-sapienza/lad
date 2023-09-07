@@ -163,3 +163,56 @@ Aula ex Cataloghi Lignei
 *Concluding remarks: looking back and moving forward to the openness  and interaction of knowledge*
 
 ```18.20``` *Discussion*
+
+---
+
+### Organizato da
+
+<div class="container text-center">
+  <div class="row gx-5">
+    <div class="col-4 col-sm-3 offset-sm-1">
+      <a href="https://www.studiumanistici.unina.it/dipartimento/" title="Dipartimento Studi Umanistici. Università di Napoli Federico II">
+        Dipartimento Studi Umanistici. Università di Napoli Federico II
+      </a>
+      <hr />
+      <img src="./dsu-federico-ii.png" alt="Dipartimento Studi Umanistici. Università di Napoli Federico II" />
+      <br />
+      <img src="./federico-ii.png" alt="Università di Napoli Federico II" />
+    </div>
+    <div class="col-4 col-sm-3">
+      <a href="https://lad.saras.uniroma1.it/" title="LAD: Laboratorio di Archeologia Digitale alla Sapienza">
+        LAD: Laboratorio di Archeologia Digitale alla Sapienza
+      </a>
+      <hr />
+      <img src="./lad.png" alt="LAD: Laboratorio di Archeologia Digitale alla Sapienza" />
+      <br />
+      <img src="./sapienza.png" alt="Sapienza Università di Roma" />
+    </div>
+    <div class="col-4 col-sm-3">
+      <a href="https://www.sheffield.ac.uk/dhi" title="The Digital Humanities Institue. University of Sheffield">
+        The Digital Humanities Institue. University of Sheffield
+      </a>
+      <hr />
+      <img src="./DHI_Sheffield.jpeg" alt="The Digital Humanities Institue. University of Sheffield" />
+    </div>
+  </div>
+</div>
+
+
+---
+
+### Con il patrocinio di
+
+![AIUCD]()
+
+<div class="container text-center">
+  <div class="row gx-5">
+    <div class="col-5 col-sm-5 offset-sm-1">
+      <a href="http://www.aiucd.it/" title="Associazione per l'Informatica Umanistica e la Cultura Digitale">
+        Associazione per l'Informatica Umanistica e la Cultura Digitale
+      </a>
+      <hr />
+      <img src="./aiucd.png" alt="Dipartimento Studi Umanistici. Università di Napoli Federico II" />
+    </div>
+  </div>
+</div>
