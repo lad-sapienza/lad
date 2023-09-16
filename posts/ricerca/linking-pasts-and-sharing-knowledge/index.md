@@ -130,7 +130,7 @@ Aula ex Cataloghi Lignei
 
 ```15:20```  
 **Sergio Giuseppe Russo** (University of Cambridge)  
-*Legacy Pottery Data, GIS, and Statistical Computing: Revamping Archaeological Understanding through Knowledge-Sharing and Digital Technologies*
+*Legacy Pottery Data, GIS, and Statistical Computing: Revamping Archaeological Understanding in western Asia*
 
 ```15.40```  
 **Irene Rossi** (CNR, ISPC), **Jérémie Schiettecatte** (CNRS, UMR 8167 Orient et Méditerranée, Paris)  
@@ -169,31 +169,33 @@ Aula ex Cataloghi Lignei
 ### Organizato da
 
 <div class="container text-center">
-  <div class="row gx-5">
-    <div class="col-4 col-sm-3 offset-sm-1">
+  <div class="row g-5">
+    <div class="col-4">
       <a href="https://www.studiumanistici.unina.it/dipartimento/" title="Dipartimento Studi Umanistici. Università di Napoli Federico II">
         Dipartimento Studi Umanistici. Università di Napoli Federico II
       </a>
       <hr />
-      <img src="./dsu-federico-ii.png" alt="Dipartimento Studi Umanistici. Università di Napoli Federico II" />
-      <br />
-      <img src="./federico-ii.png" alt="Università di Napoli Federico II" />
-    </div>
-    <div class="col-4 col-sm-3">
-      <a href="https://lad.saras.uniroma1.it/" title="LAD: Laboratorio di Archeologia Digitale alla Sapienza">
-        LAD: Laboratorio di Archeologia Digitale alla Sapienza
+      <a href="https://www.studiumanistici.unina.it/dipartimento/" title="Dipartimento Studi Umanistici. Università di Napoli Federico II">
+        <img src="./dsu-federico-ii.png" alt="Dipartimento Studi Umanistici. Università di Napoli Federico II" />
       </a>
-      <hr />
-      <img src="./lad.png" alt="LAD: Laboratorio di Archeologia Digitale alla Sapienza" />
-      <br />
-      <img src="./sapienza.png" alt="Sapienza Università di Roma" />
     </div>
-    <div class="col-4 col-sm-3">
+    <div class="col-4">
       <a href="https://www.sheffield.ac.uk/dhi" title="The Digital Humanities Institue. University of Sheffield">
         The Digital Humanities Institue. University of Sheffield
       </a>
       <hr />
-      <img src="./DHI_Sheffield.jpeg" alt="The Digital Humanities Institue. University of Sheffield" />
+      <a href="https://www.sheffield.ac.uk/dhi" title="The Digital Humanities Institue. University of Sheffield">
+        <img src="./DHI_Sheffield.jpeg" alt="The Digital Humanities Institue. University of Sheffield" />
+      </a>
+    </div>
+    <div class="col-4">
+      <a href="https://lad.saras.uniroma1.it/" title="LAD: Laboratorio di Archeologia Digitale alla Sapienza">
+        LAD: Laboratorio di Archeologia Digitale alla Sapienza
+      </a>
+      <hr />
+      <a href="https://lad.saras.uniroma1.it/" title="LAD: Laboratorio di Archeologia Digitale alla Sapienza">
+        <img src="./lad-sapienza.png" alt="LAD: Laboratorio di Archeologia Digitale alla Sapienza" />
+      </a>
     </div>
   </div>
 </div>
