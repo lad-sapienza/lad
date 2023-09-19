@@ -43,3 +43,7 @@ Per il modulo avanzato e per il modulo di Archeologia Preventiva è richiesta la
 ## CFU
 
 I quattro moduli della durata totale di 26 ore rilasciano un attestato di frequenza che può essere usato per l’ottenimento di 1 CFU da verbalizzare presso i referenti di ciascun corso di laurea. È possibile concordare ore di lavoro aggiuntive da svolgere autonomamente per il raggiungimento di ulteriori CFU.
+
+
+## Riconoscimento Abilità informatica (AAF, 2CFU)
+La partecipazione al laboratorio dà accesso al riconoscimento automatico delle Abilità Informatiche (AAF, 2CFU)
