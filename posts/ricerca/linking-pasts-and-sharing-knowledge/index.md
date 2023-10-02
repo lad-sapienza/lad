@@ -205,8 +205,6 @@ Aula ex Cataloghi Lignei
 
 ### Con il patrocinio di
 
-![AIUCD]()
-
 <div class="container text-center">
   <div class="row gx-5">
     <div class="col-5 col-sm-5 offset-sm-1">
