@@ -143,7 +143,7 @@ Aula ex Cataloghi Lignei
 ```16.20``` **Coffee break**
 
 ```16:60```  
-**Rodolfo Brancato** (Università di Napoli), **Veronica Ferrari** (Unisalento), **Irere Rossi** (ISPC-CNR)  
+**Rodolfo Brancato** (Università di Napoli), **Veronica Ferrari** (Unisalento), **Irene Rossi** (CNR, ISPC)  
 *The In.Res.Agri Project: investigating Resilient Roman Agricultural Landscapes in Southern Italy. An integrated and open IT approach to modelling centuriation through archaeology, remotely sensed data, palynology and ancient texts*
 
 ```17.00```  
@@ -159,7 +159,7 @@ Aula ex Cataloghi Lignei
 *Use and processing of multispectral images in proximity remote sensing*
 
 ```18.00```  
-**Paola Moscati** (ISPC-CNR)  
+**Paola Moscati** (CNR, ISPC)  
 *Concluding remarks: looking back and moving forward to the openness  and interaction of knowledge*
 
 ```18.20``` *Discussion*
@@ -205,13 +205,17 @@ Aula ex Cataloghi Lignei
 
 ### Con il patrocinio di
 
-![AIUCD]()
 
 <div class="container text-center">
   <div class="row gx-5">
     <div class="col-5 col-sm-5 offset-sm-1">
+      <a href="http://www.topografiaantica.it/" title="Consulta di Topografia antica">
+        Consulta di Topografia antica
+      </a>
+    </div>
+    <div class="col-5 col-sm-5">
       <a href="http://www.aiucd.it/" title="Associazione per l'Informatica Umanistica e la Cultura Digitale">
-        Associazione per l'Informatica Umanistica e la Cultura Digitale
+        AIUCD: Associazione per l'Informatica Umanistica e la Cultura Digitale
       </a>
       <hr />
       <img src="./aiucd.png" alt="Dipartimento Studi Umanistici. Università di Napoli Federico II" />
