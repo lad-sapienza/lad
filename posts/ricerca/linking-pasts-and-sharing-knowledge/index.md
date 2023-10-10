@@ -166,7 +166,7 @@ Aula ex Cataloghi Lignei
 
 ---
 
-### Organizato da
+### Organised by
 
 <div class="container text-center">
   <div class="row g-5">
@@ -203,7 +203,7 @@ Aula ex Cataloghi Lignei
 
 ---
 
-### Con il patrocinio di
+### With the patronage of
 
 
 <div class="container text-center">
@@ -222,3 +222,8 @@ Aula ex Cataloghi Lignei
     </div>
   </div>
 </div>
+
+---
+
+[Download flyer (High resolution PDF file, 11.5 MB)](./linking-pasts-and-sharing-knowledge.pdf)
+
