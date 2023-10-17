@@ -23,9 +23,9 @@ Aula ex Cataloghi Lignei
 
 ##### Workshops
 
-```9:00-13:30``` Workshop 1. *The open source platform Recogito (Pelagios Commons): from semantic annotation to LOD creation* with **Valeria Vitale** (University of Sheffield)
+```9:00-13:30``` Workshop 1. *The open source platform Recogito (Pelagios Commons): from semantic annotation to LOD creation* with **Valeria Vitale** (University of Sheffield) [[download abstract in PDF](./workshop-1-vitale-abstract.pdf)]
 
-```9:00-13:30``` Workshop 2. *Re-shaping LiDAR data for Landscape Archaeology research* with **Giacomo Fontana** (UCL-KNIR)
+```9:00-13:30``` Workshop 2. *Re-shaping LiDAR data for Landscape Archaeology research* with **Giacomo Fontana** (UCL-KNIR) [[download abstract in PDF](./workshop-2-fontana-abstract.pdf)]
 
 ---
 
@@ -142,7 +142,7 @@ Aula ex Cataloghi Lignei
 
 ```16.20``` **Coffee break**
 
-```16:60```  
+```16:40```  
 **Rodolfo Brancato** (Università di Napoli), **Veronica Ferrari** (Unisalento), **Irene Rossi** (CNR, ISPC)  
 *The In.Res.Agri Project: investigating Resilient Roman Agricultural Landscapes in Southern Italy. An integrated and open IT approach to modelling centuriation through archaeology, remotely sensed data, palynology and ancient texts*
 
