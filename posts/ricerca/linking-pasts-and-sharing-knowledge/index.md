@@ -11,13 +11,14 @@ sommario: A Hybrid Conference hosted by the University of Naples Federico II, an
 Naples, University of Naples Federico II Department of Humanities
 Aula ex Cataloghi Lignei
 
----
+<div class="text-center border border-danger bg-warning-subtle py-3 my-5">
+  <strong>Registration is required to follow the conference works online.<br />
+  <a href="https://uniroma1.zoom.us/meeting/register/tZ0ucO6vpz8pH9B2AfqmBxS_Lt6Gs9EdLpEe" title="register now">REGISTER NOW!</a></strong><br />
+  <img src="./register.gif" alt="Register to follow the conference works online" />
+</div>
+
 
 ## Conference programme
-
----
-> **Registration is required to follow the conference works online: [register now!](https://uniroma1.zoom.us/meeting/register/tZ0ucO6vpz8pH9B2AfqmBxS_Lt6Gs9EdLpEe)**
----
 
 
 #### 13th November 2023
