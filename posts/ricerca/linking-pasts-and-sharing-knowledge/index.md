@@ -15,6 +15,11 @@ Aula ex Cataloghi Lignei
 
 ## Conference programme
 
+---
+> **Registration is required to follow the conference works online: [register now!](https://uniroma1.zoom.us/meeting/register/tZ0ucO6vpz8pH9B2AfqmBxS_Lt6Gs9EdLpEe)**
+---
+
+
 #### 13th November 2023
 
 > Dipartimento di Studi Umanistici  
