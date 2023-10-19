@@ -24,7 +24,7 @@ The workshop aims at offering a discussion table to share new excavation and res
 ## Contacts and information
 - E-mail: [Julian Bogdani, julian.bogdani@uniroma1.it](mailto:julian.bogdani@uniroma1.it)
 - Web: [lad.saras.uniroma1.it](https://lad.saras.uniroma1.it)
-The workshop is organised by the Joint Archaeological Project of Sapienza University of Rome and Albanian Archaeological Institute of Tirana in Çuka e Ajtoit (Albania)
+The workshop is organised by the [Joint Archaeological Project of Sapienza University of Rome and Albanian Archaeological Institute of Tirana in Çuka e Ajtoit (Albania)](https://lad.saras.uniroma1.it/ricerca/missione-archeologica-sapienza-a-cuka-e-ajtoit-albania/) in collaboration with the [PhD School of Archaeology of Sapienza University of Rome](https://phd.uniroma1.it/web/ARCHEOLOGIA_nD3482_IT.aspx).
 
 Download programme in PDF version:
 - [Print version (1,8 MB)](./epirus-residential-architecture-workshop.pdf)
@@ -44,7 +44,6 @@ The workshop works can be followed online via Zoom. **Registration is required**
 **Welcome addresses**:
   - **Gaetano Lettieri**, Director of Dept. SARAS, Sapienza University of Rome
   - **Anila Bitri Lani**, Ambassador of the Albanian Republic in Rome
-  - **Paolo Andrea Bartorelli**, Director of Office 6 (Cultural Cooperation and Archaeological Missions) of Italian Ministry of Foreign Affairs
   - **Paolo Carafa**, Deputy Rector for Archaeological Heritage, Sapienza University of Rome
 
 `10:00 - 10:20`  
