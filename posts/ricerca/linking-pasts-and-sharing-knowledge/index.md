@@ -11,9 +11,15 @@ sommario: A Hybrid Conference hosted by the University of Naples Federico II, an
 Naples, University of Naples Federico II Department of Humanities
 Aula ex Cataloghi Lignei
 
----
+<div class="text-center border border-danger bg-warning-subtle py-3 my-5">
+  <strong>Registration is required to follow the conference works online.<br />
+  <a href="https://uniroma1.zoom.us/meeting/register/tZ0ucO6vpz8pH9B2AfqmBxS_Lt6Gs9EdLpEe" title="register now">REGISTER NOW!</a></strong><br />
+  <img src="./register.gif" alt="Register to follow the conference works online" />
+</div>
+
 
 ## Conference programme
+
 
 #### 13th November 2023
 
@@ -23,9 +29,9 @@ Aula ex Cataloghi Lignei
 
 ##### Workshops
 
-```9:00-13:30``` Workshop 1. *The open source platform Recogito (Pelagios Commons): from semantic annotation to LOD creation* with **Valeria Vitale** (University of Sheffield)
+```9:00-13:30``` Workshop 1. *The open source platform Recogito (Pelagios Commons): from semantic annotation to LOD creation* with **Valeria Vitale** (University of Sheffield) [[download abstract in PDF](./workshop-1-vitale-abstract.pdf)]
 
-```9:00-13:30``` Workshop 2. *Re-shaping LiDAR data for Landscape Archaeology research* with **Giacomo Fontana** (UCL-KNIR)
+```9:00-13:30``` Workshop 2. *Re-shaping LiDAR data for Landscape Archaeology research* with **Giacomo Fontana** (UCL-KNIR) [[download abstract in PDF](./workshop-2-fontana-abstract.pdf)]
 
 ---
 
@@ -142,8 +148,8 @@ Aula ex Cataloghi Lignei
 
 ```16.20``` **Coffee break**
 
-```16:60```  
-**Rodolfo Brancato** (Università di Napoli), **Veronica Ferrari** (Unisalento), **Irere Rossi** (ISPC-CNR)  
+```16:40```  
+**Rodolfo Brancato** (Università di Napoli), **Veronica Ferrari** (Unisalento), **Irene Rossi** (CNR, ISPC)  
 *The In.Res.Agri Project: investigating Resilient Roman Agricultural Landscapes in Southern Italy. An integrated and open IT approach to modelling centuriation through archaeology, remotely sensed data, palynology and ancient texts*
 
 ```17.00```  
@@ -159,14 +165,14 @@ Aula ex Cataloghi Lignei
 *Use and processing of multispectral images in proximity remote sensing*
 
 ```18.00```  
-**Paola Moscati** (ISPC-CNR)  
+**Paola Moscati** (CNR, ISPC)  
 *Concluding remarks: looking back and moving forward to the openness  and interaction of knowledge*
 
 ```18.20``` *Discussion*
 
 ---
 
-### Organizato da
+### Organised by
 
 <div class="container text-center">
   <div class="row g-5">
@@ -203,16 +209,27 @@ Aula ex Cataloghi Lignei
 
 ---
 
-### Con il patrocinio di
+### With the patronage of
+
 
 <div class="container text-center">
   <div class="row gx-5">
     <div class="col-5 col-sm-5 offset-sm-1">
+      <a href="http://www.topografiaantica.it/" title="Consulta di Topografia antica">
+        Consulta di Topografia antica
+      </a>
+    </div>
+    <div class="col-5 col-sm-5">
       <a href="http://www.aiucd.it/" title="Associazione per l'Informatica Umanistica e la Cultura Digitale">
-        Associazione per l'Informatica Umanistica e la Cultura Digitale
+        AIUCD: Associazione per l'Informatica Umanistica e la Cultura Digitale
       </a>
       <hr />
       <img src="./aiucd.png" alt="Dipartimento Studi Umanistici. Università di Napoli Federico II" />
     </div>
   </div>
 </div>
+
+---
+
+[Download flyer (PDF file, 3.5 MB)](./linking-pasts-and-sharing-knowledge.pdf)
+
