@@ -1,6 +1,6 @@
 //import
 import React from "react";
-import { graphql, Link, withPrefix } from "gatsby";
+import { graphql, withPrefix } from "gatsby";
 import styled from "styled-components";
 //components
 import Team from "../components/Team";
@@ -207,48 +207,17 @@ const Index = ({ data }) => {
             {/* Ultimi articoli */}
             <Col sm={4}>
               <Container className="mb-3">
-                <h2 className="border-bottom text-center">Ultime novità</h2>
-                {data.news.nodes.map((node, i) => (
+                <h2 className="border-bottom text-center">In evidenza</h2>
+                {data.highlight.nodes.map((node, i) => (
                   <BlogPreview
                     key={i}
                     title={node.frontmatter.title}
                     readMore={node.fields.slug}
                   />
                 ))}
-                <div class="d-grid gap-2 col-12 mx-auto my-4">
-                  <Link
-                    to="/Notizie/"
-                    className="btn btn-outline-primary"
-                    title="Vai al Blog del LAD"
-                  >
-                    Vai all'elenco completo delle notizie
-                  </Link>
-                </div>
               </Container>
 
-              <Container>
-                <h2 className="border-bottom">Ultimi post dal blog</h2>
-                {data.blog.nodes.map((node, i) => (
-                  <BlogPreview
-                    key={i}
-                    author={node.frontmatter.autore}
-                    excerpt={node.frontmatter.sommario}
-                    date={node.frontmatter.date}
-                    title={node.frontmatter.title}
-                    readMore={node.fields.slug}
-                  />
-                ))}
-
-                <div class="d-grid gap-2 col-12 mx-auto my-4">
-                  <Link
-                    to="/blog/"
-                    className="btn btn-outline-primary"
-                    title="Vai al Blog del LAD"
-                  >
-                    Vai all'elenco completo degli articoli della sezione Blog
-                  </Link>
-                </div>
-              </Container>
+              
             </Col>
           </Row>
         </Container>
@@ -278,47 +247,29 @@ const Wrapper = styled.section`
 
 //graphQL
 export const query = graphql`
-  {
-    site {
-      siteMetadata {
-        siteUrl
-      }
+{
+  site {
+    siteMetadata {
+      siteUrl
     }
-    blog: allMarkdownRemark(
-      sort: { frontmatter: { date: DESC } }
-      limit: 5
-      filter: { fileAbsolutePath: { regex: "/posts/blog/" } }
-    ) {
-      nodes {
-        frontmatter {
-          autore
-          date(formatString: "DD MMMM YYYY", locale: "it-IT")
-          title
-          sommario
-        }
-        fields {
-          slug
-        }
+  }
+  highlight: allMarkdownRemark(
+    sort: {frontmatter: {date: DESC}}
+    filter: {frontmatter: {inhome: {eq: true}}}
+  ) {
+    nodes {
+      frontmatter {
+        autore
+        date(formatString: "DD MMMM YYYY", locale: "it-IT")
+        title
+        sommario
       }
-    }
-    news: allMarkdownRemark(
-      sort: { frontmatter: { date: DESC } }
-      limit: 5
-      filter: { fileAbsolutePath: { regex: "/posts/notizie/" } }
-    ) {
-      nodes {
-        frontmatter {
-          autore
-          date(formatString: "DD MMMM YYYY", locale: "it-IT")
-          title
-          sommario
-        }
-        fields {
-          slug
-        }
+      fields {
+        slug
       }
     }
   }
+}
 `;
 
 export default Index;

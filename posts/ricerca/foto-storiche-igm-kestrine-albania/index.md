@@ -4,6 +4,7 @@ autore: Julian Bogdani
 sort: 16
 img: ./igm-foto-storiche.png
 sommario: Progetto di ricerca, P.I. Julian Bogdani, finanziato dal programma “Progetti di Ricerca - Progetti Piccoli” della Sapienza Università di Roma, anno 2022, prot. RP12218161C7325E
+inhome: true
 ---
 
 
