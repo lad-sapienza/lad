@@ -22,12 +22,14 @@ const BlogPreview = (props) => {
     sezione.url = '/blog/';
   }
   return (
-    <StyledDiv className="shadow p-3 mt-4">
-      <GatsbyImage
+    <StyledDiv className="shadow p-3 mt-4 text-center">
+      <Link to={props.readMore} title={props.title}>
+        <GatsbyImage
+          className="mb-3"
           image={props.img.childImageSharp.gatsbyImageData}
           alt={props.title}
-      />
-      <Link to={props.readMore} title={props.title}>
+        />
+        
         <h5>{props.title}</h5>
         { ( props.author && props.date ) ? <p className="pt-1 pb-1 mt-3 border-bottom">Di {props.author} | {props.date}</p> :  ''} 
         {props.excerpt && <p>{props.excerpt}</p> }
