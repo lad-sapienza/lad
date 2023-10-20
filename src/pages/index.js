@@ -213,6 +213,7 @@ const Index = ({ data }) => {
                     key={i}
                     title={node.frontmatter.title}
                     readMore={node.fields.slug}
+                    img={node.frontmatter.img}
                   />
                 ))}
               </Container>
@@ -263,6 +264,18 @@ export const query = graphql`
         date(formatString: "DD MMMM YYYY", locale: "it-IT")
         title
         sommario
+        img {
+          base
+          childImageSharp {
+            gatsbyImageData(
+              placeholder: BLURRED
+              layout: CONSTRAINED
+              quality: 80
+              formats: [AUTO, AVIF, WEBP]
+              width: 400
+            )
+          }
+        }
       }
       fields {
         slug

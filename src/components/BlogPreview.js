@@ -2,6 +2,8 @@
 import React from "react";
 import styled from "styled-components";
 import { Link } from "gatsby";
+import { GatsbyImage } from "gatsby-plugin-image";
+
 
 //markup
 const BlogPreview = (props) => {
@@ -21,6 +23,10 @@ const BlogPreview = (props) => {
   }
   return (
     <StyledDiv className="shadow p-3 mt-4">
+      <GatsbyImage
+          image={props.img.childImageSharp.gatsbyImageData}
+          alt={props.title}
+      />
       <Link to={props.readMore} title={props.title}>
         <h5>{props.title}</h5>
         { ( props.author && props.date ) ? <p className="pt-1 pb-1 mt-3 border-bottom">Di {props.author} | {props.date}</p> :  ''} 
