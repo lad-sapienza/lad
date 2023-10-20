@@ -24,8 +24,11 @@ The workshop aims at offering a discussion table to share new excavation and res
 
 ## Contacts and information
 - E-mail: [Julian Bogdani, julian.bogdani@uniroma1.it](mailto:julian.bogdani@uniroma1.it)
-- Web: [lad.saras.uniroma1.it](https://lad.saras.uniroma1.it)
-The workshop is organised by the [Joint Archaeological Project of Sapienza University of Rome and Albanian Archaeological Institute of Tirana in Çuka e Ajtoit (Albania)](https://lad.saras.uniroma1.it/ricerca/missione-archeologica-sapienza-a-cuka-e-ajtoit-albania/) in collaboration with the [PhD School of Archaeology of Sapienza University of Rome](https://phd.uniroma1.it/web/ARCHEOLOGIA_nD3482_IT.aspx).
+- Web: [lad.saras.uniroma1.it/ricerca/living-in-the-town-living-in-the-countryside](https://lad.saras.uniroma1.it/ricerca/living-in-the-town-living-in-the-countryside/)
+
+The workshop is organised by:
+- the [Joint Archaeological Project of Sapienza University of Rome and Albanian Archaeological Institute of Tirana in Çuka e Ajtoit (Albania)](https://lad.saras.uniroma1.it/ricerca/missione-archeologica-sapienza-a-cuka-e-ajtoit-albania/), in collaboration with 
+- the [PhD School of Archaeology of Sapienza University of Rome](https://phd.uniroma1.it/web/ARCHEOLOGIA_nD3482_IT.aspx).
 
 Download programme in PDF version:
 - [Print version (1,8 MB)](./epirus-residential-architecture-workshop.pdf)
