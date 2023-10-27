@@ -99,9 +99,9 @@ The workshop works can be followed online via Zoom. **Registration is required**
 **Giuseppe Lepore**, **Belisa Muka**  
 *Le cosiddette case sacre tra Epiro e Sicilia*
 
-`16:00 - 16:20`  
+`16:20 - 16:40`  
 **Paolo Carafa**  
 *Rural and Urban Residential Architecture: Form Epirus to Latium*
 
-`16:20 - 17:00`  
+`16:40 - 17:00`  
 **Discussion and conclusions**
