@@ -8,6 +8,7 @@ import Layout from "../templates/Layout";
 import Seo from "../components/Seo";
 import ShareButtons from "../components/ShareButtons";
 import { defineCustomElements as deckDeckGoHighlightElement } from "@deckdeckgo/highlight-code/dist/loader";
+import MyGallery from "../components/MyGallery";
 deckDeckGoHighlightElement();
 
 //markup
@@ -19,7 +20,7 @@ export default function BlogPost({ data }) {
       "$1"
     );
 
-  return (
+    return (
     <Layout>
       <Seo
         title={post.frontmatter.title}
@@ -86,6 +87,7 @@ export default function BlogPost({ data }) {
             <div className="post-content">
               <div dangerouslySetInnerHTML={{ __html: post.html }} />
             </div>
+            <MyGallery images={data.galley_items} page={data.markdownRemark.fields.slug.split('/').filter(e => e.trim() !== '').at(-1)}/>
           </Container>
         </div>
       </Wrapper>
@@ -137,6 +139,25 @@ export const query = graphql`
     site {
       siteMetadata {
         siteUrl
+      }
+    }
+    galley_items: allFile(
+      sort: { name: DESC }
+      filter: { relativeDirectory: { glob: "galleries/*" } }
+    ) {
+      edges {
+        node {
+          name
+          relativePath
+          childImageSharp {
+            thumb: gatsbyImageData(
+              width: 270
+              height: 270
+              placeholder: BLURRED
+            )
+            full: gatsbyImageData(layout: FULL_WIDTH)
+          }
+        }
       }
     }
     markdownRemark(fields: { slug: { eq: $slug } }) {
