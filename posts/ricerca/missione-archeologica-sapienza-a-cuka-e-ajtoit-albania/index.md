@@ -193,7 +193,7 @@ Infine, si ringrazia il programma ALBCORS del [Geoportale Nazionale Albanese (AS
 </div>
 <div class="row text-center">
   <div class="col-sm-6 offset-sm-3">
-    <img src="./maeci.jpg" style="max-width: 100%" class="img-fluid" /><br />
+    <img src="../../logos/maeci.jpg" style="max-width: 100%" class="img-fluid" /><br />
     Con il riconoscimento ufficiale (dal 2022) e il supporto finanziario (dal 2023) del Ministero degli Affari Esteri e della Cooperazione Internazionale.
   </div>
 </div>
