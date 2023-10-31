@@ -41,10 +41,18 @@ Dipartimento di Studi Umanistici
 Complesso di San Pietro Martire, via Porta di Massa 1  
 Aula ex Cataloghi Lignei
 
-##### Panel 1. Digital Approaches in Archaeological Mapping
 
 ```15.00```  
-*Greetings and introduction* 
+*Greetings*  
+**Andrea Mazzucchi** (Dipartimento di Studi Umanistici, Università degli Studi di Napoli Federico II)  
+**Marina Buzzoni** (AIUCD, Università Ca' Foscari Venezia) (da remoto)
+
+*Introduction*  
+**Rodolfo Brancato** (Università di Napoli)  
+**Julian Bogdani** (Sapienza UNiversity of Rome)  
+**Valeria Vitale** (University of Sheffield)
+
+##### Panel 1. Digital Approaches in Archaeological Mapping
 
 ``15:20``  
 **Margherita Azzari** (Università di Firenze), **Paolo Liverani** (Accademia dei Lincei - Università di Firenze)  
