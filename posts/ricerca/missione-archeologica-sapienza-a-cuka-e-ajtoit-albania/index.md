@@ -9,53 +9,15 @@ sommario: La Missione Archeologica della Sapienza a Çuka e Ajtoit (Albania) è 
 
 **Indice**
 
-- [Novità: conclusa la campagna 2023](#novità-conclusa-la-campagna-2023)
 - [La Missione Archeologica](#la-missione-archeologica)
   - [Introduzione al sito](#introduzione-al-sito)
   - [Storia degli studi](#storia-degli-studi)
   - [Finalità del progetto](#finalità-del-progetto)
+- [Campagna 2023](#campagna-2023)
 - [Campagna 2022](#campagna-2022)
 - [Supporto](#supporto)
 - [Enti istituzionali](#enti-istituzionali)
 - [Bibliografia](#bibliografia)
-
----
-
-## Novità: conclusa la campagna 2023
-
-Il 13 giugno si è conclusa la terza campagna archeologica della missione congiunta della Sapienza Università di Roma e l'Istituto Archeologico di Tirana a Çuka e Ajtoit (Albania) che ha visto la partecipazione di ricercatori e studenti delle due nazioni.
-
-La campagna si è svolta tra il 14 maggio e il 13 giugno 2023 e ha avuto molteplici obiettivi, quali il completamento del rilievo della collina attraverso la ormai collaudata metodologia del rilievo fotogrammetrico con drone. A queste attività è stata affiancata quella di documentazione e rilievo a terra con metodologie tradizionali dei resti osservati nei modelli digitali e il completamento di un secondo saggio di scavo nell'area del Palazzo, che ha portato alla luce materiali ceramici di IV secolo a.C., che al momento definiscono la fase più antica di questo complesso.
-
-Ai piedi della collina, un'attenzione particolare è stata dedicata alle strutture della Basilica medievale presso Çiflik. La chiesa è stata pulita ed è stato eseguito un attento rilievo tridimensionale sempre per mezzo fotogrammetrico. Il modello è alla base di uno [studio stratigrafico delle strutture che è in corso di svolgimento](../rilievo-monastero-ciflik-abania/). Al fine di verificare le straigrafie, sono stati eseguiti anche due saggi stratigrafici nell'area, uno all'interno della chiesa e uno in una posizine esterna, nei pressi di una struttura probabilmente legata alla chiesa stessa. L'esame preliminare delle stratigrafie e dei materiali conferma al momento la datazione al XIII secolo delle strutture della chiesa.
-
-Infine, sono state condotte ricerche nel sito noto con il toponimo di Kisha e Psarit, letteralmente chiesa (alb. _kisha_) del pesce (gr. _ψάρι_). Il sito era stato visitato brevenmente l'anno precedente e vi erano state notate tracce di strutture in opera rettangolare e di strutture murarie con uso di malta di calce, di datazione probabilmente medievale. Anche in questo caso è stata efettuata una pulizia superficiale (non completa e approfondita a causa del ridotto tempo a disposizione) e un saggio di scavo che ha messo in evidenza la presenza di una fase di età romana imperiale. I muri in opera rettangolare definiscono un edificio in pianta rettangolare, mentre quelli di dimensioni minori con uso di malta probabilmente fanno riferimento ad un edificio di dimensioni minori e provvisto di abside, da interpretare quasi certamente con la chiesa che ha dato il nome al sito. La conoscenza di questo sito dovrà essere approfondita nelle prossime campagne.  
-Questo sito non era conosciuto precedentemente nella letteratura archeologica.
-
-Come nelle campagna precedenti, anche quest'anno le ricerche puntuali sono state affiancate da ricognizioni nel territorio su segnalazione degli abitanti della zona, che hanno portato alla nostra conoscenza nuove e importanti tracce di interesse archeologico, che saranno oggetto di ricerche approfondite nelle prossime campagne.
-
-**Partecipanti**
-
-Direzione missione:
-
-- Julian Bogdani (Sapienza, Roma, Italia)
-- Albana Meta (Istituto di Archeologia, Tirana, Albania)
-
-Senior staff:
-
-- Nadia Aleotti (Sapienza, Roma, Italia)
-- Domizia D'Erasmo (Sapienza, Roma, Italia)
-- Noemi Giovino (Sapienza, Roma, Italia)
-- Eleonora Iacopini (Sapienza, Roma, Italia)
-- Paolo Rosati (Sapienza, Roma, Italia)
-
-BA, MA:
-
-- Halil Braho (Università di Tirana, Albania)
-- Dea Hate (Università di Tirana, Albania)
-- Antonio Maria Fini (Sapienza, Roma, Italia)
-- Filippo Josić (Sapienza, Roma, Italia)
-- Noemi Lerro (Sapienza, Roma, Italia)
 
 ---
 
@@ -100,6 +62,43 @@ Per quanto riguarda gli aspetti particolari, le fortificazioni di Çuka e Ajtoit
 La diacronia è un'altra caratteristica importante di questo centro. Gli scavi precedenti hanno messo in risalto la presenza di altre fasi oltre a quella ellenistica, come quella romana, tardoantica e medievale. Più labili, ma non assenti, le tracce di fasi più antiche, finora mai del tutto contestualizzate. Continuità e cesure indagabili archeologicamente rendono particolarmente adatto il sito di Çuka e Ajtoit all'analisi e ricostruzione nella longue durée.
 
 Per quanto riguarda gli aspetti urbanistici e architettonici, lo studio della edilizia residenziale privata e non acquista un'importanza di primo piano in questo sito, grazie alla presenza di decine di unità residenziali, sia dentro la cinta delle fortificazioni, che al suo esterno, nella “città bassa”, come lo chiama S. Islami o “il Palazzo”, come viene chiamato dagli abitanti della zona. Le soluzioni planimetriche sono per lo più molto semplici, almeno per quanto riguarda le abitazioni dell'“acropoli” (sempre usando la terminologia di S. Islami), dove la mancanza di spazio utile e il terreno fortemente accidentato limitano moltissimo lo spazio utile alla costruzione. Diversa è la situazione presso “il Palazzo”, delle cui strutture piuttosto monumentali (una porta in opera poligonale, con copertura a finto arco è stata trasportata e rimontata nel cortile del Museo Nazionale di Tirana) ancora non disponiamo di una interpretazione certa.
+
+## Campagna 2023
+
+Il 13 giugno si è conclusa la terza campagna archeologica della missione congiunta della Sapienza Università di Roma e l'Istituto Archeologico di Tirana a Çuka e Ajtoit (Albania) che ha visto la partecipazione di ricercatori e studenti delle due nazioni.
+
+La campagna si è svolta tra il 14 maggio e il 13 giugno 2023 e ha avuto molteplici obiettivi, quali il completamento del rilievo della collina attraverso la ormai collaudata metodologia del rilievo fotogrammetrico con drone. A queste attività è stata affiancata quella di documentazione e rilievo a terra con metodologie tradizionali dei resti osservati nei modelli digitali e il completamento di un secondo saggio di scavo nell'area del Palazzo, che ha portato alla luce materiali ceramici di IV secolo a.C., che al momento definiscono la fase più antica di questo complesso.
+
+Ai piedi della collina, un'attenzione particolare è stata dedicata alle strutture della Basilica medievale presso Çiflik. La chiesa è stata pulita ed è stato eseguito un attento rilievo tridimensionale sempre per mezzo fotogrammetrico. Il modello è alla base di uno [studio stratigrafico delle strutture che è in corso di svolgimento](../rilievo-monastero-ciflik-abania/). Al fine di verificare le straigrafie, sono stati eseguiti anche due saggi stratigrafici nell'area, uno all'interno della chiesa e uno in una posizine esterna, nei pressi di una struttura probabilmente legata alla chiesa stessa. L'esame preliminare delle stratigrafie e dei materiali conferma al momento la datazione al XIII secolo delle strutture della chiesa.
+
+Infine, sono state condotte ricerche nel sito noto con il toponimo di Kisha e Psarit, letteralmente chiesa (alb. _kisha_) del pesce (gr. _ψάρι_). Il sito era stato visitato brevenmente l'anno precedente e vi erano state notate tracce di strutture in opera rettangolare e di strutture murarie con uso di malta di calce, di datazione probabilmente medievale. Anche in questo caso è stata efettuata una pulizia superficiale (non completa e approfondita a causa del ridotto tempo a disposizione) e un saggio di scavo che ha messo in evidenza la presenza di una fase di età romana imperiale. I muri in opera rettangolare definiscono un edificio in pianta rettangolare, mentre quelli di dimensioni minori con uso di malta probabilmente fanno riferimento ad un edificio di dimensioni minori e provvisto di abside, da interpretare quasi certamente con la chiesa che ha dato il nome al sito. La conoscenza di questo sito dovrà essere approfondita nelle prossime campagne.  
+Questo sito non era conosciuto precedentemente nella letteratura archeologica.
+
+Come nelle campagna precedenti, anche quest'anno le ricerche puntuali sono state affiancate da ricognizioni nel territorio su segnalazione degli abitanti della zona, che hanno portato alla nostra conoscenza nuove e importanti tracce di interesse archeologico, che saranno oggetto di ricerche approfondite nelle prossime campagne.
+
+**Partecipanti**
+
+Direzione missione:
+
+- Julian Bogdani (Sapienza, Roma, Italia)
+- Albana Meta (Istituto di Archeologia, Tirana, Albania)
+
+Senior staff:
+
+- Nadia Aleotti (Sapienza, Roma, Italia)
+- Domizia D'Erasmo (Sapienza, Roma, Italia)
+- Noemi Giovino (Sapienza, Roma, Italia)
+- Eleonora Iacopini (Sapienza, Roma, Italia)
+- Paolo Rosati (Sapienza, Roma, Italia)
+
+BA, MA:
+
+- Halil Braho (Università di Tirana, Albania)
+- Dea Hate (Università di Tirana, Albania)
+- Antonio Maria Fini (Sapienza, Roma, Italia)
+- Filippo Josić (Sapienza, Roma, Italia)
+- Noemi Lerro (Sapienza, Roma, Italia)
+
 
 ## Campagna 2022
 
