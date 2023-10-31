@@ -45,7 +45,7 @@ Aula ex Cataloghi Lignei
 ```15.00```  
 *Greetings*  
 **Andrea Mazzucchi** (Dipartimento di Studi Umanistici, Università degli Studi di Napoli Federico II)  
-**Marina Buzzoni** (AIUCD, Università Ca' Foscari Venezia) (da remoto)
+**Marina Buzzoni** (AIUCD, Università Ca' Foscari Venezia)
 
 *Introduction*  
 **Rodolfo Brancato** (Università di Napoli)  
