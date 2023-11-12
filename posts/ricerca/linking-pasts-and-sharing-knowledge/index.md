@@ -158,7 +158,7 @@ Aula ex Cataloghi Lignei
 ```16.20``` **Coffee break**
 
 ```16:40```  
-**Rodolfo Brancato** (Università di Napoli), **Veronica Ferrari** (Unisalento), **Irene Rossi** (CNR, ISPC)  
+**Rodolfo Brancato** (Università di Napoli), **Veronica Ferrari** (Università del Salento), **Irene Rossi** (CNR, ISPC)  
 *The In.Res.Agri Project: investigating Resilient Roman Agricultural Landscapes in Southern Italy. An integrated and open IT approach to modelling centuriation through archaeology, remotely sensed data, palynology and ancient texts*
 
 ```17.00```  
