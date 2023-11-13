@@ -30,7 +30,7 @@ Aula ex Cataloghi Lignei
 
 ##### Workshops
 
-***Please not that the two practical workshops will not be broadcasted via Zoom.***
+***Please note that the two practical workshops will not be broadcasted via Zoom.***
 
 ```9:00-13:30``` Workshop 1. *The open source platform Recogito (Pelagios Commons): from semantic annotation to LOD creation* with **Valeria Vitale** (University of Sheffield) [[download abstract in PDF](./workshop-1-vitale-abstract.pdf)]
 
