@@ -9,6 +9,8 @@ inhome: true
 
 L'**20 e il 21 novembre 2023** i membri della [Missione Archeologica a Çuka e Ajtoit](../../ricerca/missione-archeologica-sapienza-a-cuka-e-ajtoit-albania/), Julian **Bogdani** e Nadia **Aleotti** parteciperanno al convegno internazionale “Fra storia e archeologia: Corcira e l’epeiros. Nuovi dati e prospettive di ricerca” all'Università della Calabria. Segue il programma dell'evento.
 
+**È possibile seguire i lavori della conferenza _online_ attraverso la piattaforma Microsoft Teams. Si prega di inviare una richiesta all'indirizzo [julian.bogdani@uniroma1.it](mailto:julian.bogdani@uniroma1.it) per collegarsi.**
+
 
 ### Programma dell'evento
 
