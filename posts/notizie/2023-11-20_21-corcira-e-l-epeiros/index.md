@@ -74,7 +74,7 @@ University Club - UniCal
 ***Martedì 21 novembre***  
 University Club - UniCal
 
-```09.15``` Giovanni Parmeggiani (Università di Trieste)  
+```09.15``` **Giovanni Parmeggiani** (Università di Trieste)  
 *Per una rilettura di alcuni luoghi erodotei su Corcira*
 
 ```09.45``` **Nadia Aleotti** (Sapienza Università di Roma)  
