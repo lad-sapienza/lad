@@ -13,11 +13,16 @@ sommario: La Missione Archeologica della Sapienza a Çuka e Ajtoit (Albania) è 
   - [Introduzione al sito](#introduzione-al-sito)
   - [Storia degli studi](#storia-degli-studi)
   - [Finalità del progetto](#finalità-del-progetto)
+- [Produzione scientifica](#produzione-scientifica)
+  - [Pubblicazioni](#pubblicazioni)
+  - [Organizazioni di convegni](#organizazioni-di-convegni)
+  - [Partecipazione a convegni con comunicazione](#partecipazione-a-convegni-con-comunicazione)
 - [Campagna 2023](#campagna-2023)
 - [Campagna 2022](#campagna-2022)
 - [Supporto](#supporto)
 - [Enti istituzionali](#enti-istituzionali)
 - [Bibliografia](#bibliografia)
+- [Galleria di immagini](#galleria-di-immagini)
 
 ---
 
@@ -62,6 +67,36 @@ Per quanto riguarda gli aspetti particolari, le fortificazioni di Çuka e Ajtoit
 La diacronia è un'altra caratteristica importante di questo centro. Gli scavi precedenti hanno messo in risalto la presenza di altre fasi oltre a quella ellenistica, come quella romana, tardoantica e medievale. Più labili, ma non assenti, le tracce di fasi più antiche, finora mai del tutto contestualizzate. Continuità e cesure indagabili archeologicamente rendono particolarmente adatto il sito di Çuka e Ajtoit all'analisi e ricostruzione nella longue durée.
 
 Per quanto riguarda gli aspetti urbanistici e architettonici, lo studio della edilizia residenziale privata e non acquista un'importanza di primo piano in questo sito, grazie alla presenza di decine di unità residenziali, sia dentro la cinta delle fortificazioni, che al suo esterno, nella “città bassa”, come lo chiama S. Islami o “il Palazzo”, come viene chiamato dagli abitanti della zona. Le soluzioni planimetriche sono per lo più molto semplici, almeno per quanto riguarda le abitazioni dell'“acropoli” (sempre usando la terminologia di S. Islami), dove la mancanza di spazio utile e il terreno fortemente accidentato limitano moltissimo lo spazio utile alla costruzione. Diversa è la situazione presso “il Palazzo”, delle cui strutture piuttosto monumentali (una porta in opera poligonale, con copertura a finto arco è stata trasportata e rimontata nel cortile del Museo Nazionale di Tirana) ancora non disponiamo di una interpretazione certa.
+
+## Produzione scientifica
+
+In questi anni i membri della missione hanno avviato un processo importatente di produzione scientifica e disseminazione dei risultati della ricerca, attraverso varie pubblicazioni e partecipazioni a workshop e convegni. Di seguito si offre una rapida panoramica, in continui aggiornamento.
+
+### Pubblicazioni
+-	Bogdani. Julian. c.d.s. “Chaonia in Epirus. A fresh assessment in light of new archaeological data” in *Redefining Ancient Epirus*. Borders, Boundaries, Landscapes, 1. Brepols.
+-	Bogdani. Julian. c.d.s. “Documentare l'invisibile. Il progetto Çuka e Ajtoit: rilievo e documentazione di un sito d'altura”. Archeologia Aerea.
+-	Bogdani, Julian. c.d.s. “MOvEIT: a Proof of Concept of a Road Graph for Late Antique Egypt”. *Groma*.
+-	Bogdani, Julian e Nadia Aleotti. c.d.s. “Le necropoli di Çuka e Ajtoit: vecchie e nuove ricerche a confronto”. *Atlante Tematico di Topografia Antica*.
+-	Bogdani, Julian. 2022. “ΚΕΣΤΡΙΑ ΤHΣ ΧΑΟΝIΑΣ: appunti sulla geografia e storia di una regione di frontiera”. *Hesperìa. Studi sulla Grecità d’Occidente* 40: 87-104.
+-	Bogdani, Julian e Albana Meta. 2022. “Kërkime të reja shqiptaro-italiane në Çukën e Ajtoit”. *Candavia*, 9: 141-159
+
+### Organizazioni di convegni
+- *Living in the Town, Living in the Countryside. Typologies, Models and Transformations of Residential Architecture in Hellenistic and Roman Epirus*. An international workshop 15 January 2023. Sapienza University of Rome [https://lad.saras.uniroma1.it/ricerca/living-in-the-town-living-in-the-countryside/](https://lad.saras.uniroma1.it/ricerca/living-in-the-town-living-in-the-countryside/).
+-	*Linking Pasts And Sharing Knowledge. Mapping Archaeological Heritage, Legacy Data Integration and Web Technologies for Modelling Historical Landscapes*. 13-14 Novembre 2023. Università di Napoli Federico II. Organizzato in collaborazione con l’Università Federico II di Napoli e l’Università di Sheffield.  [https://lad.saras.uniroma1.it/ricerca/linking-pasts-and-sharing-knowledge/](https://lad.saras.uniroma1.it/ricerca/linking-pasts-and-sharing-knowledge/).
+
+### Partecipazione a convegni con comunicazione
+- *Fra storia e archeologia: Corcira e l’epeiros. Nuovi dati e prospettive di ricerca* Seminario Internazionale 20-21 Novembre 2023. Titolo dell'intervento “Cestria tra Corcira ed Epiro. Nuove ricerche a Çuka e Ajtoit”. [https://lad.saras.uniroma1.it/notizie/2023-11-20_21-corcira-e-l-epeiros/](https://lad.saras.uniroma1.it/notizie/2023-11-20_21-corcira-e-l-epeiros/)
+-	*Linking Pasts And Sharing Knowledge. Mapping Archaeological Heritage, Legacy Data Integration and Web Technologies for Modelling Historical Landscapes*. A Hybrid Conference hosted by the University of Naples Federico II, and organised with the Sapienza University of Rome and the University of Sheffield. 13-14 Novembre 2023. Università di Napoli Federico II. Titolo dell’intervento (con D. D’Erasmo): “Old data, old methodology and new research. A case study of legacy data integration from the Kestrine region, Epirus”
+- *Arkeologjia shqiptare në 75-vjetorin e krijimit të saj: arritje, risi dhe perspektiva*. Accademia delle Scienze di Albania, 8-9 novembre 2023. Titolo dell’intervento (con Albana Meta): “Kestria, një qytet epirot: kërkime të reja arkeologjike në Çukën e Ajtoit”.
+-	*Beyond the Wall: City Walls & Urban planning*. International workshop. Università di Lille (Francia), con il sostegno dell'École Française d’Athènes. Lille 5-6 dicembre 2022. https://lad.saras.uniroma1.it/notizie/2022-12-05_06-beyond-the-wall/
+-	*Epirus in the Roman World and the New Research on the Acropolis of Butrint by the Albanian Institute of Archaeology and the University of Bologna*. Università di Bologna, 10-11 novembre 2022. https://site.unibo.it/butrint/en/photogallery/international-workshop-epirus-in-the-roman-world-and-new-research-on-the-acropolis-of-butrint. Titolo dell’intervento (con A. Meta): Kestrine: new data for the long-term archaeology of a border region
+-	*Landscape Archaeology: a discussion between the new paradigms of methodology*. Scuola Superiore di Studi Avanzati. Sapienza Università di Roma. 17 ottobre 2022. Titolo dell’intervento: Fortified Landscapes: ethnos and polis in Chaonia, Epirus in the light of recent research
+-	*L'Epiro e l'Illiria Meridionale: Scavi e Ricerche Recenti*, 6 maggio 2021. Webminar, Università di Bologna. Titolo dell’intervento: Siti fortificati di secondo ordine in Caonia. Il caso di Çuka e Aitoit. https://site.unibo.it/butrint/en/agenda/bogdani-siti-fortificati-di-secondo-ordine-in-caonia-il-caso-di-uka-e-aitoit
+-	*Beyond the wall: Study of fortifications between architecture and history*. (Sezione: 2. Study Scales and Goals: citadel, city, region). Incontri online a cura dell' École française d'Athènes (EfA). 7 Dicembre 2020. Titolo dell'intervento: “Fortifying the ethnos. The case study of Chaonia, Epirus”
+
+
+
+
 
 ## Campagna 2023
 
