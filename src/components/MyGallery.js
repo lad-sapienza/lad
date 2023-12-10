@@ -17,7 +17,7 @@ const MyGallery = (props) => {
 
   return <>
     <hr className="my-5" />
-    <h2>Galleria di immagini</h2>
+    <h2 id="galleria-di-immagini">Galleria di immagini</h2>
     <Gallery images={images} />
     </>;
 };
