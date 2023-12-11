@@ -1,7 +1,6 @@
 //import
 import React from "react";
 import { GatsbySeo } from "gatsby-plugin-next-seo";
-import { Helmet } from "react-helmet";
 
 const Seo = (props) => {
   return (
@@ -22,12 +21,6 @@ const Seo = (props) => {
           ],
         }}
       />
-      <Helmet>
-        {props.children}
-        {props.url.indexOf("/blog/") > -1 && (
-          <script src="https://hypothes.is/embed.js" async></script>
-        )}
-      </Helmet>
     </>
   );
 };

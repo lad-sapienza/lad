@@ -95,6 +95,12 @@ export default function BlogPost({ data }) {
   );
 }
 
+export const Head = (props) => {
+   return props.location.pathname.indexOf("/blog/") > -1 ?
+    <script src="https://hypothes.is/embed.js" async></script> :
+    <></>
+}
+
 //styles
 const Wrapper = styled.section`
   p.author {
