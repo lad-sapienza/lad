@@ -12,7 +12,6 @@
     "boostrap": "^2.0.0",
     "bootstrap": "^5.3.1",
     "gatsby": "^5.13.1",
-    "gatsby-plugin-gatsby-cloud": "^5.13.0",
     "gatsby-plugin-google-fonts": "^1.0.1",
     "gatsby-plugin-image": "^3.13.0",
     "gatsby-plugin-manifest": "^5.13.0",
