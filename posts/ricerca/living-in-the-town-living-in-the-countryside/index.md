@@ -24,6 +24,7 @@ The workshop aims at offering a discussion table to share new excavation and res
 
 ## Contacts and information
 - E-mail: [Julian Bogdani, julian.bogdani@uniroma1.it](mailto:julian.bogdani@uniroma1.it)
+
 - Web: [lad.saras.uniroma1.it/ricerca/living-in-the-town-living-in-the-countryside](https://lad.saras.uniroma1.it/ricerca/living-in-the-town-living-in-the-countryside/)
 
 The workshop is organised by:

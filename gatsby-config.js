@@ -36,7 +36,8 @@ module.exports = {
         gfm: true,
         footnotes: true,
         plugins: [
-          "gatsby-remark-autolink-headers",
+          `gatsby-remark-copy-linked-files`,
+          `gatsby-remark-autolink-headers`,
           {
             resolve: `gatsby-remark-highlight-code`,
             options: {
