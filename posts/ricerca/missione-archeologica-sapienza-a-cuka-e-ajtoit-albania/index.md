@@ -73,9 +73,9 @@ Per quanto riguarda gli aspetti urbanistici e architettonici, lo studio della ed
 In questi anni i membri della missione hanno avviato un processo importatente di produzione scientifica e disseminazione dei risultati della ricerca, attraverso varie pubblicazioni e partecipazioni a workshop e convegni. Di seguito si offre una rapida panoramica, in continui aggiornamento.
 
 ### Pubblicazioni
--	Bogdani. Julian. c.d.s. “Chaonia in Epirus. A fresh assessment in light of new archaeological data” in *Redefining Ancient Epirus*. Borders, Boundaries, Landscapes, 1. Brepols.
--	Bogdani. Julian. c.d.s. “Documentare l'invisibile. Il progetto Çuka e Ajtoit: rilievo e documentazione di un sito d'altura”. Archeologia Aerea.
--	Bogdani, Julian. c.d.s. “MOvEIT: a Proof of Concept of a Road Graph for Late Antique Egypt”. *Groma*.
+-	Bogdani, Julian. c.d.s. “Chaonia in Epirus. A fresh assessment in light of new archaeological data” in *Redefining Ancient Epirus*. Borders, Boundaries, Landscapes, 1. Brepols.
+-	Bogdani, Julian. c.d.s. “Documentare l'invisibile. Il progetto Çuka e Ajtoit: rilievo e documentazione di un sito d'altura”. Archeologia Aerea.
+- Bogdani, Julian. c.d.s. “Documenting a hilltop settlement: methodologies and preliminary results of the joint Albano-Italian project at Çuka e Ajtoit (Albania)”. *Groma* 7 (2022).
 -	Bogdani, Julian e Nadia Aleotti. c.d.s. “Le necropoli di Çuka e Ajtoit: vecchie e nuove ricerche a confronto”. *Atlante Tematico di Topografia Antica*.
 -	Bogdani, Julian. 2022. “ΚΕΣΤΡΙΑ ΤHΣ ΧΑΟΝIΑΣ: appunti sulla geografia e storia di una regione di frontiera”. *Hesperìa. Studi sulla Grecità d’Occidente* 40: 87-104.
 -	Bogdani, Julian e Albana Meta. 2022. “Kërkime të reja shqiptaro-italiane në Çukën e Ajtoit”. *Candavia*, 9: 141-159
