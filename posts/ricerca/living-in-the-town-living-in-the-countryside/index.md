@@ -52,7 +52,7 @@ The workshop works can be followed online via Zoom. **Registration is required**
   - **Paolo Carafa**, Deputy Rector for Archaeological Heritage, Sapienza University of Rome
 
 `10:00 - 10:20`  
-**Enrico Giorgi**, **Anna Gamberini**. 
+**Enrico Giorgi**, **Anna Gamberini**, **Dhimitër Çondi**. 
 *La casa dei due peristili a Phoinike. Un'esempio di una residenza di rappresentanza di età ellenistica e i suoi sviluppi in età romana*
 
 `10:20 - 10:40`  
