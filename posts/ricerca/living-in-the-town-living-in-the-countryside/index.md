@@ -49,6 +49,7 @@ The workshop works can be followed online via Zoom. **Registration is required**
 **Welcome addresses**:
   - **Gaetano Lettieri**, Director of Dept. SARAS, Sapienza University of Rome
   - **Anila Bitri Lani**, Ambassador of the Albanian Republic in Rome
+  - **Federico di Giovanni**, DGDP, Ufficio VI – Cooperazione culturale in ambito multilaterale, missioni archeologiche. Italian Ministry of Foreign Affairs and International Cooperation.
   - **Paolo Carafa**, Deputy Rector for Archaeological Heritage, Sapienza University of Rome
 
 `10:00 - 10:20`  
