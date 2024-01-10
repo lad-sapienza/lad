@@ -9,7 +9,9 @@ inhome: true
 **15 January 2024**  
 Aula Manlio Simonetti  
 Facoltà di Lettere e Filosofia, (CU003, 3<sup>rd</sup> floor)  
-Sapienza University of Roma
+Sapienza University of Roma  
+Info: [julian.bogdani@uniroma1.it](mailto:julian.bogdani@uniroma1.it)  
+Follow on Zoom, [**registration required**](https://uniroma1.zoom.us/meeting/register/tZIlc-GprzMqG9Yp8hvnGSfvF3KzrVBNeEs4).
 
 ---
 
