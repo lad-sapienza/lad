@@ -10,7 +10,7 @@ Il laboratorio è destinato principalmente agli iscritti alla Sapienza Universit
 
 Nelle ultime edizioni, il laboratorio GIS è stato affiancato da incontri dedicati alla progettazione, implementazione e utilizzo delle banche dati relazioni, con una introduzione al linguaggio SQL. In particolare i partecipanti hanno imparato a progettare costruire e implementare una banca dati relazionale online usando [Bradypus](/ricerca/bradypus-cloud-databases/), un software sviluppato e mantenuto dal LAD per la facile gestione _online_ di banche dati archeologiche e più in generale legate al mondo dei Beni Culturali.
 
-Il laboratorio è coordinato da **Julian Bogdani** in collaborazione con **Domizia D'Erasmo** e **Paolo Rosati**.
+Il laboratorio è coordinato da **Julian Bogdani** in collaborazione con **Domizia D'Erasmo** e **Erasmo Di Fonso**.
 
 ## Edizione 2023/2024
 Sono aperte le iscrizioni ai laboratori didattici di archeologia digitale per l'anno accademico 2023-2024. Per il programma e i dettagli seguire [questo collegamento](../../notizie/2023-09-19-laboratori-didattici-di-archeologia-digitale-2023-2024/).
