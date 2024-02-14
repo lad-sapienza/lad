@@ -65,7 +65,7 @@ const Team = () => {
       image: "images/paolo-rosati.jpg",
       position: "Membro del laboratorio",
       affiliation:
-        "Assegnista di ricerca presso il centro di ricerca DigiLab Sapienza",
+        "Assegnista di ricerca presso il Dip. SARAS, Sapienza",
       academia: "https://uniroma1.academia.edu/RosatiPaolo",
       researchgate: "https://www.researchgate.net/profile/Paolo-Rosati-2",
     },
@@ -142,9 +142,10 @@ const Team = () => {
         </Col>
       </Row>
 
-      <CardGroup>
+      <Row>
         {teamData.map((m, mk) => {
           return (
+            <Col xs={6} md={4}>
             <Card key={mk}>
               <Card.Img
                 variant="top"
@@ -170,9 +171,10 @@ const Team = () => {
                 </Card.Text>
               </Card.Body>
             </Card>
+            </Col>
           );
         })}
-      </CardGroup>
+      </Row>
     </Wrapper>
   );
 };
