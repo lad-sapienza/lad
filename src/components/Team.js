@@ -11,7 +11,7 @@ import { GiIceIris } from "react-icons/gi";
 const Team = () => {
   const jb = {
     name: "Julian Bogdani",
-    image: "images/jbogdani.jpg",
+    image: "images/julian-bogdani.jpg",
     position: "Responsabile scientifico del laboratorio",
     affiliation:
       "Professore Associato di Metodologie della Ricerca Archeologica, Dip. SARAS",
@@ -25,7 +25,7 @@ const Team = () => {
   const teamData = [
     {
       name: "Eleonora Iacopini",
-      image: "images/eiacopini.jpg",
+      image: "images/eleonora-iacopini.jpg",
       position: "Membro del laboratorio",
       affiliation:
         "Assegnista di ricerca di Metodologie di Ricerca Archeologica, Dip. SARAS, Sapienza",
@@ -35,17 +35,8 @@ const Team = () => {
       github: "https://github.com/eiacopini",
     },
     {
-      name: "Paolo Rosati",
-      image: "images/prosati.jpg",
-      position: "Membro del laboratorio",
-      affiliation:
-        "Assegnista di ricerca presso il centro di ricerca DigiLab Sapienza",
-      academia: "https://uniroma1.academia.edu/RosatiPaolo",
-      researchgate: "https://www.researchgate.net/profile/Paolo-Rosati-2",
-    },
-    {
       name: "Nadia Aleotti",
-      image: "images/naleotti.jpg",
+      image: "images/nadia-aleotti.jpg",
       position: "Membro del laboratorio",
       affiliation:
         "Assegnista di ricerca Metodologie di Ricerca Archeologica, Dip. SARAS, Sapienza",
@@ -54,7 +45,7 @@ const Team = () => {
     },
     {
       name: "Domizia D'Erasmo",
-      image: "images/dderasmo.jpg",
+      image: "images/domizia-derasmo.jpg",
       position: "Membro del laboratorio",
       affiliation:
         "Dottoranda in Archeologia, Dip. Scienze dell'Antichità, Sapienza",
@@ -64,6 +55,21 @@ const Team = () => {
       researchgate: "https://www.researchgate.net/profile/Domizia_Derasmo",
       twitter: "https://twitter.com/domizzzia",
     },
+    {
+      name: "Erasmo Di Fonso",
+      image: "images/erasmo-di-fonso.jpg",
+      position: "Membro del laboratorio",
+    },
+    {
+      name: "Paolo Rosati",
+      image: "images/paolo-rosati.jpg",
+      position: "Membro del laboratorio",
+      affiliation:
+        "Assegnista di ricerca presso il centro di ricerca DigiLab Sapienza",
+      academia: "https://uniroma1.academia.edu/RosatiPaolo",
+      researchgate: "https://www.researchgate.net/profile/Paolo-Rosati-2",
+    },
+    
   ];
 
   const iconList = [
@@ -94,7 +100,7 @@ const Team = () => {
     },
     {
       id: "twitter",
-      label: "Twitter",
+      label: "X",
       icon: <FaTwitter />,
     },
   ];
