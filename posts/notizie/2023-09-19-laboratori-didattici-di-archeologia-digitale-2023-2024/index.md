@@ -3,8 +3,6 @@ title: "Laboratori didattici di Archeologia Digitale 2023-2024"
 img: ./lab-lad.png
 date: 2023-09-19
 sommario: "L'offerta formativa del Laboratorio di Archeologia Digitale per l'anno accademico 2023-2024. Iscrizione, partecipazione, calendario..."
-pinned: true
-inhome: true
 ---
 
 Sono aperte le iscrizioni ai laboratori didattici di Archeologia Digitale organizzati nell’ambito dei corsi di Metodologie della Ricerca Archeologica, Digital Archaeology e Informatica Umanistica e in collaborazione con la [Missione Archeologica della Sapienza in Albania](../../ricerca/missione-archeologica-sapienza-a-cuka-e-ajtoit-albania/) e si pongono l’obiettivo di fornire le basi teoriche e pratiche necessarie per impostare e sviluppare in autonomia i propri progetti **GIS** e affrontare il mondo della cartografia numerica, dell’elaborazione grafica di rilievi di monumenti archeologici e della compilazione del modulo **VPIA**.
