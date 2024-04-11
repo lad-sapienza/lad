@@ -115,7 +115,9 @@ const Index = ({ data }) => {
                         "Droni",
                         "Stazione Totale",
                         "Laser Scanner",
-                        "GPS differenziale",
+                        "GNSS",
+                        "GPS",
+                        "LAP (Laser Aided Profiler)",
 
                         "GARR Cloud",
                         "Web Server",
@@ -131,6 +133,8 @@ const Index = ({ data }) => {
                         "Adobe Photoshop",
                         "Gimp",
                         "Imagemagick",
+
+
                       ]
                         .sort()
                         .join(", ")}

@@ -7,7 +7,8 @@ inhome: true
 ---
 
 
-Tra l'**11 e il 14 aprile 2024** i membri della LAD: Laboratorio di Archeologia Digitale alla Sapienza, Julian **Bogdani** e Eleonora **Iacopini** parteciperanno al convegno internazionale “RAC / TRAC (Roman Archaeology Conference / Theoretical Roman Archaeology Conference) 2024 a Londra, nella sessione 2 dedicata a “Urban Structures, Inscriptions and Interaction in Imperial Rome: new approaches” gli aggiornamenti delle ricerce sulla collaborazione con il [progetto ERC Advanced In-Rome](../ricerca/inrome/), P.I. prof.ssa Barbara Borg, Scuola Normale Superiore di Pisa, con un intervento dal titolo “Digital infrastructures for the understanding of Roman archaeological landscapes”.
+Tra l'**11 e il 14 aprile 2024** i membri della LAD: Laboratorio di Archeologia Digitale alla Sapienza, Julian **Bogdani** e Eleonora **Iacopini** parteciperanno al convegno internazionale “RAC / TRAC (Roman Archaeology Conference / Theoretical Roman Archaeology Conference) 2024 a Londra, nella sessione 2 dedicata a “Urban Structures, Inscriptions and Interaction in Imperial Rome: new approaches”.
+Nella conferenza verranno presentati gli aggiornamenti delle ricerche in collaborazione con il [progetto ERC Advanced In-Rome](../ricerca/inrome/), P.I. prof.ssa Barbara Borg, Scuola Normale Superiore di Pisa, con un intervento dal titolo “Digital infrastructures for the understanding of Roman archaeological landscapes”.
 
-Il programma della sessione è disponibile presso i [sito web di UCL](https://www.ucl.ac.uk/archaeology/news-events/conferences/ractrac-conference-2024-timetable/ractrac-session-2-urban-structures), organizzatore dell'evento.
+Il programma completo della sessione è disponibile presso i [sito web di UCL](https://www.ucl.ac.uk/archaeology/news-events/conferences/ractrac-conference-2024-timetable/ractrac-session-2-urban-structures), organizzatore dell'evento.
 
