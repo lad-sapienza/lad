@@ -121,7 +121,7 @@ const Index = ({ data }) => {
 
                         "GARR Cloud",
                         "Web Server",
-                        "Linux",
+                        "GNU / Linux",
                         "Debian",
                         "Git",
                         "Bash",
