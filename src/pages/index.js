@@ -78,7 +78,7 @@ const Index = ({ data }) => {
                       Ecco una lista non ragionata e in ordine alfabetico di
                       strumenti, linguaggi, standard, software, ecc. con i quali
                       ci troviamo estremamente a nostro agio e che usiamo
-                      quotidianemente:
+                      quotidianamente:
                     </p>
                     <p className="bg-light p-3">
                       {[
