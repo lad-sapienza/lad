@@ -9,12 +9,12 @@ const Footer = () => {
     <Wrapper>
       <footer className="mt-5 border-top">
         <Container className="pt-5 my-5">
-          <Row>
-            <Col sm={3} className="text-center d-flex align-items-center">
-              <div>
+          <Row className="text-center">
+            <Col md={3} className="d-flex align-items-center">
+              <div className="img-fluid">
                 <img
                   src={LAD}
-                  className="d-md-inline-block mb-1"
+                  className="mb-2 img-fluid"
                   alt="Laboratorio di Archeologia Digitale alla Sapienza"
                 />
                 <h5 className="text-center">
@@ -32,8 +32,8 @@ const Footer = () => {
                 </p>
               </div>
             </Col>
-            <Col sm={4} className="d-flex align-items-center">
-              <h5 className="text-center">
+            <Col md={4} className="d-flex align-items-center">
+              <h5>
                 <a
                   href="https://saras.uniroma1.it/"
                   title="Dipartimento SARAS. Sapienza Università di Roma"
@@ -44,7 +44,7 @@ const Footer = () => {
                 </a>
               </h5>
             </Col>
-            <Col sm={5} className="text-center">
+            <Col md={5}>
               <h5>
                 Nota sulla <em>privacy</em>
               </h5>
