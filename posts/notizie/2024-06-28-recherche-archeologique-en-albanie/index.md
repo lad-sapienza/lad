@@ -1,5 +1,5 @@
 ---
-title: "Partecipazione alla conferenza internazionale “Actualité del la recherche archéologique en Albanie”"
+title: "Partecipazione alla conferenza internazionale “Actualité de la recherche archéologique en Albanie”"
 img: ./recherche-archeologique-en-albanie.jpg
 date: 2024-06-28
 sommario: "Il direttore della Missione Archeologica della italo-albanese (Sapienza - Istituto Archeologico Albanese)Julian Bogdani parteciperà alla conferenza “Actualité de la recherche archéologique en Albanie” organizzata da E. Nallbani, F. Quantin e S. Shpuza"
