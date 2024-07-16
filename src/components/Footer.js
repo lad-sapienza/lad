@@ -10,29 +10,20 @@ const Footer = () => {
       <footer className="mt-5 border-top">
         <Container className="pt-5 my-5">
           <Row className="text-center">
-            <Col md={3} className="d-flex align-items-center">
-              <div className="img-fluid">
-                <img
-                  src={LAD}
-                  className="mb-2 img-fluid"
-                  alt="Laboratorio di Archeologia Digitale alla Sapienza"
-                />
-                <h5 className="text-center">
-                  Laboratorio di Archeologia Digitale alla Sapienza
-                </h5>
-                <p>
-                  Responsabile scientifico: Julian Bogdani
-                  <br />
-                  <a
-                    href="mailto:julian.bogdani@uniroma1.it"
-                    title="Mail to Julian Bogdani"
-                  >
-                    julian.bogdani@uniroma1.it
-                  </a>
-                </p>
-              </div>
+            <Col md={3} className="mb-3">
+              <img
+                src={LAD}
+                className="mb-2 img-fluid"
+                alt="Laboratorio di Archeologia Digitale alla Sapienza"
+              />
+              <h5 className="text-center">
+                Laboratorio di Archeologia Digitale alla Sapienza
+              </h5>
+              <p>
+                Responsabile scientifico: Julian Bogdani
+              </p>
             </Col>
-            <Col md={4} className="d-flex align-items-center">
+            <Col md={4} className="d-flex align-items-center mb-3">
               <h5>
                 <a
                   href="https://saras.uniroma1.it/"
@@ -44,7 +35,7 @@ const Footer = () => {
                 </a>
               </h5>
             </Col>
-            <Col md={5}>
+            <Col md={5} className="mb-3">
               <h5>
                 Nota sulla <em>privacy</em>
               </h5>
