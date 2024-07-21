@@ -3,7 +3,6 @@ title: "Partecipazione al convegno internazionale “RAC/TRAC Conference 2024. S
 img: ./rac-trac-2024-london.png
 date: 2024-04-11
 sommario: "Eleonora Iacopini e Julian Bogdani presentano ai lavoro del RAC / TRAC 2024 a Londra i lavori del LAD per il progetto InRome della Scuola Normale Superiore di Pisa"
-inhome: true
 ---
 
 

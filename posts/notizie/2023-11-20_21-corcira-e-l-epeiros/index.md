@@ -3,7 +3,6 @@ title: "Partecipazione al convegno internazionale “Fra storia e archeologia: C
 img: ./corcira-e-l-epeiros.png
 date: 2023-11-20
 sommario: "Presentazione delle ricerche della missione archeologica a Çuka e Ajtoit al convegno internazionale “Fra storia e archeologia: Corcira e l’epeiros. Nuovi dati e prospettive di ricerca”"
-inhome: true
 ---
 
 
