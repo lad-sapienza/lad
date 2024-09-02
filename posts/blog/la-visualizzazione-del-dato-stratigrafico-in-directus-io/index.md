@@ -43,7 +43,7 @@ Poniamo il caso di una tabella che possiede due record geolocalizzati.
 
 La rappresentazione tabellare non è l'unica disponibile
 
-![Visualizzazione a mappoa della collection Sites](04-mapcoords.png "Visualizzazione a mappoa della collection Sites")
+![Visualizzazione a mappoa della collection Sites](04-mapcoords.jpg "Visualizzazione a mappoa della collection Sites")
 
 
 Nelle immagini precedenti vediamo come il semplice uso della funzionalità di _layouting_ di _Directus.io_ permetta di passare da una ostica e fredda forma tabellare ad una interessantissima rappresentazione su mappa. Fortunatamente questo meccanismo è estendibile e come vedremo è stato possibile produrre un layout aggiuntivo che permette di visualizzare i dati sotto forma di _Harris Matrix_. _Directus.io_ si riferisce a questo tipo di estensioni col termine _[Custom layouts](https://docs.directus.io/extensions/layouts.html)_.
