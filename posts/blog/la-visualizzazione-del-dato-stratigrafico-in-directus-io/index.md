@@ -85,7 +85,7 @@ Di queste possibilità, come accennato, siamo riusciti a sfiorare soltanto la su
 **HMDE**
 - Repository GitHub dedicata a HMDE  
   [https://github.com/lab-archeologia-digitale/directus-extension-harris-matrix](https://github.com/lab-archeologia-digitale/directus-extension-harris-matrix)
-- Repository NPM.js dedicata a HMDE
+- Repository NPM.js dedicata a HMDE  
   [https://www.npmjs.com/package/directus-extension-harris-matrix](https://www.npmjs.com/package/directus-extension-harris-matrix)
 - Segnalazione di un bug  
   [https://github.com/lab-archeologia-digitale/directus-extension-harris-matrix/issues](https://github.com/lab-archeologia-digitale/directus-extension-harris-matrix/issues)
