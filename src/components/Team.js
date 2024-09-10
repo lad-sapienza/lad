@@ -3,7 +3,7 @@ import React from "react";
 import styled from "styled-components";
 
 //other
-import { Card, CardGroup, Row, Col } from "react-bootstrap";
+import { Card, Row, Col } from "react-bootstrap";
 import { FaGithub, FaTwitter, FaUniversity } from "react-icons/fa";
 import { SiAcademia, SiResearchgate } from "react-icons/si";
 import { GiIceIris } from "react-icons/gi";
