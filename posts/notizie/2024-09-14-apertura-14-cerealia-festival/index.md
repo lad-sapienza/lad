@@ -2,7 +2,7 @@
 title: "Partecipazione all’evento inaugurale della 14esima edizione del festival Cerealia"
 img: ./apertura-14-edizione-cerealia.jpg
 date: 2024-09-14
-sommario: "Il direttore della Missione Archeologica Italo-Albanese (Sapienza - Istituto Archeologico Albanese) Julian Bogdani parteciperà al convegno internazionale ‘Culti e rituali in grotta: forme e materiali dal Mediterraneo tardoantico’ presso la Sapienza Università di Roma."
+sommario: "Il direttore della Missione Archeologica Italo-Albanese (Sapienza - Istituto Archeologico Albanese) Julian Bogdani parteciperà all’evento inaugurale della 14esima edizione del festival Cerealia."
 inhome: true
 ---
 
