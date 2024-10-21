@@ -86,6 +86,33 @@ const Blog = ({ data }) => {
             </a>
             .
           </p>
+          <p>
+            Tutti i contenuti del blog del LAD sono rilasciati con licenza
+            Breativce Commons Attribuzione - Condividi allo stesso modo (CC
+            BY-SA)
+            <br />
+            <img
+              src="https://creativecommons.it/chapterIT/wp-content/uploads/2021/01/by-sa.png"
+              alt="CC BY-SA"
+            />
+            <hr />
+            <a
+              href="https://creativecommons.org/licenses/by-sa/4.0/deed.it"
+              target="_blank"
+              rel="noreferrer noopener"
+              aria-label="[Commons Deed] [Legal Code] (opens in a new tab)"
+            >
+              [Commons Deed]
+            </a>
+            <a
+              href="https://creativecommons.org/licenses/by-sa/4.0/legalcode.it"
+              target="_blank"
+              rel="noreferrer noopener"
+              aria-label="[Commons Deed] [Legal Code] (opens in a new tab)"
+            >
+              [Legal Code]
+            </a>
+          </p>
           <hr />
 
           <div className="mb-5 text-secondary p-2 text-center">
