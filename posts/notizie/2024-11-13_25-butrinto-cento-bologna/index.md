@@ -32,7 +32,7 @@ _Opening of the proceedings_
   _The Urban Topography of Butrint and its Region in Late Antiquity and the Medieval Periods: A View through the Western Defences_
 - **Simona Antolini**, University of Macerata  
   _Novità epigrafiche dal Fondo Morricone della Scuola Archeologica Italiana di Atene_
-- **David Hernandez**, Notre Dame University
+- **David Hernandez**, Notre Dame University  
   _Ricerche nel foro romano di Butrinto (da confermare)_
 
 _Discussione e pausa_
@@ -85,7 +85,7 @@ _Discussion and break_
   _Ricerche archeologiche nella valle della Vjosa: dati preliminari dal comparto di Qesarat_
 - **Saimir Shpuza**, Aix-Marseille Université  
   _Urban planning and public architecture at Orikos during the Hellenistic period_
-- **Maria Intrieri**, University of Calabria
+- **Maria Intrieri**, University of Calabria  
   _Corcira e l’area epirota fra VIII e IV sec. a.C.: il contributo delle fonti letterarie_
 - **Manuela Mari**, **Riccardo Candini**, University of Bologna  
   _Rapporti monarchia macedone-ethne/koina_
