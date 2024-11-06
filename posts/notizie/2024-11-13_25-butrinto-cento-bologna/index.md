@@ -51,9 +51,9 @@ _Opening of the proceedings_
 - **Julian Bogdani**, Sapienza University of Rome, **Albana Meta**, Institute of Archaeology of Tirana  
   _Ricerche a Çuka e Ajtoit_
 - **Milena Melfi**, Oxford University, **Oliver Gilkes**, Indipendent researcher  
-  _Ricerche a Dobra (Vagalat)_
+  _Ricerche a Dobra (Vagalat) (da confermare)_
 - **Roberto Perna**, University of Macerata, **Sabina Veseli**, Institute of Archaeology of Tirana  
-  Ricerche nella valle del Drino (da confermare)
+  _Ricerche nella valle del Drino (da confermare)_
 - **Francesca Sogliani**, University of Basilicata, **Dimitris Roubis**, National Centre of Research (CNR), School of Specialization in Archaeological Heritage SSBA-UNIBAS  
   _Le ricerche archeologiche nell’insediamento fortificato di Kastrì sull’Acheronte_
 
