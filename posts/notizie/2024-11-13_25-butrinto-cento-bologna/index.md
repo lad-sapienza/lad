@@ -29,8 +29,8 @@ _Greetings_
 
 **16:30-17:30**
 
-_Current research in Butrint and Chaonia_
-_Chairman_ - **Luigi Maria Caliò**, University of Catania
+_Current research in Butrint and Chaonia_  
+_Chairman_: **Luigi Maria Caliò**, University of Catania
 
 - **Enrico Giorgi**, **Giuseppe Lepore**, **Stefano Medas**, University of Bologna, **Belisa Muka**, Archaeological Institute of Tirana  
   _Le nuove ricerche dell’Università di Bologna a Butrinto e Phoinike_
@@ -53,7 +53,7 @@ Aula Prodi
 **09:30-18:30**
 
 _Current research in ancient Epirus and Illyria_  
-Chairman - **Enrico Giorgi**, Università di Bologna
+_Chairman_: **Enrico Giorgi**, Università di Bologna
 
 - **Kriledjan Çipa**, General Directorate of Cultural Heritage of Vlora  
   _Centri fortificati, insediamenti rurali e organizzazione del territorio sulla costa marittima della Caonia fra IV e I secolo a.C. Il caso di Himara e Borshi._
@@ -67,8 +67,8 @@ Chairman - **Enrico Giorgi**, Università di Bologna
 _Discussion and break_
 
  
-**11:30-13:00**
-_Chairman_ – **Julian Bogdani**, Sapienza University of Roma
+**11:30-13:00**  
+_Chairman_: **Julian Bogdani**, Sapienza University of Roma
 
 - **Björn Forsén**, University of Helsinki, Georgia Pliakou, Ephorate of Antiquities of Thesprotia  
   _Photike: New Light on a Little Known Roman Town of Epirus._
@@ -82,9 +82,8 @@ _Chairman_ – **Julian Bogdani**, Sapienza University of Roma
 
 _Discussion and lunch break_
 
-**14:30-16:00**
-
-_Chairman_ - **Giuseppe Lepore**, University of Bologna
+**14:30-16:00**  
+_Chairman_: **Giuseppe Lepore**, University of Bologna
 
 - **Georgia Pliakou**, Ephorate of Antiquities of Thesprotia  
   _Molossia and Beyond: House Types and Settlement Patterns in Ancient Epirus._
@@ -97,9 +96,8 @@ _Chairman_ - **Giuseppe Lepore**, University of Bologna
 
 _Discussion and break_
 
-**16:15-18:00**
-
-_Chairwoman_ - **Claudia Antonetti**, Università Ca’ Foscari
+**16:15-18:00**  
+_Chairwoman_: **Claudia Antonetti**, Università Ca’ Foscari
 
 
 - **Cristina C. Ancona**, **C. Silvio Fioriello**, University of Bari, **Taulant Rama**, Archaeologist, **Eduard Shehi**, Archaeological Institute of Tirana  
