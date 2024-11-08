@@ -142,7 +142,7 @@ _Discussion and break_
 - **Eleni Vasileiou**, Ephorate of Antiquities of Ioannina  
   _The handmade pottery in Epirus: a long-lasting tradition._
 - **Ioulia K. Katsadima**, Ephorate of the Antiquities of Ioannina  
-  _Old findings and new readings: discussing the epigraphic material found by D. Evangelidis in southern Albania in 1913.  _
+  _Old findings and new readings: discussing the epigraphic material found by D. Evangelidis in southern Albania in 1913._
 
 _Discussion and end of activities for the day_
 
