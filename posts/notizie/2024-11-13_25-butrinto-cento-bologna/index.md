@@ -7,7 +7,10 @@ inhome: true
 ---
 
 
-Il **13-15 novembre 2024**, il direttore della Missione Archeologica della italo-albanese (Sapienza - Istituto Archeologico Albanese) Julian Bogdani parteciperà alla conferenza internazionale “Butrinto Cento (1924-2024). Bilanci e prospettive” organizzata presso il Dipartimento DISCI (Piazza San Giovanni in Monte 2, Bologna) e organizzata dall'Università di Bologna e dall'Istituto Archeologico Albanese, con un intervento dal titolo _Ricerche a Çuka e Ajtoit_
+Il **13-15 novembre 2024**, il direttore della Missione Archeologica della italo-albanese (Sapienza - Istituto Archeologico Albanese) Julian Bogdani parteciperà alla conferenza internazionale “Butrinto Cento (1924-2024). Bilanci e prospettive” organizzata presso il Dipartimento DISCI (Piazza San Giovanni in Monte 2, Bologna) e organizzata dall'Università di Bologna e dall'Istituto Archeologico Albanese, con un intervento dal titolo _Ricerche a Çuka e Ajtoit_.
+
+Allo stesso evento interviene per la Missione anche  Nadia Aleotti (Sapienza University of Roma), con un intervento dal titolo: _What about Pre-Hellenistic pottery? Looking for the 5th and 4th cent. BCE material culture in Northern Epirus_.
+
 
 ---
 
