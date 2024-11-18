@@ -88,6 +88,9 @@ In questi anni i membri della missione hanno avviato un processo importatente di
 
 
 ### Partecipazione a convegni con comunicazione
+- _Butrinto Cento (1924-2024). Bilanci e prospettive_. Università di Bologna, 13-15 Novembre 2024.
+  - Julian Bogdani, “Ricerche a Çuka e Ajtoit”
+  - Nadia Aleotti, “What about Pre-Hellenistic pottery? Looking for the 5th and 4th cent. BCE material culture in Northern Epirus.”
 - *Culti e rituali in grotta: forme e materiali dal Mediterraneo tardoantico*. Sapienza Università di Roma, 9-10 Ssettembre 2024. Titolo dell'Intervento di Julian Bogdani e Francesca D'Ambola: “Praying at the edge: liminal cults and ritual practices in northern Epirus” [https://lad.saras.uniroma1.it/notizie/2024-09-09_10-culti-e-rituali-in-grotta/](https://lad.saras.uniroma1.it/notizie/2024-09-09_10-culti-e-rituali-in-grotta/)
 - *30th European Association of Archaeologist (EAA) Annual Meeting in Rome, Italy 28 - 31 August 2024*
   - Francesca D'Ambola, “Trojan Wanderers Between East And West: Approaching Sacred Landscapes In Northern Epirus”
