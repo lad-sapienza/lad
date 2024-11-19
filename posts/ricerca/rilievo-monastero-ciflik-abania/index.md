@@ -14,7 +14,7 @@ sommario: Progetto di ricerca, P.I. Paolo Rosati, finanziato dal programma “Pr
 - **Anno**: 2022
 - **Nr. prot.**: AR22218166C6157C
 - **Partecipanti**:
-  - Paolo Rosati, P.I. [paolo.rosati@uniroma1.it](mailto:eleonora.iacopini@uniroma1.it)
+  - Paolo Rosati, P.I. [paolo.rosati@uniroma1.it](mailto:paolo.rosati@uniroma1.it)
   - Julian Bogdani, Tutor [julian.bogdani@uniroma1.it](mailto:julian.bogdani@uniroma1.it)
 
 ## Abstract
