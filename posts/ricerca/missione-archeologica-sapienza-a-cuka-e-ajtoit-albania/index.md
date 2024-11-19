@@ -17,6 +17,7 @@ sommario: La Missione Archeologica della Sapienza a Çuka e Ajtoit (Albania) è 
   - [Pubblicazioni](#pubblicazioni)
   - [Organizazioni di convegni](#organizazioni-di-convegni)
   - [Partecipazione a convegni con comunicazione](#partecipazione-a-convegni-con-comunicazione)
+- [Campagna 2024](#campagna-2024)
 - [Campagna 2023](#campagna-2023)
 - [Campagna 2022](#campagna-2022)
 - [Supporto](#supporto)
@@ -113,6 +114,51 @@ In questi anni i membri della missione hanno avviato un processo importatente di
 
 
 
+## Campagna 2024
+
+La quarta campagna archeologica della Missione congiunta italo-albanese a Çuka e Ajtoit della Sapienza Università di Roma e dell’Istituto Archeologico di Tirana (IA) si è svolta nel periodo compreso tra il 2 Giugno e 1 Luglio 2024, con la partecipazione di un gruppo di ricerca composto da ricercatori e studenti italiani e albanesi.
+
+Anche nel corso dell’anno 2024 sono continuate le attività di ricognizione archeologica, rilievo topografico mediante acquisizione di immagini da drone e loro elaborazione fotogrammetrica per la creazione di modelli 3D. In particolare, le ricognizioni 2024 hanno interessato le fortificazioni e la parte superiore della collina.
+
+Parallelamente al proseguimento di queste attività, sono stati avviati alcuni saggi archeologici in due settori della città antica. Due saggi hanno interessato il complesso F2-01, che si trova su una terrazza situata a valle delle costruzioni militari sulla cima della collina, accanto alle mura medievali. Lo scavo ha rivelato una stratigrafia molto esigua, ma che ha restituito alcuni frammenti di ceramica d’impasto databile alla tarda età del Bronzo che sembrano confermare l’antichità delle strutture, già ipotizzata per la loro particolarità (struttura divisa in due vani nel senso della lunghezza e costruita con pietre di varie dimensioni non tagliate in forme regolari) e la stessa associazione con questo tipo di ceramica anche dalle precedenti ricognizioni in questo settore. 
+
+Il secondo settore della collina indagato stratigraficamente è quello del cd. “Palazzo” (complesso W4-01), che ha invece restituito stratigrafie molto più ricche di materiali perfettamente coerenti con quelle intercettate nel corso dei saggi 2023 nello stesso settore. L’insieme dei materiali rinvenuti continua a caratterizzarsi infatti per la particolarità sia delle classi rappresentate (soprattutto ceramica a vernice nera e terrecotte votive), sia delle caratteristiche degli oggetti rinvenuti (forme e decorazioni particolari), che suggeriscono il loro collegamento con la dismissione di un’area sacra, avvenuta fra il III e l’inizio del II secolo a.C.
+
+Un ulteriore saggio stratigrafico è stato aperto per indagare la struttura NE-12 nell’insediamento di età veneziano-ottomana, individuato dalle ricognizioni 2022-2023 nell’altopiano pianeggiante ai piedi nord orientali della collina di Çuka e Ajtoit. Questo settore era già stato parzialmente indagato nel corso della campagna 2022 e il saggio 2024 ha confermato la cronologia dell’insediamento al XVIII secolo d.C.
+
+Anche nel corso della campagna 2024 sono continuate le ricerche nel sito della cd. Basilica di Çiflik. Sono stati effettuati tre saggi stratigrafici, di cui due situati all’esterno delle strutture e uno all’interno. I saggi, sebbene di estensione limitata, hanno consentito una maggiore chiarezza nella lettura stratigrafica delle aree indagate, aggiungendo ulteriori dettagli a quelli già raccolti durante le attività di scavo dell’anno 2023.
+
+Parallelamente a queste ricerche sul campo, si sono svolte le attività del laboratorio materiali della Missione, che hanno interessato sia i materiali dalle ricognizioni degli anni precedenti (2022-2023), sia i materiali dai saggi della campagna 2024. Questa campagna ha visto l’avvio dell’utilizzo del LAP (Laser Aided Profiler), che ha notevolmente diminuito i tempi di acquisizione dei disegni dei frammenti ceramici, e quindi incrementato notevolmente la documentazione prodotta.
+
+Infine, la campagna 2024 ha visto la partecipazione delle dott.sse Melania di Fazio e Sara Capriotti, del laboratorio di caratterizzazione archeometrica di geomateriali – GEOMLAB del Dipartimento di Scienze della Terra di Sapienza Università di Roma. La loro presenza è stata utile per eseguire un primo sopralluogo sulla geologia regionale e un primo esame autoptico di diverse strutture di fortificazione della regione, delle possibili aree di cava e di possibili giacimenti argillosi che possano fornire dati utili di confronto alle analisi archeometriche, già in corso, degli impasti ceramici della regione, sempre a loro cura.
+
+**Partecipanti**
+
+Direzione della missione:
+- Julian **Bogdani** (Sapienza, Roma, Italia)
+- Albana **Meta** (Istituto di Archeologia, Tirana, Albania)
+
+Senior staff:
+- Nadia **Aleotti** (Sapienza, Roma, Italia)
+- Sara **Capriotti** (Sapienza, Roma, Italia)
+- Veronica **Castignani** (Università di Catania, Italia)
+- Francesca **D'Ambola** (Sapienza, Roma, Italia)
+- Domizia **D'Erasmo** (Sapienza, Roma, Italia)
+- Melania **Di Fazio** (Sapienza, Roma, Italia)
+- Salvatore **Napolitano** (Università della Campania Vanvitelli, Italia)
+
+BA, MA:
+
+- Francesco **Andretti** (Sapienza, Roma, Italia)
+- Simona Maria **Bellone** (Sapienza, Roma, Italia)
+- Claudio **Cammarota** (Università della Campania Vanvitelli, Italia)
+- Marco **Fallibene** (Sapienza, Roma, Italia)
+- Dea **Hate** (Università di Tirana, Albania)
+- Klea **Muftali**  (Università di Tirana, Albania)
+- Eren **Polat** (Sapienza, Roma, Italia)
+- Annalisa **Rondinelli** (Sapienza, Roma, Italia)
+- Marco **Russo** (Sapienza, Roma, Italia)
+- Valerio **Sordillo** (Università della Campania Vanvitelli, Italia)
 
 
 ## Campagna 2023
@@ -132,24 +178,24 @@ Come nelle campagna precedenti, anche quest'anno le ricerche puntuali sono state
 
 Direzione missione:
 
-- Julian Bogdani (Sapienza, Roma, Italia)
-- Albana Meta (Istituto di Archeologia, Tirana, Albania)
+- Julian **Bogdani** (Sapienza, Roma, Italia)
+- Albana **Meta** (Istituto di Archeologia, Tirana, Albania)
 
 Senior staff:
 
-- Nadia Aleotti (Sapienza, Roma, Italia)
-- Domizia D'Erasmo (Sapienza, Roma, Italia)
-- Noemi Giovino (Sapienza, Roma, Italia)
-- Eleonora Iacopini (Sapienza, Roma, Italia)
-- Paolo Rosati (Sapienza, Roma, Italia)
+- Nadia **Aleotti** (Sapienza, Roma, Italia)
+- Domizia **D'Erasmo** (Sapienza, Roma, Italia)
+- Noemi **Giovino** (Sapienza, Roma, Italia)
+- Eleonora **Iacopini** (Sapienza, Roma, Italia)
+- Paolo **Rosati** (Sapienza, Roma, Italia)
 
 BA, MA:
 
-- Halil Braho (Università di Tirana, Albania)
-- Dea Hate (Università di Tirana, Albania)
-- Antonio Maria Fini (Sapienza, Roma, Italia)
-- Filippo Josić (Sapienza, Roma, Italia)
-- Noemi Lerro (Sapienza, Roma, Italia)
+- Halil **Braho** (Università di Tirana, Albania)
+- Dea **Hate** (Università di Tirana, Albania)
+- Antonio Maria **Fini** (Sapienza, Roma, Italia)
+- Filippo **Josić** (Sapienza, Roma, Italia)
+- Noemi **Lerro** (Sapienza, Roma, Italia)
 
 
 ## Campagna 2022
@@ -174,32 +220,32 @@ Oltre che da colleghi e amici, i lavori della Missione sono stati visitati e seg
 
 Direzione missione:
 
-- Julian Bogdani (Sapienza, Roma, Italia)
-- Albana Meta (Istituto di Archeologia, Tirana, Albania)
+- Julian **Bogdani** (Sapienza, Roma, Italia)
+- Albana **Meta** (Istituto di Archeologia, Tirana, Albania)
 
 Senior:
 
-- Domizia D'Erasmo (Sapienza, Roma, Italia)
-- Noemi Giovino (Sapienza, Roma, Italia)
-- Paolo Rosati (Sapienza, Roma, Italia)
+- Domizia **D'Erasmo** (Sapienza, Roma, Italia)
+- Noemi **Giovino** (Sapienza, Roma, Italia)
+- Paolo **Rosati** (Sapienza, Roma, Italia)
 
 BA, MA:
 
-- Halil Braho (Università di Tirana, Albania)
-- Dea Hate (Università di Tirana, Albania)
-- Klea Mufali (Università di Tirana, Albania)
+- Halil **Braho** (Università di Tirana, Albania)
+- Dea **Hate** (Università di Tirana, Albania)
+- Klea **Mufali** (Università di Tirana, Albania)
 
 Ospiti
 
-- Alessandro Vanzetti (Sapienza, Roma, Italia)
-- Halil Shabani (Archeologo e storico, Saranda, Albania)
-- Giuseppe Valentini (MA, Sapienza, Roma, Italia)
+- Alessandro **Vanzetti** (Sapienza, Roma, Italia)
+- Halil **Shabani** (Archeologo e storico, Saranda, Albania)
+- Giuseppe **Valentini** (MA, Sapienza, Roma, Italia)
 
 ---
 
 ## Supporto
 
-Le attività della Missione Archeologica della Sapienza a Çuka e Ajtoit sono state rese possibili anche grazie ad una proficua collaborazione con enti istituzionali e imprese italiiane e albanesi, alle quali va tutta la nostra gratitudine per il continuo supporto.
+Le attività della Missione Archeologica della Sapienza a Çuka e Ajtoit sono state rese possibili anche grazie ad una proficua collaborazione con enti istituzionali e imprese italiane e albanesi, alle quali va tutta la nostra gratitudine per il continuo supporto.
 
 ---
 
