@@ -5,7 +5,7 @@ import styled from "styled-components";
 //other
 import { Card, Row, Col } from "react-bootstrap";
 import { FaGithub, FaTwitter, FaUniversity } from "react-icons/fa";
-import { SiAcademia, SiResearchgate } from "react-icons/si";
+import { SiAcademia, SiResearchgate, SiBluesky } from "react-icons/si";
 import { GiIceIris } from "react-icons/gi";
 
 const Team = () => {
@@ -21,6 +21,7 @@ const Team = () => {
     iris: "https://iris.uniroma1.it/browse?type=author&authority=rp62440&authority_lang=en",
     researchgate: "https://www.researchgate.net/profile/Julian-Bogdani",
     twitter: "https://twitter.com/JulianBogdani",
+    bluesky: "https://bsky.app/profile/jbogdani.bsky.social"
   };
   const teamData = [
     {
@@ -102,6 +103,11 @@ const Team = () => {
       id: "twitter",
       label: "X",
       icon: <FaTwitter />,
+    },
+    {
+      id: "bluesky",
+      label: "BlueSky",
+      icon: <SiBluesky />,
     },
   ];
 

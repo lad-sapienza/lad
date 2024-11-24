@@ -4,8 +4,11 @@ img: ./tirocini-progetto-cuka-e-ajtoit.jpg
 date: 2024-09-27
 sommario: "Attività di tirocinio sulla documentazione archeologica digitale della Missione Archeologica della Sapienza in Albania"
 inhome: true
+pinned: true
 ---
 
+> **Nota bene**: Non sono ancora disponibili informazioni dettagliate sulle date della prossima campagna di scavi e ricerche a Çuka e Ajtoit (Albania Meridionale) per l'anno **2025**. In dipendenza di questioni amministrative, la campagna potrà avere luogo, _indicativamente_, nei mesi di **giugno** o **settembre 2025**.  
+> È possibile, in ogni modo, manifestare il proprio interesse, compilando il modulo disponibile al seguente indirizzo: [https://forms.gle/jFn8eYrDEm4G9r1f8](https://forms.gle/jFn8eYrDEm4G9r1f8)
 
 Nell’ambito delle attività del **LAD: Laboratorio di Archeologia Digitale** alla Sapienza e della **Missione Archeologica Italo-Albanese a Çuka e Ajtoit** (Albania Meridionale) verranno organizzati nel corso dei prossimi mesi di autunno-inverno 2024-2025 tirocini formativi riguardanti la documentazione archeologica digitale delle ultime campagne di ricerca sul campo riservati agli studenti della Sapienza. Alcune delle attività previste riguadano:
 - l'elaborazione di modelli digitali 3D attraverso la tecnica fotogrammetrica (Structure from Motion, software: Agisoft Metashape), 	
