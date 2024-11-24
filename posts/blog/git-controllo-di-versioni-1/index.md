@@ -131,7 +131,7 @@ Se invece si vuole togliere un file specifico dallo `stage` allora è disponibil
 git reset -- index.md
 ```
 
-Finalmente per aggiungere l'istantanea, al database di Git dobbiamo usare il commando `commit` che richiede l'aggiunta di un messaggio testuale. Il consiglio è quello di descrivere in questo messaggio la modifica effettuata nella maniera più precisa e concisa possibile, in maniera di fornire infomrazioni utili ai nostri collaboratori (o al nostro noi del futuro). Ecco allora come potrebbe apparire il nostro primo commando di `commit`:
+Finalmente per aggiungere l'istantanea, al database di Git dobbiamo usare il commando `commit` che richiede l'aggiunta di un messaggio testuale. Il consiglio è quello di descrivere in questo messaggio la modifica effettuata nella maniera più precisa e concisa possibile, in maniera di fornire informazioni utili ai nostri collaboratori (o al nostro noi del futuro). Ecco allora come potrebbe apparire il nostro primo commando di `commit`:
 
 ```bash
 git commit -m "Primo commit: aggiunto index.md"

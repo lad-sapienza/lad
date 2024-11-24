@@ -17,20 +17,20 @@ Tutor: **Erasmo Di Fonso** ([erasmo.difonso@uniroma1.it](mailto:erasmo.difonso@u
 
 ## Calendario
 
-- Modulo **GIS base** (12 ore):
+- Modulo **GIS base** (16 ore):
   - 27 gennaio 2025, ore 14.00-18.00
   - 28 gennaio 2025, ore 14.00-18.00
   - 29 gennaio 2025, ore 14.00-18:00
-- Modulo **GIS avanzato** (8 ore):
   - 30 gennaio 2025, ore 14.00-18:00
+- Modulo **GIS avanzato** (8 ore):
   - 31 gennaio 2025, ore 14.00-18:00
-- **Banche dati** per l'Archeologia (8h)
   - 3 Febbraio 2025, ore 14.00-18.00
+- **Banche dati** per l'Archeologia (4h)
   - 4 Febbraio 2025, ore 14.00-18.00
 
 ## Iscrizione
 
-Per iscriversi è necessario copilare il modulo Google disponibile all'indirizzo: [https://forms.gle/6XQZvap35MeceF7aA](https://forms.gle/6XQZvap35MeceF7aA).
+Per iscriversi è necessario compilare **entro il 6 gennaio 2025** il modulo Google disponibile all'indirizzo: [https://forms.gle/6XQZvap35MeceF7aA](https://forms.gle/6XQZvap35MeceF7aA).
 
 In caso di sopravvenute complicazioni è fondamentale notificare all’indirizzo [julian.bogdani@uniroma1.it](mailto:julian.bogdani@uniroma1.it).  
 **Ogni modulo avrà un limite massimo di 50 partecipanti**

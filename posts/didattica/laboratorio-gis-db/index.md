@@ -12,7 +12,7 @@ Nelle ultime edizioni, il laboratorio GIS è stato affiancato da incontri dedica
 
 
 ## Edizione 2024/2025
-L'edizione 2024-2025 dei Laboratori Didattici di Archeologia Digitale sono riservati agli iscritti dei corsi di **Dottorato di Archeologia** e della **Scuola di Specializzazione in Beni Archeologici** della Sapienza. Per il programma, infomrazioni e l'iscrizione si rimada a questo [questo collegamento](../../notizie/2024-11-24-laboratori-didattici-di-archeologia-digitale-2024-2025/).
+L'edizione 2024-2025 dei Laboratori Didattici di Archeologia Digitale sono riservati agli iscritti dei corsi di **Dottorato di Archeologia** e della **Scuola di Specializzazione in Beni Archeologici** della Sapienza. Per il programma, informazioni e l'iscrizione si rimada a questo [questo collegamento](../../notizie/2024-11-24-laboratori-didattici-di-archeologia-digitale-2024-2025/).
 
 ## Edizioni precedenti
 - [Scarica la locandina dell'edizione 2024/2025](lab-gis-2024-2025.pdf)
