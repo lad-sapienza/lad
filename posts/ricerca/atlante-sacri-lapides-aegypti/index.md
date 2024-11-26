@@ -10,7 +10,7 @@ Il progetto “_Sacri lapides_” intende studiare e documentare i processi di t
 
 ## Risorse
 
-- Sito web del progetto: in fase di allestimento
+- Sito web del progetto: [paths-erc.eu/sacri-lapides-aegypti](https://paths-erc.eu/sacri-lapides-aegypti/)
 
 - Spazio relativo al progetto, repository di codice e documentazione:
 
