@@ -21,5 +21,3 @@ img: ./paths.jpg
 - Spazio relativo al progetto, repository di codice e documentazione: [https://github.com/paths-erc](https://github.com/paths-erc)
 
 - Sito della Cattedra di Egittologia alla Sapienza: [https://sites.google.com/uniroma1.it/cattedra-egittologia-sapienza](https://sites.google.com/uniroma1.it/cattedra-egittologia-sapienza)
-
-- Cattedra di Egittologia della Sapienza su Twitter: @SapientiAegypti

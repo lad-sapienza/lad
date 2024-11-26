@@ -15,5 +15,3 @@ Il progetto “_Sacri lapides_” intende studiare e documentare i processi di t
 - Spazio relativo al progetto, repository di codice e documentazione:
 
 - Sito della Cattedra di Egittologia alla Sapienza: [https://sites.google.com/uniroma1.it/cattedra-egittologia-sapienza](https://sites.google.com/uniroma1.it/cattedra-egittologia-sapienza)
-
-- Cattedra di Egittologia della Sapienza su Twitter: @SapientiAegypti
