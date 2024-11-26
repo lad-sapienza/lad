@@ -45,6 +45,16 @@ const Team = () => {
       researchgate: "https://www.researchgate.net/profile/Nadia-Aleotti",
     },
     {
+      name: "Francesca D'Ambola",
+      image: "images/francesca-dambola.jpg",
+      position: "Membro del laboratorio",
+      affiliation:
+        "Dottoranda in Archeologia, Dip. Scienze dell'Antichità, Sapienza",
+      academia: "https://uniroma1.academia.edu/FrancescaDAmbola",
+      iris: "https://iris.uniroma1.it/cris/rp/rp338805",
+      researchgate: "https://www.researchgate.net/profile/Francesca-Dambola"
+    },
+    {
       name: "Domizia D'Erasmo",
       image: "images/domizia-derasmo.jpg",
       position: "Membro del laboratorio",
