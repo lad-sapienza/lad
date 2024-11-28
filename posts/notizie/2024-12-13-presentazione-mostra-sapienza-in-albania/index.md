@@ -6,7 +6,7 @@ sommario: "Venerdì 13 dicembre 2024, alle ore 10:00 verrà presentata in aula S
 inhome: true
 ---
 
-Venerdì **13 dicembre 2024** ore **10:00**, presso l'aula **Simonetti del Dipartimento SARAS**, al terzo piano della [Facoltà di Lettere e Filosofia (CU003)](https://virtualtour.uniroma1.it/?building=CU003&c=1) verrà presentata la mostra “Sapienza in Albania. A cent’anni dalla prima visita nel paese di Luigi Maria Ugolini”, allestita negli ambienti del [Museo dell'Arte Classica della Sapienza](https://web.uniroma1.it/polomuseale/museo-arte-classica) (1 dicembre 2024 - 31 gennaio 2024).
+Venerdì **13 dicembre 2024** ore **10:00**, presso l'aula **Simonetti del Dipartimento SARAS**, al terzo piano della [Facoltà di Lettere e Filosofia (CU003)](https://virtualtour.uniroma1.it/?building=CU003&c=1) verrà presentata la mostra “Sapienza in Albania. A cent’anni dalla prima visita nel paese di Luigi Maria Ugolini”, allestita negli ambienti del [Museo dell'Arte Classica della Sapienza](https://web.uniroma1.it/polomuseale/museo-arte-classica) (9 dicembre 2024 - 31 gennaio 2024).
 
 **Interverranno**
 
