@@ -1,7 +1,7 @@
 ---
 title: "Presentazione della mostra “Sapienza in Albania. A cent’anni dalla prima visita nel paese di Luigi Maria Ugolini”"
 img: ./sapienza-in-albania.png
-date: 2024-12-13
+date: 2024-11-28
 sommario: "Venerdì 13 dicembre 2024, alle ore 10:00 verrà presentata in aula Simonetti la mostra “Sapienza in Albania” allestita presso gli ambienti del Museo dell'Arte Classica della Sapienza"
 inhome: true
 ---
@@ -15,7 +15,7 @@ Venerdì **13 dicembre 2024** ore **10:00**, presso l'aula **Simonetti del Dipar
 - **Alessandro Saggioro**  
     Direttore del Dipartimento Storia Antropologia Religioni
     Arte Spettacolo della Sapieza Università di Roma
-- **Anila Bitri Lame**  
+- **Anila Bitri Lani**  
     Ambasciatrice della Repubblica d'Albania in Italia
 - **Gianluca Biscardi**  
     Capo Sezione II: Archeologia. DGDP VI  
