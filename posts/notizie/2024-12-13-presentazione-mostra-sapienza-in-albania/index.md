@@ -31,6 +31,8 @@ Al termine dell'incontro è prevista una visita accompagnata alla mostra.
 
 **Colleghi e studenti interessati sono invitati a partecipare.**
 
+> La mostra è stata organizzata dalla [Missione Archeologico Italo-Albanese (Sapienza Università di Roma e Istituto Archeologico di Tirana)  a Çuka e Ajtoit](https://purl.org/lad/caj), con il supporto di Wikimedia Foundation e in collaborazione con l'Ambasciata della Repubblica d'Albania in Italia.
+
 Per informazioni si prega di scrivere a [julian.bogdani@uniroma1.it](mailto:julian.bogdani@uniroma1.it).
 
 ---
