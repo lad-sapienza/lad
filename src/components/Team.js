@@ -23,7 +23,7 @@ const Team = () => {
     researchgate: "https://www.researchgate.net/profile/Julian-Bogdani",
     twitter: "https://twitter.com/JulianBogdani",
     bluesky: "https://bsky.app/profile/jbogdani.bsky.social",
-    apmt: "https://apmt.day/julian.bogdani%40uniroma1.it/80c28de6/"
+    apmt: "https://apmt.day/julian.bogdani%40uniroma1.it/book/"
   };
   const teamData = [
     {
