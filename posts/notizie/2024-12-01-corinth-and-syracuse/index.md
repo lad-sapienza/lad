@@ -13,5 +13,4 @@ Nelle prossime giornate 5-7 Dicembre si svolgerà presso il Museo Archeologico R
 
 ---
 
-- [Scarica il prigramma in formato PDF](./Corinth-and-Syracuse-programme.pdf)
-- [Aggiungi evento al calendario](https://calendar.google.com/calendar/event?action=TEMPLATE&amp;tmeid=MmljYzNzZzRoZzc1c2cwdnBiZXI1bjgxY2oganVsaWFuLmJvZ2RhbmlAdW5pcm9tYTEuaXQ&amp;tmsrc=julian.bogdani%40uniroma1.it)
+- [Scarica il programma in formato PDF](./Corinth-and-Syracuse-programme.pdf)
