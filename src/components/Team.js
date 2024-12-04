@@ -23,7 +23,7 @@ const Team = () => {
     researchgate: "https://www.researchgate.net/profile/Julian-Bogdani",
     twitter: "https://twitter.com/JulianBogdani",
     bluesky: "https://bsky.app/profile/jbogdani.bsky.social",
-    apmt: "https://apmt.day/julian.bogdani%40uniroma1.it/book/"
+    apmt: "https://apmt.day/julian.bogdani%40uniroma1.it/book/",
   };
   const teamData = [
     {
@@ -54,7 +54,7 @@ const Team = () => {
         "Dottoranda in Archeologia, Dip. Scienze dell'Antichità, Sapienza",
       academia: "https://uniroma1.academia.edu/FrancescaDAmbola",
       iris: "https://iris.uniroma1.it/cris/rp/rp338805",
-      researchgate: "https://www.researchgate.net/profile/Francesca-Dambola"
+      researchgate: "https://www.researchgate.net/profile/Francesca-Dambola",
     },
     {
       name: "Domizia D'Erasmo",
@@ -72,17 +72,17 @@ const Team = () => {
       name: "Erasmo Di Fonso",
       image: "images/erasmo-di-fonso.jpg",
       position: "Membro del laboratorio",
+      affiliation: "Assegnista di ricerca, Dip. Istituto Studi Orientali (ISO), Sapienza",
+      github: "https://github.com/erasmdif",
     },
     {
       name: "Paolo Rosati",
       image: "images/paolo-rosati.jpg",
       position: "Membro del laboratorio",
-      affiliation:
-        "Assegnista di ricerca presso il Dip. SARAS, Sapienza",
+      affiliation: "Assegnista di ricerca presso il Dip. SARAS, Sapienza",
       academia: "https://uniroma1.academia.edu/RosatiPaolo",
       researchgate: "https://www.researchgate.net/profile/Paolo-Rosati-2",
     },
-    
   ];
 
   const iconList = [
@@ -169,31 +169,33 @@ const Team = () => {
         {teamData.map((m, mk) => {
           return (
             <Col xs={6} md={4}>
-            <Card key={mk}>
-              <Card.Img
-                variant="top"
-                src={m.image}
-                alt={`LAD ${m.position}: ${m.name}`}
-              />
-              <Card.Body>
-                <Card.Title>{m.name}</Card.Title>
-                <Card.Text className="position">{m.position}</Card.Text>
-                <Card.Text className="dipartimento">{m.affiliation}</Card.Text>
-                <Card.Text className="icon">
-                  {iconList.map((i, ik) => {
-                    if (m[i.id]) {
-                      return (
-                        <a href={m[i.id]} title={i.label} key={ik}>
-                          {i.icon}
-                        </a>
-                      );
-                    } else {
-                      return "";
-                    }
-                  })}
-                </Card.Text>
-              </Card.Body>
-            </Card>
+              <Card key={mk}>
+                <Card.Img
+                  variant="top"
+                  src={m.image}
+                  alt={`LAD ${m.position}: ${m.name}`}
+                />
+                <Card.Body>
+                  <Card.Title>{m.name}</Card.Title>
+                  <Card.Text className="position">{m.position}</Card.Text>
+                  <Card.Text className="dipartimento">
+                    {m.affiliation}
+                  </Card.Text>
+                  <Card.Text className="icon">
+                    {iconList.map((i, ik) => {
+                      if (m[i.id]) {
+                        return (
+                          <a href={m[i.id]} title={i.label} key={ik}>
+                            {i.icon}
+                          </a>
+                        );
+                      } else {
+                        return "";
+                      }
+                    })}
+                  </Card.Text>
+                </Card.Body>
+              </Card>
             </Col>
           );
         })}
