@@ -35,7 +35,14 @@ const Index = ({ data }) => {
                     LAD: Laboratorio di Archeologia Digitale alla Sapienza promuove la ricerca, la sperimentazione e la didattica delle tecnologie digitali per l'archeologia e più in generale per gli studi umanistici. Il LAD contribuisce allo sviluppo e promozione della cultura FLOS (<em>free, libre e open source</em>) e alla pubblicazione ad accesso aperto di dati e risultati della ricerca.
                   </p>
                 </section>
-
+                
+                {
+                  new Date().valueOf() < new Date('2024-12-31').valueOf() && <section>
+                    <img src="images/seasons-greeeting-2024.png" className="img-fluid" />
+                    <p className="text-center text-primary my-3">Il LAD augura a tutti buone feste di fine anno!</p>
+                  </section>
+                }
+                
                 <section id="chi-siamo">
                   <Team />
                 </section>
