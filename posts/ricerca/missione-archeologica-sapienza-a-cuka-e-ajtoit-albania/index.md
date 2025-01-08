@@ -74,7 +74,7 @@ Per quanto riguarda gli aspetti urbanistici e architettonici, lo studio della ed
 In questi anni i membri della missione hanno avviato un processo importatente di produzione scientifica e disseminazione dei risultati della ricerca, attraverso varie pubblicazioni e partecipazioni a workshop e convegni. Di seguito si offre una rapida panoramica, in continui aggiornamento.
 
 ### Pubblicazioni
--	Bogdani, Julian. c.d.s. “Chaonia in Epirus. A fresh assessment in light of new archaeological data” in *Redefining Ancient Epirus*. Borders, Boundaries, Landscapes, 1. Brepols.
+-	Bogdani, Julian. 2024. “Chaonia in Epirus. A fresh assessment in light of new archaeological data” in *Redefining Ancient Epirus* a cura di Milena Melfi e Maria Stamatopoulou, 37-61. Borders, Boundaries, Landscapes, 1. Turnhout: Brepols Publishers.
 - Bogdani, Julian. 2024. “Documenting a hilltop settlement: methodologies and preliminary results of the joint Albano-Italian project at Çuka e Ajtoit (Albania). ”GROMA: Documenting Archaeology 8 (2023): 18–36. https://doi.org/10.32028/Groma-Issue-8-2023-2832.
 -	J. Bogdani. 2024. “Troia in Epiro: miti, archeologie, storie e ideologie”. In *Il viaggio di Enea* a cura di Alfonsina Russo e Roberta Alteri, 193-211. Foro Romano - Palatino. Scavi e ricerche II/2024. Roma: «L’Erma» di Bretschneider.
 -	Bogdani, Julian e Nadia Aleotti. 2024. “Le necropoli di Çuka e Ajtoit: vecchie e nuove ricerche a confronto”. *Atlante Tematico di Topografia Antica*, 33: 139-160.
