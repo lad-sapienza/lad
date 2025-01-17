@@ -37,7 +37,7 @@ In caso di sopravvenute complicazioni è fondamentale notificare all’indirizzo
 
 ## Profilo
 
-**Il laboratorio è esclusisamente riservato agli iscritti dei corsi di Dottorato in Archeologia e della Scuola di Specializzazione in Beni Archeologici della Sapienza**
+**Il laboratorio è esclusivamente riservato agli iscritti dei corsi di Dottorato in Archeologia e della Scuola di Specializzazione in Beni Archeologici della Sapienza**
 
 ## CFU
 
