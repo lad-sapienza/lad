@@ -273,20 +273,21 @@ Infine, si ringrazia il programma ALBCORS del [Geoportale Nazionale Albanese (AS
 
 <div class="row text-center">
   <div class="col-sm-3">
-    <img src="../../logos/lad-blue.png" style="max-width: 100%" class="img-fluid" /><br />
-    Laboratorio di Archeologia Digitale alla Sapienza
-  </div>
-  <div class="col-sm-3">
-    <img src="../../logos/sapienza.png" style="max-width: 100%" class="img-fluid" /><br />
+    <img src="../../logos/sapienza.png" class="img-fluid" /><br />
     Sapienza Università di Roma
   </div>
   <div class="col-sm-3">
-    <img src="../../logos/iat.png" style="max-width: 100%" class="img-fluid" /><br />
-    Instituti i Arkeologjisë Tiranë (Albania)
+    <img src="../../logos/ash.png" style="max-width: 120px" class="img-fluid" /><br />
+    Akademia e Shkencave të Shqipërisë
   </div>
   <div class="col-sm-3">
-    <img src="../../logos/asa.jpg" style="max-width: 100%" class="img-fluid" /><br />
-    Akademia e Studimeve Albanologike, Tiranë (Albania)
+    <img src="../../logos/iat.png" class="img-fluid" /><br />
+    Instituti i Arkeologjisë Tiranë (Albania)
+  </div>
+  
+  <div class="col-sm-3">
+    <img src="../../logos/lad-blue.png" class="img-fluid" /><br />
+    Laboratorio di Archeologia Digitale alla Sapienza
   </div>
 </div>
 <div class="row text-center">
