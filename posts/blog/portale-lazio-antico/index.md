@@ -11,7 +11,7 @@ sommario: "Il portale Lazio Antico, a cura della Sapienza UnIversità di Roma e 
 
 ## Introduzione
 
-Il portale Lazio Antico ([https://www.lazioantico.it/](https://www.lazioantico.it/)) è frutto del progetto omonimo, reso possibile da uno specifico accordo interistituzionale che ha visto la Regione Lazio e Sapienza Università di Roma mettere in comune le proprie risorse e conoscenze al fine di valorizzare la ricerca nel settore dei Beni Culturali e facilitare l'avviamento dei giovani ai percorsi della ricerca.
+Il portale Lazio Antico ([https://lazioantico.datascape.dev/](https://lazioantico.datascape.dev/)) è frutto del progetto omonimo, reso possibile da uno specifico accordo interistituzionale che ha visto la Regione Lazio e Sapienza Università di Roma mettere in comune le proprie risorse e conoscenze al fine di valorizzare la ricerca nel settore dei Beni Culturali e facilitare l'avviamento dei giovani ai percorsi della ricerca.
 
 Il portale è stato ufficialmente presentazione il 16 dicembre 2021 all'aula Magna della Sapienza Università di Roma, alla presenza del Ministro della Cultura  Dario Franceschini, il Presidente della Regione Lazio Nicola Zingaretti, la Magnifica Rettrice della Sapienza Università di Roma Antonella Polimeni, il Prorettore al Patrimonio Archeologico della Sapienza Università di Roma Paolo Carafa, la Prorettrice alla Ricerca della Sapienza Università di Roma Maria Sabrina Sarto e il Presidente del FAI, professore emerito Andrea Carandini.
 
@@ -51,6 +51,6 @@ Anche per la distribuzione dei dati geografici ci si affida ad un servizio di Ma
 ---
 
 ## Riferimenti
-- Pagina principale del portale: [https://www.lazioantico.it/](https://www.lazioantico.it/)
+- Pagina principale del portale: [https://lazioantico.datascape.dev/](https://lazioantico.datascape.dev/)
 - Pagina del sito del Dipartimento di Scienze dell'Antichità, Sapienza Università di Roma dedicato al progetto: [https://www.antichita.uniroma1.it/progetto-lazio-antico-paesaggi-urbani-e-rurali-antichi-nella-regione-lazio-analisi-ricostruzione-e](https://www.antichita.uniroma1.it/progetto-lazio-antico-paesaggi-urbani-e-rurali-antichi-nella-regione-lazio-analisi-ricostruzione-e)
 - Notizia della presentazione del progetto, presso il sito della Regione Lazio: [https://regione.lazio.it/notizie/cultura-regione-sapienza-roma-lazio-antico](https://regione.lazio.it/notizie/cultura-regione-sapienza-roma-lazio-antico)
