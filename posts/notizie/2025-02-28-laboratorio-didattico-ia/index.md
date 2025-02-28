@@ -43,3 +43,8 @@ Il laboratorio è rivolto agli studenti della triennale e della magistrale che s
 ## Altre informazioni
 
 Le attività di laboratorio verranno svolte utilizzando il proprio dispositivo, è dunque necessario portare il proprio computer.
+
+
+---
+
+- [Scarica in PDF](./LAD-AI-24-25.pdf)
