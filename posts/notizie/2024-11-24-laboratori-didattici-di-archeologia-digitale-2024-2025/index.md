@@ -3,7 +3,6 @@ title: "Laboratori didattici di Archeologia Digitale 2024-2025"
 img: ./lab-lad.png
 date: 2024-11-24
 sommario: "L'offerta formativa del Laboratorio di Archeologia Digitale per l'anno accademico 2023-2024. Iscrizione, partecipazione, calendario..."
-inhome: true
 ---
 
 Sono aperte le iscrizioni ai Laboratori Didattici di Archeologia Digitale per l'anno accademico 2024-2025, organizzato dal LAD: Laboratorio di Archeologia Digitale alla Sapienza, in collaborazione con la [Missione Archeologica della Sapienza in Albania](../../ricerca/missione-archeologica-sapienza-a-cuka-e-ajtoit-albania/) e si pongono l’obiettivo di fornire le basi teoriche e pratiche necessarie per impostare e sviluppare in autonomia i propri progetti **GIS** e affrontare il mondo della cartografia numerica, dell’elaborazione grafica di rilievi di monumenti archeologici.

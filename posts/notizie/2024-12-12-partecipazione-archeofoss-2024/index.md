@@ -3,7 +3,6 @@ title: "Partecipazione del LAD all'edizione 2024 di ArcheoFOSS  2024"
 img: ./ArcheoFOSS-2024.jpg
 date: 2024-12-12
 sommario: "Il prossimo 19 e 20 dicembre 2024 si terrà l'edizione 2024 di ArcheoFOSS 2024, la conferenza internazionale su Open software, hardware, processes, data and formats in archaeological research. La diciotesima edizione si terrà a Chieti, presso l'università di Chieti-Pescara."
-inhome: true
 ---
 
 Il prossimo 19 e 20 dicembre 2024 si terrà l'edizione 2024 di ArcheoFOSS 2024, la conferenza internazionale su Open software, hardware, processes, data and formats in archaeological research. La diciotesima edizione si terrà a Chieti, presso l'università di Chieti-Pescara.
