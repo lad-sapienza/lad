@@ -168,8 +168,8 @@ const Team = () => {
       <Row>
         {teamData.map((m, mk) => {
           return (
-            <Col xs={6} md={4}>
-              <Card key={mk}>
+            <Col xs={6} md={4}  key={mk}>
+              <Card>
                 <Card.Img
                   variant="top"
                   src={m.image}

@@ -18,7 +18,7 @@ Responsabile: **Julian Bogdani** ([julian.bogdani@uniroma1.it](mailto:julian.bog
 Tutor:
 - **Nadia Aleotti** ([nadia.aleotti@uniroma1.it](mailto:nadia.aleotti@uniroma1.it))
 - **Francesca Di Maria** ([francesca.dimaria@uniroma1.it](mailto:francesca.dimaria@uniroma1.it))
-- **Nicola Lapacciana** ([nicola.lapacciana@uniroma1.it)(mailto:nicola.lapacciana@uniroma1.it)] 
+- **Nicola Lapacciana** ([nicola.lapacciana@uniroma1.it](mailto:nicola.lapacciana@uniroma1.it))
 
 
 
