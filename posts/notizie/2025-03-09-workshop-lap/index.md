@@ -6,7 +6,7 @@ sommario: "Nell’àmbito della sua offerta didattica, il LAD organizza un labor
 inhome: true
 ---
 
-In conclusione al [Laboratorio didattico sull’uso del Laser Aided Profiler (LAP)](../2025-01-17-laboratorio-didattico-lap/), il LAD organizza una tavola rotonda sul tema: “Laser Aided Profiler: Innovazioni e potenzialità dello strummento. Esperenze a confronto“.
+In conclusione al [Laboratorio didattico sull’uso del Laser Aided Profiler (LAP)](../2025-01-17-laboratorio-didattico-lap/), in collaborazione con la [Missione Archeologica della Sapienza a Çuka e Ajtoit (Albania)](../../ricerca/missione-archeologica-sapienza-a-cuka-e-ajtoit-albania/) e nell'ambito del progetto [PRIN 2022 “FortNet. Fortification and population network in coastal Chaonia, Northern Epirus (Albania) between Iron Age and the Medieval period: a longue durée approach to the study of settlements, economic and defensive systems”](../../ricerca/fortnet-project-prin-2022/), il LAD organizza una tavola rotonda sul tema: “Laser Aided Profiler: Innovazioni e potenzialità dello strummento. Esperenze a confronto“.
 
 La tavola rotonda si svolgerà venerdì **14 marzo 2025** dalle 9:45 alle 13:00, in aula **Ernaesto Buonaiuti**, al terzo piano della Facoltà di Lettere e Filosofia, Sapienza Universitò di Roma.
 
@@ -43,7 +43,7 @@ Si uniranno alla discussione:
 
 Studenti e colleghi, in presenza e collegati online sono invitati a partecipare attivamente alla discussione.
 
-L'evento è organizato dal LAD: LAboratorio di Archeologia Digitale alla Sapienza
+> L'evento è organizato dal [LAD: LAboratorio di Archeologia Digitale alla Sapienza](../../), in collaborazione con la [Missione Archeologica della Sapienza a Çuka e Ajtoit (Albania)](../../ricerca/missione-archeologica-sapienza-a-cuka-e-ajtoit-albania/) e nell’ambito del progetto [PRIN 2022 “FortNet. Fortification and population network in coastal Chaonia, Northern Epirus (Albania) between Iron Age and the Medieval period: a longue durée approach to the study of settlements, economic and defensive systems”](../../ricerca/fortnet-project-prin-2022/)
 
 ---
 
