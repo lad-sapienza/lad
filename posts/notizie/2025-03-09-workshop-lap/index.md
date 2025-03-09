@@ -6,7 +6,7 @@ sommario: "Nell’àmbito della sua offerta didattica, il LAD organizza un labor
 inhome: true
 ---
 
-In conclusione al [Laboratorio didattico sull’uso del Laser Aided Profiler (LAP)](./2025-01-17-laboratorio-didattico-lap/), il LAD organizza una tavola rotonda sul tema: “Laser Aided Profiler: Innovazioni e potenzialità dello strummento. Esperenze a confronto“.
+In conclusione al [Laboratorio didattico sull’uso del Laser Aided Profiler (LAP)](../2025-01-17-laboratorio-didattico-lap/), il LAD organizza una tavola rotonda sul tema: “Laser Aided Profiler: Innovazioni e potenzialità dello strummento. Esperenze a confronto“.
 
 La tavola rotonda si svolgerà venerdì **14 marzo 2025** dalle 9:45 alle 13:00, in aula **Ernaesto Buonaiuti**, al terzo piano della Facoltà di Lettere e Filosofia, Sapienza Universitò di Roma.
 
