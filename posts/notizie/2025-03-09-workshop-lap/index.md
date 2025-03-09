@@ -18,15 +18,15 @@ Sarà possibile partecipare all'evento anche online, attraverso il link: [https:
 **Condivisione delle esperienze** (09:45 - 11:00)  
 Moderatori: Nadia Aleotti, Francesca Di Maria e Nicola Lapacciana
 Presenteranno: 
-- Nadia Aleotti, Sapienza Università di Roma
-- Mario Indelcato, Università di Catania
-- Fabiana Cerasa, Università di Catania
-- Nicola Laapacciana, Sapienza Università di Roma
-- Francesca Di Maria, Sapienza Università di Roma
-- Lorenzo Cardarelli, Sapienza Università di Roma
+- Nadia **Aleotti**, Sapienza Università di Roma
+- Mario **Indelcato**, Università di Catania
+- Fabiana **Cerasa**, Università di Catania
+- Nicola **Laapacciana**, Sapienza Università di Roma
+- Francesca **Di Maria**, Sapienza Università di Roma
+- Lorenzo **Cardarelli**, Sapienza Università di Roma
 
 **Discussione aperta** (11:00 - 13:00)  
-Moderatore: Julian Bogdani
+Moderatore: Julian **Bogdani**
 TemiLa discussione affronterà, in maniera non esclusiva i seguenti temi:
 - Affidabilità e precisione di acquisizione dei dati
 - Standardizzazione e best pratices per l'uso del LAP
@@ -36,10 +36,10 @@ TemiLa discussione affronterà, in maniera non esclusiva i seguenti temi:
 - Limiti e prospettive future
 
 Si uniranno alla discussione:
-- Stefano Bertoldi, Università di Siena 
-- Antonio Ferrandes, Sapienza Università di Roma
-- Alessando Vanzetti, Sapienza Università di Roma
-- Enrico Zanini, Università di Siena
+- Stefano **Bertoldi**, Università di Siena 
+- Antonio **Ferrandes**, Sapienza Università di Roma
+- Alessando **Vanzetti**, Sapienza Università di Roma
+- Enrico **Zanini**, Università di Siena
 
 Studenti e colleghi, in presenza e collegati online sono invitati a partecipare attivamente alla discussione.
 
