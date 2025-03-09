@@ -4,6 +4,12 @@ img: ./workshop-lap.jpg
 date: 2025-03-09
 sommario: "Nell’àmbito della sua offerta didattica, il LAD organizza uuna tavola rotonda sul tema: “Laser Aided Profiler: Innovazioni e potenzialità dello strummento. Esperenze a confronto“"
 inhome: true
+tags:
+  - Laser Aided Profiler
+  - Tavola Rotonda
+  - Archeologia Digitale
+  - Università di Roma
+  - Progetto PRIN FortNet
 ---
 
 In conclusione al [Laboratorio didattico sull’uso del Laser Aided Profiler (LAP)](../2025-01-17-laboratorio-didattico-lap/), in collaborazione con la [Missione Archeologica della Sapienza a Çuka e Ajtoit (Albania)](../../ricerca/missione-archeologica-sapienza-a-cuka-e-ajtoit-albania/) e nell'ambito del progetto [PRIN 2022 “FortNet. Fortification and population network in coastal Chaonia, Northern Epirus (Albania) between Iron Age and the Medieval period: a longue durée approach to the study of settlements, economic and defensive systems”](../../ricerca/fortnet-project-prin-2022/), il LAD organizza una tavola rotonda sul tema: “Laser Aided Profiler: Innovazioni e potenzialità dello strummento. Esperenze a confronto“.

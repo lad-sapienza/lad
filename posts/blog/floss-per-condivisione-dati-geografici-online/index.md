@@ -1,13 +1,17 @@
 ---
-title: Software open source per la condivisione di dati geografici online
+title: "Software open source per la condivisione di dati geografici online"
 autore: Eleonora Iacopini
+date: 2025-03-09
 licenza: CC BY 4.0 International
 livello: avanzato
-tags: [cartografia, geodati, open source, gis, dati geografici, webGIS]
 img: ./geoserver.jpg
-date: 2022-09-30
 sommario: "La diffusione di programmi open source sempre più performanti per la gestione dei dati geografici come QGIS, con il conseguente aumento di creatori di dati spaziali fa emergere l’esigenza di avere a disposizione sistemi di gestione di questa mole di dati per la loro fruizione pubblica. Questo articolo propone una panoramica degli strumenti open source a tal scopo oggi più interessanti."
----
+tags:
+  - FLOSS
+  - Dati Geografici
+  - Condivisione
+  - GeoNetwork
+  - GeoNode
 
 
 ## Introduzione
