@@ -30,7 +30,7 @@ Moderatore: Julian Bogdani
 TemiLa discussione affronterà, in maniera non esclusiva i seguenti temi:
 - Affidabilità e precisione di acquisizione dei dati
 - Standardizzazione e best pratices per l'uso del LAP
-- Ricadute teoriche e impatto sull'interpretazione "in punta di trowel"
+- Ricadute teoriche e impatto sull'interpretazione “in punta di trowel”
 - I rischi di un approccio precoce
 - Algoritmi automatici di classificazione e impatto sul processo ceramologico
 - Limiti e prospettive future
