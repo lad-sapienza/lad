@@ -2,7 +2,7 @@
 title: "Laser Aided Profiler: Innovazioni e potenzialità dello strummento. Esperenze a confronto [Tavola Rotonda]"
 img: ./workshop-lap.jpg
 date: 2025-03-09
-sommario: "Nell’àmbito della sua offerta didattica, il LAD organizza un laboratorio didattico sull’uso del Laser Aided Profiler (LAP) per la documentazione dei profili ceramici"
+sommario: "Nell’àmbito della sua offerta didattica, il LAD organizza uuna tavola rotonda sul tema: “Laser Aided Profiler: Innovazioni e potenzialità dello strummento. Esperenze a confronto“"
 inhome: true
 ---
 
