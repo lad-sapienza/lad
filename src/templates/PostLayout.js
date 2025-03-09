@@ -1,26 +1,26 @@
 //import
-import React from "react";
-import { graphql } from "gatsby";
-import styled from "styled-components";
-import { GatsbyImage } from "gatsby-plugin-image";
-import { Container } from "react-bootstrap";
-import Layout from "../templates/Layout";
-import Seo from "../components/Seo";
-import ShareButtons from "../components/ShareButtons";
-import { defineCustomElements as deckDeckGoHighlightElement } from "@deckdeckgo/highlight-code/dist/loader";
-import MyGallery from "../components/MyGallery";
-deckDeckGoHighlightElement();
+import React from "react"
+import { graphql } from "gatsby"
+import styled from "styled-components"
+import { GatsbyImage } from "gatsby-plugin-image"
+import { Container } from "react-bootstrap"
+import Layout from "../templates/Layout"
+import Seo from "../components/Seo"
+import ShareButtons from "../components/ShareButtons"
+import { defineCustomElements as deckDeckGoHighlightElement } from "@deckdeckgo/highlight-code/dist/loader"
+import MyGallery from "../components/MyGallery"
+deckDeckGoHighlightElement()
 
 //markup
 export default function BlogPost({ data }) {
-  const post = data.markdownRemark;
+  const post = data.markdownRemark
   const pageUrl =
     `${data.site.siteMetadata.siteUrl}${post.fields.slug}`.replace(
       /([^:]\/)\/+/g,
-      "$1"
-    );
+      "$1",
+    )
 
-    return (
+  return (
     <Layout>
       <Seo
         title={post.frontmatter.title}
@@ -31,7 +31,7 @@ export default function BlogPost({ data }) {
         url={pageUrl}
         image={`${data.site.siteMetadata.siteUrl}${post.frontmatter.img.childImageSharp.gatsbyImageData.images.fallback.src}`.replace(
           /([^:]\/)\/+/g,
-          "$1"
+          "$1",
         )}
       />
       <Wrapper>
@@ -48,16 +48,20 @@ export default function BlogPost({ data }) {
                 <div className="text-center">
                   <div className="bg-light mb-3 p-3 text-muted d-inline-block">
                     Tag:&nbsp;
-                    {post.frontmatter.tags.join(", ")} | Licenza:{" "}
-                    {post.frontmatter.licenza} | Livello:{" "}
-                    {post.frontmatter.livello}
+                    {post.frontmatter.tags.join(", ")}
+                    {post.frontmatter.licenza && (
+                      <> | Licenza: {post.frontmatter.licenza}</>
+                    )}
+                    {post.frontmatter.livello && (
+                      <> | Livello: {post.frontmatter.livello}</>
+                    )}
                   </div>
                 </div>
               )}
 
               {post.frontmatter.date && (
                 <p className="text-center text-secondary">
-                  Articolo pubblicato il {post.frontmatter.date}
+                  Pubblicato il {post.frontmatter.date}
                 </p>
               )}
 
@@ -87,18 +91,26 @@ export default function BlogPost({ data }) {
             <div className="post-content">
               <div dangerouslySetInnerHTML={{ __html: post.html }} />
             </div>
-            <MyGallery images={data.galley_items} page={data.markdownRemark.fields.slug.split('/').filter(e => e.trim() !== '').at(-1)}/>
+            <MyGallery
+              images={data.galley_items}
+              page={data.markdownRemark.fields.slug
+                .split("/")
+                .filter(e => e.trim() !== "")
+                .at(-1)}
+            />
           </Container>
         </div>
       </Wrapper>
     </Layout>
-  );
+  )
 }
 
-export const Head = (props) => {
-   return props.location.pathname.indexOf("/blog/") > -1 ?
-    <script src="https://hypothes.is/embed.js" async></script> :
+export const Head = props => {
+  return props.location.pathname.indexOf("/blog/") > -1 ? (
+    <script src="https://hypothes.is/embed.js" async></script>
+  ) : (
     <></>
+  )
 }
 
 //styles
@@ -137,7 +149,7 @@ const Wrapper = styled.section`
     font-size: 1rem;
     text-align: center;
   }
-`;
+`
 
 //graphql
 export const query = graphql`
@@ -194,4 +206,4 @@ export const query = graphql`
       }
     }
   }
-`;
+`
