@@ -49,7 +49,7 @@ Si uniranno alla discussione:
 
 Studenti e colleghi, in presenza e collegati online sono invitati a partecipare attivamente alla discussione.
 
-> L'evento è organizato dal [LAD: LAboratorio di Archeologia Digitale alla Sapienza](../../), in collaborazione con la [Missione Archeologica della Sapienza a Çuka e Ajtoit (Albania)](../../ricerca/missione-archeologica-sapienza-a-cuka-e-ajtoit-albania/) e nell’ambito del progetto [PRIN 2022 “FortNet. Fortification and population network in coastal Chaonia, Northern Epirus (Albania) between Iron Age and the Medieval period: a longue durée approach to the study of settlements, economic and defensive systems”](../../ricerca/fortnet-project-prin-2022/)
+> L'evento è organizato dal [LAD: Laboratorio di Archeologia Digitale alla Sapienza](../../), in collaborazione con la [Missione Archeologica della Sapienza a Çuka e Ajtoit (Albania)](../../ricerca/missione-archeologica-sapienza-a-cuka-e-ajtoit-albania/) e nell’ambito del progetto [PRIN 2022 “FortNet. Fortification and population network in coastal Chaonia, Northern Epirus (Albania) between Iron Age and the Medieval period: a longue durée approach to the study of settlements, economic and defensive systems”](../../ricerca/fortnet-project-prin-2022/)
 
 ---
 
