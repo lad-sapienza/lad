@@ -3,6 +3,12 @@ title: "Partecipazione alla conferenza “Signs, Texts, Data Research Routes thr
 img: ./notae-final-conference.jpg
 date: 2024-06-01
 sommario: "Il responsabile del LAD Julian Bogdani parteciperà alla conferenza “Signs, Texts, Data Research Routes through the Documentary Written Culture in Late Antiquity and Early Middle Ages”"
+tags:
+  - Convegno
+  - Cultura Scritta
+  - Tardoantico
+  - Alto Medioevo
+  - Ricerca
 ---
 
 

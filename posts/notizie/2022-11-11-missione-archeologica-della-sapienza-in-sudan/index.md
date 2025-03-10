@@ -3,6 +3,12 @@ title: "Partecipazione alla campagna 2022 della Missione Archeologica della Sapi
 img: ./hugair-gubli.jpg
 date: 2022-11-10
 sommario: "Il LAD partecipa alle attività della campagna 2022 della Missione Archeologica della Sapienza in Sudan, di prof. Paola Buzi"
+tags:
+  - Missione Archeologica
+  - Sudan
+  - Scavi
+  - Egittologia
+  - Ricerca
 ---
 
 Tra l'**11 e il 27 novembre 2022** i membri del LAD Julian Bogdani e Paolo Rosati parteciperanno alle ativita di scavi e ricerche archeologiche persso il tempio di Hugair Gubli, all'altezza della IV cataratta del Nilo in Sudan.

@@ -3,6 +3,12 @@ title: "Landscape Archaeology: a discussion between the new paradigms of methodo
 img: ./landscape-archaeology.png
 date: 2022-10-11
 sommario: "Convegno: “Landscape Archaeology: a discussion between the new paradigms of methodology”"
+tags:
+  - Convegno
+  - Archeologia del Paesaggio
+  - Metodologia
+  - Ricerca
+  - Sapienza
 ---
 
 

@@ -3,6 +3,12 @@ title: "Partecipazione al workshop internazionale “Current Research on Illyria
 img: ./current-research-epirus-illyria.jpg
 date: 2024-04-11
 sommario: "Il diretore Julian Bogdani parteciperà ai lavoro del workshop internazionale “Current Research on Illyria and Epirus. 4th century BC – 1st century AD” organizzato dall'Università di Treviri (Germania), 11-13 aprile 2024"
+tags:
+  - Workshop
+  - Archeologia
+  - Epirus
+  - Illyria
+  - Ricerca
 ---
 
 

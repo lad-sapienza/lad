@@ -5,6 +5,12 @@ date: 2025-03-04
 sommario: "Campagna 2025 della Missione Archeologica della Sapienza in Albania"
 inhome: true
 pinned: true
+tags:
+  - Missione Archeologica
+  - Scavi
+  - Albania
+  - Ricognizione Archeologica
+  - Documentazione
 ---
 
 

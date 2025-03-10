@@ -53,4 +53,4 @@ Studenti e colleghi, in presenza e collegati online sono invitati a partecipare 
 
 ---
 
-- [Scarica la locandina in formato JPG](./workshop-lap-full.jpg)
+- [Scarica la locandina in formato PDF](./workshop-lap.pdf)

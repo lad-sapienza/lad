@@ -3,6 +3,12 @@ title: "Digital Archaeology Bern: advancing open research into the next decade"
 img: ./dab23.png
 date: 2023-02-01
 sommario: "Partecipazione di Julian Bogdani al colloquio internazionale “Digital Archaeology Bern: advancing open research into the next decade”"
+tags:
+  - Colloquio Internazionale
+  - Archeologia Digitale
+  - Open Research
+  - Università di Berna
+  - Ricerca
 ---
 
 

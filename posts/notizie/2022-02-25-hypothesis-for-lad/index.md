@@ -3,6 +3,12 @@ title: Attivata la possibilità di annotazione collaborativa per il blog del LAD
 img: ./hypothesis-for-lad.jpg
 date: 2022-02-25
 sommario: È da oggi possibile annotare in maniera collaborativa e aperta gli articoli del blog del LAD, grazie all'implementazione del Hypothesis client
+tags:
+  - Annotazioni
+  - Collaborazione
+  - Hypothesis
+  - Blog
+  - Strumenti Digitali
 ---
 
 È da oggi possibile annotare in maniera collaborativa e aperta gli articoli del [blog del LAD](/blog/), grazie all'implemetazione del [_client_ web di Hypothesis](https://github.com/hypothesis/client).

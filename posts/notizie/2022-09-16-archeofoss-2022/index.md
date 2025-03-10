@@ -3,6 +3,12 @@ title: "Convegno Internazionale ArcheoFOSS: 22-23 settembre 2022"
 img: ./archeofoss-2022.png
 date: 2022-09-16
 sommario: "Giovedì 22 e venerdì 23 settembre 2022, si svolgeranno i lavoro della sedicesima edizione del Convegno Internazionale ArcheoFOSS: Open software, hardware, processes, data and formats in the archaeological research."
+tags:
+  - Convegno
+  - ArcheoFOSS
+  - Open Source
+  - Archeologia Digitale
+  - Ricerca
 ---
 
 

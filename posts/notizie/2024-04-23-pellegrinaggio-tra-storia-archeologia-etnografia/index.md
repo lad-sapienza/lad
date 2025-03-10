@@ -3,6 +3,12 @@ title: "Partecipazione al workshop “Il pellegrinaggio tra Storia, Archeologia 
 img: ./pellegrinaggio-tra-storia-archeologia-etnografia.jpg
 date: 2024-04-23
 sommario: "Erasmo di Fonso parteciperà al workshop “Il pellegrinaggio tra Storia, Archeologia ed Etnografia – I Santuari della Santissima Trinità di Vallepietra (Roma) e di San Michele al Monte Tancia (Rieti)”"
+tags:
+  - Workshop
+  - Pellegrinaggio
+  - Storia
+  - Archeologia
+  - Etnografia
 ---
 
 

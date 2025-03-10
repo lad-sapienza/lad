@@ -3,6 +3,12 @@ title: "Partecipazione dei membri della Missione Archeologica della Sapienza a �
 img: ./eaa-rome-2024.jpg
 date: 2024-08-21
 sommario: "Il direttore della Missione Archeologica della italo-albanese (Sapienza - Istituto Archeologico Albanese)Julian Bogdani parteciperà alla conferenza “Actualité de la recherche archéologique en Albanie” organizzata da E. Nallbani, F. Quantin e S. Shpuza"
+tags:
+  - Convegno
+  - Archeologia
+  - Albania
+  - EAA
+  - Ricerca
 ---
 
 

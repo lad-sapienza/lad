@@ -3,6 +3,12 @@ title: "Digital and Urban Archaeology: dall’Archeologia Urbana all’Archeolog
 img: ./UrbanArchaeology2023.jpg
 date: 2023-05-25
 sommario: "Il 3 maggio 2023, nell’ambito del corso di ‘Archeologia del Paesaggio’ della Scuola di Specializzazione in Beni Archeologici 2022-2023 dell’Università di Bologna verranno presentate le attività del LAD: Laboratorio di Archeologia Digitale alla Sapienza"
+tags:
+  - Archeologia Urbana
+  - Archeologia Digitale
+  - Laboratorio Didattico
+  - Ricerca
+  - Università di Bologna
 ---
 
 

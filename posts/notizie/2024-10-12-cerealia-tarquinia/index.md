@@ -3,6 +3,12 @@ title: "Partecipazione all’incontro ‘Connessioni Culturali tra Italia ed Alb
 img: ./2024-10-12-cerealia-tarquinia.jpg
 date: 2024-10-12
 sommario: "Il direttore della Missione Archeologica Italo-Albanese (Sapienza - Istituto Archeologico Albanese) Julian Bogdani parteciperà all'incontro ‘Partecipazione all’incontro Connessioni Culturali tra Italia ed Albania’"
+tags:
+  - Connessioni Culturali
+  - Italia
+  - Albania
+  - Festival
+  - Archeologia
 ---
 
 

@@ -4,6 +4,12 @@ img: ./apollonia-d-illira.jpg
 date: 2025-01-23
 sommario: "Nell’àmbito della sua offerta didattica, il LAD organizza un laboratorio didattico sull’uso del Laser Aided Profiler (LAP) per la documentazione dei profili ceramici"
 inhome: true
+tags:
+  - Seminario
+  - Archeologia Classica
+  - Apollonia d'Illiria
+  - Missione Archeologica
+  - Albania
 ---
 
 La [Missione Archeologica della Sapienza in Albania](../../ricerca/missione-archeologica-sapienza-a-cuka-e-ajtoit-albania/), nell'ambito Seminari di Archeologia Classica della [Scuola di Dottorato in Archeologia della Sapienza Università di Roma](https://phd.uniroma1.it/web/ARCHEOLOGIA_nD3482_IT.aspx), è lieta di organizzare un incontro con **Fraçois Quantin** dal titolo
