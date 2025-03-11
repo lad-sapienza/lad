@@ -38,7 +38,7 @@ const Index = ({ data }) => {
                 
                 {
                   new Date().valueOf() < new Date('2024-12-31').valueOf() && <section>
-                    <img src="images/seasons-greeeting-2024.png" className="img-fluid" />
+                    <img alt="Season greetings" src="images/seasons-greeeting-2024.png" className="img-fluid" />
                     <p className="text-center text-primary my-3">Il LAD augura a tutti buone feste di fine anno!</p>
                   </section>
                 }
