@@ -75,9 +75,10 @@ In questi anni i membri della missione hanno avviato un processo importatente di
 
 ### Pubblicazioni
 -	Bogdani, Julian. 2024. “Chaonia in Epirus. A fresh assessment in light of new archaeological data” in *Redefining Ancient Epirus* a cura di Milena Melfi e Maria Stamatopoulou, 37-61. Borders, Boundaries, Landscapes, 1. Turnhout: Brepols Publishers.
-- Bogdani, Julian. 2024. “Documenting a hilltop settlement: methodologies and preliminary results of the joint Albano-Italian project at Çuka e Ajtoit (Albania). ”GROMA: Documenting Archaeology 8 (2023): 18–36. https://doi.org/10.32028/Groma-Issue-8-2023-2832.
+- Bogdani, Julian. 2024. “Documenting a hilltop settlement: methodologies and preliminary results of the joint Albano-Italian project at Çuka e Ajtoit (Albania). ”GROMA: Documenting Archaeology 8 (2023): 18–36. [https://doi.org/10.32028/Groma-Issue-8-2023-2832](https://doi.org/10.32028/Groma-Issue-8-2023-2832).
 -	J. Bogdani. 2024. “Troia in Epiro: miti, archeologie, storie e ideologie”. In *Il viaggio di Enea* a cura di Alfonsina Russo e Roberta Alteri, 193-211. Foro Romano - Palatino. Scavi e ricerche II/2024. Roma: «L’Erma» di Bretschneider.
 -	Bogdani, Julian e Nadia Aleotti. 2024. “Le necropoli di Çuka e Ajtoit: vecchie e nuove ricerche a confronto”. *Atlante Tematico di Topografia Antica*, 33: 139-160.
+- Bogdani, Julian, e Domizia D’Erasmo. 2024. “Old Data, Old Methodology and New Research. A Case Study of Legacy Data Integration from the Cestrine Region, Epirus”. _Archeologia e Calcolatori_ 35 (2): 323–32. [https://doi.org/10.19282/ac.35.2.2024.34](https://doi.org/10.19282/ac.35.2.2024.34).
 -	Bogdani, Julian. 2023 “Documentare l'invisibile. Il progetto Çuka e Ajtoit: rilievo e documentazione di un sito d'altura”. *Archeologia Aerea* XVI 2022: 89-101.
 -	Bogdani, Julian. 2022. “ΚΕΣΤΡΙΑ ΤHΣ ΧΑΟΝIΑΣ: appunti sulla geografia e storia di una regione di frontiera”. *Hesperìa. Studi sulla Grecità d’Occidente* 40: 87-104.
 -	Bogdani, Julian e Albana Meta. 2022. “Kërkime të reja shqiptaro-italiane në Çukën e Ajtoit”. *Candavia*, 9: 141-159
