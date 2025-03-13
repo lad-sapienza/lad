@@ -29,7 +29,8 @@ The workshop aims at offering a discussion table to share new excavation and res
 - Web: [lad.saras.uniroma1.it/ricerca/living-in-the-town-living-in-the-countryside](https://lad.saras.uniroma1.it/ricerca/living-in-the-town-living-in-the-countryside/)
 
 The workshop is organised by:
-- the [Joint Archaeological Project of Sapienza University of Rome and Albanian Archaeological Institute of Tirana in Çuka e Ajtoit (Albania)](https://lad.saras.uniroma1.it/ricerca/missione-archeologica-sapienza-a-cuka-e-ajtoit-albania/), in collaboration with 
+- the [Joint Archaeological Project of Sapienza University of Rome and Albanian Archaeological Institute of Tirana in Çuka e Ajtoit (Albania)](https://lad.saras.uniroma1.it/ricerca/missione-archeologica-sapienza-a-cuka-e-ajtoit-albania/),
+- [Fortnet: Fortification and population network in coastal Chaonia, Northern Epirus (Albania) between Iron Age and the Medieval period: a longue durée approach to the study of settlements, economic and defensive systems](../fortnet-project-prin-2022/) Progetto PRIN 2022, and in collaboration with
 - the [PhD School of Archaeology of Sapienza University of Rome](https://phd.uniroma1.it/web/ARCHEOLOGIA_nD3482_IT.aspx).
 
 Download programme in PDF version:
