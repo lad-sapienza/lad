@@ -3,7 +3,6 @@ title: "Guida all'installazione di Geonode su server Linux"
 autore: Eleonora Iacopini
 licenza: CC BY 4.0 International
 livello: avanzato
-tags: [geodati, open source, gis, webGIS, tutorial]
 img: geonode.png
 date: 2022-10-28
 sommario: "Geonode è un software molto diffuso per la condivisione dei dati geografici, utilizzato da numerosi enti pubblici e privati per la gestione e la distribuzione di varie tipologie di risorse cartografiche e non solo."
