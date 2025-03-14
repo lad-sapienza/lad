@@ -27,7 +27,7 @@ Presenteranno:
 - Nadia **Aleotti**, Sapienza Università di Roma
 - Mario **Indelcato**, Università di Catania
 - Fabiana **Cerasa**, Università di Catania
-- Nicola **Laapacciana**, Sapienza Università di Roma
+- Nicola **Lapacciana**, Sapienza Università di Roma
 - Francesca **Di Maria**, Sapienza Università di Roma
 - Lorenzo **Cardarelli**, Sapienza Università di Roma
 
