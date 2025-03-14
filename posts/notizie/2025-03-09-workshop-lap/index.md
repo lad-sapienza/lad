@@ -16,7 +16,7 @@ In conclusione al [Laboratorio didattico sull’uso del Laser Aided Profiler (LA
 
 La tavola rotonda si svolgerà venerdì **14 marzo 2025** dalle 9:45 alle 13:00, in aula **Ernaesto Buonaiuti**, al terzo piano della Facoltà di Lettere e Filosofia, Sapienza Universitò di Roma.
 
-Sarà possibile partecipare all'evento anche online, attraverso il link: [https://meet.google.com/dag-xxdy-aw](https://meet.google.com/dag-xxdy-aw).
+Sarà possibile partecipare all'evento anche online, attraverso il link: [https://meet.google.com/dag-xxdy-awv](https://meet.google.com/dag-xxdy-awv).
 
 
 ## Programma
