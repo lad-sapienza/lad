@@ -1,5 +1,5 @@
 ---
-title: Laboratorio GIS e Banche dati relazionali per l'Archeologia
+title: "Laboratori didattici: GIS, Banche dati relazionali per l'Archeologia, Laser Aided Profiler, Intelligenza Artificiale"
 sort: 9
 img: ./lab.png
 ---
@@ -12,10 +12,16 @@ Nelle ultime edizioni, il laboratorio GIS è stato affiancato da incontri dedica
 
 
 ## Edizione 2024/2025
-L'edizione 2024-2025 dei Laboratori Didattici di Archeologia Digitale sono riservati agli iscritti dei corsi di **Dottorato di Archeologia** e della **Scuola di Specializzazione in Beni Archeologici** della Sapienza. Per il programma, informazioni e l'iscrizione si rimada a questo [questo collegamento](../../notizie/2024-11-24-laboratori-didattici-di-archeologia-digitale-2024-2025/).
+L'edizione 2024-2025 dei Laboratori Didattici su GIS e Banche Dati Archeologiche sono riservati agli iscritti dei corsi di **Dottorato di Archeologia** e della **Scuola di Specializzazione in Beni Archeologici** della Sapienza. Per il programma, informazioni e l'iscrizione si rimada a questo [questo collegamento](../../notizie/2024-11-24-laboratori-didattici-di-archeologia-digitale-2024-2025/).
+
+Per il laboratorio didattico sull’utilizzo del **Laser Aided Profiler (LAP)** per la documentazione dei profili ceramici, si rimanda alla [pagina dedicata](../../notizie/2025-01-17-laboratorio-didattico-lap/).
+
+Infine, per il laboratorio sull’**Applicazione di Computer Vision per la gestione di Legacy Data archeologici** si rimanda alla [pagina dedicata](../../notizie/2025-02-28-laboratorio-didattico-ia/).
 
 ## Edizioni precedenti
-- [Scarica la locandina dell'edizione 2024/2025](lab-gis-2024-2025.pdf)
+- [Scarica la locandina dell'edizione 2024/2025 del Laboratorio GIS e Banche dati](lab-gis-2024-2025.pdf)
+- [Scarica la locandina dell'edizione 2024/2025 del Laboratorio LAP](../../notizie/2025-01-17-laboratorio-didattico-lap/)
+- [Scarica la locandina dell'edizione 2024/2025 del Laboratorio su Computer Vision](../../notizie/2025-02-28-laboratorio-didattico-ia/LAD-AI-24-25.pdf)
 - [Scarica la locandina dell'edizione 2023/2024](lab-gis-2023-2024.pdf)
 - [Scarica la locandina dell'edizione 2022/2023](lab-gis-2022-2023.pdf)
 - [Scarica la locandina dell'edizione 2021/2022](lab-gis-2021-2022.pdf)
