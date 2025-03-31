@@ -90,6 +90,9 @@ In questi anni i membri della missione hanno avviato un processo importatente di
 
 
 ### Partecipazione a convegni con comunicazione
+- _Viti Arkeologjik 2024_ (Anno Archeologico 2024). Accademia delle Scienze della Repubblica Albanese
+  - Julian Bogdani, Albana Meta, “Projekti Çuka e Ajtoit: rezultatet e fushatës 2024.”  
+  [https://lad.saras.uniroma1.it/notizie/2025-03-25-conferenza-anno-archeologico-2024/](https://lad.saras.uniroma1.it/notizie/2025-03-25-conferenza-anno-archeologico-2024/)
 - _Butrinto Cento (1924-2024). Bilanci e prospettive_. Università di Bologna, 13-15 Novembre 2024.
   - Julian Bogdani, “Ricerche a Çuka e Ajtoit”
   - Nadia Aleotti, “What about Pre-Hellenistic pottery? Looking for the 5th and 4th cent. BCE material culture in Northern Epirus.”  
