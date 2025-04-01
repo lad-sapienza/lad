@@ -4,6 +4,11 @@ img: ./bogdani-sns.jpg
 date: 2025-04-01
 sommario: "Lunedì 7 aprile 2025 il condirettore della Missione Archeologica italo-albanese a Çuka e Ajtoit, Julian Bogdani, terrà un seminario presso la Scuola Normale Superiore di Pisa dal titolo: “Cestrine in Epiro: mito, storia e archeologia”"
 tags:
+  - Seminario
+  - Archeologia
+  - Epiro
+  - Albania
+  - Divulgazione
 inhome: true
 ---
 
