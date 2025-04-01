@@ -18,7 +18,7 @@ sommario: Il LAD partecipa alle attività del progetto PNRR, Partenariato Esteso
 
 ## Abstract
 
-Il **LAD: Laboratorio di Archeologia Digitale della Sapienza** partecipa dal 2024 alle attività del progettopartecipa alle attività del progetto PNRR, Partenariato Esteso 5 (“CHANGES”), Spoke 1 (“Historical landscapes, traditions and cultural identities”), WP 5 (“Archeologia del sacro”), linea tematica 3: “Panorami di diversità. Ebrei, Cristiani e spazio sacro tra Sabina e Valle dell'Aniene, dall'età tardoantica a quella contemporanea”.
+Il **LAD: Laboratorio di Archeologia Digitale della Sapienza** partecipa dal 2024 alle attività del progetto partecipa alle attività del progetto PNRR, Partenariato Esteso 5 (“CHANGES”), Spoke 1 (“Historical landscapes, traditions and cultural identities”), WP 5 (“Archeologia del sacro”), linea tematica 3: “Panorami di diversità. Ebrei, Cristiani e spazio sacro tra Sabina e Valle dell'Aniene, dall'età tardoantica a quella contemporanea”.
 
 Il progetto si pone come obiettivo quello di rintracciare i percorsi storici nel territorio  Laziale Sabino, seguendo una direttrice di congiunzione tra due rette prospettiche: diacronica e culturale. L’interesse ultimo è quello di isolare e valorizzare i paesaggi del territorio che hanno avuto e continuando ad avere un profondo significato religioso e storico per le comunità cristiane ed ebraiche. Oggetto della ricerca sarà la forchetta temporale che abbraccia la tarda antichità sino all’Età contemporanea. Questa linea tematica, così come la sua pubblicazione digitale, si intrecceranno quindi con l’altra linea tracciata dal progetto ‘gemello’ a cura del dipartimento di Scienze dell’Antichità.
 
