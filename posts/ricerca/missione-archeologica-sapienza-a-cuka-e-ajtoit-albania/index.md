@@ -90,6 +90,10 @@ In questi anni i membri della missione hanno avviato un processo importatente di
 
 
 ### Partecipazione a convegni con comunicazione
+
+-  Scuola Normale Superiore di Pisa. Pisa 7 aprile 2025. Sala Stemmi del Palazzo della Carovana, Scuola Normale Superiore, Piazza dei Cavalieri, 7. Seminarioorganizzato da Barbara E. Borg.
+    - Julian Bogdani, “Cestrine in Epiro: mito, storia e archeologia”.  
+    [https://lad.saras.uniroma1.it/ricerca/missione-archeologica-sapienza-a-cuka-e-ajtoit-albania/](https://lad.saras.uniroma1.it/ricerca/missione-archeologica-sapienza-a-cuka-e-ajtoit-albania/)
 - _Viti Arkeologjik 2024_ (Anno Archeologico 2024). Accademia delle Scienze della Repubblica Albanese
   - Julian Bogdani, Albana Meta, “Projekti Çuka e Ajtoit: rezultatet e fushatës 2024.”  
   [https://lad.saras.uniroma1.it/notizie/2025-03-25-conferenza-anno-archeologico-2024/](https://lad.saras.uniroma1.it/notizie/2025-03-25-conferenza-anno-archeologico-2024/)
