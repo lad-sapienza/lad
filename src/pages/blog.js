@@ -10,6 +10,7 @@ import Layout from "../templates/Layout";
 //others
 import { Row, Col, Container } from "react-bootstrap";
 import Seo from "../components/Seo";
+import Favicon from "../components/Favicon";
 
 const Blog = ({ data }) => {
   const allPosts = data.allMarkdownRemark.edges;
@@ -242,3 +243,5 @@ export const query = graphql`
 `;
 
 export default Blog;
+export const Head = () => <Favicon />
+

@@ -9,6 +9,8 @@ import { Container } from "react-bootstrap";
 import Seo from "../components/Seo";
 import ItemPreview from "../components/ItemPreview";
 
+import Favicon from "../components/Favicon";
+
 const Ricerca = ({ data }) => {
   const posts = data.ricerca.edges;
   return (
@@ -84,3 +86,5 @@ export const query = graphql`
 `;
 
 export default Ricerca;
+
+export const Head = () => <Favicon />

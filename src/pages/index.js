@@ -9,6 +9,7 @@ import BlogPreview from "../components/BlogPreview";
 //others
 import { Row, Col, Container } from "react-bootstrap";
 import Seo from "../components/Seo";
+import Favicon from "../components/Favicon";
 
 //markup
 const Index = ({ data }) => {
@@ -270,3 +271,7 @@ export const query = graphql`
 `;
 
 export default Index;
+
+
+export const Head = () => <Favicon />
+

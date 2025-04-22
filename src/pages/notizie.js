@@ -8,6 +8,8 @@ import Layout from "../templates/Layout";
 import Seo from "../components/Seo";
 import ItemPreview from "../components/ItemPreview";
 
+import Favicon from "../components/Favicon";
+
 const Blog = ({ data }) => {
   const allPosts = data.allMarkdownRemark.edges;
 
@@ -101,3 +103,6 @@ export const query = graphql`
 `;
 
 export default Blog;
+
+export const Head = () => <Favicon />
+

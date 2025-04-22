@@ -2,6 +2,7 @@
 import React from "react";
 import Layout from "../templates/Layout";
 import { Container} from "react-bootstrap";
+import Favicon from "../components/Favicon";
 
 const Errore404 = () => {
   return (
@@ -16,3 +17,6 @@ const Errore404 = () => {
 };
 
 export default Errore404;
+
+export const Head = () => <Favicon />
+

@@ -1,14 +1,14 @@
 //Gatsby
-import React from "react";
-import { withPrefix } from "gatsby";
+import React from "react"
+import { withPrefix } from "gatsby"
 
-import "./Layout.scss";
+import "./Layout.scss"
 
 //Components
-import Seo from "../components/Seo";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
-import "bootstrap/dist/css/bootstrap.min.css";
+import Seo from "../components/Seo"
+import Header from "../components/Header"
+import Footer from "../components/Footer"
+import "bootstrap/dist/css/bootstrap.min.css"
 
 //markup
 const Layout = ({ children }) => {
@@ -25,36 +25,7 @@ const Layout = ({ children }) => {
       {children}
       <Footer />
     </>
-  );
-};
-
-export default Layout;
-
-export const Head = () => {
-  return <>
-    <link rel="shortcut icon" href={withPrefix("/favicon/favicon.ico")} />
-    <link
-      rel="icon"
-      type="image/x-icon"
-      href={withPrefix(`/favicon/favicon.ico`)}
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href={withPrefix(`/favicon/favicon-16x16.png`)}
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href={withPrefix(`/favicon/favicon-32x32.png`)}
-    />
-    <link
-      rel="apple-touch-icon"
-      type="image/png"
-      sizes="32x32"
-      href={withPrefix(`/favicon/apple-touch-icon.png`)}
-    />
-  </>
+  )
 }
+
+export default Layout
