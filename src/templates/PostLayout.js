@@ -116,9 +116,7 @@ export const Head = props => {
 //styles
 const Wrapper = styled.section`
   p.author {
-    font-family: "Cormorant Garamond", serif !important;
-    font-weight: 900 !important;
-    font-size: 1.5rem;
+    font-family: "Lora", serif !important;
   }
   table,
   thead,
@@ -144,7 +142,7 @@ const Wrapper = styled.section`
     margin-bottom: 5rem;
   }
   .post-image p {
-    font-family: "Cormorant Garamond", serif !important;
+    font-family: "Lora", serif !important;
     font-weight: 300 !important;
     font-size: 1rem;
     text-align: center;

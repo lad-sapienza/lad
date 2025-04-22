@@ -168,7 +168,7 @@ const Team = () => {
       <Row>
         {teamData.map((m, mk) => {
           return (
-            <Col xs={6} md={4}  key={mk}>
+            <Col xs sm={6} md={6} lg={4} key={mk}>
               <Card>
                 <Card.Img
                   variant="top"
@@ -220,9 +220,9 @@ const Wrapper = styled.section`
     border: none;
   }
   .card-title {
-    font-family: "Cormorant Garamond", serif !important;
+    font-family: "Lora", serif !important;
     font-weight: 900;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     text-align: center;
   }
   .card-text.dipartimento {
@@ -233,7 +233,7 @@ const Wrapper = styled.section`
     text-align: center;
   }
   .card-text.position {
-    font-family: "Cormorant Garamond", serif !important;
+    font-family: "Lora", serif !important;
     font-weight: 800;
     font-size: 1rem !important;
     text-align: center;

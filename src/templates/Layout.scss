@@ -14,8 +14,7 @@ h3,
 h4,
 h5,
 h6{
-    font-family: "Cormorant Garamond", serif !important;
-    font-weight: 900 !important;
+    font-family: "Lora", serif !important;
     a{
         color: rgb(33, 37, 41) !important;
         &:hover{
@@ -25,16 +24,13 @@ h6{
 }
 
 h1{
-    font-size: 2.5rem !important;
     margin-bottom: 3rem !important;
     @media (min-width: 576px) {
-        font-size: 3.5rem !important;
         margin-bottom: 3rem !important;
     }
     
 }
 h2{
-    font-size: 2.5rem !important;
     font-weight: 200 !important;
 }
 

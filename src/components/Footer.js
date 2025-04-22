@@ -2,14 +2,14 @@
 import React from "react";
 import styled from "styled-components";
 import { Container, Row, Col } from "react-bootstrap";
-import LAD from "../../static/logos/lad-blue.png";
+import LAD from "../../static/logos/lad.svg";
 
 const Footer = () => {
   return (
     <Wrapper>
       <footer className="mt-5 border-top">
-        <Container className="pt-5 my-5">
-          <Row className="text-center">
+        <Container className="pt-5 mt-5">
+          <Row className="text-center py-5">
             <Col md={3} className="mb-3">
               <img
                 src={LAD}
@@ -27,10 +27,9 @@ const Footer = () => {
               <h5>
                 <a
                   href="https://saras.uniroma1.it/"
-                  title="Dipartimento SARAS. Sapienza Università di Roma"
-                  className="green fs-4"
+                  title="Dipartimento SARAS Sapienza Università di Roma"
                 >
-                  Dipartimento di Storia Antropologia Religioni Arte Spettacolo.
+                  Dipartimento di Storia Antropologia Religioni Arte Spettacolo
                   <br /> Sapienza Università di Roma
                 </a>
               </h5>
@@ -56,12 +55,13 @@ const Footer = () => {
   );
 };
 const Wrapper = styled.section`
+  background-color: #0d6efd;
+  color: #fff;
   a {
     text-decoration: none !important;
-    color: currentColor;
+    color: #fff !important;
     &:hover {
-      text-decoration: none !important;
-      color: #0d6efd;
+      color: #fff !important;
     }
   }
   img {
