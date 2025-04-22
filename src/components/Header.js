@@ -44,7 +44,7 @@ const Header = () => {
                   width="16"
                   height="16"
                   fill="currentColor"
-                  class="bi bi-house"
+                  className="bi bi-house"
                   viewBox="0 0 16 16"
                 >
                   <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z" />
@@ -57,7 +57,7 @@ const Header = () => {
                   width="16"
                   height="16"
                   fill="currentColor"
-                  class="bi bi-file-earmark-person"
+                  className="bi bi-file-earmark-person"
                   viewBox="0 0 16 16"
                 >
                   <path d="M11 8a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
@@ -71,7 +71,7 @@ const Header = () => {
                   width="16"
                   height="16"
                   fill="currentColor"
-                  class="bi bi-newspaper"
+                  className="bi bi-newspaper"
                   viewBox="0 0 16 16"
                 >
                   <path d="M0 2.5A1.5 1.5 0 0 1 1.5 1h11A1.5 1.5 0 0 1 14 2.5v10.528c0 .3-.05.654-.238.972h.738a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 1 1 0v9a1.5 1.5 0 0 1-1.5 1.5H1.497A1.497 1.497 0 0 1 0 13.5zM12 14c.37 0 .654-.211.853-.441.092-.106.147-.279.147-.531V2.5a.5.5 0 0 0-.5-.5h-11a.5.5 0 0 0-.5.5v11c0 .278.223.5.497.5z" />
@@ -85,7 +85,7 @@ const Header = () => {
                   width="16"
                   height="16"
                   fill="currentColor"
-                  class="bi bi-body-text"
+                  className="bi bi-body-text"
                   viewBox="0 0 16 16"
                 >
                   <path
@@ -101,7 +101,7 @@ const Header = () => {
                   width="16"
                   height="16"
                   fill="currentColor"
-                  class="bi bi-eyedropper"
+                  className="bi bi-eyedropper"
                   viewBox="0 0 16 16"
                 >
                   <path d="M13.354.646a1.207 1.207 0 0 0-1.708 0L8.5 3.793l-.646-.647a.5.5 0 1 0-.708.708L8.293 5l-7.147 7.146A.5.5 0 0 0 1 12.5v1.793l-.854.853a.5.5 0 1 0 .708.707L1.707 15H3.5a.5.5 0 0 0 .354-.146L11 7.707l1.146 1.147a.5.5 0 0 0 .708-.708l-.647-.646 3.147-3.146a1.207 1.207 0 0 0 0-1.708zM2 12.707l7-7L10.293 7l-7 7H2z" />
@@ -114,7 +114,7 @@ const Header = () => {
                   width="16"
                   height="16"
                   fill="currentColor"
-                  class="bi bi-easel2"
+                  className="bi bi-easel2"
                   viewBox="0 0 16 16"
                 >
                   <path
