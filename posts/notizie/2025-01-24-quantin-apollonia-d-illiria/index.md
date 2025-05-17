@@ -3,7 +3,6 @@ title: "Seminario di François Quantin sulle ricerche albano-francesi ad Apollon
 img: ./apollonia-d-illira.jpg
 date: 2025-01-23
 sommario: "Nell’àmbito della sua offerta didattica, il LAD organizza un laboratorio didattico sull’uso del Laser Aided Profiler (LAP) per la documentazione dei profili ceramici"
-inhome: true
 tags:
   - Seminario
   - Archeologia Classica
