@@ -18,63 +18,58 @@ La partecipazione si svolge nell’àmbito delle attività della [Missione Arche
 
 ---
 
-### Programma provvisorio
+### Programma
 
-**Journée 1. Forteresses et forts en Méditerranée**
+**Mardi 27 mai Forteresses et forts en Méditerranée**
 
 **09:00 - 09:30** Accueil des participants
 
-09:30 **Claire Balandier, Mathilde Gelin**: _Introductioon, ouverture du colloque_.
+09:30 **Claire Balandier, Mathilde Gelin**: _Introduction_.
 
-**L’extrême occident méditerranéen: Fortifications de Baléares et Bétique**  
-- 09:45 **Ricardo González Villaescusa** (Arscan - GAMMA): _Can Blai: un fort romain tardif (Formentera, Baléares)_.
+**1. L’extrême occident méditerranéen: Forti ications de Baléares et Bétique**  
+- 09:45 **Ricardo González Villaescusa**: _Can Blai: un fort romain tardif (Formentera, Baléares)_.
 - 10:10 **Josè Luis Dominguez-Jimenez**: _New Late Imperial fortifications in the Conventus Cordubensis (Baetica, Hispania)_
 - 10:35-10:45 Discussion
 - 10:45-11:00 Pause
 
-**De la défense des cités grecques et de la Macédoine**  
-- 11:00 **Marie-Pierre Dausse** (Univ. Paris VIII – UMR 7041 Arscan): _Préciser une typologie des fortifications et définir des réseaux: une démarche possible en Molossie?_
-- 11:25 **Julian Bogdani** (U. Roma), **Veronica Castigniani** (Uni. Catania) _The fortified landscape of the ethnos: the case study of Hellenistic Cestrine, Epirus_.
-- 11:50 **Kevin Ouellet** et **Laure-Sarah Ethier-Boutet** (Univ. Montréal): _Argilos après Philippe II: réorganisa on politique et défensive du territoire_.
-- 12:15 **Nicolas Kyriakidis** (Univ. Paris 8 – UMR 7041 Arscan): _Le cas d’Amphissa, forteresse de Phocide_ (à confirmer).
-- Déjeuner: 12:45-14:30
-- 14:55 **Matthieu Guintrand** (Mosaïques Archéologie - Université d’Avignon): _Cléomène III et les forts de Laconie_.
-- 15:20 **N. Coutsinas** (Université Cöte d’Azur): _Les forts et tours comme marqueurs poli ques du territoire de la cité hellénis que d’Hiérapytna (Crète orientale)_
-- 15:45-16:00 Discussion
+**2. Défense des cités grecques et de la Macédoine**  
+- 11:00 **Marie-Pierre Dausse**: _Préciser une typologie des forti ications et dé inir des réseaux: une démarche possible en Molossie?_
+- 11:25 **Julian Bogdani**, **Veronica Castigniani**: _The forti ied landscape of the ethnos: the case study of Hellenistic Cestrine, Epirus._.
+- 11:50 **Kevin Ouellet** et **Laure-Sarah Ethier-Boutet**: _Argilos après Philippe II: réorganisa on politique et défensive du territoire_.
+- 12:45-14:30 Pause éjeuner
+- 14:00 **Matthieu Guintrand**: _Cléomène III et les forts de Laconie_.
+- 15:25 **Nadia Coutsinas**: _Les forts et tours comme marqueurs poli ques du territoire de la cité hellénis que d’Hiérapytna (Crète orientale)_
+- 14:50 Discussion
 
-**Asie Mineure et Anatolie méridionale**
+**3. Forteresses d’Asie Mineure et d’Anatolie méridionale**
+- 15:05 **Claire Barat** et **Jean-François Pichonneau**: _Porsuk – Zeyve Höyük (Cappadoce méridionale, Turquie), une forteresse stratégique sur la route des Portes de Cilicie durant l’Antiquité_.
+- 15:30 **Isabelle Pimouguet-Pedarros**: _Fortifiications et réseaux défensifs en Asie Mineure: quelques éléments de réflexion à partir des forts de Myra_.
+- 15:55 Discussion
 
-- 16:00 **Claire Barat** (Université Polytechnique Hauts-de-France, Valenciennes, Laboratoire de Recherche Sociétés & Humanités (LARSH), département CRISS) et Jean-François Pichonneau (Service Régional de l’Archéologie, Ministère de la Culture, DRAC Nouvelle Aquitaine et LARSH: _Porsuk – Zeyve Höyük (Cappadoce méridionale, Turquie), une forteresse stratégique sur la route des Portes de Cilicie durant l’Antiquité_
-- 16: 25 **Isabelle Pimouguet-Pédarros** (Univ. de Nantes): _Fortifications et réseaux défensifs en Asie Mineure: quelques éléments de réflexion à partir des forts de Myra_.
-- 16:50: Discussion
+**Mercredi 28 mai. Forteresses et forts en Orient**
 
-**Journée 2. Forteresses et forts en Orient**
+**Forts et forteresses de Chypre et du Levant**
+- 09:30 **Claire Balandier**: _L’évolution du réseau perse de forteresses en Transeuphratène_.
+- 09:55 **Eustathios Raptou**: _Un grand bâtiment forti ié à caractère résidentiel et cultuel à Yeroskipou (Chypre): une forteresse hellénistique?_
+- 10:20 Pause
+- 10:45 **Jeanine Abdul Massih**: _Considérations sur le plan d'occupation du camp romain de Cyrrhus, analyses et comparaisons_.
+- 11:10 **Wissam Khalil**: _Le fort de Qasr Swayjani dans le Mont Liban: cadre géographique et datation_ (à distance).
+- 11:35 **Michael Fradley**: _Roman camps in South-East Jordan_ (à distance).
+- 12:00 Discussion
+- 12:30 Pause déjeuner
 
-**Chypre et le Levant**
-- 09 30: **Claire Balandier** (Université d’Avignon – Arscan/OrAM): _Des fortins dans l’organisation défensive de Chypre sous les Perses et les Diadoques?_
-- 09: 55 **Eustathios Raptou** (Département des Antiquités de Chypre): _Un grand bâtiment fortifié à caractère résidentiel et cultuel à Yeroskipou (Chypre): une forteresse hellénistique?_
-- 10:20: **Claire Balandier**: _L’évolution du réseau perse de forteresses en Transeuphratène_.
-- 10:45 Pause café
-- 11: 15 **Wissam Khalil** (Université libanaise): _Le fort de Qasr Swayjani dans le Mont Liban: cadre géographique et datation_.
-- 11: 40 **Jeanine Abdul Massih** (Université libanaise): _Considéra ons sur le plan d'occupation du camp romain de Cyrrhus, analyses et comparaisons_.
-- 12: 05 **Michael Fradley** (Univ. Oxford): _Roman camps in South-East Jordan_.
-- 12:30 Discussion
-- 12:30 Déjeuner
-
-**Mer Rouge, Golfe**
-
-- 14:00 **Marek A. Woźniak** (Institute of Mediterranean and Oriental Cultures; Polish Academy of Sciences): _Defense Strategy of Hellenistic Port Centers on the Red Sea Coast: The Case of Berenike Trogodytika_.
-- 14: 25 **Mathilde Gelin** (CNRS - Arscan - OrAM): _La forteresse de Faïlaka, au centre de l’occupation hellénistique d’Ikaros au Koweït_.
-- 14:50 **Solène Marion-de-Procé** (Arscan - OrAM): _Un camp militaire romain du 2e siècle ap. J.-C. au sud de la mer Rouge: le fort d’Al-Qusar (îles Farasan, Arabie Saoudite)_.
-- 15:15 Discussion
-- 15:30 Pause café
+**Forteresses et camp de Mer Rouge et du Golfe**
+- 14:00 **Marek A. Wozniak**: _Defense Strategy of Hellenistic Port Centers on the Red Sea Coast: The Case of Berenike Trogodytika_ (à distance).
+- 14:25 **Mathilde Gelin**: _La forteresse de Faïlaka, au centre de l’occupation hellénistique d’Ikaros au Koweït_.
+- 14:50 **Solène Marion-De-Proce**: _Un fort militaire romain du IIe siècle (al-Qusâr): organisation du territoire des îles Farasân (Arabie Saoudite) au sud de la mer Rouge_.
+- 15:15 Pause
 
 **Iran et Asie Centrale**
 - 16:00 **Parsa Ghasemi**: _Sasanian Empire Defensive Strategies for Safeguarding Settlements and Route Networks in their Birthplace, the Pars Region, Iran_.
-- 16:25 **Pierre Leriche** (Arscan –) _Des villes et des forts: un réseau de for ns séleucides en Bactriane_.
-- 16:50 **Mathilde Gelin** (CNRS - Arscan - OrAM): _Des sites gréco-bactriens dans la vallée de Danghara au Tadjikistan: quels moyens de défense?_
+- 16:25 **Pierre Leriche**: _Des villes et des forts: un réseau de fortins séleucides en Bactriane_.
+- 16:50 **Mathilde Gelin**: _Des sites gréco-bactriens dans la vallée de Danghara au Tadjikistan: quels moyens de défense?_
 - 17:15 Discussion
-- 17:30 **Claire Balandier et Mathilde Gelin**: _Conclusions_
+- 17:30 **Claire Balandier** et **Mathilde Gelin**: _Conclusions_.
 
 ---
 
