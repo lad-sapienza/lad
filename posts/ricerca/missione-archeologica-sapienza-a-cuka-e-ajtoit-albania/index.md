@@ -71,9 +71,22 @@ Per quanto riguarda gli aspetti urbanistici e architettonici, lo studio della ed
 
 ## Produzione scientifica
 
-In questi anni i membri della missione hanno avviato un processo importatente di produzione scientifica e disseminazione dei risultati della ricerca, attraverso varie pubblicazioni e partecipazioni a workshop e convegni. Di seguito si offre una rapida panoramica, in continui aggiornamento.
+In questi anni i membri della missione hanno avviato un processo importatente di produzione scientifica e disseminazione dei risultati della ricerca, attraverso varie [pubblicazioni](#pubblicazioni), [organizzazione](#organizazioni-di-convegni) e [partecipazione](#partecipazione-a-convegni-con-comunicazione) a workshop e convegni. Di seguito si offre una rapida panoramica, in continui aggiornamento.
 
 ### Pubblicazioni
+
+**In fase di pubblicazione**
+
+- Bogdani, Julian e Paolo Rosati. “La cd. “Basilica di Çiflik” (Albania meridionale): rilievo e analisi preliminare delle strutture della chiesa tardo-bizantina”. _Archeologia Medievale_ (in corso di revisione paritaria)
+- Bogdani, Julian. “Cestria: un abitato epirota davanti a Corcira. Nuove ricerche archeologiche a Çuka e Ajtoit”. _Fra storia e archeologia: Corcira e l’epeiros. Nuovi dati e prospettive di ricerca_ a cura di Maria Intrieri e Giuseppe Lepore. Diabaseis. Pisa: ETS (in corso di stampa)
+- Bogdani, Julian e Albana Meta. “Kestria: an Epirote centre. New archaeological research in Çuka e Ajtoit (Konispol, Albania)”. Iliria. (in corso di stampa)
+- Giorgi, Enrico, Julian Bogdani, Nadia Aleotti, Federica Carbotti e Giacomo Sigismondo. “FortNet Project: a longue durée approach to the study of settlement, economic and defensive systems in coastal Chaonia (Albania).” _Groma. Documenting Archaeology_ (in corso di stampa)
+- Bogdani, Julian, a cura di. “Vivere in città, vivere in campagna. Tipologie, modelli e trasformazioni dell'architettura residenziale nell'Epiro ellenistico e romano”. Firenze: All'Insegna del Giglio (in corso di stampa)
+- Napolitano, Salvatore e Julian Bogdani. “Ceramica medievale dagli scavi della cosiddetta basilica di Çiflik (Konispol, Albania): nota preliminare.” Archeologia Medievale (in corso di revisione paritaria).
+- Aleotti, Nadia e Julian Bogdani. “Hellenistic pottery from Çuka e Ajtoit (Konispoli, Albania): old and new excavations, old and new methods”. **_???_**
+
+---
+
 -	Bogdani, Julian. 2024. “Chaonia in Epirus. A fresh assessment in light of new archaeological data” in *Redefining Ancient Epirus* a cura di Milena Melfi e Maria Stamatopoulou, 37-61. Borders, Boundaries, Landscapes, 1. Turnhout: Brepols Publishers.
 - Bogdani, Julian. 2024. “Documenting a hilltop settlement: methodologies and preliminary results of the joint Albano-Italian project at Çuka e Ajtoit (Albania). ”GROMA: Documenting Archaeology 8 (2023): 18–36. [https://doi.org/10.32028/Groma-Issue-8-2023-2832](https://doi.org/10.32028/Groma-Issue-8-2023-2832).
 -	J. Bogdani. 2024. “Troia in Epiro: miti, archeologie, storie e ideologie”. In *Il viaggio di Enea* a cura di Alfonsina Russo e Roberta Alteri, 193-211. Foro Romano - Palatino. Scavi e ricerche II/2024. Roma: «L’Erma» di Bretschneider.
@@ -91,7 +104,10 @@ In questi anni i membri della missione hanno avviato un processo importatente di
 
 ### Partecipazione a convegni con comunicazione
 
--  Scuola Normale Superiore di Pisa. Pisa 7 aprile 2025. Sala Stemmi del Palazzo della Carovana, Scuola Normale Superiore, Piazza dei Cavalieri, 7. Seminarioorganizzato da Barbara E. Borg.
+- _Forteresses, forts et camps dans l’aménagement des territoires. De la Méditerranée aux marges des royaumes perse, hellénistiques e de l’Empire romain_ Université Paris X - Nanterre, Parigi, 27-28 maggio 2025
+  - Julian Bogdani e Veronica Castignani, “The fortified landscape of the ethnos: the case study of Hellenistic Cestrine, Epirus”
+  [https://lad.saras.uniroma1.it/notizie/2025-05-27_28-conference-fortifications-nanterre/](https://lad.saras.uniroma1.it/notizie/2025-05-27_28-conference-fortifications-nanterre/)
+-  Scuola Normale Superiore di Pisa. Pisa 7 aprile 2025. Sala Stemmi del Palazzo della Carovana, Scuola Normale Superiore, Piazza dei Cavalieri, 7. Seminario organizzato da Barbara E. Borg.
     - Julian Bogdani, “Cestrine in Epiro: mito, storia e archeologia”.  
     [https://lad.saras.uniroma1.it/ricerca/missione-archeologica-sapienza-a-cuka-e-ajtoit-albania/](https://lad.saras.uniroma1.it/ricerca/missione-archeologica-sapienza-a-cuka-e-ajtoit-albania/)
 - _Viti Arkeologjik 2024_ (Anno Archeologico 2024). Accademia delle Scienze della Repubblica Albanese
