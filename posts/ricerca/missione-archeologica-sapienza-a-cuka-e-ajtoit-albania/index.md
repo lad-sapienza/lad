@@ -77,30 +77,30 @@ In questi anni i membri della missione hanno avviato un processo importatente di
 
 **In fase di pubblicazione**
 
-- Aleotti, Nadia. “Corcira e la sua perea: archeologia del culto in età arcaica e classica (Fine VIII-IV secolo a.C.)”, Diabaseis. Pisa: ETS  (in corso di stampa).
-- Aleotti, Nadia. “Corcira e l’Epiro in età arcaico-classica: il contributo dell’archeologia dei culti”, in _Fra storia e archeologia: Corcira e l’epeiros. Nuovi dati e prospettive di ricerca_ a cura di Maria Intrieri e Giuseppe Lepore. Diabaseis. Pisa: ETS (in corso di stampa).
-- Aleotti, Nadia. “A palmette lekythos from Butrint”, in _Butrint 8. The Middle Byzantine Archaeology of Butrint, its Enclave, Saranda and Santa Quaranta_, edited by R. Hodges and N. Molla. Oxford and Philadelphia: Oxbow book (in corso di stampa).
-- Aleotti, Nadia e Julian Bogdani. “Hellenistic pottery from Çuka e Ajtoit (Konispoli, Albania): old and new excavations, old and new methods”, in _Proceedings of the 6th IARPotHP Conference, October 2023, 9th – 12th, Catania-Syracuse, Italy_ (in corso di stampa).
-- Aleotti, Aleotti e B.Risposi. “A colonial Artemis? Aspects of the cult of the goddess”, in _Syracuse and Corcyra, Proceedings of the International Conference “Corinth and Syracuse. Connections, Exchanges, Influences”, Siracusa, December 5-7, 2024_ (in corso di stampa).
-- Antonetti, Claudia e Nadia Aleotti. “Un graffito tardo arcaico da Butrinto.”, in _Fra storia e archeologia: Corcira e l’epeiros. Nuovi dati e prospettive di ricerca_ a cura di Maria Intrieri e Giuseppe Lepore. Diabaseis. Pisa: ETS (in corso di stampa).
-- Bogdani, Julian, a cura di. “Vivere in città, vivere in campagna. Tipologie, modelli e trasformazioni dell'architettura residenziale nell'Epiro ellenistico e romano”. Firenze: All'Insegna del Giglio (in corso di stampa).
-- Bogdani, Julian. “Cestria: un abitato epirota davanti a Corcira. Nuove ricerche archeologiche a Çuka e Ajtoit”. _Fra storia e archeologia: Corcira e l’epeiros. Nuovi dati e prospettive di ricerca_ a cura di Maria Intrieri e Giuseppe Lepore. Diabaseis. Pisa: ETS (in corso di stampa).
-- Bogdani, Julian e Albana Meta. “Kestria: an Epirote centre. New archaeological research in Çuka e Ajtoit (Konispol, Albania)”. Iliria. (in corso di stampa)
-- Bogdani, Julian e Paolo Rosati. “La cd. “Basilica di Çiflik” (Albania meridionale): rilievo e analisi preliminare delle strutture della chiesa tardo-bizantina”. _Archeologia Medievale_ (in corso di revisione paritaria)
-- Gamberini, Anna e Nadia Aleotti, “Food Habits and Ceramic Repertoire: preparing and cooking Food in Hellenistic Epirus”, in _Proceedings of the 5th IARPotHP Conference, June 2021, 22nd – 25th Seville, Spain_.
-- Giorgi, Enrico, Julian Bogdani, Nadia Aleotti, Federica Carbotti e Giacomo Sigismondo. “FortNet Project: a longue durée approach to the study of settlement, economic and defensive systems in coastal Chaonia (Albania).” _Groma. Documenting Archaeology_ (in corso di stampa)
-- Napolitano, Salvatore e Julian Bogdani. “Ceramica medievale dagli scavi della cosiddetta basilica di Çiflik (Konispol, Albania): nota preliminare.” Archeologia Medievale (in corso di revisione paritaria).
+- Aleotti, N. “Corcira e la sua perea: archeologia del culto in età arcaica e classica (Fine VIII-IV secolo a.C.)”, Diabaseis. Pisa: ETS  (in corso di stampa).
+- Aleotti, N. “Corcira e l’Epiro in età arcaico-classica: il contributo dell’archeologia dei culti”, in _Fra storia e archeologia: Corcira e l’epeiros. Nuovi dati e prospettive di ricerca_ a cura di Maria Intrieri e Giuseppe Lepore. Diabaseis. Pisa: ETS (in corso di stampa).
+- Aleotti, N. “A palmette lekythos from Butrint”, in _Butrint 8. The Middle Byzantine Archaeology of Butrint, its Enclave, Saranda and Santa Quaranta_, edited by R. Hodges and N. Molla. Oxford and Philadelphia: Oxbow book (in corso di stampa).
+- Aleotti, N. e J. Bogdani. “Hellenistic pottery from Çuka e Ajtoit (Konispoli, Albania): old and new excavations, old and new methods”, in _Proceedings of the 6th IARPotHP Conference, October 2023, 9th – 12th, Catania-Syracuse, Italy_ (in corso di stampa).
+- Aleotti, N. e B. Risposi. “A colonial Artemis? Aspects of the cult of the goddess”, in _Syracuse and Corcyra, Proceedings of the International Conference “Corinth and Syracuse. Connections, Exchanges, Influences”, Siracusa, December 5-7, 2024_ (in corso di stampa).
+- Antonetti, C. e N. Aleotti. “Un graffito tardo arcaico da Butrinto.”, in _Fra storia e archeologia: Corcira e l’epeiros. Nuovi dati e prospettive di ricerca_ a cura di Maria Intrieri e Giuseppe Lepore. Diabaseis. Pisa: ETS (in corso di stampa).
+- Bogdani, J. a cura di. “Vivere in città, vivere in campagna. Tipologie, modelli e trasformazioni dell'architettura residenziale nell'Epiro ellenistico e romano”. Firenze: All'Insegna del Giglio (in corso di stampa).
+- Bogdani, J. “Cestria: un abitato epirota davanti a Corcira. Nuove ricerche archeologiche a Çuka e Ajtoit”. _Fra storia e archeologia: Corcira e l’epeiros. Nuovi dati e prospettive di ricerca_ a cura di Maria Intrieri e Giuseppe Lepore. Diabaseis. Pisa: ETS (in corso di stampa).
+- Bogdani, J. e A. Meta. “Kestria: an Epirote centre. New archaeological research in Çuka e Ajtoit (Konispol, Albania)”. Iliria. (in corso di stampa)
+- Bogdani, J. e P. Rosati. “La cd. “Basilica di Çiflik” (Albania meridionale): rilievo e analisi preliminare delle strutture della chiesa tardo-bizantina”. _Archeologia Medievale_ (in corso di revisione paritaria)
+- Gamberini, A. e N. Aleotti, “Food Habits and Ceramic Repertoire: preparing and cooking Food in Hellenistic Epirus”, in _Proceedings of the 5th IARPotHP Conference, June 2021, 22nd – 25th Seville, Spain_.
+- Giorgi, E. e J. Bogdani, Nadia Aleotti, Federica Carbotti e Giacomo Sigismondo. “FortNet Project: a longue durée approach to the study of settlement, economic and defensive systems in coastal Chaonia (Albania).” _Groma. Documenting Archaeology_ (in corso di stampa).
+- Napolitano, S. e J. Bogdani. “Ceramica medievale dagli scavi della cosiddetta basilica di Çiflik (Konispol, Albania): nota preliminare.” _Archeologia Medievale_ (in corso di revisione paritaria).
 
 ---
 
--	Bogdani, Julian. 2024. “Chaonia in Epirus. A fresh assessment in light of new archaeological data” in *Redefining Ancient Epirus* a cura di Milena Melfi e Maria Stamatopoulou, 37-61. Borders, Boundaries, Landscapes, 1. Turnhout: Brepols Publishers.
-- Bogdani, Julian. 2024. “Documenting a hilltop settlement: methodologies and preliminary results of the joint Albano-Italian project at Çuka e Ajtoit (Albania). ”GROMA: Documenting Archaeology 8 (2023): 18–36. [https://doi.org/10.32028/Groma-Issue-8-2023-2832](https://doi.org/10.32028/Groma-Issue-8-2023-2832).
--	J. Bogdani. 2024. “Troia in Epiro: miti, archeologie, storie e ideologie”. In *Il viaggio di Enea* a cura di Alfonsina Russo e Roberta Alteri, 193-211. Foro Romano - Palatino. Scavi e ricerche II/2024. Roma: «L’Erma» di Bretschneider.
--	Bogdani, Julian e Nadia Aleotti. 2024. “Le necropoli di Çuka e Ajtoit: vecchie e nuove ricerche a confronto”. *Atlante Tematico di Topografia Antica*, 33: 139-160.
-- Bogdani, Julian, e Domizia D’Erasmo. 2024. “Old Data, Old Methodology and New Research. A Case Study of Legacy Data Integration from the Cestrine Region, Epirus”. _Archeologia e Calcolatori_ 35 (2): 323–32. [https://doi.org/10.19282/ac.35.2.2024.34](https://doi.org/10.19282/ac.35.2.2024.34).
--	Bogdani, Julian. 2023 “Documentare l'invisibile. Il progetto Çuka e Ajtoit: rilievo e documentazione di un sito d'altura”. *Archeologia Aerea* XVI 2022: 89-101.
--	Bogdani, Julian. 2022. “ΚΕΣΤΡΙΑ ΤHΣ ΧΑΟΝIΑΣ: appunti sulla geografia e storia di una regione di frontiera”. *Hesperìa. Studi sulla Grecità d’Occidente* 40: 87-104.
--	Bogdani, Julian e Albana Meta. 2022. “Kërkime të reja shqiptaro-italiane në Çukën e Ajtoit”. *Candavia*, 9: 141-159
+-	Bogdani, J. 2024. “Chaonia in Epirus. A fresh assessment in light of new archaeological data” in *Redefining Ancient Epirus* a cura di Milena Melfi e Maria Stamatopoulou, 37-61. Borders, Boundaries, Landscapes, 1. Turnhout: Brepols Publishers.
+- Bogdani, J. 2024. “Documenting a hilltop settlement: methodologies and preliminary results of the joint Albano-Italian project at Çuka e Ajtoit (Albania).” _GROMA: Documenting Archaeology_ 8 (2023): 18–36. [https://doi.org/10.32028/Groma-Issue-8-2023-2832](https://doi.org/10.32028/Groma-Issue-8-2023-2832).
+-	Bogdani, J. 2024. “Troia in Epiro: miti, archeologie, storie e ideologie”. In *Il viaggio di Enea* a cura di Alfonsina Russo e Roberta Alteri, 193-211. Foro Romano - Palatino. Scavi e ricerche II/2024. Roma: «L’Erma» di Bretschneider.
+-	Bogdani, J. e N. Aleotti. 2024. “Le necropoli di Çuka e Ajtoit: vecchie e nuove ricerche a confronto”. *Atlante Tematico di Topografia Antica*, 33: 139-160.
+- Bogdani, J. e D. D’Erasmo. 2024. “Old Data, Old Methodology and New Research. A Case Study of Legacy Data Integration from the Cestrine Region, Epirus”. _Archeologia e Calcolatori_ 35 (2): 323–32. [https://doi.org/10.19282/ac.35.2.2024.34](https://doi.org/10.19282/ac.35.2.2024.34).
+-	Bogdani, J. 2023 “Documentare l'invisibile. Il progetto Çuka e Ajtoit: rilievo e documentazione di un sito d'altura”. *Archeologia Aerea* XVI 2022: 89-101.
+-	Bogdani, J. 2022. “ΚΕΣΤΡΙΑ ΤHΣ ΧΑΟΝIΑΣ: appunti sulla geografia e storia di una regione di frontiera”. *Hesperìa. Studi sulla Grecità d’Occidente* 40: 87-104.
+-	Bogdani, J. e A. Meta. 2022. “Kërkime të reja shqiptaro-italiane në Çukën e Ajtoit”. *Candavia*, 9: 141-159
 
 ### Organizazioni di convegni
 - *Living in the Town, Living in the Countryside. Typologies, Models and Transformations of Residential Architecture in Hellenistic and Roman Epirus*. An international workshop 15 January 2023. Sapienza University of Rome [https://lad.saras.uniroma1.it/ricerca/living-in-the-town-living-in-the-countryside/](https://lad.saras.uniroma1.it/ricerca/living-in-the-town-living-in-the-countryside/).
