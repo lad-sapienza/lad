@@ -75,12 +75,12 @@ Questo plugin nasce quindi come una risposta concreta a esigenze operative risco
 
 ---
 
-![05-query-builder.jpg](06-query-builder.jpg)
+![05-query-builder.jpg](05-query-builder.jpg)
 *Interfaccia di filtro usando il sistema di Costruttire di interrogazioni di QGIS*
 
 ---
 
-![06-vista-della-repository-su-github.jpg](05-vista-della-repository-su-github.jpg)
+![06-vista-della-repository-su-github.jpg](06-vista-della-repository-su-github.jpg)
 *La homepage del repository GitHub da cui è possibile scaricare il plugin e consultare la documentazione.*
 
 
