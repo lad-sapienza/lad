@@ -3,7 +3,7 @@ title: "Git: controllo di versioni open source #1"
 autore: Julian Bogdani
 licenza: CC BY 4.0 International
 livello: avanzato
-tags: [riflessioni e appunti, open source, git, versionamento, tutorial, coding]
+tags: [Riflessioni e appunti, Open source, Git, Versionamento, Tutorial, Coding]
 img: ./git-logo.png
 date: 2022-04-26
 sommario: "Git è oggi il software più famoso e usato per il controllo delle versioni, usato nella stragrande maggioranaza dei progetti di sviluppo software, ma può tornare estremamente utile in tanti scenari diversi che non hanno a che fare propriamente con lo sviluppo."

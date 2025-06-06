@@ -3,7 +3,7 @@ title: "Uso di CASE per estrarre con SQL dal database dati utili ad analisi stat
 autore: Julian Bogdani
 licenza: CC BY 4.0 International
 livello: avanzato
-tags: [sql, coding, database, riflessioni e appunti]
+tags: [SQL, Coding, Database, Riflessioni e appunti]
 img: ./sql-snippets.jpg
 date: 2022-03-03
 sommario: "In questo breve articolo si descrive l'uso dell'asserzione `CASE` del linguaggio SQL, offrendo un caso di studio archeologico"

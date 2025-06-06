@@ -3,7 +3,7 @@ title: Sacri lapides Aegypti
 autore: Domizia D'Erasmo
 licenza: CC BY 4.0 International
 livello: base
-tags: [recensioni, applicazioni web, dati geografici, dati archeologici]
+tags: [Recensioni, Applicazioni web, Dati geografici, Dati archeologici]
 img: ./sla.png
 date: 2022-03-24
 sommario: Sacri lapides Aegypti è un progetto FARE MIUR ospitato alla Sapienza Università di Roma dal Dipartimento SARAS e diretto da Paola Buzi, professoressa ordinaria di Egittologia e Civiltà Copta presso lo stesso Ateneo e direttrice del centro di ricerca DigiLab Sapienza. SLA nasce nel 2017 come diretta prosecuzione del progetto ERC Advanced 2015 PAThs, di cui vuole essere un approfondimento dal punto di vista archeologico...

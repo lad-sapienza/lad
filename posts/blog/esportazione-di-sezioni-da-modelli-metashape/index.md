@@ -3,7 +3,7 @@ title: Esportazione di sezioni e prospetti da modelli Agisoft Metashape
 autore: Erasmo di Fonso
 licenza: CC BY 4.0 International
 livello: avanzato
-tags: [3d, fotogrammetria, metashape, rilievo archeologico]
+tags: [3D, Fotogrammetria, Metashape, Rilievo archeologico]
 img: ./fig-02-tracciare-linea.jpg
 date: 2023-11-27
 sommario: "La difusione sempre più capillare di metodi di rilievo archeologico basati sulla tecnica della fotogrametria rende necessario la creazione di procedimenti che permettano di recupare dai modelli 3D “prodotti tradizionali” della documentazione archeologica. Se la creazione delle piante è gestita nativamente da software del settore, come il popolarissimo Agisoft Metashape, quella di prospetti e sezioni richiede del lavoro in più. Questo articolo vuole offrire qualche strumento in più in questa direzione."

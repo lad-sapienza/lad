@@ -3,7 +3,7 @@ title: "HMDE: un plugin sviluppato dal LAD per La visualizzazione del dato strat
 autore: Domenico Santoro, Julian Bogdani
 licenza: CC BY 4.0 International
 livello: avanzato
-tags: [harris matrix, stratigrafia, directus, hdme, coding, applicazioni web, tutorial]
+tags: [Harris matrix, Stratigrafia, Directus, HDME, Coding, Applicazioni web, Tutorial]
 img: ./01-cover.png
 date: 2024-08-31
 sommario: "HDME: Harris Matrix Directus Extension è un nuovo plugin sviluppato dal LAD per la costruzione e visualizzazione interattiva di Matrix di Harris all'interno di banche dati relazionali realizzate con la piattaforma Directus.io. Il plugin è stato testato con successonella documentazione degli scavi del LAD A Çuka e Ajtoit (Albania), dove da più di u anno sta venendo sperimentando Directus.io."

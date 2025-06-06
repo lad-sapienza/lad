@@ -3,7 +3,7 @@ title: "Statistiche metrologiche automatiche sui paramenti murari con QGIS"
 autore: Julian Bogdani
 licenza: CC BY 4.0 International
 livello: medio
-tags: [gis, stili e simbologie, statistiche, metrologia antica, tutorial]
+tags: [GIS, Stili e simbologie, Statistiche, Metrologia antica, Tutorial]
 img: ./qgis-ancient-metrology.png
 date: 2022-12-13
 sommario: "In questo articolo spiegheremo come automatizzare la raccolta di dati statistici sulla metrologia utilizzata nei paramenti murari antichi, faccendo uso di QGIS"
