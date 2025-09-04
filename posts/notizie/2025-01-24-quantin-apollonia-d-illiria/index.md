@@ -2,7 +2,7 @@
 title: "Seminario di François Quantin sulle ricerche albano-francesi ad Apollonia d’Illiria"
 img: ./apollonia-d-illira.jpg
 date: 2025-01-23
-sommario: "Nell’àmbito della sua offerta didattica, il LAD organizza un laboratorio didattico sull’uso del Laser Aided Profiler (LAP) per la documentazione dei profili ceramici"
+sommario: "La Missione Archeologica della Sapienza in Albania, nell'ambito Seminari di Archeologia Classica della [Scuola di Dottorato in Archeologia della Sapienza Università di Roma, è lieta di organizzare un incontro con Fraçois Quantin dal titolo “Ricerche ad Apollonia d’Illiria della Missione Archeologica albano-francese”"
 tags:
   - Seminario
   - Archeologia Classica
