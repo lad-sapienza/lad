@@ -9,7 +9,6 @@ tags:
   - Servizi Online
   - Infrastruttura
   - Datacenter
-inhome: true
 ---
 
 
