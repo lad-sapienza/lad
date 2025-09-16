@@ -41,3 +41,13 @@ blockquote{
     margin-right: 2rem !important;
     border-left: 1px solid $blueLad;
 }
+
+span.gatsby-resp-image-wrapper + em {
+  display: block;
+  text-align: center;
+  margin-top: .5em; /* optional spacing */
+  padding-bottom: 1.5em;
+  margin-bottom: 1em;
+  color: #677077;
+  border-bottom: 1px solid #ddd;
+}
