@@ -1,8 +1,8 @@
 ---
 title: "Butrinto: crocevia del Mediterraneo. Incontro con Richard Hodges"
 img: ./hodges-butrint-sapienza.jpg
-date: 2025-10-15
-sommario: "Nell’àmbito della sua offerta didattica, il LAD organizza un laboratorio didattico sull’uso del Laser Aided Profiler (LAP) per la documentazione dei profili ceramici"
+date: 2025-09-16
+sommario: "La Missione Archeologica della Sapienza in Albania, nell'àmbito del progetto PRIN 2022 FortNet, è lieta di organizzare un incontro con Richard Hodges, sul tema “Butrinto: crocevia del Mediterraneo”, in occasione della recente pubblicazione da parte dell'autore di due volumi riguardanti il sito antico."
 inhome: true
 tags:
   - Seminario
@@ -12,7 +12,7 @@ tags:
   - Albania
 ---
 
-La [Missione Archeologica della Sapienza in Albania](../../ricerca/missione-archeologica-sapienza-a-cuka-e-ajtoit-albania/) è lieta di organizzare un incontro con **Richard Hodges**, in occasione della recente pubblicazione dei volumi:  
+La [Missione Archeologica della Sapienza in Albania](../../ricerca/missione-archeologica-sapienza-a-cuka-e-ajtoit-albania/), nell'àmbito del progetto [PRIN 2022 FortNet](https://lad.saras.uniroma1.it/ricerca/fortnet-project-prin-2022/), è lieta di organizzare un incontro con **Richard Hodges**, sul tema “Butrinto: crocevia del Mediterraneo” e in occasione della recente pubblicazione dei volumi:  
 - *Butrint 8. The Late Roman and Middle Byzantine Archaeology of Butrint, its Enclave, Saranda and Santi Quaranta*, a cura di  Richard Hodges e Nevila Molla (Oxbow Books, 2025), e 
 - *Butrint. At the Crossroads of the Mediterranean* di Richard Hodges (Bloomsberg 2025).
 
