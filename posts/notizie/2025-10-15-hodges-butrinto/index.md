@@ -6,10 +6,10 @@ sommario: "La Missione Archeologica della Sapienza in Albania, nell'àmbito del 
 inhome: true
 tags:
   - Seminario
-  - Archeologia Classica
+  - Archeologia Medievale
   - Butrinto
-  - Missione Archeologica
-  - Albania
+  - Missione Archeologica in Albania
+  - Grandi Scavi Sapienza
 ---
 
 La [Missione Archeologica della Sapienza in Albania](../../ricerca/missione-archeologica-sapienza-a-cuka-e-ajtoit-albania/), nell'àmbito del progetto [PRIN 2022 FortNet](https://lad.saras.uniroma1.it/ricerca/fortnet-project-prin-2022/), è lieta di organizzare un incontro con **Richard Hodges**, sul tema “Butrinto: crocevia del Mediterraneo” e in occasione della recente pubblicazione dei volumi:  

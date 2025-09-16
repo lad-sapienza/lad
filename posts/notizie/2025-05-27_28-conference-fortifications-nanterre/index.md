@@ -9,7 +9,6 @@ tags:
   - Albania
   - Scavi
   - Ricerca
-inhome: true
 ---
 
 Il 27 e il 28 maggio 2025, il condirettore della Missione Archeologica italo-albanese a Çuka e Ajtoit, Julian Bogdani, e la dott.ssa Veronica Castigniani (Università di Catania) parteciperanno con un intervento dal titolo “The fortified landscape of the _ethnos_: the case study of Hellenistic Cestrine, Epirus.” alla conferenza internazionale “Forteresses, forts et camps dans l’aménagement des territoires. De la Méditerranée aux marges des royaumes perse, hellénistiques e de l’Empire romain”, presso l'Università di Nanterre, Parigi.
