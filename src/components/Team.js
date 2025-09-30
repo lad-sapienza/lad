@@ -4,7 +4,7 @@ import styled from "styled-components";
 
 //other
 import { Card, Row, Col } from "react-bootstrap";
-import { FaGithub, FaTwitter, FaUniversity } from "react-icons/fa";
+import { FaGithub, FaTwitter, FaUniversity, FaOrcid } from "react-icons/fa";
 import { SiAcademia, SiResearchgate, SiBluesky } from "react-icons/si";
 import { GiIceIris } from "react-icons/gi";
 import { RiCalendarScheduleFill } from "react-icons/ri";
@@ -17,6 +17,7 @@ const Team = () => {
     affiliation:
       "Professore Associato di Metodologie della Ricerca Archeologica, Dip. SARAS",
     uni: "https://purl.org/lad/jb",
+    orcid: "https://orcid.org/0000-0001-5250-927X",
     github: "https://github.com/jbogdani",
     academia: "https://uniroma1.academia.edu/JulianBogdani",
     iris: "https://iris.uniroma1.it/browse?type=author&authority=rp62440&authority_lang=en",
@@ -36,6 +37,7 @@ const Team = () => {
       academia: "https://uniroma1.academia.edu/LorenzoCardarelli",
       researchgate: "https://www.researchgate.net/profile/Lorenzo-Cardarelli-2",
       github: "https://github.com/lrncrd",
+      orcid: "https://orcid.org/0000-0002-2436-9967",
     },
     {
       name: "Erasmo Di Fonso",
@@ -102,6 +104,11 @@ const Team = () => {
       id: "uni",
       label: "Sito istituzionale",
       icon: <FaUniversity />,
+    },
+    {
+      id: "orcid",
+      label: "ORCID (Open Researcher and Contributor ID)",
+      icon: <FaOrcid />,
     },
     {
       id: "github",
