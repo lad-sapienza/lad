@@ -27,15 +27,22 @@ const Team = () => {
   };
   const teamData = [
     {
-      name: "Eleonora Iacopini",
-      image: "images/eleonora-iacopini.jpg",
+      name: "Lorenzo Cardarelli",
+      image: "images/lorenzo-cardarelli.jpg",
       position: "Membro del laboratorio",
       affiliation:
-        "Assegnista di ricerca di Metodologie di Ricerca Archeologica, Dip. SARAS, Sapienza",
-      iris: "https://iris.uniroma1.it/simple-search?query=iacopini+eleonora&needescape=1",
-      academia: "https://uniroma1.academia.edu/EleonoraIacopini",
-      researchgate: "https://www.researchgate.net/profile/Eleonora_Iacopini",
-      github: "https://github.com/eiacopini",
+        "Assegnista di ricerca, Dip. Scienze dell'Antichità, Sapienza",
+      iris: "https://iris.uniroma1.it/cris/rp/rp275041",
+      academia: "https://uniroma1.academia.edu/LorenzoCardarelli",
+      researchgate: "https://www.researchgate.net/profile/Lorenzo-Cardarelli-2",
+      github: "https://github.com/lrncrd",
+    },
+    {
+      name: "Erasmo Di Fonso",
+      image: "images/erasmo-di-fonso.jpg",
+      position: "Membro del laboratorio",
+      affiliation: "Assegnista di ricerca, Dip. Istituto Studi Orientali (ISO), Sapienza",
+      github: "https://github.com/erasmdif",
     },
     {
       name: "Nadia Aleotti",
@@ -69,13 +76,6 @@ const Team = () => {
       twitter: "https://twitter.com/domizzzia",
     },
     {
-      name: "Erasmo Di Fonso",
-      image: "images/erasmo-di-fonso.jpg",
-      position: "Membro del laboratorio",
-      affiliation: "Assegnista di ricerca, Dip. Istituto Studi Orientali (ISO), Sapienza",
-      github: "https://github.com/erasmdif",
-    },
-    {
       name: "Paolo Rosati",
       image: "images/paolo-rosati.jpg",
       position: "Membro del laboratorio",
@@ -83,6 +83,18 @@ const Team = () => {
       academia: "https://uniroma1.academia.edu/RosatiPaolo",
       researchgate: "https://www.researchgate.net/profile/Paolo-Rosati-2",
     },
+    {
+      name: "Eleonora Iacopini",
+      image: "images/eleonora-iacopini.jpg",
+      position: "Membro del laboratorio",
+      affiliation:
+        "Assegnista di ricerca di Metodologie di Ricerca Archeologica, Dip. SARAS, Sapienza",
+      iris: "https://iris.uniroma1.it/simple-search?query=iacopini+eleonora&needescape=1",
+      academia: "https://uniroma1.academia.edu/EleonoraIacopini",
+      researchgate: "https://www.researchgate.net/profile/Eleonora_Iacopini",
+      github: "https://github.com/eiacopini",
+    },
+    
   ];
 
   const iconList = [
