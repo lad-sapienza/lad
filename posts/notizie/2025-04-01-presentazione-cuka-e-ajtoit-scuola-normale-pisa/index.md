@@ -9,7 +9,6 @@ tags:
   - Epiro
   - Albania
   - Divulgazione
-inhome: true
 ---
 
 Lunedì 7 aprile 2025 il condirettore della Missione Archeologica italo-albanese a Çuka e Ajtoit, Julian Bogdani, terrà un seminario presso la Scuola Normale Superiore di Pisa dal titolo: “Cestrine in Epiro: mito, storia e archeologia”. Il seminario rientra nelle attività di disseminaizone e divulgazione della [Missione Archeologica Italo-Albanesea Çuka e Ajtoit (Albania)](https://lad.saras.uniroma1.it/ricerca/missione-archeologica-sapienza-a-cuka-e-ajtoit-albania/) e del progetto PRIN 2022 [FortNet. Fortification and population network in coastal Chaonia, Northern Epirus (Albania) between Iron Age and the Medieval period: a longue durée approach to the study of settlements, economic and defensive systems](https://lad.saras.uniroma1.it/ricerca/fortnet-project-prin-2022/).

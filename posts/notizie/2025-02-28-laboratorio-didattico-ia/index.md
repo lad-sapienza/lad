@@ -3,7 +3,6 @@ title: "Applicazione di Computer Vision per la gestione di Legacy Data archeolog
 img: ./ia-at-lad.jpg
 date: 2025-02-28
 sommario: "Nell’àmbito della sua offerta didattica, il LAD organizza un sull’applicazione di metodi di Computer Vision per la gestione e valorizzazione di legacy data archeologici"
-inhome: true
 tags:
   - Computer Vision
   - Intelligenza Artificiale

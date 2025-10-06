@@ -9,7 +9,6 @@ tags:
   - Patrimonio Archeologico
   - Paesaggi Culturali
   - Tutela e  Ricerca
-inhome: true
 ---
 
 
