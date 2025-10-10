@@ -93,6 +93,7 @@ In questi anni i membri della missione hanno avviato un processo importatente di
 
 ---
 
+-	S. Napolitano, J. Bogdani. 2025. “Ceramica medievale dagli scavi della cosiddetta basilica di Çiflik (Konispol, Albania): nota preliminare.” In _X Congresso Nazionale di Archeologia Medievale. Udine – Cividale del Friuli, 9-13 settembre 2025 Volume 3_, a cura di Simonetta Minguzzi, Angela Borzacconi, Lorenzo Passera, Laura Biasin, 135-140. Sesto Fiorentino: All’Insegna del Giglio.
 -	Bogdani, J. 2024. “Chaonia in Epirus. A fresh assessment in light of new archaeological data” in *Redefining Ancient Epirus* a cura di Milena Melfi e Maria Stamatopoulou, 37-61. Borders, Boundaries, Landscapes, 1. Turnhout: Brepols Publishers.
 - Bogdani, J. 2024. “Documenting a hilltop settlement: methodologies and preliminary results of the joint Albano-Italian project at Çuka e Ajtoit (Albania).” _GROMA: Documenting Archaeology_ 8 (2023): 18–36. [https://doi.org/10.32028/Groma-Issue-8-2023-2832](https://doi.org/10.32028/Groma-Issue-8-2023-2832).
 -	Bogdani, J. 2024. “Troia in Epiro: miti, archeologie, storie e ideologie”. In *Il viaggio di Enea* a cura di Alfonsina Russo e Roberta Alteri, 193-211. Foro Romano - Palatino. Scavi e ricerche II/2024. Roma: «L’Erma» di Bretschneider.
