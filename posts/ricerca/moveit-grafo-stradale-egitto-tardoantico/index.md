@@ -17,3 +17,5 @@ Dal momento che l'Atlante PAThs è in continuo aggiornamento e implementazione, 
 - Codice sorgente: [https://github.com/paths-erc/moveit](https://github.com/paths-erc/moveit)
 
 - GeoJSON Path Finder, codice sorgente: [https://github.com/perliedman/geojson-path-finder](https://github.com/perliedman/geojson-path-finder) 
+
+- Articolo scientifico: J. Bogdani. 2024. “MOvEIT: a Proof of Concept of a Road Graph for Late Antique Egypt.” _Groma. Documenting Archaeology_, 7 (2022). DOI: [https://doi.org/10.32028/Groma-Issue-7-2022-2420](https://doi.org/10.32028/Groma-Issue-7-2022-2420)
