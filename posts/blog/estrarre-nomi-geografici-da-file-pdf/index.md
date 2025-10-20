@@ -216,7 +216,7 @@ Immaginiamo di avere una biblioteca personale di 500 PDF su archeologia classica
 
 ### Installazione rapida
 
-Il progetto è disponibile su GitHub ed è distribuito con licenza MIT open-source:
+Il progetto è disponibile su [GitHub](https://github.com/lad-sapienza/geoNamesFromPdf) ed è distribuito con licenza MIT open-source:
 
 ```bash
 # Clone del repository
