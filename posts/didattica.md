@@ -2,7 +2,7 @@
 title: La didattica del LAD
 img: ./didattica/course.png
 date: 2022-02-04
-sommario: "Didattica di LAD: tutte le attività del LAD rivolte alla didattica a vari livelli: corsi, seminari, tutorial, laboratori"
+description: "Scopri i laboratori didattici del LAD alla Sapienza: corsi pratici su GIS, banche dati archeologiche, Laser Aided Profiler e Computer Vision. Formazione avanzata per dottorato e specializzazione in archeologia digitale 🎓"
 ---
 
 ## Laboratori didattici: GIS, Banche dati relazionali per l'Archeologia, Laser Aided Profiler, Intelligenza Artificiale

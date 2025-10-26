@@ -2,7 +2,7 @@
 title: "Partecipazione del LAD alla sesta edizione del convegno internazionale del “The International Association for Research on Pottery of the Hellenistic Period”"
 img: ./6th-IARPotHP.png
 date: 2023-10-09
-sommario: "Partecipazione di Julian Bogdani e Nadia Aleotti al sesto appuntamento del The International Association for Research on Pottery of the Hellenistic Period"
+description: "Partecipazione di Julian Bogdani e Nadia Aleotti al sesto appuntamento del The International Association for Research on Pottery of the Hellenistic Period"
 tags:
   - Convegno
   - Archeologia

@@ -3,7 +3,7 @@ title: "Le anfore corinzie da Çuka e Ajtoit e Butrinto: modelli, tipologie e pr
 autore: Julian Bogdani
 sort: 23
 img: ./anfore-corinzie-caj-butrinto.jpg
-sommario: Progetto di ricerca, P.I. Nadia Aleotti, finanziato dal programma “Progetti per Avvio alla Ricerca” della Sapienza Università di Roma, anno 2024, prot. AR2241907808A0A6
+description: Progetto di ricerca, P.I. Nadia Aleotti, finanziato dal programma “Progetti per Avvio alla Ricerca” della Sapienza Università di Roma, anno 2024, prot. AR2241907808A0A6
 ---
 
 

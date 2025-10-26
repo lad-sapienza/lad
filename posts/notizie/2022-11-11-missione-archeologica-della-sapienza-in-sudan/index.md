@@ -2,7 +2,7 @@
 title: "Partecipazione alla campagna 2022 della Missione Archeologica della Sapienza in Sudan"
 img: ./hugair-gubli.jpg
 date: 2022-11-10
-sommario: "Il LAD partecipa alle attività della campagna 2022 della Missione Archeologica della Sapienza in Sudan, di prof. Paola Buzi"
+description: "Il LAD partecipa alle attività della campagna 2022 della Missione Archeologica della Sapienza in Sudan, di prof. Paola Buzi"
 tags:
   - Missione Archeologica
   - Sudan

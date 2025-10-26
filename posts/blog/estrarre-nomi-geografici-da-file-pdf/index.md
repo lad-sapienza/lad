@@ -5,7 +5,7 @@ date: 2025-10-20
 licenza: CC BY 4.0 International
 livello: avanzato
 img: ./geoNamesFromPdf.jpg
-sommario: "Presentazione di geoNamesFromPdf, uno strumento open-source per l'estrazione automatica di nomi geografici da documenti PDF, sviluppato per facilitare l'analisi spaziale e l'organizzazione geografica della bibliografia accademica."
+description: "Presentazione di geoNamesFromPdf, uno strumento open-source per l'estrazione automatica di nomi geografici da documenti PDF, sviluppato per facilitare l'analisi spaziale e l'organizzazione geografica della bibliografia accademica."
 tags:
   - strumenti-digitali
   - nlp

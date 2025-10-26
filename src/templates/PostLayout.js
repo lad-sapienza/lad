@@ -25,7 +25,7 @@ export default function BlogPost({ data }) {
       <Seo
         title={post.frontmatter.title}
         description={
-          post.frontmatter.sommario ? post.frontmatter.sommario : post.excerpt
+          post.frontmatter.description || post.excerpt
         }
         // https://stackoverflow.com/a/24381515
         url={pageUrl}
@@ -178,6 +178,7 @@ export const query = graphql`
     }
     markdownRemark(fields: { slug: { eq: $slug } }) {
       html
+      excerpt(pruneLength: 160)
       fields {
         slug
       }
@@ -187,7 +188,7 @@ export const query = graphql`
         licenza
         livello
         title
-        sommario
+        description
         tags
         didascalia
         img {

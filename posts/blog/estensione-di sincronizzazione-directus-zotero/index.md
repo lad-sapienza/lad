@@ -5,7 +5,7 @@ date: 2025-10-12
 licenza: CC BY 4.0 International
 livello: avanzato
 img: ./directus-zotero.jpg
-sommario: "Il LAD presenta un’estensione open source per Directus che automatizza la sincronizzazione con le librerie Zotero di gruppo, eliminando la duplicazione del lavoro bibliografico e garantendo citazioni consistenti attraverso API REST e sincronizzazione notturna automatizzata."
+description: "Il LAD presenta un’estensione open source per Directus che automatizza la sincronizzazione con le librerie Zotero di gruppo, eliminando la duplicazione del lavoro bibliografico e garantendo citazioni consistenti attraverso API REST e sincronizzazione notturna automatizzata."
 tags:
   - Directus
   - Zotero

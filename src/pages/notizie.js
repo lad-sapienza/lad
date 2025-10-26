@@ -83,7 +83,7 @@ export const query = graphql`
           frontmatter {
             title
             date(formatString: "DD MMMM YYYY", locale: "it-IT")
-            sommario
+            description
             pinned
             img {
               base

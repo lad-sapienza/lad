@@ -2,7 +2,7 @@
 title: "La missione della Sapienza a Çuka e Ajtoit finanziata ufficialmente dal MAECI"
 img: ./caj-maeci.jpg
 date: 2023-07-26
-sommario: "La missione archeologica a Çuka e Ajtoit opera nel 2023 con il riconoscimento ufficiale e il supporto finanziario del Ministero degli Affari Esteri e della Cooperazione Internazionale."
+description: "La missione archeologica a Çuka e Ajtoit opera nel 2023 con il riconoscimento ufficiale e il supporto finanziario del Ministero degli Affari Esteri e della Cooperazione Internazionale."
 tags:
   - Missione Archeologica
   - Albania

@@ -2,7 +2,7 @@
 title: "Partecipazione alla conferenza internazionale “Viti Arkeologjik 2024”"
 img: ./konferenca-shkencore-viti-arkeologjik-2024.jpg
 date: 2025-03-27
-sommario: "Giovedì 27 marzo 2025 il condirettore della Missione Archeologica italo-albanese a Çuka e Ajtoit parteciperà con una comunicazione ai lavori della conferenza “Viti Arkeologjik 2024” presso l'Accademia delle Scienze della Repubblica Albanese"
+description: "Giovedì 27 marzo 2025 il condirettore della Missione Archeologica italo-albanese a Çuka e Ajtoit parteciperà con una comunicazione ai lavori della conferenza “Viti Arkeologjik 2024” presso l'Accademia delle Scienze della Repubblica Albanese"
 tags:
   - Convegno
   - Archeologia

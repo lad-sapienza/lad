@@ -5,7 +5,7 @@ date: 2025-03-09
 licenza: CC BY 4.0 International
 livello: avanzato
 img: ./geoserver.jpg
-sommario: "La diffusione di programmi open source sempre più performanti per la gestione dei dati geografici come QGIS, con il conseguente aumento di creatori di dati spaziali fa emergere l’esigenza di avere a disposizione sistemi di gestione di questa mole di dati per la loro fruizione pubblica. Questo articolo propone una panoramica degli strumenti open source a tal scopo oggi più interessanti."
+description: "La diffusione di programmi open source sempre più performanti per la gestione dei dati geografici come QGIS, con il conseguente aumento di creatori di dati spaziali fa emergere l’esigenza di avere a disposizione sistemi di gestione di questa mole di dati per la loro fruizione pubblica. Questo articolo propone una panoramica degli strumenti open source a tal scopo oggi più interessanti."
 tags:
   - FLOSS
   - Dati Geografici

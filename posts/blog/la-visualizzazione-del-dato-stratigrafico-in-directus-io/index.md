@@ -6,7 +6,7 @@ livello: avanzato
 tags: [Harris matrix, Stratigrafia, Directus, HDME, Coding, Applicazioni web, Tutorial]
 img: ./01-cover.png
 date: 2024-08-31
-sommario: "HDME: Harris Matrix Directus Extension è un nuovo plugin sviluppato dal LAD per la costruzione e visualizzazione interattiva di Matrix di Harris all'interno di banche dati relazionali realizzate con la piattaforma Directus.io. Il plugin è stato testato con successonella documentazione degli scavi del LAD A Çuka e Ajtoit (Albania), dove da più di u anno sta venendo sperimentando Directus.io."
+description: "HDME: Harris Matrix Directus Extension è un nuovo plugin sviluppato dal LAD per la costruzione e visualizzazione interattiva di Matrix di Harris all'interno di banche dati relazionali realizzate con la piattaforma Directus.io. Il plugin è stato testato con successonella documentazione degli scavi del LAD A Çuka e Ajtoit (Albania), dove da più di u anno sta venendo sperimentando Directus.io."
 ---
 
 

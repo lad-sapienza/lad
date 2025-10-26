@@ -2,7 +2,7 @@
 title: "Workshop: Beyond the Wall: City Walls & Urban planning"
 img: ./beyond_the_wall.jpg
 date: 2022-12-05
-sommario: "Partecipazione di Julian Bogdani al workshop internazionale “Beyond the Wall: City Walls & Urban planning”"
+description: "Partecipazione di Julian Bogdani al workshop internazionale “Beyond the Wall: City Walls & Urban planning”"
 tags:
   - Workshop
   - Urbanistica

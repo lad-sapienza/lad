@@ -6,7 +6,7 @@ livello: avanzato
 tags: [SQL, Coding, Database, Riflessioni e appunti]
 img: ./sql-snippets.jpg
 date: 2022-03-03
-sommario: "In questo breve articolo si descrive l'uso dell'asserzione `CASE` del linguaggio SQL, offrendo un caso di studio archeologico"
+description: "In questo breve articolo si descrive l'uso dell'asserzione `CASE` del linguaggio SQL, offrendo un caso di studio archeologico"
 ---
 
 In questo breve articolo si descrive l'uso dell'asserzione `CASE` del linguaggio SQL, offrendo un caso di studio archeologico. 

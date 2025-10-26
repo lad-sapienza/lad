@@ -2,7 +2,7 @@
 title: "Epirus in the Roman World and the New Research on the Acropolis of Butrint by the Albanian Institute of Archaeology and the University of Bologna"
 img: ./epirus-butrint.jpg
 date: 2022-11-10
-sommario: "Presentazione del progetto Çuka e Ajtoit al convegno “Epirus in the Roman World and the New Research on the Acropolis of Butrint by the Albanian Institute of Archaeology and the University of Bologna”"
+description: "Presentazione del progetto Çuka e Ajtoit al convegno “Epirus in the Roman World and the New Research on the Acropolis of Butrint by the Albanian Institute of Archaeology and the University of Bologna”"
 tags:
   - Convegno
   - Archeologia

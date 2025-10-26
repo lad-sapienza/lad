@@ -65,7 +65,7 @@ export const query = graphql`
           frontmatter {
             title
             sort
-            sommario
+            description
             pinned
             img {
               base

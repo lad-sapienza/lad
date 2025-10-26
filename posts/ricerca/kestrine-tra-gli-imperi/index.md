@@ -3,7 +3,7 @@ title: "Kestríne: un paesaggio di frontiera attraverso gli imperi"
 autore: Julian Bogdani
 sort: 15
 img: ./kestrine.jpg
-sommario: Progetto di ricerca, P.I. Julian Bogdani, finanziato dal programma “Progetti di Ricerca - Progetti Medi” della Sapienza Università di Roma, anno 2021, prot. RM12117A420572AC
+description: Progetto di ricerca, P.I. Julian Bogdani, finanziato dal programma “Progetti di Ricerca - Progetti Medi” della Sapienza Università di Roma, anno 2021, prot. RM12117A420572AC
 ---
 
 

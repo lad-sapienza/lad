@@ -6,7 +6,7 @@ livello: base
 tags: [GIS, QGIS, Database, FLOSS, Dati Geografici, Coding, Directus]
 img: ./DirectusImporter.png
 date: 2025-06-05
-sommario: "In questo articolo presentiamo DirectusImporter, un plugin sviluppato dal LAD alla Sapienza per semplificare e automatizzare l’integrazione dei dati archiviati in Directus all’interno di QGIS"
+description: "In questo articolo presentiamo DirectusImporter, un plugin sviluppato dal LAD alla Sapienza per semplificare e automatizzare l’integrazione dei dati archiviati in Directus all’interno di QGIS"
 inhome: true
 ---
 

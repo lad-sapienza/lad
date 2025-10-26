@@ -167,8 +167,8 @@ const Blog = ({ data }) => {
                     <Link to={node.fields.slug}>{node.frontmatter.title}</Link>
                   </h2>
                   <p>
-                    {node.frontmatter.sommario
-                      ? node.frontmatter.sommario
+                    {node.frontmatter.description
+                      ? node.frontmatter.description
                       : node.excerpt}
                   </p>
 
@@ -223,7 +223,7 @@ export const query = graphql`
             title
             autore
             date(formatString: "DD MMMM YYYY", locale: "it-IT")
-            sommario
+            description
             tags
             img {
               base

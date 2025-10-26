@@ -6,7 +6,7 @@ livello: medio
 tags: [GIS, Stili e simbologie, Statistiche, Metrologia antica, Tutorial]
 img: ./qgis-ancient-metrology.png
 date: 2022-12-13
-sommario: "In questo articolo spiegheremo come automatizzare la raccolta di dati statistici sulla metrologia utilizzata nei paramenti murari antichi, faccendo uso di QGIS"
+description: "In questo articolo spiegheremo come automatizzare la raccolta di dati statistici sulla metrologia utilizzata nei paramenti murari antichi, faccendo uso di QGIS"
 ---
 
 In questo articolo spiegheremo come automatizzare la raccolta di dati statistici sulla metrologia utilizzata nei paramenti murari antichi, faccendo uso di QGIS. L'estrapolazione di dati quantitativi sulle techniche costruttive antiche al fine di compilare tabelle utili a valutazioni metrologiche e/o mensiocronologiche è un lavoro piuttosto lungo, che richiede fasi di acquisizioni laboriose sul terreno. Nell'esempio che esponiamo nei paragrafi seguenti, abbiamo ridotto al massimo la fase di acquisizione dei dati sul campo, concentrando i nostri sforzi sull'utilizzo proficuo dei strumenti digitali che possono aiutarci in questa analisi.

@@ -2,7 +2,7 @@
 title: "Partecipazione alla conferenza internazionale ‘Culti e rituali in grotta: forme e materiali dal Mediterraneo tardoantico’"
 img: ./culti-e-rituali-in-grotta.jpg
 date: 2024-09-09
-sommario: "Il direttore della Missione Archeologica Italo-Albanese (Sapienza - Istituto Archeologico Albanese) Julian Bogdani parteciperà al convegno internazionale ‘Culti e rituali in grotta: forme e materiali dal Mediterraneo tardoantico’ presso la Sapienza Università di Roma."
+description: "Il direttore della Missione Archeologica Italo-Albanese (Sapienza - Istituto Archeologico Albanese) Julian Bogdani parteciperà al convegno internazionale ‘Culti e rituali in grotta: forme e materiali dal Mediterraneo tardoantico’ presso la Sapienza Università di Roma."
 tags:
   - Convegno
   - Archeologia

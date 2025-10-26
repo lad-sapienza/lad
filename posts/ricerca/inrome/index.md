@@ -1,7 +1,7 @@
 ---
 title: "Il sistema informatico di IN.Rome. The INscribed city: urban structures and interaction in imperial ROME"
 autore: Eleonora Iacopini
-sommario: Progetto di ricerca, P.I. Barbara Borg, ERC Advanced Grant no. 101054143 IN-ROME 2022-2027
+description: Progetto di ricerca, P.I. Barbara Borg, ERC Advanced Grant no. 101054143 IN-ROME 2022-2027
 sort: 17
 img: ./inrome.jpg
 ---

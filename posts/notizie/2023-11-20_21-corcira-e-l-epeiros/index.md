@@ -2,7 +2,7 @@
 title: "Partecipazione al convegno internazionale “Fra storia e archeologia: Corcira e l’epeiros. Nuovi dati e prospettive di ricerca”"
 img: ./corcira-e-l-epeiros.png
 date: 2023-11-20
-sommario: "Presentazione delle ricerche della missione archeologica a Çuka e Ajtoit al convegno internazionale “Fra storia e archeologia: Corcira e l’epeiros. Nuovi dati e prospettive di ricerca”"
+description: "Presentazione delle ricerche della missione archeologica a Çuka e Ajtoit al convegno internazionale “Fra storia e archeologia: Corcira e l’epeiros. Nuovi dati e prospettive di ricerca”"
 tags:
   - Convegno
   - Archeologia

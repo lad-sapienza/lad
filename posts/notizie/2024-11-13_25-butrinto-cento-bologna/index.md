@@ -2,7 +2,7 @@
 title: "Partecipazione alla conferenza internazionale “Butrinto Cento (1924-2024). Bilanci e prospettive”"
 img: ./butrinto-cento.jpg
 date: 2024-11-23
-sommario: "Il direttore della Missione Archeologica della italo-albanese (Sapienza - Istituto Archeologico Albanese) Julian Bogdani parteciperà alla conferenza internazionale “Butrinto Cento (1924-2024). Bilanci e prospettive” organizzata dall'Università di Bologna e dall'Istituto Archeologico Albanese"
+description: "Il direttore della Missione Archeologica della italo-albanese (Sapienza - Istituto Archeologico Albanese) Julian Bogdani parteciperà alla conferenza internazionale “Butrinto Cento (1924-2024). Bilanci e prospettive” organizzata dall'Università di Bologna e dall'Istituto Archeologico Albanese"
 tags:
   - Convegno
   - Archeologia

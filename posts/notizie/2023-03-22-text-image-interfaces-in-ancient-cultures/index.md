@@ -2,7 +2,7 @@
 title: "Text / Image interfaces in ancient cultures"
 img: ./text-image-conference.png
 date: 2023-03-20
-sommario: "Il respondabile del LAD: Laboratorio di Archeologia Digitale alla Sapienza parteciperà al workshop “Text / Image interfaces in ancient cultures. Theoretical, methodological, and practical approaches to the combined analysis of textual and visual evidence” che si svolgerà presso L'Orientale Università di Napoli, il 13 aprile 2022."
+description: "Il respondabile del LAD: Laboratorio di Archeologia Digitale alla Sapienza parteciperà al workshop “Text / Image interfaces in ancient cultures. Theoretical, methodological, and practical approaches to the combined analysis of textual and visual evidence” che si svolgerà presso L'Orientale Università di Napoli, il 13 aprile 2022."
 tags:
   - Workshop
   - Archeologia

@@ -2,7 +2,7 @@
 title: "Presentazione della mostra “Sapienza in Albania. A cent’anni dalla prima visita nel paese di Luigi Maria Ugolini”"
 img: ./sapienza-in-albania.png
 date: 2024-11-28
-sommario: "Venerdì 13 dicembre 2024, alle ore 10:00 verrà presentata in aula Simonetti la mostra “Sapienza in Albania” allestita presso gli ambienti del Museo dell'Arte Classica della Sapienza"
+description: "Venerdì 13 dicembre 2024, alle ore 10:00 verrà presentata in aula Simonetti la mostra “Sapienza in Albania” allestita presso gli ambienti del Museo dell'Arte Classica della Sapienza"
 tags:
   - Mostra
   - Sapienza

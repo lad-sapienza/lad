@@ -2,7 +2,7 @@
 title: "BDUS v4.0.0 released"
 img: ./bdus.png
 date: 2021-03-28
-sommario: "Version 4 has finally been released and the good ol’ version 3 has been deprecated after 8 years of distinguished service. While common ysers will notice only minor graphical changes, an almost total rewrite of the project is done under the hood."
+description: "Version 4 has finally been released and the good ol’ version 3 has been deprecated after 8 years of distinguished service. While common ysers will notice only minor graphical changes, an almost total rewrite of the project is done under the hood."
 tags:
   - BDUS
   - Rilascio Versione

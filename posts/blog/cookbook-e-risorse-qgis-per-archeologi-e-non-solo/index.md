@@ -7,7 +7,7 @@ tags: [GIS, Dati geografici, Stili e simbologie, Risorse, Tutorial]
 img: ./polygon-dimension-mike-elstermann.png
 didascalia: QGIS Hub. Polygon_Dimension_QGIS3x di Mike Elstermann
 date: 2022-04-01
-sommario: I Sistemi Informativi Geografici (GIS) sono un mondo vasto e spesso complesso da affrontare e saper gestire. In questo articolo vi suggeriamo alcune risorse open source che possono correre in aiuto di utenti di vari gradi e livelli. L'elenco è in continuo aggiornamento ed è incentrato sulle risorse disponibili per il software QGIS..
+description: I Sistemi Informativi Geografici (GIS) sono un mondo vasto e spesso complesso da affrontare e saper gestire. In questo articolo vi suggeriamo alcune risorse open source che possono correre in aiuto di utenti di vari gradi e livelli. L'elenco è in continuo aggiornamento ed è incentrato sulle risorse disponibili per il software QGIS..
 ---
 
 I **Sistemi Informativi Geografici** (GIS) sono un mondo vasto e spesso complesso da affrontare e saper gestire. In questo articolo vi suggeriamo alcune **risorse open source** che possono correre in aiuto di utenti di vari gradi e livelli. **L'elenco è in continuo aggiornamento** ed è incentrato sulle risorse disponibili per il software **QGIS**!

@@ -2,7 +2,7 @@
 title: "Avviso di interruzione dei servizi online LAD — 22-29 luglio 2025"
 img: ./interruzione-servizi-lad-luglio-2025.png
 date: 2025-07-15
-sommario: "A causa di importanti lavori di manutenzione straordinaria dell'impianto elettrico del centro dati INFN-LNS di Catania, che ospita tutti i servizi online offerti da LAD, è stato programmato un arresto completo dell'infrastruttura nel periodo compreso tra il 22 e il 29 luglio 2025"
+description: "A causa di importanti lavori di manutenzione straordinaria dell'impianto elettrico del centro dati INFN-LNS di Catania, che ospita tutti i servizi online offerti da LAD, è stato programmato un arresto completo dell'infrastruttura nel periodo compreso tra il 22 e il 29 luglio 2025"
 tags:
   - Avviso
   - Manutenzione

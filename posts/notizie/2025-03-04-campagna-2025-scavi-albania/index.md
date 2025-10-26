@@ -2,7 +2,7 @@
 title: "Aperte le iscrizioni alla campagna 2025 della Missione Archeologica della Sapienza in Albania (giugno 2025)"
 img: ./caj-2025.jpg
 date: 2025-03-04
-sommario: "Campagna 2025 della Missione Archeologica della Sapienza in Albania"
+description: "Campagna 2025 della Missione Archeologica della Sapienza in Albania"
 tags:
   - Missione Archeologica
   - Scavi

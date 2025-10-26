@@ -2,7 +2,7 @@
 title: "Attività di tirocinio sulla documentazione archeologica digitale della Missione Archeologica della Sapienza in Albania"
 img: ./tirocini-progetto-cuka-e-ajtoit.jpg
 date: 2024-09-27
-sommario: "Attività di tirocinio sulla documentazione archeologica digitale della Missione Archeologica della Sapienza in Albania"
+description: "Attività di tirocinio sulla documentazione archeologica digitale della Missione Archeologica della Sapienza in Albania"
 tags:
   - Tirocinio
   - Documentazione

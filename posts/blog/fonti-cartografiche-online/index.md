@@ -6,7 +6,7 @@ livello: base
 tags: [Risorse, Cartografia, Geodati]
 img: ./maps.jpg
 date: 2022-03-05
-sommario: "È ormai fatto noto come la cartografia storica sia sempre più uno strumento prezioso per le ricerche archeologiche. Ecco allora un un elenco ragionato e commentato di varie fonti di cartografa storica online, di accesso libero.."
+description: "È ormai fatto noto come la cartografia storica sia sempre più uno strumento prezioso per le ricerche archeologiche. Ecco allora un un elenco ragionato e commentato di varie fonti di cartografa storica online, di accesso libero.."
 ---
 
 È ormai fatto noto come la cartografia storica sia sempre più uno strumento prezioso per le ricerche archeologiche e in particolare quel ramo della disciplina che è maggiormente focalizzata sullo studio del cambiamnto del paesaggio nel tempo, l'Archeologia dei Paesaggi (Landscape Archaeology). Vieppiù, però, la carta storica è un documento fondamentale in sé e come tale è considerato non solo nell'ambito archeologico ma più in generale per tutte le discipline umanistiche. In questo articolo — **in continuo aggiornamento** –, vengono elencate in ordine alfabetico le principali biblioteche online che contengono documenti relativi alla  cartografia storica disponibili attraverso varie tipologie di licenze e modalità di scaricamento.

@@ -36,7 +36,7 @@ const ItemPreview = ({ node, pinned }) => {
           </Link>
         </h2>
         <p>
-          {node.frontmatter.sommario ? node.frontmatter.sommario : node.excerpt}
+          {node.frontmatter.description ? node.frontmatter.description : node.excerpt}
         </p>
         <Link to={node.fields.slug} title={node.frontmatter.title}>
           Leggi tutto...

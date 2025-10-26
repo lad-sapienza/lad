@@ -248,7 +248,7 @@ export const query = graphql`
         autore
         date(formatString: "DD MMMM YYYY", locale: "it-IT")
         title
-        sommario
+        description
         img {
           base
           childImageSharp {

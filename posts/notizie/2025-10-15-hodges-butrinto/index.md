@@ -2,7 +2,7 @@
 title: "Butrinto: crocevia del Mediterraneo. Incontro con Richard Hodges"
 img: ./hodges-butrint-sapienza.jpg
 date: 2025-09-16
-sommario: "La Missione Archeologica della Sapienza in Albania, nell'àmbito del progetto PRIN 2022 FortNet, è lieta di organizzare un incontro con Richard Hodges, sul tema “Butrinto: crocevia del Mediterraneo”, in occasione della recente pubblicazione da parte dell'autore di due volumi riguardanti il sito antico."
+description: "La Missione Archeologica della Sapienza in Albania, nell'àmbito del progetto PRIN 2022 FortNet, è lieta di organizzare un incontro con Richard Hodges, sul tema “Butrinto: crocevia del Mediterraneo”, in occasione della recente pubblicazione da parte dell'autore di due volumi riguardanti il sito antico."
 inhome: true
 tags:
   - Seminario

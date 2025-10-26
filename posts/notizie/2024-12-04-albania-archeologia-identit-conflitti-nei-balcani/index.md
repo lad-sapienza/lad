@@ -2,7 +2,7 @@
 title: "Partecipazione al “Terzo incontro Archeologia, Identità e Conflitti nei Balcani: Il caso dell’Albania”"
 img: ./albania-archeologia-identit-conflitti-nei-balcani.jpg
 date: 2024-12-04
-sommario: "Sabato 7 dicembre 2024, dalle 10 alle 14 si terrà presso INASA (Istituto Nazionale di Archeologia e Storia dell’Arte Piazza di San Marco, 49) il terzo incontro “Archeologia, Identità e Conflitti nei Balcani: Il caso dell’Albania”"
+description: "Sabato 7 dicembre 2024, dalle 10 alle 14 si terrà presso INASA (Istituto Nazionale di Archeologia e Storia dell’Arte Piazza di San Marco, 49) il terzo incontro “Archeologia, Identità e Conflitti nei Balcani: Il caso dell’Albania”"
 tags:
   - Archeologia
   - Identità

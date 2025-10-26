@@ -2,7 +2,7 @@
 title: "Laboratorio didattico sull’uso del Laser Aided Profiler (LAP)"
 img: ./lap-at-lad.jpg
 date: 2025-01-17
-sommario: "Nell’àmbito della sua offerta didattica, il LAD organizza un laboratorio didattico sull’uso del Laser Aided Profiler (LAP) per la documentazione dei profili ceramici"
+description: "Nell’àmbito della sua offerta didattica, il LAD organizza un laboratorio didattico sull’uso del Laser Aided Profiler (LAP) per la documentazione dei profili ceramici"
 tags:
   - Laser Aided Profiler
   - Laboratorio Didattico

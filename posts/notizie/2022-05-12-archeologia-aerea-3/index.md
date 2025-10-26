@@ -2,7 +2,7 @@
 title: "Convegno “Archeologia Aerea 2022: Le città invisibili”, Lecce, 19-21 maggio 2022"
 img: ./archeologia-aerea-2022.jpg
 date: 2022-05-12
-sommario: "“Landscape: una sintesi di elementi diacronici” è un’iniziativa nata da dottorandi in Topografia Antica e materie affini, in sinergia con la Consulta di Topografia Antica, con l’obiettivo di mettere in contatto i giovani ricercatori che lavorano su argomenti che riguardano il paesaggio, le città e l’ambiente nell’antichità, al fine di stimolare la circolazione e lo scambio di idee su queste tematiche"
+description: "“Landscape: una sintesi di elementi diacronici” è un’iniziativa nata da dottorandi in Topografia Antica e materie affini, in sinergia con la Consulta di Topografia Antica, con l’obiettivo di mettere in contatto i giovani ricercatori che lavorano su argomenti che riguardano il paesaggio, le città e l’ambiente nell’antichità, al fine di stimolare la circolazione e lo scambio di idee su queste tematiche"
 tags:
   - Convegno
   - Archeologia Aerea
