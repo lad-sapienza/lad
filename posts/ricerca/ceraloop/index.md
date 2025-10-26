@@ -16,6 +16,7 @@ inhome: true
 - [Come funziona l’app (in breve)](#come-funziona-lapp-in-breve)
 - [Per corsi universitari e laboratori](#per-corsi-universitari-e-laboratori)
 - [Supervisione e contatti](#supervisione-e-contatti)
+- [FAQ (in aggiornamento)](#faq-in-aggiornamento)
 
 ##  Introduzione
 **CeraLoop** è uno studio sperimentale del LAD – Laboratorio di Archeologia Digitale della Sapienza – che invita a contribuire, in modo semplice e guidato, alla costruzione di una base di conoscenza condivisa sui concetti di “somiglianza” e “confronto” applicati ai materiali ceramici in archeologia. Lo studio non intende mettere in discussione la metodologia tradizionale di documentazione, analisi e indagine dei reperti ceramici: al contrario, esplora la possibilità di introdurre funzioni algoritmiche che possano _affiancare_ e _supportare_ il lavoro degli specialisti, offrendo strumenti di orientamento e prioritarizzazione. Allo stesso tempo, l’esperimento ci permette di “misurare” statisticamente e discutere in modo aperto l’idea stessa di “confronto” archeologico.
@@ -46,8 +47,39 @@ Collegandoti a https://ceraloop.lad-sapienza.it/ è possibile nella pagina di Lo
 
 Corsi e laboratori che desiderino coinvolgere intere coorti possono **integrare CeraLoop nell’attività didattica**. Possiamo coordinare l’attivazione degli account e l’assegnazione dei set, fornire indicazioni per valutazioni coerenti e ripetibili e, su richiesta, restituire una sintesi aggregata dei risultati a fini didattici. Per concordare un coinvolgimento di gruppo nell’ambito dell’offerta formativa, contattateci via email all'indirizzo [**julian.bogdani@uniroma1.it**](mailto:julian.bogdani@uniroma1.it) per un breve incontro di coordinamento.
 
+Se usi CeraLoop nel tuo corso o laboratorio e vuoi comparire in questa pagina come partecipante, scrivici un messaggio all'indirizzo [julian.bogdani@uniroma1.it)](mailto:julian.bogdani@uniroma1.it).
+
 ## Supervisione e contatti
 
 CeraLoop è un progetto del LAD Sapienza, sotto la supervisione di [Julian Bogdani](mailto:julian.bogdani@uniroma1.it) e [Lorenzo Cardarelli](mailto:lorenzo.cardarelli@uniroma1.it). Siamo disponibili a presentazioni del progetto in contesti diversi – workshop, lezioni, laboratori – e a fornire ulteriori informazioni a chi desideri partecipare o integrare l’attività in un corso.
 
-Partecipa ora: https://ceraloop.lad-sapienza.it/ e **grazie in anticipo per il tuo contributo: anche poche valutazioni possono fare la differenza**.
+---
+
+> Partecipa ora: https://ceraloop.lad-sapienza.it/ e **grazie in anticipo per il tuo contributo: anche poche valutazioni possono fare la differenza**.
+
+---
+
+## FAQ (in aggiornamento)
+
+Questa sezione FAQ è in evoluzione e verrà ampliata man mano che la sperimentazione procede.
+
+- **Chi può partecipare?**  
+  Chiunque: esperti/e di ceramica, studenti/esse e persone senza esperienza specifica.
+
+- **Quanto tempo richiede una sessione?**  
+  Anche 5–10 minuti sono utili. Puoi contribuire in più sessioni brevi.
+
+- **Posso interrompere e riprendere più tardi?**  
+  Sì. Il sistema salva l’avanzamento e riprende dal caso successivo.
+
+- **Servono competenze tecniche particolari?**  
+  No. L’interfaccia è guidata: escludi i confronti errati e ordina gli altri.
+
+- **Come sono trattati i miei dati?**  
+  In forma anonima e aggregata. Email solo per distinguere le risposte, mai pubblicata.
+
+- **È possibile usare CeraLoop in un corso?**  
+  Sì. Scrivici per coordinare account, set assegnati e report didattici.
+
+- **Come segnalo problemi o invio feedback?**  
+  Contattaci via email; raccogliamo suggerimenti per migliorare la piattaforma.
