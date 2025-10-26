@@ -7,7 +7,18 @@ inhome: true
 
 # CeraLoop: invito a partecipare alla ricerca collettiva sulla “somiglianza” dei materiali ceramici
 
-CeraLoop è uno studio sperimentale del LAD – Laboratorio di Archeologia Digitale della Sapienza – che invita a contribuire, in modo semplice e guidato, alla costruzione di una base di conoscenza condivisa sui concetti di “somiglianza” e “confronto” applicati ai materiali ceramici in archeologia. Lo studio non intende mettere in discussione la metodologia tradizionale di documentazione, analisi e indagine dei reperti ceramici: al contrario, esplora la possibilità di introdurre funzioni algoritmiche che possano _affiancare_ e _supportare_ il lavoro degli specialisti, offrendo strumenti di orientamento e prioritarizzazione. Allo stesso tempo, l’esperimento ci permette di “misurare” statisticamente e discutere in modo aperto l’idea stessa di “confronto” archeologico.
+**Indice**
+- [Introduzione](#introduzione)
+- [A chi è rivolto](#a-chi-e-rivolto)
+- [Il dataset e cosa ti chiediamo](#il-dataset-e-cosa-ti-chiediamo)
+- [Assegnazione del lavoro](#assegnazione-del-lavoro)
+- [Dati raccolti e privacy](#dati-raccolti-e-privacy)
+- [Come funziona l’app (in breve)](#come-funziona-lapp-in-breve)
+- [Per corsi universitari e laboratori](#per-corsi-universitari-e-laboratori)
+- [Supervisione e contatti](#supervisione-e-contatti)
+
+##  Introduzione
+**CeraLoop** è uno studio sperimentale del LAD – Laboratorio di Archeologia Digitale della Sapienza – che invita a contribuire, in modo semplice e guidato, alla costruzione di una base di conoscenza condivisa sui concetti di “somiglianza” e “confronto” applicati ai materiali ceramici in archeologia. Lo studio non intende mettere in discussione la metodologia tradizionale di documentazione, analisi e indagine dei reperti ceramici: al contrario, esplora la possibilità di introdurre funzioni algoritmiche che possano _affiancare_ e _supportare_ il lavoro degli specialisti, offrendo strumenti di orientamento e prioritarizzazione. Allo stesso tempo, l’esperimento ci permette di “misurare” statisticamente e discutere in modo aperto l’idea stessa di “confronto” archeologico.
 
 Il progetto si inserisce in un programma di ricerca più ampio dedicato all’applicazione di tecniche di _computer vision_ alla documentazione e all’analisi dei materiali archeologici. In questa fase non entriamo nei dettagli tecnici: l’obiettivo è raccogliere valiutazioni provenienti sia da esperti di settire sia da persone senza esperienza specifica, per osservare come si costruisce – nella pratica – il concetto di _somiglianza_ tra profili ceramici.
 
@@ -17,7 +28,7 @@ L’invito è aperto a una platea ampia: specialiste e specialisti del settore c
 
 ## Il dataset e cosa ti chiediamo
 
-L’esperimento lavora su un dataset specifico di circa 20.000 elementi. Per ciascun elemento sono stati generati, con metodi statistici, dieci possibili “simili” all’interno dello stesso dataset. A chi partecipa chiediamo di esprimersi su questi dieci confronti: innanzitutto escludere quelli ritenuti completamente sbagliati; quindi ordinare i rimanenti in base al “significato”/somiglianza, dal più al meno simile. La ripetizione di questo gesto su molti casi ci permette di osservare in modo sistematico come le persone applicano – e interpretano – il concetto di somiglianza nel confronto tra profili ceramici.
+L’esperimento lavora su un dataset specifico di circa 20.000 elementi. Per ciascun elemento sono stati selezionati, con metodi statistici, dieci possibili profili “simili” all’interno dello stesso dataset. A chi partecipa chiediamo di esprimersi su questi dieci confronti: innanzitutto escludere quelli ritenuti completamente sbagliati; quindi ordinare i rimanenti in base alla somiglianza, dal più al meno simile. La ripetizione di questo gesto su molti casi ci permette di osservare in modo sistematico come le persone applicano – e interpretano – il concetto di somiglianza nel confronto tra profili ceramici.
 
 ## Assegnazione del lavoro
 
@@ -29,18 +40,14 @@ Per interpretare meglio i risultati nel tempo raccogliamo alcune informazioni di
 
 ## Come funziona l’app (in breve)
 
-Collegandoti a https://ceraloop.lad-sapienza.it/ è possibile nella pagina di Login creare una nuova utenze. Una volta autenticato con i nuovi dati appena create, trovi, a sinistra, l’immagine di riferimento e, a destra, dieci profili proposti. Il compito è semplice: escludi i confronti che ritieni errati e trascina gli altri per ordinarli dal più al meno simile; quindi salva e il sistema passerà automaticamente al caso successivo. L’esperienza è pensata per essere rapida e ripetibile: puoi contribuire anche con brevi sessioni, quando hai tempo.
+Collegandoti a https://ceraloop.lad-sapienza.it/ è possibile nella pagina di Login creare una nuova utenza. Una volta autenticato con i dati di autenticazione appena salvati, trovi, a sinistra, l’immagine di riferimento e, a destra, i dieci profili proposti. Il compito è semplice: escludi i confronti che ritieni errati e trascina gli altri per ordinarli dal più al meno simile; quindi salva e il sistema passerà automaticamente al caso successivo. L’esperienza è pensata per essere rapida e ripetibile: puoi contribuire anche con brevi sessioni, quando hai tempo.
 
 ## Per corsi universitari e laboratori
 
-Corsi e laboratori che desiderino coinvolgere intere coorti possono integrare CeraLoop nell’attività didattica. Possiamo coordinare l’attivazione degli account e l’assegnazione dei set, fornire indicazioni per valutazioni coerenti e ripetibili e, su richiesta, restituire una sintesi aggregata dei risultati a fini didattici. Per concordare un coinvolgimento “di classe” nell’ambito dell’offerta formativa, contattateci tramite il sito del LAD (sezione Contatti) per un breve incontro di coordinamento.
+Corsi e laboratori che desiderino coinvolgere intere coorti possono **integrare CeraLoop nell’attività didattica**. Possiamo coordinare l’attivazione degli account e l’assegnazione dei set, fornire indicazioni per valutazioni coerenti e ripetibili e, su richiesta, restituire una sintesi aggregata dei risultati a fini didattici. Per concordare un coinvolgimento di gruppo nell’ambito dell’offerta formativa, contattateci via email all'indirizzo [**julian.bogdani@uniroma1.it**](mailto:julian.bogdani@uniroma1.it) per un breve incontro di coordinamento.
 
 ## Supervisione e contatti
 
 CeraLoop è un progetto del LAD Sapienza, sotto la supervisione di [Julian Bogdani](mailto:julian.bogdani@uniroma1.it) e [Lorenzo Cardarelli](mailto:lorenzo.cardarelli@uniroma1.it). Siamo disponibili a presentazioni del progetto in contesti diversi – workshop, lezioni, laboratori – e a fornire ulteriori informazioni a chi desideri partecipare o integrare l’attività in un corso.
 
-Partecipa ora: https://ceraloop.lad-sapienza.it/
-
-—
-
-Grazie per il tuo contributo: anche poche valutazioni possono fare la differenza.
+Partecipa ora: https://ceraloop.lad-sapienza.it/ e **grazie in anticipo per il tuo contributo: anche poche valutazioni possono fare la differenza**.
