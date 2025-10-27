@@ -82,6 +82,9 @@ Questa sezione FAQ è in evoluzione e verrà ampliata man mano che la sperimenta
 - **Chi ha accesso alla mia password**  
   Solo tu ha accesso alla tua password, che viene salvata nel database con diversi passaggi di crittografici.
 
+- **Posso cancellare il mio account?**
+  Certamente! Per cancellare il proprio account ed eliminare dal sistema tutti i propri dati, è necessario inviare un messaggio email a [julian.bogdani@uniroma1.it](mailto:julian.bogdani@uniroma1.it). È molto **importante inviare il messaggio dallo stesso indirizzo email che è stato registrato nel sistema**.
+
 - **È possibile usare CeraLoop in un corso?**  
   Sì. Scrivici per coordinare account, set assegnati e report didattici.
 
