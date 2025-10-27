@@ -79,6 +79,9 @@ Questa sezione FAQ è in evoluzione e verrà ampliata man mano che la sperimenta
 - **Come sono trattati i miei dati?**  
   In forma anonima e aggregata. Email solo per distinguere le risposte, mai pubblicata.
 
+- **Chi ha accesso alla mia password**  
+  Solo tu ha accesso alla tua password, che viene salvata nel database con diversi passaggi di crittografici.
+
 - **È possibile usare CeraLoop in un corso?**  
   Sì. Scrivici per coordinare account, set assegnati e report didattici.
 
