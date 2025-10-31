@@ -32,6 +32,7 @@ inhome: true
   - [Ricerca e sintesi geografica](#ricerca-e-sintesi-geografica)
 - [Installazione e utilizzo](#installazione-e-utilizzo)
 - [Supporto multilingue](#supporto-multilingue)
+- [Supporto per gazetteer esterni](#supporto-per-gazetteer-esterni)
 - [Sviluppo assistito da AI](#sviluppo-assistito-da-ai)
 - [Conclusioni](#conclusioni)
 
@@ -286,6 +287,42 @@ geoNamesFromPdf supporta nativamente:
 - 🇷🇴 **Rumeno** (ro_core_news_lg)
 
 Questa copertura multilingue è particolarmente preziosa in contesti accademici internazionali, dove è comune lavorare con bibliografia in diverse lingue.
+
+## Supporto per gazetteer esterni
+
+Una delle nuove funzionalità di **geoNamesFromPdf** è il supporto per l'utilizzo di gazetteer o liste di toponimi esterne. Questa opzione consente agli utenti di integrare il proprio dataset di nomi geografici, migliorando ulteriormente la precisione e la personalizzazione dello strumento.
+
+### Come funziona
+
+Gli utenti possono fornire un file di testo contenente una lista di toponimi, uno per riga. Durante l'elaborazione, geoNamesFromPdf utilizzerà questa lista per:
+
+- **Riconoscere toponimi specifici** che potrebbero non essere inclusi nei modelli linguistici standard.
+- **Prioritizzare i toponimi forniti** rispetto a quelli rilevati automaticamente.
+
+### Esempio di utilizzo
+
+Per utilizzare un gazetteer esterno, è sufficiente aggiungere l'opzione `--gazetteer` al comando:
+
+```bash
+python geoNamesFromPdf.py documento.pdf --gazetteer lista_toponimi.txt
+```
+
+Dove `lista_toponimi.txt` è un file di testo contenente i toponimi desiderati. Ad esempio:
+
+```
+Pompei
+Ercolano
+Stabia
+Oplontis
+```
+
+### Vantaggi
+
+- **Maggiore precisione**: Ideale per progetti che richiedono il riconoscimento di toponimi specifici o poco comuni.
+- **Flessibilità**: Gli utenti possono creare e aggiornare facilmente le proprie liste di toponimi.
+- **Applicazioni specializzate**: Perfetto per contesti accademici o professionali che necessitano di un focus geografico particolare.
+
+Questa funzionalità amplia le possibilità di utilizzo di geoNamesFromPdf, rendendolo uno strumento ancora più potente e adattabile alle esigenze degli utenti.
 
 ## Sviluppo assistito da AI
 
