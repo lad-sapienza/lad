@@ -7,13 +7,13 @@ livello: avanzato
 img: ./geoNamesFromPdf.jpg
 description: "Presentazione di geoNamesFromPdf, uno strumento open-source per l'estrazione automatica di nomi geografici da documenti PDF, sviluppato per facilitare l'analisi spaziale e l'organizzazione geografica della bibliografia accademica."
 tags:
-  - strumenti-digitali
-  - nlp
-  - geospatial
-  - python
-  - open-source
-  - intelligenza-artificiale
-  - digital-humanities
+  - Strumenti digitali
+  - NLP
+  - Geospatial
+  - Python
+  - Open-source
+  - Intelligenza Artificiale
+  - Digital Humanities
 inhome: true
 ---
 
