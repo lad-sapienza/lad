@@ -34,7 +34,7 @@ const Header = () => {
           </Col>
         </Row>
       </Container>
-      <Navbar className="mb-5 bg-light" expand={true}>
+      <Navbar className="mb-5 bg-light d-print-none" expand={true}>
         <Container>
           <Wrapper>
             <Nav className="d-flex justify-content-around text-center">

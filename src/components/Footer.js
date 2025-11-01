@@ -23,7 +23,7 @@ const Footer = () => {
                 Responsabile scientifico: Julian Bogdani
               </p>
             </Col>
-            <Col md={4} className="d-flex align-items-center mb-3">
+            <Col md={4} className="d-flex align-items-center mb-3 d-print-none">
               <h5>
                 <a
                   href="https://saras.uniroma1.it/"
@@ -34,7 +34,7 @@ const Footer = () => {
                 </a>
               </h5>
             </Col>
-            <Col md={5} className="mb-3">
+            <Col md={5} className="mb-3 d-print-none">
               <h5>
                 Nota sulla <em>privacy</em>
               </h5>

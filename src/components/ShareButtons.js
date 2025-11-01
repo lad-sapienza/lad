@@ -17,7 +17,7 @@ import {
 const size = 40
 
 const ShareButtons = ({ url, title, tags }) => (
-  <div>
+  <div className="d-print-none">
     <BlueskyShareButton
       url={url}
       htmlTitle={title}

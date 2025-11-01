@@ -46,7 +46,7 @@ export default function BlogPost({ data }) {
 
               {post.frontmatter.tags && (
                 <div className="text-center">
-                  <div className="bg-light mb-3 p-3 text-muted d-inline-block">
+                  <div className="bg-light mb-3 p-3 text-muted d-inline-block d-print-none">
                     Tag:&nbsp;
                     {post.frontmatter.tags.join(", ")}
                     {post.frontmatter.licenza && (
@@ -60,7 +60,7 @@ export default function BlogPost({ data }) {
               )}
 
               {post.frontmatter.date && (
-                <p className="text-center text-secondary">
+                <p className="text-center text-secondary d-print-none">
                   Pubblicato il {post.frontmatter.date}
                 </p>
               )}
