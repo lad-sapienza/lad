@@ -3,7 +3,12 @@ module.exports = {
   siteMetadata: {
     title: `LAD`,
     description: `Laboratorio di Archeologia Digitale alla Sapienza`,
+    defaultDescription: `Laboratorio di Archeologia Digitale alla Sapienza - progetti, ricerca e didattica su tecnologie digitali per l'archeologia.`,
     author: `Julian Bogdani`,
+    siteName: `LAD: Laboratorio di Archeologia Digitale alla Sapienza`,
+    titleTemplate: `%s | LAD`,
+    twitter: `@JulianBogdani`,
+    defaultImage: `images/logos/lad-blue.png`,
     siteUrl: `https://lad.saras.uniroma1.it/`,
   },
   plugins: [

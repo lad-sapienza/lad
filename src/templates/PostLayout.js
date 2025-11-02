@@ -33,6 +33,12 @@ export default function BlogPost({ data }) {
           /([^:]\/)\/+/g,
           "$1",
         )}
+        imageAlt={post.frontmatter.didascalia || post.frontmatter.title}
+        isArticle={true}
+        author={post.frontmatter.autore}
+        datePublished={post.frontmatter.dateISO}
+        dateModified={post.frontmatter.lastmod}
+        tags={post.frontmatter.tags}
       />
       <Wrapper>
         <div>
@@ -182,9 +188,10 @@ export const query = graphql`
       fields {
         slug
       }
-      frontmatter {
-        date(formatString: "DD MMMM YYYY", locale: "it-IT")
-        autore
+  frontmatter {
+  date(formatString: "DD MMMM YYYY", locale: "it-IT")
+  dateISO: date
+    autore
         licenza
         livello
         title
