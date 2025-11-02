@@ -36,7 +36,7 @@
     "react-helmet-async": "^2.0.5",
     "react-icons": "^5.5.0",
     "react-share": "^5.2.2",
-    "sass": "^1.91.0",
+    "sass": "^1.93.3",
     "styled-components": "^6.1.19"
   },
   "devDependencies": {
