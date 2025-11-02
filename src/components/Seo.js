@@ -70,6 +70,17 @@ const Seo = ({
         ]
       : [],
     type: isArticle ? "article" : "website",
+    // When this is an article, include article-specific OpenGraph fields
+    ...(isArticle
+      ? {
+          article: {
+            publishedTime: datePublished || null,
+            modifiedTime: dateModified || null,
+            authors: author ? [author] : meta.author ? [meta.author] : [],
+            tags: tags || [],
+          },
+        }
+      : {}),
   };
 
   const twitterHandle = meta.twitter || "";
