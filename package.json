@@ -8,7 +8,7 @@
     "@browniebroke/gatsby-image-gallery": "^8.2.0",
     "@deckdeckgo/highlight-code": "^4.4.0",
     "@react-icons/all-files": "^4.1.0",
-    "ajv": "8.12.0",
+    "ajv": "8.17.1",
     "babel-plugin-styled-components": "^2.1.4",
     "boostrap": "^2.0.0",
     "bootstrap": "^5.3.8",
