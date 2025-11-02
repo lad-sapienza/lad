@@ -14,17 +14,22 @@ Il laboratorio è destinato principalmente agli iscritti alla Sapienza Universit
 Nelle ultime edizioni, il laboratorio GIS è stato affiancato da incontri dedicati alla progettazione, implementazione e utilizzo delle banche dati relazioni, con una introduzione al linguaggio SQL. In particolare i partecipanti hanno imparato a progettare costruire e implementare una banca dati relazionale online usando [Bradypus](/ricerca/bradypus-cloud-databases/), un software sviluppato e mantenuto dal LAD per la facile gestione _online_ di banche dati archeologiche e più in generale legate al mondo dei Beni Culturali.
 
 
-### Edizione 2024/2025
-L'edizione 2024-2025 dei Laboratori Didattici su GIS e Banche Dati Archeologiche sono riservati agli iscritti dei corsi di **Dottorato di Archeologia** e della **Scuola di Specializzazione in Beni Archeologici** della Sapienza. Per il programma, informazioni e l'iscrizione si rimada a questo [questo collegamento](../../notizie/2024-11-24-laboratori-didattici-di-archeologia-digitale-2024-2025/).
+### Edizione 2025-2026
+Staimo lavorando per la definzione del calendario dei **Laboratori Didattici di Archeologia Digitale** per l'anno accademico 2025-2026.
+Come l'anno precedente, la didattica dovrebbe riguardare i seguenti moduli:
+- GIS di Base
+- GIS avanzato
+- Banche dati relazionali
+- Laser Aided Profiler (LAP)
+- Computer Vision e Intelligenza Artificiale
 
-Per il laboratorio didattico sull’utilizzo del **Laser Aided Profiler (LAP)** per la documentazione dei profili ceramici, si rimanda alla [pagina dedicata](../../notizie/2025-01-17-laboratorio-didattico-lap/).
-
-Infine, per il laboratorio sull’**Applicazione di Computer Vision per la gestione di Legacy Data archeologici** si rimanda alla [pagina dedicata](../../notizie/2025-02-28-laboratorio-didattico-ia/).
+Tutte le informazioni necessarie per l'iscrizione verranno pubblicate in questa pagina, man-mano che la programmazione e il calendario dei vari moduli vengono definiti.
 
 ### Edizioni precedenti
-- [Scarica la locandina dell'edizione 2024/2025 del Laboratorio GIS e Banche dati](lab-gis-2024-2025.pdf)
-- [Scarica la locandina dell'edizione 2024/2025 del Laboratorio LAP](../../notizie/2025-01-17-laboratorio-didattico-lap/)
-- [Scarica la locandina dell'edizione 2024/2025 del Laboratorio su Computer Vision](../../notizie/2025-02-28-laboratorio-didattico-ia/LAD-AI-24-25.pdf)
+- Laboratori di Archeologia Digitale a.a. **2024-2025**
+  - Edizione 2024-2025 del Laboratorio **GIS e Banche dati** – [Pagina web](../notizie/2024-11-24-laboratori-didattici-di-archeologia-digitale-2024-2025/) | [Locandina in formato PDF](./didattica/lab-gis-2024-2025.pdf)
+  - [Edizione 2024-2025 del Laboratorio **Laser Aided Profiler (LAP)**](../../notizie/2025-01-17-laboratorio-didattico-lap/)
+  - [Edizione 2024-2025 del Laboratorio **Computer Vision**](./../notizie/2025-02-28-laboratorio-didattico-ia/)
 - [Scarica la locandina dell'edizione 2023/2024](./didattica/lab-gis-2023-2024.pdf)
 - [Scarica la locandina dell'edizione 2022/2023](./didattica/lab-gis-2022-2023.pdf)
 - [Scarica la locandina dell'edizione 2021/2022](./didattica/lab-gis-2021-2022.pdf)
