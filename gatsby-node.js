@@ -43,3 +43,16 @@ exports.createPages = async ({ graphql, actions }) => {
     });
   });
 };
+
+// Ensure optional frontmatter fields like `lastmod` (date modified) are
+// available in the GraphQL schema even if a few markdown files include them.
+// This avoids build-time errors when querying optional fields.
+exports.createSchemaCustomization = ({ actions }) => {
+  const { createTypes } = actions;
+  createTypes(`
+    type MarkdownRemarkFrontmatter @infer {
+      date: Date @dateformat
+      lastmod: Date @dateformat
+    }
+  `);
+};

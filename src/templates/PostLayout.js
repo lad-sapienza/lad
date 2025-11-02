@@ -191,6 +191,7 @@ export const query = graphql`
   frontmatter {
   date(formatString: "DD MMMM YYYY", locale: "it-IT")
   dateISO: date
+    lastmod
     autore
         licenza
         livello
