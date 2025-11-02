@@ -3,6 +3,8 @@ import { withPrefix } from "gatsby"
 
 const Favicon = () => (
   <>
+    {/* ensure root-level /favicon.ico is available for browsers that request it */}
+    <link rel="shortcut icon" href={withPrefix(`/favicon.ico`)} />
     <link rel="shortcut icon" href={withPrefix("favicon/favicon.ico")} />
     <link
       rel="icon"

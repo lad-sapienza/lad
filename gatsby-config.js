@@ -20,6 +20,19 @@ module.exports = {
     `gatsby-plugin-sitemap`,
     'gatsby-plugin-robots-txt',
     {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `LAD`,
+        short_name: `LAD`,
+        start_url: `/`,
+        background_color: `#ffffff`,
+        theme_color: `#151241`,
+        display: `minimal-ui`,
+        // path relative to project root
+        icon: `static/favicon/android-chrome-512x512.png`,
+      },
+    },
+    {
       resolve: `gatsby-plugin-next-seo`,
       options: {
         openGraph: {
