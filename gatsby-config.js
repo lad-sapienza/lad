@@ -32,22 +32,12 @@ module.exports = {
         icon: `static/favicon/android-chrome-512x512.png`,
       },
     },
-    {
-      resolve: `gatsby-plugin-next-seo`,
-      options: {
-        openGraph: {
-          type: 'website',
-          locale: 'it_IT',
-          url: 'https://lad.saras.uniroma1.it/',
-          site_name: 'LAD: Laboratorio di Archeologia Digitale alla Sapienza',
-        },
-        twitter: {
-          handle: '@JulianBogdani',
-          site: '@JulianBogdani',
-          cardType: 'summary_large_image',
-        },
-      }
-    },
+  // Note: Using the runtime `next-seo` package directly in components
+  // instead of the Gatsby plugin. See src/components/Seo.js for details.
+  // gatsby-plugin-offline removed during dependency maintenance because it
+  // pulled transitive vulnerable packages (workbox -> lodash.template). If
+  // you need offline support, consider a modern replacement or re-enable
+  // after a coordinated plugin/Gatsby upgrade.
     {
       resolve: "gatsby-transformer-remark",
       options: {

@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { useStaticQuery, graphql } from "gatsby";
-import { GatsbySeo, ArticleJsonLd } from "gatsby-plugin-next-seo";
+import { Helmet } from "react-helmet-async";
 
 function makeAbsoluteUrl(siteUrl, value) {
   if (!value) return null;
@@ -56,64 +56,71 @@ const Seo = ({
   const resolvedDescription = (description || meta.defaultDescription || "").trim();
   const resolvedTitle = (title || meta.title || "").trim();
 
-  const openGraph = {
-    url: fullUrl,
-    title: resolvedTitle,
-    description: resolvedDescription,
-    site_name: meta.siteName || meta.title,
-    images: resolvedImage
-      ? [
-          {
-            url: resolvedImage,
-            alt: imageAlt || resolvedTitle,
-          },
-        ]
-      : [],
-    type: isArticle ? "article" : "website",
-    // When this is an article, include article-specific OpenGraph fields
-    ...(isArticle
-      ? {
-          article: {
-            publishedTime: datePublished || null,
-            modifiedTime: dateModified || null,
-            authors: author ? [author] : meta.author ? [meta.author] : [],
-            tags: tags || [],
-          },
-        }
-      : {}),
-  };
+  
 
   const twitterHandle = meta.twitter || "";
 
-  return (
-    <>
-      <GatsbySeo
-        title={resolvedTitle}
-        description={resolvedDescription}
-        canonical={fullUrl}
-        titleTemplate={meta.titleTemplate}
-        openGraph={openGraph}
-        twitter={{
-          handle: twitterHandle,
-          site: twitterHandle,
-          cardType: resolvedImage ? "summary_large_image" : "summary",
-        }}
-      />
+  const metaTags = [
+    { name: "description", content: resolvedDescription },
+    { property: "og:title", content: resolvedTitle },
+    { property: "og:description", content: resolvedDescription },
+    { property: "og:type", content: isArticle ? "article" : "website" },
+    { property: "og:url", content: fullUrl },
+    { property: "og:site_name", content: meta.siteName || meta.title },
+  ];
 
-      {isArticle && (
-        <ArticleJsonLd
-          url={fullUrl}
-          title={resolvedTitle}
-          images={resolvedImage ? [resolvedImage] : []}
-          datePublished={datePublished}
-          dateModified={dateModified}
-          authorName={author ? [author] : meta.author ? [meta.author] : []}
-          publisherName={meta.siteName || meta.title}
-          publisherLogo={makeAbsoluteUrl(siteUrl, meta.defaultImage)}
-          description={resolvedDescription}
-        />
+  if (resolvedImage) {
+    metaTags.push({ property: "og:image", content: resolvedImage });
+    metaTags.push({ name: "twitter:card", content: "summary_large_image" });
+    metaTags.push({ name: "twitter:image", content: resolvedImage });
+  } else {
+    metaTags.push({ name: "twitter:card", content: "summary" });
+  }
+
+  if (twitterHandle) {
+    metaTags.push({ name: "twitter:site", content: twitterHandle });
+    metaTags.push({ name: "twitter:creator", content: twitterHandle });
+  }
+
+  // Article JSON-LD
+  let articleJsonLd = null;
+  if (isArticle) {
+    const authors = author ? [author] : meta.author ? [meta.author] : [];
+    articleJsonLd = {
+      '@context': 'https://schema.org',
+      '@type': 'Article',
+      mainEntityOfPage: {
+        '@type': 'WebPage',
+        '@id': fullUrl,
+      },
+      headline: resolvedTitle,
+      description: resolvedDescription,
+      image: resolvedImage ? [resolvedImage] : [],
+      author: authors.map((a) => ({ '@type': 'Person', name: a })),
+      publisher: {
+        '@type': 'Organization',
+        name: meta.siteName || meta.title,
+        logo: { '@type': 'ImageObject', url: makeAbsoluteUrl(siteUrl, meta.defaultImage) },
+      },
+      datePublished: datePublished || null,
+      dateModified: dateModified || null,
+      keywords: tags && tags.length ? tags.join(', ') : undefined,
+    };
+  }
+
+  return (
+    <Helmet>
+      <title>{meta.titleTemplate ? meta.titleTemplate.replace('%s', resolvedTitle) : resolvedTitle}</title>
+      <link rel="canonical" href={fullUrl} />
+      {metaTags.map((m, i) => {
+        if (m.name) return <meta key={i} name={m.name} content={m.content} />;
+        return <meta key={i} property={m.property} content={m.content} />;
+      })}
+
+      {isArticle && articleJsonLd && (
+        <script type="application/ld+json">{JSON.stringify(articleJsonLd)}</script>
       )}
-    </>
+    </Helmet>
   );
 };
 
