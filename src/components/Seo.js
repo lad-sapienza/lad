@@ -24,10 +24,10 @@ const Seo = ({
   pathname,
   url,
   author,
-  isArticle,
+  isArticle = false,
   datePublished,
   dateModified,
-  tags,
+  tags = [],
 }) => {
   const { site } = useStaticQuery(
     graphql`
@@ -120,9 +120,8 @@ Seo.propTypes = {
   tags: PropTypes.arrayOf(PropTypes.string),
 };
 
-Seo.defaultProps = {
-  isArticle: false,
-  tags: [],
-};
+// Note: default props for function components are provided via
+// default parameters in the function signature (React will remove
+// support for defaultProps on function components in a future release).
 
 export default Seo;
