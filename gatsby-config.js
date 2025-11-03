@@ -1,7 +1,20 @@
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+/**
+ * Configure your Gatsby site with this file.
+ *
+ * See: https://www.gatsbyjs.com/docs/reference/config-files/gatsby-config/
+ */
+
+/**
+ * @type {import('gatsby').GatsbyConfig}
+ */
+
 module.exports = {
-  pathPrefix: '/',
+  pathPrefix: '/', //process.env.NODE_ENV === "production" ? "/sCMS/" : "/",
   siteMetadata: {
-    title: `LAD`,
+    title: `LAD @Sapienza`,
     description: `Laboratorio di Archeologia Digitale alla Sapienza`,
     defaultDescription: `Laboratorio di Archeologia Digitale alla Sapienza - progetti, ricerca e didattica su tecnologie digitali per l'archeologia.`,
     author: `Julian Bogdani`,
@@ -12,87 +25,66 @@ module.exports = {
     siteUrl: `https://lad.saras.uniroma1.it/`,
   },
   plugins: [
-    `gatsby-plugin-styled-components`,
     `gatsby-plugin-image`,
-    `gatsby-plugin-sharp`,
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sass`,
-    `gatsby-plugin-sitemap`,
-    'gatsby-plugin-robots-txt',
     {
-      resolve: `gatsby-plugin-manifest`,
+      resolve: `gatsby-plugin-mdx`,
       options: {
-        name: `LAD`,
-        short_name: `LAD`,
-        start_url: `/`,
-        background_color: `#ffffff`,
-        theme_color: `#151241`,
-        display: `minimal-ui`,
-        // path relative to project root
-        icon: `static/favicon/android-chrome-512x512.png`,
-      },
-    },
-  // Note: Using the runtime `next-seo` package directly in components
-  // instead of the Gatsby plugin. See src/components/Seo.js for details.
-  // gatsby-plugin-offline removed during dependency maintenance because it
-  // pulled transitive vulnerable packages (workbox -> lodash.template). If
-  // you need offline support, consider a modern replacement or re-enable
-  // after a coordinated plugin/Gatsby upgrade.
-    {
-      resolve: "gatsby-transformer-remark",
-      options: {
-        gfm: true,
-        footnotes: true,
-        plugins: [
-          `gatsby-remark-copy-linked-files`,
+        extensions: [`.md`, `.mdx`],
+        gatsbyRemarkPlugins: [
           `gatsby-remark-autolink-headers`,
           {
-            resolve: `gatsby-remark-highlight-code`,
+            resolve: `gatsby-remark-prismjs`,
             options: {
-              terminal: "carbon",
-              theme: "one-dark",
-              lineNumbers: true
-            }
-          },
-          {
-            resolve: `gatsby-remark-images`,
-            options: {
-              maxWidth: 800,
+              classPrefix: "language-",
+              inlineCodeMarker: null,
+              aliases: {},
+              showLineNumbers: true,
+              noInlineHighlight: false,
             },
           },
-        ]
-      },
-    },
-    {
-      resolve: "gatsby-source-filesystem",
-      options: {
-        name: "images",
-        path: `${__dirname}/static/images`,
-      },
-    },
-    {
-      resolve: `gatsby-plugin-google-fonts`,
-      options: {
-        fonts: [
-          `Lora`,
-          `d:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700`,
         ],
-        display: "swap",
       },
     },
+    `gatsby-plugin-styled-components`,
     {
-      resolve: "gatsby-source-filesystem",
+      resolve: `gatsby-source-filesystem`,
       options: {
-        name: "markdown",
-        path: `${__dirname}/posts/`,
+        name: `contents`,
+        path: `${__dirname}/src/usr/contents`,
       },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `pages`,
-        path: `${__dirname}/src/pages/`,
+        name: `images`,
+        path: `${__dirname}/src/usr/images`,
+      },
+    },
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-plugin-sass`,
+      options: { implementation: require("sass") },
+    },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `gatsby-starter-default`,
+        short_name: `starter`,
+        start_url: `/`,
+        background_color: `#663399`,
+        // This will impact how browsers show your PWA/website
+        // https://css-tricks.com/meta-theme-color-and-trickery/
+        // theme_color: `#663399`,
+        display: `minimal-ui`,
+        icon: `src/usr/images/lad-rect.png`, // This path is relative to the root of the site.
+      },
+    },
+    {
+      resolve: "gatsby-plugin-react-leaflet",
+      options: {
+        linkStyles: true, // (default: true) Enable/disable loading stylesheets via CDN
       },
     },
   ],
-};
+}

@@ -1,22 +1,39 @@
-//import
-import React from "react";
-import Layout from "../templates/Layout";
-import { Container} from "react-bootstrap";
-import Favicon from "../components/Favicon";
+import * as React from "react"
+import { graphql } from "gatsby"
+import Layout from "../usr/layout/layout"
+import { buildSeoData } from "../modules/seo"
 
-const Errore404 = () => {
+const NotFoundPage = () => (
+  <Layout>
+    <h1>Oh! We are sorry...</h1>
+    <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
+  </Layout>
+)
+
+export function Head({ data }) {
+  const seoData = buildSeoData({
+    title: "404: Not Found",
+    description: "The page you are looking for does not exist.",
+    siteMetadata: data.site.siteMetadata,
+  })
+
   return (
-    <Layout>
-      <Container>
-        <h1>Errore: risorsa non trovata</h1>
-          <p>Siamo spiacenti, ma non è stato possibile trovare il contenuto richiesto.</p>
-          <p>Si prega di segnalare questo errore all'indirizzo <a href="julian.bogdani@uniroma1.it" title="Segnalateci un errore">julian.bogdani@uniroma1.it</a> e cercheremo di risolverlo il prima possibile.</p>
-      </Container>
-    </Layout>
-  );
-};
+    <>
+      <title>{seoData.pageTitle}</title>
+      {seoData.metaTags.map((m, i) => {
+        if (m.name) return <meta key={i} name={m.name} content={m.content} />
+        return <meta key={i} property={m.property} content={m.content} />
+      })}
+    </>
+  )
+}
 
-export default Errore404;
+export const query = graphql`
+  query {
+    site {
+      ...SeoSiteMetadata
+    }
+  }
+`
 
-export const Head = () => <Favicon />
-
+export default NotFoundPage

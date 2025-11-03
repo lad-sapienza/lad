@@ -1,11 +1,12 @@
-import React from "react";
-import { HelmetProvider } from "react-helmet-async";
+/**
+ * Implement Gatsby's SSR (Server Side Rendering) APIs in this file.
+ *
+ * See: https://www.gatsbyjs.com/docs/reference/config-files/gatsby-ssr/
+ */
 
 /**
- * Wrap the root element during SSR with HelmetProvider so react-helmet-async
- * has a context for server rendering.
+ * @type {import('gatsby').GatsbySSR['onRenderBody']}
  */
-export const wrapRootElement = ({ element }) => {
-  const helmetContext = {};
-  return <HelmetProvider context={helmetContext}>{element}</HelmetProvider>;
-};
+export const onRenderBody = ({ setHtmlAttributes }) => {
+  setHtmlAttributes({ lang: 'en' })
+}

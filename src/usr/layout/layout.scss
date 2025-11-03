@@ -1,0 +1,60 @@
+//Here you can customize bootstrap
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+
+$primary: #663399;
+@import "~bootstrap/scss/bootstrap.scss";
+
+$blueLad: #1963f7;
+
+a {
+  text-decoration: none !important;
+  &:hover {
+    text-decoration: none;
+    color: $blueLad;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Lora", serif !important;
+  a {
+    color: rgb(33, 37, 41) !important;
+    &:hover {
+      color: $blueLad !important;
+    }
+  }
+}
+
+h1 {
+  margin-bottom: 3rem !important;
+  @media (min-width: 576px) {
+    margin-bottom: 3rem !important;
+  }
+}
+h2 {
+  font-weight: 200 !important;
+}
+h3 {
+  font-weight: 100 !important;
+}
+
+blockquote {
+  padding-left: 1rem !important;
+  margin-left: 1rem !important;
+  margin-right: 2rem !important;
+  border-left: 1px solid $blueLad;
+}
+
+span.gatsby-resp-image-wrapper + em {
+  display: block;
+  text-align: center;
+  margin-top: 0.5em; /* optional spacing */
+  padding-bottom: 1.5em;
+  margin-bottom: 1em;
+  color: #677077;
+  border-bottom: 1px solid #ddd;
+}
