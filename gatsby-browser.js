@@ -1,11 +1,5 @@
-import React from "react";
-import { HelmetProvider } from "react-helmet-async";
-
-/**
- * Wrap the root element with HelmetProvider so react-helmet-async has a context.
- * This prevents runtime errors where Helmet tries to access an undefined context.
- */
-export const wrapRootElement = ({ element }) => {
-	const helmetContext = {};
-	return <HelmetProvider context={helmetContext}>{element}</HelmetProvider>;
-};
+import "bootstrap/dist/js/bootstrap.min.js"
+import "prismjs/prism"
+import "prism-themes/themes/prism-vsc-dark-plus.min.css"
+import "prismjs/plugins/line-numbers/prism-line-numbers.css"
+import "prismjs/components/prism-bash"

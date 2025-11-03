@@ -1,58 +1,84 @@
-const path = require(`path`);
-const { createFilePath } = require(`gatsby-source-filesystem`);
+const path = require("path")
+const postTemplate = path.resolve(`./src/templates/contents.jsx`)
 
-exports.onCreateNode = ({ node, getNode, actions }) => {
-  const { createNodeField } = actions;
+exports.createSchemaCustomization = ({ actions }) => {
+  const { createTypes } = actions
+  const typeDefs = `
+    type MdxFrontmatter {
+      img: File @fileByRelativePath
+      template: String
+      author: String
+      tags: [String]
+    }
+    type SiteSiteMetadata {
+      defaultDescription: String
+    }
+  `
+  createTypes(typeDefs)
+}
 
-  if (node.internal.type === `MarkdownRemark`) {
-    const slug = createFilePath({ node, getNode, basePath: `pages`, trailingSlash: true });
+exports.createPages = async ({ graphql, actions, reporter }) => {
+  const { createPage } = actions
 
-    createNodeField({
-      node,
-      name: `slug`,
-      value: slug,
-    });
-  }
-};
-
-exports.createPages = async ({ graphql, actions }) => {
-  const { createPage } = actions;
   const result = await graphql(`
     query {
-      allMarkdownRemark (filter: { frontmatter: {title: {ne: "Dummy content"}}}){
-        edges {
-          node {
-            fields {
-              slug
-            }
+      allMdx {
+        nodes {
+          id
+          frontmatter {
+            description
+            slug
+            title
+          }
+          internal {
+            contentFilePath
           }
         }
       }
     }
-  `);
+  `)
 
-  result.data.allMarkdownRemark.edges.forEach(({ node }) => {
-    createPage({
-      path: node.fields.slug,
-      component: path.resolve(`./src/templates/PostLayout.js`),
-      context: {
-        // Data passed to context is available
-        // in page queries as GraphQL variables.
-        slug: node.fields.slug,
-      },
-    });
-  });
-};
+  if (result.errors) {
+    reporter.panicOnBuild("Error loading MDX result", result.errors)
+  }
 
-// Ensure optional frontmatter fields like `lastmod` (date modified) are
-// available in the GraphQL schema even if a few markdown files include them.
-// This avoids build-time errors when querying optional fields.
-exports.createSchemaCustomization = ({ actions }) => {
-  const { createTypes } = actions;
-  createTypes(`
-    type MarkdownRemarkFrontmatter @infer {
-      date: Date @dateformat
-      lastmod: Date @dateformat
+  // Create blog post pages.
+  const posts = result.data.allMdx.nodes
+  posts.forEach(node => {
+    let pagePath
+
+    const slug = node.frontmatter && node.frontmatter.slug
+
+    if (slug) {
+      // If explicit slug is provided, honor it (treat "home" as root)
+      pagePath = slug === "home" ? "/" : slug
+    } else {
+      // Derive path from file system location under src/usr/contents
+      const filePath = node.internal.contentFilePath
+      let relativePath = path.relative(
+        path.join(__dirname, "src/usr/contents"),
+        filePath
+      )
+
+      // Normalize separators to URL-style forward slashes
+      relativePath = relativePath.split(path.sep).join('/')
+
+      // Remove trailing index.mdx, index.md, .mdx, or .md extension
+      relativePath = relativePath
+        .replace(/\/index\.mdx$/i, '')
+        .replace(/\/index\.md$/i, '')
+        .replace(/\.mdx$/i, '')
+        .replace(/\.md$/i, '')
+
+      // Ensure a leading slash and use '/' as root for empty
+      pagePath = '/' + (relativePath === '' ? '' : relativePath)
+      if (pagePath === '/home') pagePath = '/'
     }
-  `);
-};
+
+    createPage({
+      path: pagePath,
+      component: `${postTemplate}?__contentFilePath=${node.internal.contentFilePath}`,
+      context: { id: node.id },
+    })
+  })
+}

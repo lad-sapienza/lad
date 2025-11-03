@@ -1,66 +1,96 @@
 {
-  "name": "lad-sito-web",
-  "private": true,
-  "description": "Sito web ufficiale del LAD: Laboratorio di Archeologia Digitale alla Sapienza",
-  "version": "1.4.0",
-  "author": "Julian Bogdani <julian.bogdani@uniroma1.it>",
+  "name": "@lad-sapienza/scms",
+  "private": false,
+  "description": "A complete starter, built with love by LAD @Sapienza and based on Gatsby.js, React, Bootstrap and other open source libraries to easily publish research data as static sites",
+  "version": "5.4.1",
+  "author": {
+    "name": "Julian Bogdani",
+    "email": "julian.bogdani@uniroma1.it",
+    "url": "https://lad.saras.uniroma1.it"
+  },
+  "contributors": [
+    {
+      "name": "Eleonora Iacopini",
+      "email": "eleonora.iacopini@uniroma1.it",
+      "url": "https://lad.saras.uniroma1.it"
+    },
+    {
+      "name": "Erasmo Di Fonso",
+      "email": "erasmo.difonso@uniroma1.it",
+      "url": "https://lad.saras.uniroma1.it"
+    }
+  ],
   "dependencies": {
-    "@browniebroke/gatsby-image-gallery": "^8.2.0",
-    "@deckdeckgo/highlight-code": "^4.4.0",
-    "@react-icons/all-files": "^4.1.0",
-    "ajv": "8.17.1",
+    "@mdx-js/react": "^3.1.1",
+    "@vis.gl/react-maplibre": "^8.1.0",
+    "@viz-js/viz": "^3.20.0",
     "babel-plugin-styled-components": "^2.1.4",
-    "boostrap": "^2.0.0",
     "bootstrap": "^5.3.8",
-    "gatsby": "^5.15.0",
-    "gatsby-plugin-google-fonts": "^1.0.1",
-    "gatsby-plugin-image": "^3.15.0",
-    "gatsby-plugin-manifest": "^5.15.0",
-    "gatsby-plugin-robots-txt": "^1.8.0",
-    "gatsby-plugin-sass": "^6.15.0",
-    "gatsby-plugin-sharp": "^5.15.0",
-    "gatsby-plugin-sitemap": "^6.15.0",
-    "gatsby-plugin-styled-components": "^6.15.0",
-    "gatsby-remark-autolink-headers": "^6.15.0",
-    "gatsby-remark-copy-linked-files": "^6.15.0",
-    "gatsby-remark-highlight-code": "^3.3.0",
-    "gatsby-remark-images": "^7.15.0",
-    "gatsby-source-filesystem": "^5.15.0",
-    "gatsby-transformer-remark": "^6.15.0",
-    "gatsby-transformer-sharp": "^5.15.0",
-    "prop-types": "^15.7.2",
+    "csvtojson": "^2.0.14",
+    "d3": "^7.9.0",
+    "gatsby": "5.14.5",
+    "gatsby-plugin-image": "3.14.0",
+    "gatsby-plugin-manifest": "5.14.0",
+    "gatsby-plugin-mdx": "5.14.1",
+    "gatsby-plugin-react-leaflet": "^4.0.3",
+    "gatsby-plugin-sass": "6.14.0",
+    "gatsby-plugin-sharp": "5.14.0",
+    "gatsby-plugin-styled-components": "6.14.0",
+    "gatsby-remark-autolink-headers": "6.14.0",
+    "gatsby-remark-prismjs": "^7.15.0",
+    "gatsby-source-filesystem": "5.14.0",
+    "gatsby-transformer-sharp": "5.14.0",
+    "geojson-bbox": "^0.0.1",
+    "leaflet": "^1.9.4",
+    "maplibre-gl": "^5.10.0",
+    "photoswipe": "^5.4.4",
+    "prism-themes": "^1.9.0",
+    "prismjs": "^1.30.0",
     "react": "^18.3.1",
     "react-bootstrap": "^2.10.10",
+    "react-bootstrap-icons": "^1.11.6",
+    "react-data-table-component": "^7.7.0",
     "react-dom": "^18.3.1",
-    "react-helmet-async": "^2.0.5",
     "react-icons": "^5.5.0",
+    "react-leaflet": "^4.2.1",
+    "react-photoswipe-gallery": "^4.0.0",
+    "react-router-dom": "^6.30.1",
     "react-share": "^5.2.2",
-    "sass": "^1.93.3",
+    "react-syntax-highlighter": "^15.6.6",
     "styled-components": "^6.1.19"
   },
   "devDependencies": {
-    "prettier": "^3.6.2"
+    "ajv": "^8.17.1",
+    "prettier": "^3.6.2",
+    "sass": "^1.93.3"
   },
   "keywords": [
-    "Archeologia digitale",
-    "Sapienza Università di Roma",
-    "Informatica umanistica",
-    "Laboratori didattici"
+    "gatsby",
+    "static site builder",
+    "research data publishing",
+    "datatable",
+    "leaflet",
+    "maplibre"
   ],
   "license": "0BSD",
   "scripts": {
-    "build": "gatsby build --prefix-paths",
-    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md,css}\"",
     "start": "gatsby develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
+    "upgrade-main": "command -v rsync >/dev/null && mkdir tmp && wget https://github.com/lab-archeologia-digitale/sCMS/archive/refs/heads/main.zip -O tmp/scms.zip && unzip tmp/scms.zip -d tmp/ && rsync -a  --exclude .cache --exclude .env.development --exclude .git --exclude .gitignore --exclude gatsby-config.js --exclude node_modules --exclude public --exclude README.md --exclude tmp --exclude src/usr --exclude static --delete tmp/sCMS-main/ . && rm -rf tmp",
+    "upgrade-dev": "command -v rsync >/dev/null && mkdir tmp && wget https://github.com/lab-archeologia-digitale/sCMS/archive/refs/heads/dev.zip -O tmp/scms.zip && unzip tmp/scms.zip -d tmp/ && rsync -a  --exclude .cache --exclude .env.development --exclude .git --exclude .gitignore --exclude gatsby-config.js --exclude node_modules --exclude public --exclude README.md --exclude tmp --exclude src/usr --exclude static --delete tmp/sCMS-dev/ . && rm -rf tmp",
     "deploy": "gatsby build --prefix-paths && rsync -arvzu --delete --filter='P .ssh' --filter='P .bash_history' --filter='P .screenrc' public/ lad:"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/lab-archeologia-digitale/lad/"
+    "url": "git+https://github.com/lad-sapienza/sCMS.git"
   },
   "bugs": {
-    "url": "https://github.com/lab-archeologia-digitale/lad/issues"
-  }
+    "url": "https://github.com/lad-sapienza/sCMS/issues"
+  },
+  "homepage": "https://scms.lad-sapienza.it",
+  "main": "gatsby-browser.js"
 }

@@ -1,0 +1,274 @@
+//import
+import React from "react";
+import styled from "styled-components";
+
+//other
+import { Card, Row, Col } from "react-bootstrap";
+import { FaGithub, FaTwitter, FaUniversity, FaOrcid } from "react-icons/fa";
+import { SiAcademia, SiResearchgate, SiBluesky } from "react-icons/si";
+import { GiIceIris } from "react-icons/gi";
+import { RiCalendarScheduleFill } from "react-icons/ri";
+
+import jbImg from "../images/julian-bogdani.jpg";
+import lcImg from "../images/lorenzo-cardarelli.jpg";
+import edfImg from "../images/erasmo-di-fonso.jpg";
+import naImg from "../images/nadia-aleotti.jpg";
+import fdaImg from "../images/francesca-dambola.jpg";
+import ddeImg from "../images/domizia-derasmo.jpg";
+import prImg from "../images/paolo-rosati.jpg";
+import eiImg from "../images/eleonora-iacopini.jpg";
+
+//markup
+
+const Team = () => {
+  const jb = {
+    name: "Julian Bogdani",
+    image: jbImg,
+    position: "Responsabile scientifico del laboratorio",
+    affiliation:
+      "Professore Associato di Metodologie della Ricerca Archeologica, Dip. SARAS",
+    uni: "https://purl.org/lad/jb",
+    orcid: "https://orcid.org/0000-0001-5250-927X",
+    github: "https://github.com/jbogdani",
+    academia: "https://uniroma1.academia.edu/JulianBogdani",
+    iris: "https://iris.uniroma1.it/browse?type=author&authority=rp62440&authority_lang=en",
+    researchgate: "https://www.researchgate.net/profile/Julian-Bogdani",
+    twitter: "https://twitter.com/JulianBogdani",
+    bluesky: "https://bsky.app/profile/jbogdani.bsky.social",
+    apmt: "https://apmt.day/julian.bogdani%40uniroma1.it/book/",
+  };
+  const teamData = [
+    {
+      name: "Lorenzo Cardarelli",
+      image: lcImg,
+      position: "Membro del laboratorio",
+      affiliation:
+        "Assegnista di ricerca, Dip. Scienze dell'Antichità, Sapienza",
+      iris: "https://iris.uniroma1.it/cris/rp/rp275041",
+      academia: "https://uniroma1.academia.edu/LorenzoCardarelli",
+      researchgate: "https://www.researchgate.net/profile/Lorenzo-Cardarelli-2",
+      github: "https://github.com/lrncrd",
+      orcid: "https://orcid.org/0000-0002-2436-9967",
+    },
+    {
+      name: "Erasmo Di Fonso",
+      image: edfImg,
+      position: "Membro del laboratorio",
+      affiliation: "Assegnista di ricerca, Dip. Istituto Studi Orientali (ISO), Sapienza",
+      github: "https://github.com/erasmdif",
+    },
+    {
+      name: "Nadia Aleotti",
+      image: naImg,
+      position: "Membro del laboratorio",
+      affiliation:
+        "Assegnista di ricerca Metodologie di Ricerca Archeologica, Dip. SARAS, Sapienza",
+      academia: "https://uniroma1.academia.edu/NadiaAleotti",
+      researchgate: "https://www.researchgate.net/profile/Nadia-Aleotti",
+    },
+    {
+      name: "Francesca D'Ambola",
+      image: fdaImg,
+      position: "Membro del laboratorio",
+      affiliation:
+        "Dottoranda in Archeologia, Dip. Scienze dell'Antichità, Sapienza",
+      academia: "https://uniroma1.academia.edu/FrancescaDAmbola",
+      iris: "https://iris.uniroma1.it/cris/rp/rp338805",
+      researchgate: "https://www.researchgate.net/profile/Francesca-Dambola",
+    },
+    {
+      name: "Domizia D'Erasmo",
+      image: ddeImg,
+      position: "Membro del laboratorio",
+      affiliation:
+        "Dottoranda in Archeologia, Dip. Scienze dell'Antichità, Sapienza",
+      github: "https://github.com/ddomizia",
+      academia: "https://uniroma1.academia.edu/domiziaderasmo",
+      iris: "https://iris.uniroma1.it/simple-search?query=Domizia+D%27Erasmo&needescape=1",
+      researchgate: "https://www.researchgate.net/profile/Domizia_Derasmo",
+      twitter: "https://twitter.com/domizzzia",
+    },
+    {
+      name: "Paolo Rosati",
+      image: prImg,
+      position: "Membro del laboratorio",
+      affiliation: "Assegnista di ricerca presso il Dip. SARAS, Sapienza",
+      academia: "https://uniroma1.academia.edu/RosatiPaolo",
+      researchgate: "https://www.researchgate.net/profile/Paolo-Rosati-2",
+    },
+    {
+      name: "Eleonora Iacopini",
+      image: eiImg,
+      position: "Membro del laboratorio",
+      affiliation:
+        "Assegnista di ricerca di Metodologie di Ricerca Archeologica, Dip. SARAS, Sapienza",
+      iris: "https://iris.uniroma1.it/simple-search?query=iacopini+eleonora&needescape=1",
+      academia: "https://uniroma1.academia.edu/EleonoraIacopini",
+      researchgate: "https://www.researchgate.net/profile/Eleonora_Iacopini",
+      github: "https://github.com/eiacopini",
+    },
+    
+  ];
+
+  const iconList = [
+    {
+      id: "uni",
+      label: "Sito istituzionale",
+      icon: <FaUniversity />,
+    },
+    {
+      id: "orcid",
+      label: "ORCID (Open Researcher and Contributor ID)",
+      icon: <FaOrcid />,
+    },
+    {
+      id: "github",
+      label: "GitHub",
+      icon: <FaGithub />,
+    },
+    {
+      id: "academia",
+      label: "Academia.edu",
+      icon: <SiAcademia />,
+    },
+    {
+      id: "iris",
+      label: "Repository IRIS",
+      icon: <GiIceIris />,
+    },
+    {
+      id: "researchgate",
+      label: "Research Gate",
+      icon: <SiResearchgate />,
+    },
+    {
+      id: "twitter",
+      label: "X",
+      icon: <FaTwitter />,
+    },
+    {
+      id: "bluesky",
+      label: "BlueSky",
+      icon: <SiBluesky />,
+    },
+    {
+      id: "apmt",
+      label: "Fissa un appuntamento",
+      icon: <RiCalendarScheduleFill />,
+    },
+  ];
+
+  return (
+    <Wrapper>
+      <h2 className="border-bottom">Chi siamo</h2>
+      <Row className="py-5">
+        <Col md="6" lg="4">
+          <Card>
+            <Card.Img
+              variant="top"
+              src={jb.image}
+              alt={`LAD ${jb.position}: ${jb.name}`}
+            />
+          </Card>
+        </Col>
+        <Col>
+          <Card>
+            <Card.Body>
+              <Card.Title>{jb.name}</Card.Title>
+              <Card.Text className="position">{jb.position}</Card.Text>
+              <Card.Text className="dipartimento">{jb.affiliation}</Card.Text>
+              <Card.Text className="icon">
+                {iconList.map((i, ik) => {
+                  if (jb[i.id]) {
+                    return (
+                      <a href={jb[i.id]} title={i.label} key={ik}>
+                        {i.icon}
+                      </a>
+                    );
+                  } else {
+                    return "";
+                  }
+                })}
+              </Card.Text>
+            </Card.Body>
+          </Card>
+        </Col>
+      </Row>
+
+      <Row>
+        {teamData.map((m, mk) => {
+          return (
+            <Col xs sm={6} md={6} lg={4} key={mk}>
+              <Card>
+                <Card.Img
+                  variant="top"
+                  src={m.image}
+                  alt={`LAD ${m.position}: ${m.name}`}
+                />
+                <Card.Body>
+                  <Card.Title>{m.name}</Card.Title>
+                  <Card.Text className="position">{m.position}</Card.Text>
+                  <Card.Text className="dipartimento">
+                    {m.affiliation}
+                  </Card.Text>
+                  <Card.Text className="icon">
+                    {iconList.map((i, ik) => {
+                      if (m[i.id]) {
+                        return (
+                          <a href={m[i.id]} title={i.label} key={ik}>
+                            {i.icon}
+                          </a>
+                        );
+                      } else {
+                        return "";
+                      }
+                    })}
+                  </Card.Text>
+                </Card.Body>
+              </Card>
+            </Col>
+          );
+        })}
+      </Row>
+    </Wrapper>
+  );
+};
+
+const Wrapper = styled.section`
+  img {
+    filter: grayscale(100%);
+    &:hover {
+      filter: none;
+    }
+  }
+  svg {
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
+  }
+  .card {
+    padding: 0.5rem;
+    border: none;
+  }
+  .card-title {
+    font-family: "Lora", serif !important;
+    font-weight: 900;
+    font-size: 1.2rem;
+    text-align: center;
+  }
+  .card-text.dipartimento {
+    font-size: 1rem !important;
+    text-align: center;
+  }
+  .icon {
+    text-align: center;
+  }
+  .card-text.position {
+    font-family: "Lora", serif !important;
+    font-weight: 800;
+    font-size: 1rem !important;
+    text-align: center;
+    line-height: 1.2rem;
+  }
+`;
+
+export default Team;
