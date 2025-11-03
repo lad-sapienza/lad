@@ -20,10 +20,15 @@ export default function PageTemplate({ data, children }) {
 }
 
 export function Head({ data, location }) {
+  if (!data || !data.mdx || !data.site) {
+    console.warn('Missing data, mdx, or site in Head component')
+    return null
+  }
+  
   const { mdx, site } = data
   
-  if (!mdx || !mdx.frontmatter) {
-    console.warn('Missing mdx or frontmatter data in Head component')
+  if (!mdx.frontmatter) {
+    console.warn('Missing frontmatter data in Head component')
     return null
   }
   
