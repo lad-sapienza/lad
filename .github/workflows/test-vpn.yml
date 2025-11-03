@@ -55,26 +55,29 @@ jobs:
           echo "VPN Gateway: ${{ secrets.VPN_GATEWAY }}"
           echo "VPN Username: ${{ secrets.VPN_USERNAME }}"
           
-          # Create password file
-          echo "${{ secrets.VPN_PASSWORD }}" > /tmp/vpn_password
-          
-          # Try to connect
+          # SNX connection in non-interactive mode
           echo "Connecting to VPN..."
-          sudo snx -s ${{ secrets.VPN_GATEWAY }} \
-               -u ${{ secrets.VPN_USERNAME }} \
-               -p /tmp/vpn_password \
-               -auto || {
+          echo "${{ secrets.VPN_PASSWORD }}" | sudo snx \
+               -s ${{ secrets.VPN_GATEWAY }} \
+               -u ${{ secrets.VPN_USERNAME }} || {
             echo "❌ VPN connection failed"
-            rm -f /tmp/vpn_password
+            echo "Checking SNX process..."
+            ps aux | grep snx
             exit 1
           }
           
-          # Clean up password
-          rm -f /tmp/vpn_password
-          
-          # Wait for connection
+          # Wait for connection to establish
           echo "Waiting for VPN connection to establish..."
-          sleep 10
+          sleep 15
+          
+          # Check if SNX is running
+          echo "Checking SNX process..."
+          if ps aux | grep -v grep | grep snx; then
+            echo "✅ SNX process is running"
+          else
+            echo "❌ SNX process not found"
+            exit 1
+          fi
           
           # Check VPN interface
           echo "Checking VPN interface..."
