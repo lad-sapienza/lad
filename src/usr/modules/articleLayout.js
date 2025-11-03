@@ -33,6 +33,18 @@ const TableOfContents = ({ toc }) => {
 
 
 const ArticleLayout = ({ children, post, pageUrl }) => {
+  // Safety check for post and frontmatter
+  if (!post || !post.frontmatter) {
+    console.warn('ArticleLayout: Missing post or frontmatter');
+    return (
+      <Wrapper>
+        <Container className="post-container">
+          <div className="post-content">{children}</div>
+        </Container>
+      </Wrapper>
+    );
+  }
+  
   return (
     <Wrapper>
       <div>
@@ -72,7 +84,7 @@ const ArticleLayout = ({ children, post, pageUrl }) => {
             />
           </div>
 
-          {post.frontmatter.img && (
+          {post.frontmatter.img && post.frontmatter.img.childImageSharp && post.frontmatter.img.childImageSharp.gatsbyImageData && (
             <div className="post-image">
               <figure>
                 <GatsbyImage
