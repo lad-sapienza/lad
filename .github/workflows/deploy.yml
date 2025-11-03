@@ -28,6 +28,17 @@ jobs:
           node-version: '18.x'
           cache: 'npm'
 
+      # Cache Gatsby build artifacts
+      - name: Cache Gatsby build
+        uses: actions/cache@v4
+        with:
+          path: |
+            .cache
+            public
+          key: ${{ runner.os }}-gatsby-build-${{ hashFiles('package-lock.json', 'gatsby-config.js', 'src/**') }}
+          restore-keys: |
+            ${{ runner.os }}-gatsby-build-
+
       # Install dependencies
       - name: Install dependencies
         run: npm ci
@@ -38,6 +49,8 @@ jobs:
         env:
           # Add any environment variables needed for build
           NODE_ENV: production
+          # Limit Sharp concurrency to avoid memory issues
+          GATSBY_CPU_COUNT: 2
           # If you need specific build flags, add them here
 
       # Install SNX VPN client
