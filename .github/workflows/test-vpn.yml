@@ -11,17 +11,26 @@ jobs:
     steps:
       - name: Install SNX dependencies
         run: |
+          sudo dpkg --add-architecture i386
           sudo apt-get update
           sudo apt-get install -y \
             wget \
-            libc6:i386 \
-            libx11-6:i386 \
-            libpam0g:i386 \
-            libstdc++5:i386 \
+            libpam0g \
             iptables \
             net-tools \
             iputils-ping \
-            netcat
+            netcat-openbsd \
+            libc6:i386 \
+            libstdc++6:i386 || true
+          
+          # Try to install 32-bit packages if available
+          sudo apt-get install -y \
+            libpam0g:i386 \
+            libx11-6:i386 \
+            libxau6:i386 \
+            libxcb1:i386 \
+            libxdmcp6:i386 \
+            libxext6:i386 2>/dev/null || echo "Some i386 libraries not available, continuing..."
           
       - name: Download and install SNX
         run: |
