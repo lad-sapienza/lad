@@ -1,9 +1,9 @@
 name: Build and Deploy to Production
 
 on:
-  # Trigger on push to main branch
+  # Trigger on push to master branch
   push:
-    branches: [ main ]
+    branches: [ master ]
     
   # Allow manual deployment from Actions tab
   workflow_dispatch:

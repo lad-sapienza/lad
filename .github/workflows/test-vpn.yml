@@ -198,5 +198,5 @@ jobs:
           echo "You can now use the full deployment workflow."
           echo ""
           echo "Next steps:"
-          echo "1. Push to main branch to trigger automatic deployment"
+          echo "1. Push to master branch to trigger automatic deployment"
           echo "2. Or manually trigger 'Build and Deploy to Production' workflow"
