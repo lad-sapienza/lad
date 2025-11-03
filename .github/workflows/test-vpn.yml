@@ -1,0 +1,153 @@
+name: Test SNX VPN Connection
+
+# Manual trigger only - for testing VPN setup
+on:
+  workflow_dispatch:
+
+jobs:
+  test-vpn:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Install SNX dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y \
+            wget \
+            libstdc++5 \
+            libpam0g:i386 \
+            libx11-6:i386 \
+            libxau6:i386 \
+            libxcb1:i386 \
+            libxdmcp6:i386 \
+            libxext6:i386 \
+            libpam0g \
+            iptables \
+            net-tools \
+            iputils-ping \
+            netcat
+          
+      - name: Download and install SNX
+        run: |
+          echo "Downloading SNX from: ${{ secrets.SNX_DOWNLOAD_URL }}"
+          wget ${{ secrets.SNX_DOWNLOAD_URL }} -O /tmp/snx_install.sh
+          chmod +x /tmp/snx_install.sh
+          sudo /tmp/snx_install.sh
+          
+          # Verify installation
+          if which snx; then
+            echo "✅ SNX installed successfully"
+            snx -v || echo "SNX version command not available"
+          else
+            echo "❌ SNX installation failed"
+            exit 1
+          fi
+          
+      - name: Test VPN connection
+        run: |
+          echo "Testing VPN connection..."
+          echo "VPN Gateway: ${{ secrets.VPN_GATEWAY }}"
+          echo "VPN Username: ${{ secrets.VPN_USERNAME }}"
+          
+          # Create password file
+          echo "${{ secrets.VPN_PASSWORD }}" > /tmp/vpn_password
+          
+          # Try to connect
+          echo "Connecting to VPN..."
+          sudo snx -s ${{ secrets.VPN_GATEWAY }} \
+               -u ${{ secrets.VPN_USERNAME }} \
+               -p /tmp/vpn_password \
+               -auto || {
+            echo "❌ VPN connection failed"
+            rm -f /tmp/vpn_password
+            exit 1
+          }
+          
+          # Clean up password
+          rm -f /tmp/vpn_password
+          
+          # Wait for connection
+          echo "Waiting for VPN connection to establish..."
+          sleep 10
+          
+          # Check VPN interface
+          echo "Checking VPN interface..."
+          if ifconfig tunsnx; then
+            echo "✅ VPN interface tunsnx is UP"
+          else
+            echo "⚠️ tunsnx interface not found, checking all interfaces:"
+            ifconfig -a
+          fi
+          
+          # Show routing table
+          echo "Routing table:"
+          ip route
+          
+      - name: Test connectivity to production server
+        run: |
+          echo "Testing connectivity to: ${{ secrets.SSH_HOST }}"
+          
+          # Try DNS resolution
+          echo "Testing DNS resolution..."
+          if nslookup ${{ secrets.SSH_HOST }}; then
+            echo "✅ DNS resolution successful"
+          else
+            echo "⚠️ DNS resolution failed, trying with different DNS"
+            nslookup ${{ secrets.SSH_HOST }} 8.8.8.8 || echo "Failed with Google DNS too"
+          fi
+          
+          # Try ping
+          echo "Testing ping..."
+          if ping -c 3 ${{ secrets.SSH_HOST }}; then
+            echo "✅ Ping successful"
+          else
+            echo "⚠️ Ping failed (may be blocked by firewall)"
+          fi
+          
+          # Try SSH port
+          echo "Testing SSH port 22..."
+          if nc -zv ${{ secrets.SSH_HOST }} 22 -w 5; then
+            echo "✅ SSH port 22 is reachable"
+          else
+            echo "❌ SSH port 22 is not reachable"
+            exit 1
+          fi
+          
+      - name: Test SSH connection
+        run: |
+          echo "Setting up SSH..."
+          mkdir -p ~/.ssh
+          echo "${{ secrets.DEPLOY_KEY }}" > ~/.ssh/test_key
+          chmod 600 ~/.ssh/test_key
+          
+          echo "Testing SSH connection..."
+          if ssh -i ~/.ssh/test_key \
+                 -o StrictHostKeyChecking=no \
+                 -o ConnectTimeout=10 \
+                 ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} \
+                 'echo "SSH connection successful" && hostname && uptime'; then
+            echo "✅ SSH connection successful"
+          else
+            echo "❌ SSH connection failed"
+            exit 1
+          fi
+          
+      - name: Disconnect VPN
+        if: always()
+        run: |
+          echo "Disconnecting VPN..."
+          sudo snx -d || echo "VPN already disconnected"
+          
+      - name: Test Summary
+        if: success()
+        run: |
+          echo "============================================"
+          echo "✅ ALL TESTS PASSED!"
+          echo "============================================"
+          echo ""
+          echo "Your VPN and SSH setup is working correctly."
+          echo "You can now use the full deployment workflow."
+          echo ""
+          echo "Next steps:"
+          echo "1. Push to main branch to trigger automatic deployment"
+          echo "2. Or manually trigger 'Build and Deploy to Production' workflow"
