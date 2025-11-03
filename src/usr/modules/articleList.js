@@ -51,6 +51,7 @@ const ArticleList = ({section}) => {
 
   // Filter posts by section and exclude the main section index.mdx file
   const allPosts = data.allMdx.edges.filter(({ node }) => {
+    if (!node || !node.frontmatter) return false;
     const contentFilePath = node.internal?.contentFilePath || '';
     const isInSection = contentFilePath.includes(`/${section}/`);
     // Exclude only the section's main index file (e.g., /blog/index.mdx)
@@ -62,6 +63,7 @@ const ArticleList = ({section}) => {
   // Extract unique tags from all posts
   const allTags = [...new Set(
     allPosts
+      .filter(({ node }) => node && node.frontmatter)
       .flatMap(({ node }) => node.frontmatter.tags || [])
       .filter(tag => tag) // Remove null/undefined
   )].sort();
@@ -79,12 +81,14 @@ const ArticleList = ({section}) => {
   const filteredPosts = selectedTags.length === 0 
     ? allPosts 
     : allPosts.filter(({ node }) => {
+        if (!node || !node.frontmatter) return false;
         const postTags = node.frontmatter.tags || [];
         return selectedTags.every(selectedTag => postTags.includes(selectedTag));
       });
 
   // Helper function to compute slug from file path
   const getSlug = (node) => {
+    if (!node || !node.frontmatter) return "/";
     if (node.frontmatter.slug) {
       return node.frontmatter.slug === "home" ? "/" : node.frontmatter.slug;
     }
@@ -139,7 +143,7 @@ const ArticleList = ({section}) => {
       </div>
 
       {filteredPosts
-        .filter((n) => n.node.frontmatter.pinned === true)
+        .filter((n) => n && n.node && n.node.frontmatter && n.node.frontmatter.pinned === true)
         .map(({ node }, k) => {
           return <ItemPreview node={node} slug={getSlug(node)} key={k} pinned="true" />;
         })}
@@ -147,8 +151,9 @@ const ArticleList = ({section}) => {
       {filteredPosts
         .filter(
           (n) =>
-            n.node.frontmatter.pinned === false ||
-            n.node.frontmatter.pinned === null
+            n && n.node && n.node.frontmatter && 
+            (n.node.frontmatter.pinned === false ||
+            n.node.frontmatter.pinned === null)
         )
         .map(({ node }, k) => {
           return <ItemPreview node={node} slug={getSlug(node)} key={k} />;

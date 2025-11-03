@@ -5,6 +5,11 @@ import { Row, Col } from "react-bootstrap";
 import { Link } from "gatsby";
 
 const ItemPreview = ({ node, slug, pinned }) => {
+  if (!node || !node.frontmatter) {
+    console.warn('ItemPreview: Missing node or frontmatter');
+    return null;
+  }
+  
   return (
     <Row className={`my-5 mx-md-5 py-5 ${pinned ? "shadow" : ""}`}>
       <Col sm={4}>

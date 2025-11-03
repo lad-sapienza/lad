@@ -127,7 +127,9 @@ const HomePageContent = () => {
           <Col sm={4}>
             <Container className="mb-3">
               <h2 className="border-bottom text-center">In evidenza</h2>
-              {data.highlight.nodes.map((node, i) => (
+              {data.highlight.nodes
+                .filter(node => node && node.frontmatter)
+                .map((node, i) => (
                 <BlogPreview
                   key={i}
                   title={node.frontmatter.title}
