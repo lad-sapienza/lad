@@ -5,7 +5,12 @@ import { MDXProvider } from "@mdx-js/react"
 import { buildSeoData } from "../modules/seo"
 
 export default function PageTemplate({ data, children }) {
-  const template = data.mdx.frontmatter.template
+  if (!data || !data.mdx) {
+    console.warn('Missing data or mdx in PageTemplate')
+    return null
+  }
+  
+  const template = data.mdx.frontmatter?.template
   
   return (
     <Layout data={data} template={template}>
@@ -16,6 +21,12 @@ export default function PageTemplate({ data, children }) {
 
 export function Head({ data, location }) {
   const { mdx, site } = data
+  
+  if (!mdx || !mdx.frontmatter) {
+    console.warn('Missing mdx or frontmatter data in Head component')
+    return null
+  }
+  
   const { frontmatter } = mdx
   
   const seoData = buildSeoData({
