@@ -55,20 +55,15 @@ jobs:
           echo "VPN Gateway: ${{ secrets.VPN_GATEWAY }}"
           echo "VPN Username: ${{ secrets.VPN_USERNAME }}"
           
-          # SNX connection in non-interactive mode
+          # Connect to VPN (same format as your local script)
           echo "Connecting to VPN..."
           echo "${{ secrets.VPN_PASSWORD }}" | sudo snx \
-               -s ${{ secrets.VPN_GATEWAY }} \
-               -u ${{ secrets.VPN_USERNAME }} || {
-            echo "❌ VPN connection failed"
-            echo "Checking SNX process..."
-            ps aux | grep snx
-            exit 1
-          }
+               -u ${{ secrets.VPN_USERNAME }} \
+               -s ${{ secrets.VPN_GATEWAY }} &
           
           # Wait for connection to establish
           echo "Waiting for VPN connection to establish..."
-          sleep 15
+          sleep 20
           
           # Check if SNX is running
           echo "Checking SNX process..."
