@@ -14,14 +14,10 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y \
             wget \
-            libstdc++5 \
-            libpam0g:i386 \
+            libc6:i386 \
             libx11-6:i386 \
-            libxau6:i386 \
-            libxcb1:i386 \
-            libxdmcp6:i386 \
-            libxext6:i386 \
-            libpam0g \
+            libpam0g:i386 \
+            libstdc++5:i386 \
             iptables \
             net-tools \
             iputils-ping \
