@@ -55,27 +55,67 @@ jobs:
           echo "VPN Gateway: ${{ secrets.VPN_GATEWAY }}"
           echo "VPN Username: ${{ secrets.VPN_USERNAME }}"
           
-          # Connect to VPN using script to provide PTY
-          echo "Connecting to VPN..."
+          # Install expect
+          sudo apt-get install -y expect
           
-          # Use setsid and nohup to run SNX in background with PTY
-          echo "${{ secrets.VPN_PASSWORD }}" | sudo script -qec "snx -u ${{ secrets.VPN_USERNAME }} -s ${{ secrets.VPN_GATEWAY }}" /dev/null &
-          SNX_PID=$!
+          # Create expect script to handle interactive prompts
+          cat > /tmp/snx_connect.exp <<'EOFEXP'
+          #!/usr/bin/expect -f
+          set timeout 60
+          set gateway [lindex $argv 0]
+          set username [lindex $argv 1]
+          set password [lindex $argv 2]
+          
+          spawn snx -u $username -s $gateway
+          
+          expect {
+            "Please enter your password:" {
+              send "$password\r"
+              exp_continue
+            }
+            "Do you accept*" {
+              send "y\r"
+              exp_continue
+            }
+            "SNX - connected" {
+              puts "VPN connected successfully"
+            }
+            timeout {
+              puts "Timeout waiting for VPN connection"
+              exit 1
+            }
+            eof {
+              puts "SNX process ended"
+            }
+          }
+          
+          # Keep script running so SNX stays connected
+          sleep 300
+          EOFEXP
+          
+          chmod +x /tmp/snx_connect.exp
+          
+          # Connect to VPN
+          echo "Connecting to VPN..."
+          sudo /tmp/snx_connect.exp \
+               "${{ secrets.VPN_GATEWAY }}" \
+               "${{ secrets.VPN_USERNAME }}" \
+               "${{ secrets.VPN_PASSWORD }}" > /tmp/snx.log 2>&1 &
           
           # Wait for connection to establish
           echo "Waiting for VPN connection to establish..."
-          sleep 25
+          sleep 30
           
           # Check if SNX is running
           echo "Checking SNX process..."
           ps aux | grep snx
           
-          if ps aux | grep -v grep | grep -q "snx.*${{ secrets.VPN_GATEWAY }}"; then
+          if ps aux | grep -v grep | grep -q "snx"; then
             echo "✅ SNX process is running"
           else
             echo "❌ SNX process not found"
-            echo "Checking system logs..."
-            sudo dmesg | tail -20
+            echo "SNX log:"
+            cat /tmp/snx.log
             exit 1
           fi
           
