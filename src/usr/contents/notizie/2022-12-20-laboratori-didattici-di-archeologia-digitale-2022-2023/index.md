@@ -1,6 +1,6 @@
 ---
 title: "Laboratori didattici di Archeologia Digitale 2022-2023"
-img: ./lab-lad.png
+img: ./lab-lad.jpg
 date: 2023-09-19
 description: "L'offerta formativa del Laboratorio di Archeologia Digitale per l'anno accademico 2022-2023. Iscrizione, partecipazione, calendario..."
 tags:

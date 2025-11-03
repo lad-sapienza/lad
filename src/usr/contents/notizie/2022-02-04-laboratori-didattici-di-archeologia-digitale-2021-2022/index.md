@@ -1,6 +1,6 @@
 ---
 title: "Laboratori didattici di Archeologia Digitale 2021-2022: GIS e Banche Dati"
-img: ./lab-lad.png
+img: ./lab-lad.jpg
 date: 2022-02-04
 description: "L'offerta formativa del LAD: laboratori didattici di piattaforme GIS e Banche Dati per l'archeologia per l'anno accademico 2021-2022. Iscrizione, partecipazione, calendario, programma..."
 tags:

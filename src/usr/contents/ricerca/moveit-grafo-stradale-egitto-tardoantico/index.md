@@ -1,7 +1,7 @@
 ---
 title: ⲘⲞvⲈⲒⲦ Grafo stradale dell'Egitto tardoantico e medievale
 sort: 6
-img: ./moveit.png
+img: ./moveit.jpg
 ---
 
 ⲘⲞvⲈⲒⲦ è grafo stradale che collega tutti i siti del atlante PAThs ed è un gioco di parole: in copto ⲙⲟⲉⲓⲧ significa “strada, percorso”, ma il logo richiama anche l’espressione in inglese “move it”!

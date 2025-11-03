@@ -119,8 +119,51 @@ In questi anni i membri della missione hanno avviato un processo importatente di
 -	*Epirus in the Roman World and the New Research on the Acropolis of Butrint by the Albanian Institute of Archaeology and the University of Bologna*. Università di Bologna, 10-11 novembre 2022. Titolo dell’intervento di Julian Bogdani e Albana Meta: “Kestrine: new data for the long-term archaeology of a border region” [https://site.unibo.it/butrint/en/photogallery/international-workshop-epirus-in-the-roman-world-and-new-research-on-the-acropolis-of-butrint](https://site.unibo.it/butrint/en/photogallery/international-workshop-epirus-in-the-roman-world-and-new-research-on-the-acropolis-of-butrint)
 -	*Landscape Archaeology: a discussion between the new paradigms of methodology*. Scuola Superiore di Studi Avanzati. Sapienza Università di Roma. 17 ottobre 2022. Titolo dell’intervento di Julian Bogdani “Fortified Landscapes: ethnos and polis in Chaonia, Epirus in the light of recent research”
 -	*L'Epiro e l'Illiria Meridionale: Scavi e Ricerche Recenti*, 6 maggio 2021. Webminar, Università di Bologna. Titolo dell’intervento di Julian Bogdani “Siti fortificati di secondo ordine in Caonia. Il caso di Çuka e Aitoit”. [https://site.unibo.it/butrint/en/agenda/bogdani-siti-fortificati-di-secondo-ordine-in-caonia-il-caso-di-uka-e-aitoit](https://site.unibo.it/butrint/en/agenda/bogdani-siti-fortificati-di-secondo-ordine-in-caonia-il-caso-di-uka-e-aitoit)
--	*Beyond the wall: Study of fortifications between architecture and history*. (Sezione: 2. Study Scales and Goals: citadel, city, region). Incontri online a cura dell' École française d'Athènes (EfA). 7 Dicembre 2020. Titolo dell'intervento di Julian Bogdani: “Fortifying the ethnos. The case study of Chaonia, Epirus”
+-	*Beyond the wall: Study of fortifications between architecture and history*. (Sezione: 2. Study Scales and Goals: citadel, city, region). Incontri online a cura dell' École française d'Athènes (EfA). 7 Dicembre 2020. Titolo dell'intervento di Julian Bogdani: "Fortifying the ethnos. The case study of Chaonia, Epirus"
 
+
+
+## Campagna 2025
+
+La quinta campagna archeologica della Missione congiunta italo-albanese a Çuka e Ajtoit della Sapienza Università di Roma e dell'Istituto Archeologico di Tirana (IA) si è svolta nel periodo compreso tra l'8 giugno e il 4 luglio 2025, con la partecipazione di un gruppo di ricerca composto da ricercatori e studenti italiani e albanesi.
+
+Nel corso della campagna 2025 sono continuate le attività di ricognizione e rilievo archeologico nella cosiddetta "città alta", ovvero nella parte del sito difesa dalla cinta di fortificazione di età ellenistica. Le attività hanno riguardato in particolare le verifiche sul terreno dei rilievi precedenti, realizzati con la tecnica della fotogrammetria digitale con aggancio a terra per mezzo di ricevitori GNSS con correzione RTK. Un'attenzione particolare è stata dedicata al sistema di fortificazioni di età ellenistica e medievale. Quest'ultimo sistema, in particolare, è stato fatto oggetto di dettagliate osservazioni tipologiche al fine di suggerire una possibile datazione usando come termine di confronto la crono-tipologia del sito di Butrinto. In termini generali, si può affermare che il sistema difensivo post-antico è frutto di un progetto unitario che sembra realizzato in un unico intervento edilizio, sfruttando in maniera importante per i lati lunghi settentrionale e meridionale la linea delle precedenti fortificazioni ellenistiche.
+
+I lavori di questa campagna hanno riguardato principalmente l'area del cosiddetto "Palazzo" (W4-01), dove sono stati aperti tre saggi stratigrafici (2025-01, 2025-02, 2025-03). Gli scavi hanno rivelato stratigrafie molto ricche di materiali perfettamente coerenti con quelle intercettate nel corso dei saggi 2023 e 2024 nello stesso settore. Il saggio 2025-01 è stato localizzato nell'area nord-ovest del settore W4-01, con l'obiettivo di chiarire i rapporti strutturali tra le strutture B2 e B3 e ottenere ulteriori dati cronologici. Lo scavo ha messo in luce una struttura muraria orientata nord-sud (USM 175), costruita con blocchi di calcare in tecnica poligonale regolare, e strati di riempimento orizzontali di livellamento (UUSS 172 e 177) databili al pieno III secolo a.C. Tra i materiali rinvenuti si segnalano una moneta di bronzo del *koinon* degli Epiroti (232-168 a.C.) e frammenti di coroplastica figurata.
+
+Il saggio 2025-02 è stato aperto in continuità con lo scavo dell'anno precedente nella stessa area (trincea 2024-05), con l'obiettivo di comprendere le relazioni delle strutture indagate. Lo scavo ha permesso di identificare una banchina (USM 202) costruita con blocchi poligonali e un'apertura tra i muri perimetrali B13 e B.9.5, larga 1,35 m, dove sono conservati gli stipiti in due file di blocchi. Le fasi di vita della stanza, rappresentate dalle superfici di terra battuta UUSS 213 e 218, risalgono alla fine del III secolo a.C. - inizio II secolo a.C. Di particolare interesse è la presenza di ceramica d'impasto databile alla tarda età del Bronzo, rinvenuta all'interno dello strato di livellamento (US 216) che ricopre il substrato roccioso naturale, insieme a materiale ellenistico.
+
+Il saggio 2025-03 ha ampliato l'area precedentemente indagata come saggio 2024-09, con l'obiettivo di esplorare la prosecuzione dell'USM 175 verso ovest e indagare la stratigrafia non ancora scavata. Lo scavo ha confermato che la struttura USM 168 rappresenta la continuazione verso nord del muro USM 175, sebbene con tecnica costruttiva più sommaria. È stata inoltre individuata una nuova struttura (B14), un muro orientato nord-sud che si unisce al B10 con un angolo di 90 gradi. Lo scavo ha rivelato anche una struttura semicircolare (USM 171) e un piano di tegole (US 167), probabilmente riferibili a un impianto edilizio più antico, forse destinato a funzioni di lavorazione o stoccaggio.
+
+Un ulteriore saggio stratigrafico (2025-04) è stato aperto nella navata settentrionale della Basilica di Çiflik, indagando la porzione più occidentale, dal passaggio al nartece fino a circa la metà della navata. Lo scavo ha rivelato il riempimento di un taglio (BA-302) che conteneva diverse aree con concentrazioni di ossa umane, interpretate come deposizioni secondarie di almeno sei individui diversi. È stata inoltre individuata e documentata la tomba T-BA-15, gravemente danneggiata in epoca antica, contenente due individui: un neonato e, forse, una donna. La tomba conserva solo una lastra posizionata verticalmente per definire il lato orientale.
+
+L'insieme dei materiali rinvenuti continua a caratterizzarsi per la particolarità sia delle classi rappresentate (soprattutto ceramica a vernice nera e terrecotte votive), sia delle caratteristiche degli oggetti rinvenuti, che suggeriscono il loro collegamento con la dismissione di un'area sacra. Lo studio tipologico dei materiali ha permesso di inquadrare le sequenze archeologiche indagate in un orizzonte cronologico di età ellenistica, in particolare di III secolo a.C. inoltrato. Il repertorio di ceramica a vernice nera è costituito quasi esclusivamente da forme aperte, in particolare ciotole (*Echinus Bowl*), piatti (*Epirote Fish Plate*) e *kantharoi*. Tra le anfore, la maggior parte degli esemplari sono riferibili al tipo Corinzio B Ellenistico, l'anfora maggiormente attestata in livelli di III secolo a.C. nel sito. Tra le anfore più recenti si hanno due orli di Greco-Italiche (III-II secolo a.C.) e un orlo di Lamboglia 2 (fine II-fine I a.C.) proveniente da uno strato di distruzione.
+
+Come nelle campagne precedenti, le ricerche puntuali sono state affiancate dalle attività del laboratorio materiali della Missione, che hanno interessato tutte le fasi di gestione dei materiali: lavaggio, divisione in categorie, inventariazione, catalogazione, studio tipologico, disegno grafico attraverso strumento Laser Aided Profiler e documentazione fotografica. Particolare importanza è stata dedicata allo studio degli impasti ceramici accompagnato da prelievi di campioni, per i quali sono già in atto le procedure amministrative per l'esportazione in Italia e la successiva analisi in laboratorio. Il lavoro di studio e catalogazione è stato affiancato dall'attività didattica rivolta agli studenti che hanno partecipato alla missione.
+
+**Partecipanti**
+
+Direzione della missione:
+- Nevila **Molla** (condirettrice della missione, IA)
+- Julian **Bogdani** (condirettore della missione, Sapienza, Roma)
+
+Senior staff:
+- Veronica **Castignani** (candidata PhD, Università di Catania)
+- Francesca **D'Ambola** (candidata PhD, Sapienza, Roma)
+- Matilde **Fortunato** (Sapienza, Roma)
+- Giuseppe **Monte** (candidato PhD, Università di Catania)
+
+BA, MA:
+- Dea **Hate** (Università di Tirana, Albania)
+- Luizjan **Koçi** (Università di Tirana, Albania)
+- Jihan **Sidki** (Università di Tirana, Albania)
+- Noel **Vila** (Università di Tirana, Albania)
+- Barbara **Alastra** (Sapienza, Roma)
+- Lorenzo **Del Prato** (Sapienza, Roma)
+- Dimitrios **Gkinis** (Sapienza, Roma)
+- Julia **Karlsson** (Sapienza, Roma)
+- Maria **Noris** (Sapienza, Roma)
+- Francesca **Summa** (Sapienza, Roma)
 
 
 ## Campagna 2024
@@ -260,7 +303,7 @@ Le attività della Missione Archeologica della Sapienza a Çuka e Ajtoit sono st
 
 La Missione Archeologica della Sapienza a Çuka e Ajtoit ringrazia per il suo continuo e fondamentale supporto **Past & Present Journeys**, Tirana.
 
-[![Past & Present Journeys](../../logos/pastandpresent.png)](https://pastandpresent.al/)
+[![Past & Present Journeys](../../logos/pastandpresent.jpg)](https://pastandpresent.al/)
 
 - Sito web: [https://pastandpresent.al/](https://pastandpresent.al/)
 - Facebook: [http://www.facebook.com/pages/PastandPresent-Travel-Company/106348866175295](http://www.facebook.com/pages/PastandPresent-Travel-Company/106348866175295)
@@ -294,7 +337,7 @@ Infine, si ringrazia il programma ALBCORS del [Geoportale Nazionale Albanese (AS
   </div>
   
   <div className="col-sm-3">
-    <img src="../../logos/lad-blue.png" className="img-fluid" /><br />
+    <img src="../../logos/lad-blue.jpg" className="img-fluid" /><br />
     Laboratorio di Archeologia Digitale alla Sapienza
   </div>
 </div>

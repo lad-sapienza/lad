@@ -1,7 +1,7 @@
 ---
 title: Linking Pasts And Sharing Knowledge. Mapping Archaeological Heritage, Legacy Data Integration and Web Technologies for Modelling Historical Landscapes
 sort: 19
-img: ./linking-pasts-and-sharing-knowledge.png
+img: ./linking-pasts-and-sharing-knowledge.jpg
 description: A Hybrid Conference hosted by the University of Naples Federico II, and organised with the Sapienza University of Rome and the University of Sheffield on 13th - 14th November 2023
 date: 2023-11-13
 ---
@@ -193,7 +193,7 @@ Aula ex Cataloghi Lignei
       </a>
       <hr />
       <a href="https://www.studiumanistici.unina.it/dipartimento/" title="Dipartimento Studi Umanistici. Università di Napoli Federico II">
-        <img src="./dsu-federico-ii.png" alt="Dipartimento Studi Umanistici. Università di Napoli Federico II" />
+        <img src="./dsu-federico-ii.jpg" alt="Dipartimento Studi Umanistici. Università di Napoli Federico II" />
       </a>
     </div>
     <div class="col-4">
@@ -211,7 +211,7 @@ Aula ex Cataloghi Lignei
       </a>
       <hr />
       <a href="https://lad.saras.uniroma1.it/" title="LAD: Laboratorio di Archeologia Digitale alla Sapienza">
-        <img src="./lad-sapienza.png" alt="LAD: Laboratorio di Archeologia Digitale alla Sapienza" />
+        <img src="./lad-sapienza.jpg" alt="LAD: Laboratorio di Archeologia Digitale alla Sapienza" />
       </a>
     </div>
   </div>
@@ -235,7 +235,7 @@ Aula ex Cataloghi Lignei
         AIUCD: Associazione per l'Informatica Umanistica e la Cultura Digitale
       </a>
       <hr />
-      <img src="./aiucd.png" alt="Dipartimento Studi Umanistici. Università di Napoli Federico II" />
+      <img src="./aiucd.jpg" alt="Dipartimento Studi Umanistici. Università di Napoli Federico II" />
     </div>
   </div>
 </div>

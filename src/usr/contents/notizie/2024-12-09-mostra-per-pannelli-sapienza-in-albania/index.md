@@ -1,6 +1,6 @@
 ---
 title: "Mostra per pannelli “Sapienza in Albania. A cent’anni dalla prima visita nel paese di Luigi Maria Ugolini”"
-img: ./sapienza-in-albania.png
+img: ./sapienza-in-albania.jpg
 date: 2024-12-09
 description: "Mostra per pannelli a cura della Missione Archeologica della Sapienz in Albania a cent'anni dalla visita in Albania di Luigi Maria Ugolini"
 tags:

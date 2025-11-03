@@ -2,7 +2,7 @@
 title: Sviluppo di un nuovo strumento ITC per la condivisione e la pubblicazione di dati bibliografici con una base cartografica per la ricerca storico-archeologica
 author: Julian Bogdani
 sort: 14
-img: ./zotero-web-gis.png
+img: ./zotero-web-gis.jpg
 description: Progetto di ricerca, P.I. Eleonora Iacopini, finanziato dal programma “Progetti per Avvio alla Ricerca” della Sapienza Università di Roma, anno 2022, prot. AR2221816BB57DE4
 ---
 
