@@ -1,0 +1,200 @@
+name: Build and Deploy to Production
+
+on:
+  # Trigger on push to main branch
+  push:
+    branches: [ main ]
+    
+  # Allow manual deployment from Actions tab
+  workflow_dispatch:
+  
+  # Allow webhook triggers (e.g., from WordPress)
+  repository_dispatch:
+    types: [ publish_blog ]
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+      # Checkout the repository
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      # Setup Node.js (match your local development version)
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18.x'
+          cache: 'npm'
+
+      # Install dependencies
+      - name: Install dependencies
+        run: npm ci
+
+      # Build Gatsby site with path prefix
+      - name: Build Gatsby site
+        run: npm run build
+        env:
+          # Add any environment variables needed for build
+          NODE_ENV: production
+          # If you need specific build flags, add them here
+
+      # Install SNX VPN client
+      - name: Install SNX dependencies
+        run: |
+          sudo dpkg --add-architecture i386
+          sudo apt-get update
+          sudo apt-get install -y \
+            wget \
+            libpam0g \
+            iptables \
+            net-tools \
+            libc6:i386 \
+            libstdc++6:i386 || true
+          
+          # Try to install 32-bit packages if available
+          sudo apt-get install -y \
+            libpam0g:i386 \
+            libx11-6:i386 \
+            libxau6:i386 \
+            libxcb1:i386 \
+            libxdmcp6:i386 \
+            libxext6:i386 2>/dev/null || echo "Some i386 libraries not available, continuing..."
+          
+          # Create symlink for libstdc++.so.5 (SNX requires old library)
+          # Try to use libstdc++.so.6 as a fallback
+          sudo ln -sf /usr/lib/i386-linux-gnu/libstdc++.so.6 /usr/lib/i386-linux-gnu/libstdc++.so.5 2>/dev/null || true
+          sudo ln -sf /usr/lib/x86_64-linux-gnu/libstdc++.so.6 /usr/lib/x86_64-linux-gnu/libstdc++.so.5 2>/dev/null || true
+          
+          # If that doesn't work, try downloading old libstdc++5
+          wget http://archive.ubuntu.com/ubuntu/pool/universe/g/gcc-3.3/libstdc++5_3.3.6-17ubuntu1_i386.deb 2>/dev/null || true
+          sudo dpkg -i libstdc++5_3.3.6-17ubuntu1_i386.deb 2>/dev/null || echo "Could not install libstdc++5, trying with symlink"
+          
+      # Download and setup SNX
+      - name: Setup SNX VPN client
+        run: |
+          # Download SNX (adjust URL to your VPN gateway's SNX download)
+          # Example: wget https://your-vpn-gateway/SNX/INSTALL/snx_install_linux30.sh
+          wget ${{ secrets.SNX_DOWNLOAD_URL }} -O /tmp/snx_install.sh
+          
+          # Make executable and install
+          chmod +x /tmp/snx_install.sh
+          sudo /tmp/snx_install.sh
+          
+          # Verify installation
+          which snx || echo "SNX not found in PATH"
+          
+      # Connect to VPN
+      - name: Connect to SNX VPN
+        run: |
+          # Install expect
+          sudo apt-get install -y expect
+          
+          # Create expect script to handle interactive prompts
+          cat > /tmp/snx_connect.exp <<'EOFEXP'
+          #!/usr/bin/expect -f
+          set timeout 60
+          set gateway [lindex $argv 0]
+          set username [lindex $argv 1]
+          set password [lindex $argv 2]
+          
+          spawn snx -u $username -s $gateway
+          
+          expect {
+            "Please enter your password:" {
+              send "$password\r"
+              exp_continue
+            }
+            "Do you accept*" {
+              send "y\r"
+              exp_continue
+            }
+            "SNX - connected" {
+              puts "VPN connected successfully"
+            }
+            timeout {
+              puts "Timeout waiting for VPN connection"
+              exit 1
+            }
+            eof {
+              puts "SNX process ended"
+            }
+          }
+          
+          # Keep script running so SNX stays connected
+          sleep 600
+          EOFEXP
+          
+          chmod +x /tmp/snx_connect.exp
+          
+          # Connect to VPN
+          echo "Connecting to VPN gateway: ${{ secrets.VPN_GATEWAY }}"
+          sudo /tmp/snx_connect.exp \
+               "${{ secrets.VPN_GATEWAY }}" \
+               "${{ secrets.VPN_USERNAME }}" \
+               "${{ secrets.VPN_PASSWORD }}" > /tmp/snx.log 2>&1 &
+          
+          # Wait for connection to establish
+          sleep 30
+          
+          # Verify SNX is running
+          if ps aux | grep -v grep | grep -q "snx"; then
+            echo "✅ SNX process is running"
+          else
+            echo "❌ SNX process not found"
+            cat /tmp/snx.log
+            exit 1
+          fi
+          
+          # Verify VPN connection
+          ifconfig tunsnx || ifconfig | grep tun || echo "⚠️ VPN interface not detected"
+          
+          # Test connectivity to production server (internal address)
+          ping -c 3 ${{ secrets.SSH_HOST }} || echo "Warning: Cannot ping server"
+        timeout-minutes: 5
+        continue-on-error: false
+
+      # Setup SSH for deployment
+      - name: Setup SSH key
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.DEPLOY_KEY }}" > ~/.ssh/deploy_key
+          chmod 600 ~/.ssh/deploy_key
+          
+          # Configure SSH
+          cat >> ~/.ssh/config <<END
+          Host lad-production
+            HostName ${{ secrets.SSH_HOST }}
+            User ${{ secrets.SSH_USER }}
+            IdentityFile ~/.ssh/deploy_key
+            StrictHostKeyChecking no
+            HostKeyAlgorithms +ssh-rsa
+            PubkeyAcceptedKeyTypes +ssh-rsa
+          END
+          
+          # Add host to known_hosts
+          ssh-keyscan -H ${{ secrets.SSH_HOST }} >> ~/.ssh/known_hosts 2>/dev/null || true
+
+      # Deploy to production server
+      - name: Deploy to production
+        run: |
+          rsync -arvzu --delete \
+            --filter='P .ssh' \
+            --filter='P .bash_history' \
+            --filter='P .screenrc' \
+            -e 'ssh -i ~/.ssh/deploy_key -o StrictHostKeyChecking=no' \
+            public/ ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:
+
+      # Disconnect VPN
+      - name: Disconnect SNX VPN
+        if: always()
+        run: |
+          sudo snx -d || echo "VPN already disconnected"
+
+      # Optional: Notify on success
+      - name: Deployment successful
+        if: success()
+        run: |
+          echo "✅ Deployment completed successfully"
+          echo "Deployed to: ${{ secrets.SSH_HOST }}"
