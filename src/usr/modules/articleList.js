@@ -113,34 +113,36 @@ const ArticleList = ({section}) => {
 
   return (
     <Container>
-      <div className="mb-5 text-center">
-        <Button
-          variant="outline-secondary"
-          size="sm"
-          onClick={() => setIsOpen(!isOpen)}
-          aria-controls="tag-filter-collapse"
-          aria-expanded={isOpen}
-          className="mb-2"
-        >
-          {isOpen ? 'Nascondi' : 'Mostra'} filtri per tag ({allTags.length} tag disponibili) | {filteredPosts.length} articoli
-        </Button>
-        
-        <Collapse in={isOpen}>
-          <div id="tag-filter-collapse" className="text-secondary p-2">
-            {allTags.map(tag => (
-              <Button
-                key={tag}
-                size="sm"
-                variant={selectedTags.includes(tag) ? "outline-secondary" : "primary"}
-                className="btn mx-1 mt-1 btn-light"
-                onClick={() => toggleTag(tag)}
-              >
-                {tag}
-              </Button>
-            ))}
-          </div>
-        </Collapse>
-      </div>
+      {allTags.length > 0 && (
+        <div className="mb-5 text-center">
+          <Button
+            variant="outline-secondary"
+            size="sm"
+            onClick={() => setIsOpen(!isOpen)}
+            aria-controls="tag-filter-collapse"
+            aria-expanded={isOpen}
+            className="mb-2"
+          >
+            {isOpen ? 'Nascondi' : 'Mostra'} filtri per tag ({allTags.length} tag disponibili) | {filteredPosts.length} articoli
+          </Button>
+          
+          <Collapse in={isOpen}>
+            <div id="tag-filter-collapse" className="text-secondary p-2">
+              {allTags.map(tag => (
+                <Button
+                  key={tag}
+                  size="sm"
+                  variant={selectedTags.includes(tag) ? "outline-secondary" : "primary"}
+                  className="btn mx-1 mt-1 btn-light"
+                  onClick={() => toggleTag(tag)}
+                >
+                  {tag}
+                </Button>
+              ))}
+            </div>
+          </Collapse>
+        </div>
+      )}
 
       {filteredPosts
         .filter((n) => n && n.node && n.node.frontmatter && n.node.frontmatter.pinned === true)
