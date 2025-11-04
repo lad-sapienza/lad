@@ -5,8 +5,9 @@ import Header from "./header"
 
 import { Container } from "react-bootstrap"
 
-
 import ArticleLayout from "../modules/articleLayout"
+
+import styled from "styled-components"
 
 import "./layout.scss"
 
@@ -26,7 +27,13 @@ const Layout = ({ children, data, template = false }) => {
             return children
 
           case "list":
-            return <Container className="text-center">{children}</Container>
+            return (
+              <Wrapper>
+                <Container>
+                  {children}
+                </Container>
+              </Wrapper>
+            )
 
           default:
             return (
@@ -40,5 +47,10 @@ const Layout = ({ children, data, template = false }) => {
     </>
   )
 }
+
+const Wrapper = styled.section`
+  max-width: 1000px;
+  margin: 5rem auto 5rem auto;
+`
 
 export default Layout

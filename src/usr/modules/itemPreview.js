@@ -11,7 +11,7 @@ const ItemPreview = ({ node, slug, pinned }) => {
   }
   
   return (
-    <Row className={`my-5 mx-md-5 py-5 ${pinned ? "shadow" : ""}`}>
+    <Row className={`my-5 py-5 ${pinned ? "shadow" : ""}`}>
       <Col sm={4}>
         {node.frontmatter.img &&
           node.frontmatter.img.childImageSharp &&

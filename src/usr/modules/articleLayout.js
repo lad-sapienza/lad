@@ -122,8 +122,7 @@ const Wrapper = styled.section`
   }
 
   .post-container {
-    max-width: 1000px;
-    margin-top: 3rem;
+    
   }
   .post-content img {
     max-width: 100%;
