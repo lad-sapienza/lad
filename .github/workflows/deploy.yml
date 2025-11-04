@@ -151,20 +151,45 @@ jobs:
           # Wait for connection to establish
           sleep 30
           
+          # Show SNX log first
+          echo "=== SNX Connection Log ==="
+          cat /tmp/snx.log || echo "No log file found"
+          echo "=========================="
+          
           # Verify SNX is running
           if ps aux | grep -v grep | grep -q "snx"; then
             echo "✅ SNX process is running"
           else
             echo "❌ SNX process not found"
-            cat /tmp/snx.log
             exit 1
           fi
           
           # Verify VPN connection
-          ifconfig tunsnx || ifconfig | grep tun || echo "⚠️ VPN interface not detected"
+          echo "Checking VPN interface..."
+          if ifconfig tunsnx 2>/dev/null || ip addr show tunsnx 2>/dev/null; then
+            echo "✅ VPN interface tunsnx is UP"
+          else
+            echo "⚠️ VPN interface not detected"
+            ifconfig | grep -i tun || ip addr | grep -i tun || echo "No tunnel interfaces found"
+          fi
           
           # Test connectivity to production server (internal address)
-          ping -c 3 ${{ secrets.SSH_HOST }} || echo "Warning: Cannot ping server"
+          echo "Testing connectivity to production server..."
+          if ping -c 3 -W 2 ${{ secrets.SSH_HOST }}; then
+            echo "✅ Ping successful"
+          else
+            echo "⚠️ Warning: Cannot ping server (may be blocked by firewall)"
+          fi
+          
+          # Test SSH port connectivity
+          echo "Testing SSH port 22..."
+          if timeout 10 nc -zv ${{ secrets.SSH_HOST }} 22; then
+            echo "✅ SSH port 22 is reachable"
+          else
+            echo "❌ SSH port 22 is not reachable"
+            echo "VPN may not be working properly. Check SNX log above."
+            exit 1
+          fi
         timeout-minutes: 5
         continue-on-error: false
 
