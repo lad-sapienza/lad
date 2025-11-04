@@ -14,7 +14,7 @@ tags:
 
 Sono aperte le iscrizioni ai Laboratori Didattici di Archeologia Digitale per l'anno accademico 2025-2026, organizzato dal LAD: Laboratorio di Archeologia Digitale alla Sapienza, in collaborazione con la [Missione Archeologica della Sapienza in Albania](../../ricerca/missione-archeologica-sapienza-a-cuka-e-ajtoit-albania/) e si pongono l’obiettivo di fornire le basi teoriche e pratiche necessarie per impostare e sviluppare in autonomia i propri progetti **GIS** e affrontare il mondo della cartografia numerica, dell’elaborazione grafica di rilievi di monumenti archeologici.
 
-I laboratori si terranno **in presenza** presso Sapienza Università di Roma, **Aula III**, al primo piano dell'edificio di Lettere e Filosofia (CU003), nei giorni di **27, 28, 29, 30, 31 gennaio e 3, 4 Febbraio 2025**, ore **14:00-18:00**.
+I laboratori si terranno **in presenza** presso Sapienza Università di Roma, **Aula IV**, al primo piano dell'edificio di Lettere e Filosofia (CU003), nei giorni di **27, 28, 29, 30, 31 gennaio e 3, 4 Febbraio 2025**, ore **14:00-18:00**.
 
 Responsabile: **Julian Bogdani** ([julian.bogdani@uniroma1.it](mailto:julian.bogdani@uniroma1.it))
 
@@ -36,7 +36,7 @@ Responsabile: **Julian Bogdani** ([julian.bogdani@uniroma1.it](mailto:julian.bog
 
 Per iscriversi è necessario compilare **entro il 6 gennaio 2026** il modulo Google disponibile all'indirizzo: [https://forms.gle/4cp6E68HWByVV8Ff7](https://forms.gle/4cp6E68HWByVV8Ff7).
 
-> **Nota bene: il modulo accetterà risposte solo da utenti autenticati dei domini `@uniroma1.it` e `@studenti.uniroma1.it`. In caso di esigenze particolari si prega di scrivere a [julian.bogdani@uniroma1.it](mailto:julian.bogdani@uniroma1.it)**
+> **Nota bene: il modulo accetterà risposte solo da utenti autenticati dei domini _@uniroma1.it_ e _@studenti.uniroma1.it_. In caso di esigenze particolari si prega di scrivere a [julian.bogdani@uniroma1.it](mailto:julian.bogdani@uniroma1.it)**
 
 In caso di sopravvenute complicazioni è fondamentale notificare all’indirizzo [julian.bogdani@uniroma1.it](mailto:julian.bogdani@uniroma1.it).  
 **Ogni modulo avrà un limite massimo di 50 partecipanti**
