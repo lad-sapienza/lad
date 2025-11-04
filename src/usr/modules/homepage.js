@@ -24,7 +24,10 @@ const HomePageContent = () => {
       }
       highlight: allMdx(
         sort: {frontmatter: {date: DESC}}
-        filter: {frontmatter: {inhome: {eq: true}}}
+        filter: {
+          frontmatter: {inhome: {eq: true}}
+          internal: {contentFilePath: {regex: "/^((?!_draft).)*$/"}}
+        }
       ) {
         nodes {
           frontmatter {
