@@ -148,8 +148,22 @@ jobs:
                "${{ secrets.VPN_USERNAME }}" \
                "${{ secrets.VPN_PASSWORD }}" > /tmp/snx.log 2>&1 &
           
-          # Wait for connection to establish
-          sleep 30
+          # Store the background process PID
+          SNX_PID=$!
+          echo "SNX expect script PID: $SNX_PID"
+          
+          # Wait for connection to establish with progress indicator
+          echo "Waiting for VPN connection to establish..."
+          for i in {1..60}; do
+            sleep 1
+            if grep -q "SNX - connected" /tmp/snx.log 2>/dev/null; then
+              echo "✅ VPN connected (after ${i} seconds)"
+              break
+            fi
+            if [ $((i % 10)) -eq 0 ]; then
+              echo "Still waiting... (${i}/60 seconds)"
+            fi
+          done
           
           # Show SNX log first
           echo "=== SNX Connection Log ==="
@@ -166,12 +180,35 @@ jobs:
           
           # Verify VPN connection
           echo "Checking VPN interface..."
-          if ifconfig tunsnx 2>/dev/null || ip addr show tunsnx 2>/dev/null; then
-            echo "✅ VPN interface tunsnx is UP"
-          else
-            echo "⚠️ VPN interface not detected"
-            ifconfig | grep -i tun || ip addr | grep -i tun || echo "No tunnel interfaces found"
+          
+          # Wait up to 30 seconds for tunnel interface to appear
+          TUNNEL_FOUND=0
+          for i in {1..30}; do
+            if ifconfig tunsnx 2>/dev/null || ip addr show tunsnx 2>/dev/null; then
+              echo "✅ VPN interface tunsnx is UP"
+              TUNNEL_FOUND=1
+              break
+            fi
+            if [ $((i % 5)) -eq 0 ]; then
+              echo "Waiting for tunnel interface... (${i}/30)"
+            fi
+            sleep 1
+          done
+          
+          if [ $TUNNEL_FOUND -eq 0 ]; then
+            echo "❌ VPN tunnel interface not created after 30 seconds"
+            echo "Available interfaces:"
+            ifconfig -a || ip addr show
+            echo ""
+            echo "SNX may be running but tunnel is not established."
+            echo "Check the SNX log above for errors."
+            exit 1
           fi
+          
+          # Show routing table
+          echo "=== Routing table ==="
+          ip route
+          echo "====================="
           
           # Test connectivity to production server (internal address)
           echo "Testing connectivity to production server..."
