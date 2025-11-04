@@ -1,5 +1,5 @@
 ---
-title: "Laboratori didattici di Archeologia Digitale 2023-2024"
+title: "[a.a. 23-24] Laboratori didattici di Archeologia Digitale 2023-2024: GIS, GIS Avanzato, Banche dati"
 img: ./lab-lad.jpg
 date: 2023-09-19
 description: "L'offerta formativa del Laboratorio di Archeologia Digitale per l'anno accademico 2023-2024. Iscrizione, partecipazione, calendario..."
