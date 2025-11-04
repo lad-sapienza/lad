@@ -63,11 +63,16 @@ jobs:
             libpam0g \
             iptables \
             net-tools \
+            iputils-ping \
+            netcat-openbsd \
+            rsync \
+            expect \
             libc6:i386 \
             libstdc++6:i386 || true
           
           # Try to install 32-bit packages if available
           sudo apt-get install -y \
+            libstdc++5:i386 \
             libpam0g:i386 \
             libx11-6:i386 \
             libxau6:i386 \
@@ -75,20 +80,10 @@ jobs:
             libxdmcp6:i386 \
             libxext6:i386 2>/dev/null || echo "Some i386 libraries not available, continuing..."
           
-          # Create symlink for libstdc++.so.5 (SNX requires old library)
-          # Try to use libstdc++.so.6 as a fallback
-          sudo ln -sf /usr/lib/i386-linux-gnu/libstdc++.so.6 /usr/lib/i386-linux-gnu/libstdc++.so.5 2>/dev/null || true
-          sudo ln -sf /usr/lib/x86_64-linux-gnu/libstdc++.so.6 /usr/lib/x86_64-linux-gnu/libstdc++.so.5 2>/dev/null || true
-          
-          # If that doesn't work, try downloading old libstdc++5
-          wget http://archive.ubuntu.com/ubuntu/pool/universe/g/gcc-3.3/libstdc++5_3.3.6-17ubuntu1_i386.deb 2>/dev/null || true
-          sudo dpkg -i libstdc++5_3.3.6-17ubuntu1_i386.deb 2>/dev/null || echo "Could not install libstdc++5, trying with symlink"
-          
       # Download and setup SNX
       - name: Setup SNX VPN client
         run: |
-          # Download SNX (adjust URL to your VPN gateway's SNX download)
-          # Example: wget https://your-vpn-gateway/SNX/INSTALL/snx_install_linux30.sh
+          echo "Downloading SNX from: ${{ secrets.SNX_DOWNLOAD_URL }}"
           wget ${{ secrets.SNX_DOWNLOAD_URL }} -O /tmp/snx_install.sh
           
           # Make executable and install
@@ -96,13 +91,20 @@ jobs:
           sudo /tmp/snx_install.sh
           
           # Verify installation
-          which snx || echo "SNX not found in PATH"
+          if which snx; then
+            echo "✅ SNX installed successfully"
+            snx -v || echo "SNX version command not available"
+          else
+            echo "❌ SNX installation failed"
+            exit 1
+          fi
           
       # Connect to VPN
       - name: Connect to SNX VPN
         run: |
-          # Install expect
-          sudo apt-get install -y expect
+          echo "Testing VPN connection..."
+          echo "VPN Gateway: ${{ secrets.VPN_GATEWAY }}"
+          echo "VPN Username: ${{ secrets.VPN_USERNAME }}"
           
           # Create expect script to handle interactive prompts
           cat > /tmp/snx_connect.exp <<'EOFEXP'
@@ -143,6 +145,9 @@ jobs:
           
           # Connect to VPN
           echo "Connecting to VPN gateway: ${{ secrets.VPN_GATEWAY }}"
+          echo "Running SNX connection script..."
+          
+          # Run in background but with explicit output handling
           sudo /tmp/snx_connect.exp \
                "${{ secrets.VPN_GATEWAY }}" \
                "${{ secrets.VPN_USERNAME }}" \
@@ -156,6 +161,16 @@ jobs:
           echo "Waiting for VPN connection to establish..."
           for i in {1..60}; do
             sleep 1
+            
+            # Show log content as it grows (last few lines)
+            if [ -f /tmp/snx.log ]; then
+              if [ $((i % 10)) -eq 0 ]; then
+                echo "--- Log content at ${i} seconds ---"
+                tail -5 /tmp/snx.log
+                echo "---"
+              fi
+            fi
+            
             if grep -q "SNX - connected" /tmp/snx.log 2>/dev/null; then
               echo "✅ VPN connected (after ${i} seconds)"
               break
@@ -165,10 +180,14 @@ jobs:
             fi
           done
           
-          # Show SNX log first
-          echo "=== SNX Connection Log ==="
-          cat /tmp/snx.log || echo "No log file found"
-          echo "=========================="
+          # Show complete SNX log
+          echo "=== COMPLETE SNX Connection Log ==="
+          if [ -f /tmp/snx.log ]; then
+            cat /tmp/snx.log
+          else
+            echo "❌ No log file found at /tmp/snx.log"
+          fi
+          echo "==================================="
           
           # Verify SNX is running
           if ps aux | grep -v grep | grep -q "snx"; then
