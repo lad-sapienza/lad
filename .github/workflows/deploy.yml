@@ -35,9 +35,10 @@ jobs:
           path: |
             .cache
             public
-          key: ${{ runner.os }}-gatsby-build-${{ hashFiles('package-lock.json', 'gatsby-config.js', 'src/**') }}
+          key: ${{ runner.os }}-gatsby-${{ hashFiles('package-lock.json') }}-${{ hashFiles('gatsby-config.js') }}
           restore-keys: |
-            ${{ runner.os }}-gatsby-build-
+            ${{ runner.os }}-gatsby-${{ hashFiles('package-lock.json') }}-
+            ${{ runner.os }}-gatsby-
 
       # Install dependencies
       - name: Install dependencies
