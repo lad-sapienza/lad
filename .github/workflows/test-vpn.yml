@@ -97,6 +97,9 @@ jobs:
           
           # Connect to VPN
           echo "Connecting to VPN..."
+          echo "Running SNX connection script..."
+          
+          # Run in background but with explicit output handling
           sudo /tmp/snx_connect.exp \
                "${{ secrets.VPN_GATEWAY }}" \
                "${{ secrets.VPN_USERNAME }}" \
@@ -110,6 +113,16 @@ jobs:
           echo "Waiting for VPN connection to establish..."
           for i in {1..60}; do
             sleep 1
+            
+            # Show log content as it grows (last few lines)
+            if [ -f /tmp/snx.log ]; then
+              if [ $((i % 10)) -eq 0 ]; then
+                echo "--- Log content at ${i} seconds ---"
+                tail -5 /tmp/snx.log
+                echo "---"
+              fi
+            fi
+            
             if grep -q "SNX - connected" /tmp/snx.log 2>/dev/null; then
               echo "✅ VPN connected (after ${i} seconds)"
               break
@@ -119,10 +132,14 @@ jobs:
             fi
           done
           
-          # Show SNX log first
-          echo "=== SNX Connection Log ==="
-          cat /tmp/snx.log || echo "No log file found"
-          echo "=========================="
+          # Show complete SNX log
+          echo "=== COMPLETE SNX Connection Log ==="
+          if [ -f /tmp/snx.log ]; then
+            cat /tmp/snx.log
+          else
+            echo "❌ No log file found at /tmp/snx.log"
+          fi
+          echo "==================================="
           
           # Check if SNX is running
           echo "Checking SNX process..."
