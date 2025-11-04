@@ -65,8 +65,12 @@ const HomePageContent = () => {
     if (!match) return "/";
 
     let relativePath = match[1];
-    // Remove /index.mdx or .mdx
-    relativePath = relativePath.replace(/\/index\.mdx$/i, '').replace(/\.mdx$/i, '');
+    // Remove /index.mdx, /index.md, .mdx, or .md
+    relativePath = relativePath
+      .replace(/\/index\.mdx$/i, '')
+      .replace(/\/index\.md$/i, '')
+      .replace(/\.mdx$/i, '')
+      .replace(/\.md$/i, '');
 
     return '/' + relativePath;
   };

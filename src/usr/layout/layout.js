@@ -37,9 +37,11 @@ const Layout = ({ children, data, template = false }) => {
 
           default:
             return (
-              <ArticleLayout post={post} pageUrl={pageUrl}>
-                {children}
-              </ArticleLayout>
+              <Wrapper>
+                <ArticleLayout post={post} pageUrl={pageUrl}>
+                  {children}
+                </ArticleLayout>
+              </Wrapper>
             )
         }
       })()}
