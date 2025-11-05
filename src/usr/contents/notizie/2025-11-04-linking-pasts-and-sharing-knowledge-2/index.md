@@ -2,13 +2,17 @@
 title: "Partecipazione di J. Bogdani e L. Cardarelli alla seconda edizione della conferenza internazionale “Linking Pasts and Sharing Knowledge”"
 img: ./2025-11-25_26-linking-pasts-and-sharing-knowledge-2.jpg
 date: 2025-11-04
-description: "Mercoledì 26 novembre 2025, Julian Bogdani e Lorenzo Cardarelli parteciperanno alla alla seconda edizione della conferenza internazionale “Linking Pasts and Sharing Knowledge”"
+description: "Mercoledì 26 novembre 2025, Julian Bogdani e Lorenzo Cardarelli parteciperanno alla alla seconda edizione della conferenza internazionale "Linking Pasts and Sharing Knowledge""
 tags:
-  - Seminario
-  - Archeologia
-  - Epiro
-  - Albania
-  - Divulgazione
+  - Conferenza
+  - Archeologia Digitale
+  - GIS
+  - Computer Vision
+  - Web Technologies
+  - Patrimonio Archeologico
+  - Legacy Data
+  - Ceramica
+  - Napoli
 inhome: true
 ---
 
