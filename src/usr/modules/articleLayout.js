@@ -1,7 +1,8 @@
 import * as React from "react"
 import styled from "styled-components"
-import { GatsbyImage } from "gatsby-plugin-image"
 import { Container } from "react-bootstrap"
+
+import ArticleImage from "./articleImage"
 
 import ShareButtons from "./shareButtons"
 
@@ -83,21 +84,9 @@ const ArticleLayout = ({ children, post, pageUrl }) => {
               tags={post.frontmatter.tags || []}
             />
           </div>
+          
+          <ArticleImage imageData={post.frontmatter.img} caption={post.frontmatter.caption} altText={`${post.frontmatter.title} di ${post.frontmatter.author}`} /> 
 
-          {post.frontmatter.img && post.frontmatter.img.childImageSharp && post.frontmatter.img.childImageSharp.gatsbyImageData && (
-            <div className="post-image">
-              <figure>
-                <GatsbyImage
-                  image={post.frontmatter.img.childImageSharp.gatsbyImageData}
-                  key={post.frontmatter.img.childImageSharp.gatsbyImageData.src}
-                  alt={`${post.frontmatter.title} di ${post.frontmatter.author}`}
-                />
-              </figure>
-              {post.frontmatter.didascalia && (
-                <p>{post.frontmatter.didascalia}</p>
-              )}
-            </div>
-          )}
           <TableOfContents toc={post.tableOfContents} />
           <div className="post-content">{children}</div>
           <MyGallery />
@@ -121,23 +110,10 @@ const Wrapper = styled.section`
     padding: 8px 8px 8px 8px;
   }
 
-  .post-container {
-    
-  }
   .post-content img {
     max-width: 100%;
     margin-top: 2rem;
     margin-bottom: 2rem;
-  }
-  .post-image {
-    margin-top: 5rem;
-    margin-bottom: 5rem;
-  }
-  .post-image p {
-    font-family: "Lora", serif !important;
-    font-weight: 300 !important;
-    font-size: 1rem;
-    text-align: center;
   }
 `
 

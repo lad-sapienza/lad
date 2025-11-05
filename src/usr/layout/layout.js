@@ -7,6 +7,8 @@ import { Container } from "react-bootstrap"
 
 import ArticleLayout from "../modules/articleLayout"
 
+import ArticleImage from "../modules/articleImage"
+
 import styled from "styled-components"
 
 import "./layout.scss"
@@ -30,6 +32,7 @@ const Layout = ({ children, data, template = false }) => {
             return (
               <Wrapper>
                 <Container>
+                  <ArticleImage imageData={post.frontmatter.img} caption={post.frontmatter.caption} altText={post.frontmatter.title} />
                   {children}
                 </Container>
               </Wrapper>
