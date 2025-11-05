@@ -42,13 +42,7 @@ module.exports = {
               noInlineHighlight: false,
             },
           },
-          {
-            resolve: `gatsby-remark-copy-linked-files`,
-            options: {
-              destinationDir: `static`,
-              ignoreFileExtensions: [],
-            },
-          },
+          `gatsby-remark-copy-linked-files`,
         ],
       },
     },
