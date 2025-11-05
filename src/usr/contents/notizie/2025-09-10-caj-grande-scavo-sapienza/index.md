@@ -2,14 +2,14 @@
 title: "La missione della Sapienza a Çuka e Ajtoit finanziata nell'àmbito del progetto Grandi Scavi Sapienza"
 img: ./sapienza-grandi-scavi.jpg
 date: 2025-09-10
-description: "La Missione Archeologica della Sapienza in Albania, nell'àmbito del progetto PRIN 2022 FortNet, è lieta di organizzare un incontro con Richard Hodges, sul tema “Butrinto: crocevia del Mediterraneo”, in occasione della recente pubblicazione da parte dell'autore di due volumi riguardanti il sito antico."
-inhome: true
+description: "Dal 2025, la Missione Archeologica della Sapienza a Çuka e Ajtoit in Albania è finanziata nell'àmbito del prestigioso progetto Grandi Scavi Sapienza, riconoscimento dell'eccellenza della ricerca archeologica sul campo svolta dal 2021."
 tags:
-  - Seminario
-  - Archeologia Medievale
-  - Butrinto
-  - Missione Archeologica in Albania
   - Grandi Scavi Sapienza
+  - Missione Archeologica
+  - Albania
+  - Çuka e Ajtoit
+  - Archeologia
+  - Ricerca sul Campo
 ---
 
 Dal 2025, la [Missione Archeologica della Sapienza in Albania](../../ricerca/missione-archeologica-sapienza-a-cuka-e-ajtoit-albania/) è finanziata nell'àmbito del progetto [Grandi Scavi Sapienza](https://www.uniroma1.it/it/node/264768).
