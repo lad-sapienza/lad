@@ -304,7 +304,7 @@ Le attività della Missione Archeologica della Sapienza a Çuka e Ajtoit sono st
 
 La Missione Archeologica della Sapienza a Çuka e Ajtoit ringrazia per il suo continuo e fondamentale supporto **Past & Present Journeys**, Tirana.
 
-[![Past & Present Journeys](../../logos/pastandpresent.jpg)](https://pastandpresent.al/)
+[![Past & Present Journeys](./pastandpresent.png)](https://pastandpresent.al/)
 
 - Sito web: [https://pastandpresent.al/](https://pastandpresent.al/)
 - Facebook: [http://www.facebook.com/pages/PastandPresent-Travel-Company/106348866175295](http://www.facebook.com/pages/PastandPresent-Travel-Company/106348866175295)
@@ -313,7 +313,7 @@ La Missione Archeologica della Sapienza a Çuka e Ajtoit ringrazia per il suo co
 ---
 
 Si ringrazia Rilievi srl per la strumentazione GNSS e per il continuo supporto con strumentazione di rilievo e consigli  
-[![Rilievi srl](../../logos/rilievi.jpg)](https://rilievi.srl/)
+[![Rilievi srl](./rilievi.jpg)](https://rilievi.srl/)
 
 ---
 
@@ -325,26 +325,26 @@ Infine, si ringrazia il programma ALBCORS del [Geoportale Nazionale Albanese (AS
 
 <div className="row text-center">
   <div className="col-sm-3">
-    <img src="../../logos/sapienza.png" className="img-fluid" /><br />
+    ![Sapienza Università di Roma](./sapienza.png)  
     Sapienza Università di Roma
   </div>
   <div className="col-sm-3">
-    <img src="../../logos/ash.png" style={{maxWidth: '120px'}} className="img-fluid" /><br />
+    ![Akademia e Shkencave të Shqipërisë](./ash.png)  
     Akademia e Shkencave të Shqipërisë
   </div>
   <div className="col-sm-3">
-    <img src="../../logos/iat.png" className="img-fluid" /><br />
+    ![Instituti i Arkeologjisë Tiranë (Albania)](./iat.png)  
     Instituti i Arkeologjisë Tiranë (Albania)
   </div>
   
   <div className="col-sm-3">
-    <img src="../../logos/lad-blue.jpg" className="img-fluid" /><br />
+    ![Laboratorio di Archeologia Digitale alla Sapienza](./lad-blue.png)  
     Laboratorio di Archeologia Digitale alla Sapienza
   </div>
 </div>
 <div className="row text-center">
   <div className="col-sm-6 offset-sm-3">
-    <img src="../../logos/maeci.jpg" style={{maxWidth: '100%'}} className="img-fluid" /><br />
+    ![Ministero degli Affari Esteri e della Cooperazione Internazionale](./maeci.jpg)  
     Con il riconoscimento ufficiale (dal 2022) e il supporto finanziario (dal 2023) del Ministero degli Affari Esteri e della Cooperazione Internazionale.
   </div>
 </div>
