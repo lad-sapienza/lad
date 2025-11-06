@@ -97,11 +97,27 @@ export function buildSeoData({
     }
   }
 
+  // Organization JSON-LD for homepage and general pages
+  const organizationJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: meta.siteName || meta.title || "LAD - Laboratorio di Archeologia Digitale",
+    url: siteUrl,
+    logo: makeAbsoluteUrl(siteUrl, meta.defaultImage),
+    description: meta.defaultDescription,
+    sameAs: [
+      // Add your social media profiles here
+      // "https://twitter.com/lad_sapienza",
+      // "https://github.com/lab-archeologia-digitale",
+    ].filter(Boolean),
+  }
+
   return {
     pageTitle,
     fullUrl,
     metaTags,
     articleJsonLd,
+    organizationJsonLd,
   }
 }
 
