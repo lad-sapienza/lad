@@ -1,0 +1,12 @@
+# robots.txt for LAD - Laboratorio di Archeologia Digitale
+# https://lad.saras.uniroma1.it
+
+User-agent: *
+Allow: /
+
+# Disallow draft content (if any)
+Disallow: /*/_draft/
+
+# Sitemap location
+Sitemap: https://lad.saras.uniroma1.it/sitemap-index.xml
+Sitemap: https://lad.saras.uniroma1.it/sitemap-0.xml
