@@ -2,6 +2,7 @@
 title: "CeraLoop: invito a partecipare alla ricerca collettiva sulla “somiglianza” dei profili ceramici in archeologia"
 sort: 24
 img: ./partecipate-to-CeraLoop.jpg
+date: 2025-10-26
 inhome: true
 pinned: true
 description: "Partecipa a CeraLoop! 🏺 Una ricerca collettiva sulla somiglianza dei profili ceramici in archeologia. Aperta a tutti: esperti, studenti e appassionati. Contribuisci con pochi minuti alla classificazione archeologica basata su intelligenza artificiale"
