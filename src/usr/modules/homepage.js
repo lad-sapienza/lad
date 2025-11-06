@@ -23,7 +23,7 @@ const HomePageContent = () => {
         }
       }
       highlight: allMdx(
-        sort: {frontmatter: {date: DESC}}
+        sort: [{frontmatter: {pinned: ASC}}, {frontmatter: {date: DESC}}]
         filter: {
           frontmatter: {inhome: {eq: true}}
           internal: {contentFilePath: {regex: "/^((?!_draft).)*$/"}}
@@ -36,6 +36,7 @@ const HomePageContent = () => {
             title
             description
             slug
+            pinned
             img {
               base
               childImageSharp {
@@ -142,6 +143,7 @@ const HomePageContent = () => {
                   title={node.frontmatter.title}
                   readMore={getSlugFromPath(node.internal.contentFilePath, node.frontmatter.slug)}
                   img={node.frontmatter.img}
+                  pinned={node.frontmatter.pinned}
                 />
               ))}
             </Container>

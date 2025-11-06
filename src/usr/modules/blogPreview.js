@@ -21,8 +21,9 @@ const BlogPreview = (props) => {
     sezione.title = 'Blog';
     sezione.url = '/blog/';
   }
+  console.log(props);
   return (
-    <StyledDiv className="shadow p-3 mt-4 text-center">
+    <StyledDiv className={`shadow p-3 mt-4 text-center ${props.pinned ? `border border-primary` : ''}`}>
       <Link to={props.readMore} title={props.title}>
         {props.img && props.img.childImageSharp && (
           <GatsbyImage
@@ -32,7 +33,7 @@ const BlogPreview = (props) => {
           />
         )}
         
-        <h5>{props.title}</h5>
+        <h5>{props.title} {props.pinned}</h5>
         { ( props.author && props.date ) ? <p className="pt-1 pb-1 mt-3 border-bottom">Di {props.author} | {props.date}</p> :  ''} 
         {props.excerpt && <p>{props.excerpt}</p> }
       </Link>
