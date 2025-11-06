@@ -20,7 +20,13 @@ Mercoledì 26 novembre 2025, Julian Bogdani e Lorenzo Cardarelli parteciperanno 
 
 ---
 
-## Dettagli
+[![QR Code per collegarsi su Zoom](./qr-code-for-zoom.gif)  
+È possibile seguire i lavori del convegno online sulla piattaforma Zoom.us](https://cnrs.zoom.us/j/91322947271?pwd=1h6wbv4uWy3iLJseWHtnQIUdMjA0bY.1)
+
+
+---
+
+## Programma
 
 Linking Pasts and Sharing Knowledge 2. Mapping Archaeological Heritage, Legacy Data Integration and Web Technologies for Modelling Historical Landscapes
 
@@ -28,8 +34,6 @@ Conference Hosted by the University of Naples Federico II, organised with the É
 
 **25th-26th November 2025** - Naples, Department of Humanities, Aula ex Cataloghi Lignei
 
-
-## Programma (in aggiornamento)
 
 **25th November 2025, Dipartimento di Studi Umanistici - Complesso di San Pietro Martire**  
 Via Porta di Massa 1, aula ex Cataloghi Lignei
