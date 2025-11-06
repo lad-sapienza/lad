@@ -1,5 +1,5 @@
 ---
-title: "Laser Aided Profiler: Innovazioni e potenzialità dello ento. Esperienze a confronto [Tavola Rotonda]"
+title: "Laser Aided Profiler: Innovazioni e potenzialità dello ento. Esperienze a confronto"
 img: ./workshop-lap.jpg
 date: 2025-03-09
 description: "Nell’àmbito della sua offerta didattica, il LAD organizza uuna tavola rotonda sul tema: “Laser Aided Profiler: Innovazioni e potenzialità dello strumento. Esperienze a confronto“"
