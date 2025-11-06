@@ -23,7 +23,7 @@ const TableOfContents = ({ toc }) => {
   };
   
   return (
-    <TocWrapper className="table-of-contents">
+    toc.items.length > 2 && <TocWrapper className="table-of-contents">
       <h3>Indice</h3>
       <ul>
         {renderItems(toc.items)}
@@ -119,40 +119,35 @@ const Wrapper = styled.section`
 
 const TocWrapper = styled.nav`
   background: #f8f9fa;
-  border-left: 4px solid #007bff;
+  border-left: 3px solid #007bff;
+  font-size: 0.9rem;
   padding: 1.5rem;
   margin: 2rem 0;
   
   h3 {
     margin-top: 0;
     margin-bottom: 1rem;
-    font-size: 1.25rem;
+    font-size: 1.1rem;
   }
-  
+    
+  li {
+    margin-top: 0.3rem;
+    margin-bottom: 0.3rem;
+  }
+
   ul {
     list-style: none;
     padding-left: 0;
     margin-bottom: 0;
     
     ul {
-      padding-left: 1.5rem;
-      margin-top: 0.5rem;
+      padding-left: 1rem;
+      margin-top: 0;
     }
   }
   
-  li {
-    margin-bottom: 0.5rem;
-  }
   
-  a {
-    color: #495057;
-    text-decoration: none;
-    
-    &:hover {
-      color: #007bff;
-      text-decoration: underline;
-    }
-  }
+  
 `
 
 export default ArticleLayout

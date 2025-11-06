@@ -61,7 +61,6 @@ const Footer = styled.section`
   background-color: #0d6efd;
   color: #fff;
   a {
-    text-decoration: none !important;
     color: #fff !important;
     &:hover {
       color: #fff !important;

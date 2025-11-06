@@ -20,7 +20,7 @@ Mercoledì 26 novembre 2025, Julian Bogdani e Lorenzo Cardarelli parteciperanno 
 
 ---
 
-## Detagli
+## Dettagli
 
 Linking Pasts and Sharing Knowledge 2. Mapping Archaeological Heritage, Legacy Data Integration and Web Technologies for Modelling Historical Landscapes
 
