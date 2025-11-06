@@ -1,5 +1,6 @@
 ---
 title: ⲘⲞvⲈⲒⲦ Grafo stradale dell'Egitto tardoantico e medievale
+date: 2022-02-04
 sort: 6
 img: ./moveit.jpg
 ---

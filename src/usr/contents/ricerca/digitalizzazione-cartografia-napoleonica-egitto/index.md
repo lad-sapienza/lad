@@ -1,5 +1,6 @@
 ---
 title: Digitalizzazione della Cartografia Napoleonica dell'Egitto
+date: 2022-06-21
 sort: 1
 img: nepoleonic-egypt.jpg
 ---

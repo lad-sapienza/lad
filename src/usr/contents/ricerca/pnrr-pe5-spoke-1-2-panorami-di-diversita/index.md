@@ -1,5 +1,6 @@
 ---
 title: "Partecipazione alle attività del progetto PNRR “Archeologia del sacro” (PE5, Spoke 1, WP 5, LT 3)"
+date: 2024-07-16
 sort: 21
 img: ./kircher-sabina.jpg
 description: Il LAD partecipa alle attività del progetto PNRR, Partenariato Esteso 5, Spoke 1 (“Historical landscapes, traditions and cultural identities”), WP 5 (“Archeologia del sacro”)

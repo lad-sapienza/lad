@@ -1,5 +1,6 @@
 ---
 title: Atlante Sacri lapides Aegypti (dir. Paola Buzi, Sapienza)
+date: 2022-02-04
 sort: 7
 img: ./sla-logo.png
 ---

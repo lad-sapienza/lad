@@ -1,6 +1,7 @@
 ---
 title: Missione Archeologica della Sapienza a Çuka e Ajtoit (Albania)
 author: Julian Bogdani
+date: 2022-03-03
 sort: 100
 img: ./cuka_ajtoit.jpg
 pinned: true

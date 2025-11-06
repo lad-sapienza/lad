@@ -1,6 +1,7 @@
 ---
 title: "Gli impasti ceramici dagli scavi a Çuka e Ajtoit (Konispoli, Albania): campionatura, analisi e studio in prospettiva diacronica"
 author: Julian Bogdani
+date: 2024-11-19
 sort: 22
 img: ./impasti-ceramici-caj.jpg
 description: Progetto di AR2231888A457752, P.I. Nadia Aleotti, finanziato dal programma “Progetti per Avvio alla Ricerca” della Sapienza Università di Roma, anno 2023, prot. AR2241907808A0A6
