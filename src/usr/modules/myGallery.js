@@ -36,6 +36,7 @@ const MyGallery = () => {
           extension: { regex: "/(jpg|jpeg|png|gif)/" }
           relativePath: { regex: "/gallery/" }
         }
+        sort: { name: DESC }
       ) {
         edges {
           node {
