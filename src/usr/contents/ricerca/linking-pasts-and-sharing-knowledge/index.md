@@ -14,8 +14,7 @@ Aula ex Cataloghi Lignei
 
 <div class="text-center border border-danger bg-warning-subtle py-3 my-5">
   <strong>Registration is required to follow the conference works online.<br />
-  <a href="https://uniroma1.zoom.us/meeting/register/tZ0ucO6vpz8pH9B2AfqmBxS_Lt6Gs9EdLpEe" title="register now">REGISTER NOW!</a></strong><br />
-  <img src="./register.gif" alt="Register to follow the conference works online" />
+  <a href="https://uniroma1.zoom.us/meeting/register/tZ0ucO6vpz8pH9B2AfqmBxS_Lt6Gs9EdLpEe" title="register now">REGISTER NOW!</a></strong>
 </div>
 
 
@@ -193,8 +192,10 @@ Aula ex Cataloghi Lignei
       </a>
       <hr />
       <a href="https://www.studiumanistici.unina.it/dipartimento/" title="Dipartimento Studi Umanistici. Università di Napoli Federico II">
-        <img src="./dsu-federico-ii.jpg" alt="Dipartimento Studi Umanistici. Università di Napoli Federico II" />
-      </a>
+        
+[![Dipartimento Studi Umanistici. Università di Napoli Federico II](./dsu-federico-ii.jpg)](https://www.studiumanistici.unina.it/dipartimento/)
+
+</a>
     </div>
     <div class="col-4">
       <a href="https://www.sheffield.ac.uk/dhi" title="The Digital Humanities Institue. University of Sheffield">
@@ -202,8 +203,10 @@ Aula ex Cataloghi Lignei
       </a>
       <hr />
       <a href="https://www.sheffield.ac.uk/dhi" title="The Digital Humanities Institue. University of Sheffield">
-        <img src="./DHI_Sheffield.jpeg" alt="The Digital Humanities Institue. University of Sheffield" />
-      </a>
+        
+[![The Digital Humanities Institue. University of Sheffield](./DHI_Sheffield.jpeg)](https://www.sheffield.ac.uk/dhi)
+
+</a>
     </div>
     <div class="col-4">
       <a href="https://lad.saras.uniroma1.it/" title="LAD: Laboratorio di Archeologia Digitale alla Sapienza">
@@ -211,8 +214,10 @@ Aula ex Cataloghi Lignei
       </a>
       <hr />
       <a href="https://lad.saras.uniroma1.it/" title="LAD: Laboratorio di Archeologia Digitale alla Sapienza">
-        <img src="./lad-sapienza.jpg" alt="LAD: Laboratorio di Archeologia Digitale alla Sapienza" />
-      </a>
+        
+[![LAD: Laboratorio di Archeologia Digitale alla Sapienza](./lad-sapienza.jpg)](https://lad.saras.uniroma1.it/)
+
+</a>
     </div>
   </div>
 </div>
@@ -235,8 +240,10 @@ Aula ex Cataloghi Lignei
         AIUCD: Associazione per l'Informatica Umanistica e la Cultura Digitale
       </a>
       <hr />
-      <img src="./aiucd.jpg" alt="Dipartimento Studi Umanistici. Università di Napoli Federico II" />
-    </div>
+      
+[![AIUCD: Associazione per l'Informatica Umanistica e la Cultura Digitale](./aiucd.jpg)](http://www.aiucd.it/)
+
+</div>
   </div>
 </div>
 
