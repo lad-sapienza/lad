@@ -18,4 +18,6 @@ La conferenza si svolgerà nell'aula Calasso della Facoltà di Giurisprudenza (C
 Id riunione 950 2357 2436.  
 Passcode: 910786.
 
+---
+- [Pagina ufficiale](https://www.antichita.uniroma1.it/landscape-archaeology-discussion-between-new-paradigms-methodology)
 - [Scarica la locandina in formato PDF](./Landscape-2022-10-17.pdf)

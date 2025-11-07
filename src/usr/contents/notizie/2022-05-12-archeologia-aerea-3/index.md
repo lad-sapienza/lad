@@ -17,4 +17,4 @@ Tra 19 e 21 maggio 2022, al museo Museo Castromediano, l'Università del Salento
 Il LAD partecipa con l'intervento di Julian Bogdani dal titolo _Documentare l’invisibile. Il progetto Çuka e Ajtoit: rilievo e documentazione di un sito d’altura_.
 
 - [Sito del convegno](http://www.archeologia-aerea.it/2022convint.html)
-- [Programma del convegno in formato PDF](http://www.archeologia-aerea.it/eventi/2022ConvegnoArcheologiaAereaProgramma.pdf).
+- [Programma del convegno in formato PDF](Terzo-Convegno-Internazionale-Archeologia-Aerea.pdf).

@@ -27,4 +27,4 @@ L'obiettivo finale del convegno di quest’anno sarà quello di riuscire a dare 
 
 - [Scarica il programma in versione PDF](http://www.archeolandscape.it/images/Format%20A4_programma_Landscape3.pdf)
 - [Scarica il Book of abstracts in versione PDF](http://www.archeolandscape.it/images/LANDSCAPE%203_Abstract%20Book.pdf)
-- Maggiori dettagli sono disponibili nel sito web dell'iniziativa: [http://archeolandscape.it/](http://archeolandscape.it/).
+- Maggiori dettagli sono disponibili nel sito web dell'iniziativa: [https://www.archeolandscape.it/index.php/edizioni-passate/landscape3](https://www.archeolandscape.it/index.php/edizioni-passate/landscape3).

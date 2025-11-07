@@ -30,6 +30,7 @@ Parteciperanno al workshop:
 La conferenza si svolgerà presso Université de Lille Campus Pont de Bois Salle de séminaire d’HALMA - E1.51. Per informazioni e iscrizione si prega di contattare: [Nicolas Genis](mailto:nicolas.genis@univ-lille.fr).
 
 
-
+---
+- [Sito web ufficiale](https://halma.univ-lille.fr/detail-event/workshop-beyond-the-wall)
 - [Scarica il programma in formato PDF](./Affiche_BtW-Lille_2022.pdf)
 - [Scarica la locandina in formato JPG](./beyond_the_wall.jpg)
