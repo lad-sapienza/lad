@@ -25,3 +25,4 @@ Per informazioni:
 ---
 
 - [Scarica la locandina in formato PDF](./20250407_Julian_Bogdani.pdf)
+- [Pagina web della SNS dedicata all'evento](https://www.sns.it/it/seminario/cestrine-epiro-mito-storia-e-archeologia)

@@ -48,6 +48,7 @@ const FooterSection = () => {
               </p>
             </Col>
           </Row>
+          <div className="text-sm text-center pb-5">Questo sito è stato realizzato con <a href="https://github.com/lad-sapienza/scms" target="_blank" rel="noopener noreferrer">s:CMS</a> da LAD @Sapienza</div>
         </Container>
       </footer>
     </Footer>

@@ -2,7 +2,7 @@
 title: "Partecipazione dei membri della Missione Archeologica della Sapienza a Çuka e Ajtoit alla conferenza internazionale EAA 2024"
 img: ./eaa-rome-2024.jpg
 date: 2024-08-21
-description: "Il direttore della Missione Archeologica della italo-albanese (Sapienza - Istituto Archeologico Albanese)Julian Bogdani parteciperà alla conferenza “Actualité de la recherche archéologique en Albanie” organizzata da E. Nallbani, F. Quantin e S. Shpuza"
+description: "Membri della Missione Archeologica della Sapienza a Çuka e Ajtoit presentano le proprie ricerche al convegno EAA 2024 a Roma (28-31 agosto). Interventi su paesaggi sacri, insediamenti fortificati e trasformazioni nell'Epiro settentrionale tra età classica ed ellenistica."
 tags:
   - Convegno
   - Archeologia
