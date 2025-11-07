@@ -5,6 +5,7 @@ require("dotenv").config({
  * Configure your Gatsby site with this file.
  *
  * See: https://www.gatsbyjs.com/docs/reference/config-files/gatsby-config/
+ * Updated: 2025-11-07 - Force cache invalidation for PDF processing
  */
 
 /**
