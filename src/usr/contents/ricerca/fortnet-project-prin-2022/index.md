@@ -19,8 +19,8 @@ Fortification and population network in coastal Chaonia, Northern Epirus (Albani
 
 - **P.I.**: Enrico Giorgi (Università di Bologna)
 - **Responsabile Unità Sapienza**: Julian Bogdani (Sapienza Università di Roma)
-- **Finanziamento**: PRIN 2022 (PNRR)
-- **Anno**: 2023
+- **Finanziamento**: PRIN 2022 (Unione Europea – Next Generation EU, Missione 4 Componente 1, CUP J53D23000100006)
+- **Anno d‘inizio**: 2023
 - **Partecipanti**:
   - Enrico **Giorgi**, P.I., [enrico.giorgi@unibo.it](mailto:enrico.giorgi@unibo.it)
   - Julian **Bogdani**, Responsabile Unità Sapienza, [julian.bogdani@uniroma1.it](mailto:julian.bogdani@uniroma1.it)
