@@ -1,25 +1,13 @@
 {
-  "name": "@lad-sapienza/scms",
-  "private": false,
-  "description": "A complete starter, built with love by LAD @Sapienza and based on Gatsby.js, React, Bootstrap and other open source libraries to easily publish research data as static sites",
+  "name": "@lad-sapienza/lad",
+  "private": true,
+  "description": "Official website of LAD: Laboratorio di Archeologia Digitale alla Sapienza. Built with s:CMS, a Gatsby-based static site generator developed by LAD",
   "version": "5.4.1",
   "author": {
     "name": "Julian Bogdani",
     "email": "julian.bogdani@uniroma1.it",
     "url": "https://lad.saras.uniroma1.it"
   },
-  "contributors": [
-    {
-      "name": "Eleonora Iacopini",
-      "email": "eleonora.iacopini@uniroma1.it",
-      "url": "https://lad.saras.uniroma1.it"
-    },
-    {
-      "name": "Erasmo Di Fonso",
-      "email": "erasmo.difonso@uniroma1.it",
-      "url": "https://lad.saras.uniroma1.it"
-    }
-  ],
   "dependencies": {
     "@mdx-js/react": "^3.1.1",
     "@vis.gl/react-maplibre": "^8.1.0",
