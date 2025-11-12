@@ -15,7 +15,7 @@ tags:
 
 Sono aperte le iscrizioni ai Laboratori Didattici di Archeologia Digitale per l'anno accademico 2025-2026, organizzato dal LAD: Laboratorio di Archeologia Digitale alla Sapienza, in collaborazione con la [Missione Archeologica della Sapienza in Albania](../../ricerca/missione-archeologica-sapienza-a-cuka-e-ajtoit-albania/) e si pongono l’obiettivo di fornire le basi teoriche e pratiche necessarie per impostare e sviluppare in autonomia i propri progetti **GIS** e affrontare il mondo della cartografia numerica, dell’elaborazione grafica di rilievi di monumenti archeologici.
 
-I laboratori si terranno **in presenza** presso Sapienza Università di Roma, **Aula IV**, al primo piano dell'edificio di Lettere e Filosofia (CU003), nei giorni di **26, 27, 28, 29, 30, gennaio e 2, 3 Febbraio 2026**, ore **14:00-18:00**.
+I laboratori si terranno **in presenza** presso Sapienza Università di Roma, **Aula IV**, al primo piano dell'edificio di Lettere e Filosofia (CU003), nei giorni di **26, 27, 28, 29, 30 gennaio e 2, 3 Febbraio 2026**, ore **14:00-18:00**.
 
 Responsabile: **Julian Bogdani** ([julian.bogdani@uniroma1.it](mailto:julian.bogdani@uniroma1.it))
 
