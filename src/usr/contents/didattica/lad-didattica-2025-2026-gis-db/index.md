@@ -15,7 +15,7 @@ tags:
 
 Sono aperte le iscrizioni ai Laboratori Didattici di Archeologia Digitale per l'anno accademico 2025-2026, organizzato dal LAD: Laboratorio di Archeologia Digitale alla Sapienza, in collaborazione con la [Missione Archeologica della Sapienza in Albania](../../ricerca/missione-archeologica-sapienza-a-cuka-e-ajtoit-albania/) e si pongono l’obiettivo di fornire le basi teoriche e pratiche necessarie per impostare e sviluppare in autonomia i propri progetti **GIS** e affrontare il mondo della cartografia numerica, dell’elaborazione grafica di rilievi di monumenti archeologici.
 
-I laboratori si terranno **in presenza** presso Sapienza Università di Roma, **Aula IV**, al primo piano dell'edificio di Lettere e Filosofia (CU003), nei giorni di **27, 28, 29, 30, 31 gennaio e 3, 4 Febbraio 2025**, ore **14:00-18:00**.
+I laboratori si terranno **in presenza** presso Sapienza Università di Roma, **Aula IV**, al primo piano dell'edificio di Lettere e Filosofia (CU003), nei giorni di **26, 27, 28, 29, 30, gennaio e 2, 3 Febbraio 2026**, ore **14:00-18:00**.
 
 Responsabile: **Julian Bogdani** ([julian.bogdani@uniroma1.it](mailto:julian.bogdani@uniroma1.it))
 
@@ -23,15 +23,15 @@ Responsabile: **Julian Bogdani** ([julian.bogdani@uniroma1.it](mailto:julian.bog
 ## Calendario
 
 - Modulo **GIS base** (16 ore):
-  - 26 gennaio 2025, ore 14.00-18.00
-  - 27 gennaio 2025, ore 14.00-18.00
-  - 28 gennaio 2025, ore 14.00-18:00
-  - 29 gennaio 2025, ore 14.00-18:00
+  - lun 26 gennaio 2026, ore 14.00-18.00
+  - mar 27 gennaio 2026, ore 14.00-18.00
+  - mer 28 gennaio 2026, ore 14.00-18:00
+  - gio 29 gennaio 2026, ore 14.00-18:00
 - Modulo **GIS avanzato** (8 ore):
-  - 30 gennaio 2025, ore 14.00-18:00
-  - 2 Febbraio 2025, ore 14.00-18.00
+  - ven 30 gennaio 2026, ore 14.00-18:00
+  - lun 2 Febbraio 2026, ore 14.00-18.00
 - **Banche dati** per l'Archeologia (4h)
-  - 3 Febbraio 2025, ore 14.00-18.00
+  - mar 3 Febbraio 2026, ore 14.00-18.00
 
 ## Iscrizione
 
