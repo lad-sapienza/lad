@@ -22,15 +22,15 @@ Responsabile: **Julian Bogdani** ([julian.bogdani@uniroma1.it](mailto:julian.bog
 
 ## Calendario
 
-- Modulo **GIS base** (16 ore):
+- Modulo **GIS base** (16 ore, [🗓️ aggiungi al calendario](https://calendar.google.com/calendar/event?action=TEMPLATE&tmeid=XzhncDMyaGE2ODUyazhiOXA4cDM0OGI5azhoMWplYjlwODRwamFiOWw3NTBrMmNpNDZrcjM0Y3BnNmtfMjAyNjAxMjZUMTMwMDAwWiBqdWxpYW4uYm9nZGFuaUB1bmlyb21hMS5pdA&tmsrc=julian.bogdani%40uniroma1.it&scp=ALL)):
   - lun 26 gennaio 2026, ore 14.00-18.00
   - mar 27 gennaio 2026, ore 14.00-18.00
   - mer 28 gennaio 2026, ore 14.00-18:00
   - gio 29 gennaio 2026, ore 14.00-18:00
-- Modulo **GIS avanzato** (8 ore):
+- Modulo **GIS avanzato** (8 ore, [🗓️ aggiungi al calendario](https://calendar.google.com/calendar/event?action=TEMPLATE&tmeid=XzZvcTNpZGEyNjRvM2diOWo2bDMzOGI5azhkMjQ4YmExOGNyMzRiYTM2MHBrNGNobDZsMmphaGk2NmdfMjAyNjAxMzBUMTMwMDAwWiBqdWxpYW4uYm9nZGFuaUB1bmlyb21hMS5pdA&tmsrc=julian.bogdani%40uniroma1.it)):
   - ven 30 gennaio 2026, ore 14.00-18:00
   - lun 2 Febbraio 2026, ore 14.00-18.00
-- **Banche dati** per l'Archeologia (4h)
+- **Banche dati** per l'Archeologia (4h, [🗓️ aggiungi al calendario](https://calendar.google.com/calendar/event?action=TEMPLATE&tmeid=XzcwcTQ4ZHBuNmdxamFiOW44Z3IzNmI5azhwMTRhYjlwNjEyajJiYTU2ZDFrY2NwcDhwMTRjZ3EzNzQganVsaWFuLmJvZ2RhbmlAdW5pcm9tYTEuaXQ&tmsrc=julian.bogdani%40uniroma1.it))
   - mar 3 Febbraio 2026, ore 14.00-18.00
 
 ## Iscrizione
