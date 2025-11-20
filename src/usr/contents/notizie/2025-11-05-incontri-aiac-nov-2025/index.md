@@ -10,7 +10,6 @@ tags:
   - Paesaggi Urbani
   - Roma
   - KNIR
-inhome: true
 ---
 
 Lunedì 10 novembre Julian Bogdani modererà il primo incontro dell'Associazione Internazionale di Archeologia Classica (AIAC) dell'autunno 2025, che si terrà alle ore 17:00 presso il Reale Istituto Neerlandese di Roma.

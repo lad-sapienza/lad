@@ -22,5 +22,3 @@ Mercoledì 26 novembre 2025, Julian Bogdani e Lorenzo Cardarelli parteciperanno 
 
 [![QR Code per collegarsi su Zoom](./qr-code-for-zoom.gif)  
 È possibile seguire i lavori del convegno online sulla piattaforma Zoom.us](https://cnrs.zoom.us/j/91322947271?pwd=1h6wbv4uWy3iLJseWHtnQIUdMjA0bY.1)
-
-
