@@ -1,0 +1,60 @@
+---
+title: "Il blog di LAD: notizie, appunti, recensioni, tutorial sulle applicazioni informatiche per l'archeologia"
+date: 2023-10-01
+description: "Il blog di LAD raccoglie recensioni, notizie, tutorial, appunti e note relatice a progetti, tecnologie, strummenti, standard in uso nel campo della ricerca archeologica"
+menu_position: 1
+template: "list"
+---
+
+
+import ArticleList from "../../modules/articleList";
+
+
+# Sviluppo
+
+<div className="lead">
+  Questa pagina raccoglie i principali progetto di sviluppo del LAD: 
+  Laboratorio di Archeologia Digitale alla Sapienza. Si tratta di un 
+  indice complessivo di progetti e idee che si trovano presso le nostre
+  repository [GitHub](https://github.com/lad-sapienza/), e che sono in varie fasi di sviluppo,
+  test, rilascio e manutenzione.
+
+  Per i progetti di cui è stato pubblicato un articolo sul [blog](../blog/) del LAD,
+  vi invitiamo a consultare la sezione Blog del sito web, dove potrete
+  trovare recensioni, tutorial e approfondimenti sui vari strumenti e
+  tecnologie sviluppate dal LAD.
+</div>
+
+## BraDypUS web database system
+BraDypUS è un sistema open source, sviluppato dal LAD (Laboratorio di Archeologia Digitale alla Sapienza), per la creazione, gestione e pubblicazione di database relazionali sul Web, con particolare attenzione al dominio archeologico e dei beni culturali.  
+La piattaforma, rilasciata con licenza GNU AGPL-3.0, offre strumenti avanzati per la ricerca testuale, la creazione dinamica di Harris Matrix e l’analisi grafica dei dati tramite chart interattivi.  
+Attualmente, circa trenta progetti di ricerca italiani e internazionali utilizzano BraDypUS per la gestione e la pubblicazione di dati archeologici.  
+Dal 2023 è attivo anche un servizio [Educational](https://bdus.cloud/db/edu) dedicato a giovani ricercatori, dottorandi e post-doc, che consente di ospitare e pubblicare dati di ricerca in modo semplice e flessibile.
+- Github: [https://github.com/lad-sapienza/BraDypUS](https://github.com/lad-sapienza/BraDypUS)
+- Licenza: [GNU AGPL-3.0](https://www.gnu.org/licenses/agpl-3.0.html)
+- Sito: [bdus.cloud](https://bdus.cloud/)
+- [Notizia di rilascio della versione 4](https://lad-sapienza.it/notizie/2023-06-15-bradypus-cloud-databases/)
+
+## geoNamesFromPdf
+geoNamesFromPdf è uno strumento open source sviluppato dal LAD per l’estrazione automatica di toponimi (nomi di luogo) da documenti PDF, tramite Named Entity Recognition (NER) con [spaCy](https://spacy.io/) e rilevamento automatico della lingua.  
+Il tool supporta più di 10 lingue, utilizza modelli linguistici di grandi dimensioni per una maggiore accuratezza e consente di estrarre città, paesi, regioni e punti di interesse geografico direttamente da file PDF.  
+È possibile integrare una gazetteer personalizzata (lista di toponimi) per migliorare i risultati, utile anche per documenti in lingue antiche o casi particolari.  
+geoNamesFromPdf offre sia una semplice interfaccia a riga di comando che una GUI (PyQt) per l’uso interattivo, ed è pensato per una configurazione rapida e senza frizioni anche per utenti non tecnici.
+  - Github: [https://github.com/lad-sapienza/geoNamesFromPdf](https://github.com/lad-sapienza/geoNamesFromPdf)
+  - Blog: [Estrazione automatica di toponimi da documenti PDF con Named Entity Recognition](../blog/estrarre-nomi-geografici-da-file-pdf/)
+  - Licenza: [MIT](https://opensource.org/licenses/MIT)
+  - Linguaggi: Python, Shell
+  - Dipendenze principali: PyMuPDF, spaCy, langdetect, PyQt5
+
+## s:CMS  
+s:CMS è un sistema open source sviluppato dal LAD per la creazione e gestione di siti web statici, pensato per la pubblicazione di dati di ricerca, portali e progetti digitali.
+Basato su [Gatsby.js](https://www.gatsbyjs.com/), React e GraphQL, s:CMS offre componenti pronti all’uso per integrare, visualizzare e analizzare dati provenienti da database, file statici o servizi remoti: mappe, tabelle ricercabili, gallerie, e molto altro.  
+Il sistema è progettato per essere facile da installare, personalizzare e mantenere, con un workflow semplificato per la pubblicazione sicura e duratura dei contenuti.  
+s:CMS supporta l’integrazione con [Directus](https://directus.io/) per la gestione dei dati, e consente la personalizzazione completa del layout tramite React Bootstrap e SASS.  
+  - Github: [https://github.com/lad-sapienza/sCMS](https://github.com/lad-sapienza/sCMS)
+  - Licenza: [0BSD](https://github.com/lad-sapienza/sCMS/blob/main/LICENSE)
+  - Tecnologie: Gatsby.js, React, GraphQL, MDX, SASS
+  - Sito demo: [scms.lad-sapienza.it](https://scms.lad-sapienza.it/)
+
+## CeraLoop
+
