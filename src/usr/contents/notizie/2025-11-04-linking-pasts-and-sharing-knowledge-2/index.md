@@ -48,7 +48,7 @@ Via Porta di Massa 1, aula ex Cataloghi Lignei
 - `13:30` Light Lunch
 - `14:30` Greetings of **Andrea Mazzucchi**, Director of DSU-Università di Napoli Federico II & **Valerie Huet**, Director of Centre Jean Bérard, Napoli
 
-Chair **Federica Nicolardi** (DSU-Università di Napoli Federico II)
+**Chair Federica Nicolardi** (DSU-Università di Napoli Federico II)
 
 - `15:00` Anca **Dan** (CNRS-ENS Paris), Wolfgang **Rabbel** (Univ. Kiel, Roots Excellence Cluster), Şerif **Barış** (Univ. Kocaeli), Sait **Bașaran** (Istanbul), Helmut **Brückner** (Univ. Köln), Chrysa **Karadima** (Ephorate of Antiquities of Rhodopes, Komotini), Domna **Terzopoulou** (Ephorate of Antiquities of Evros, Alexandroupolis), Martin **Thorwart** (Univ. Kiel, Roots Excellence Cluster)  
 _Bits of memory: 3D (re)constructions of the Hebros Delta in the Aegean Thrace_
@@ -84,7 +84,7 @@ Complesso Sant'Antonio delle Monache, piazza Bellini 59-60, Sala Conferenze
 
 - `09:15` Greetings of Nicola Madonna, Director of Biblioteca di Area Umanistica
 
-Chair **Paola Moscati** (CNR-ISPC)
+**Chair Paola Moscati** (CNR-ISPC)
 
 - `09:30` François **Fouriaux** (CNRS, Centre Jean Bérard-EFR)  
 _All inclusive: 3D mapping and spatial analysis of all fragments within a soil layer, case of study Porta Nocera at Pompeii_
@@ -114,7 +114,7 @@ _La necropoli orientale di Puteoli: uno scavo digitale_
 
 - `13:00` Light Lunch
 
-Chair **Maria Chiara Scappaticcio** (DSU-Università di Napoli Federico II)
+**Chair Maria Chiara Scappaticcio** (DSU-Università di Napoli Federico II)
 
 - `14:30` Anca **Dan**, Frédérique **Marchand-Beaulieu** (CNRS-ENS Paris), Sait **Başaran** (Istanbul)  
 _3D in the Dark: documentation, study and publication of the Pan Cave and the corpus of sculptures of Ainos/Thrace_
