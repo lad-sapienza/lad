@@ -68,7 +68,7 @@ CeraLoop è una web app open source sviluppata dal LAD per la valutazione e il r
 
 L'interfaccia è pensata per essere immediata e utilizzabile sia su desktop che su dispositivi touch: il riordino delle immagini avviene tramite drag-and-drop, ma sono disponibili anche controlli touch alternativi. Per ogni valutazione viene registrato automaticamente il tempo impiegato e le sottomissioni possono essere salvate e, se necessario, cancellate. L'app include inoltre una pagina di report con statistiche sul progresso (percentuale di completamento, conteggi per item, visualizzazioni sintetiche) e un profilo utente dove è possibile registrare informazioni di background (titolo di studio, esperienza in archeologia e in documentazione della ceramica) che possono essere usate per pesare i dati raccolti.
 
-Risorse:
+**Risorse**
 - Github: [https://github.com/lad-sapienza/ceraloop](https://github.com/lad-sapienza/ceraloop)
 - Licenza: [MIT](https://opensource.org/licenses/MIT)
 - Demo: [ceraloop.lad-sapienza.it](https://ceraloop.lad-sapienza.it/)
@@ -84,17 +84,50 @@ L'estensione fornisce due motori di rendering: il motore "Standard" mostra tutte
 
 L'installazione è semplice: creare (se non esiste) la directory `extensions` nella root dell'istanza Directus, copiare il `package.json` e la cartella `dist` di questa estensione in `extensions/directus-extension-harris-matrix/` e riavviare Directus. Sul piano tecnologico l'estensione è sviluppata in JavaScript con frontend in Vue e utilizza Graphviz per la semplificazione dei grafi nel motore Carafa; si installa e si integra come una normalissima Directus layout extension.
 
-Risorse:
+**Risorse**
 - Github: [https://github.com/lad-sapienza/directus-extension-harris-matrix](https://github.com/lad-sapienza/directus-extension-harris-matrix)
 - Licenza: [GNU AGPL-3.0](https://www.gnu.org/licenses/agpl-3.0.en.html)
 - Tutorial video (configurazione Directus per HMDE): [https://youtu.be/yEDQMQqO87I](https://youtu.be/yEDQMQqO87I)
 - Presentazione dell'estensione: [https://lad.saras.uniroma1.it/blog/la-visualizzazione-del-dato-stratigrafico-in-directus-io/](https://lad.saras.uniroma1.it/blog/la-visualizzazione-del-dato-stratigrafico-in-directus-io/)
 
+---
 
-## https://lad.saras.uniroma1.it/blog/estensione-di%20sincronizzazione-directus-zotero/
-https://github.com/lad-sapienza/directus-extension-zotero-sync
+## Directus: Zotero Sync (estensione)
 
-## https://lad.saras.uniroma1.it/blog/directusimport-qgis-plugin-di-lad/
-https://github.com/lad-sapienza/DirectusImporter
+`directus-extension-zotero-sync` è un'estensione sviluppata dal LAD che automatizza la gestione delle citazioni bibliografiche collegando Directus a una libreria di gruppo Zotero. L'estensione agisce come un hook schedulato che, ogni notte, interroga l'API di Zotero per recuperare citazioni formattate e popolare i campi HTML delle voci bibliografiche in Directus (ad es. il campo `full_record`), aggiornando contemporaneamente un timestamp `last_synced` per tracciare l'ultima sincronizzazione.
 
-## https://github.com/lad-sapienza/BdusApiPhpClient
+L'architettura è progettata per ridurre la duplicazione dei dati: gli utenti cercano e selezionano elementi da Zotero tramite autocompletamento, il sistema memorizza la chiave Zotero e provvede a completare automaticamente la citazione. Un processo di sincronizzazione notturna elabora i record in batch (fino a 50 per run) e gestisce retry e limiti di rate imposti dall'API Zotero. Per funzionare richiede una tabella di appoggio (nel progetto d'esempio `site_bib_cit`) con campi come `id`, `zotero`, `full_record` e `last_synced`, e la configurazione della variabile d'ambiente `ZOTERO_GROUP_ID`.
+
+Installazione e configurazione sono semplici: è possibile installare l'estensione via NPM (`npm install @lad-sapienza/directus-extension-zotero-sync`) oppure copiarne manualmente `package.json` e la cartella `dist` nella directory `extensions/directus-extension-zotero-sync/` dell'istanza Directus e riavviare il servizio. Durante lo sviluppo è possibile abilitare il reload automatico delle estensioni e usare una modalità di debug per eseguire sync manuali.
+
+**Risorse**
+- Github: [https://github.com/lad-sapienza/directus-extension-zotero-sync](https://github.com/lad-sapienza/directus-extension-zotero-sync)
+- Articolo: [Automatizzare la gestione bibliografica in Directus (blog LAD)](https://lad.saras.uniroma1.it/blog/estensione-di%20sincronizzazione-directus-zotero/)
+- Licenza: [GNU AGPL-3.0](https://www.gnu.org/licenses/agpl-3.0.en.html)
+
+---
+
+## Directus: DirectusImporter (plugin QGIS)
+
+DirectusImporter è un plugin per QGIS sviluppato dal LAD che consente di importare dati spaziali e non spaziali da un'istanza Directus direttamente in QGIS. Dopo aver configurato l'URL API e (eventualmente) il token di accesso, è possibile sfogliare le collezioni disponibili, scegliere il campo geometria e caricare le feature come layer vettoriali; il plugin supporta inoltre la selezione dei campi da importare, la gestione della paginazione, una cache locale per migliorare le prestazioni e una modalità di debug per lo sviluppo.
+
+Il plugin è pensato per flussi operativi sul campo e in laboratorio dove è necessario visualizzare e analizzare in QGIS dati gestiti tramite Directus (rilievi, unità stratigrafiche, immagini e metadati) senza passaggi manuali di esportazione. L'installazione è semplice: scaricare la release dal repository GitHub e installare tramite QGIS (Plugins > Manage and Install Plugins > Install from ZIP), oppure scaricare il codice e seguire le istruzioni di sviluppo dal README.
+
+Requisiti principali: QGIS 3.10 o superiore, binding GDAL/OGR (`osgeo`) e la libreria `requests` per le chiamate HTTP. Il progetto è rilasciato con licenza GNU GPL-3.0.
+
+**Risorse**
+- Blog: [DirectusImporter — integrazione Directus in QGIS](https://lad.saras.uniroma1.it/blog/directusimport-qgis-plugin-di-lad/)
+- Github: [https://github.com/lad-sapienza/DirectusImporter](https://github.com/lad-sapienza/DirectusImporter)
+- Licenza: [GNU GPL-3.0](https://github.com/lad-sapienza/DirectusImporter/blob/main/LICENSE)
+
+---
+
+## BdusApiPhpClient
+
+BdusApiPhpClient è un client open source scritto in PHP che fornisce un'interfaccia leggera per interagire con le API di BraDypUS. La libreria funge da wrapper intorno all'API di BraDypUS (documentata su `docs.bdus.cloud/api/`) e semplifica operazioni comuni come ottenere la versione dell'API, recuperare valori unici di una colonna con suggerimenti e filtri, ispezionare la configurazione del database e delle singole tabelle, eseguire ricerche (tramite array o ShortSQL) con paginazione e recuperare singoli record per ID.
+
+L'installazione avviene comodamente via [Composer](https://getcomposer.org/) oppure è possibile includere manualmente la libreria nel progetto. La libreria è progettata per essere semplice da usare e integrare in progetti PHP esistenti, fornendo metodi intuitivi per interagire con le funzionalità di BraDypUS senza dover gestire direttamente le chiamate HTTP.
+
+**Risorse**
+- Github: [https://github.com/lad-sapienza/BdusApiPhpClient](https://github.com/lad-sapienza/BdusApiPhpClient)
+- Licenza: [MIT](https://github.com/lad-sapienza/BdusApiPhpClient/blob/master/LICENSE)
