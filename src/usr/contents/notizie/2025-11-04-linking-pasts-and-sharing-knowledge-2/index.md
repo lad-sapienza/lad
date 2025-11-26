@@ -99,7 +99,7 @@ _Echoes of antiquity: unlocking the Gregorian Cadastre to reconstruct the Roman 
 
 **Chair Alessandro Naso** (DSU-Univ. di Napoli Federico II)
 
-- `11:00` Giulia **Buono** (CNR-ISPC), Teresa **Tescione** (DSU-Univ. di Napoli Federico II), Alessandra **Caravale** (CNR-ISPC), Ilaria **Matarese** (SABAP Napoli Area Metropolitana), Emanuela **Santaniello** (MANN), Rodolfo **Brancato** (DSU-Univ. di Napoli Federico II), Irene **Rossi (CNR-ISPC)  
+- `11:00` Giulia **Buono** (CNR-ISPC), Teresa **Tescione** (DSU-Univ. di Napoli Federico II), Alessandra **Caravale** (CNR-ISPC), Ilaria **Matarese** (SABAP Napoli Area Metropolitana), Emanuela **Santaniello** (MANN), Rodolfo **Brancato** (DSU-Univ. di Napoli Federico II), Irene **Rossi* (CNR-ISPC)  
 _Digital\_Groma: un’infrastruttura digitale per il deep mapping della Piana Campana dall’archivio e paesaggio archeologico_
 - `11:15` Lorenzo **Radaelli** (Univ. di Salerno, DiSPaC; Aix-Marseille Univ, CNRS, CCJ)  
 _Un approccio multiscalare per la ricomposizione del paesaggio della Daunia centro-orientale (X sec. a.C.-III sec. d.C.)_
