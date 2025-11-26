@@ -98,8 +98,6 @@ L'installazione è semplice: creare (se non esiste) la directory `extensions` ne
 
 L'architettura è progettata per ridurre la duplicazione dei dati: gli utenti cercano e selezionano elementi da Zotero tramite autocompletamento, il sistema memorizza la chiave Zotero e provvede a completare automaticamente la citazione. Un processo di sincronizzazione notturna elabora i record in batch (fino a 50 per run) e gestisce retry e limiti di rate imposti dall'API Zotero. Per funzionare richiede una tabella di appoggio (nel progetto d'esempio `site_bib_cit`) con campi come `id`, `zotero`, `full_record` e `last_synced`, e la configurazione della variabile d'ambiente `ZOTERO_GROUP_ID`.
 
-Installazione e configurazione sono semplici: è possibile installare l'estensione via NPM (`npm install @lad-sapienza/directus-extension-zotero-sync`) oppure copiarne manualmente `package.json` e la cartella `dist` nella directory `extensions/directus-extension-zotero-sync/` dell'istanza Directus e riavviare il servizio. Durante lo sviluppo è possibile abilitare il reload automatico delle estensioni e usare una modalità di debug per eseguire sync manuali.
-
 **Risorse**
 - Github: [https://github.com/lad-sapienza/directus-extension-zotero-sync](https://github.com/lad-sapienza/directus-extension-zotero-sync)
 - Articolo: [Automatizzare la gestione bibliografica in Directus (blog LAD)](https://lad.saras.uniroma1.it/blog/estensione-di%20sincronizzazione-directus-zotero/)
