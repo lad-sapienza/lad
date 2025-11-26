@@ -58,3 +58,49 @@ s:CMS supporta l’integrazione con [Directus](https://directus.io/) per la gest
 
 ## CeraLoop
 
+CeraLoop è una web app open source sviluppata dal LAD per la valutazione e il ranking di immagini ceramiche generate da modelli AI. È pensata per raccogliere valutazioni umane che possano essere usate per validare e migliorare algoritmi di similarità.
+
+Caratteristiche principali:
+- Interfaccia di valutazione: drag-and-drop per riordinare le immagini, con controlli touch alternativi per dispositivi mobili
+- Scarto/abilitazione di immagini non rilevanti
+- Salvataggio automatico delle valutazioni con punteggi pesati (da 1.0 a 0.1) e possibilità di cancellare le ultime sottomissioni
+- Tracciamento del tempo di valutazione per ogni item
+- Report e statistiche: percentuale di completamento, conteggi per item, visualizzazioni a torta e messaggi personalizzati
+- Profilo utente con informazioni di background utili per pesare i giudizi (istruzione, esperienza in archeologia e in documentazione della ceramica)
+
+Tecnologie e integrazioni:
+- Frontend: React 18 + Vite, Tailwind CSS
+- Routing: React Router v6
+- Backend / storage: Directus (headless CMS) per `model_output` e `user_feedbacks`
+- Autenticazione: JWT con refresh token
+
+Risorse:
+- Github: [https://github.com/lad-sapienza/ceraloop](https://github.com/lad-sapienza/ceraloop)
+- Licenza: [MIT](https://opensource.org/licenses/MIT)
+- Demo: [ceraloop.lad-sapienza.it](https://ceraloop.lad-sapienza.it/)
+- Presentazione dell'applicazione: [https://lad.saras.uniroma1.it/ricerca/ceraloop/](https://lad.saras.uniroma1.it/ricerca/ceraloop/)
+
+## Directus: Harris Matrix (estensione)
+
+`directus-extension-harris-matrix` è un'estensione di layout per Directus sviluppata dal LAD che aggiunge la visualizzazione grafica della stratigrafia (Harris Matrix) direttamente nella interfaccia di amministrazione. È pensata per gestire e visualizzare relazioni stratigrafiche tra contesti archeologici, aiutando nella ricostruzione delle successioni e nell'analisi delle sequenze stratigrafiche.
+
+Punti salienti:
+- Visualizzazione grafica della Harris Matrix con due motori di rendering (Standard e Carafa, quest'ultimo applica riduzione transitiva e raggruppamento per semplificare grafi complessi)
+- Requisiti di modellazione: due collezioni consigliate (`contexts`, `stratigraphic_relationships`) e relazioni O2M / M2O per rappresentare i legami stratigrafici
+- Esporta/usa dati in formato JGF (JSON Graph Format) per analisi esterne
+- Video tutorial e documentazione dettagliata per la configurazione del modello e delle collection
+
+Installazione rapida:
+1. Creare (se non presente) la directory `extensions` nella root dell'istanza Directus
+2. Copiare `package.json` e la directory `dist` di questa estensione in `extensions/directus-extension-harris-matrix/`
+3. Riavviare Directus
+
+Tecnologie:
+- JavaScript, Vue (frontend dell'estensione), Graphviz (per la semplificazione dei grafi nel motore Carafa)
+- Si integra con Directus come layout extension
+
+Risorse:
+- Github: [https://github.com/lad-sapienza/directus-extension-harris-matrix](https://github.com/lad-sapienza/directus-extension-harris-matrix)
+- Licenza: [GNU AGPL-3.0](https://www.gnu.org/licenses/agpl-3.0.en.html)
+- Tutorial video (configurazione Directus per HMDE): [https://youtu.be/yEDQMQqO87I](https://youtu.be/yEDQMQqO87I)
+- Presentazione dell'estensione: [https://lad.saras.uniroma1.it/blog/la-visualizzazione-del-dato-stratigrafico-in-directus-io/](https://lad.saras.uniroma1.it/blog/la-visualizzazione-del-dato-stratigrafico-in-directus-io/)
