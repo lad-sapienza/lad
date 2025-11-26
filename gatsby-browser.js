@@ -1,5 +1,3 @@
 import "bootstrap/dist/js/bootstrap.min.js"
 import "prismjs/prism"
-import "prism-themes/themes/prism-vsc-dark-plus.min.css"
-import "prismjs/plugins/line-numbers/prism-line-numbers.css"
-import "prismjs/components/prism-bash"
+import "prism-themes/themes/prism-vs.min.css"
