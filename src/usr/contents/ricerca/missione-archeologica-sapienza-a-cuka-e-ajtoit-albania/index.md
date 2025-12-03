@@ -68,7 +68,7 @@ In questi anni i membri della missione hanno avviato un processo importatente di
 > - Gamberini, A. e N. Aleotti, “Food Habits and Ceramic Repertoire: preparing and cooking Food in Hellenistic Epirus”, in _Proceedings of the 5th IARPotHP Conference, June 2021, 22nd – 25th Seville, Spain_.
 ---
 
-> - Bogdani, J., a cura di. 2025. _Abitare l'Epiro antico. Tipologie, modelli e trasformazioni dell’edilizia residenziale nell’Epiro ellenistico e romano_. Sesto Fiorentino: All'Insegna del Giglio
+- Bogdani, J., a cura di. 2025. _Abitare l'Epiro antico. Tipologie, modelli e trasformazioni dell’edilizia residenziale nell’Epiro ellenistico e romano_. Sesto Fiorentino: All'Insegna del Giglio
 - Aleotti, N. 2025. “A palmette lekythos from Tower 1 in the Western Defences at Butrint.”, in _Butrint 8. The Late Roman and Middle Byzantine Archaeology Of Butrint, its Enclave, Saranda And Santi Quaranta_, edited by R. Hodges and N. Molla, 49-50. Oxford and Philadelphia: Oxbow book.
 -	S. Napolitano, J. Bogdani. 2025. “Ceramica medievale dagli scavi della cosiddetta basilica di Çiflik (Konispol, Albania): nota preliminare.” In _X Congresso Nazionale di Archeologia Medievale. Udine – Cividale del Friuli, 9-13 settembre 2025 Volume 3_, a cura di Simonetta Minguzzi, Angela Borzacconi, Lorenzo Passera, Laura Biasin, 135-140. Sesto Fiorentino: All’Insegna del Giglio.
 - Giorgi, E., J. Bogdani, F. Carbotti, G. Sigismondo, and N. Aleotti. 2025. “FortNet Project: a longue durée approach to the study of settlement, economic and defensive systems in coastal Chaonia (Albania).” _Groma. Documenting Archaeology_, 9: 151-159.
