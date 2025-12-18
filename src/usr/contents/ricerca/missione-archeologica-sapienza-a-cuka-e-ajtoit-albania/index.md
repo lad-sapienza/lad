@@ -58,13 +58,13 @@ In questi anni i membri della missione hanno avviato un processo importatente di
 
 **In fase di pubblicazione**
 
-> - Aleotti, N. “Corcira e la sua perea: archeologia del culto in età arcaica e classica (Fine VIII-IV secolo a.C.)”, Diabaseis. Pisa: ETS  (in corso di stampa).
-> - Aleotti, N. “Corcira e l’Epiro in età arcaico-classica: il contributo dell’archeologia dei culti”, in _Fra storia e archeologia: Corcira e l’epeiros. Nuovi dati e prospettive di ricerca_ a cura di Maria Intrieri e Giuseppe Lepore. Diabaseis. Pisa: ETS (in corso di stampa).
-> - Aleotti, N. e J. Bogdani. “Hellenistic pottery from Çuka e Ajtoit (Konispoli, Albania): old and new excavations, old and new methods”, in _Proceedings of the 6th IARPotHP Conference, October 2023, 9th – 12th, Catania-Syracuse, Italy_ (in corso di stampa).
-> - Aleotti, N. e B. Risposi. “A colonial Artemis? Aspects of the cult of the goddess”, in _Syracuse and Corcyra, Proceedings of the International Conference “Corinth and Syracuse. Connections, Exchanges, Influences”, Siracusa, December 5-7, 2024_ (in corso di stampa).
-> - Antonetti, C. e N. Aleotti. “Un graffito tardo arcaico da Butrinto.”, in _Fra storia e archeologia: Corcira e l’epeiros. Nuovi dati e prospettive di ricerca_ a cura di Maria Intrieri e Giuseppe Lepore. Diabaseis. Pisa: ETS (in corso di stampa).
-> - Bogdani, J. “Cestria: un abitato epirota davanti a Corcira. Nuove ricerche archeologiche a Çuka e Ajtoit”. _Fra storia e archeologia: Corcira e l’epeiros. Nuovi dati e prospettive di ricerca_ a cura di Maria Intrieri e Giuseppe Lepore. Diabaseis. Pisa: ETS (in corso di stampa).
-> - Bogdani, J. e A. Meta. “Kestria: an Epirote centre. New archaeological research in Çuka e Ajtoit (Konispol, Albania)”. Iliria. (in corso di stampa)
+> - Aleotti, N. “Corcira e la sua perea: archeologia del culto in età arcaica e classica (Fine VIII-IV secolo a.C.)”, Diabaseis. Pisa: ETS.
+> - Aleotti, N. “Corcira e l’Epiro in età arcaico-classica: il contributo dell’archeologia dei culti”, in _Fra storia e archeologia: Corcira e l’epeiros. Nuovi dati e prospettive di ricerca_ a cura di Maria Intrieri e Giuseppe Lepore. Diabaseis. Pisa: ETS.
+> - Aleotti, N. e J. Bogdani. “Hellenistic pottery from Çuka e Ajtoit (Konispoli, Albania): old and new excavations, old and new methods”, in _Proceedings of the 6th IARPotHP Conference, October 2023, 9th – 12th, Catania-Syracuse, Italy_.
+> - Aleotti, N. e B. Risposi. “A colonial Artemis? Aspects of the cult of the goddess”, in _Syracuse and Corcyra, Proceedings of the International Conference “Corinth and Syracuse. Connections, Exchanges, Influences”, Siracusa, December 5-7, 2024_.
+> - Antonetti, C. e N. Aleotti. “Un graffito tardo arcaico da Butrinto.”, in _Fra storia e archeologia: Corcira e l’epeiros. Nuovi dati e prospettive di ricerca_ a cura di Maria Intrieri e Giuseppe Lepore. Diabaseis. Pisa: ETS.
+> - Bogdani, J. “Cestria: un abitato epirota davanti a Corcira. Nuove ricerche archeologiche a Çuka e Ajtoit”. _Fra storia e archeologia: Corcira e l’epeiros. Nuovi dati e prospettive di ricerca_ a cura di Maria Intrieri e Giuseppe Lepore. Diabaseis. Pisa: ETS.
+> - Bogdani, J. e A. Meta. “Kestria: an Epirote centre. New archaeological research in Çuka e Ajtoit (Konispol, Albania)”. Iliria.
 > - Gamberini, A. e N. Aleotti, “Food Habits and Ceramic Repertoire: preparing and cooking Food in Hellenistic Epirus”, in _Proceedings of the 5th IARPotHP Conference, June 2021, 22nd – 25th Seville, Spain_.
 ---
 
@@ -97,7 +97,7 @@ In questi anni i membri della missione hanno avviato un processo importatente di
 -  Scuola Normale Superiore di Pisa. Pisa 7 aprile 2025. Sala Stemmi del Palazzo della Carovana, Scuola Normale Superiore, Piazza dei Cavalieri, 7. Seminario organizzato da Barbara E. Borg.
     - Julian Bogdani, “Cestrine in Epiro: mito, storia e archeologia”.  
     [https://lad.saras.uniroma1.it/ricerca/missione-archeologica-sapienza-a-cuka-e-ajtoit-albania/](https://lad.saras.uniroma1.it/ricerca/missione-archeologica-sapienza-a-cuka-e-ajtoit-albania/)
-- _Viti Arkeologjik 2024_ (Anno Archeologico 2024). Accademia delle Scienze della Repubblica Albanese
+- _Viti Arkeologjik 2024_ (Anno Archeologico 2024). Accademia delle Scienze della Repubblica Albanese, Tirana, Accademia delle Scienza, 27 marzo 2025.
   - Julian Bogdani, Albana Meta, “Projekti Çuka e Ajtoit: rezultatet e fushatës 2024.”  
   [https://lad.saras.uniroma1.it/notizie/2025-03-25-conferenza-anno-archeologico-2024/](https://lad.saras.uniroma1.it/notizie/2025-03-25-conferenza-anno-archeologico-2024/)
 - _Butrinto Cento (1924-2024). Bilanci e prospettive_. Università di Bologna, 13-15 Novembre 2024.
