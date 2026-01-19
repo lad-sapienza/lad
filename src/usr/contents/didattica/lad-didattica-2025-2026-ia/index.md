@@ -3,6 +3,7 @@ title: "[a.a. 25-26] Deep Learning per la classificazione della ceramica archeol
 img: ./locadina_2026.avif
 date: 2026-02-28
 description: "Il laboratorio teorico-pratico del LAD per apprendere l'uso di Computer Vision e Deep Learning applicati allo studio e alla classificazione della ceramica archeologica."
+inhome: true
 tags:
   - Computer Vision
   - Intelligenza Artificiale
@@ -15,16 +16,14 @@ tags:
 
 Nell’ambito della sua offerta didattica per l’a.a. 2025-2026, il LAD in collaborazione con la [Scuola di Dottorato in Archeologia della Sapienza università di Roma](https://phd.uniroma1.it/web/ARCHEOLOGIA_nD3482_IT.aspx), organizza un laboratorio didattico teorico-pratico sull'applicazione di metodi di _Computer Vision_ e _Deep Learning_ per lo studio e la classificazione della ceramica.
 
-
-## Gli obiettivi del corso
-
+## Gli obiettivi del corso
 
 Il laboratorio persegue due obiettivi principali:
 1.  **Padroneggiare strumenti AI** per lo studio della ceramica archeologica, seguendo l'intero flusso di lavoro: dalla digitalizzazione alla pubblicazione tramite il software open source _PyPottery_.
 2.  **Creare un Dataset**: contribuire alla costruzione di un dataset condiviso per "insegnare" all'AI a vedere e classificare i reperti come un archeologo.
 
 
-## Il programma
+## Il programma
 
 Il laboratorio fornirà competenze pratiche su:
 -   Introduzione all'Intelligenza Artificiale e alle sue applicazioni in archeologia.
@@ -34,7 +33,7 @@ Il laboratorio fornirà competenze pratiche su:
 L'approccio proposto consente di **automatizzare e velocizzare** la documentazione e l'analisi dei materiali archeologici, supportando nuove forme di gestione digitale dei dati pregressi (*Legacy Data*), aiutando a creare nuove forme di conoscenza e migliorando l'accessibilità delle informazioni. Il corso fornisce tutti gli strumenti necessari per padroneggiare queste tecniche e applicarle autonomamente nella propria ricerca.
 
 
-## Luogo e modalità
+## Luogo e modalità
 
 Le attività si terranno in presenza presso la **Sapienza Università di Roma**, nel **laboratorio LAD** (Edificio di Lettere e Filosofia CU003, III piano), alternate a sessioni di lavoro autonomo.
 
