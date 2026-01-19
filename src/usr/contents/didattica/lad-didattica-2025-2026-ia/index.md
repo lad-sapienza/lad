@@ -48,7 +48,6 @@ Le attività si terranno in presenza presso la **Sapienza Università di Roma**,
 Per iscriversi è necessario compilare il modulo Google entro **domenica 16 marzo 2026** al seguente indirizzo:
 [https://forms.gle/RzLznJxGWYNpGzeZ6](https://forms.gle/RzLznJxGWYNpGzeZ6).
 
-> [!NOTE]
 > In caso di rinuncia o complicazioni, è fondamentale darne comunicazione all’indirizzo [lorenzo.cardarelli@uniroma1.it](mailto:lorenzo.cardarelli@uniroma1.it).
 
 
