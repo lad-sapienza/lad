@@ -3,7 +3,6 @@ title: "[a.a. 25-26] Deep Learning per la classificazione della ceramica archeol
 img: ./locadina_2026.avif
 date: 2026-02-28
 description: "Il laboratorio teorico-pratico del LAD per apprendere l'uso di Computer Vision e Deep Learning applicati allo studio e alla classificazione della ceramica archeologica."
-inhome: true
 tags:
   - Computer Vision
   - Intelligenza Artificiale
@@ -11,6 +10,8 @@ tags:
   - Legacy Data
   - Archeologia Digitale
   - Laboratorio Didattico
+inhome: true
+pinned: true
 ---
 
 
@@ -42,7 +43,7 @@ Le attività si terranno in presenza presso la **Sapienza Università di Roma**,
 -  **Lorenzo Cardarelli** ([lorenzo.cardarelli@uniroma1.it](mailto:lorenzo.cardarelli@uniroma1.it))
 
 
-## Iscrizione
+## Iscrizione
 
 Per iscriversi è necessario compilare il modulo Google entro **domenica 16 marzo 2026** al seguente indirizzo:
 [https://forms.gle/RzLznJxGWYNpGzeZ6](https://forms.gle/RzLznJxGWYNpGzeZ6).
@@ -56,7 +57,7 @@ Per iscriversi è necessario compilare il modulo Google entro **domenica 16 marz
 Il laboratorio è aperto a tutti coloro che sono interessati ad approfondire l'uso di tecnologie informatiche e l'automazione nella gestione dei dati.
 
 
-## Solo CFU?
+## Solo CFU?
 
 Hai bisogno di crediti formativi ma non puoi frequentare l'intero corso?
 È prevista un'attività integrativa specifica per chi necessita solo di completare i CFU. Questa modalità è pensata per studenti non specializzati o con esigenze curriculari specifiche.
