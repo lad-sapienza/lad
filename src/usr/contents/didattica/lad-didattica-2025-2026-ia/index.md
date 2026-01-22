@@ -15,7 +15,7 @@ pinned: true
 ---
 
 
-Nell’ambito della sua offerta didattica per l’a.a. 2025-2026, il LAD in collaborazione con la [Scuola di Dottorato in Archeologia della Sapienza università di Roma](https://phd.uniroma1.it/web/ARCHEOLOGIA_nD3482_IT.aspx), organizza un laboratorio didattico teorico-pratico sull'applicazione di metodi di _Computer Vision_ e _Deep Learning_ per lo studio e la classificazione della ceramica.
+Nell’àmbito della sua offerta didattica per l’a.a. 2025-2026, il LAD, in collaborazione con la [Scuola di Dottorato in Archeologia](https://phd.uniroma1.it/web/ARCHEOLOGIA_nD3482_IT.aspx) e con la [Scuola di Specializzazione in Beni Archeologici](https://scuolabeniarcheologici.web.uniroma1.it) della Sapienza Università di Roma, organizza un laboratorio didattico teorico-pratico sull'applicazione di metodi di _Computer Vision_ e _Deep Learning_ per lo studio e la classificazione della ceramica.
 
 ## Gli obiettivi del corso
 
