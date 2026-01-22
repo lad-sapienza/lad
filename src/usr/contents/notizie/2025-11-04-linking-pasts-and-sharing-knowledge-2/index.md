@@ -13,7 +13,6 @@ tags:
   - Legacy Data
   - Ceramica
   - Napoli
-inhome: true
 ---
 
 Mercoledì 26 novembre 2025, Julian Bogdani e Lorenzo Cardarelli parteciperanno alla alla seconda edizione della conferenza internazionale “Linking Pasts and Sharing Knowledge 2. Mapping Archaeological Heritage, Legacy Data Integration and Web Technologies for Modelling Historical Landscapes”, presso l'Università di Napoli Federico II, con un intervento dal titolo: “_Computer vision technologies for the documentation and study of archaeological legacy data: the case study of the pottery_”.

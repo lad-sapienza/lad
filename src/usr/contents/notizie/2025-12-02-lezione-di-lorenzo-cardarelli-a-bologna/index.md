@@ -3,7 +3,6 @@ title: "Lezione di Lorenzo Cardarelli all’Università di Bologna: “L’IA al
 img: ./cardarelli-unibo.jpg
 date: 2025-10-31
 description: "Lezione di L. Cardarelli all’Università di Bologna su applicazioni IA in archeologia"
-inhome: true
 tags:
   - Intelligenza artificiale
   - Archeologia digitale
