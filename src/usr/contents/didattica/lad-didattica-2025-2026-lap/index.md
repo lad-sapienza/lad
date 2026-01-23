@@ -43,7 +43,7 @@ Per iscriversi è necessario compilare entro il 28 febbraio 2026 il modulo Googl
 
 In caso di sopravvenute complicazioni è fondamentale notificare all’indirizzo [francesca.dimaria@uniroma1.it](mailto:francesca.dimaria@uniroma1.it).
 
-**La partecipazione alle attività del laboratorio avrà un limite massimo di 15 partecipanti.**
+**La partecipazione alle attività del laboratorio avrà un limite massimo di 15 partecipanti e garantisce l’ottenimento di 1 CFU, ove applicabile**
 
 ## Profilo
 

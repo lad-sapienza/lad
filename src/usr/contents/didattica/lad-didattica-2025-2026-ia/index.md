@@ -31,7 +31,7 @@ Il laboratorio fornirà competenze pratiche su:
 -   Installazione e guida avanzata all'utilizzo di _PyPottery_.
 -   Creazione e curatela di dataset per il training di modelli di deep learning.
 
-L'approccio proposto consente di **automatizzare e velocizzare** la documentazione e l'analisi dei materiali archeologici, supportando nuove forme di gestione digitale dei dati pregressi (*Legacy Data*), aiutando a creare nuove forme di conoscenza e migliorando l'accessibilità delle informazioni. Il corso fornisce tutti gli strumenti necessari per padroneggiare queste tecniche e applicarle autonomamente nella propria ricerca.
+L'approccio proposto consente di **automatizzare e velocizzare** la documentazione e l'analisi dei materiali archeologici, supportando nuove forme di gestione digitale dei dati pregressi (*Legacy Data*), aiutando a creare nuove forme di conoscenza e migliorando l'accessibilità delle informazioni. Il corso fornisce tutti gli strumenti necessari per padroneggiare queste tecniche e applicarle autonomamente nella propria ricerca. La partecipazione al laboratorio porta al riconoscimento di **2 CFU**, ove applicabile.
 
 
 ## Luogo e modalità
