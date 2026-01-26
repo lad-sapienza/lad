@@ -20,7 +20,7 @@ Nell’àmbito della sua offerta didattica per l’a.a. 2025-2026, il LAD, in co
 ## Gli obiettivi del corso
 
 Il laboratorio persegue due obiettivi principali:
-1.  **Padroneggiare strumenti AI** per lo studio della ceramica archeologica, seguendo l'intero flusso di lavoro: dalla digitalizzazione alla pubblicazione tramite il software open source _PyPottery_.
+1.  **Padroneggiare strumenti AI** per lo studio della ceramica archeologica, seguendo l'intero flusso di lavoro: dalla digitalizzazione alla pubblicazione tramite il software open source [*PyPottery*](https://lrncrd.github.io/PyPottery/).
 2.  **Creare un Dataset**: contribuire alla costruzione di un dataset condiviso per "insegnare" all'AI a vedere e classificare i reperti come un archeologo.
 
 
@@ -28,7 +28,7 @@ Il laboratorio persegue due obiettivi principali:
 
 Il laboratorio fornirà competenze pratiche su:
 -   Introduzione all'Intelligenza Artificiale e alle sue applicazioni in archeologia.
--   Installazione e guida avanzata all'utilizzo di _PyPottery_.
+-   Installazione e guida avanzata all'utilizzo di *PyPottery*.
 -   Creazione e curatela di dataset per il training di modelli di deep learning.
 
 L'approccio proposto consente di **automatizzare e velocizzare** la documentazione e l'analisi dei materiali archeologici, supportando nuove forme di gestione digitale dei dati pregressi (*Legacy Data*), aiutando a creare nuove forme di conoscenza e migliorando l'accessibilità delle informazioni. Il corso fornisce tutti gli strumenti necessari per padroneggiare queste tecniche e applicarle autonomamente nella propria ricerca. La partecipazione al laboratorio porta al riconoscimento di **2 CFU**, ove applicabile.
@@ -45,10 +45,20 @@ Le attività si terranno in presenza presso la **Sapienza Università di Roma**,
 
 ## Iscrizione
 
-Per iscriversi è necessario compilare il modulo Google entro **domenica 16 marzo 2026** al seguente indirizzo:
+Per iscriversi è necessario compilare il modulo Google entro **domenica 8 marzo 2026** al seguente indirizzo:
 [https://forms.gle/RzLznJxGWYNpGzeZ6](https://forms.gle/RzLznJxGWYNpGzeZ6).
 
 > In caso di rinuncia o complicazioni, è fondamentale darne comunicazione all’indirizzo [lorenzo.cardarelli@uniroma1.it](mailto:lorenzo.cardarelli@uniroma1.it).
+
+## Calendario lezioni
+
+Sono previste 3 lezioni introduttive:
+
+- **12 Marzo**: Introduzione all'Intelligenza Artificiale in archeologia.
+- **19 Marzo**: Presentazione di *PyPottery* e introduzione al caso studio.
+- **26 Marzo**: Definizione del dataset e divisione del materiale.
+
+Nel corso del laboratorio saranno poi fissati degli appuntamenti periodici per eventuali dubbi e criticità (anche in modalità remota). Dopo l'attività autonoma è previsto un **incontro conclusivo** per l'implementazione e l'addestramento del modello.
 
 
 ## Profilo
