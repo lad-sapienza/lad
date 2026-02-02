@@ -83,8 +83,8 @@ Si procede quindi alla rasterizzazione dei dati vettoriali contenuti nel gruppo 
 1. In `rasterizzato` salvare il nuovo file come `strade-raster`
 1. Cliccare sul bottone `Esegui` per eseguire l'algoritmo.
 
-![rasterizza-strade-1.png](./rasterizza-strade-1.png)
-![rasterizza-strade-2.png](./rasterizza-strade-2.png)
+![rasterizza-strade-1.jpg](./rasterizza-strade-1.jpg)
+![rasterizza-strade-2.jpg](./rasterizza-strade-2.jpg)
 
 A questo punto, si possono ripetere le operazioni sopra decsritte, con gli stessi parametr, per tutti gli altri layer disponibili, ovvero: 
 - `fiumi-lazio`, 
@@ -101,7 +101,7 @@ Allo stato attuale, le informazioni relative all'idrografia si trovano su due ra
 1. Inserire l'espressione: `"acque-interne-raster@1" + "fiumi-raster@1"`
 1. Utilizzare `confine-raster` come `layer di riferimento`
 1. Salvare il file come `idrografia-3-valori`
-![unione-fiumi-acque-interne.png](./unione-fiumi-acque-interne.png)
+![unione-fiumi-acque-interne.jpg](./unione-fiumi-acque-interne.jpg)
 
 L'espressione inserita, `"acque-interne-raster@1" + "fiumi-raster@1"`, indica una semplice adizione tra i valori dei singoli pixel di ogni elemento che si trovano nelle stesso spazio geografico (che si sovrappongono). Da notare che stiamo qui dando una precisa indicazione della banda da usare per ogni raster, attraverso il suffisso `@1`, anche se questi rsater in particolare hanno una sola banda. Altri tipologie di raster, più complessi possono avere 3 o più bande. È il caso delle immagii RGB, che presenano 3 bande (o canali), per cui `immagine@1` si riferirà ai valori del rosso (la banda 1), `immagine@2` ai valori della banda dei verdi e `immagine@3` ai valori del blu. Questa funzione risulta molto più interessante nei casi delle immagini multi- o iperspettrali, dove il numero di bande pu essere anche molto elevato.
 
@@ -120,7 +120,7 @@ Il raster in uscita e cioè `raster_idrografia` avrà valore 1 nei pixel dove è
    4. Impostare come `massima distanza che deve essere generata` il valore `6000` (= 6km)
    5. Impostare `valore Nodata` a `non impostato`
    6. Salvare il file come `strade-prossimita`
-      ![prossimita-idrografia.png](./prossimita-idrografia.png)
+      ![prossimita-idrografia.jpg](./prossimita-idrografia.jpg)
    7. Aprire il pannello dello `stile dei layer`
    8. In `gradiente colore` impostare come valore massimo (max) `6000`
    9. Ripetere le stesse operazioni per i layer `idrografia-raster` e `insediamenti-raster`
@@ -133,8 +133,8 @@ Il raster in uscita e cioè `raster_idrografia` avrà valore 1 nei pixel dove è
       `100*("strade-prossimita@1"<=1000) + 50*("strade-prossimita@1">1000)*("strade-prossimita@1"<=6000) + 10*("strade-prossimita@1">6000)`
    3. In `Referencelayer(s)` selezionare `confine-lazio`
    4. Salvare il file come `strade-riclassificato`
-      ![strade-classificate.png](./strade-classificate.png)
-      ![strade-riclassificate-2.png](./strade-riclassificate-2.png)
+      ![strade-classificate.jpg](./strade-classificate.jpg)
+      ![strade-riclassificate-2.jpg](./strade-riclassificate-2.jpg)
 
 L'espressione `100*("strade-prossimita@1"<=1000) + 50*("strade-prossimita@1">1000)*("strade-prossimita@1"<=6000) + 10*("strade-prossimita@1">6000)` merita un po' di attenzione e necessita di qualche spiegazione per essere compresa, in quanto mischia l'aritmetica e la locica booleana. In particolare le espressioni tra parentesi (`"strade-prossimita@1"<=1000`, `"strade-prossimita@1">1000` e `"strade-prossimita@1"<=6000`) sono espressioni booleane che possono avere come output o lo `0` (in caso di falso) o l'`1`, in caso di vero. Un esempio faciliterà ultriormente la comprensione:
 - se un pixel ha il valore di `4524`, allora 
@@ -158,7 +158,7 @@ La procedura è la seguente:
    `100*("idrografia-prossimita@1">6000) + 50*("idrografia-prossimita@1">1000) * ("idrografia-prossimita@1"<=6000) + 10*("idrografia-prossimita@1"<1000)`
 1. In `Referencelayer(s)` selezionare `confine-lazio`
 1. Salvare il file come `idrografia-riclassificato`
-![idrografia-riclassificato.png](./idrografia-riclassificato.png)
+![idrografia-riclassificato.jpg](./idrografia-riclassificato.jpg)
 
 #### Insediamenti
 Infine, riclassifichiamo anche gli insediamenti, definendo tre classi, rispettivamente:
@@ -170,7 +170,7 @@ Infine, riclassifichiamo anche gli insediamenti, definendo tre classi, rispettiv
    `100*("insediamenti-prossimita@1">6000) + 50*("insediamenti-prossimita@1">1000) * ("insediamenti-prossimita@1"<=6000) + 10*("insediamenti-prossimita@1"<1000)`
 1. In `Referencelayer(s)` selezionare `confine-lazio`
 1. Salvare il file come `insediamenti-riclassificato`
-![insediamenti-riclassificato.png](./insediamenti-riclassificato.png)
+![insediamenti-riclassificato.jpg](./insediamenti-riclassificato.jpg)
 
 ### 5. Combinazione dei risultati
 A questo punto abbiamo a disposizione tutti gli elementi per procedere con l'analisi di sovrapposizione multi-criteri dove saranno sommati tutti i raster riclassificati tramite lo strumento `Calcolatore raster` al fine di ottenere un unico output che risponda alla richiesta formulata inzialmente:   
@@ -194,7 +194,7 @@ La procedura è la seguente:
 1. Aprire le proprietà del layer
 1. In `Tipo di visualizzazione` impostare `Banda singola falso colore`
 1. Classificare
-![overlay.png](./overlay-finale.png)
+![overlay.jpg](./overlay-finale.jpg)
 
 
 ## Nota finale

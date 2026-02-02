@@ -34,6 +34,16 @@ module.exports = {
         gatsbyRemarkPlugins: [
           `gatsby-remark-autolink-headers`,
           {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 1200,
+              quality: 80,
+              withWebp: true,
+              linkImagesToOriginal: false,
+              backgroundColor: 'transparent',
+            },
+          },
+          {
             resolve: `gatsby-remark-prismjs`,
             options: {
               classPrefix: "language-",
