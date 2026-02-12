@@ -15,10 +15,19 @@ import "./layout.scss"
 
 const Layout = ({ children, data, template = false }) => {
   const post = data?.mdx
-  const pageUrl =
-    data?.site?.siteMetadata?.siteUrl && post?.frontmatter?.slug
-      ? `${data.site.siteMetadata.siteUrl}/${post.frontmatter.slug}`
-      : ""
+  let pageUrl = ""
+  if (data?.site?.siteMetadata?.siteUrl) {
+    if (post?.frontmatter?.slug) {
+      pageUrl = `${data.site.siteMetadata.siteUrl}/${post.frontmatter.slug}`
+    } else if (post?.parent && typeof post.parent === "object") {
+      // Log parent for debugging
+      if (post.parent.relativePath) {
+        // Remove file extension and use as path
+        const path = post.parent.relativePath.replace(/\.[^/.]+$/, "")
+        pageUrl = `${data.site.siteMetadata.siteUrl}/${path}`
+      }
+    }
+  }
 
   return (
     <>

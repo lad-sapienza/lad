@@ -71,6 +71,14 @@ export const query = graphql`
     }
     mdx(id: { eq: $id }) {
       tableOfContents
+      parent {
+        ... on File {
+          relativePath
+          internal {
+            contentFilePath
+          }
+        }
+      }
       frontmatter {
         title
         description
