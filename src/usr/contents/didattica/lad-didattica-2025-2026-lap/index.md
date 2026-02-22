@@ -9,8 +9,6 @@ tags:
   - Documentazione
   - Archeologia Digitale
   - Ceramica
-inhome: true
-pinned: true
 ---
 
 Nell’àmbito della sua offerta didattica per l’a.a. 2025-2026, il LAD, in collaborazione con la Scuola di Dottorato in Archeologia e con la Scuola di Specializzazione in Beni Archeologici della Sapienza Università di Roma, organizza un laboratorio didattico sull’utilizzo del [Laser Aided Profiler (LAP)](https://www.laseraidedprofiler.com/) per la documentazione dei profili ceramici. 
