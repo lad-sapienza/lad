@@ -11,7 +11,6 @@ tags:
   - Archeologia Digitale
   - Laboratorio Didattico
 inhome: true
-pinned: true
 ---
 
 

@@ -3,7 +3,6 @@ title: "FortNet. Fortification and population network in coastal Chaonia, Northe
 author: Julian Bogdani
 date: 2023-10-01
 sort: 99
-pinned: true
 inhome: true
 img: ./fortnet-loghi-sapienza.jpg
 description: Progetto di ricerca, P.I. Julian Bogdani, finanziato dal programma “Progetti di Ricerca - Progetti Piccoli” della Sapienza Università di Roma, anno 2022, prot. RP12218161C7325E
