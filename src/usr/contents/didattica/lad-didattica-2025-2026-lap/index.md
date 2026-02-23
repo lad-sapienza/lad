@@ -29,15 +29,18 @@ Tutor:
 
 ## Calendario
 
-Mercoledì **1 aprile** ***oppure*** Giovedì **2 aprile** 2026
+Mercoledì **1 aprile** 2026
 - **9:00 - 11:00**: Lezione introduttiva.
 - **11:00 - 18:00**: Esercitazione pratica. I partecipanti saranno suddivisi in due gruppi.
 
 
 ## Iscrizione
 
+**Iscrizioni chiuse per raggiungimento del numero massimo dei partecipanti**
 
-Per iscriversi è necessario compilare entro il 28 febbraio 2026 il modulo Google disponibile all’indirizzo: [https://forms.gle/ULL5och51HtJunZ66](https://forms.gle/ULL5och51HtJunZ66).
+<del>Per iscriversi è necessario compilare entro il 28 febbraio 2026 il modulo Google disponibile all’indirizzo: [...].</del>
+
+
 
 In caso di sopravvenute complicazioni è fondamentale notificare all’indirizzo [francesca.dimaria@uniroma1.it](mailto:francesca.dimaria@uniroma1.it).
 
