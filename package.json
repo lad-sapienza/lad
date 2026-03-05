@@ -2,12 +2,24 @@
   "name": "@lad-sapienza/lad",
   "private": true,
   "description": "Official website of LAD: Laboratorio di Archeologia Digitale alla Sapienza. Built with s:CMS, a Gatsby-based static site generator developed by LAD",
-  "version": "5.4.1",
+  "version": "5.7.1",
   "author": {
     "name": "Julian Bogdani",
     "email": "julian.bogdani@uniroma1.it",
     "url": "https://lad.saras.uniroma1.it"
   },
+  "contributors": [
+    {
+      "name": "Eleonora Iacopini",
+      "email": "eleonora.iacopini@uniroma1.it",
+      "url": "https://lad.saras.uniroma1.it"
+    },
+    {
+      "name": "Erasmo Di Fonso",
+      "email": "erasmo.difonso@uniroma1.it",
+      "url": "https://lad.saras.uniroma1.it"
+    }
+  ],
   "dependencies": {
     "@mdx-js/react": "^3.1.1",
     "@vis.gl/react-maplibre": "^8.1.0",
@@ -23,7 +35,6 @@
     "gatsby-plugin-react-leaflet": "^4.0.3",
     "gatsby-plugin-sass": "6.14.0",
     "gatsby-plugin-sharp": "5.14.0",
-    "gatsby-plugin-sitemap": "^6.15.0",
     "gatsby-plugin-styled-components": "6.14.0",
     "gatsby-remark-autolink-headers": "6.14.0",
     "gatsby-remark-copy-linked-files": "^6.15.0",
@@ -42,17 +53,15 @@
     "react-bootstrap-icons": "^1.11.6",
     "react-data-table-component": "^7.7.0",
     "react-dom": "^18.3.1",
-    "react-icons": "^5.5.0",
     "react-leaflet": "^4.2.1",
     "react-photoswipe-gallery": "^4.0.0",
     "react-router-dom": "^6.30.1",
-    "react-share": "^5.2.2",
-    "react-syntax-highlighter": "^15.6.6",
+    "react-syntax-highlighter": "^16.1.1",
     "styled-components": "^6.1.19"
   },
   "devDependencies": {
     "ajv": "^8.17.1",
-    "baseline-browser-mapping": "^2.9.19",
+    "baseline-browser-mapping": "^2.10.0",
     "prettier": "^3.6.2",
     "sass": "^1.93.3"
   },
@@ -72,11 +81,8 @@
     "start": "gatsby develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "create-content": "node scripts/create-content.js",
     "upgrade-main": "command -v rsync >/dev/null && mkdir tmp && wget https://github.com/lab-archeologia-digitale/sCMS/archive/refs/heads/main.zip -O tmp/scms.zip && unzip tmp/scms.zip -d tmp/ && rsync -a  --exclude .cache --exclude .env.development --exclude .git --exclude .gitignore --exclude gatsby-config.js --exclude node_modules --exclude public --exclude README.md --exclude tmp --exclude src/usr --exclude static --delete tmp/sCMS-main/ . && rm -rf tmp",
-    "upgrade-dev": "command -v rsync >/dev/null && mkdir tmp && wget https://github.com/lab-archeologia-digitale/sCMS/archive/refs/heads/dev.zip -O tmp/scms.zip && unzip tmp/scms.zip -d tmp/ && rsync -a  --exclude .cache --exclude .env.development --exclude .git --exclude .gitignore --exclude gatsby-config.js --exclude node_modules --exclude public --exclude README.md --exclude tmp --exclude src/usr --exclude static --delete tmp/sCMS-dev/ . && rm -rf tmp",
-    "deploy": "gatsby build --prefix-paths && rsync -arvzu --delete --filter='P .ssh' --filter='P .bash_history' --filter='P .screenrc' public/ lad:",
-    "release": "git checkout master && git merge dev && git push origin master && git checkout dev"
+    "upgrade-dev": "command -v rsync >/dev/null && mkdir tmp && wget https://github.com/lab-archeologia-digitale/sCMS/archive/refs/heads/dev.zip -O tmp/scms.zip && unzip tmp/scms.zip -d tmp/ && rsync -a  --exclude .cache --exclude .env.development --exclude .git --exclude .gitignore --exclude gatsby-config.js --exclude node_modules --exclude public --exclude README.md --exclude tmp --exclude src/usr --exclude static --delete tmp/sCMS-dev/ . && rm -rf tmp"
   },
   "repository": {
     "type": "git",
