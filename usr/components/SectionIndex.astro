@@ -10,7 +10,12 @@ export interface Props {
 
 const { title, description, collection } = Astro.props
 
-const articles = await getCollection(collection)
+const allowedCollections = ["blog", "didattica", "notizie", "ricerca", "sviluppo"] as const;
+type AllowedCollection = typeof allowedCollections[number];
+if (!allowedCollections.includes(collection as AllowedCollection)) {
+  throw new Error(`Invalid collection: ${collection}`);
+}
+const articles = await getCollection(collection as AllowedCollection)
 const sortedArticles = articles.sort((a, b) => {
   if (a.data.pinned && !b.data.pinned) return -1
   if (!a.data.pinned && b.data.pinned) return 1

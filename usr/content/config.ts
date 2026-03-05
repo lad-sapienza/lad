@@ -178,6 +178,7 @@ const sviluppoCollection = defineCollection({
 //   }).passthrough(),
 // });
 
+
 // Export all collections
 export const collections = {
   blog: blogCollection,

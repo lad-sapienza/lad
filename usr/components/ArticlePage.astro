@@ -10,7 +10,12 @@ interface Props {
 }
 
 const { collection, slug, backHref, backLabel = "← Torna indietro" } = Astro.props as Props
-const articles = await getCollection(collection as keyof DataEntryMap)
+const allowedCollections = ["blog", "didattica", "notizie", "ricerca", "sviluppo"] as const;
+type AllowedCollection = typeof allowedCollections[number];
+if (!allowedCollections.includes(collection as AllowedCollection)) {
+  throw new Error(`Invalid collection: ${collection}`);
+}
+const articles = await getCollection(collection as AllowedCollection)
 const entry = articles.find((a: any) => a.id.replace(".md", "") === slug)
 if (!entry) throw new Error(`Entry not found for slug: ${slug}`)
 const { Content } = await render(entry)
