@@ -1,6 +1,4 @@
 ---
-import { getMenuItems } from "../utils/content"
-
 interface Props {
   title?: string
   description?: string
@@ -13,12 +11,8 @@ const {
 
 const currentPath = Astro.url.pathname
 
+// Menu items logic removed; implement in user code if needed
 let menuItems: Array<{ title: string; slug: string; position?: number }> = []
-try {
-  menuItems = await getMenuItems()
-} catch (error) {
-  console.warn("Failed to load menu items:", error)
-}
 ---
 
 <!doctype html>

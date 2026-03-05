@@ -32,14 +32,14 @@ _Directus.io_, però, non è stato progettato per assolvere specificatamente al 
 
 Quando ci si trova a gestire dati complessi, naturalmente la prima e più immediata esigenza di cui prendersi cura è quella della loro visualizzazione. Il fatto che la visualizzazione del dato stratigrafico a grafo, nella tipica froma del *Matrix di Harris*, sia da preferirsi alla arida rappresentazione tabulare delle relazioni è evidente. 
 
-![Dal database al Matrix di Harris](02-dbhm.png "Dal database al Matrix di Harris")
+![Dal database al Matrix di Harris](02-dbhm.jpg "Dal database al Matrix di Harris")
 
 _Directus.io_ consente un'ampia gamma di Layout — overo modi di rappresentare graficamente liste di elementi — associabili al dato, e questo significa che qualunque tabella può essere presentata in uno dei formati predefiniti, a patto di configurare i layout in modo che sappiano come semantizzare il dato conenuto nei record. I _layout_ originari sono `Calendar`, `Cards`, `Kanban`, `Map` e `Table` che è il predefinito. Una volta selezionato il _layout_ di nostro interesse bisognerà semplicemente indicare alla piattaforma quale colonna del record dovrà valorizzare il particolare elemento grafico della rappresentazione scelta. Ad esempio, se scegliamo il layout *Map* e la nostra tabella possiede delle colonne relative alla localizzazione geografica del record, allora basterà indicare quale di esse debba essere considerata la fonte del dato latitudinale e quale quella del dato longitudinale del marker che rappresenterà il dato.
 
 
 Poniamo il caso di una tabella che possiede due record geolocalizzati. 
 
-![Visualizzazione tabellare della collection Sites](03-tabcoords.png "Visualizzazione tabellare della collection Sites")
+![Visualizzazione tabellare della collection Sites](03-tabcoords.jpg "Visualizzazione tabellare della collection Sites")
 
 La rappresentazione tabellare non è l'unica disponibile
 
@@ -52,7 +52,7 @@ Nelle immagini precedenti vediamo come il semplice uso della funzionalità di _l
 
 L'HDME, ovvero Harris Matrix Directus Extension, è quindi un _custom layout_ per _Directus.io_  che si occupa di rappresentare il dato stratigrafico nella forma più consueta per gli archeologi odierni, ovvero il grafo orientato. Basterà, come detto, indicare alla piattaforma quali colonne sono depositarie di dati quali l'identificativo dell'Unità Stratigrafica, la sua descrizione, etc.
 
-![L'Harris Matrix Directus Extension](05-hmde.png "L'Harris Matrix Directus Extension")
+![L'Harris Matrix Directus Extension](05-hmde.jpg "L'Harris Matrix Directus Extension")
 
 Bisognerà inoltre rispettare alcune specifiche nella fase di modellizzazione delle tabelle che si vogliono rappresentare. Queste specifiche vengono descritte in un [video tutorial](https://youtu.be/yEDQMQqO87I?si=cLKAWpcfR4NtguwU) accessibile di seguito, come anche dalla [pagina GitHub](https://github.com/lab-archeologia-digitale/directus-extension-harris-matrix) del progetto e che contiene anche le istruzioni dettagliate per l'installazione dell'estensione in una eventuale istanza dockerizzata di _Directus.io_.
 

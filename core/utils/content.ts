@@ -15,8 +15,10 @@ export async function getSortedCollection(
 ) {
   const entries = await getCollection(collectionName as any);
   return entries.sort((a, b) => {
-    const aValue = a.data[sortField];
-    const bValue = b.data[sortField];
+    const aEntry = a as any;
+    const bEntry = b as any;
+    const aValue = aEntry.data[sortField];
+    const bValue = bEntry.data[sortField];
     if (aValue === undefined || bValue === undefined) return 0;
     // Date comparison
     if (

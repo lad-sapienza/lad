@@ -16,7 +16,7 @@ const record = await getRecordFromParams(Astro);
         <!-- Site Name - Full width -->
         <div class="col-span-2">
           <h1 class="text-4xl font-bold mb-4">
-            {record.Site_Name || `Record ${id}`}
+            {record.Site_Name || `Record ${Astro.params.id}`}
           </h1>
           <p class="text-sm text-gray-500 mb-6">
             Table: {Astro.params.table} | ID: {Astro.params.id}
@@ -105,7 +105,7 @@ const record = await getRecordFromParams(Astro);
           Record Not Found
         </div>
         <div class="text-red-600 text-sm mb-4">
-          No record found for table "{table}" with ID "{id}"
+          No record found for table "{Astro.params.table}" with ID "{Astro.params.id}"
         </div>
       </div>
     </div>
