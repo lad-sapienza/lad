@@ -1,0 +1,25 @@
+---
+import ArticlePage from "../../components/ArticlePage.astro"
+import { getCollection } from "astro:content"
+
+export const prerender = true
+
+export async function getStaticPaths() {
+  const articles = await getCollection("blog")
+  return articles.map(article => ({
+    params: { slug: article.id.replace(".md", "") },
+    props: { collection: "blog", slug: article.id.replace(".md", "") }
+  }))
+}
+
+const { collection, slug } = Astro.props;
+---
+<ArticlePage
+  collection={collection}
+  slug={slug}
+  backHref="/blog/"
+  backLabel="← Torna indietro alla pagina principale del Blog"
+/>
+
+
+

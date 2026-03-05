@@ -1,0 +1,65 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro"
+import { getCollection, render, type DataEntryMap } from "astro:content"
+
+interface Props {
+  collection: string
+  slug: string
+  backHref: string
+  backLabel?: string
+}
+
+const { collection, slug, backHref, backLabel = "← Torna indietro" } = Astro.props as Props
+const articles = await getCollection(collection as keyof DataEntryMap)
+const entry = articles.find((a: any) => a.id.replace(".md", "") === slug)
+if (!entry) throw new Error(`Entry not found for slug: ${slug}`)
+const { Content } = await render(entry)
+---
+<BaseLayout title={entry.data.title} description={entry.data.description}>
+  <main>
+    <a href={backHref} title={backLabel}>
+      {backLabel}
+    </a>
+
+    <article>
+      <h1 class="my-5 text-center">{entry.data.title}</h1>
+
+      {entry.data.tags && (<div class="text-center font-monospace">
+        <div
+          class="bg-light mb-3 pt-3 px-3 text-muted d-inline-block d-print-none"
+        >
+          <p>Tag: {entry.data.tags?.join(", ")}</p>
+        </div>
+      </div>)}
+
+      <p class="text-center text-muted">
+        Pubblicato il {
+          entry.data.date
+            ? new Date(entry.data.date).toLocaleDateString("it-IT", {
+                year: "numeric",
+                month: "long",
+                day: "numeric",
+              })
+            : ""
+        }
+      </p>
+
+      {
+        entry.data.img && (
+          <div class="my-5 py-5 text-center">
+            <img
+              src={`/${entry.collection}/${entry.id.replace(".md", "")}/${entry.data.img}`}
+              alt={entry.data.title}
+              class="shadow img-fluid"
+            />
+          </div>
+        )
+      }
+
+      <!-- Content -->
+      <div>
+        <Content />
+      </div>
+    </article>
+  </main>
+</BaseLayout>

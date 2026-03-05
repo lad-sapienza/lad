@@ -1,46 +1,321 @@
-# LAD: Laboratorio di Archeologia Digitale alla Sapienza
+# s:CMS - Astro Edition
 
-Official website of LAD: Laboratorio di Archeologia Digitale alla Sapienza, available at [https://lad.saras.uniroma1.it/](https://lad.saras.uniroma1.it/)
+A static site Content Management System developed and maintained by [LAD: Laboratorio di Archeologia Digitale alla Sapienza](https://lad.saras.uniroma1.it).
 
-## About
+## 🚀 Features
 
-LAD promotes research, experimentation, and teaching of digital technologies for archaeology and the humanities. The laboratory contributes to the development and promotion of FLOS (Free, Libre and Open Source) culture and the open access publication of research data and results.
+- **📝 Content Collections**: Type-safe content management with automatic validation
+- **🗺️ Interactive Maps**: Display geographical data with Leaflet integration
+- **🔍 Search Functionality**: Build powerful search interfaces with custom templates
+- **📊 Data Tables**: Create customizable tables from databases or static files
+- **🖼️ Image Galleries**: Responsive galleries with lightbox functionality
+- **🔌 Directus Integration**: Connect to Directus CMS for dynamic content
+- **⚡ Lightning Fast**: Built on Astro for optimal performance
+- **🎨 Fully Customizable**: Override any component or layout
+- **🔄 Updateable Core**: Separate core from user files for easy updates
 
-## Main Sections
+## 📁 Project Structure
 
-### Home
-Introduction to the laboratory with information about:
-- **Team**: researchers and collaborators
-- **What we do**: application of technologies to archaeological research, both in the field and in laboratories
-- **Methodologies and tools**: focus on open source technologies, databases, GIS, and web publishing
-- **Institutional framework and collaborations**: partnerships with national and international institutions
+```
+scms-astro/
+├── core/                     # Core system (updateable)
+│   ├── components/           # Core components (DataTb, Search, etc.)
+│   ├── layouts/             # Base layouts
+│   ├── utils/               # Utility functions
+│   ├── integrations/        # Custom Astro integrations
+│   └── types/               # TypeScript type definitions
+│
+├── src/
+│   ├── content/             # Your content
+│   │   ├── config.ts        # Collection schemas
+│   │   ├── docs/            # Documentation pages (.md, .mdx)
+│   │   ├── blog/            # Blog posts (.md, .mdx)
+│   │   └── data/            # Data files (.json, .yaml, .csv)
+│   │
+│   ├── components/          # Your custom components
+│   ├── layouts/             # Your custom layouts
+│   ├── pages/               # Page routes
+│   │   ├── index.astro      # Homepage
+│   │   └── [...slug].astro  # Dynamic content pages
+│   │
+│   └── styles/              # Your styles
+│       └── global.css
+│
+├── public/                  # Static assets
+├── astro.config.mjs        # Astro configuration (merges core + user)
+├── user.config.mjs         # User configuration (edit this!)
+├── tsconfig.json           # TypeScript configuration
+└── package.json
+```
 
-### Research (Ricerca)
-Research projects and activities including:
-- **Missione Archeologica Sapienza a Çuka e Ajtoit (Albania)**: International archaeological excavation project in southern Albania since 2021
-- Digital atlases and web portals (PAThs, Sacri Lapides Aegypti)
-- Database systems and data management tools
-- GIS applications and spatial analysis
-- Digital heritage and landscape archaeology projects
+## 🏃 Getting Started
 
-### News (Notizie)
-Updates on events, conferences, lectures, seminars, and activities related to the laboratory and its research areas.
+### Prerequisites
 
-### Blog
-Articles and tutorials on:
-- Digital tools for archaeology
-- GIS and cartographic resources
-- Database management
-- Open source software
-- Digital methodologies
+- Node.js 18.0 or higher
+- npm, pnpm, or yarn
 
-### Teaching (Didattica)
-Information about courses and workshops on:
-- GIS and databases for archaeology
-- Digital tools for heritage management
-- Landscape archaeology
-- Internship opportunities
+### Installation
 
-## Technical Details
+1. **Clone or download this repository**
 
-This website has been developed with [s:CMS](https://github.com/lad-sapienza/scms), a static site Content Management System developed and maintained by LAD. s:CMS is built on top of [Gatsby.js](https://www.gatsbyjs.com/) static site generator, ensuring fast performance, security, and durability while providing easy content management and data visualization components.
+```bash
+git clone https://github.com/lad-sapienza/scms-astro.git my-project
+cd my-project
+```
+
+2. **Install dependencies**
+
+```bash
+npm install
+```
+
+3. **Configure your site**
+
+Edit `user.config.mjs` to set your site's metadata:
+
+```javascript
+export const userConfig = {
+  site: 'https://yourdomain.com',
+  title: 'Your Site Title',
+  description: 'Your site description',
+  author: 'Your Name',
+};
+```
+
+4. **Set up environment variables (optional)**
+
+Copy `.env.example` to `.env` and configure:
+
+```bash
+cp .env.example .env
+```
+
+Edit `.env` to add your Directus credentials:
+
+```env
+DIRECTUS_URL=https://your-directus-instance.com
+DIRECTUS_TOKEN=your-directus-token
+```
+
+5. **Start the development server**
+
+```bash
+npm run dev
+```
+
+Your site will be available at `http://localhost:4321`
+
+## 📝 Creating Content
+
+### Documentation Pages
+
+Create `.md` or `.mdx` files in `src/content/docs/`:
+
+```markdown
+---
+title: "My Page"
+description: "Page description"
+menu_position: 1
+date: 2026-01-13
+---
+
+# My Page Content
+
+Your content here...
+```
+
+### Blog Posts
+
+Create `.md` or `.mdx` files in `src/content/blog/`:
+
+```markdown
+---
+title: "My Blog Post"
+description: "Post description"
+date: 2026-01-13
+author: "Your Name"
+tags: ["astro", "cms"]
+---
+
+Your blog post content...
+```
+
+### Using Components
+
+Import and use core components in your content:
+
+```mdx
+---
+title: "Example Page"
+---
+
+import { DataTb, Map } from '@core';
+
+# My Data
+
+<DataTb 
+  source={{ directus: { table: 'your_table' } }}
+  columns={['id', 'name', 'description']}
+  client:idle
+/>
+```
+
+## 🔧 Configuration
+
+### User Configuration
+
+Edit `user.config.mjs` to customize your site. This file is merged with the core configuration, allowing you to:
+
+- Override site metadata
+- Add custom integrations
+- Modify Vite configuration
+- Customize markdown settings
+
+### Content Collections
+
+Edit `src/content/config.ts` to define your content schemas with Zod validation:
+
+```typescript
+import { defineCollection, z } from 'astro:content';
+
+const myCollection = defineCollection({
+  loader: glob({ pattern: '**/*.md', base: './src/content/my-collection' }),
+  schema: z.object({
+    title: z.string(),
+    // Add your fields
+  }),
+});
+```
+
+## 🔌 Directus Integration
+
+### Using the Directus Loader
+
+```typescript
+// src/content/config.ts
+import { directusLoader } from '../core/integrations/directusLoader';
+
+const products = defineCollection({
+  loader: directusLoader({
+    table: 'products',
+    fields: ['id', 'name', 'description', 'price'],
+    sort: ['-date_created'],
+  }),
+});
+```
+
+### Using Directus in Components
+
+```astro
+---
+import { DataTb, DirectusSource } from '@core';
+---
+
+<DataTb searchable pagination client:idle>
+  <DirectusSource 
+    table="articles" 
+    queryString="filter[status][_eq]=published" 
+  />
+</DataTb>
+/>
+```
+
+## 🎨 Customization
+
+### Override Core Components
+
+Create a component with the same name in `src/components/` to override core components.
+
+### Extend Layouts
+
+```astro
+---
+import BaseLayout from '@core/layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="My Page">
+  <div slot="header-extra">
+    Custom header content
+  </div>
+  
+  <slot />
+</BaseLayout>
+```
+
+### Custom Styles
+
+Add your styles to `src/styles/global.css` or create component-specific styles.
+
+## 🚀 Building for Production
+
+```bash
+npm run build
+```
+
+The built site will be in the `dist/` directory.
+
+### Preview Production Build
+
+```bash
+npm run preview
+```
+
+## 📦 Updating the Core
+
+If the core is maintained as a separate package or git submodule:
+
+```bash
+# If using npm package
+npm update @yourorg/scms-astro-core
+
+# If using git submodule
+git submodule update --remote core
+```
+
+## 🧰 Available Components
+
+### DataTb
+Display data in sortable, filterable tables with modern React-based interface
+
+### Map
+Interactive maps with MapLibre GL JS and vector layers
+
+### Gallery
+Responsive image galleries with lightbox
+
+See [Components Documentation](src/content/docs/components.md) for detailed usage.
+
+## 🗂️ Core Architecture
+
+This starter uses a **core/user separation** pattern:
+
+- **Core files** (`core/`) contain the framework components and utilities
+- **User files** (`src/`) contain your content and customizations
+- Core can be updated without affecting your customizations
+- You can override any core component by creating a file with the same name
+
+## 🤝 Contributing
+
+Contributions are welcome! Please open an issue or pull request on GitHub.
+
+## 📄 License
+
+BSD-0-Clause - see [LICENSE](LICENSE) file for details.
+
+## 👥 Credits
+
+Built with ♥ by [LAD @Sapienza](https://lad.saras.uniroma1.it)
+
+- **Framework**: [Astro](https://astro.build/)
+- **Original Gatsby Version**: [lad-sapienza/scms](https://github.com/lad-sapienza/scms)
+
+## 🆘 Support
+
+- **Documentation**: Check the [docs](src/content/docs/)
+- **GitHub Issues**: [Report bugs or request features](https://github.com/lad-sapienza/scms-astro/issues)
+- **Contact**: LAD @Sapienza
+
+---
+
+**Happy building! 🚀**

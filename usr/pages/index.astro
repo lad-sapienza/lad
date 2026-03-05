@@ -1,0 +1,245 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro"
+import { getCollection } from "astro:content"
+
+// Get articles with home: true from all collections
+const blogArticles = await getCollection(
+  "blog",
+  ({ data }) => data.inhome === true,
+)
+const didatticarticles = await getCollection(
+  "didattica",
+  ({ data }) => data.inhome === true,
+)
+const notizieArticles = await getCollection(
+  "notizie",
+  ({ data }) => data.inhome === true,
+)
+const ricercaArticles = await getCollection(
+  "ricerca",
+  ({ data }) => data.inhome === true,
+)
+const sviluppoArticles = await getCollection(
+  "sviluppo",
+  ({ data }) => data.inhome === true,
+)
+
+// Combine all home articles
+const homeArticles = [
+  ...blogArticles,
+  ...didatticarticles,
+  ...ricercaArticles,
+  ...notizieArticles,
+  ...sviluppoArticles,
+].sort((a, b) => {
+  // First, prioritize pinned articles
+  if (a.data.pinned && !b.data.pinned) return -1
+  if (!a.data.pinned && b.data.pinned) return 1
+
+  // Then sort by sort value (lower numbers first)
+  const sortA = a.data.order || 999999
+  const sortB = b.data.order || 999999
+  return sortA - sortB
+})
+
+const getPath = (
+  article: any,
+  pre: string | null,
+  post: string | null,
+): string => {
+  let ret = ""
+  if (pre) {
+    ret += `${pre}`
+  }
+  ret += article.filePath
+    .replace(/^usr\/content/, "")
+    .replace(/\.(md|mdx)$/, "/")
+    .replace(/index\//, "")
+
+  if (post) {
+    ret += post
+  }
+  return ret
+}
+---
+
+<BaseLayout
+  title="LAD: Laboratorio di Archeologia Digitale alla Sapienza"
+  description="Homepage project"
+>
+  <div class="row">
+    <div class="col-8">
+      <div class="max-w-none">
+        <!-- Hero Section -->
+        <div class="my-5">
+          <h1>LAD: Laboratorio di Archeologia Digitale alla Sapienza</h1>
+          <p class="lead">
+            LAD: Laboratorio di Archeologia Digitale alla Sapienza promuove la
+            ricerca, la sperimentazione e la didattica delle tecnologie digitali
+            per l'archeologia e più in generale per gli studi umanistici. Il LAD
+            contribuisce allo sviluppo e promozione della cultura FLOS (free,
+            libre e open source) e alla pubblicazione ad accesso aperto di dati
+            e risultati della ricerca.
+          </p>
+        </div>
+
+        <!-- What We Do Section -->
+        <section class="my-5">
+          <h2>Cosa facciamo</h2>
+          <p>
+            Il LAD sperimenta l'applicazione delle tecnologie alla ricerca
+            archeologica, <a
+              href="./ricerca/missione-archeologica-sapienza-a-cuka-e-ajtoit-albania/"
+              class="text-blue-600 hover:text-blue-800 hover:underline"
+              >sul campo</a
+            > e nei laboratori. Negli ultimi decenni Internet e il suo più famoso
+            servizio, il Web, hanno letteralmente invaso le nostre vite, diventando
+            strumenti di comunicazione sempre più totalizzanti, un'esperienza che
+            si è vista esasperare durante i lunghi periodi di isolamento sociale dovuto
+            alla pandemia. Da vari anni, anche la ricerca archeologica ha sperimentato
+            i canali comunicativi offerti dalla Rete, all'inizio esclusivamente per
+            raccontarsi e allargare il proprio pubblico e, successivamente, anche
+            per potenziare la propria ricerca. Banche dati online, webGIS, cloud computing
+            e ora anche intelligenza artificiale sono solo alcune delle parole chiave
+            che stanno diventando sempre più familiari anche per le ricerche "tradizionali".
+          </p>
+
+          <p>
+            Il LAD è rivolto all'esplorazione di queste potenzialità, a creare
+            ponti e facilitare l'interscambio tra la ricerca archeologia e il
+            mondo dell'Information and Communication Technology (ICT). Il LAD
+            quindi cerca di studiare, indagare, capire, esplorare, governare ed
+            anticipare quello che sembra ormai essere il panorama futuro della
+            nostra ricerca.
+          </p>
+
+          <p>
+            Infine, il LAD sposa una visione etica delle applicazioni
+            tecnologiche, ponendo l'accento sulla trasparenza dei processi, la
+            condivisione, la riproducibilità e la reciproca collaborazione. Per
+            questo motivo pone il focus principale sulle tecnologie open source
+            e sul software libero. Tutti i nostri progetti sono distribuiti con
+            licenze aperte e pubblicati in repository ad accesso aperto!
+          </p>
+
+          <p>
+            <a
+              href="./ricerca/missione-archeologica-sapienza-a-cuka-e-ajtoit-albania/"
+              class="text-blue-600 hover:text-blue-800 hover:underline"
+              >Dal 2021, il LAD è impegnato sul campo con un progetto
+              internazionale di ricerca e scavo archeologico nel sito di Çuka e
+              Ajtoit, antica Kestría, in Albania meridionale.</a
+            >
+          </p>
+        </section>
+
+        <!-- Methods and Tools Section -->
+        <section class="my-5">
+          <h2>Metodologie e strumenti</h2>
+
+          <p>
+            Il LAD ha maturato una lunga esperienza nell'ideazione, creazione e
+            implementazioni di Sistemi Informativi Archeologici sperimentando e
+            consolidando strumenti relativi alla gestione di banche dati
+            relazionali, piattaforme GIS, WebGIS e strumenti innovativi per la
+            gestione e pubblicazione digitale dei dati archeologici attraverso
+            tecnologie Web.
+          </p>
+
+          <p>
+            Inoltre, il LAD ha maturato nel tempo molta esperienza nel rilievo
+            archeologico tradizionale e strumentale, diretto e indiretto. Total
+            station e droni per il rilievo fotogrammetrico fanno parte del
+            nostro strumentario di ricerca sul campo.
+          </p>
+
+          <p>
+            Ecco una lista non ragionata e in ordine alfabetico di strumenti,
+            linguaggi, standard, software, ecc. con i quali ci troviamo
+            estremamente a nostro agio e che usiamo quotidianamente:
+          </p>
+
+          <blockquote class="blockquote">
+            Adobe Illustrator, Adobe Indesign, Adobe Photoshop, Agisoft
+            Metashape, ArcGIS, AutoCAD, Bash, BraDypUS, Cartografia Storica
+            Digitale, CSS, Debian, Droni, E-publishing, Fotogrammetria, GARR
+            Cloud, Gatsby, Gimp, Git, GNSS, GPS, GRASS, GNU / Linux, HTML,
+            Imagemagick, Inkscape, JavaScript, Jekyll, LAP (Laser Aided
+            Profiler), Laser Scanner, Leaflet, MapLibre, Mapserver, MySQL, PHP,
+            PostgreSQL, QGIS, React, SQLite, Stazione Totale, Vector Tiles, Web
+            Server, WebGIS, WebMapping, WebTiles.
+          </blockquote>
+        </section>
+
+        <!-- Institutional Framework Section -->
+        <section class="my-5">
+          <h2>Quadro istituzionale e collaborazioni</h2>
+
+          <p>
+            Il LAD è un laboratorio stabile ufficiale del <a
+              href="https://saras.uniroma1.it/"
+              class="text-blue-600 hover:text-blue-800 hover:underline"
+              >Dipartimento SARAS</a
+            > della <a
+              href="https://www.uniroma1.it/"
+              class="text-blue-600 hover:text-blue-800 hover:underline"
+              >Sapienza Università di Roma</a
+            >.
+          </p>
+
+          <p>
+            Dal 2022 il LAD ha attivato una convenzione di ricerca scientifica
+            con il <a
+              href="https://www.garr.it/"
+              class="text-blue-600 hover:text-blue-800 hover:underline"
+              >Consortium GARR</a
+            > per la fornitura di servizi istituzionali relativi alla piattaforma
+            <a
+              href="https://www.garr.it/it/infrastrutture/infrastruttura-cloud/infrastruttura-cloud"
+              class="text-blue-600 hover:text-blue-800 hover:underline"
+              >Cloud GARR</a
+            >, con data center localizzati in Italia.
+          </p>
+        </section>
+      </div>
+    </div>
+    <div class="col-4">
+      <div class="container mb-3">
+        <h2 class="border-bottom text-center">In evidenza</h2>
+        {
+          homeArticles.map((article, i) => (
+            <div
+              class={`shadow mb-4 p-3${article.data.pinned ? " border border-primary" : ""}`}
+            >
+              {article.data.img && (
+                <img
+                  src={getPath(article, ".", article.data.img)}
+                  alt={article.data.title}
+                  class="img-fluid mb-3"
+                />
+              )}
+              <h5 class="text-center">
+                <a
+                  href={getPath(article, ".", "")}
+                  class="text-decoration-none text-secondary fw-medium"
+                >
+                  {article.data.title}
+                </a>
+              </h5>
+              <div class="mt-3 p-2 fs-6 bg-light text-end">
+                Sezione:
+                <a
+                  title={`Tutti gli articoli della sezione ${article.collection}`}
+                  class="text-capitalize"
+                  href={article.collection}
+                >
+                  {article.collection}
+                </a>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</BaseLayout>

@@ -1,0 +1,95 @@
+---
+import { NavbarToggle } from "./NavbarToggle"
+import { Home, Users, Newspaper, Edit, Search, Code, GraduationCap } from "lucide-react"
+
+interface Props {
+  currentPath: string
+}
+
+const { currentPath } = Astro.props
+
+// Navigation items configuration
+const menuItems = [
+  { 
+    href: "/", 
+    label: "Inizio", 
+    isActive: currentPath === "/",
+    icon: "home"
+  },
+  {
+    href: "/chi-siamo/",
+    label: "Chi siamo",
+    isActive: currentPath === "/chi-siamo/",
+    icon: "users"
+  },
+  {
+    href: "/notizie/",
+    label: "Notizie",
+    isActive: currentPath.startsWith("/notizie/"),
+    icon: "newspaper"
+  },
+  { 
+    href: "/blog/", 
+    label: "Blog", 
+    isActive: currentPath.startsWith("/blog/"),
+    icon: "edit"
+  },
+  {
+    href: "/ricerca/",
+    label: "Ricerca",
+    isActive: currentPath.startsWith("/ricerca/"),
+    icon: "search"
+  },
+  {
+    href: "/sviluppo/",
+    label: "Sviluppo",
+    isActive: currentPath.startsWith("/sviluppo/"),
+    icon: "code"
+  },
+  {
+    href: "/didattica/",
+    label: "Didattica",
+    isActive: currentPath.startsWith("/didattica/"),
+    icon: "graduation-cap"
+  },
+]
+
+// Helper function to determine if menu item is active
+const isActive = (item: any) => {
+  if (item.exact) {
+    return currentPath === item.href
+  } else {
+    return currentPath.startsWith(item.href)
+  }
+}
+---
+
+<nav class="navbar bg-body-tertiary navbar-expand-md border-top border-bottom">
+  <div class="container">
+    <NavbarToggle targetId="navbarNav" client:load />
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav mb-2 mb-md-0 mx-auto">
+        {
+          menuItems.map(item => (
+            <li class="nav-item fw-bold mx-auto mx-md-0 px-md-3 py-2">
+              <a
+                class:list={["nav-link d-flex flex-row flex-md-column align-items-center", isActive(item) ? "active" : ""]}
+                href={item.href}
+              >
+                {item.icon === "home" && <Home size={20} />}
+                {item.icon === "users" && <Users size={20} />}
+                {item.icon === "newspaper" && <Newspaper size={20} />}
+                {item.icon === "edit" && <Edit size={20} />}
+                {item.icon === "search" && <Search size={20} />}
+                {item.icon === "code" && <Code size={20} />}
+                {item.icon === "graduation-cap" && <GraduationCap size={20} />}
+                <span class={item.icon ? "ms-2 mt-md-1 ms-md-0" : ""}>{item.label}</span>
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </div>
+</nav>

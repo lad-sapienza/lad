@@ -1,0 +1,20 @@
+---
+import SectionIndex from "@user/components/SectionIndex.astro"
+
+export const prerender = true
+---
+
+<SectionIndex
+  collection="notizie"
+  title="Notizie"
+  description="Questa sezione del sito del LAD: Laboratorio di Archeologia Digitale alla Sapienza raccoglie notizie di eventi, conferenze, lezioni, seminari, ecc. inerenti alle tematiche del laboratorio. Per le segnalazioni scriveteci a julian.bogdani@uniroma1.it"
+>
+    <h1>Notizie</h1>
+    <p class="lead">
+      Questa sezione del sito del LAD: Laboratorio di Archeologia Digitale alla
+      Sapienza raccoglie notizie di eventi, conferenze, lezioni, seminari, ecc.
+      inerenti alle tematiche del laboratorio. Per le segnalazioni scriveteci a <a
+        href="mailto:julian.bogdani@uniroma1.it">julian.bogdani@uniroma1.it</a
+      >.
+    </p>
+</SectionIndex>

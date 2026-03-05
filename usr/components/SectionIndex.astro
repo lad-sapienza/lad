@@ -1,0 +1,69 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro"
+import { getCollection } from "astro:content"
+
+export interface Props {
+  title: string
+  description: string
+  collection: string
+}
+
+const { title, description, collection } = Astro.props
+
+const articles = await getCollection(collection)
+const sortedArticles = articles.sort((a, b) => {
+  if (a.data.pinned && !b.data.pinned) return -1
+  if (!a.data.pinned && b.data.pinned) return 1
+  const dateA: number = a.data.date ? new Date(a.data.date).getTime() : 0
+  const dateB: number = b.data.date ? new Date(b.data.date).getTime() : 0
+  return dateB - dateA
+})
+---
+
+<BaseLayout title={title} description={description}>
+  <slot />
+
+  {sortedArticles && sortedArticles.length > 0 && (
+    <section>
+      {sortedArticles.map(article => (
+        <div
+          class={`row my-5 py-5 border-bottom border-primary${article.data.pinned ? " shadow" : ""}`}
+        >
+          <div class="col-sm-4">
+            <a href={`/${article.collection}/${article.id.replace(".md", "")}/`}>
+              {article.data.img && (
+                <img
+                  src={`/${article.collection}/${article.id.replace(".md", "")}/${article.data.img}`}
+                  alt={article.data.title}
+                  class="img-fluid"
+                />
+              )}
+            </a>
+          </div>
+          <div class="col-sm-8">
+            <p class="text-secondary">
+              Pubblicata il{" "}
+              {article.data.date
+                ? new Date(article.data.date).toLocaleDateString("it-IT")
+                : ""}
+            </p>
+            <h2>
+              <a
+                href={`/${article.collection}/${article.id.replace(".md", "")}/`}
+                class="text-dark text-decoration-none"
+              >
+                {article.data.title}
+              </a>
+            </h2>
+            <p>{article.data.description}</p>
+            <p>
+              <a href={`/${article.collection}/${article.id.replace(".md", "")}/`}>
+                → Leggi tutto
+              </a>
+            </p>
+          </div>
+        </div>
+      ))}
+    </section>
+  )}
+</BaseLayout>
