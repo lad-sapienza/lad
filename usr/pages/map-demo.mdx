@@ -1,0 +1,588 @@
+---
+title: 'Map Component Demo'
+description: 'Examples of the Map component with MapLibre'
+layout: ../layouts/MdxLayout.astro
+---
+
+import { Map } from '../../core/components/Map';
+import TableOfContents from '../../core/components/TableOfContents/TableOfContents.astro';
+import Example from '../components/Example.astro';
+
+
+# Map Component
+
+The `Map` component renders an interactive map using MapLibre GL JS. Vector layers can be added via the `vectorLayers` prop or shorthand props like `geojson`, `csv`, `json`, etc. Layers can include searchable fields for advanced filtering.
+
+<TableOfContents title="Map examples on this page" />
+
+
+
+<Example title="Example: a simple map with two base layers">
+  <Fragment slot="intro">
+    This example shows the most basic Map configuration. It displays an interactive map centered on coordinates 37,37 (Turkey) with a zoom level of 8. Two basemap layers are available: an Esri satellite imagery layer and Google terrain layer. Users can switch between these layers and use navigation controls to pan and zoom the map.
+    
+    Available basemap shorthand values: `CAWM`, `OSM`, `EsriSatellite`, `EsriStreets`, `EsriTopo`, `GoogleSatellite`, `GoogleRoadmap`, `GoogleTerrain`, `GoogleAlteredRoadmap`, `CartoDB`, `StamenTerrain`, `OSMMapnick`, `OSMCycle`.
+  </Fragment>
+  <Fragment slot="code">
+  ```jsx
+  <Map 
+    client:only="react"
+    height="500px" 
+    center="37,37,8"
+    baseLayers={['EsriSatellite', 'GoogleTerrain', 'Imperium']}
+  />
+  ```
+  </Fragment>
+
+  <Map 
+    client:only="react"
+    height="500px" 
+    center="37,37,8"
+    baseLayers={['EsriSatellite', 'GoogleTerrain', 'Imperium']}
+  />
+</Example>
+
+---
+
+<Example title="Example: Using custom basemap configuration">
+  <Fragment slot="intro">
+    Instead of using basemap shorthand values, you can define custom basemap layers by providing full configuration objects with `name`, `url`, and optional `attribution` properties.
+  </Fragment>
+  <Fragment slot="code">
+  ```jsx
+  <Map 
+    client:only="react"
+    height="500px" 
+    center="37,37,8"
+    baseLayers={[
+      {
+        name: "Esri Topo",
+        url: "https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}",
+      },
+      'GoogleSatellite'
+    ]}
+  />
+  ```
+  </Fragment>
+
+  <Map 
+    client:only="react"
+    height="500px" 
+    center="37,37,8"
+    baseLayers={[
+      {
+        name: "Esri Topo",
+        url: "https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}",
+      },
+      'GoogleSatellite'
+    ]}
+  />
+</Example>
+
+---
+
+<Example title="Example: Adding controls to the map">
+  <Fragment slot="intro">
+    This example demonstrates how to add navigation and scale controls to the map using the `navigationControl` and `scaleControl` props.
+  </Fragment>
+  <Fragment slot="code">
+  ```jsx
+  <Map 
+    client:only="react"
+    height="500px" 
+    center="37,37,8"
+    navigationControl="top-right"
+    scaleControl="bottom-left"
+    fullscreenControl='top-right'
+    layerControl='top-right'
+    baseLayers={['EsriSatellite', 'GoogleTerrain']}
+  />
+  ```
+  </Fragment>
+
+  <Map 
+    client:only="react"
+    height="500px" 
+    center="37,37,8"
+    navigationControl="top-left"
+    scaleControl="bottom-left"
+    fullscreenControl='top-right'
+    layerControl='top-right'
+    baseLayers={['EsriSatellite', 'GoogleTerrain']}
+  />
+</Example>
+
+
+---
+
+<Example title='Example: load geo-data from a GeoJSON file'>
+  <Fragment slot="intro">
+    This example loads data directly from `ksa.geojson` using the `geojson` shorthand prop with custom styling. Parammeter `fitToContent: true` automatically adjusts the map view to fit the loaded data.
+  </Fragment>
+  <Fragment slot="code">
+  ```jsx
+  <Map 
+  geojson={{
+    name: "Kahramanmaraş Survey Sites",
+    path: "/data/ksa.geojson",
+    popup: "<b>${Site_Name}</b><br/>${Description}",
+    fitToContent: true,
+    style: {
+      type: 'circle',
+      paint: {
+        'circle-radius': 4,
+        'circle-color': '#ff6b6b',
+        'circle-stroke-width': 1,
+        'circle-stroke-color': '#ffffff'
+      }
+    }
+  }}
+  height="500px" 
+  client:only="react"
+  baseLayers={['EsriSatellite', 'GoogleTerrain']}
+/>
+  ```
+  </Fragment>
+
+  <Map 
+  geojson={{
+    name: "Kahramanmaraş Survey Sites",
+    path: "/data/ksa.geojson",
+    popup: "<b>${Site_Name}</b><br/>${Description}",
+    fitToContent: true,
+    style: {
+      type: 'circle',
+      paint: {
+        'circle-radius': 4,
+        'circle-color': '#ff6b6b',
+        'circle-stroke-width': 1,
+        'circle-stroke-color': '#ffffff'
+      }
+    }
+  }}
+  height="500px" 
+  client:only="react"
+  baseLayers={['EsriSatellite', 'GoogleTerrain']}
+/>  
+</Example>
+
+
+---
+
+<Example title='Example: load geo-data from a CSV file with Custom Column Names and custom style'>
+  <Fragment slot="intro">
+    This example loads CSV data with explicitly defined coordinate columns.
+  </Fragment>
+  <Fragment slot="code">
+  ```jsx
+  <Map 
+      client:only="react"
+      height="500px" 
+      center="37,37,8"
+
+    csv={{
+      path: "/data/ksa.csv",
+      lng: "Longitude",
+      lat: "Latitude",
+      popup: "<b>${Site_Name}</b><br/>${Description}",
+      style: {
+        type: 'circle',
+        paint: {
+          'circle-radius': 8,
+          'circle-color': '#4ecdc4',
+          'circle-stroke-width': 2,
+          'circle-stroke-color': '#ffffff'
+        }
+      }
+    }}
+    baseLayers={['EsriSatellite', 'GoogleTerrain']}
+  />
+  ```
+</Fragment>
+
+<Map 
+  client:only="react"
+  height="500px" 
+  center="37,37,8"
+
+  csv={{
+    path: "/data/ksa.csv",
+    lng: "Longitude",
+    lat: "Latitude",
+    popup: "<b>${Site_Name}</b><br/>${Description}",
+    style: {
+      type: 'circle',
+      paint: {
+        'circle-radius': 8,
+        'circle-color': '#4ecdc4',
+        'circle-stroke-width': 2,
+        'circle-stroke-color': '#ffffff'
+      }
+    }
+  }}
+  baseLayers={['EsriSatellite', 'GoogleTerrain']}
+/>
+</Example>
+
+
+---
+
+<Example title='Example: Client-side filtering with GeoJSON'>
+  <Fragment slot="intro">
+    Filter data client-side using a Directus-like filter object syntax. The filter is applied after loading the data, so all data is transferred but only matching features are displayed.
+    
+    Supported operators:
+    - `_eq` (equals),
+    - `_neq` (not equals), 
+    - `_in` (in array), 
+    - `_nin` (not in array), 
+    - `_contains` (string contains), 
+    - `_ncontains` (string doesn't contain), 
+    - `_gt` (greater than), 
+    - `_gte` (greater than or equal), 
+    - `_lt` (less than), 
+    - `_lte` (less than or equal), 
+    - `_null` (is null), 
+    - `_nnull` (is not null).
+    
+    Multiple field conditions use AND logic.
+  </Fragment>
+  <Fragment slot="code">
+  ```jsx
+  <Map 
+    client:only="react"
+    height="500px" 
+    geojson={{
+      path: "/data/ksa.geojson",
+      name: "Middle Bronze Age Sites",
+      filter: { Middle_Bronze: { _eq: "true" } },
+      popup: "<b>${Site_Name}</b><br/>${Description}<br />Middle Bronze Age: ${Middle_Bronze}",
+      fitToContent: true,
+      style: {
+        type: 'circle',
+        paint: {
+          'circle-radius': 6,
+          'circle-color': '#e74c3c',
+          'circle-stroke-width': 1,
+          'circle-stroke-color': '#ffffff'
+        }
+      }
+    }}
+    baseLayers={['EsriSatellite', 'GoogleTerrain']}
+  />
+  ```
+  </Fragment>
+
+  <Map 
+    client:only="react"
+    height="500px" 
+    geojson={{
+      path: "/data/ksa.geojson",
+      name: "Middle Bronze Age Sites",
+      filter: { Middle_Bronze: { _eq: "true" } },
+      popup: "<b>${Site_Name}</b><br/>${Description}<br />Middle Bronze Age: ${Middle_Bronze}",
+      fitToContent: true,
+      style: {
+        type: 'circle',
+        paint: {
+          'circle-radius': 6,
+          'circle-color': '#e74c3c',
+          'circle-stroke-width': 1,
+          'circle-stroke-color': '#ffffff'
+        }
+      }
+    }}
+    baseLayers={['EsriSatellite', 'GoogleTerrain']}
+  />
+</Example>
+
+
+---
+
+<Example title="Example: Multiple Vector Layers">
+  <Fragment slot="intro">
+    This example demonstrates adding multiple vector layers (GeoJSON and CSV) to the map with custom styles and popups.
+  </Fragment>
+  <Fragment slot="code">
+  ```jsx
+  <Map 
+    client:only="react"
+    height="600px" 
+    scaleControl="bottom-left"
+    vectorLayers={[
+      {
+        name: 'GeoJSON Sites',
+        source: { type: 'geojson', url: '/data/ksa.geojson' },
+        popupTemplate: '<b>${Site_Name}</b><br/>${Description}',
+        fitToContent: true,
+        style: {
+          type: 'circle',
+          paint: {
+            'circle-radius': 8,
+            'circle-color': '#ff6b6b',
+            'circle-stroke-width': .5,
+            'circle-stroke-color': '#ffffff'
+          }
+        }
+      },
+      {
+        name: 'CSV Sites',
+        source: { type: 'csv', url: '/data/ksa.csv' },
+        popupTemplate: '<b>${Site_Name}</b>',
+        style: {
+          type: 'circle',
+          paint: {
+            'circle-radius': 4,
+            'circle-color': '#4ecdc4',
+            'circle-stroke-width': .5,
+            'circle-stroke-color': '#ffffff'
+          }
+        }
+      }
+    ]}
+    baseLayers={['EsriSatellite', 'GoogleTerrain']}
+  />
+  ```
+  </Fragment>
+
+  <Map 
+    client:only="react"
+    height="600px" 
+    scaleControl="bottom-left"
+    vectorLayers={[
+      {
+        name: 'GeoJSON Sites',
+        source: { type: 'geojson', url: '/data/ksa.geojson' },
+        popupTemplate: '<b>${Site_Name}</b><br/>${Description}',
+        fitToContent: true,
+        style: {
+          type: 'circle',
+          paint: {
+            'circle-radius': 8,
+            'circle-color': '#ff6b6b',
+            'circle-stroke-width': .5,
+            'circle-stroke-color': '#ffffff'
+          }
+        }
+      },
+      {
+        name: 'CSV Sites',
+        source: { type: 'csv', url: '/data/ksa.csv' },
+        popupTemplate: '<b>${Site_Name}</b>',
+        style: {
+          type: 'circle',
+          paint: {
+            'circle-radius': 4,
+            'circle-color': '#4ecdc4',
+            'circle-stroke-width': .5,
+            'circle-stroke-color': '#ffffff'
+          }
+        }
+      }
+    ]}
+    baseLayers={['EsriSatellite', 'GoogleTerrain']}
+  />
+</Example>
+
+
+---
+
+<Example title="Example: Load map from MapLibre style JSON">
+  <Fragment slot="intro">
+    This example demonstrates loading a complete map configuration from a MapLibre style JSON file. The style file includes sources, layers, and styling definitions.
+  </Fragment>
+  <Fragment slot="code">
+  ```jsx
+  <Map 
+    client:only="react"
+    height="500px" 
+    center="37,37,8"
+    mapStyle="/data/ksa.json"
+  />
+  ```
+  </Fragment>
+
+  <Map 
+    client:only="react"
+    height="500px" 
+    center="37,37,8"
+    mapStyle="/data/ksa.json"
+  />
+</Example>
+
+---
+
+<Example title="Example: Override and expand style JSON layers">
+  <Fragment slot="intro">
+    You can override styling properties and add expanded features (`popupTemplate`, `fitToContent`) to layers defined in a style JSON file using the `styleOverrides` prop.
+  </Fragment>
+  <Fragment slot="code">
+  ```jsx
+  <Map 
+    client:only="react"
+    height="500px" 
+    mapStyle="/data/ksa.json"
+    styleOverrides={{
+      'ksa': {
+        paint: {
+          'circle-color': '#00ff00',
+          'circle-radius': 8
+        },
+        popupTemplate: '<b>${Site_Name}</b>',
+        fitToContent: true
+      }
+    }}
+  />
+  ```
+  </Fragment>
+
+  <Map 
+    client:only="react"
+    height="500px" 
+    mapStyle="/data/ksa.json"
+    styleOverrides={{
+      'ksa': {
+        paint: {
+          'circle-color': '#00ff00',
+          'circle-radius': 8
+        },
+        popupTemplate: '<b>${Site_Name}</b>',
+        fitToContent: true
+      }
+    }}
+  />
+</Example>
+
+---
+
+<Example title="Example: Load data from Directus">
+  <Fragment slot="intro">
+    Load geographical data directly from a Directus collection. The `geoField` parameter specifies which field contains the GeoJSON geometry. You can filter data using Directus query syntax via the `queryString` parameter.
+    
+    **Configuration options:**
+    - Use `url` and `token` props to provide Directus credentials directly
+    - Or set `PUBLIC_DIRECTUS_URL` and `PUBLIC_DIRECTUS_TOKEN` environment variables
+  </Fragment>
+  <Fragment slot="code">
+  ```jsx
+  <Map 
+    client:only="react"
+    height="500px" 
+    center="37,37,8"
+    directus={{
+      url: "https://your-directus-instance.com",
+      token: "your-api-token",
+      table: "scms_ksa",
+      geoField: "geometry",
+      queryString: "filter[Hellenistic_Roman][_eq]=true",
+      name: "Hellenistic-Roman Sites",
+      popup: "<b>${Site_Name}</b><br/>${Description}",
+      fitToContent: true,
+      style: {
+        type: 'circle',
+        paint: {
+          'circle-radius': 6,
+          'circle-color': '#9b59b6',
+          'circle-stroke-width': 1,
+          'circle-stroke-color': '#ffffff'
+        }
+      }
+    }}
+    baseLayers={['EsriSatellite', 'GoogleTerrain']}
+  />
+  ```
+  </Fragment>
+
+  <Map 
+    client:only="react"
+    height="500px" 
+    center="37,37,8"
+    directus={{
+      table: "scms_ksa",
+      geoField: "geometry",
+      queryString: "filter[Hellenistic_Roman][_eq]=true",
+      name: "Hellenistic-Roman Sites",
+      popup: "<b>${Site_Name}</b><br/>${Description}<br/><a href='./record/scms_ksa/${id}'>View record</a>",
+      fitToContent: true,
+      style: {
+        type: 'circle',
+        paint: {
+          'circle-radius': 6,
+          'circle-color': '#9b59b6',
+          'circle-stroke-width': 1,
+          'circle-stroke-color': '#ffffff'
+        }
+      }
+    }}
+    baseLayers={['EsriSatellite', 'GoogleTerrain']}
+  />
+</Example>
+
+---
+
+## Vector Layer Search Functionality
+
+<Example title="Example: Vector Layers with Search">
+  <Fragment slot="intro">
+    This example demonstrates vector layers with searchable fields. Click the search icon next to a layer name in the layer control to open the search interface. The search supports both simple free-text search across all fields and advanced search with field-operator-value triplets.
+  </Fragment>
+  <Fragment slot="code">
+  ```jsx
+  <Map 
+    client:only="react"
+    height="600px" 
+    vectorLayers={[
+      {
+        name: 'Archaeological Sites',
+        source: { type: 'geojson', url: '/data/ksa.geojson' },
+        popup: "<b>${Site_Name}</b><br/>${Description}<br/><a href='./record/scms_ksa/${id}'>View record</a>",
+        searchInFields: {
+          Site_Name: "Site Name",
+          Item_Label: "Item Label", 
+          Site_Description: "Description"
+        },
+        fitToContent: true,
+        style: {
+          type: 'circle',
+          paint: {
+            'circle-radius': 6,
+            'circle-color': '#ff6b6b',
+            'circle-stroke-width': 1,
+            'circle-stroke-color': '#ffffff'
+          }
+        }
+      }
+    ]}
+    baseLayers={['EsriSatellite', 'OSM']}
+  />
+  ```
+  </Fragment>
+
+  <Map 
+    client:only="react"
+    height="600px" 
+    vectorLayers={[
+      {
+        name: 'Archaeological Sites',
+        source: { type: 'geojson', url: '/data/ksa.geojson' },
+        popupTemplate: '<b>${Site_Name}</b><br/>${Item_Label}<br/>${Site_Description}',
+        searchInFields: {
+          Site_Name: "Site Name",
+          Item_Label: "Item Label", 
+          Site_Description: "Description"
+        },
+        fitToContent: true,
+        style: {
+          type: 'circle',
+          paint: {
+            'circle-radius': 6,
+            'circle-color': '#ff6b6b',
+            'circle-stroke-width': 1,
+            'circle-stroke-color': '#ffffff'
+          }
+        }
+      }
+    ]}
+    baseLayers={['EsriSatellite', 'OSM']}
+  />
+</Example>

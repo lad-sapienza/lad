@@ -62,6 +62,7 @@ export function formatDate(value: any): string {
     if (!value) return '';
     const date = new Date(value);
     if (isNaN(date.getTime())) return String(value);
+    
     return new Intl.DateTimeFormat('en-US', {
       year: 'numeric',
       month: 'short',
