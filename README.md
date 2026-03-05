@@ -116,6 +116,7 @@ Create `.md` or `.mdx` files in `src/content/docs/`:
 ---
 title: "My Page"
 description: "Page description"
+menu_position: 1
 date: 2026-01-13
 ---
 
