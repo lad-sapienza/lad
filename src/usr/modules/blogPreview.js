@@ -21,7 +21,6 @@ const BlogPreview = (props) => {
     sezione.title = 'Blog';
     sezione.url = '/blog/';
   }
-  console.log(props);
   return (
     <StyledDiv className={`shadow p-3 mt-4 text-center ${props.pinned ? `border border-primary` : ''}`}>
       <Link to={props.readMore} title={props.title}>

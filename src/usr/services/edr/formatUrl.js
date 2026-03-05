@@ -20,9 +20,6 @@ const formatUrl = (uiFilter) => {
     ret.sourceUrl += `&${serializedQuery}`;
   }
 
-  // 🔹 LOG della URL generata
-  console.log("Generated URL:", ret.sourceUrl);
-
   return ret;
 };
 

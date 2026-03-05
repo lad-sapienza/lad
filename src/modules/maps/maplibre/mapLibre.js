@@ -33,7 +33,6 @@ const MapLibre = ({
   sprite,
 }) => {
 
-  
   const [lng, lat, zoom] = center.split(",").map(Number)
   if (mapStyle) {
     mapStyle = mapStyle.startsWith("http") ? mapStyle : withPrefix(mapStyle)
@@ -46,7 +45,7 @@ const MapLibre = ({
     const mapInstance = event.target
     const layers = mapInstance.getStyle()?.layers || []
 
-    // Log per vedere tutti i layer presenti nella mappa
+    // Filter layers that have a popup template defined in their metadata
     const interactiveLayers = layers
       .filter(layer => layer.metadata?.popupTemplate)
       .map(layer => layer.id)
@@ -66,7 +65,7 @@ const MapLibre = ({
     event => {
       const { lngLat, point, target: mapInstance } = event
 
-      // Use queryRenderedFeatures to get features at the clicked point
+      // Query rendered features at the clicked point to get clicked features from interactive layers
       const clickedFeatures = mapInstance.queryRenderedFeatures(point, {
         layers: interactiveLyrs,
       })
@@ -82,7 +81,7 @@ const MapLibre = ({
     [interactiveLyrs],
   )
 
-  // Filtra i base layers in base alla proprietà `baseLayers`
+  // Filter and map base layers based on the baseLayers prop, using defaultBaseLayers as reference
   const filteredBaseLayers = baseLayers
     ? baseLayers
         .map(lyr => (defaultBaseLayers[lyr] ? defaultBaseLayers[lyr] : null))
@@ -117,7 +116,9 @@ const MapLibre = ({
           ))}
 
         {children}
-        {clickInfo && clickInfo.feature.layer.metadata.popupTemplate && (
+
+        {/* Render popup if clickInfo exists and the layer has a popupTemplate defined in metadata */}
+        {clickInfo && clickInfo.feature.layer.metadata?.popupTemplate && (
           <Popup
             anchor="top"
             longitude={clickInfo.lngLat.lng}
@@ -217,10 +218,7 @@ MapLibre.propTypes = {
    * Default: null
    */
   baseLayers: defaultBaseLayersPropTypes,
-  /**
-   * URL to the sprite resource
-   */
-  sprite: PropTypes.string
+  sprite: PropTypes.string,
 }
 
 export { MapLibre }
