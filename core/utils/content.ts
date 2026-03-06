@@ -15,10 +15,17 @@ export async function getSortedCollection(
 ) {
   const entries = await getCollection(collectionName as any);
   return entries.sort((a, b) => {
-    const aEntry = a as any;
-    const bEntry = b as any;
-    const aValue = aEntry.data[sortField];
-    const bValue = bEntry.data[sortField];
+    // Type guard: ensure a and b are objects with a 'data' property
+    if (
+      typeof a !== 'object' || a === null || !('data' in a) ||
+      typeof b !== 'object' || b === null || !('data' in b)
+    ) {
+      return 0;
+    }
+    const aData = (a as { data: Record<string, any> }).data;
+    const bData = (b as { data: Record<string, any> }).data;
+    const aValue = aData[sortField];
+    const bValue = bData[sortField];
     if (aValue === undefined || bValue === undefined) return 0;
     // Date comparison
     if (
