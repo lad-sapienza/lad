@@ -93,5 +93,22 @@ async function copyContentImages() {
   }
 }
 
+/**
+ * Copy CNAME from project root to usr/public (if it exists)
+ */
+function copyCNAME() {
+  const cnameSrc = path.join(projectRoot, 'usr', 'CNAME');
+  const cnameDest = path.join(projectRoot, 'usr', 'public', 'CNAME');
+
+  if (!fs.existsSync(cnameSrc)) {
+    console.log('\n⚠️  No CNAME file found in project root, skipping.');
+    return;
+  }
+
+  fs.copyFileSync(cnameSrc, cnameDest);
+  console.log('\n✅ CNAME copied to usr/public/CNAME');
+}
+
 // Run the script
 copyContentImages();
+copyCNAME();
