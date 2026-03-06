@@ -94,6 +94,30 @@ async function copyContentImages() {
 }
 
 /**
+ * Copy static site images from usr/images/ to usr/public/images/
+ */
+function copyStaticImages() {
+  const srcDir = path.join(projectRoot, 'usr', 'images');
+  const destDir = path.join(projectRoot, 'usr', 'public', 'images');
+
+  if (!fs.existsSync(srcDir)) {
+    console.log('\n⚠️  No usr/images/ folder found, skipping static image copy.');
+    return;
+  }
+
+  if (!fs.existsSync(destDir)) {
+    fs.mkdirSync(destDir, { recursive: true });
+  }
+
+  const files = fs.readdirSync(srcDir);
+  for (const file of files) {
+    fs.copyFileSync(path.join(srcDir, file), path.join(destDir, file));
+    console.log(`   ✓ Copied static image: ${file}`);
+  }
+  console.log('\n✅ Static images copied to usr/public/images/');
+}
+
+/**
  * Copy CNAME from project root to usr/public (if it exists)
  */
 function copyCNAME() {
@@ -111,4 +135,5 @@ function copyCNAME() {
 
 // Run the script
 copyContentImages();
+copyStaticImages();
 copyCNAME();
