@@ -65,14 +65,14 @@ const isActive = (item: any) => {
 ---
 
 <nav class="navbar bg-body-tertiary navbar-expand-md border-top border-bottom">
-  <div class="container">
+  <div class="container-sm">
     <NavbarToggle targetId="navbarNav" client:load />
 
     <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav mb-2 mb-md-0 mx-auto">
+      <ul class="navbar-nav mb-md-0 mx-auto">
         {
           menuItems.map(item => (
-            <li class="nav-item fw-bold mx-auto mx-md-0 px-md-3 py-2">
+            <li class="nav-item fw-bold mx-auto mx-md-0 px-md-3 py-1">
               <a
                 class:list={["nav-link d-flex flex-row flex-md-column align-items-center", isActive(item) ? "active" : ""]}
                 href={item.href}

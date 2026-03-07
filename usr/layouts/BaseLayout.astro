@@ -34,34 +34,31 @@ const currentPath = Astro.url.pathname
     <header>
       <div class="container py-4">
         <!-- First row: Logos and Mobile Menu Button -->
-        <div class="row mb-4">
-<div class="col-6">
-          <a
-            href="/"
-            title={siteMetadata.title}
-          >
-            <img
-              src="/images/lad-blue.png"
-              alt="LAD - Laboratorio di Archeologia Digitale"
-class="img-fluid"
-              style="max-width: 250px !important;"
-            />
-          </a>
-</div>
-<div class="col-6 text-end">
-          <a
-            href="https://www.uniroma1.it/"
-            target="_blank"
-            title="Sapienza Università di Roma"
-          >
-            <img
-              src="/images/sapienza.png"
-              alt="Sapienza Università di Roma"
-              class="img-fluid"
-style="max-width: 250px !important;"
-            />
-          </a>
-</div>
+        <div class="row">
+          <div class="col-6">
+            <a href="/" title={siteMetadata.title}>
+              <img
+                src="/images/lad-blue.png"
+                alt="LAD - Laboratorio di Archeologia Digitale"
+                class="img-fluid"
+                style="max-width: min(250px, 100%);"
+              />
+            </a>
+          </div>
+          <div class="col-6 text-end">
+            <a
+              href="https://www.uniroma1.it/"
+              target="_blank"
+              title="Sapienza Università di Roma"
+            >
+              <img
+                src="/images/sapienza.png"
+                alt="Sapienza Università di Roma"
+                class="img-fluid"
+                style="max-width: min(250px, 100%);"
+              />
+            </a>
+          </div>
         </div>
       </div>
 
@@ -74,7 +71,7 @@ style="max-width: 250px !important;"
       </div>
     </main>
 
-    <footer class="lad-footer">
+    <footer class="lad-footer border-top text-muted mt-5 bg-body-tertiary">
       <div class="container px-4 py-5">
         <div class="row g-4 text-center text-md-start">
           <!-- LAD Info -->
@@ -84,7 +81,7 @@ style="max-width: 250px !important;"
               style="height: 2rem; width: 6rem; mask: url('/images/lad.svg') no-repeat center / contain; -webkit-mask: url('/images/lad.svg') no-repeat center / contain; background-color: var(--color-text-muted);"
             >
             </div>
-            <h5 class="fw-semibold text-dark mb-2">
+            <h5 class="fw-semibold mb-2">
               Laboratorio di Archeologia Digitale alla Sapienza
             </h5>
             <p class="small text-muted">
@@ -94,10 +91,10 @@ style="max-width: 250px !important;"
 
           <!-- Department Info -->
           <div class="col-12 col-md-4">
-            <h5 class="fw-semibold text-dark mb-2">
+            <h5 class="fw-semibold mb-2">
               <a
                 href="https://saras.uniroma1.it/"
-                class="text-primary text-decoration-none"
+                class="text-dark text-decoration-none"
                 title="Dipartimento SARAS Sapienza Università di Roma"
               >
                 Dipartimento di Storia Antropologia Religioni Arte Spettacolo<br

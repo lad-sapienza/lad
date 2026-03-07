@@ -53,115 +53,11 @@ body {
 /* Global headers styling */
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-serif);
-  font-weight: 500;
   color: var(--color-text);
   line-height: 1.3;
 }
 
-
-/* Footer styling */
-.lad-footer {
-  background: var(--color-bg-secondary);
-  border-top: 1px solid var(--color-border);
-  color: var(--color-text-muted);
-  margin-top: var(--space-section);
-}
-
-.lad-footer h5 {
-  color: var(--color-text);
-  font-family: var(--font-serif);
-  font-weight: 600;
-  font-size: 1rem;
-  margin-bottom: 0.5rem;
-}
-
-.lad-footer a {
-  color: var(--color-primary);
-  text-decoration: none;
-}
-
-.lad-footer a:hover {
-  color: var(--color-primary-hover);
-  text-decoration: underline;
-}
-
-/* Card components */
-.lad-card {
-  background: var(--color-bg);
-  border: 1px solid var(--color-border);
-  border-radius: 0.5rem;
-  padding: 1.5rem;
-  box-shadow: var(--shadow-base);
-  transition: box-shadow 0.15s ease-in-out;
-}
-
-.lad-card:hover {
-  box-shadow: var(--shadow-md);
-}
-
-/* Content styling */
-.lad-prose {
-  line-height: 1.7;
-}
-
-.lad-prose h1, .lad-prose h2, .lad-prose h3, .lad-prose h4, .lad-prose h5, .lad-prose h6 {
-  color: var(--color-text);
-  font-family: var(--font-serif);
-  font-weight: 600;
-  margin-top: 2em;
-  margin-bottom: 0.5em;
-  line-height: 1.3;
-}
-
-.lad-prose h1 {
-  font-size: 2.25rem;
-  font-weight: 700;
-}
-
-.lad-prose h2 {
-  font-size: 1.875rem;
-}
-
-.lad-prose h3 {
-  font-size: 1.5rem;
-}
-
-.lad-prose p {
-  margin-bottom: 1rem;
-}
-
-.lad-prose a {
-  color: var(--color-primary);
-  text-decoration: underline;
-  text-decoration-color: transparent;
-  transition: text-decoration-color 0.15s ease-in-out;
-}
-
-.lad-prose a:hover {
-  text-decoration-color: var(--color-primary);
-}
-
-/* Logo styling */
-.lad-logo {
-  height: 2.5rem;
-  width: auto;
-}
 .main_content img{
   max-width: 100%;
   height: auto;
 }
-
-/* Custom styles for Bootstrap migration */
-      
-      
-      .opacity-hover {
-        transition: opacity 0.15s ease-in-out;
-      }
-      
-      .opacity-hover:hover {
-        opacity: 0.8;
-      }
-      
-      .text-decoration-none:hover {
-        text-decoration: none !important;
-      }
