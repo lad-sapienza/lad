@@ -53,15 +53,6 @@ const menuItems = [
     icon: "graduation-cap"
   },
 ]
-
-// Helper function to determine if menu item is active
-const isActive = (item: any) => {
-  if (item.exact) {
-    return currentPath === item.href
-  } else {
-    return currentPath.startsWith(item.href)
-  }
-}
 ---
 
 <nav class="navbar bg-body-tertiary navbar-expand-md border-top border-bottom">
@@ -74,7 +65,7 @@ const isActive = (item: any) => {
           menuItems.map(item => (
             <li class="nav-item fw-bold mx-auto mx-md-0 px-md-3 py-1">
               <a
-                class:list={["nav-link d-flex flex-row flex-md-column align-items-center", isActive(item) ? "active" : ""]}
+                class:list={["nav-link d-flex flex-row flex-md-column align-items-center", item.isActive ? "active" : ""]}
                 href={item.href}
               >
                 {item.icon === "home" && <Home size={20} />}
