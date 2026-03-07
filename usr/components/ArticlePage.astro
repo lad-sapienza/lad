@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro"
 import { getCollection, render, type DataEntryMap } from "astro:content"
+import Gallery from '@core/components/Gallery/Gallery.astro'
 
 interface Props {
   collection: string
@@ -64,6 +65,7 @@ const { Content } = await render(entry)
       <!-- Content -->
       <div>
         <Content />
+        <Gallery />
       </div>
     </article>
   </main>
