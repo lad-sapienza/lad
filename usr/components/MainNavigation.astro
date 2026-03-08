@@ -1,6 +1,5 @@
 ---
-import { NavbarToggle } from "./NavbarToggle"
-import { Home, Users, Newspaper, Edit, LibraryBig, Code, GraduationCap } from "lucide-react"
+import { Home, Users, Newspaper, Edit, LibraryBig, Code, GraduationCap, Menu, X } from "lucide-react"
 
 interface Props {
   currentPath: string
@@ -57,7 +56,17 @@ const menuItems = [
 
 <nav class="navbar bg-body-tertiary navbar-expand-md border-top border-bottom">
   <div class="container-sm">
-    <NavbarToggle targetId="navbarNav" client:load />
+    <button
+      id="navbar-toggler"
+      class="navbar-toggler border-0 p-2"
+      type="button"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="toggler-icon-open"><Menu size={24} /></span>
+      <span class="toggler-icon-close" style="display:none"><X size={24} /></span>
+    </button>
 
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav mb-md-0 mx-auto">
@@ -84,3 +93,19 @@ const menuItems = [
     </div>
   </div>
 </nav>
+
+<script>
+  const toggler = document.getElementById('navbar-toggler');
+  const target = document.getElementById('navbarNav');
+
+  if (toggler && target) {
+    toggler.addEventListener('click', () => {
+      const isOpen = target.classList.toggle('show');
+      toggler.setAttribute('aria-expanded', String(isOpen));
+      const openIcon = toggler.querySelector('.toggler-icon-open') as HTMLElement;
+      const closeIcon = toggler.querySelector('.toggler-icon-close') as HTMLElement;
+      if (openIcon) openIcon.style.display = isOpen ? 'none' : '';
+      if (closeIcon) closeIcon.style.display = isOpen ? '' : 'none';
+    });
+  }
+</script>
