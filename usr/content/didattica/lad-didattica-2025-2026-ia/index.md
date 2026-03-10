@@ -55,7 +55,7 @@ Le attività si terranno in presenza presso la **Sapienza Università di Roma**,
 
 Sono previste 3 lezioni introduttive:
 
-- **12 Marzo**: Introduzione all'Intelligenza Artificiale in archeologia.
+- **13 Marzo**: Introduzione all'Intelligenza Artificiale in archeologia.
 - **19 Marzo**: Presentazione di *PyPottery* e introduzione al caso studio.
 - **26 Marzo**: Definizione del dataset e divisione del materiale.
 
