@@ -49,13 +49,14 @@ geoNamesFromPdf offre sia una semplice interfaccia a riga di comando che una GUI
 
 ## s:CMS  
 s:CMS è un sistema open source sviluppato dal LAD per la creazione e gestione di siti web statici, pensato per la pubblicazione di dati di ricerca, portali e progetti digitali.
-Basato su [Gatsby.js](https://www.gatsbyjs.com/), React e GraphQL, s:CMS offre componenti pronti all’uso per integrare, visualizzare e analizzare dati provenienti da database, file statici o servizi remoti: mappe, tabelle ricercabili, gallerie, e molto altro.  
-Il sistema è progettato per essere facile da installare, personalizzare e mantenere, con un workflow semplificato per la pubblicazione sicura e duratura dei contenuti.  
-s:CMS supporta l’integrazione con [Directus](https://directus.io/) per la gestione dei dati, e consente la personalizzazione completa del layout tramite React Bootstrap e SASS.  
+Basato su [Astro](https://astro.build/), React e MDX, s:CMS offre componenti pronti all'uso per integrare, visualizzare e analizzare dati provenienti da database, file statici o servizi remoti: mappe interattive (MapLibre), tabelle ricercabili, gallerie, e molto altro.  
+Il sistema adotta una netta separazione tra codice del framework (`core/`) e contenuti utente (`usr/`), che consente di ricevere aggiornamenti del core senza rischiare di sovrascrivere personalizzazioni o contenuti.  
+s:CMS supporta l'integrazione con [Directus](https://directus.io/) per la gestione dei dati, utilizza Astro Content Collections con validazione Zod, e si personalizza tramite Bootstrap 5 e CSS custom properties.  
   - Github: [https://github.com/lad-sapienza/sCMS](https://github.com/lad-sapienza/sCMS)
   - Licenza: [0BSD](https://github.com/lad-sapienza/sCMS/blob/main/LICENSE)
-  - Tecnologie: Gatsby.js, React, GraphQL, MDX, SASS
+  - Tecnologie: Astro, React, MDX, TypeScript, Bootstrap 5, MapLibre
   - Sito demo: [scms.lad-sapienza.it](https://scms.lad-sapienza.it/)
+  - Blog: [Rilasciata la versione 6 di s:CMS: da Gatsby ad Astro](../blog/scms-v6-da-gatsby-ad-astro/)
 
 ---
 
