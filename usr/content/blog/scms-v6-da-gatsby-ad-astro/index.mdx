@@ -1,0 +1,157 @@
+---
+title: "Rilasciata la versione più recente di sCMS (6)"
+description: "Nuova versione di sCMS, il gestore di contenuti sviluppato dal LAD"
+date: "2026-03-12"
+author: "Julian Bogdani"
+tags: ["sCMS", "Astro", "Gatsby", "siti statici", "MapLibre", "Content Collections"]
+img: scms-v6.png
+inhome: true
+---
+
+# Rilasciata la versione più recente di sCMS (6)
+
+# s:CMS si rinnova: da Gatsby ad Astro
+
+Siamo lieti di annunciare il rilascio della nuova versione di **s:CMS**, il framework open source sviluppato e mantenuto dal [LAD – Laboratorio di Archeologia Digitale alla Sapienza](https://lad.saras.uniroma1.it) per la creazione e gestione di siti web statici orientati alla ricerca umanistica e archeologica.
+
+Questa versione rappresenta un cambio di paradigma radicale: dopo anni di sviluppo su **Gatsby**, s:CMS è stato completamente riscritto su [**Astro**](https://astro.build/), uno dei framework per siti statici più moderni e performanti oggi disponibili.
+
+---
+
+## Perché abbandonare Gatsby?
+
+Gatsby è stato per lungo tempo un punto di riferimento nello sviluppo di siti statici basati su React. Tuttavia, negli ultimi anni la sua complessità architetturale — centrata su GraphQL come livello di astrazione obbligatorio per qualsiasi sorgente dati — è diventata sempre più difficile da giustificare per progetti di dimensioni medie. I tempi di build si allungavano, l'ecosistema di plugin risultava frammentato e scarsamente manutenuto, e l'overhead di configurazione scoraggiava contribuzioni esterne.
+
+La scelta di Astro risponde a esigenze concrete:
+
+- **Build più veloci**: Astro adotta un approccio *islands architecture*, inviando al browser solo il JavaScript strettamente necessario.
+- **Nessun GraphQL obbligatorio**: i dati vengono caricati direttamente nelle pagine e nei componenti, con piena libertà di sorgente.
+- **Supporto nativo a React, MDX e TypeScript**: nessun adattatore complicato, tutto funziona fuori dalla scatola.
+- **Content Collections con validazione Zod**: la gestione dei contenuti è tipizzata e validata a tempo di build.
+- **Comunità attiva e crescente**: Astro è oggi tra i progetti web open source più vivaci.
+
+---
+
+## Cosa cambia per gli utenti
+
+### Struttura del progetto
+
+La separazione tra codice del framework e contenuti utente — già presente nella versione Gatsby — è stata resa ancora più netta e formale:
+
+```
+scms/
+├── core/          # Framework (aggiornabile, non modificare)
+└── usr/           # Tuoi contenuti e personalizzazioni (modifica liberamente)
+    ├── content/   # Pagine, post, dati
+    ├── pages/     # Rotte Astro
+    ├── components/
+    ├── layouts/
+    └── styles/
+```
+
+Questa separazione consente di ricevere aggiornamenti del core tramite un semplice:
+
+```bash
+npm run update-scms
+```
+
+senza rischiare di sovrascrivere i propri contenuti o personalizzazioni.
+
+### Contenuti come Content Collections
+
+I contenuti in `usr/content/` sono ora definiti tramite **Astro Content Collections** con schema Zod in `usr/content/config.ts`. La validazione avviene a tempo di build: se un frontmatter è incompleto o errato, il build fallisce con un messaggio chiaro, prima ancora che il sito venga pubblicato.
+
+### Script di scaffolding
+
+Due nuovi comandi interattivi semplificano la creazione di contenuti senza dover modificare manualmente i file di configurazione:
+
+- **`npm run add-collection`** — crea una nuova collezione con schema, pagine di listing e dettaglio già impostate.
+- **`npm run add-content`** — aggiunge un singolo file di contenuto a una collezione esistente, rilevando automaticamente i campi dal schema Zod.
+
+### Configurazione utente
+
+La configurazione del sito è concentrata in `usr/user.config.mjs`, che viene fuso con `astro.config.mjs` a runtime. I metadati del sito (titolo, descrizione, autore, immagine di default per i social) si impostano tramite l'oggetto `siteMetadata`:
+
+```javascript
+export const siteMetadata = {
+  title: 'Il mio sito',
+  description: 'Descrizione del sito',
+  author: 'Nome Autore',
+  site: 'https://miosito.it',
+};
+```
+
+---
+
+## MapLibre al posto di Leaflet: una scelta ponderata
+
+Una delle differenze più visibili rispetto alla versione precedente riguarda le mappe interattive. Il componente cartografico è stato completamente riscritto attorno a [**MapLibre GL JS**](https://maplibre.org/), abbandonando Leaflet.
+
+Non si tratta di una scelta casuale né di un semplice aggiornamento tecnico: è una decisione strategica.
+
+**Leaflet** è una libreria eccellente per mappe raster semplici, ma mostra i suoi limiti di fronte a visualizzazioni vettoriali complesse, grandi dataset geografici, e stili cartografici avanzati. È anche di fatto in una fase di mantenimento passivo, senza uno sviluppo attivo delle funzionalità.
+
+**MapLibre GL JS**, fork open source di Mapbox GL JS, offre:
+
+- **Rendering vettoriale GPU-accelerato**: mappe fluide anche con migliaia di feature.
+- **Stile dichiarativo completo**: colori, icone, etichette, filtri e transizioni definiti in un unico JSON di stile.
+- **Supporto alle tile vettoriali (MVT/PBF)**: compatibile con qualsiasi server di tile open source (Martin, TileServer-GL, PMTiles).
+- **Sviluppo attivo**: la community di MapLibre è molto vivace, con rilasci frequenti.
+- **Piena compatibilità con PMTiles**: possibilità di distribuire mappe vettoriali come file singolo, senza server.
+
+Il componente `Map` di s:CMS espone la stessa interfaccia dichiarativa della versione precedente per i layer vettoriali e raster, ma sfrutta ora tutta la potenza del rendering GL.
+
+---
+
+## Funzionalità mantenute dalla versione Gatsby
+
+Nonostante la riscrittura completa, tutte le funzionalità principali di s:CMS sono presenti nella nuova versione:
+
+| Funzionalità | Gatsby | Astro |
+|---|:---:|:---:|
+| Mappe interattive | Leaflet e MapLibre | **MapLibre** |
+| Tabelle dati filtrabili | ✓ | ✓ |
+| Gallerie immagini | ✓ | ✓ |
+| Ricerca e filtri avanzati | ✓ | ✓ |
+| Integrazione Directus CMS | ✓ | ✓ |
+| Viewer Zotero/GeoViewer | ✓ | ✓ |
+| Navbar dinamica | ✓ | ✓ |
+| Sitemap automatica | ✓ | ✓ |
+| SEO e metadati Open Graph | ✓ | ✓ |
+| Supporto MDX | ✓ | ✓ |
+
+---
+
+## Il sito del LAD è già su Astro
+
+Questo stesso sito — [lad.saras.uniroma1.it](https://lad.saras.uniroma1.it) — è già costruito sulla nuova versione di s:CMS. È quindi il banco di prova più diretto: ogni componente, ogni integrazione, ogni funzionalità è verificata in produzione prima di essere considerata stabile.
+
+---
+
+## Come iniziare
+
+Il repository è pubblico su GitHub:
+
+```bash
+git clone https://github.com/lad-sapienza/sCMS.git mio-progetto
+cd mio-progetto
+npm install
+npm run dev
+```
+
+La documentazione completa è nel [README del repository](https://github.com/lad-sapienza/sCMS).
+
+---
+
+## Conclusioni
+
+Il passaggio da Gatsby ad Astro non è solo un aggiornamento tecnico: è un investimento sulla sostenibilità a lungo termine di s:CMS. Un framework più semplice da capire, più veloce da usare, e più facile da aggiornare significa che i progetti costruiti su di esso potranno essere mantenuti — e aggiornati — con meno sforzo nel tempo.
+
+La sostituzione di Leaflet con MapLibre segue la stessa logica: non inseguire la novità per la novità, ma scegliere strumenti che abbiano una traiettoria di sviluppo solida e che permettano di fare cose altrimenti impossibili.
+
+s:CMS rimane ciò che è sempre stato: uno strumento pratico, open source, pensato per chi fa ricerca e vuole un sito web serio senza dipendere da piattaforme proprietarie.
+
+---
+
+*Il codice sorgente è disponibile su [GitHub](https://github.com/lad-sapienza/sCMS) con licenza BSD-0-Clause.*
+
