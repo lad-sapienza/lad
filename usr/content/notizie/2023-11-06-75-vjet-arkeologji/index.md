@@ -1,6 +1,6 @@
 ---
 title: "Partecipazione al convegno internazionale “Arkeologjia shqiptare në 75-vjetorin e krijimit të saj: arritje, risi dhe perspektiva”"
-img: ./75-vjet-arkeologji.jpg
+img: 75-vjet-arkeologji.jpg
 date: 2023-11-06
 description: "Partecipazione dei direttori della Missione, Abana Meta e Julian Bogdani al convegno internazionale “Arkeologjia shqiptare në 75-vjetorin e krijimit të saj: arritje, risi dhe perspektiva”"
 tags:

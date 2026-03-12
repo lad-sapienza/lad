@@ -2,7 +2,7 @@
 title: ⲘⲞvⲈⲒⲦ Grafo stradale dell'Egitto tardoantico e medievale
 date: 2022-02-04
 order: 6
-img: ./moveit.jpg
+img: moveit.jpg
 description: Questo post descrive il progetto MOvEIT, un grafo stradale digitale che collega i siti dell'Atlante PAThs per l'Egitto tardoantico e medievale. Vengono presentate le tecnologie GIS utilizzate, le risorse disponibili per il download e le applicazioni per la ricerca storica e archeologica.
 
 ---

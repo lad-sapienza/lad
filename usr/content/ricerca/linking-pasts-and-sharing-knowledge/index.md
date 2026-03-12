@@ -1,7 +1,7 @@
 ---
 title: Linking Pasts And Sharing Knowledge. Mapping Archaeological Heritage, Legacy Data Integration and Web Technologies for Modelling Historical Landscapes
 order: 19
-img: ./linking-pasts-and-sharing-knowledge.jpg
+img: linking-pasts-and-sharing-knowledge.jpg
 description: A Hybrid Conference hosted by the University of Naples Federico II, and organised with the Sapienza University of Rome and the University of Sheffield on 13th - 14th November 2023
 date: 2023-11-13
 ---

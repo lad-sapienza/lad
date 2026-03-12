@@ -4,7 +4,7 @@ author: Eleonora Iacopini
 date: 2023-09-06
 description: Progetto di ricerca, P.I. Barbara Borg, ERC Advanced Grant no. 101054143 IN-ROME 2022-2027
 order: 17
-img: ./inrome.jpg
+img: inrome.jpg
 ---
 
 ## Dettagli del progetto di ricerca

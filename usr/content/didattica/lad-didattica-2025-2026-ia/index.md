@@ -1,6 +1,6 @@
 ---
 title: "[a.a. 25-26] Deep Learning per la classificazione della ceramica archeologica"
-img: ./locadina_2026.jpg
+img: locadina_2026.jpg
 date: 2026-02-28
 description: "Il laboratorio teorico-pratico del LAD per apprendere l'uso di Computer Vision e Deep Learning applicati allo studio e alla classificazione della ceramica archeologica."
 tags:

@@ -2,7 +2,7 @@
 title: Atlante e portale web di PAThs An Archaeological Atlas of Coptic Literature (dir. Paola Buzi, Sapienza)
 date: 2022-02-04
 order: 8
-img: ./paths.jpg
+img: paths.jpg
 description: Questo post presenta una panoramica del progetto PAThs, un atlante archeologico della letteratura copta che integra dati geografici, risorse online e strumenti digitali per lo studio della produzione manoscritta copta tra il III e il XIII secolo d.C. Vengono illustrati gli obiettivi, le risorse disponibili e il contributo del LAD alla realizzazione della banca dati e delle piattaforme digitali.
 ---
 

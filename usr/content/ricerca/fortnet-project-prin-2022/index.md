@@ -4,7 +4,7 @@ author: Julian Bogdani
 date: 2023-10-01
 order: 99
 inhome: true
-img: ./fortnet-loghi-sapienza.jpg
+img: fortnet-loghi-sapienza.jpg
 description: Progetto di ricerca, P.I. Julian Bogdani, finanziato dal programma “Progetti di Ricerca - Progetti Piccoli” della Sapienza Università di Roma, anno 2022, prot. RP12218161C7325E
 ---
 

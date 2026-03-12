@@ -2,7 +2,7 @@
 title: Atlante Sacri lapides Aegypti (dir. Paola Buzi, Sapienza)
 date: 2022-02-04
 order: 7
-img: ./sla-logo.png
+img: sla-logo.png
 description: Questo post presenta una panoramica dell'Atlante dei Sacri Lapides d'Egitto, illustrando il contesto storico, la metodologia di ricerca e i risultati principali del progetto. L'obiettivo è fornire una sintesi accessibile e informativa per studiosi e appassionati di archeologia e storia dell'antico Egitto.
 ---
 

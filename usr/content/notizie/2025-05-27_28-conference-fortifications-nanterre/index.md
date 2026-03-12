@@ -1,6 +1,6 @@
 ---
 title: "Partecipazione alla conferenza internazionale “Forteresses, forts et camps dans l’aménagement des territoires. De la Méditerranée aux marges des royaumes perse, hellénistiques e de l’Empire romain”"
-img: ./colloque_forteresses_27_28_may.jpg
+img: colloque_forteresses_27_28_may.jpg
 date: 2025-05-17
 description: "Il 27 e il 28 maggio 2025 il condirettore della Missione Archeologica italo-albanese a Çuka e Ajtoit parteciperà con una comunicazione alla conferenza internazionale “Forteresses, forts et camps dans l’aménagement des territoires” presso l'Università di Nanterre, Parigi."
 tags:

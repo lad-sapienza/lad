@@ -1,6 +1,6 @@
 ---
 title: "Archeologia Digitale 2022: teoria, metodologie, dati, strumenti. Appunti disordinati per darsi un senso"
-img: ./archeologia-digitale-2022-napoli.jpg
+img: archeologia-digitale-2022-napoli.jpg
 date: 2022-04-02
 description: "Incontro aperto sul tema dell'Archeologia Digitale 2022 presso la Scuola di Specializzazione in Archeologia dell'Università di Studi di Napoli Federico II"
 tags:

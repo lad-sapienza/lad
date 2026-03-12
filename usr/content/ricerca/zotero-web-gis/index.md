@@ -3,7 +3,7 @@ title: Sviluppo di un nuovo strumento ITC per la condivisione e la pubblicazione
 author: Julian Bogdani
 date: 2022-12-27
 order: 14
-img: ./zotero-web-gis.jpg
+img: zotero-web-gis.jpg
 description: Progetto di ricerca, P.I. Eleonora Iacopini, finanziato dal programma “Progetti per Avvio alla Ricerca” della Sapienza Università di Roma, anno 2022, prot. AR2221816BB57DE4
 ---
 

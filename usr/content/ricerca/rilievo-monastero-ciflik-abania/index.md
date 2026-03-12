@@ -3,7 +3,7 @@ title: Rilievo e studio della chiesa e monastero medievale presso Çiflik (Konis
 author: Julian Bogdani
 date: 2022-12-27
 order: 13
-img: ./monastero-ciflik.jpg
+img: monastero-ciflik.jpg
 description: Progetto di ricerca, P.I. Paolo Rosati, finanziato dal programma “Progetti per Avvio alla Ricerca” della Sapienza Università di Roma, anno 2022, prot. AR22218166C6157C
 ---
 

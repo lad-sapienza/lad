@@ -1,6 +1,6 @@
 ---
 title: "Patrecipazione di Nadia Aleotti alla settima edizione del convegno internazionale IARPotHP - International Association for Research on Pottery of the Hellenistic Period: Hellenistic Pottery in Context"
-img: ./IARPotHP7.jpg
+img: IARPotHP7.jpg
 date: 2025-09-15
 description: "Partecipazione del LAD alla settima edizione del convegno internazionale IARPotHP - International Association for Research on Pottery of the Hellenistic Period: Hellenistic Pottery in Context."
 tags:

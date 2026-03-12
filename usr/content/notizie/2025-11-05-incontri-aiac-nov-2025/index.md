@@ -1,6 +1,6 @@
 ---
 title: "Julian Bogdani modera il primo Incontro AIAC di novembre 2025 al KNIR, Roma"
-img: ./incontri-aiac-nov-2025.jpg
+img: incontri-aiac-nov-2025.jpg
 date: 2025-11-04
 description: "Lunedì 10 novembre Julian Bogdani modererà il primo incontro dell'Associazione Internazionale di Archeologia Classica (AIAC) dell'autunno 2025, che si terrà alle ore 17:00 presso il Reale Istituto Neerlandese di Roma."
 tags:

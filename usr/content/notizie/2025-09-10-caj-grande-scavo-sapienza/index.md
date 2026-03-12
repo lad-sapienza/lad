@@ -1,6 +1,6 @@
 ---
 title: "La missione della Sapienza a Çuka e Ajtoit finanziata nell'àmbito del progetto Grandi Scavi Sapienza"
-img: ./sapienza-grandi-scavi.jpg
+img: sapienza-grandi-scavi.jpg
 date: 2025-09-10
 description: "Dal 2025, la Missione Archeologica della Sapienza a Çuka e Ajtoit in Albania è finanziata nell'àmbito del prestigioso progetto Grandi Scavi Sapienza, riconoscimento dell'eccellenza della ricerca archeologica sul campo svolta dal 2021."
 tags:

@@ -1,6 +1,6 @@
 ---
 title: "Lezione di Lorenzo Cardarelli all’Università di Bologna: “L’IA al servizio dell’Archeologia. L’esempio di PyPottery”"
-img: ./cardarelli-unibo.jpg
+img: cardarelli-unibo.jpg
 date: 2025-10-31
 description: "Lezione di L. Cardarelli all’Università di Bologna su applicazioni IA in archeologia"
 tags:

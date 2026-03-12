@@ -1,6 +1,6 @@
 ---
 title: "Partecipazione al convegno internazionale “Corinth and Syracuse: Connections, Exchanges, Influences”"
-img: ./corinth-and-syracuse.jpg
+img: corinth-and-syracuse.jpg
 date: 2024-11-28
 description: "Nadia Aleotti partecipa con una comunicazione ai lavori del convegno internazionale “Corinth and Syracuse: Connections, Exchanges, Influences” il 5-7 dicembre 2024"
 tags:

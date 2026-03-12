@@ -1,6 +1,6 @@
 ---
 title: "[a.a. 24-25] Uso del Laser Aided Profiler (LAP) per la documentazione dei reperti ceramici"
-img: ./lap-at-lad.jpg
+img: lap-at-lad.jpg
 date: 2025-01-17
 description: "Nell’àmbito della sua offerta didattica per l'a.a. 2024-2025, il LAD organizza il modulo didattico: “Laser Aided Profiler (LAP) per la documentazione dei profili ceramici”"
 tags:

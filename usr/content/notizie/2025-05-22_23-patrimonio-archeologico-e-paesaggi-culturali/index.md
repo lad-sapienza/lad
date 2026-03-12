@@ -1,6 +1,6 @@
 ---
 title: "Partecipazione al workshop “Patrimonio archeologico e paesaggi culturali. Programmi e strategie di ricerca e tutela sul territorio nazionale”"
-img: ./workshop-archeologia-maggio-2025.jpg
+img: workshop-archeologia-maggio-2025.jpg
 date: 2025-05-17
 description: "Il prossimo 23 maggio, i responsabile scientifico del LAD: Laboratirio di ARcheologia Digitale alla Sapienza, Julian Bogdani, parteciperà alla tavola rotonda nell'ambito del convegno “Patrimonio archeologico e paesaggi culturali. Programmi e strategie di ricerca e tutela sul territorio nazionale”, promosso dalla Direzione Generale Archeologia Belle Arti e Paesaggio (DGABAP) del MiC"
 tags:
