@@ -35,7 +35,6 @@ rsync -arvzu \
   --filter='P .ssh' \
   --filter='P .bash_history' \
   --filter='P .screenrc' \
-  --dry-run \
   dist/ lad:
 
 echo "✓ Deploy complete."
