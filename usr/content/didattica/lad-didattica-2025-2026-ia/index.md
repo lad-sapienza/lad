@@ -10,7 +10,6 @@ tags:
   - Legacy Data
   - Archeologia Digitale
   - Laboratorio Didattico
-inhome: true
 ---
 
 
