@@ -1,7 +1,8 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro"
 import { getCollection, render, type DataEntryMap } from "astro:content"
-import Gallery from '@core/components/Gallery/Gallery.astro'
+import Gallery from "@core/components/Gallery/Gallery.astro"
+import ShareButtons from "./ShareButtons.jsx"
 
 interface Props {
   collection: string
@@ -10,11 +11,22 @@ interface Props {
   backLabel?: string
 }
 
-const { collection, slug, backHref, backLabel = "← Torna indietro" } = Astro.props as Props
-const allowedCollections = ["blog", "didattica", "notizie", "ricerca", "sviluppo"] as const;
-type AllowedCollection = typeof allowedCollections[number];
+const {
+  collection,
+  slug,
+  backHref,
+  backLabel = "← Torna indietro",
+} = Astro.props as Props
+const allowedCollections = [
+  "blog",
+  "didattica",
+  "notizie",
+  "ricerca",
+  "sviluppo",
+] as const
+type AllowedCollection = (typeof allowedCollections)[number]
 if (!allowedCollections.includes(collection as AllowedCollection)) {
-  throw new Error(`Invalid collection: ${collection}`);
+  throw new Error(`Invalid collection: ${collection}`)
 }
 const articles = await getCollection(collection as AllowedCollection)
 const entry = articles.find((a: any) => a.id.replace(".md", "") === slug)
@@ -24,7 +36,12 @@ const entryImage = entry.data.img
   ? `/${entry.collection}/${entry.id.replace(".md", "")}/${entry.data.img}`
   : undefined
 ---
-<BaseLayout title={entry.data.title} description={entry.data.description} image={entryImage}>
+
+<BaseLayout
+  title={entry.data.title}
+  description={entry.data.description}
+  image={entryImage}
+>
   <main>
     <a href={backHref} title={backLabel}>
       {backLabel}
@@ -33,13 +50,15 @@ const entryImage = entry.data.img
     <article>
       <h1 class="my-5 text-center">{entry.data.title}</h1>
 
-      {entry.data.tags && (<div class="text-center font-monospace">
-        <div
-          class="bg-light mb-3 pt-3 px-3 text-muted d-inline-block d-print-none"
-        >
-          <p>Tag: {entry.data.tags?.join(", ")}</p>
-        </div>
-      </div>)}
+      {
+        entry.data.tags && (
+          <div class="text-center font-monospace">
+            <div class="bg-light mb-3 pt-3 px-3 text-muted d-inline-block d-print-none">
+              <p>Tag: {entry.data.tags?.join(", ")}</p>
+            </div>
+          </div>
+        )
+      }
 
       <p class="text-center text-muted">
         Pubblicato il {
@@ -52,6 +71,13 @@ const entryImage = entry.data.img
             : ""
         }
       </p>
+
+      <ShareButtons
+          client:load
+          url={Astro.url.href}
+          title={entry.data.title}
+          tags={entry.data.tags}
+        />
 
       {
         entry.data.img && (
