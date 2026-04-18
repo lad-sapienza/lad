@@ -3,8 +3,6 @@ title: "Aperte le iscrizioni alla campagna 2026 della Missione Archeologica dell
 img: caj-2026.jpg
 date: 2026-01-20
 description: "Campagna 2026 della Missione Archeologica della Sapienza in Albania"
-inhome: true
-pinned: true
 tags:
   - Missione Archeologica
   - Scavi
