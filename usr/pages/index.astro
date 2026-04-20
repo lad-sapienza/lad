@@ -36,10 +36,17 @@ const homeArticles = [
   if (a.data.pinned && !b.data.pinned) return -1
   if (!a.data.pinned && b.data.pinned) return 1
 
-  // Then sort by sort value (lower numbers first)
-  const sortA = a.data.order || 999999
-  const sortB = b.data.order || 999999
-  return sortA - sortB
+  // Then sort by order value (lower numbers first)
+  const sortA = a.data.order
+  const sortB = b.data.order
+  if (sortA !== undefined && sortB !== undefined) return sortA - sortB
+  if (sortA !== undefined) return -1
+  if (sortB !== undefined) return 1
+
+  // Finally, sort by date descending
+  const dateA = a.data.date ? new Date(a.data.date).getTime() : 0
+  const dateB = b.data.date ? new Date(b.data.date).getTime() : 0
+  return dateB - dateA
 })
 
 const getPath = (
