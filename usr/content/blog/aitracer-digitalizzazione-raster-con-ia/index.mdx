@@ -79,12 +79,24 @@ Le maschere prodotte da SAM2 possono contenere un numero molto elevato di vertic
 
 ---
 
+## Annulla l'ultimo punto
+
+Se un clic è stato piazzato nel punto sbagliato, non è necessario annullare l'intera sessione. Il tasto Ctrl+Z rimuove l'ultimo punto inserito — positivo o negativo — e ricalcola immediatamente la segmentazione con i punti rimanenti. È possibile tornare indietro quanto si vuole, fino ad azzerare tutti i prompt.
+
+---
+
 ## Accettare e salvare
 
 Una volta soddisfatti del contorno, si preme **Invio** (o il pulsante *Accetta* nel pannello). Il poligono viene automaticamente aggiunto a un layer temporaneo in memoria chiamato **AITracer**, creato dal plugin con stile arancione semitrasparente. Il layer è completamente integrabile con il progetto QGIS e può essere esportato in qualsiasi formato vettoriale.
 
 ![05-feature-accettata-layer.jpg](05-feature-accettata-layer.jpg)
 *La feature accettata appare nel layer AITracer (in arancione semitrasparente) sovrapposto al layer raster di partenza. È possibile continuare a digitalizzare nuove feature senza interruzioni.*
+
+---
+
+## Scegliere il layer di destinazione
+
+Di default, i poligoni accettati vengono inseriti in un layer temporaneo in memoria chiamato AITracer. Dal pannello è però possibile scegliere qualsiasi layer vettoriale poligonale già presente nel progetto come destinazione, tramite un menù a tendina che si aggiorna automaticamente. Alla prima accettazione, il menù viene impostato sul layer AITracer appena creato, così i clic successivi vi confluiscono senza dover selezionare nulla.
 
 ---
 
@@ -117,11 +129,11 @@ Un dialogo di avanzamento informa l’utente in ogni fase. Le attivazioni succes
 
 Il plugin si installa direttamente da QGIS tramite il gestore dei plugin:
 
-1. Scarica il file `aitracer-0.1.0.zip` dalla pagina delle [Release su GitHub](https://github.com/lad-sapienza/ai-tracer/releases).
+1. Scarica il file `aitracer-vX.Y.Z.zip` dalla pagina delle [Release su GitHub](https://github.com/lad-sapienza/ai-tracer/releases).
 2. In QGIS: **Plugin → Gestisci e installa plugin → Installa da ZIP**.
 3. Seleziona il file scaricato e clicca **Installa plugin**.
 
-Sono richiesti QGIS 4.0 e un Python di sistema ≥ 3.10 (individuato automaticamente; non viene utilizzato il Python interno a QGIS).
+È richiesto QGIS 4.0. Il runtime Python necessario viene scaricato e installato automaticamente dal plugin al primo avvio tramite python-build-standalone: non è richiesta alcuna installazione manuale di Python.
 
 ![07-repository-github.jpg](07-repository-github.jpg)
 *La homepage del repository GitHub con il codice sorgente, la documentazione e le release scaricabili.*
