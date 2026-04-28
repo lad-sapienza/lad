@@ -140,6 +140,22 @@ Il plugin si installa direttamente da QGIS tramite il gestore dei plugin:
 
 ---
 
+## Note importanti sull’uso: AITracer non legge i file raster, ma cattura lo schermo
+
+AITracer usa lo schermo, non il file raster: ecco perché è importante saperlo
+
+AITracer cattura uno screenshot della canvas di QGIS nel momento in cui si fa clic. Non legge i dati raster originali. Si tratta di una scelta progettuale precisa: mantiene il consumo di memoria basso e la segmentazione rapida anche su hardware modesto. IN questo modo nessun file da diversi gigabyte deve essere decodificato o caricato in RAM.
+
+Questa scelta ha tre conseguenze pratiche che è importante conoscere prima di iniziare a digitalizzare:
+
+- La **risoluzione dipende dal livello di zoom**. Se si è molto distanziati, ogni pixel dello schermo rappresenta un’area geografica ampia e i bordi del poligono risulteranno approssimativi. Ingrandire fino a far riempire il feature alla maggior parte della canvas permette di ottenere il risultato più preciso.
+- Il **feature deve essere completamente visibile**. Qualsiasi parte di un oggetto che si estende oltre il bordo del *canvas* è semplicemente assente dallo screenshot. Se un muro, un confine di parcella o qualsiasi altra forma esce dallo schermo, solo la porzione visibile verrà inclusa nel poligono. Prima di fare clic, spostare e ingrandire la vista in modo che l'intero feature sia visibile.
+- La **canvas si blocca durante la sessione**: questo è una scelta voluta. Dopo il primo clic, l'estensione del *canvas* viene congelata fino all’accettazione o all’annullamento. Spostare o ingrandire la vista durante la sessione invaliderebbe la corrispondenza tra coordinate pixel e coordinate geografiche, producendo geometrie errate. Il blocco viene rimosso nel momento in cui si preme Invio o Esc.
+
+*Suggerimento pratico: prima di attivare lo strumento, ingrandire la vista sul feature da digitalizzare lasciando un piccolo margine intorno, e assicurarsi che il raster di interesse sia l'unico layer visibile. Quindi attivare, fare clic, raffinare e accettare.*
+
+---
+
 ## Una nota sul metodo: pair programming con l’IA
 
 Questo plugin nasce anche come esperimento metodologico. L’intero processo di progettazione e sviluppo — dall’architettura del sistema alle singole funzioni Python, dalla gestione del backend alla UI del pannello — è stato condotto in stretta collaborazione con **[Claude](https://claude.ai)** di Anthropic, un assistente basato su modelli linguistici di grandi dimensioni.
