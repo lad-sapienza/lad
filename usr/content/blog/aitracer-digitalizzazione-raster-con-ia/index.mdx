@@ -127,16 +127,31 @@ Un dialogo di avanzamento informa l’utente in ogni fase. Le attivazioni succes
 
 ## Installazione del plugin
 
-Il plugin si installa direttamente da QGIS tramite il gestore dei plugin:
+AITracer è disponibile sul **repository ufficiale dei plugin di QGIS**: [plugins.qgis.org/plugins/aitracer](https://plugins.qgis.org/plugins/aitracer/). Questo rende l'installazione e l'aggiornamento del plugin estremamente semplici, con due modalità a disposizione.
 
-1. Scarica il file `aitracer-vX.Y.Z.zip` dalla pagina delle [Release su GitHub](https://github.com/lad-sapienza/ai-tracer/releases).
-2. In QGIS: **Plugin → Gestisci e installa plugin → Installa da ZIP**.
-3. Seleziona il file scaricato e clicca **Installa plugin**.
+### Metodo 1 (consigliato): direttamente da QGIS
+
+1. In QGIS, aprire **Plugin → Gestisci e installa plugin**.
+2. Nelle **Impostazioni**, spuntare l'opzione **Mostra anche i plugin sperimentali** (AITracer è attualmente classificato come sperimentale).
+3. Nella scheda **Tutti**, cercare *AITracer* e cliccare **Installa plugin**.
+
+Con questo metodo, QGIS notificherà automaticamente la disponibilità di nuove versioni.
+
+### Metodo 2: download manuale dal repository
+
+In alternativa, è possibile scaricare il pacchetto ZIP direttamente da [plugins.qgis.org/plugins/aitracer](https://plugins.qgis.org/plugins/aitracer/) tramite browser web e installarlo in QGIS con **Plugin → Gestisci e installa plugin → Installa da ZIP**.
+
+### Metodo 3: dalle release su GitHub
+
+Per chi vuole testare versioni specifiche o pre-release, i pacchetti `aitracer-vX.Y.Z.zip` sono sempre disponibili anche dalla pagina delle [Release su GitHub](https://github.com/lad-sapienza/ai-tracer/releases).
 
 È richiesto QGIS 4.0. Il runtime Python necessario viene scaricato e installato automaticamente dal plugin al primo avvio tramite python-build-standalone: non è richiesta alcuna installazione manuale di Python.
 
-![07-repository-github.jpg](07-repository-github.jpg)
-*La homepage del repository GitHub con il codice sorgente, la documentazione e le release scaricabili.*
+![07-repository-qgis.jpg](07-repository-qgis.jpg)
+*La pagina di AITracer sul repository ufficiale dei plugin di QGIS.*
+
+![08-gestore-plugin-qgis.jpg](08-gestore-plugin-qgis.jpg)
+*Il gestore dei plugin di QGIS con AITracer trovato nel repository ufficiale, pronto per l'installazione.*
 
 ---
 
