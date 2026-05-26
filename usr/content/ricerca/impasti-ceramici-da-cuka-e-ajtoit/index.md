@@ -5,6 +5,12 @@ date: 2024-11-19
 order: 22
 img: impasti-ceramici-caj.jpg
 description: Progetto AR2231888A457752, P.I. Nadia Aleotti, finanziato dal programma “Progetti per Avvio alla Ricerca” della Sapienza Università di Roma, anno 2023, prot. AR2241907808A0A6
+tags:
+  - ceramica
+  - impasti ceramici
+  - Çuka e Ajtoit
+  - analisi minero-petrografiche
+  - Albania meridionale
 ---
 
 
