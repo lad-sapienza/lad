@@ -9,7 +9,6 @@ tags:
   - Albania
   - Scavi
   - Ricerca
-inhome: true
 ---
 
 Giovedì 25 marzo 2026 il condirettore della Missione Archeologica italo-albanese a Çuka e Ajtoit, Julian Bogdani, parteciperà con una comunicazione ai lavori della conferenza “Viti Arkeologjik 2025” presso l'Accademia delle Scienze della Repubblica Albanese. In questa conferenza verrano esposti i risultati della campagna di scavi e ricerche 2025 nel sito di Çuka e Ajtoit.
