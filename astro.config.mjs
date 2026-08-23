@@ -19,9 +19,24 @@ const {
   ...userMarkdownConfig
 } = userConfig.markdown || {};
 
+// Pre-i18n URLs were flat (no locale prefix). These are all static sources
+// redirecting to a destination produced by the [locale] dynamic route — Astro's
+// native `redirects` handles this fine (only a *dynamic* source, e.g. per-slug
+// article URLs, needs the RedirectPage/getStaticPaths recipe instead — see
+// src/pages/{blog,notizie,ricerca,didattica}/[...slug].astro).
+const redirects = {
+  '/chi-siamo/': '/it/chi-siamo/',
+  '/sviluppo/': '/it/sviluppo/',
+  '/blog/': '/it/blog/',
+  '/notizie/': '/it/notizie/',
+  '/ricerca/': '/it/ricerca/',
+  '/didattica/': '/it/didattica/',
+};
+
 export default defineConfig({
   site: userConfig.site ?? 'https://lad-sapienza.it',
   output: 'static',
+  redirects,
 
   markdown: {
     ...userMarkdownConfig,
