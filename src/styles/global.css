@@ -43,6 +43,17 @@
   --space-article: 2rem;
 }
 
+/* Dark mode: LAD's own text tokens aren't Bootstrap variables, so they don't
+   follow bootstrap.min.css's built-in [data-bs-theme="dark"] flip on their
+   own — delegate to Bootstrap's already dark-aware tokens instead of picking
+   new hex values by hand. Everything else on the site (navbar, cards,
+   buttons, borders, text-muted) already uses Bootstrap classes/variables and
+   themes itself automatically once data-bs-theme is set. */
+[data-bs-theme="dark"] {
+  --color-text: var(--bs-body-color);
+  --color-text-muted: var(--bs-secondary-color);
+}
+
 /* Global typography improvements */
 body {
   font-family: var(--font-sans);
