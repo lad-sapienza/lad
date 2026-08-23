@@ -42,22 +42,25 @@ const buttons = [
   },
 ]
 
-const ShareButtons = ({ url, title, tags }) => (
-  <div className="d-print-none d-flex flex-wrap gap-3 justify-content-center mt-5 text-primary">
-    {buttons.map(({ Icon, label, getUrl }) => (
-      <a
-        key={label}
-        href={getUrl(url, title, tags)}
-        target="_blank"
-        rel="noopener noreferrer"
-        title={`Condividi su ${label}`}
-        aria-label={`Condividi su ${label}`}
-        style={{ color: "inherit", display: "inline-flex" }}
-      >
-        <Icon size={size} />
-      </a>
-    ))}
-  </div>
-)
+const ShareButtons = ({ url, title, tags, locale = "it" }) => {
+  const shareLabel = locale === "en" ? (label) => `Share on ${label}` : (label) => `Condividi su ${label}`
+  return (
+    <div className="d-print-none d-flex flex-wrap gap-3 justify-content-center mt-5 text-primary">
+      {buttons.map(({ Icon, label, getUrl }) => (
+        <a
+          key={label}
+          href={getUrl(url, title, tags)}
+          target="_blank"
+          rel="noopener noreferrer"
+          title={shareLabel(label)}
+          aria-label={shareLabel(label)}
+          style={{ color: "inherit", display: "inline-flex" }}
+        >
+          <Icon size={size} />
+        </a>
+      ))}
+    </div>
+  )
+}
 
 export default ShareButtons

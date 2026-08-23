@@ -1,25 +1,17 @@
 ---
-import ArticlePage from "../../components/ArticlePage.astro"
+import RedirectPage from "@user/components/RedirectPage.astro"
 import { getCollection } from "astro:content"
+import { splitLocaleId, slugFromRest } from "@user/utils/i18n"
 
 export const prerender = true
 
 export async function getStaticPaths() {
   const articles = await getCollection("notizie")
-  return articles.map(article => ({
-    params: { slug: article.id.replace(".md", "") },
-    props: { collection: "notizie", slug: article.id.replace(".md", "") }
-  }))
+  return articles
+    .filter(a => splitLocaleId(a.id).locale === "it")
+    .map(a => ({ params: { slug: slugFromRest(splitLocaleId(a.id).rest) } }))
 }
 
-const { collection, slug } = Astro.props;
+const { slug } = Astro.params
 ---
-<ArticlePage
-  collection={collection}
-  slug={slug}
-  backHref="/notizie/"
-  backLabel="← Torna indietro alla pagina principale delle Notizie"
-/>
-
-
-
+<RedirectPage target={`/it/notizie/${slug}/`} />

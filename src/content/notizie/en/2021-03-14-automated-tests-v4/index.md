@@ -1,0 +1,28 @@
+---
+title: "Automated tests are now available for BDUS v4"
+img: bdus-automated-tests.jpg
+date: 2021-03-14
+description: "Finally, thanks to the help of Domizia D'Erasmo, a new
+set of fully automated unit tests have been written for bdus4. These tests cover the entire lifecyce of the application, from the creation from scratch of a new aplication, to the configuration and data entry."
+tags:
+  - BDUS
+  - Automated Tests
+  - Free Software
+  - Database
+  - Documentation
+---
+
+
+Finally, thanks to the help of [Domizia D'Erasmo](https://github.com/ddomizia), a new
+set of fully automated unit tests have been written for bdus4. 
+These tests cover the entire lifecycle of the application, from the creation from scratch
+of a new application, to the configuration and data entry. 
+The tests are available out of the box for SQLite, MySQL and PostgreSQL.
+
+With these tests and the fixing of many bugs that have been fixed in the meantime,
+the first release candidate is available on [GitHub](https://github.com/bdus-db/BraDypUS/tree/dev).
+
+![bdus4 automated unit tests](/notizie/it/2021-03-14-automated-tests-v4/bdus4-tests.gif)
+
+So, stay tuned and help testing and bug detection! [Read the docs](https://docs.bdus.cloud/) and 
+[file an issue](https://github.com/bdus-db/BraDypUS/issues) if something is not working as expected!

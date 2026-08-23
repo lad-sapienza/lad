@@ -1,0 +1,386 @@
+---
+title: Digital encoding of chronology
+author: Julian Bogdani
+licenza: CC BY 4.0 International
+livello: avanzato
+tags: [Reflections and Notes, Open Standard, Chronology]
+img: tempo.jpg
+date: 2021-07-30
+description: "The digital encoding of chronology in databases is a well-known problem in archaeology and, more generally, in the humanities. Beyond the concrete issues of searchability, the ability to formally encode uncertainty and approximation is also a relevant question. The EDTF standard introduces some very interesting solutions, although not yet fully mature for widespread use."
+---
+
+## Introduction
+
+The representation, encoding and searching of chronological data (dating) is certainly one of the most delicate aspects in designing a database that contains historical, archaeological, museum or similar data. The main problem is finding a **concise**, **rigorous** and **efficient** way to represent specific dates and/or date ranges that is also able to dynamically represent the concepts of **approximation** and **uncertainty**.
+
+Before moving on to some examples that may help clarify the issue, let's try to better define some of the fundamental concepts just listed:
+
+- **concise** refers to the need to limit as much as possible the number of database fields used to encode the information and, above all, to reduce as much as possible the redundancy of information, i.e. its repetition even in different forms;
+- **rigorous** refers to encoding syntax that is unambiguous and that cannot leave room for different interpretations of the same data or, conversely, does not use different textual labels to represent the same concept. Purely as an example, "ca. 31 BC", "c. 31 BC", "approx. 31 BC" are all different forms representing the same information;
+- **efficient** refers to the ease and speed of validating the entered information and, above all, of searching for it and thus extracting it from the database. Conciseness and efficiency go hand in hand, but only as long as the data is simple, precise and specific, i.e. does not involve approximation or uncertainty;
+- conversely, **approximation** is an extremely common concept in historical or archaeological data — indeed, with very few exceptions, all the dates we will need to represent in a database are by definition approximate. This is not so much due to the limited precision of the dating methods and tools used in archaeology (which may improve in the future), but rather to the very nature of the artifacts/ecofacts under investigation, which are only rarely of interest for the precise moment of their "production" as opposed to the chronological span of their "use";
+- **uncertainty**, on the other hand, depends on the non-precise, non-exact nature of the methods and tools we use to date our contexts. In this case, technological developments have greatly improved our work, in many cases turning uncertainty into approximation (see radiocarbon dating), but it nonetheless remains essential to be able to incorporate the concept of uncertainty into our theoretical framework.
+
+## Some examples of possible dates
+
+A few examples, better than many words, may help frame the problem. Here then is a series of dates that we often find ourselves dealing with:
+
+- September 2, 31 BC: the exact date of the [Battle of Actium](https://it.wikipedia.org/wiki/Battaglia_di_Azio), with day-level precision;
+- 44 BC – 31 BC: the start-end dates (a range, then) of the [Roman civil war](<https://it.wikipedia.org/wiki/Guerra_civile_romana_(44-31_a.C.)>) that ends with the Battle of Actium, with year-level precision;
+- September 23, 63 BC – August 19, AD 14: another range, with day-level precision, representing the life of Gaius Octavius Thurinus, better known as Gaius Julius Caesar Augustus, the founder of the Roman Empire;
+- First half of the 1st century BC: a very common type of indication, with decade-level precision
+- August 24, 79 *or* October 24, 79: the date of the eruption of Vesuvius, two specific dates (day-level precision) that are mutually exclusive and that involve, albeit in a very specific way, the concept of uncertainty;
+- 42000 BP[^1] (2000) – 12001 BP (2000): the Upper Palaeolithic in Sicily, as defined by the ARIADNE project in 2015 and published on PeriodO at the permalink: [http://n2t.net/ark:/99152/p0qhb66j7jg](http://n2t.net/ark:/99152/p0qhb66j7jg). Note that these dates are to be understood not relative to year zero but from the present (BP: before present), where "present" means the year 2000.
+- ca. 3345 BCE[^2] – ca. 3300 BCE: the approximate lifespan, which may vary by one or more centuries, of the [Similaun mummy, or Ötzi](https://it.wikipedia.org/wiki/Mummia_del_Similaun). The second term comes from radiocarbon measurements and follows the margin of error of this method (~200 years in this case); the first, on the other hand, is linked to the second through the determination of the age at death, a fairly reliable figure.
+
+## Solution 1: encoding the date as a range
+
+The most commonly used solution is to use at least two database fields to represent the two terms of a given date: the start and the end, even when it is a specific date. However, it is necessary to establish in advance (and share with the potential users of the database) some conventions needed to ensure a minimum level of rigor in reading/interpreting the data.
+
+A practical example of implementation could be defining the fields `data_da` and `data_a` with a data type suited to holding date/time values. Depending on the chosen software solutions and the granularity decided beforehand, the choice of field type may vary. For a list of possible data types, see the official documentation of [MariaDB](https://mariadb.com/kb/en/date-and-time-data-types/), [MySQL](https://dev.mysql.com/doc/refman/5.7/en/date-and-time-types.html) and [PostgreSQL](https://www.postgresql.org/docs/9.1/datatype-datetime.html). As is well known, [SQLite](https://www.sqlite.org/index.html) is extremely permissive regarding _data types_, so the work of data validation is usually delegated to the application logic rather than to the _database engine_.
+
+**Granularity** refers to the minimum (indivisible or atomic) unit of time that the database will be able to record. If one decides to stop at the year, as is usually the case for archaeological or historical databases, it will be impossible to record information about the month or day. If, on the other hand, greater detail is desired, provision must also be made for entering the month or even the day.
+
+Naturally, it is also possible to provide for an optional text field in which to record the date in "human" format, i.e. in natural language, although this will be much harder to use for searches.
+
+## Caution
+
+It is worth remembering that all products on the market have limits on their date-related _data types_, and that it is therefore necessary to consult the official documentation during the design phase, to avoid unpleasant surprises. Purely as an example, and not an exhaustive one, here are some limits:
+
+- The PostgreSQL _timestamp_ type can record values between 4713 BCE and 294276 CE, with obvious limitations for prehistoric archaeology.
+- The MariaDB and MySQL _year_ type is limited to a range between 1901 and 2155, plus the value 0000
+
+It is of course possible to avoid these limitations by using a numeric field to represent the date, but in this case one is forced to keep an annual granularity and also give up the built-in functions that each database provides for handling time.
+
+It should be remembered that possibly adding a text field with the date in natural language introduces an element of redundancy, which risks producing misalignments if updates are not reflected in both places.
+
+## Examples of encoding as a range
+
+**September 2, 31 BC**
+
+```txt
+data_da: -31
+data_a: -31
+```
+
+As is clear from the example above, it is not possible to go into detail finer than the year, but specific dates can be indicated by entering the same value in both fields.
+
+---
+
+**44 BC – 31 BC**
+
+```txt
+data_da: -44
+data_a: -31
+```
+---
+
+**September 23, 63 BC – August 19, AD 14**
+
+```txt
+data_da: -63
+data_a: 14
+```
+
+Once again, all information about durations finer than a year is lost.
+
+---
+
+**First half of the 1st century BC**
+
+```txt
+data_da: -100
+data_a: -51
+```
+
+In this case, the start and end years are conventional and approximate, even though this information is not explicitly indicated in the data.
+
+---
+
+**August 24, 79 *or* October 24, 79**
+
+It is not possible to indicate alternative dates, like the one above, with this system.
+
+---
+
+**42000 BP (2000) – 12001 BP (2000)**
+
+```txt
+data_da: -4000
+data_a: -10001
+```
+
+It is strongly recommended to use a single chronological system for a given database, and therefore to convert dates expressed in different systems. In this case, the BP (2000) dates have been converted into BCE dates.
+
+---
+
+**ca. 3345 BCE – ca. 3300 BCE**
+
+```txt
+data_da: -3345
+data_a: -3300
+``` 
+
+In this case, there is no way to make explicit the approximation in the date of death of the Similaun mummy. Probably, if this were a prosopographical database, it might be useful to record not the lifespan as a single range, but the two dates of birth and death, each defined by its own range. This would make it possible to record the approximation, at the cost of conciseness and ease of search:
+
+```txt
+nato_da: -3345
+nato_a: -3145
+morto_da: -3300
+morto_a: -3100
+```
+
+
+## Solution 2: Extended Date/Time Format
+
+For a long time, the basic ISO standard for encoding time was [ISO 8601:2004](https://www.iso.org/standard/40874.html), which, however, was not very expressive in terms of qualifiers and semantic concepts — for example, it was not able to represent approximation and uncertainty ([more information](https://www.loc.gov/standards/datetime/background.html)). For this reason, the Library of Congress created the Extended Date/Time Format (EDTF) in 2019. In the same year it became [ISO 8601:2019](https://www.iso.org/standard/70907.html), and later [ISO 8601-2:2019](https://www.iso.org/standard/70908.html).
+
+This standard, whose full specification can be consulted at this link: [https://www.loc.gov/standards/datetime/](https://www.loc.gov/standards/datetime/), makes it possible to encode, in detail and with variable granularity (from year down to second), specific dates or ranges (periods) of varying approximation and certainty. The standard is divided into three levels (0, 1 and 2) of progressively increasing expressiveness and complexity. The standard provides for a great many options, well documented in its specification, but for the purposes of this discussion we will only look at the options that are relevant to historical, archaeological or museum research.
+
+### EDTF Level 0
+
+This level makes it possible to encode dates, times in various time zones (not covered here), and periods, as shown in the examples:
+
+- `1985-04-12`: April 12, 1985 (day-level precision)
+
+- `1985-04`: May 1985 (month-level precision)
+
+- `1964/2008`: a range that begins at an undefined moment in 1964 and ends at an undefined moment in 2008.
+
+- `2004-06/2006-08`: a range that begins at an undefined moment in June 2004 and ends at an undefined moment in August 2008.
+
+- `2004-02-01/2005-02-08`: a range that begins on February 1, 2004 and ends on February 8, 2005.
+
+- `2004-02-01/2005-02`: a range that begins on February 1, 2004 and ends at an undefined moment in February 2005.
+
+- `2004-02-01/2005`: a range that begins on February 1, 2004 and ends at an undefined moment in 2005.
+
+- `2005/2006-02`: a range that begins at an undefined moment in 2005 and ends at an undefined moment in February 2006.
+
+### EDTF Level 1
+
+In addition to including all the features of the previous level, level 1 adds the following functionality:
+
+- Support for years with more than 4 digits, introduced by Y (year), quite important for archaeology:
+
+  - `Y170000002`: is the year 170000002 CE
+
+  - `Y-170000002`: is the year 170000002 BCE
+
+- Date qualification: the characters **?**, **~** and **%** are used to indicate, respectively, **uncertainty**, **approximation**, and **uncertainty and approximation**. These characters are placed at the end of a date and qualify the entire date:
+
+  - `1984?`: uncertain year, perhaps 1984, but not certain
+
+  - `2004-06~`: approximate year-month
+
+  - `2004-06-11%`: the entire date (year-month-day) is uncertain and approximate
+
+- Unspecified digit on the right, indicated with one or more **X**:
+
+  - `201X`: an unspecified year between 2010 and 2019 (year-level precision)
+  
+  - `20XX`: an unspecified year between 2000 and 2099 (year-level precision)
+  
+  - `2004-XX`: an unspecified month of the year 2020 (month-level precision)
+  
+  - `1985-04-XX`: an unspecified day of April 1985 (day-level precision)
+  
+  - `1985-XX-XX`: an unspecified day of an unspecified month of 1985 (day-level precision)
+  
+- In ranges, one of the two ends can be left empty (_null_), to indicate an unknown start or end date:
+
+  - `1985-04-12/`: a range that begins on April 12, 1985 and whose end is unknown
+  
+  - `1985-04/`: a range that begins in April 1985 and whose end is unknown
+  
+  - `1985/`: a range that begins generically in 1985 and whose end is unknown
+  
+  - `/1985-04-12`: a range with unknown start and ending on April 12, 1985
+  
+  - `/1985-04`: a range with unknown start and ending in April 1985
+  
+  - `/1985`: a range with unknown start and ending in 1985
+  
+- The double dot (**..**) indicates an unspecified start or end of a range, either because there is none or for other reasons:
+
+  - `1985-04-12/..`: a range that starts on April 12, 1985 with an open end
+  
+  - `1985-04/..`: a range that starts in April 1985 with an open end
+  
+  - `1985/..`: a range that starts generically in 1985 with an open end
+  
+  - `../1985-04-12`: a range with an open start that ends on April 12, 1985
+  
+  - `../1985-04`: a range with an open start that ends in April 1985
+  
+  - `../1985`: a range with an open start that ends generically in 1985
+  
+- Support for negative years, not provided for in Level 0:
+
+  - `1985`: 1985 BCE
+
+### EDTF Level 2
+
+- Significant digits: a year can be followed by an **S** and a positive number to indicate the number of significant digits
+
+  - `1950S2`: indicates a year between 1900 and 1999, estimated to be 1950
+  
+  - `Y171010000S3`: a year between 171,000,000 and 171,999,999, estimated to be 171,010,000
+  
+  - `Y3388E2S3`: a year between 338,000 and 338,999, estimated to be 338,800.
+  
+- Set: square brackets enclose an exclusive list (selects only one member)
+
+  - `[1667,1668,1670..1672]`: one of the years 1667, 1668, 1679, 1671, 1672. The two consecutive dots indicate one or more values between the two values they separate
+  
+  - `[..1760-12-03]`: December 3, 1760 or some earlier date. The dots at the start or end indicate the exact date or dates before/after it.
+  
+  - `[1760-12..]`: December 1760, or some month after
+  
+  - `[1760-01,1760-02,1760-12..]`: January or February 1760, or December 1760, or some month after
+  
+  - `[1667,1760-12]`: the year 1667 or the month of December 1760.
+  
+  - `[..1984]`: the year 1984 or some earlier year
+
+- Set: curly braces enclose an inclusive list (all members are included)
+
+  - `{1667,1668,1670..1672}`: all the years 1667, 1668, 1670, 1671, 1672
+  
+  - `{1960,1961-12}`: the year 1960 and the month of December 1961.
+  
+  - `{..1984}`: the year 1984 and all previous years.
+
+- Qualifier: a qualifying character to the right of a component applies not only to that component but also to those to its left:
+
+  - `2004-06-11%`: year, month and day uncertain and approximate
+  
+  - `2004-06~-11`: year, month and day approximate
+  
+  - `2004?-06-11`: uncertain year
+
+- Qualifier: a qualifying character to the left of a component applies only to that component
+
+  - `?2004-06-~11`: uncertain year, known month, approximate day
+
+  - `2004-%06-11`: month uncertain and approximate; year and day known
+
+- The unspecified-digit character, at Level 2, can appear in any position of a component:
+
+  - `156X-12-25`: December 25 of one of the years in the 1560s
+  
+  - `15XX-12-25`: December 25 of one of the years in the 1500s
+  
+  - `XXXX-12-XX`: some day in December of some year
+  
+  - `1XXX-XX`: some month during the 1000s
+  
+  - `1XXX-12`: some December during the 1000s
+  
+  - `1984-1X`: October, November or December 1984
+
+- Range: at Level 2, parts of dates within a range can be defined as approximate, uncertain or unspecified:
+
+  - `2004-06-~01/2004-06-~20`: a range in June 2004 that begins in the early days and ends around the 20th
+  
+  - `2004-06-XX/2004-07-03`: a range that begins on an unspecified day in June 2004 and ends on July 3
+
+### Examples of encoding as EDTF
+
+Returning to our "test bench", here are the encodings of the dates already seen:
+
+**September 2, 31 BC**
+- Y-31-09-02
+- The Y before the year is necessary because otherwise EDTF expects a 4-digit year.
+- Representing this date requires Level 1.  
+
+**44 BC – 31 BC**
+- `Y-44/Y-31`
+
+**September 23, 63 BC – August 19, AD 14**
+- `Y-63-09-23/Y14-08-19`
+
+**First half of the 1st century BC**
+- `Y-100/Y-51`
+
+**August 24, 79 or October 24, 79**
+- `[Y79-08-24,Y79-19-24]`
+
+**42000 BP (2000) – 12001 BP (2000)**
+- `Y-40000/Y-12001`
+
+**ca. 3345 BCE – ca. 3300 BCE**
+- `Y-3345~/Y-3300~`
+
+### Caution
+
+At present, no database software natively supports the EDTF format. Clearly, this is not a problem of storing the data, since a text field would have no trouble holding it, but rather a problem of searching and extracting data. If EDTF is used, all the logic for entering, validating and searching the data would have to be handled exclusively by the application. While the format, especially at levels 1 and 2, is extremely expressive, the programming effort needed to support the use of this syntax could be genuinely demanding.
+
+### Libraries in various programming languages that support EDTF
+
+On the other hand, there are several implementations of this format in various programming languages that can make development work easier. Below is a short and non-exhaustive list (suggestions are welcome):
+
+- C#: EDTF.NET, [https://github.com/richardtallent/EdtfDotNet](https://github.com/richardtallent/EdtfDotNet)
+
+- Ruby: EDTF-Ruby, [https://github.com/inukshuk/edtf-ruby](https://github.com/inukshuk/edtf-ruby)
+
+- Ruby: edtf-humanize, [https://github.com/duke-libraries/edtf-humanize](https://github.com/duke-libraries/edtf-humanize)
+
+- Javascript: EDTF.js, [https://github.com/inukshuk/edtf.js](https://github.com/inukshuk/edtf.js)
+
+- Javascript: edtfy, [https://github.com/nicompte/edtfy](https://github.com/nicompte/edtfy)
+
+- Python: python-edtf, [https://pypi.org/project/edtf/](https://pypi.org/project/edtf/)
+
+- PHP: php-EDTF, [https://github.com/computerminds/php-edtf](https://github.com/computerminds/php-edtf)
+
+- PHP: EDTF PHP Library, [https://github.com/ProfessionalWiki/EDTF](https://github.com/ProfessionalWiki/EDTF)
+
+- Dart: edtf, [https://github.com/maalexy/edtf](https://github.com/maalexy/edtf)
+
+Finally, there is a web service that can be used to validate the syntax of EDTF strings, available at: [https://digital2.library.unt.edu/edtf/](https://digital2.library.unt.edu/edtf/)
+
+## Solution 3: Linked Data technologies and period gazetteers
+
+If the problem to be addressed is encoding chronological information within a database, then this solution is certainly not the most suitable one. The basic idea behind this solution is to define a list of periods, each with its own specific chronology (start-end) and marked by a unique identifier ([Uniform Resource Identifier, or URI](https://it.wikipedia.org/wiki/Uniform_Resource_Identifier)). Once the resource is available, an individual record simply links to the chronology by citing the URI. There are collaborative, shared repositories that gather and make available various temporal gazetteers and that guarantee the maintenance of URIs and their associated URLs. The best-known project is undoubtedly [PeriodO](https://perio.do/en/), designed precisely to facilitate linking data across different databases.
+
+Linking different databases is without doubt the most important element of this approach: by referring to shared resources, it is possible to gather "under" the same URI several elements from the same database or even from different databases, thus allowing a comparative reading of the data. The price to pay is, naturally, specificity: in order to apply the same label to multiple records, it is necessary to create more generic chronological classes (periods). The more generic a class is, the more potential members it will contain, and conversely, the more specific it is, the fewer candidates will belong to it.
+
+## Conclusions
+
+In conclusion, it can be said that there is obviously no single "right" solution that can be applied with maximum benefit in every situation. Depending on the various needs — precision of the chronological definition, ease of data entry and search, and the ease of aggregating similar data — each of the solutions outlined above has its pros and cons.
+
+If one is cataloguing the finds from an excavation, dating precision is an extremely important element, but so is the ability to search quickly and efficiently. In this case, a hybrid solution that combines range-based encoding with year-level precision (start year – end year) will probably satisfy most needs. An additional field with the date in EDTF format can be associated with these two fields, to recover any precision lost when dating to the year and to offer a uniform method for indicating chronology, even though it remains very difficult to use for searches.
+
+If one is cataloguing a museum collection, then precision and flexibility are certainly the most important factors. Here too, EDTF formatting remains the preferred choice. Searches can be facilitated by additional software features capable of "reading" and "understanding" this format. In this case, a greater investment in software is justified by the creation of a standardized archive that has a greater chance of enduring over time, compared to improvised, poorly documented or individual solutions.
+
+In any case, it is not advisable to integrate URIs directly into a working database characterized by frequent insertion/editing operations, since they are not immediately understandable to an operator and could therefore make it easier to introduce errors. If the creation and publication of open and linked data (Linked Open Data, or LOD — a practice that should be strongly encouraged, even for small-scale projects) is planned, then the best solution is to add to the databases automatic functions, [middleware](https://it.wikipedia.org/wiki/Middleware), that autonomously "read" a standard date — for example in EDTF format — and "translate" it into a period identified by a URI, following a predefined mapping. This solution allows the human operator to remain more focused on their own study and dating work, leaving the "on-the-fly translation" of chronology into other formats to the machine. A solution of this kind also makes it possible to publish the same data with various "chronological labels" — various periods referring to different or alternative periodization systems — simply by changing the reference mapping(s), without having to modify the data stored in the database.
+
+## References
+
+- Date/time data type for MariaDB: [https://mariadb.com/kb/en/date-and-time-data-types/](https://mariadb.com/kb/en/date-and-time-data-types/)
+
+- Date/time data type for MySQL: [https://dev.mysql.com/doc/refman/5.7/en/date-and-time-types.html](https://dev.mysql.com/doc/refman/5.7/en/date-and-time-types.html)
+
+- Date/time data type for PostgreSQL: [https://www.postgresql.org/docs/9.1/datatype-datetime.html](https://www.postgresql.org/docs/9.1/datatype-datetime.html)
+
+- ISO 8601:2004, [https://www.iso.org/standard/40874.html](https://www.iso.org/standard/40874.html)
+
+- ISO 8621:2019 , [https://www.iso.org/standard/70907.html](https://www.iso.org/standard/70907.html)
+
+- ISO 8601-2:2019, [https://www.iso.org/standard/70908.html](https://www.iso.org/standard/70908.html)
+
+- PeriodO: [https://perio.do/](https://perio.do/)
+
+- EDTF Specification: [https://www.loc.gov/standards/datetime/](https://www.loc.gov/standards/datetime/)
+
+- Validation service for EDTF: [https://digital2.library.unt.edu/edtf/](https://digital2.library.unt.edu/edtf/)
+
+- List of implementations on the Library of Congress website [https://www.loc.gov/standards/datetime/implementations.html](https://www.loc.gov/standards/datetime/implementations.html)
+
+---
+
+### Notes
+
+[^1]: The abbreviation BP stands for Before Present and uses a time scale, measured in years, starting from the "present", where "present" refers to the beginning of the use of radiocarbon as a dating tool, roughly coinciding with the 1950s. By convention, unless otherwise indicated, the "present" of the BP system is the year 1950. Otherwise, as in this case, the starting year of the count must be clearly stated, so `4200 BP (2000)` indicates a distance of 4200 years from the present, set at the year 2000 CE: this therefore corresponds to the year 2200 BCE.
+[^2]: The BCE/CE system (Before Common Era / Common Era) is an alternative way of counting time to the widely used BC/AD system. This system is not tied to religious references but remains fully compatible with it, so that 31 BCE = 31 BC and 476 CE = 476 AD.

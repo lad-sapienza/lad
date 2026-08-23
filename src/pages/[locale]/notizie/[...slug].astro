@@ -1,0 +1,27 @@
+---
+import ArticlePage from "@user/components/ArticlePage.astro"
+import { getCollection } from "astro:content"
+import { isLocale, splitLocaleId, slugFromRest } from "@user/utils/i18n"
+
+export const prerender = true
+
+export async function getStaticPaths() {
+  const articles = await getCollection("notizie")
+  return articles.flatMap(article => {
+    const { locale, rest } = splitLocaleId(article.id)
+    if (!isLocale(locale)) return []
+    const slug = slugFromRest(rest)
+    return [{
+      params: { locale, slug },
+      props: { collection: "notizie", slug, locale },
+    }]
+  })
+}
+
+const { collection, slug, locale } = Astro.props;
+---
+<ArticlePage
+  collection={collection}
+  slug={slug}
+  locale={locale}
+/>

@@ -1,0 +1,141 @@
+---
+title: A bibliographic citation system for GitHub and beyond
+author: Julian Bogdani
+licenza: CC BY 4.0 International
+livello: medio
+img: b-dus-db.jpg
+date: 2021-08-22
+description: "Scientific research increasingly relies on programming and code writing. For this reason, a bibliographic citation standard for digital repositories has emerged, allowing them to be recognized academically."
+tags:
+  - GitHub
+  - Citation
+  - CFF
+  - Open Standard
+  - Research
+---
+
+## Introduction
+
+On 19 August 2021 [GitHub](https://github.com/), the largest hosting platform for _open source_ code, based on the [Git version control system](https://git-scm.com/), [announced through a blog post](https://github.blog/2021-08-19-enhanced-support-citations-github/) the introduction of a built-in bibliographic citation system, which allows developers to clearly indicate how their development work should be cited in academic contexts.
+
+GitHub is a company that provides services to developers, helping their collaboration, the resolution of common problems, and the development of _open source_ technologies. To this end, it created a platform that allows the _hosting_ of open source code together with a built-in version-control system using [Git](https://git-scm.com/), the _open source_ software for version management [devised and developed by Linus Torvalds](https://en.wikipedia.org/wiki/Git). GitHub was acquired in 2018 by Microsoft, which [paid out USD 7.5 billion](https://news.microsoft.com/2018/06/04/microsoft-to-acquire-github-for-7-5-billion/) to take ownership of the platform, actively used by more than 29 million developers.
+
+## Why a citation system for code is needed
+
+Writing code, that is programming or _coding_, is an increasingly widespread practice, now part of the standard methodology of many branches of science. The creation of algorithms, their implementation and application, and the creation of interfaces for data visualization and analysis are, in every respect, products of research that require a significant investment in terms of preparation and implementation time. This investment, however, very rarely (and almost never in the humanities) receives recognition from academia. This creates real barriers to the careers of researchers who invest a significant part of their efforts in tangible research products that are ignored and excluded from systems for evaluating scientific _performance_. And yet open source development is, by definition, subject to [peer review](https://it.wikipedia.org/wiki/Revisione_paritaria), the principal tool used today to evaluate research.
+
+Academia's strong conservatism, reluctant to consider products other than traditional articles and monographs, is aided in this direction by the objective difficulty of citing open source code-writing work, and thus of recognizing colleagues' work. The possibility of introducing a standard citation system makes it easier to recognize each researcher's contribution, not only within alternative products (other software) but also within more traditional research products, such as articles or monographs.
+
+It is to facilitate this good practice that GitHub introduced support for the CFF format, allowing researchers to clearly indicate to colleagues how they wish to be cited and how they want their work to be acknowledged.
+
+## The Citation File Format (CFF) standard
+
+The need to implement a citation system was highlighted by the Software Sustainability Institute, a non-profit organization whose motto — tellingly — is "Better Software Better Research", back in [2017](https://www.software.ac.uk/blog/2017-12-12-standard-format-citation-files).
+
+It is an unformatted (_plain text_) text format, easily readable by a human eye and just as easily parsed by a machine, that records all the key information. These files must be compiled and included in the code repositories they describe, in order to make it easier for colleagues who want to cite the work. The specification, very simple to implement, is published at: [https://citation-file-format.github.io/](https://citation-file-format.github.io/).
+
+The file can specify:
+
+- `cff-version`: the version of the CFF standard used — at the time this document was written (August 2021), 1.2.0
+- `message`: a text message aimed at whoever needs to use the citation
+- `authors`: the detailed list of the software's authors; for each one it is possible to indicate:
+  - `family-names`: the surname or surnames, if a given author has more than one
+  - `given-names`: the given name or names
+  - `orcid`: the URL to the author's [ORCID](https://orcid.org/) identifier (see below)
+- `title`: the title or name of the software, _data set_, etc., as one wishes it to be cited
+- `version`: version of the software, _data set_, etc.
+- `doi`: the Digital Object Identifier that optionally identifies the work (see below)
+- `date-released`: the date of the most recent release, in the format YYYY-MM-DD, e.g. 2021-08-22
+
+The complete guide to the format is available at this address: [https://github.com/citation-file-format/citation-file-format/blob/main/schema-guide.md](https://github.com/citation-file-format/citation-file-format/blob/main/schema-guide.md).
+
+Although it is not stated in the official documentation, CFF uses the [YAML](https://yaml.org/) format for writing data.
+
+### Implementation example
+
+To give a practical and very simple illustration of an implementation of this new GitHub feature, we take the example of the repository of Bradypus, the web-based archaeological database management system, one of LAD's main projects.
+
+In the main repository a CITATION.cff file was created with the following content:
+
+```yml
+cff-version: 1.2.0  
+message: "If you use this software, please cite it as below."  
+authors:  
+  family-names: Bogdani  
+  given-names: Julian  
+  orcid: https://orcid.org/0000-0001-5250-927X  
+title: "BraDypUS"  
+version: 4.1.2  
+doi: 10.5281/zenodo.1467904  
+date-released: 2021-08-22  
+```
+
+In this case, there is a single author, and if there were more than one, the block of lines 4–6 would be repeated for each author.
+
+GitHub detects the presence of the file, processes it automatically, and produces on the right (see the closing image) the snippet for the citation formatted in APA style ([American Psychological Association](https://apastyle.apa.org/)) or in [BibTeX](http://www.bibtex.org/) format.
+
+## CFF: Not just GitHub
+
+GitHub is certainly the most famous platform for collaborative code development and, within its field, the first to have added support for the CFF format. Other collaborative code-hosting platforms such as [GitLab](https://about.gitlab.com/), [BitBucket](https://bitbucket.org/) or [Codeberg](https://codeberg.org/) have not yet implemented native support for the CFF format, with the automatic ability to produce a formatted citation, but there is nothing stopping — indeed it is strongly recommended — including the CITATION.cff file in these _repositories_ as well, since it is a format independent of GitHub.
+
+Currently (August 2021), the CFF format has been adopted by the following projects, according to what is stated on the official page ([https://citation-file-format.github.io/](https://citation-file-format.github.io/)):
+
+- [GitHub](https://github.com/)
+- [Zenodo](https://zenodo.org/)
+- [Zotero](https://www.zotero.org/)
+
+In addition, various tools have been developed to work with this format, e.g.:
+
+- an `initializer` can be used to create a CITATION.cff file: [https://citation-file-format.github.io/cff-initializer-javascript/](https://citation-file-format.github.io/cff-initializer-javascript/)
+
+- a `converter` can convert a CITATION.cff file into other formats (e.g. BibTeX, RIS, CodeMeta, and others): [https://github.com/citation-file-format/cff-converter-python](https://github.com/citation-file-format/cff-converter-python)
+
+Other tools are listed at this link, from the official documentation: [https://github.com/citation-file-format/citation-file-format#tools-to-work-with-citationcff-files-wrench](https://github.com/citation-file-format/citation-file-format#tools-to-work-with-citationcff-files-wrench)
+
+Since CFF is an open format, everyone's contribution is welcome, and a guide has been published to facilitate collaboration, available at: [https://github.com/citation-file-format/citation-file-format/blob/main/CONTRIBUTING.md](https://github.com/citation-file-format/citation-file-format/blob/main/CONTRIBUTING.md)
+
+## Conclusion
+
+The availability of the open CFF format and GitHub's recent support for reading and formatting it allow researchers who are also involved in software development to give greater visibility and value to their research. Through the very simple adoption of a CITATION.cff file, they can clearly define how they wish to be cited by their colleagues, and encourage academic recognition of their own work.
+
+It is therefore an obvious conclusion that the adoption of this tool should be encouraged as much as possible, not only in GitHub repositories, but also on other platforms which, at present, do not yet implement tools for the programmatic reading and formatting of bibliographic information, in the hope that they will do so soon.
+
+Most importantly, the format is [supported by Zotero](https://twitter.com/zotero/status/1420515377390530560), so if you use this software to manage bibliographic references, you will not encounter any particular problems in collecting and using citations.
+
+## In depth: Zenodo and the ORCID and DOI identifiers
+
+**Zenodo** is a general-purpose open-access repository, developed within the framework of the European [OpenAIRE](https://www.openaire.eu/) project and managed by [CERN](https://home.cern/), which allows researchers to deposit articles, data sets, research software, reports and, in general, any digital object relating to research. Each deposit is assigned a DOI, which makes the object easily citable.
+
+**DOI** stands for _digital object identifier_ and is a stable, unique identifier for digital resources, an International Organization for Standardization (ISO) standard. It is used to identify academic, professional and governmental resources, such as journal articles, scientific reports, data sets, official publications, etc. The DOI is also linked to metadata and, above all, to a URL where the resource can be found, making it also an efficient location system. The platform [https://dx.doi.org/](https://dx.doi.org/) allows a DOI to be "resolved", that is, it allows one to reach the most recent URL for a given identifier.
+
+**ORCID** stands for Open Researcher and Contributor ID and is a system for identifying the authors of scientific research. The system solves problems related to homonymy or authors' name changes and makes it possible to disambiguate individual people. It is a system that is very widespread in the hard sciences and still not very widespread in the humanities. Various Italian research institutions encourage its adoption through various means. The platform [https://orcid.org/](https://orcid.org/) allows the assignment of the identifier and the management of the related metadata: data about the person and their scientific output.
+
+## References
+
+(in alphabetical order)
+
+- APA, formatting style, main page: [https://apastyle.apa.org/](https://apastyle.apa.org/)
+- BibTeX: [http://www.bibtex.org/](http://www.bibtex.org/)
+- BitBucket, main page: [https://bitbucket.org/](https://bitbucket.org/)
+- CFF, presentation of the standard: [https://citation-file-format.github.io/](https://citation-file-format.github.io/)
+- CFF, standard specification: [https://github.com/citation-file-format/citation-file-format/blob/main/README.md](https://github.com/citation-file-format/citation-file-format/blob/main/README.md)
+- CFF converter, tool for converting a CFF file into other formats: [https://github.com/citation-file-format/cff-converter-python](https://github.com/citation-file-format/cff-converter-python)
+- CFF initializer, tool for creating a CFF file: [https://citation-file-format.github.io/cff-initializer-javascript/](https://citation-file-format.github.io/cff-initializer-javascript/)
+- CFF, other working tools: [https://github.com/citation-file-format/citation-file-format#tools-to-work-with-citationcff-files-wrench](https://github.com/citation-file-format/citation-file-format#tools-to-work-with-citationcff-files-wrench)
+- CFF, complete guide: [https://github.com/citation-file-format/citation-file-format/blob/main/schema-guide.md](https://github.com/citation-file-format/citation-file-format/blob/main/schema-guide.md)
+- CFF, contribution guide: [https://github.com/citation-file-format/citation-file-format/blob/main/CONTRIBUTING.md](https://github.com/citation-file-format/citation-file-format/blob/main/CONTRIBUTING.md)
+- Codeberg, main page: [https://codeberg.org/](https://codeberg.org/)
+- Git, official page: [https://git-scm.com/](https://git-scm.com/)
+- Git, dedicated Wikipedia entry: [https://en.wikipedia.org/wiki/Git](https://en.wikipedia.org/wiki/Git)
+- GitHub, main page of the platform: [https://github.com/](https://github.com/)
+- GitHub: Announcement of the new citation feature: [https://github.blog/2021-08-19-enhanced-support-citations-github/](https://github.blog/2021-08-19-enhanced-support-citations-github/)
+- GitHub acquired by Microsoft for 7.5 billion dollars in 2018: [https://news.microsoft.com/2018/06/04/microsoft-to-acquire-github-for-7-5-billion/](https://news.microsoft.com/2018/06/04/microsoft-to-acquire-github-for-7-5-billion/)
+- GitLab, main page: [https://about.gitlab.com/](https://about.gitlab.com/)
+- OpenAIRE programme: [https://www.openaire.eu/](https://www.openaire.eu/)
+- ORCID: [https://orcid.org/](https://orcid.org/)
+- Software Sustainability Institute, main page: [https://www.software.ac.uk](https://www.software.ac.uk)
+- SSI, proposal of the CITATION standard: [https://www.software.ac.uk/blog/2017-12-12-standard-format-citation-files](https://www.software.ac.uk/blog/2017-12-12-standard-format-citation-files)
+- YAML, format specification: [https://yaml.org/](https://yaml.org/)
+- Zenodo, main page: [https://zenodo.org/](https://zenodo.org/)
+- Zotero, main page: [https://www.zotero.org/](https://www.zotero.org/)
+- Zotero, announcement of CFF format support: [https://twitter.com/zotero/status/1420515377390530560](https://twitter.com/zotero/status/1420515377390530560)

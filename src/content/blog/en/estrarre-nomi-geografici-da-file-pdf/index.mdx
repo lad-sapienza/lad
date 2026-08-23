@@ -1,0 +1,371 @@
+---
+title: "geoNamesFromPdf: automatic extraction of place names from PDF documents using artificial intelligence"
+author: Julian Bogdani
+date: 2025-10-20
+licenza: CC BY 4.0 International
+livello: avanzato
+img: geoNamesFromPdf.jpg
+description: "Presentation of geoNamesFromPdf, an open-source tool for the automatic extraction of geographic names from PDF documents, developed to facilitate spatial analysis and the geographic organization of academic bibliography."
+tags:
+  - Digital Tools
+  - NLP
+  - Geospatial
+  - Python
+  - Open-source
+  - Artificial Intelligence
+  - Digital Humanities
+---
+
+
+## Introduction
+
+In academic research, especially in disciplines such as archaeology, history, geography and the social sciences, the spatial dimension is often a crucial element for analyzing and interpreting data. The ability to quickly identify and extract geographic references from large volumes of scientific literature can radically transform how we organize, analyze and understand bibliographic sources.
+
+It is in this context that **geoNamesFromPdf** was born, an open-source tool developed at LAD - Laboratorio di Archeologia Digitale of Sapienza Università di Roma, designed to automate the extraction of toponyms (place names) from PDF documents using advanced Natural Language Processing (NLP) techniques.
+
+## What is geoNamesFromPdf
+
+geoNamesFromPdf is a Python command-line application that harnesses the power of **spaCy**, one of the most advanced libraries for natural language processing, to automatically identify and extract geographic names from PDF documents. The tool is able to recognize geographic entities such as:
+
+- **Cities and towns** (Rome, Milan, Athens, Cairo)
+- **Countries and regions** (Italy, Lazio, France, Tuscany)
+- **Natural geographic features** (the Alps, the Mediterranean Sea, the Tiber River)
+- **Structures and places of interest** (the Colosseum, the Acropolis, the Roman Forum)
+
+The software stands out for its ability to **automatically detect the language** of the document and apply the most appropriate language model, ensuring accurate results for texts in Italian, English, Spanish, French, German and many other languages.
+
+## Key features
+
+### 🌍 Multilingual support
+The tool natively supports over 10 languages, with room for expansion. Automatic language detection ensures that the most appropriate NER (Named Entity Recognition) model is used for each document.
+
+### 🚀 Zero-friction installation
+On first launch, geoNamesFromPdf automatically checks for the necessary dependencies and, with the user's consent, installs everything needed, including the required language models. This removes technical barriers for less experienced users.
+
+### 🎯 High precision
+By using spaCy's "large" models, the tool ensures high accuracy in recognizing geographic entities, significantly reducing false positives compared to approaches based on simple dictionaries or regular expressions.
+
+### ⚡ Ease of use
+The command-line interface is intuitive and requires a single command to process a document:
+
+```bash
+python geoNamesFromPdf.py documento.pdf
+```
+
+### 🔧 Flexibility
+Users can:
+- Force a specific language for particular documents
+- Easily install new language models
+- View available models
+- Process batches of documents
+
+## How it works
+
+The extraction process consists of several stages:
+
+1. **Text extraction**: Using PyMuPDF to extract text from the PDF
+2. **Language detection**: Automatic analysis of the text to identify the predominant language
+3. **Model loading**: Selection and loading of the appropriate spaCy model
+4. **Named Entity Recognition**: Identification of geographic entities in the text
+5. **Post-processing**: Removal of duplicates and alphabetical sorting of the results
+
+Example output:
+
+```bash
+🌐 Detected language: it
+🧠 Using model: core_news_lg v3.8.0
+
+📍 Toponyms found in the PDF (15 total):
+
+- Atene
+- Bologna
+- Egitto
+- Firenze
+- Grecia
+- Italia
+- Mediterraneo
+- Milano
+- Napoli
+- Roma
+- Sicilia
+- Tevere
+- Torino
+- Toscana
+- Venezia
+```
+
+## Use cases in academia
+
+### Geographic organization of bibliography
+
+One of the most immediate and powerful use cases is the **geographic organization of scientific bibliography**. Let's consider a few practical scenarios:
+
+#### Cataloguing by geographic area
+An archaeologist working on Roman archaeology can use geoNamesFromPdf to process hundreds of articles and monographs, automatically extracting the toponyms mentioned. This makes it possible to:
+
+- Create automatic geographic indexes of one's digital library
+- Quickly identify which publications deal with specific geographic areas
+- Discover geographic connections between different research works
+- Organize bibliographic sources by regions of interest
+
+**Practical example**: A researcher studying trade routes in antiquity can process their collection of 300 PDFs and generate a database showing which articles mention specific Mediterranean port cities, facilitating thematic and comparative research.
+
+#### Geospatial bibliographic database
+By integrating geoNamesFromPdf with a geographic database, it is possible to create a geospatial bibliographic system where:
+
+- Each bibliographic reference is associated with the geographic places mentioned
+- Searches can be filtered by geographic area
+- The geographic distribution of scientific literature can be displayed on a map
+- Gaps in the geographic coverage of studies can be identified
+
+### Spatial analysis of the literature
+
+geoNamesFromPdf can be used for more sophisticated analyses of the geographic distribution of academic research:
+
+#### Mapping research areas
+By processing significant corpora of scientific literature, it is possible to:
+
+- Identify which geographic areas are most studied
+- Discover regions that are under-represented in research
+- Analyze the temporal evolution of geographic interest
+- Compare geographic distribution across different disciplines
+
+**Example**: An analysis of 1,000 articles on Italian archaeology might reveal that while some regions (e.g. Lazio, Tuscany) are extensively studied, other areas show gaps in research.
+
+#### Analysis of geographic networks
+The tool can help identify:
+
+- Frequent geographic connections in the literature (e.g. Rome-Athens, Venice-Constantinople)
+- Studied patterns of cultural or commercial diffusion
+- The most analyzed areas of historical interaction
+
+### Managing documentary archives
+
+For institutions that manage large documentary archives:
+
+#### Automatic indexing
+- Automatic creation of geographic indexes for digitized historical documents
+- Enrichment of document metadata with geographic information
+- Easier search and retrieval of documents by geographic area
+
+#### Quality control
+- Checking the completeness of existing geographic indexes
+- Identifying possible errors or omissions in manual cataloguing
+- Comparing different versions or editions of documents
+
+### Geographic research and synthesis
+
+#### Systematic reviews
+For those conducting systematic literature reviews:
+
+- Quick identification of the geographic coverage of studies
+- Extraction of geographic information from abstracts and full texts
+- Creation of summary tables of the geographic distribution of research
+
+#### Quick geographic overview
+Before reading a document, it is possible to:
+
+- Get an immediate overview of the places covered
+- Assess geographic relevance to one's own research
+- Decide which documents to examine further based on geographic coverage
+
+### Concrete example: organizing an archaeology library
+
+Let's imagine having a personal library of 500 PDFs on classical archaeology. Using geoNamesFromPdf, we can:
+
+1. **Phase 1 - Bulk extraction**:
+   ```bash
+   for pdf in biblioteca/*.pdf; do
+       python geoNamesFromPdf.py "$pdf" > "toponimi/$(basename "$pdf" .pdf).txt"
+   done
+   ```
+
+2. **Phase 2 - Database creation**:
+   Import the results into a database (SQLite, PostgreSQL) or spreadsheet, creating a table that links each PDF to the extracted toponyms.
+
+3. **Phase 3 - Analysis and queries**:
+   - "Which articles talk about Pompeii?"
+   - "Find all documents that mention both Rome and Carthage"
+   - "List the bibliography by region: Campania, Lazio, Sicily, etc."
+
+4. **Phase 4 - Visualization**:
+   Use the data to create interactive maps showing:
+   - The geographic distribution of one's bibliography
+   - The areas with the greatest bibliographic coverage
+   - The connections between places frequently cited together
+
+## Installation and usage
+
+### Quick installation
+
+The project is available on [GitHub](https://github.com/lad-sapienza/geoNamesFromPdf) and is distributed under the open-source MIT license:
+
+```bash
+# Clone the repository
+git clone https://github.com/lad-sapienza/geoNamesFromPdf.git
+cd geoNamesFromPdf
+
+# Create a virtual environment (Python 3.12 recommended)
+python3.12 -m venv venv
+source venv/bin/activate  # on macOS/Linux
+
+# First run - automatic installation
+python geoNamesFromPdf.py documento.pdf
+```
+
+On first launch, the tool checks the dependencies and offers to install them automatically:
+
+```
+======================================================================
+🚀 FIRST RUN SETUP - geoNamesFromPdf
+======================================================================
+
+Checking dependencies...
+
+📦 Missing Python packages:
+   ❌ PyMuPDF
+   ❌ spacy
+   ❌ langdetect
+
+🌍 Missing essential language models:
+   ❌ EN - en_core_web_lg
+   ❌ IT - it_core_news_lg
+
+❓ Do you want to install missing dependencies now? (yes/no):
+```
+
+By answering "yes", everything is installed automatically.
+
+### Basic usage
+
+```bash
+# Automatic extraction with language detection
+python geoNamesFromPdf.py articolo.pdf
+
+# Force a specific language
+python geoNamesFromPdf.py -l it documento_italiano.pdf
+
+# View available languages
+python geoNamesFromPdf.py --list-languages
+
+# Install a new language
+python geoNamesFromPdf.py --install-language es
+```
+
+## Multilingual support
+
+geoNamesFromPdf natively supports:
+
+- 🇮🇹 **Italian** (it_core_news_lg)
+- 🇬🇧 **English** (en_core_web_lg)
+- 🇪🇸 **Spanish** (es_core_news_lg)
+- 🇫🇷 **French** (fr_core_news_lg)
+- 🇩🇪 **German** (de_core_news_lg)
+- 🇵🇹 **Portuguese** (pt_core_news_lg)
+- 🇳🇱 **Dutch** (nl_core_news_lg)
+- 🇬🇷 **Greek** (el_core_news_lg)
+- 🇵🇱 **Polish** (pl_core_news_lg)
+- 🇷🇴 **Romanian** (ro_core_news_lg)
+
+This multilingual coverage is particularly valuable in international academic contexts, where it is common to work with bibliography in different languages.
+
+## Support for external gazetteers
+
+One of the new features of **geoNamesFromPdf** is support for using external gazetteers or toponym lists. This option allows users to integrate their own dataset of geographic names, further improving the tool's precision and customizability.
+
+### How it works
+
+Users can provide a text file containing a list of toponyms, one per line. During processing, geoNamesFromPdf will use this list to:
+
+- **Recognize specific toponyms** that might not be included in the standard language models.
+- **Prioritize the provided toponyms** over those detected automatically.
+
+### Usage example
+
+To use an external gazetteer, simply add the `--gazetteer` option to the command:
+
+```bash
+python geoNamesFromPdf.py documento.pdf --gazetteer lista_toponimi.txt
+```
+
+Where `lista_toponimi.txt` is a text file containing the desired toponyms. For example:
+
+```
+Pompei
+Ercolano
+Stabia
+Oplontis
+```
+
+### Advantages
+
+- **Greater precision**: Ideal for projects requiring the recognition of specific or uncommon toponyms.
+- **Flexibility**: Users can easily create and update their own toponym lists.
+- **Specialized applications**: Perfect for academic or professional contexts that need a particular geographic focus.
+
+This feature broadens the range of uses for geoNamesFromPdf, making it an even more powerful tool that can be adapted to users' needs.
+
+## AI-assisted development
+
+It is worth noting that **geoNamesFromPdf was developed entirely using Claude Sonnet 4.5 via GitHub Copilot**. This is a concrete example of how artificial intelligence can assist software development in academic and research settings.
+
+### The development process
+
+Development was carried out through an iterative conversation with Claude, involving:
+
+1. **Requirements definition**: Identifying the specific needs for extracting toponyms from PDFs
+2. **Technology selection**: Choosing spaCy, PyMuPDF and langdetect as the optimal libraries
+3. **Progressive implementation**: Incremental development of features:
+   - Basic toponym extraction
+   - Adding automatic language detection
+   - Implementing multilingual support
+   - Creating the automatic dependency installation system
+   - Developing the command-line interface
+4. **Testing and refinement**: Identifying and fixing issues (e.g. Python 3.14 compatibility, emoji handling in the README)
+5. **Documentation**: Creating a complete README, CONTRIBUTING.md, and usage documentation
+
+### Advantages of AI-assisted development
+
+This approach made it possible to:
+
+- **Speed up development**: A project that would have taken days was completed in a single working session
+- **Improve quality**: Claude suggested best practices, robust error handling, and a clean architecture
+- **Expand functionality**: Features such as auto-setup and multilingual support were added naturally during the conversation
+- **Produce complete documentation**: README, CONTRIBUTING, and usage examples were generated alongside the code
+- **Prepare for open-source release**: MIT license, complete .gitignore, and GitHub-ready structure
+
+### Implications for academic research
+
+This experiment demonstrates how generative AI tools can:
+
+- Lower technical barriers for humanities researchers who need custom digital tools
+- Enable rapid prototyping of solutions for specific research problems
+- Facilitate the creation of open-source tools reusable by the academic community
+- Speed up the develop-test-refine cycle for research tools
+
+## Conclusions
+
+geoNamesFromPdf is an example of how advanced NLP technologies can be made accessible and useful for humanities and scientific research. The ability to automatically extract geographic information from large volumes of documents opens up new possibilities for:
+
+- Organizing and managing academic bibliography
+- Spatial analysis of scientific literature
+- Discovering patterns and geographic connections in research
+- Creating geographically aware information retrieval systems
+
+The tool is fully **open-source** and available on GitHub, where the academic community can:
+
+- Use it freely for their own research
+- Contribute improvements and new features
+- Adapt it to their specific needs
+- Share use cases and best practices
+
+### Links and resources
+
+- **GitHub repository**: [https://github.com/lad-sapienza/geoNamesFromPdf](https://github.com/lad-sapienza/geoNamesFromPdf)
+- **License**: MIT License
+- **Technologies used**: Python, spaCy, PyMuPDF, langdetect
+- **Support**: [Issues on GitHub](https://github.com/lad-sapienza/geoNamesFromPdf/issues)
+
+### Getting started
+
+We invite all interested researchers to try geoNamesFromPdf with their own documents and to share feedback and experiences. The project is constantly evolving, and contributions from the academic community are essential to improving it and adapting it to different research needs.

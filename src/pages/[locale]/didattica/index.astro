@@ -1,0 +1,139 @@
+---
+import SectionIndex from "@user/components/SectionIndex.astro"
+import { LOCALES, type Locale } from "@user/utils/i18n"
+
+export const prerender = true
+
+export function getStaticPaths() {
+  return LOCALES.map(locale => ({ params: { locale } }))
+}
+
+const { locale } = Astro.params as { locale: Locale }
+---
+
+{locale === "it" ? (
+<SectionIndex
+  collection="didattica"
+  title="La didattica del LAD"
+  description="Scopri i laboratori didattici del LAD alla Sapienza: corsi pratici su GIS, banche dati archeologiche, Laser Aided Profiler e Computer Vision. Formazione avanzata per dottorato e specializzazione in archeologia digitale"
+  locale={locale}
+>
+  <img src="/didattica/didattica.jpg" class="img-fluid mb-5" alt="La didattica del LAD" />
+  <h1>
+    Laboratori didattici: GIS, Banche dati relazionali per l'Archeologia, Laser
+    Aided Profiler, Intelligenza Artificiale
+  </h1>
+
+  <p class="lead">
+    Dal 2017 viene organizzato presso la Sapienza un laboratorio pratico di
+    <em>alfabetizzazione</em> sulle tecnologie relative ai Sistemi Informativi Geografici
+    (GIS), con particolare riguardo al software libero
+    <a href="https://www.qgis.org/" target="_blank" referrerpolicy="no-referrer"
+      >QGIS</a
+    >. Il laboratorio si pone l'obiettivo di fornire le basi teoriche e pratiche
+    necessarie per impostare e sviluppare indipendentemente i propri progetti
+    GIS e affrontare il mondo della cartografia numerica. Il laboratorio è
+    destinato principalmente agli iscritti alla Sapienza Università di Roma, ma
+    è aperto anche a interessati, studenti o professionisti esterni. A causa
+    della pandemia l'edizione 2020 si è tenuta
+    <em>online</em>. Nelle ultime edizioni, il laboratorio GIS è stato
+    affiancato da incontri dedicati alla progettazione, implementazione e
+    utilizzo delle banche dati relazioni, con una introduzione al linguaggio
+    SQL. In particolare i partecipanti hanno imparato a progettare costruire e
+    implementare una banca dati relazionale online usando
+    <a href="/it/ricerca/bradypus-cloud-databases/">Bradypus</a>, un software
+    sviluppato e mantenuto dal LAD per la facile gestione <em>online</em> di banche
+    dati archeologiche e più in generale legate al mondo dei Beni Culturali.
+  </p>
+  <h3>Edizione 2025-2026</h3>
+  <p>
+    Stiamo lavorando per la definzione del calendario dei <strong
+      >Laboratori Didattici di Archeologia Digitale</strong
+    > per l'anno accademico 2025-2026. Come l'anno precedente, la didattica dovrebbe
+    riguardare i seguenti moduli:
+  </p>
+  <ul>
+    <li>
+      GIS di Base 👉 <a href="./lad-didattica-2025-2026-gis-db/">Iscrizioni chiuse il 6 gennaio 2026!</a>
+    </li>
+    <li>
+      GIS avanzato 👉 <a href="./lad-didattica-2025-2026-gis-avanzato/">Iscrizioni chiuse il 6 gennaio 2026!</a>
+    </li>
+    <li>
+      Banche dati relazionali 👉 <a href="./lad-didattica-2025-2026-banche-dati/">Iscrizioni chiuse il 6 gennaio 2026!</a>
+    </li>
+    <li>
+      Laser Aided Profiler (LAP) 👉 <a href="./lad-didattica-2025-2026-lap/">Iscrizioni chiuse per raggiungimento del numero massimo dei partecipanti</a>
+    </li>
+    <li>
+      Deep Learning per la classificazione della ceramica archeologica 👉 <a href="./lad-didattica-2025-2026-ia/">Iscrizioni chiuse per raggiungimento del numero massimo dei partecipanti</a>
+    </li>
+  </ul>
+  <p>
+    Tutte le informazioni necessarie per l'iscrizione verranno pubblicate in
+    questa pagina, man-mano che la programmazione e il calendario dei vari
+    moduli vengono definiti.
+  </p>
+</SectionIndex>
+) : (
+<SectionIndex
+  collection="didattica"
+  title="LAD Teaching"
+  description="Discover LAD's teaching labs at Sapienza: hands-on courses on GIS, archaeological databases, Laser Aided Profiler, and Computer Vision. Advanced training for PhD and specialization students in digital archaeology"
+  locale={locale}
+>
+  <img src="/didattica/didattica.jpg" class="img-fluid mb-5" alt="LAD teaching" />
+  <h1>
+    Teaching labs: GIS, Relational Databases for Archaeology, Laser
+    Aided Profiler, Artificial Intelligence
+  </h1>
+
+  <p class="lead">
+    Since 2017, Sapienza has hosted a hands-on
+    <em>introductory</em> lab on Geographic Information System (GIS)
+    technologies, with a particular focus on the free software
+    <a href="https://www.qgis.org/" target="_blank" referrerpolicy="no-referrer"
+      >QGIS</a
+    >. The lab aims to provide the theoretical and practical foundations
+    needed to independently set up and develop GIS projects and engage with
+    digital cartography. It is aimed primarily at Sapienza University of Rome
+    students, but is also open to outside students or professionals. Due to
+    the pandemic, the 2020 edition was held
+    <em>online</em>. In recent editions, the GIS lab has been paired with
+    sessions on designing, implementing, and using relational databases, with
+    an introduction to the SQL language. Participants in particular learned
+    to design, build, and implement an online relational database using
+    <a href="/en/ricerca/bradypus-cloud-databases/">Bradypus</a>, software
+    developed and maintained by LAD for the easy <em>online</em> management of
+    archaeological databases and, more broadly, of Cultural Heritage data.
+  </p>
+  <h3>2025-2026 Edition</h3>
+  <p>
+    We are working on defining the calendar for the <strong
+      >Digital Archaeology Teaching Labs</strong
+    > for the 2025-2026 academic year. As in the previous year, teaching should
+    cover the following modules:
+  </p>
+  <ul>
+    <li>
+      Basic GIS 👉 <a href="./lad-didattica-2025-2026-gis-db/">Registrations closed on January 6, 2026!</a>
+    </li>
+    <li>
+      Advanced GIS 👉 <a href="./lad-didattica-2025-2026-gis-avanzato/">Registrations closed on January 6, 2026!</a>
+    </li>
+    <li>
+      Relational databases 👉 <a href="./lad-didattica-2025-2026-banche-dati/">Registrations closed on January 6, 2026!</a>
+    </li>
+    <li>
+      Laser Aided Profiler (LAP) 👉 <a href="./lad-didattica-2025-2026-lap/">Registrations closed — maximum number of participants reached</a>
+    </li>
+    <li>
+      Deep Learning for archaeological ceramics classification 👉 <a href="./lad-didattica-2025-2026-ia/">Registrations closed — maximum number of participants reached</a>
+    </li>
+  </ul>
+  <p>
+    All the information needed to register will be published on this page as
+    the schedule and calendar for the various modules are defined.
+  </p>
+</SectionIndex>
+)}

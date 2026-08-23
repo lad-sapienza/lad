@@ -1,0 +1,181 @@
+---
+title: "Using SQL's CASE to extract data useful for statistical analysis from a database"
+author: Julian Bogdani
+licenza: CC BY 4.0 International
+livello: avanzato
+tags: [SQL, Coding, Database, Reflections and Notes]
+img: sql-snippets.jpg
+date: 2022-03-03
+description: "This short article describes the use of the SQL `CASE` statement, presenting an archaeological case study"
+---
+
+This short article describes the use of the SQL `CASE` statement, presenting an archaeological case study.
+
+`CASE` is a very powerful and often overlooked construct of the SQL language, which allows a series of given conditions to be evaluated and returns a value as soon as the first condition is satisfied, exactly like `if-then-else` statements in many other programming languages.
+
+When a condition is met, the process stops and returns the corresponding given result. If no condition is met, the value contained in the `ELSE` clause is returned.
+
+If, finally, the `ELSE` part is not provided, the value `NULL` is returned (which is different from the string `'NULL'`).
+
+The syntax of `CASE` is as follows:
+
+```sql
+CASE
+   WHEN condition_1 THEN "something"
+   WHEN condition_2 THEN "something else"
+   ...
+   ELSE "default value"
+END
+```
+
+An example is worth a thousand explanations, so in the following paragraphs I introduce a real case study, the very one that led me to discover this function.
+
+Specifically, I was working on a database relating to the Roman necropolis of the [Roman city of Suasa](https://it.wikipedia.org/wiki/Suasa) and needed to extract some data to create fairly simple charts. In particular, I needed to quickly extract the total number of tombs broken down by phase, and within each phase the total number of inhumation burials and cremation burials. The end goal was to obtain a bar chart showing, for each phase, the total number of tombs for each of the two burial rites.
+
+Below is an excerpt of the structure of the reference table from which to extract this information. The table is more complex, but here I only extract the columns that interest us.
+
+Query:
+
+```sql
+SELECT id,
+       nome,
+       rito,
+       fase
+  FROM suasa__tombe;
+
+```
+
+Result:
+
+|id|tomb number|rito|fase|
+|-|-|-|-|
+1|503|cremazione|10
+2|511|cremazione|8
+4|501|cremazione|11
+5|502|cremazione|11
+6|508|cremazione|10
+7|509|cremazione|10
+8|512|inumazione|7
+10|514|cremazione|10
+11|510|cremazione|10a
+18|518|cremazione|7
+19|519|cremazione|7
+20|520|cremazione|7
+21|521|cremazione|10
+22|522|cremazione|7
+23|524|cremazione|7
+24|523|cremazione|10
+25|528|cremazione|7
+26|530|cremazione|11
+27|533|cremazione|7
+28|531|cremazione|10
+29|529|cremazione|11
+30|526|cremazione|7
+32|534|cremazione|10
+36|535|cremazione|6
+37|537|cremazione|10b
+38|538|inumazione|12
+39|543|cremazione|10
+40|542|cremazione|10
+41|540|cremazione|10a
+42|544|cremazione|10
+43|539|cremazione|10b
+44|541|inumazione|12
+45|545|inumazione|12
+46|547|cremazione|10
+48|549|cremazione|10
+49|548|cremazione|10
+50|552|cremazione|10a
+52|550|cremazione|10
+53|555|cremazione|7
+54|556|cremazione|7
+56|557|cremazione|10
+57|558|cremazione|10
+59|554|inumazione|12
+60|560|inumazione|12
+61|561|cremazione|10
+62|567|cremazione|10a
+63|563|inumazione|12
+64|568|cremazione|10a
+65|566|inumazione|10a
+66|565|inumazione|12
+67|571|cremazione|9
+68|569|cremazione|10a
+69|570|cremazione|10a
+70|572|cremazione|9
+71|562|inumazione|12
+72|564|inumazione|12
+73|573|cremazione|11
+74|574|cremazione|11
+75|576|cremazione|11
+76|575|cremazione|11
+77|577|cremazione|11
+78|578|cremazione|10a
+79|579|cremazione|11
+80|580|inumazione|11
+81|581|cremazione|10b
+82|584|cremazione|10
+83|587|cremazione|10
+84|589|inumazione|10b
+87|582|cremazione|10b
+88|585|cremazione|11
+89|586|cremazione|11
+90|590|cremazione|9
+91|591|cremazione|9
+92|601|cremazione|9
+93|603|cremazione|9
+95|583|cremazione|9
+96|593|cremazione|10
+97|594|cremazione|10
+98|602|cremazione|7
+99|607|cremazione|7
+100|599|cremazione|9
+101|596|inumazione|10b
+102|598|cremazione|9
+103|595|cremazione|10b
+104|597|inumazione|10b
+105|600|cremazione|8
+106|606|inumazione|8
+107|608|cremazione|10a
+108|605|cremazione|9
+
+
+Here, then, is the query to extract the data we need:
+
+```sql
+SELECT SUM(CASE WHEN rito = 'inumazione' THEN 1 ELSE 0 END) AS inumazioni,
+       SUM(CASE WHEN rito = 'cremazione' THEN 1 ELSE 0 END) AS cremazioni,
+       fase
+  FROM suasa__tombe
+ GROUP BY fase;
+```
+
+And finally, here are the results of the query, ready to be turned into a chart:
+|inumazioni|cremazioni|fase|
+|-|-|-|
+0|22|10
+1|9|10a
+3|5|10b
+1|12|11
+9|0|12
+0|1|6
+1|12|7
+1|2|8
+0|10|9
+
+In this case we are using the `CASE` statement in the column definition, together with the `SUM` function, which calculates totals.
+
+In detail, `SUM(CASE WHEN rito = 'inumazione' THEN 1 ELSE 0 END) AS inumazioni` defines a column to which the label or _alias_ `inumazioni` is assigned, via the `AS` statement ([follow this link for more information on `AS`](https://www.w3schools.com/sql/sql_ref_as.asp)), purely to make the output data easier to read.
+
+The column contains a sum, whose elements are defined by `CASE`. For each row of the database, it is evaluated whether the boolean expression `rito = 'inumazione'` is true or false — in other words, whether the `rito` field contains exactly the value `inumazione`. If the answer is positive (boolean value `TRUE`), then (`THEN`) the number `1` is returned to the sum function (one unit is added to the inhumation count); otherwise (`ELSE`) `0` is returned (nothing is effectively added to the inhumation count).
+
+The same reasoning applies to the second column, defined as: `SUM(CASE WHEN rito = 'cremazione' THEN 1 ELSE 0 END) AS cremazioni`, where only the label changes, and of course the reference value of the `rito` field.
+
+We spoke above of _counting_ values for each row, because in this query we are **grouping** values, specifically grouping them by the `fase` field, as is clear from the last part of the main query, `GROUP BY fase`, which adds a grouping principle ([follow this link for more information on `GROUP BY`](https://www.w3schools.com/sql/sql_groupby.asp)).
+
+With `CASE` you can use all SQL operators (e.g. `=`, `<`, `>`, `<=`, `>=`, `LIKE`, etc.) and it is possible to chain multiple conditions using the usual `AND` or `OR`. What matters is that the expression between `WHEN` and `THEN` always returns a boolean value of `TRUE` or `FALSE`. The case shown above was fairly simple, but it is also possible to have several `WHEN...THEN` statements.
+
+## References
+- SQL Tutorial: [https://www.sqltutorial.org/sql-case/](https://www.sqltutorial.org/sql-case/)
+- Free Code Camp: [https://www.freecodecamp.org/news/case-statement-in-sql-example-query/](https://www.freecodecamp.org/news/case-statement-in-sql-example-query/)
+- W3 Schools: [https://www.w3schools.com/sql/sql_case.asp](https://www.w3schools.com/sql/sql_case.asp)

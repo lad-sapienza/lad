@@ -1,0 +1,145 @@
+---
+title: "Open source software for sharing geographic data online"
+author: Eleonora Iacopini
+date: 2025-03-09
+licenza: CC BY 4.0 International
+livello: avanzato
+img: geoserver.jpg
+description: "The spread of increasingly capable open source programs for managing geographic data, such as QGIS, together with the resulting growth in the number of spatial data creators, has brought out the need for systems to manage this mass of data for public use. This article offers an overview of the most interesting open source tools available today for this purpose."
+tags:
+  - FLOSS
+  - Geographic Data
+  - Sharing
+  - GeoNetwork
+  - GeoNode
+
+---
+
+## Introduction
+
+The spread of increasingly capable [open source](https://it.wikipedia.org/wiki/Open_source) programs for managing geographic data, such as [QGIS](https://www.qgis.org/it/site/), together with the resulting growth in the number of spatial data creators, and the tendency of Italian public administrations to make their datasets freely available online, in application of [EU Directive 2019/1024](https://eur-lex.europa.eu/legal-content/IT/TXT/PDF/?uri=OJ:L:2019:172:FULL&from=IT), known as the **Open Data Directive**, transposed into Italian law by [Legislative Decree 200/2021](https://www.gazzettaufficiale.it/atto/serie_generale/caricaDettaglioAtto/originario?atto.dataPubblicazioneGazzetta=2021-11-30&atto.codiceRedazionale=21G00213&elenco30giorni=false), which came into force on 15 December 2021, has brought out the need for systems to manage this mass of data for public use.
+
+When speaking of [Open Data](https://it.wikipedia.org/wiki/Dati_aperti), from the legislator's point of view this does not refer to a specific type of data, but rather to the practice of publishing so-called raw data online (tables, statistics, geographic data, etc.), making it accessible under an [open license](https://it.wikipedia.org/wiki/Licenza_libera) to users who request it, for sharing and reuse.
+
+In line with this philosophy, several *open source* programs have been released in recent years that make it possible to manage the publication and sharing of various types of data, accompanied by a set of descriptive information about them ([metadata](https://it.wikipedia.org/wiki/Metadato)), with particular attention to those of a geographic nature and therefore to their *online* visualization. Among the many software packages, in this article we will cover [Geonetwork](https://geonetwork-opensource.org/) and [Geonode](https://geonode.org/), today among the most widespread solutions for sharing geographic data.
+
+> A **very brief clarification** is needed: here we will not cover [libraries](https://it.wikipedia.org/wiki/Libreria_(software)) and *client* software for displaying geographic data on the Web, such as [Leaflet](https://leafletjs.com/), [OpenLayers](https://openlayers.org/), [MapLibre](https://maplibre.org/projects/) and other similar projects, but rather *server* tools that make it possible to publish geographic data *online* — typically produced with desktop tools — in various formats, protocols and standards. Normally, data published through a geographic server is then handled by *client* libraries to build webGIS tools.
+
+### Geonetwork
+
+[Geonetwork](https://geonetwork-opensource.org/) is an *open source* application that handles the cataloguing of cartographic resources and the metadata associated with each of them. The system provides users with interactive tools that make it possible to manage spatial data in a flexible and shared way. It is a [*framework*](https://it.wikipedia.org/wiki/Framework) based on a dual principle of data management: data can be stored either in a database internal to the system, or elsewhere on the network. This way of managing *datasets* frees the system from having to store all data in a single database, thereby ensuring greater usability, discoverability and standardization of the data.
+
+Geonetwork's services and protocols are based on [open standards](https://it.wikipedia.org/wiki/Standard_aperto) such as [ISO/TC211](https://www.ogc.org/ogc/partners/isotc211) and the specifications of the [Open Geospatial Consortium (OGC)](https://www.ogc.org/). The software is designed to catalogue a large amount of heterogeneous spatial data from different sources and make it available to users quickly and in a standardized way, with the aim of increasing cooperation between organizations, avoiding duplication and keeping the resources implemented in the system always up to date.
+
+In terms of **system requirements**, Geonetwork requires the following to be present on the server:
+- [Java 8 JDK](https://www.java.com/it/download/help/java8.html) (Java 11 LTS is not supported), 
+- [Apache Tomcat](https://tomcat.apache.org/) 9.0, and 
+- [PostgreSQL](https://www.postgresql.org/) as the database, although by default the [H2](https://h2database.com/html/main.html) DBMS is bundled with the installation. 
+
+In terms of resources, Geonetwork requires a minimum of **1 GB of RAM** and **250 GB SSD**, even though the application itself takes up only 350 MB.
+
+For unregistered users, the system essentially allows free keyword search and viewing of the data entered into the system. Once a search is performed, the user is redirected to the results page, which can be further narrowed down using preset filters or by zooming in on a small map to filter by location. The user can view the resource as a detail sheet, see it on the map, or download it. Clicking on one or more resources automatically adds them to the map. On the map, the user can add *layers* via external [WMS](https://it.wikipedia.org/wiki/Web_Map_Service) and [WFS](https://it.wikipedia.org/wiki/Web_Feature_Service) links, take measurements, print, annotate notes and filter the data.
+
+As a registered user of the system, in addition to being able to perform all the operations described above, it is possible to actively contribute to populating the data by uploading one's own projects. Registered users can therefore modify/delete or add various types of data, such as vector files, raster files, tables, WFS (Web Feature Service) and WMS (Web Map Service).
+
+When uploading data, users are asked to choose a metadata *template* to describe the information entered into the system. Templates are pre-built forms based on ISO standards, so when entering a resource into the system, it is necessary to choose the appropriate ISO template to describe it, among which are [Dublin Core](https://www.dublincore.org/), [ISO 19110:2005](https://www.iso.org/standard/39965.html) and [ISO 19139:2007](https://www.iso.org/standard/32557.html).
+
+From the map, users can create new maps.
+
+In terms of system management, the administration console makes it possible to manage the following areas:
+- User and group management
+- Harvesting: the process of acquiring metadata from remote sources and storing it locally in the catalogue for fast searching, with the option of scheduling data harvests.
+- Statistics
+- Reports (statistics on the data entered into the system and statistics on searches performed, displayed as pie charts within reports)
+- Metadata classification system
+- Settings (general portal configuration and configuration of: the server; the user interface; the CSS; the CSW; the map server)
+- Tools (Import Metadata, INSPIRE Reference Validator)
+
+### Geonode
+
+GeoNode is another [Content Management System (CMS)](https://it.wikipedia.org/wiki/Content_management_system) for geospatial data that allows their creation, sharing and collaborative use. Datasets can be uploaded in various formats, maps can be edited, restyled and combined using browser-based tools, maps and metadata can be published and searched, while users can upload revisions, ratings and comments.
+
+Geonode is built using: 
+- [GeoServer](https://geoserver.org/), 
+- [GeoExplorer](GeoExplorer), 
+- [pycsw](https://pycsw.org/), 
+- [Django](https://www.djangoproject.com/), and 
+- [GeoExt](https://geoext.org/).
+
+Compared to Geonetwork, Geonode requires a much more powerful server, with minimum requirements of **16GB of RAM** for the production environment, a **2.2GHz, 4-core** processor, **30 GB** of space used just for the software, and a **64-bit** architecture, which is strongly recommended.
+
+In Geonode, registered users can search the data catalogue and publish their own. The supported formats for uploading are: 
+- [ESRI Shapefile](https://it.wikipedia.org/wiki/Shapefile), 
+- [GeoTIFF](https://it.wikipedia.org/wiki/GeoTIFF), 
+- [Comma-separated Value (CSV)](https://it.wikipedia.org/wiki/Comma-separated_values), 
+- Zip Archive, 
+- XML Metadata File, 
+- [Styled Layer Descriptor (SLD)](https://en.wikipedia.org/wiki/Styled_Layer_Descriptor).
+
+Geonode also offers the ability to directly edit the data entered into the system (*Online Editing*), with regard to styles, the metadata associated with resources, and the information contained, for example, in the attribute tables of vector files. Editing the graphic styles of vector data can be done either through the graphical interface or by editing the source code directly.
+
+Data entered into the system can be shared, printed, filtered and exported as needed. Data can be exported in various formats, including [GeoJSON](https://it.wikipedia.org/wiki/GeoJSON), [GML](https://it.wikipedia.org/wiki/Geography_Markup_Language), Shapefile and CSV.
+
+In Geonode, besides storing geospatial data, it is possible to upload a great many types of documents of different kinds, such as images, text documents, compressed files, audio, video or presentations.
+Among its various functions, the program also allows users to create a vector dataset *ex novo*, specifying the geometry type and the fields of the attribute table.
+
+Geonode also offers the ability to manage users and their access permissions for a given working group, adding a system for revisions, ratings and comments on data, along with activity-flow tracking and the ability to enable announcements and notifications.
+
+![geonode_workflow.jpg](/blog/it/floss-per-condivisione-dati-geografici-online/geonode_workflow.jpg)  
+_Diagram of the data publishing workflow, from entry to release._
+
+
+
+### Summary comparison table of features
+
+| | Geonetwork | Geonode |
+| ------- | ------- | ------ |
+|ISO19115/ISO19119/ISO19139/ISO19110 and Dublin Core metadata management|✓|✓|
+|Metadata and template editing|✓|✓|
+|Metadata thesaurus management|✓|✓|
+|Metadata synchronization between catalogues (GeoNetwork, CSW, OGC WxS GetCapabilities, WebDav, ArcSDE, Thredds, OGC WFS Features, OAI-PMH)|✓| ✓|
+|Web Map Services (WMS)|✓|✓|
+|Web Map Tile Services (WMTS)|✓|✓|
+|Web Features Services (WFS)|✓|✓|
+|Catalogue Services for the Web (CSW)|✓|✓|
+|Web Coverage Services (WCS)|✓|✓|
+|Web Processing Service (WPS)|✓|✓|
+|Web Map Context (WMC)| |✓|
+|Tile Map Service (TMS)| |✓|
+|Styled Layer Descriptor (SLD)|✓|✓|
+|User and group management|✓|✓|
+|Vector file upload|✓|✓|
+|Raster file upload|✓|✓|
+|Tabular file upload|✓|✓|
+|PDF file upload|✓|✓|
+|Online Editing| |✓|
+|Creation of new vector datasets| |✓|
+|Support commenting|✓|✓|
+|Generate charts|✓|✓|
+|Rate datasets| |✓|
+|Edit permissions|✓|✓|
+|Connection to other databases|✓|✓|
+|RSS feed|✓|  |
+|GeoRss|✓|✓|
+|Multilingual interface|✓|✓|
+|Open Archives Initiatives (OAI-PMH)|✓|  |
+|OpenSearch-Geo / INSPIRE Atom|✓| |
+ 
+
+## References
+- EU Directive 2019/1024, [https://eur-lex.europa.eu/legal-content/IT/TXT/PDF/?uri=OJ:L:2019:172:FULL&from=IT]()
+
+- Legislative Decree 200/2021, [https://www.gazzettaufficiale.it/atto/serie_generale/caricaDettaglioAtto/originario?atto.dataPubblicazioneGazzetta=2021-11-30&atto.codiceRedazionale=21G00213&elenco30giorni=false](https://www.gazzettaufficiale.it/atto/serie_generale/caricaDettaglioAtto/originario?atto.dataPubblicazioneGazzetta=2021-11-30&atto.codiceRedazionale=21G00213&elenco30giorni=false)
+- Geonetwork, [https://geonetwork-opensource.org/](https://geonetwork-opensource.org/)
+- Geonode, [https://geonode.org/](https://geonode.org/)
+- ISO/TC 211 Geographic information/Geomatics,  [https://www.ogc.org/ogc/partners/isotc211](https://www.ogc.org/ogc/partners/isotc211)
+- Open Geospatial Consortium, [https://www.ogc.org/](https://www.ogc.org/)
+- Dublin core, [https://www.dublincore.org/](https://www.dublincore.org/)
+- ISO 19110:2005, [https://www.iso.org/standard/39965.html](https://www.iso.org/standard/39965.html)
+- ISO 19139:2007, [https://www.iso.org/standard/32557.html](https://www.iso.org/standard/39965.html)
+- Geoserver, [https://geoserver.org/](https://geoserver.org/)
+- Geoexplorer, [https://github.com/GeoNode/geoexplorer](https://github.com/GeoNode/geoexplorer)
+- PyCSW, [https://pycsw.org/](https://pycsw.org/)
+- Django, [https://www.djangoproject.com/](https://www.djangoproject.com/)
+- GeoExt, [https://geoext.org/](https://geoext.org/)
+- Qgis, [https://www.qgis.org/it/site](https://www.qgis.org/it/site)
