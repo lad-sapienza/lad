@@ -1,0 +1,27 @@
+---
+/**
+ * Static client-side redirect stub (meta-refresh + JS), for GitHub Pages
+ * where server-side redirects aren't available. Used at every pre-i18n flat
+ * URL to send visitors/search engines/citations to the new /it/... location.
+ */
+interface Props {
+  target: string
+  title?: string
+}
+const { target, title = "LAD" } = Astro.props
+---
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="refresh" content={`0; url=${target}`} />
+    <link rel="canonical" href={target} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <p>Redirecting to <a href={target}>{target}</a>…</p>
+    <script is:inline define:vars={{ target }}>
+      window.location.replace(target);
+    </script>
+  </body>
+</html>

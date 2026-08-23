@@ -1,0 +1,22 @@
+---
+import BaseLayout from "@user/layouts/BaseLayout.astro"
+import { LOCALES, type Locale } from "@user/utils/i18n"
+
+export const prerender = true
+
+export function getStaticPaths() {
+  return LOCALES.map(locale => ({ params: { locale } }))
+}
+
+const { locale } = Astro.params as { locale: Locale }
+
+const { Content, frontmatter } = locale === "en"
+  ? await import("../../../content-pages/sviluppo.en.mdx")
+  : await import("../../../content-pages/sviluppo.it.mdx")
+---
+
+<BaseLayout locale={locale} title={frontmatter.title} description={frontmatter.description}>
+  <div class="prose max-w-none">
+    <Content />
+  </div>
+</BaseLayout>

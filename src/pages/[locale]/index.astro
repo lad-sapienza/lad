@@ -1,0 +1,265 @@
+---
+import BaseLayout from "@user/layouts/BaseLayout.astro"
+import { getCollection } from "astro:content"
+import { LOCALES, splitLocaleId, slugFromRest, type Locale } from "@user/utils/i18n"
+
+export const prerender = true
+
+export function getStaticPaths() {
+  return LOCALES.map(locale => ({ params: { locale } }))
+}
+
+const { locale } = Astro.params as { locale: Locale }
+
+// Get articles with home: true from all collections, in the current locale
+const inHomeForLocale = (entries: Awaited<ReturnType<typeof getCollection>>) =>
+  entries.filter(e => splitLocaleId(e.id).locale === locale && e.data.inhome === true)
+
+const blogArticles = inHomeForLocale(await getCollection("blog"))
+const didatticarticles = inHomeForLocale(await getCollection("didattica"))
+const notizieArticles = inHomeForLocale(await getCollection("notizie"))
+const ricercaArticles = inHomeForLocale(await getCollection("ricerca"))
+const sviluppoArticles = inHomeForLocale(await getCollection("sviluppo"))
+
+// Combine all home articles
+const homeArticles = [
+  ...blogArticles,
+  ...didatticarticles,
+  ...ricercaArticles,
+  ...notizieArticles,
+  ...sviluppoArticles,
+].sort((a, b) => {
+  // First, prioritize pinned articles
+  if (a.data.pinned && !b.data.pinned) return -1
+  if (!a.data.pinned && b.data.pinned) return 1
+
+  // Then sort by order value (lower numbers first)
+  const sortA = a.data.order
+  const sortB = b.data.order
+  if (sortA !== undefined && sortB !== undefined) return sortA - sortB
+  if (sortA !== undefined) return -1
+  if (sortB !== undefined) return 1
+
+  // Finally, sort by date descending
+  const dateA = a.data.date ? new Date(a.data.date).getTime() : 0
+  const dateB = b.data.date ? new Date(b.data.date).getTime() : 0
+  return dateB - dateA
+})
+
+const SECTION_LABELS: Record<string, { it: string; en: string }> = {
+  blog: { it: "blog", en: "blog" },
+  didattica: { it: "didattica", en: "teaching" },
+  notizie: { it: "notizie", en: "news" },
+  ricerca: { it: "ricerca", en: "research" },
+  sviluppo: { it: "sviluppo", en: "development" },
+}
+
+const COPY = {
+  it: {
+    title: "LAD: Laboratorio di Archeologia Digitale alla Sapienza",
+    description: "Homepage project",
+    h1: "LAD: Laboratorio di Archeologia Digitale alla Sapienza",
+    intro: "LAD: Laboratorio di Archeologia Digitale alla Sapienza promuove la ricerca, la sperimentazione e la didattica delle tecnologie digitali per l'archeologia e più in generale per gli studi umanistici. Il LAD contribuisce allo sviluppo e promozione della cultura FLOS (free, libre e open source) e alla pubblicazione ad accesso aperto di dati e risultati della ricerca.",
+    whatWeDoTitle: "Cosa facciamo",
+    whatWeDo1Before: "Il LAD sperimenta l'applicazione delle tecnologie alla ricerca archeologica, ",
+    whatWeDo1LinkText: "sul campo",
+    whatWeDo1After: " e nei laboratori. Negli ultimi decenni Internet e il suo più famoso servizio, il Web, hanno letteralmente invaso le nostre vite, diventando strumenti di comunicazione sempre più totalizzanti, un'esperienza che si è vista esasperare durante i lunghi periodi di isolamento sociale dovuto alla pandemia. Da vari anni, anche la ricerca archeologica ha sperimentato i canali comunicativi offerti dalla Rete, all'inizio esclusivamente per raccontarsi e allargare il proprio pubblico e, successivamente, anche per potenziare la propria ricerca. Banche dati online, webGIS, cloud computing e ora anche intelligenza artificiale sono solo alcune delle parole chiave che stanno diventando sempre più familiari anche per le ricerche \"tradizionali\".",
+    whatWeDo2: "Il LAD è rivolto all'esplorazione di queste potenzialità, a creare ponti e facilitare l'interscambio tra la ricerca archeologia e il mondo dell'Information and Communication Technology (ICT). Il LAD quindi cerca di studiare, indagare, capire, esplorare, governare ed anticipare quello che sembra ormai essere il panorama futuro della nostra ricerca.",
+    whatWeDo3: "Infine, il LAD sposa una visione etica delle applicazioni tecnologiche, ponendo l'accento sulla trasparenza dei processi, la condivisione, la riproducibilità e la reciproca collaborazione. Per questo motivo pone il focus principale sulle tecnologie open source e sul software libero. Tutti i nostri progetti sono distribuiti con licenze aperte e pubblicati in repository ad accesso aperto!",
+    whatWeDo4LinkText: "Dal 2021, il LAD è impegnato sul campo con un progetto internazionale di ricerca e scavo archeologico nel sito di Çuka e Ajtoit, antica Kestría, in Albania meridionale.",
+    methodsTitle: "Metodologie e strumenti",
+    methods1: "Il LAD ha maturato una lunga esperienza nell'ideazione, creazione e implementazioni di Sistemi Informativi Archeologici sperimentando e consolidando strumenti relativi alla gestione di banche dati relazionali, piattaforme GIS, WebGIS e strumenti innovativi per la gestione e pubblicazione digitale dei dati archeologici attraverso tecnologie Web.",
+    methods2: "Inoltre, il LAD ha maturato nel tempo molta esperienza nel rilievo archeologico tradizionale e strumentale, diretto e indiretto. Total station e droni per il rilievo fotogrammetrico fanno parte del nostro strumentario di ricerca sul campo.",
+    methods3: "Ecco una lista non ragionata e in ordine alfabetico di strumenti, linguaggi, standard, software, ecc. con i quali ci troviamo estremamente a nostro agio e che usiamo quotidianamente:",
+    institutionalTitle: "Quadro istituzionale e collaborazioni",
+    institutional1Before: "Il LAD è un laboratorio stabile ufficiale del ",
+    institutional1LinkText: "Dipartimento SARAS",
+    institutional1Mid: " della ",
+    institutional1LinkText2: "Sapienza Università di Roma",
+    institutional1After: ".",
+    institutional2Before: "Dal 2022 il LAD ha attivato una convenzione di ricerca scientifica con il ",
+    institutional2LinkText: "Consortium GARR",
+    institutional2Mid: " per la fornitura di servizi istituzionali relativi alla piattaforma ",
+    institutional2LinkText2: "Cloud GARR",
+    institutional2After: ", con data center localizzati in Italia.",
+    inEvidenza: "In evidenza",
+    sezione: "Sezione:",
+  },
+  en: {
+    title: "LAD: Laboratory of Digital Archaeology at Sapienza",
+    description: "Homepage project",
+    h1: "LAD: Laboratory of Digital Archaeology at Sapienza",
+    intro: "LAD: Laboratory of Digital Archaeology at Sapienza promotes research, experimentation, and teaching of digital technologies for archaeology and, more broadly, the humanities. LAD contributes to the development and promotion of FLOS culture (free, libre and open source) and to open-access publication of research data and results.",
+    whatWeDoTitle: "What we do",
+    whatWeDo1Before: "LAD experiments with applying technology to archaeological research, ",
+    whatWeDo1LinkText: "in the field",
+    whatWeDo1After: " and in the lab. Over the last few decades the Internet and its best-known service, the Web, have literally taken over our lives, becoming ever more all-encompassing communication tools — an experience that intensified during the long periods of social isolation caused by the pandemic. For several years now, archaeological research too has experimented with the communication channels offered by the Web, at first purely to reach and grow its audience, and later also to strengthen the research itself. Online databases, WebGIS, cloud computing, and now also artificial intelligence are just some of the keywords becoming increasingly familiar even to \"traditional\" research.",
+    whatWeDo2: "LAD is dedicated to exploring this potential, building bridges and facilitating exchange between archaeological research and the world of Information and Communication Technology (ICT). LAD therefore seeks to study, investigate, understand, explore, govern, and anticipate what now seems to be the future landscape of our research.",
+    whatWeDo3: "Finally, LAD embraces an ethical view of technological applications, emphasizing transparency of process, sharing, reproducibility, and mutual collaboration. For this reason it focuses primarily on open source technologies and free software. All our projects are distributed under open licenses and published in open-access repositories!",
+    whatWeDo4LinkText: "Since 2021, LAD has been active in the field with an international research and excavation project at the site of Çuka e Ajtoit, ancient Kestría, in southern Albania.",
+    methodsTitle: "Methods and tools",
+    methods1: "LAD has built up long experience in designing, creating, and implementing Archaeological Information Systems, experimenting with and consolidating tools for managing relational databases, GIS platforms, WebGIS, and innovative tools for the digital management and publication of archaeological data through Web technologies.",
+    methods2: "LAD has also built up considerable experience over time in traditional and instrumental archaeological survey, both direct and indirect. Total stations and drones for photogrammetric survey are part of our fieldwork research toolkit.",
+    methods3: "Here is an unranked, alphabetically ordered list of tools, languages, standards, software, etc. that we're extremely comfortable with and use on a daily basis:",
+    institutionalTitle: "Institutional framework and collaborations",
+    institutional1Before: "LAD is an official stable laboratory of the ",
+    institutional1LinkText: "SARAS Department",
+    institutional1Mid: " of ",
+    institutional1LinkText2: "Sapienza University of Rome",
+    institutional1After: ".",
+    institutional2Before: "Since 2022 LAD has had a scientific research agreement with the ",
+    institutional2LinkText: "GARR Consortium",
+    institutional2Mid: " for the provision of institutional services related to the ",
+    institutional2LinkText2: "GARR Cloud",
+    institutional2After: " platform, with data centers located in Italy.",
+    inEvidenza: "Highlights",
+    sezione: "Section:",
+  },
+} as const
+const c = COPY[locale]
+---
+
+<BaseLayout locale={locale} title={c.title} description={c.description}>
+  <div class="row">
+    <div class="col-sm-8">
+      <div class="max-w-none">
+        <!-- Hero Section -->
+        <div class="my-5">
+          <h1>{c.h1}</h1>
+          <p class="lead">
+            {c.intro}
+          </p>
+        </div>
+
+        <!-- What We Do Section -->
+        <section class="my-5">
+          <h2>{c.whatWeDoTitle}</h2>
+          <p>
+            {c.whatWeDo1Before}<a
+              href={`/${locale}/ricerca/missione-archeologica-sapienza-a-cuka-e-ajtoit-albania/`}
+              class="text-blue-600 hover:text-blue-800 hover:underline"
+              >{c.whatWeDo1LinkText}</a
+            >{c.whatWeDo1After}
+          </p>
+
+          <p>
+            {c.whatWeDo2}
+          </p>
+
+          <p>
+            {c.whatWeDo3}
+          </p>
+
+          <p>
+            <a
+              href={`/${locale}/ricerca/missione-archeologica-sapienza-a-cuka-e-ajtoit-albania/`}
+              class="text-blue-600 hover:text-blue-800 hover:underline"
+              >{c.whatWeDo4LinkText}</a
+            >
+          </p>
+        </section>
+
+        <!-- Methods and Tools Section -->
+        <section class="my-5">
+          <h2>{c.methodsTitle}</h2>
+
+          <p>
+            {c.methods1}
+          </p>
+
+          <p>
+            {c.methods2}
+          </p>
+
+          <p>
+            {c.methods3}
+          </p>
+
+          <blockquote class="blockquote">
+            Adobe Illustrator, Adobe Indesign, Adobe Photoshop, Agisoft
+            Metashape, ArcGIS, Astro.js, AutoCAD, Bash, BraDypUS, Cartografia Storica
+            Digitale, CSS, Debian, Droni, E-publishing, Fotogrammetria, GARR
+            Cloud, Gatsby, Gimp, Git, GNSS, GPS, GRASS, GNU / Linux, HTML,
+            Imagemagick, Inkscape, JavaScript, Jekyll, LAP (Laser Aided
+            Profiler), Laser Scanner, Leaflet, MapLibre, Mapserver, MySQL, PHP,
+            PostgreSQL, QGIS, React, SQLite, Stazione Totale, Vector Tiles, Web
+            Server, WebGIS, WebMapping, WebTiles.
+          </blockquote>
+        </section>
+
+        <!-- Institutional Framework Section -->
+        <section class="my-5">
+          <h2>{c.institutionalTitle}</h2>
+
+          <p>
+            {c.institutional1Before}<a
+              href="https://saras.uniroma1.it/"
+              class="text-blue-600 hover:text-blue-800 hover:underline"
+              >{c.institutional1LinkText}</a
+            >{c.institutional1Mid}<a
+              href="https://www.uniroma1.it/"
+              class="text-blue-600 hover:text-blue-800 hover:underline"
+              >{c.institutional1LinkText2}</a
+            >{c.institutional1After}
+          </p>
+
+          <p>
+            {c.institutional2Before}<a
+              href="https://www.garr.it/"
+              class="text-blue-600 hover:text-blue-800 hover:underline"
+              >{c.institutional2LinkText}</a
+            >{c.institutional2Mid}<a
+              href="https://www.garr.it/it/infrastrutture/infrastruttura-cloud/infrastruttura-cloud"
+              class="text-blue-600 hover:text-blue-800 hover:underline"
+              >{c.institutional2LinkText2}</a
+            >{c.institutional2After}
+          </p>
+        </section>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="container mb-3">
+        <h2 class="border-bottom text-center">{c.inEvidenza}</h2>
+        {
+          homeArticles.map((article) => {
+            const slug = slugFromRest(splitLocaleId(article.id).rest)
+            const href = `/${locale}/${article.collection}/${slug}/`
+            const imgHref = article.data.img ? `/${article.collection}/it/${slug}/${article.data.img}` : undefined
+            const sectionLabel = SECTION_LABELS[article.collection]?.[locale] ?? article.collection
+            return (
+            <div
+              class={`shadow mb-4 p-3${article.data.pinned ? " border border-primary" : ""}`}
+            >
+              {imgHref && (
+                <img
+                  src={imgHref}
+                  alt={article.data.title}
+                  class="img-fluid mb-3"
+                />
+              )}
+              <h5 class="text-center">
+                <a
+                  href={href}
+                  class="text-decoration-none text-secondary fw-medium"
+                >
+                  {article.data.title}
+                </a>
+              </h5>
+              <div class="mt-3 p-2 fs-6 bg-light text-end">
+                {c.sezione}
+                <a
+                  title={`${article.collection}`}
+                  class="text-capitalize"
+                  href={`/${locale}/${article.collection}/`}
+                >
+                  {sectionLabel}
+                </a>
+              </div>
+            </div>
+            )
+          })
+        }
+      </div>
+    </div>
+  </div>
+</BaseLayout>

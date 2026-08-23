@@ -1,0 +1,92 @@
+---
+title: "DirectusImporter: a new plugin for integrating Directus data into QGIS"
+author: Julian Bogdani
+licenza: CC BY 4.0 International
+livello: base
+tags: [GIS, QGIS, Database, FLOSS, Geographic Data, Coding, Directus]
+img: DirectusImporter.jpg
+date: 2025-06-05
+description: "In this article we present DirectusImporter, a plugin developed by LAD at Sapienza to simplify and automate the integration of data stored in Directus into QGIS"
+---
+
+# DirectusImporter: a new plugin for integrating Directus data into QGIS
+
+We are happy to announce the release of **DirectusImporter**, a plugin developed by the Digital Archaeology Laboratory (LAD) at Sapienza to simplify and automate the integration of data stored in **Directus** into **QGIS**.
+
+The plugin was designed to support day-to-day work in the field and in the lab, making it possible to view and query, directly within a GIS environment, the information collected and managed through our backend on [Directus](https://directus.io/).
+
+The plugin's source code is available on GitHub at:  
+🔗 [https://github.com/lad-sapienza/DirectusImporter](https://github.com/lad-sapienza/DirectusImporter) and is released under the [GNU GPL 3 license](https://github.com/lad-sapienza/DirectusImporter/blob/main/LICENSE).
+
+---
+
+## What is DirectusImporter?
+
+**DirectusImporter** is a QGIS plugin written in Python that allows you to:
+
+- connect to a specific Directus instance configured as the geographic data backend;
+- query a Directus collection that contains geometries;
+- download and display the features as layers in QGIS;
+- access the metadata and custom fields defined in the CMS.
+
+The plugin is designed to be easily adaptable to different projects and fits perfectly with the open source philosophy that characterizes the tools used by LAD.
+
+---
+
+## How it works
+
+Once the plugin is installed (see instructions on GitHub), you can:
+
+1. **Configure access** to a specific Directus instance by providing the API URL, the collection to query and an authentication key (token).
+2. **Load the data** with a simple click, obtaining a vector layer in QGIS updated with the data contained in Directus.
+3. **Explore the attributes** directly from the QGIS attribute panel, including any images, links and complex values.
+
+---
+
+## Why use it?
+
+In our day-to-day work, Directus is often used to manage heterogeneous and complex archaeological data: stratigraphic units, photographic documentation, information from laser scanning and photogrammetric surveys. Bringing this information into QGIS without manual conversions or intermediate exports represents a considerable advantage in terms of efficiency, data consistency and real-time updating.
+
+This plugin was therefore born as a concrete response to operational needs encountered in our field projects, particularly in Albania and Greece, and is meant to be shared as a contribution to the scientific community that adopts open source solutions.
+
+---
+
+## Screenshots
+
+
+![01-directusimporter-in-menu.jpg](/blog/it/directusimport-qgis-plugin-di-lad/01-directusimporter-in-menu.jpg)
+*Starting the plugin in QGIS.*
+
+---
+
+![02-directusimporter-configurazione.jpg](/blog/it/directusimport-qgis-plugin-di-lad/02-directusimporter-configurazione.jpg)
+*Configuration interface of the DirectusImporter plugin with the connection parameters for the Directus instance.*
+
+---
+
+![03-vista-layer-caricato-nel-progetto.jpg](/blog/it/directusimport-qgis-plugin-di-lad/03-vista-layer-caricato-nel-progetto.jpg)
+*A vector layer loaded in QGIS directly from a data collection managed on Directus.*
+
+---
+
+![04-vista-tabella-attributi.jpg](/blog/it/directusimport-qgis-plugin-di-lad/04-vista-tabella-attributi.jpg)
+*Display of attributes coming from Directus, including metadata and links to multimedia content.*
+
+---
+
+![05-query-builder.jpg](/blog/it/directusimport-qgis-plugin-di-lad/05-query-builder.jpg)
+*Filter interface using QGIS's Query Builder system*
+
+---
+
+![06-vista-della-repository-su-github.jpg](/blog/it/directusimport-qgis-plugin-di-lad/06-vista-della-repository-su-github.jpg)
+*The homepage of the GitHub repository from which you can download the plugin and consult the documentation.*
+
+
+---
+
+## Try it and contribute
+
+The plugin is under active development: field-testing it and gathering feedback is an integral part of the process. Anyone who wants to try it is invited to download it from the [GitHub repository](https://github.com/lad-sapienza/DirectusImporter) and to report any issues or suggestions via the [issue tracker](https://github.com/lad-sapienza/DirectusImporter/issues).
+
+For any questions or further information, you can contact us directly through the [LAD website](https://lad.saras.uniroma1.it) or write to: [julian.bogdani@uniroma1.it](mailto:julian.bogdani@uniroma1.it).

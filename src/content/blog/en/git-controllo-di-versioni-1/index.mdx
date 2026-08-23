@@ -1,0 +1,153 @@
+---
+title: "Git: open source version control #1"
+author: Julian Bogdani
+licenza: CC BY 4.0 International
+livello: avanzato
+tags: [Reflections and Notes, Open Source, Git, Version Control, Tutorial, Coding]
+img: git-logo.jpg
+date: 2022-04-26
+description: "Git is today the most famous and widely used software for version control, used in the vast majority of software development projects, but it can also be extremely useful in many different scenarios that have nothing to do with development as such."
+---
+
+## Foreword
+
+This article is the first in a series dedicated to Git, an _open source_ version control software. As the next articles are ready, they will be listed below for ease of reference. As a working example, we will use the creation of an excavation diary using text files written in [Markdown](https://daringfireball.net/projects/markdown/), so this guide has the dual purpose of explaining the basic workings of Git while at the same time providing an example of good practice for the collaborative drafting of a possible excavation diary.
+
+## Introduction
+
+In simple terms, Git is software designed for version control, that is, a system that makes it possible to keep track of every change made to the digital files in a _repository_, typically the files containing a software project's source code. Specifically, it is a **distributed** version control system, which means that each user who uses it has a complete copy of the change database locally on their own computer, and does not necessarily need to refer to a main copy on a remote server, as is the case with other similar projects that were also very famous in the past, such as [Subversion](https://it.wikipedia.org/wiki/Subversion) and [Mercurial](https://it.wikipedia.org/wiki/Mercurial).
+
+Git was created by [Linus Torvalds](https://it.wikipedia.org/wiki/Linus_Torvalds), the creator of the [Linux _kernel_](https://it.wikipedia.org/wiki/Linux_(kernel)), in 2005, drawing inspiration from other proprietary projects, precisely in order to create a tool for managing the development of Linux.
+
+
+Git underpins extremely widespread platforms and projects for collaborative development, such as [GitHub](https://github.com/), [BitBucket](https://bitbucket.org/), [GitLab](https://gitlab.com/) and [Codeberg](https://codeberg.org/).
+
+But Git can also be used outside what might be considered the narrow field of collaborative development, and in general it is extremely useful in any context where it is necessary to keep track of changes over time to a file or an entire folder, with the ability to "rewind" time and return to a specific point in the file's past history, without losing the overall history of changes, past and future.
+
+In short, it is possible to do without creating a series of differently named files just to keep track of changes over time:
+- `testo_finale`
+- `testo_finale2`
+- `testo_finale_rev`
+- `testo_finale_rev_corr`
+- `testo_finale_rev_corr2`
+- `testo_finale_rev_corr2b`
+- `testo_finale_rev_corr2b-2022-4-6`
+- `testo_finale_def`
+- `testo_finale_def-2`
+
+Before taking a deeper look, however, a few initial clarifications are needed:
+- Git was designed to be used through a command-line interface, so you need access to a terminal, even though various graphical solutions exist. For simplicity, this guide will refer only to terminal commands.
+- Git works with any type of file, even large files, through specific extensions. It should be noted, however, that it is with text files that Git performs best in terms of efficiency and speed, since it lets us see even the individual lines of text that have changed. Since Git uses the SHA-1 cryptographic algorithm ([Secure Hash Algorithm 1](https://en.wikipedia.org/wiki/SHA-1)) to compute the hash of each file, some waiting time may be needed for large repositories.
+
+## Basic concepts
+Git's operation is based on a few fundamental concepts, which are worth clarifying before proceeding with the guide.
+- A `repository` refers to the set of files being placed under version control. The concept of a repository coincides with that of the top-level folder containing the entire project.
+- `stage` refers to an intermediate state of our changes, whose history is "photographed" — a snapshot, then, that has not yet been saved to the main history of changes.
+- `commit` refers to the action by which a snapshot, i.e. some changes found in the `stage`, is recorded in the main database.
+- `remote` refers to any remote copy of our repository, hosted on a server. We can use Git without needing a remote copy, but if we plan to collaborate with other people, then we need to allow for the possibility of a remote copy that serves as a reference point for all collaborators.
+- `branch` refers to a fundamental Git feature, namely the ability to create a line of changes parallel to the main one, where one or more collaborators can work freely without touching the main branch. Once it is felt that the changes on the secondary branch have reached a sufficient degree of maturity, that `branch` can be merged (`merge`) into the main one. After this merge, the secondary `branch` can be deleted. Git's documentation states that `branch`es are cheap in terms of space and resources, and their extensive use is therefore recommended.
+- `conflict` refers to the situation that arises when changes to the same file have been recorded by multiple collaborators, requiring an explicit action to resolve the issue. Text files are annotated internally, flagging the individual portions of text that each collaborator has changed, making it possible to resolve the conflict in great detail.
+
+## Simplified guide with examples
+
+> **Note**  
+>In this guide we will use the terminal for all operations, both for Git and for interacting with the filesystem and individual files. Naturally, many of these operations can also be performed with other tools, such as your operating system's file manager and a text editor. Operations that can be performed with other tools are marked with (*)
+
+### Creating the repository
+Let's create a folder that will contain our project*
+
+```bash
+mkdir diario-di-scavo
+```
+
+We then move into the new folder*
+
+```bash
+cd diario-di-scavo
+```
+We start Git for this folder, i.e. we create the repository
+
+```bash
+git init
+```
+And we will get a response similar to this:
+
+```bash
+Initialized empty Git repository in /some/path/diario-di-scavo/.git/
+```
+
+We have started our first Git repository; now let's add a few files. For this guide we will use text files written in [Markdown](https://daringfireball.net/projects/markdown/), a markup language that is extremely easy to write and read.
+
+Let's create a new file called `index.md` inside the folder*
+```bash
+touch index.md
+```
+
+Let's open the file and add some text*
+```bash
+nano index.md
+```
+
+And let's write*
+```md
+# Diario di scavo
+Questo repository contiene il diario di scavo diviso per settori e in ordine cronologico.
+```
+Then we save and close the file by pressing `ctr+x` and answering `y` to the question of whether we want to save, then Enter, confirming the file name.
+
+We have added a new file, but Git has not yet saved these changes to its own database. Git does not track changes automatically, and it is always up to us, explicitly, to add each change to its history of changes.
+
+At any point, you can check the status of our repository with `git status`, even at this early stage when we are not yet tracking any file:
+
+```bash
+git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	index.md
+
+nothing added to commit but untracked files present (use "git add" to track)
+```
+
+The _report_ tells us that we are on the master branch (`On branch master`). Even though we did not provide any information on how we intended to organize the _repository_, Git creates an initial `branch` for us called `master`.  
+The report also tells us that there are no `commit`s available yet (`No commits yet`).  
+It then gives us a list of the files present in the folder that have not yet been flagged to Git for tracking, in this case the file `index.md`.  
+Finally, the command also gives us some suggestions on how to proceed with tracking the files.
+
+This action consists of two steps: adding each of the modified files to the `stage` (see [Basic concepts](#basic-concepts) above), effectively creating a snapshot of our _repository_, and then adding this snapshot to the Git database by making a `commit` (see [Basic concepts](#basic-concepts) above).
+
+```bash
+git add index.md
+```
+
+`git add` adds a file to the snapshot, index, or `stage`. Individual files can be listed one by one after the command (as we did for `index.md`), or the `*` character can be used to mean all modified files.
+
+If, on the other hand, you want to remove a specific file from the `stage`, the command `git reset -- <file name>` is available. **Purely as an example**, the command to remove index.md from the `stage` would be (we do not need to run it for now):
+
+```bash
+git reset -- index.md
+```
+
+Finally, to add the snapshot to the Git database, we need to use the `commit` command, which requires adding a text message. The recommendation is to describe the change made in this message as precisely and concisely as possible, so as to provide useful information to our collaborators (or to our future selves). So here is what our first `commit` command might look like:
+
+```bash
+git commit -m "Primo commit: aggiunto index.md"
+```
+
+The program will give us a _report_ similar to the following:
+
+```bash
+[master (root-commit) c5bea7e] Primo commit: aggiunto index.md
+ 1 file changed, 3 insertions(+)
+ create mode 100644 index.md
+```
+
+Specifically, `c5bea7e` is the first 7 characters of the `commit`'s `hash`, or fingerprint, which serve as its identifier. For Git, this is the name we must use to refer to this `commit` whenever needed.  
+The report goes on to tell us that 1 file was changed (`1 file changed`), and specifically that 3 new lines were inserted (`3 insertions(+)`).
+
+Every time a new change is made to files under version control, these changes can be added to the general history with the commands `git add <file name>` and `git commit -m "Commit message>`.
+
+Congratulations, you have taken your first steps into the world of `git` and collaboration.

@@ -1,0 +1,125 @@
+---
+title: "Development"
+description: "LAD's main software development projects — Laboratory of Digital Archaeology at Sapienza"
+---
+
+
+# Development
+
+<div className="lead">
+  This page collects the main development projects of LAD:
+  Laboratory of Digital Archaeology at Sapienza. It's an overall
+  index of projects and ideas hosted on our
+  [GitHub](https://github.com/lad-sapienza/) repositories, in various
+  stages of development, testing, release, and maintenance.
+
+  For projects covered by a [blog](../blog/) post, we invite you to check
+  the Blog section of the website, where you'll find reviews, tutorials,
+  and in-depth looks at the various tools and technologies developed by LAD.
+</div>
+
+## BraDypUS web database system
+BraDypUS is an open source system, developed by LAD (Laboratory of Digital Archaeology at Sapienza), for creating, managing, and publishing relational databases on the Web, with particular attention to the archaeological and cultural heritage domain.
+The platform, released under the GNU AGPL-3.0 license, offers advanced tools for full-text search, dynamic Harris Matrix creation, and graphical data analysis through interactive charts.
+Currently, about thirty Italian and international research projects use BraDypUS for managing and publishing archaeological data.
+Since 2023, an [Educational](https://bdus.cloud/db/edu) service has also been active, dedicated to young researchers, PhD students, and postdocs, allowing them to host and publish research data simply and flexibly.
+- Github: [https://github.com/lad-sapienza/BraDypUS](https://github.com/lad-sapienza/BraDypUS)
+- License: [GNU AGPL-3.0](https://www.gnu.org/licenses/agpl-3.0.html)
+- Website: [bdus.cloud](https://bdus.cloud/)
+- [Version 4 release announcement](https://lad-sapienza.it/notizie/2023-06-15-bradypus-cloud-databases/)
+
+---
+
+## geoNamesFromPdf
+geoNamesFromPdf is an open source tool developed by LAD for the automatic extraction of place names from PDF documents, through Named Entity Recognition (NER) with [spaCy](https://spacy.io/) and automatic language detection.
+The tool supports more than 10 languages, uses large language models for greater accuracy, and allows extracting cities, countries, regions, and geographic points of interest directly from PDF files.
+A custom gazetteer (a list of place names) can be integrated to improve results, useful also for documents in ancient languages or special cases.
+geoNamesFromPdf offers both a simple command-line interface and a GUI (PyQt) for interactive use, and is designed for quick, frictionless setup even for non-technical users.
+  - Github: [https://github.com/lad-sapienza/geoNamesFromPdf](https://github.com/lad-sapienza/geoNamesFromPdf)
+  - Blog: [Automatic extraction of place names from PDF documents with Named Entity Recognition](../blog/estrarre-nomi-geografici-da-file-pdf/)
+  - License: [MIT](https://opensource.org/licenses/MIT)
+  - Languages: Python, Shell
+  - Main dependencies: PyMuPDF, spaCy, langdetect, PyQt5
+
+---
+
+## s:CMS
+s:CMS is an open source system developed by LAD for creating and managing static websites, designed for publishing research data, portals, and digital projects.
+Built on [Astro](https://astro.build/), React, and MDX, s:CMS offers ready-to-use components for integrating, displaying, and analyzing data from databases, static files, or remote services: interactive maps (MapLibre), searchable tables, galleries, and much more.
+The framework layer is an ordinary npm package (`@lad-sapienza/scms-core`), so it updates like any other dependency — with no custom sync script and no protected folder to worry about.
+s:CMS supports integration with [Directus](https://directus.io/) for data management, uses Astro Content Collections with Zod validation, and is customized through Bootstrap 5 and CSS custom properties.
+  - Github: [https://github.com/lad-sapienza/sCMS](https://github.com/lad-sapienza/sCMS)
+  - License: [0BSD](https://github.com/lad-sapienza/sCMS/blob/main/LICENSE)
+  - Technologies: Astro, React, MDX, TypeScript, Bootstrap 5, MapLibre
+  - Demo site: [scms.lad-sapienza.it](https://scms.lad-sapienza.it/)
+  - Blog: [s:CMS version 6 released: from Gatsby to Astro](../blog/scms-v6-da-gatsby-ad-astro/)
+
+---
+
+## CeraLoop
+
+CeraLoop is an open source web app developed by LAD for evaluating and ranking ceramic images proposed by AI models. The app is designed to collect human judgments that can help validate and improve similarity algorithms: users can rank the proposed images, exclude irrelevant ones, and save their assessments, which are stored with weighted scores useful for further analysis.
+
+The interface is designed to be immediate and usable on both desktop and touch devices: reordering images happens via drag-and-drop, but alternative touch controls are also available. The time spent on each assessment is automatically recorded, and submissions can be saved and, if needed, deleted. The app also includes a report page with progress statistics (completion percentage, per-item counts, summary visualizations) and a user profile where background information can be recorded (education level, experience in archaeology and ceramic documentation) that can be used to weight the collected data.
+
+**Resources**
+- Github: [https://github.com/lad-sapienza/ceraloop](https://github.com/lad-sapienza/ceraloop)
+- License: [MIT](https://opensource.org/licenses/MIT)
+- Demo: [ceraloop.lad-sapienza.it](https://ceraloop.lad-sapienza.it/)
+- Application overview: [https://lad.saras.uniroma1.it/ricerca/ceraloop/](https://lad.saras.uniroma1.it/ricerca/ceraloop/)
+
+---
+
+## Directus: Harris Matrix (extension)
+
+`directus-extension-harris-matrix` is a layout extension for Directus developed by LAD that integrates graphical visualization of stratigraphy (Harris Matrix) directly into the admin interface. The tool is designed for archaeological projects: it allows representing and exploring stratigraphic relationships between contexts, supporting the reconstruction of sequences and the analysis of depositional sequences without leaving the Directus environment.
+
+The extension provides two rendering engines: the "Standard" engine shows all relationships exactly as recorded, while the "Carafa" engine applies a transitive reduction (via Graphviz) and groups contemporary contexts to simplify reading complex graphs. To work correctly it requires modeling the database with two main collections (e.g. `contexts` and `stratigraphic_relationships`) and configuring the One-to-Many / Many-to-One relations that link the records. Graphs can be exported in JGF (JSON Graph Format) for external analysis, and detailed documentation and a video tutorial are available showing how to prepare the collections and use the extension.
+
+Installation is simple: create (if it doesn't already exist) the `extensions` directory at the root of the Directus instance, copy this extension's `package.json` and `dist` folder into `extensions/directus-extension-harris-matrix/`, and restart Directus. On the technology side, the extension is developed in JavaScript with a Vue frontend and uses Graphviz for graph simplification in the Carafa engine; it installs and integrates like any ordinary Directus layout extension.
+
+**Resources**
+- Github: [https://github.com/lad-sapienza/directus-extension-harris-matrix](https://github.com/lad-sapienza/directus-extension-harris-matrix)
+- License: [GNU AGPL-3.0](https://www.gnu.org/licenses/agpl-3.0.en.html)
+- Video tutorial (configuring Directus for HMDE): [https://youtu.be/yEDQMQqO87I](https://youtu.be/yEDQMQqO87I)
+- Extension overview: [https://lad.saras.uniroma1.it/blog/la-visualizzazione-del-dato-stratigrafico-in-directus-io/](https://lad.saras.uniroma1.it/blog/la-visualizzazione-del-dato-stratigrafico-in-directus-io/)
+
+---
+
+## Directus: Zotero Sync (extension)
+
+`directus-extension-zotero-sync` is an extension developed by LAD that automates bibliographic citation management by connecting Directus to a Zotero group library. The extension acts as a scheduled hook that, every night, queries the Zotero API to retrieve formatted citations and populate the HTML fields of bibliographic entries in Directus (e.g. the `full_record` field), while updating a `last_synced` timestamp to track the last synchronization.
+
+The architecture is designed to reduce data duplication: users search for and select items from Zotero via autocomplete, and the system stores the Zotero key and automatically completes the citation. A nightly sync process handles records in batches (up to 50 per run) and manages retries and rate limits imposed by the Zotero API. To work, it requires a supporting table (in the example project, `site_bib_cit`) with fields such as `id`, `zotero`, `full_record`, and `last_synced`, and the configuration of the `ZOTERO_GROUP_ID` environment variable.
+
+**Resources**
+- Github: [https://github.com/lad-sapienza/directus-extension-zotero-sync](https://github.com/lad-sapienza/directus-extension-zotero-sync)
+- Article: [Automating bibliographic management in Directus (LAD blog)](https://lad.saras.uniroma1.it/blog/estensione-di%20sincronizzazione-directus-zotero/)
+- License: [GNU AGPL-3.0](https://www.gnu.org/licenses/agpl-3.0.en.html)
+
+---
+
+## Directus: DirectusImporter (QGIS plugin)
+
+DirectusImporter is a QGIS plugin developed by LAD that allows importing spatial and non-spatial data from a Directus instance directly into QGIS. After configuring the API URL and (optionally) the access token, users can browse the available collections, choose the geometry field, and load features as vector layers; the plugin also supports selecting which fields to import, pagination handling, a local cache to improve performance, and a debug mode for development.
+
+The plugin is designed for field and lab workflows where it's necessary to view and analyze in QGIS data managed via Directus (surveys, stratigraphic units, images, and metadata) without manual export steps. Installation is simple: download the release from the GitHub repository and install via QGIS (Plugins > Manage and Install Plugins > Install from ZIP), or download the code and follow the development instructions in the README.
+
+Main requirements: QGIS 3.10 or higher, GDAL/OGR bindings (`osgeo`), and the `requests` library for HTTP calls. The project is released under the GNU GPL-3.0 license.
+
+**Resources**
+- Blog: [DirectusImporter — Directus integration in QGIS](https://lad.saras.uniroma1.it/blog/directusimport-qgis-plugin-di-lad/)
+- Github: [https://github.com/lad-sapienza/DirectusImporter](https://github.com/lad-sapienza/DirectusImporter)
+- License: [GNU GPL-3.0](https://github.com/lad-sapienza/DirectusImporter/blob/main/LICENSE)
+
+---
+
+## BdusApiPhpClient
+
+BdusApiPhpClient is an open source client written in PHP that provides a lightweight interface for interacting with the BraDypUS API. The library acts as a wrapper around the BraDypUS API (documented at `docs.bdus.cloud/api/`) and simplifies common operations such as getting the API version, retrieving unique values for a column with suggestions and filters, inspecting database and individual table configuration, running searches (via array or ShortSQL) with pagination, and retrieving individual records by ID.
+
+Installation is convenient via [Composer](https://getcomposer.org/), or the library can be included manually in the project. It is designed to be simple to use and integrate into existing PHP projects, providing intuitive methods for interacting with BraDypUS functionality without having to handle HTTP calls directly.
+
+**Resources**
+- Github: [https://github.com/lad-sapienza/BdusApiPhpClient](https://github.com/lad-sapienza/BdusApiPhpClient)
+- License: [MIT](https://github.com/lad-sapienza/BdusApiPhpClient/blob/master/LICENSE)

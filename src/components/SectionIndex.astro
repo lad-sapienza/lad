@@ -1,21 +1,24 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro"
 import { getCollection } from "astro:content"
+import { splitLocaleId, slugFromRest, type Locale } from "@user/utils/i18n"
 
 export interface Props {
   title: string
   description: string
   collection: string
+  locale: Locale
 }
 
-const { title, description, collection } = Astro.props
+const { title, description, collection, locale } = Astro.props
 
 const allowedCollections = ["blog", "didattica", "notizie", "ricerca", "sviluppo"] as const;
 type AllowedCollection = typeof allowedCollections[number];
 if (!allowedCollections.includes(collection as AllowedCollection)) {
   throw new Error(`Invalid collection: ${collection}`);
 }
-const articles = await getCollection(collection as AllowedCollection)
+const allArticles = await getCollection(collection as AllowedCollection)
+const articles = allArticles.filter(a => splitLocaleId(a.id).locale === locale)
 const sortedArticles = articles.sort((a, b) => {
   if (a.data.pinned && !b.data.pinned) return -1
   if (!a.data.pinned && b.data.pinned) return 1
@@ -23,22 +26,33 @@ const sortedArticles = articles.sort((a, b) => {
   const dateB: number = b.data.date ? new Date(b.data.date).getTime() : 0
   return dateB - dateA
 })
+
+const STRINGS = {
+  it: { publishedOn: "Pubblicata il", readMore: "→ Leggi tutto" },
+  en: { publishedOn: "Published on", readMore: "→ Read more" },
+} as const
+const t = STRINGS[locale]
+const dateLocale = locale === "en" ? "en-GB" : "it-IT"
 ---
 
-<BaseLayout title={title} description={description}>
+<BaseLayout locale={locale} title={title} description={description}>
   <slot />
 
   {sortedArticles && sortedArticles.length > 0 && (
     <section>
-      {sortedArticles.map(article => (
+      {sortedArticles.map(article => {
+        const slug = slugFromRest(splitLocaleId(article.id).rest)
+        const href = `/${locale}/${article.collection}/${slug}/`
+        const imgHref = `/${article.collection}/it/${slug}/${article.data.img}`
+        return (
         <div
           class={`row my-5 py-5 border-bottom border-primary${article.data.pinned ? " shadow" : ""}`}
         >
           <div class="col-sm-4">
-            <a href={`/${article.collection}/${article.id.replace(".md", "")}/`}>
+            <a href={href}>
               {article.data.img && (
                 <img
-                  src={`/${article.collection}/${article.id.replace(".md", "")}/${article.data.img}`}
+                  src={imgHref}
                   alt={article.data.title}
                   class="img-fluid"
                 />
@@ -47,14 +61,14 @@ const sortedArticles = articles.sort((a, b) => {
           </div>
           <div class="col-sm-8">
             <p class="text-secondary">
-              Pubblicata il{" "}
+              {t.publishedOn}{" "}
               {article.data.date
-                ? new Date(article.data.date).toLocaleDateString("it-IT")
+                ? new Date(article.data.date).toLocaleDateString(dateLocale)
                 : ""}
             </p>
             <h2>
               <a
-                href={`/${article.collection}/${article.id.replace(".md", "")}/`}
+                href={href}
                 class="text-body-emphasis text-decoration-none"
               >
                 {article.data.title}
@@ -62,13 +76,14 @@ const sortedArticles = articles.sort((a, b) => {
             </h2>
             <p>{article.data.description}</p>
             <p>
-              <a href={`/${article.collection}/${article.id.replace(".md", "")}/`}>
-                → Leggi tutto
+              <a href={href}>
+                {t.readMore}
               </a>
             </p>
           </div>
         </div>
-      ))}
+        )
+      })}
     </section>
   )}
 </BaseLayout>

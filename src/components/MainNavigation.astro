@@ -1,54 +1,64 @@
 ---
 import { Home, Users, Newspaper, Edit, LibraryBig, Code, GraduationCap, Menu, X } from "lucide-react"
+import type { Locale } from "@user/utils/i18n"
 
 interface Props {
   currentPath: string
+  locale: Locale
 }
 
-const { currentPath } = Astro.props
+const { currentPath, locale } = Astro.props
+
+const LABELS = {
+  it: { home: "Inizio", chiSiamo: "Chi siamo", notizie: "Notizie", blog: "Blog", ricerca: "Ricerca", sviluppo: "Sviluppo", didattica: "Didattica" },
+  en: { home: "Home", chiSiamo: "About us", notizie: "News", blog: "Blog", ricerca: "Research", sviluppo: "Development", didattica: "Teaching" },
+} as const
+const t = LABELS[locale]
+
+const p = (path: string) => `/${locale}${path}`
 
 // Navigation items configuration
 const menuItems = [
-  { 
-    href: "/", 
-    label: "Inizio", 
-    isActive: currentPath === "/",
+  {
+    href: p("/"),
+    label: t.home,
+    isActive: currentPath === p("/"),
     icon: "home"
   },
   {
-    href: "/chi-siamo/",
-    label: "Chi siamo",
-    isActive: currentPath === "/chi-siamo/",
+    href: p("/chi-siamo/"),
+    label: t.chiSiamo,
+    isActive: currentPath === p("/chi-siamo/"),
     icon: "users"
   },
   {
-    href: "/notizie/",
-    label: "Notizie",
-    isActive: currentPath.startsWith("/notizie/"),
+    href: p("/notizie/"),
+    label: t.notizie,
+    isActive: currentPath.startsWith(p("/notizie/")),
     icon: "newspaper"
   },
-  { 
-    href: "/blog/", 
-    label: "Blog", 
-    isActive: currentPath.startsWith("/blog/"),
+  {
+    href: p("/blog/"),
+    label: t.blog,
+    isActive: currentPath.startsWith(p("/blog/")),
     icon: "edit"
   },
   {
-    href: "/ricerca/",
-    label: "Ricerca",
-    isActive: currentPath.startsWith("/ricerca/"),
+    href: p("/ricerca/"),
+    label: t.ricerca,
+    isActive: currentPath.startsWith(p("/ricerca/")),
     icon: "library-big"
   },
   {
-    href: "/sviluppo/",
-    label: "Sviluppo",
-    isActive: currentPath.startsWith("/sviluppo/"),
+    href: p("/sviluppo/"),
+    label: t.sviluppo,
+    isActive: currentPath.startsWith(p("/sviluppo/")),
     icon: "code"
   },
   {
-    href: "/didattica/",
-    label: "Didattica",
-    isActive: currentPath.startsWith("/didattica/"),
+    href: p("/didattica/"),
+    label: t.didattica,
+    isActive: currentPath.startsWith(p("/didattica/")),
     icon: "graduation-cap"
   },
 ]

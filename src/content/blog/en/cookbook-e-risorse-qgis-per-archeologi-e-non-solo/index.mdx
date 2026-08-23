@@ -1,0 +1,70 @@
+---
+title: QGIS guides and resources for archaeologists and beyond...
+author: Domizia D'Erasmo
+licenza: CC BY 4.0 International
+livello: base
+tags: [GIS, Geographic Data, Styles and Symbology, Resources, Tutorial]
+img: polygon-dimension-mike-elstermann.jpg
+caption: QGIS Hub. Polygon_Dimension_QGIS3x by Mike Elstermann
+date: 2022-04-01
+description: Geographic Information Systems (GIS) are a vast world, often complex to deal with and manage. In this article we suggest some open source resources that can help users of various levels and experience. The list is constantly being updated and focuses on the resources available for QGIS software..
+---
+
+**Geographic Information Systems** (GIS) are a vast world, often complex to deal with and manage. In this article we suggest some **open source resources** that can help users of various levels and experience. **The list is constantly being updated** and focuses on the resources available for **QGIS** software!
+
+## QGIS HUB
+
+[**QGIS Hub**](http://qgis-hub.fast-page.org/index.php#) is a repository that hosts a range of open source resources for QGIS. The site is currently divided into two sections (Layout-Hub and Style-Hub) for publishing, respectively, layouts and styles for use in your own GIS projects. QGIS Hub was conceived and is maintained by [**Klas Karlsson**](https://twitter.com/klaskarlsson). The resources are distributed (and must be released) under a **Creative Commons 0 (CC-0) license**.
+
+- [**Layout-Hub**](http://qgis-hub.fast-page.org/layouts.php) offers the possibility of freely downloading a range of predefined, carefully designed layouts for publishing map plates through QGIS. There are currently 12 layouts on offer, all published by Klas Karlsson. You can submit your own templates to make them public and available to the whole QGIS community. The guidelines for creating and publishing a template to submit to QGIS Hub are [outlined on the site](http://qgis-hub.fast-page.org/index.php).
+- [**Style-Hub**](http://qgis-hub.fast-page.org/styles.php) offers the possibility of freely downloading and importing a range of predefined styles and symbologies in .xml format. The styles currently on offer have been published by various authors. You can submit your own styles to make them public and available to the whole QGIS community. The guidelines for creating and publishing a style to submit to QGIS Hub are [outlined on the site](http://qgis-hub.fast-page.org/index.php).
+
+## QGIS Resource Sharing
+
+The [**QGIS Resource Sharing**](https://plugins.qgis.org/plugins/qgis_resource_sharing/) plugin, created by **Akbar Gumbira** and **Håvard Tveite**, is a large container of collections of symbologies, images, styles, processing scripts, processing models and R scripts, all usable in QGIS. Downloading the plugin gives access to a list of all the repositories in which these datasets are published, with a preview of their content. Once you have found the repository you are interested in, you can download it and use it in your own project.
+
+## QGIS Style
+
+[**QGIS Style**]((https://plugins.qgis.org/styles/?page=1&&order_by=-upload_date&&is_gallery=true&&)) is an official QGIS repository where you can download and publish various types of styles for use in your own GIS project (color ramps, fills, lines, legend patch styles and markers).
+The dataset is genuinely substantial: the list currently counts 114 records, ranging from niche style libraries to more well-known ones, such as, for example, the Mapbox icon set.  
+For the topics covered on this blog, we would like to highlight a few specific libraries that seem particularly interesting to us:
+
+- [Basic Legend Patches Set](https://plugins.qgis.org/styles/9/);
+- [HLURB Land Use Categories and Color Coding (2014)](https://plugins.qgis.org/styles/62/);
+- [Italian regions](https://plugins.qgis.org/styles/7/);
+- [Measure Line](https://plugins.qgis.org/styles/5/);
+- [Polygons with measurements](https://plugins.qgis.org/styles/21/);
+- [Water Flow](https://plugins.qgis.org/styles/60/).
+
+The list certainly does not end with these entries, which are only meant as a starting point among the possibilities offered by this fully open source resource, released under the **Creative Commons Attribution-ShareAlike 3.0 licence (CC BY-SA)**.
+
+---
+
+
+## Guide 1: downloading, importing and using the `legend patches set` style
+
+![Test Patches set](/blog/it/cookbook-e-risorse-qgis-per-archeologi-e-non-solo/legend-patches-set.jpeg)
+
+1. Download the package from the QGIS Style repository at the link [https://plugins.qgis.org/styles/9/](https://plugins.qgis.org/styles/9/).
+1. Once downloaded, unzip the `basic-legend-patches-set.zip` file. You will get a folder named `Basic Legend Patches Set`.
+1. **Use the resource in a layout in QGIS**:
+   1. Open the GIS project;
+   1. In the `Layers` panel, select one of the vector layers present;
+   1. In the `Layer Properties Panel`, select the `Symbology` entry in the left-hand vertical menu;
+   1. Select the `Style manager` function;
+   1. From the `Style manager`, import the `patch.xml` file contained in the `Basic Legend Patches Set` folder;
+   1. You can use this new icon set by adding the legend for the layers contained in your GIS project to a `print layout` and, under `Legend items`, changing the icon for each individual vector file by double-clicking on the desired symbol.
+
+## Guide 2: downloading, importing and using the `water flow` style
+
+![water-flow.jpeg](/blog/it/cookbook-e-risorse-qgis-per-archeologi-e-non-solo/water-flow.jpeg)
+
+1. Download the package from the QGIS Style repository at the link [https://plugins.qgis.org/styles/60/](https://plugins.qgis.org/styles/60/).
+1. Once downloaded, unzip the `water-flow.zip` file. You will get a folder named `Water Flow`.
+1. **Use the resource in a layout in QGIS**:
+   1. Open the GIS project;
+   1. In the `Layers` panel, select one of the vector layers present;
+   1. In the `Layer Properties Panel`, select the `Symbology` entry in the left-hand vertical menu;
+   1. Select the `Style manager` function;
+   1. From the `Style manager`, import the `water-flow.xml` file contained in the `Water Flow` folder;
+   1. You can use this symbology by selecting, in your GIS project, the line/polyline layer that represents the hydrography of the area under study, and applying the `water flow` symbology, which you will now find in the list of symbologies available for line geometries.  

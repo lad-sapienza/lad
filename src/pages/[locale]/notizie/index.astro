@@ -1,0 +1,41 @@
+---
+import SectionIndex from "@user/components/SectionIndex.astro"
+import { LOCALES, type Locale } from "@user/utils/i18n"
+
+export const prerender = true
+
+export function getStaticPaths() {
+  return LOCALES.map(locale => ({ params: { locale } }))
+}
+
+const { locale } = Astro.params as { locale: Locale }
+
+const COPY = {
+  it: {
+    title: "Notizie",
+    description: "Questa sezione del sito del LAD: Laboratorio di Archeologia Digitale alla Sapienza raccoglie notizie di eventi, conferenze, lezioni, seminari, ecc. inerenti alle tematiche del laboratorio. Per le segnalazioni scriveteci a julian.bogdani@uniroma1.it",
+    h1: "Notizie",
+    leadBefore: "Questa sezione del sito del LAD: Laboratorio di Archeologia Digitale alla Sapienza raccoglie notizie di eventi, conferenze, lezioni, seminari, ecc. inerenti alle tematiche del laboratorio. Per le segnalazioni scriveteci a ",
+  },
+  en: {
+    title: "News",
+    description: "This section of the LAD website — Laboratory of Digital Archaeology at Sapienza — collects news about events, conferences, lectures, seminars, and other matters relevant to the lab. To report news, write to julian.bogdani@uniroma1.it",
+    h1: "News",
+    leadBefore: "This section of the LAD website — Laboratory of Digital Archaeology at Sapienza — collects news about events, conferences, lectures, seminars, and other matters relevant to the lab. To report news, write to ",
+  },
+} as const
+const c = COPY[locale]
+---
+
+<SectionIndex
+  collection="notizie"
+  title={c.title}
+  description={c.description}
+  locale={locale}
+>
+    <h1>{c.h1}</h1>
+    <p class="lead">
+      {c.leadBefore}
+      <a href="mailto:julian.bogdani@uniroma1.it">julian.bogdani@uniroma1.it</a>.
+    </p>
+</SectionIndex>

@@ -1,0 +1,24 @@
+---
+import BaseLayout from "@user/layouts/BaseLayout.astro"
+import Team from "@user/components/Team"
+import { LOCALES, type Locale } from "@user/utils/i18n"
+
+export const prerender = true
+
+export function getStaticPaths() {
+  return LOCALES.map(locale => ({ params: { locale } }))
+}
+
+const { locale } = Astro.params as { locale: Locale }
+
+const COPY = {
+  it: { title: "Chi siamo?", description: "Lo staff del LAD", h1: "Lo staff del LAD" },
+  en: { title: "About us", description: "The LAD staff", h1: "The LAD staff" },
+} as const
+const c = COPY[locale]
+---
+
+<BaseLayout locale={locale} title={c.title} description={c.description}>
+  <h1>{c.h1}</h1>
+  <Team locale={locale} />
+</BaseLayout>
