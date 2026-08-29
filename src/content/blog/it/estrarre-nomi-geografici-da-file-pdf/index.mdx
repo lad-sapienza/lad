@@ -27,7 +27,7 @@ Lo strumento è stato presentato per la prima volta nell'ottobre 2025. Questo ar
 
 ## Che cosa è cambiato nella revisione del 2026
 
-La prima versione risolveva bene il caso d'uso essenziale — dammi un PDF, ti restituisco i nomi di luogo — ma mostrava alcuni limiti quando la si portava sul lavoro reale con volumi bibliografici ampi e con documentazione archeologica. La revisione interviene su quattro fronti.
+La prima versione risolveva bene il caso d'uso essenziale — dammi un PDF, ti restituisco i nomi di luogo — ma mostrava alcuni limiti quando la si portava sul lavoro reale con volumi bibliografici ampi e con documentazione archeologica. La revisione interviene su cinque fronti.
 
 *Correzioni.* La funzione che confrontava il testo con un gazetteer esterno conteneva un errore nell'espressione regolare (una sequenza di escape raddoppiata) che, di fatto, impediva qualunque corrispondenza: da riga di comando l'opzione `--gazetteer` non trovava mai nulla. Il messaggio di errore per un file inesistente era fuorviante, il rilevamento della lingua non era riproducibile fra esecuzioni successive, e i documenti molto lunghi superavano il limite interno di spaCy interrompendo l'analisi. Tutti questi problemi sono stati risolti.
 
@@ -36,6 +36,8 @@ La prima versione risolveva bene il caso d'uso essenziale — dammi un PDF, ti r
 *Output strutturato.* Oltre all'elenco testuale, lo strumento produce ora CSV, JSON e GeoJSON. Ogni toponimo porta con sé il numero di occorrenze, le pagine in cui compare e la sua provenienza (riconoscimento automatico, gazetteer, o entrambi). Il risultato non è più una lista di stringhe ma un piccolo dataset pronto per un GIS o un database.
 
 *Gazetteer come dato geografico.* Il gazetteer può ora essere un file `.csv` o `.tsv` con colonne per identificativo e coordinate: quando ci sono, le coordinate vengono associate ai toponimi e riversate nel GeoJSON. È inoltre disponibile una modalità *solo gazetteer*, che disattiva il riconoscimento automatico ed è pensata per il latino, il greco antico e le altre lingue per cui non esistono modelli linguistici affidabili.
+
+*Integrazione con Zotero.* Un secondo strumento grafico, `zotero_assistant.py`, applica l'estrazione direttamente a una libreria Zotero: scorre i record uno per uno, propone i tag geografici e — dopo l'approvazione dell'utente — li scrive nell'item. È descritto più avanti.
 
 Una scelta di fondo è rimasta invariata ed è stata anzi consolidata: lo strumento funziona **interamente offline** e non dipende da servizi di intelligenza artificiale esterni. Tutti i modelli girano in locale sulla macchina dell'utente.
 
@@ -123,9 +125,17 @@ La provenienza di ciascun toponimo (`ner:GPE`, `ner:LOC`, `gazetteer`) permette,
 
 Per chi preferisce non usare il terminale, `gui.py` offre un'interfaccia costruita con PyQt5 che espone le stesse funzioni: selezione del PDF (anche per trascinamento), intervallo di pagine, gestione interattiva della lista di inclusione (il gazetteer) e di quella di esclusione, e visualizzazione dei risultati con pulsanti per spostare rapidamente un toponimo nell'una o nell'altra lista. Nella versione rivista l'elaborazione avviene in un thread separato: la finestra resta reattiva anche su documenti di centinaia di pagine.
 
+## Assistente per Zotero
+
+Molti gruppi di ricerca organizzano già la bibliografia in Zotero con tag tematici. `zotero_assistant.py` parte da questa pratica: assumendo la convenzione di prefissare i nomi di luogo con `@` (`@Butrint`, `@Çuka e Ajtoit`), usa i tag `@` già presenti nella libreria come gazetteer e propone, per ogni articolo, quali di quei luoghi compaiono davvero nel PDF allegato.
+
+Lo strumento lavora offline, attraverso l'API locale di Zotero (versione 10 o successiva). Scelta una libreria — personale o di gruppo — compaiono i record non ancora contrassegnati come completati. Selezionandone uno, l'assistente ne legge il PDF ed espone due elenchi: i tag `@` esistenti trovati nel testo, già spuntati, con numero di occorrenze e pagine; e i nuovi luoghi individuati dal riconoscimento automatico, ciascuno con un campo modificabile per normalizzare la forma e, quando somiglia a un tag esistente, un pulsante per adottarlo. L'utente approva ciò che ritiene corretto; lo strumento riordina alfabeticamente i tag dell'item, li scrive e lo marca come fatto, così da non riproporlo nelle sessioni successive. Ogni azione viene registrata in un file di log.
+
+Per gli articoli in lingue prive di un modello di riconoscimento — l'albanese è il caso tipico nella documentazione archeologica dei Balcani — un selettore permette di forzare la lingua oppure di passare a una modalità *solo gazetteer*, che confronta il testo unicamente con i tag esistenti ed elimina i falsi positivi del riconoscimento automatico. Per i PDF privi di strato testuale (estratti scansionati), se `ocrmypdf` è installato l'assistente può eseguire l'OCR al volo e rianalizzare; il file così ottenuto può essere salvato su disco, mentre l'allegato in Zotero resta invariato.
+
 ## Casi d'uso nella ricerca
 
-L'applicazione più diretta è l'**organizzazione geografica della bibliografia**. Elaborando in blocco una raccolta di PDF e importando i CSV risultanti in un database, si ottiene una tabella che associa ogni pubblicazione ai luoghi che vi compaiono. Da qui si possono interrogare i dati in modo geografico: quali contributi trattano una certa area, quali menzionano insieme due luoghi distanti, come si distribuisce sulla carta la propria biblioteca digitale. Con l'output GeoJSON lo stesso materiale diventa una mappa della copertura bibliografica, utile a individuare regioni poco studiate.
+L'applicazione più diretta è l'**organizzazione geografica della bibliografia**. Elaborando in blocco una raccolta di PDF e importando i CSV risultanti in un database, si ottiene una tabella che associa ogni pubblicazione ai luoghi che vi compaiono; l'assistente per Zotero descritto sopra fa la stessa cosa direttamente dentro il gestore bibliografico. Da qui si possono interrogare i dati in modo geografico: quali contributi trattano una certa area, quali menzionano insieme due luoghi distanti, come si distribuisce sulla carta la propria biblioteca digitale. Con l'output GeoJSON lo stesso materiale diventa una mappa della copertura bibliografica, utile a individuare regioni poco studiate.
 
 Su corpora più ampi, l'estrazione sistematica dei toponimi consente analisi della distribuzione geografica della ricerca: quali aree ricevono più attenzione, come cambia nel tempo l'interesse per un territorio, quali associazioni di luoghi ricorrono nella letteratura di un ambito disciplinare. Per chi conduce *review* sistematiche, una passata preliminare su abstract e testi completi fornisce rapidamente il quadro della copertura geografica degli studi esaminati.
 
@@ -165,6 +175,9 @@ python geoNamesFromPdf.py documento.pdf -f geojson -o out.geojson --gazetteer pl
 python geoNamesFromPdf.py --no-ner --gazetteer antichi.txt documento.pdf
 python geoNamesFromPdf.py --list-languages                # modelli installati
 python geoNamesFromPdf.py --install-language es           # aggiunge lo spagnolo
+
+python gui.py                                             # interfaccia grafica (un PDF)
+python zotero_assistant.py                                # assistente per Zotero
 ```
 
 ## Lingue supportate
@@ -173,13 +186,13 @@ Lo strumento è preconfigurato per dieci lingue — italiano, inglese, spagnolo,
 
 ## Affidabilità e sviluppo assistito da IA
 
-La revisione ha aggiunto una suite di test automatici (`pytest`) che verifica offline, senza scaricare modelli, il comportamento delle funzioni pure: analisi degli intervalli di pagina, confronto con il gazetteer, lettura dei file in vari formati, serializzazione. È un test di questo tipo che avrebbe intercettato, a suo tempo, l'errore nell'espressione regolare del gazetteer.
+La revisione ha aggiunto una suite di test automatici (`pytest`, oltre cinquanta) che verifica offline, senza scaricare modelli né richiedere un'istanza di Zotero, il comportamento delle funzioni pure: analisi degli intervalli di pagina, confronto con il gazetteer, lettura dei file in vari formati, serializzazione, e il dialogo con l'API locale di Zotero simulato. È un test di questo tipo che avrebbe intercettato, a suo tempo, l'errore nell'espressione regolare del gazetteer.
 
 Vale la pena essere espliciti sul metodo di lavoro. La prima versione di geoNamesFromPdf, nell'ottobre 2025, era stata scritta interamente con l'assistenza di Claude Sonnet 4.5 tramite GitHub Copilot. La revisione dell'agosto 2026 è stata condotta con Claude Sonnet 5 tramite Claude Code, in una sessione che è partita da una revisione critica del codice esistente — è così che sono emersi il bug del gazetteer e gli altri problemi — ed è proseguita con la riprogettazione dell'architettura, l'aggiunta delle nuove funzionalità e la stesura dei test e della documentazione. È un esempio concreto di come questi strumenti possano abbassare la soglia tecnica per chi, nella ricerca umanistica, ha bisogno di software su misura: non solo per scrivere codice nuovo, ma per rivedere e consolidare quello esistente.
 
 ## Conclusioni
 
-geoNamesFromPdf resta uno strumento volutamente circoscritto: fa una cosa — trovare i luoghi in un PDF — e cerca di farla bene, restando semplice da installare e da usare. La revisione del 2026 lo rende però adatto anche al lavoro su scala maggiore: elaborazione di interi volumi, output che si integra con GIS e database, gazetteer che portano coordinate, e una modalità pensata per le lingue antiche. Tutto questo senza rinunciare al funzionamento offline e senza dipendere da servizi esterni.
+geoNamesFromPdf resta uno strumento volutamente circoscritto: fa una cosa — trovare i luoghi in un PDF — e cerca di farla bene, restando semplice da installare e da usare. La revisione del 2026 lo rende però adatto anche al lavoro su scala maggiore: elaborazione di interi volumi, output che si integra con GIS e database, gazetteer che portano coordinate, una modalità pensata per le lingue antiche e un assistente che porta tutto questo dentro Zotero. Tutto senza rinunciare al funzionamento offline e senza dipendere da servizi esterni.
 
 ### Link e risorse
 

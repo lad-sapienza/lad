@@ -27,7 +27,7 @@ The tool was first presented in October 2025. This article describes the version
 
 ## What changed in the 2026 revision
 
-The first version handled the essential use case well — give me a PDF, I return the place names — but it showed its limits when used on real work with large bibliographic volumes and with archaeological documentation. The revision addresses four fronts.
+The first version handled the essential use case well — give me a PDF, I return the place names — but it showed its limits when used on real work with large bibliographic volumes and with archaeological documentation. The revision addresses five fronts.
 
 *Fixes.* The function that matched the text against an external gazetteer contained an error in its regular expression (a doubled escape sequence) that effectively prevented any match: from the command line, the `--gazetteer` option never found anything. The error message for a missing file was misleading, language detection was not reproducible across runs, and very long documents exceeded spaCy's internal limit, aborting the analysis. All of these have been fixed.
 
@@ -36,6 +36,8 @@ The first version handled the essential use case well — give me a PDF, I retur
 *Structured output.* Beyond the plain-text list, the tool now produces CSV, JSON and GeoJSON. Each toponym carries its number of occurrences, the pages on which it appears, and its provenance (automatic recognition, gazetteer, or both). The result is no longer a list of strings but a small dataset, ready for a GIS or a database.
 
 *The gazetteer as geographic data.* The gazetteer can now be a `.csv` or `.tsv` file with columns for an identifier and coordinates: where present, the coordinates are attached to the recognised toponyms and carried into the GeoJSON. A *gazetteer-only* mode is also available, which disables automatic recognition and is intended for Latin, Ancient Greek and the other languages for which no reliable language models exist.
+
+*Zotero integration.* A second graphical tool, `zotero_assistant.py`, applies the extraction directly to a Zotero library: it walks the records one by one, proposes geographic tags and — once the user approves — writes them onto the item. It is described further below.
 
 One underlying choice was left unchanged, and in fact reinforced: the tool runs **entirely offline** and does not depend on any external AI service. All models run locally on the user's machine.
 
@@ -123,9 +125,17 @@ The provenance of each toponym (`ner:GPE`, `ner:LOC`, `gazetteer`) makes it poss
 
 For those who prefer not to use the terminal, `gui.py` offers an interface built with PyQt5 that exposes the same functions: PDF selection (including by drag and drop), page range, interactive management of the inclusion list (the gazetteer) and the exclusion list, and a view of the results with buttons to move a toponym quickly into one list or the other. In the revised version processing happens in a separate thread: the window stays responsive even on documents of several hundred pages.
 
+## Zotero assistant
+
+Many research groups already organise their bibliography in Zotero with thematic tags. `zotero_assistant.py` builds on that practice: assuming the convention of prefixing place names with `@` (`@Butrint`, `@Çuka e Ajtoit`), it uses the `@` tags already in the library as a gazetteer and proposes, for each article, which of those places actually occur in the attached PDF.
+
+The tool works offline, through Zotero's local API (version 10 or later). Once a library is chosen — personal or a group — the records not yet marked as done are listed. Selecting one, the assistant reads its PDF and shows two lists: the existing `@` tags found in the text, pre-checked, with occurrence count and page numbers; and the new places found by automatic recognition, each with an editable field to normalise the form and, when it resembles an existing tag, a button to adopt it. The user approves what looks right; the tool sorts the item's tags alphabetically, writes them and marks the record as done, so it does not come back in later sessions. Every action is written to a log file.
+
+For articles in languages with no recognition model — Albanian is the typical case in Balkan archaeological literature — a selector lets you force the language or switch to a *gazetteer-only* mode that matches the text against the existing tags alone, removing the false positives of automatic recognition. For PDFs with no text layer (scanned offprints), if `ocrmypdf` is installed the assistant can OCR the file on the fly and re-analyse; the resulting file can be saved to disk, while the attachment in Zotero is left unchanged.
+
 ## Use cases in research
 
-The most direct application is the **geographic organisation of a bibliography**. By processing a collection of PDFs in bulk and importing the resulting CSVs into a database, one obtains a table linking each publication to the places that appear in it. From there the data can be queried geographically: which contributions deal with a given area, which mention two distant places together, how one's digital library is distributed on the map. With GeoJSON output the same material becomes a map of bibliographic coverage, useful for spotting under-studied regions.
+The most direct application is the **geographic organisation of a bibliography**. By processing a collection of PDFs in bulk and importing the resulting CSVs into a database, one obtains a table linking each publication to the places that appear in it; the Zotero assistant described above does the same thing directly inside the reference manager. From there the data can be queried geographically: which contributions deal with a given area, which mention two distant places together, how one's digital library is distributed on the map. With GeoJSON output the same material becomes a map of bibliographic coverage, useful for spotting under-studied regions.
 
 On larger corpora, systematic extraction of toponyms enables analyses of the geographic distribution of research: which areas receive more attention, how interest in a territory changes over time, which associations of places recur in the literature of a given field. For those conducting systematic reviews, a preliminary pass over abstracts and full texts quickly provides a picture of the geographic coverage of the studies examined.
 
@@ -165,6 +175,9 @@ python geoNamesFromPdf.py document.pdf -f geojson -o out.geojson --gazetteer ple
 python geoNamesFromPdf.py --no-ner --gazetteer ancient.txt document.pdf
 python geoNamesFromPdf.py --list-languages                # installed models
 python geoNamesFromPdf.py --install-language es           # adds Spanish
+
+python gui.py                                             # graphical interface (one PDF)
+python zotero_assistant.py                                # Zotero assistant
 ```
 
 ## Supported languages
@@ -173,13 +186,13 @@ The tool is preconfigured for ten languages — Italian, English, Spanish, Frenc
 
 ## Reliability and AI-assisted development
 
-The revision added a suite of automated tests (`pytest`) that verify, offline and without downloading models, the behaviour of the pure functions: parsing of page ranges, gazetteer matching, reading files in various formats, serialisation. It is a test of this kind that would have caught, at the time, the error in the gazetteer's regular expression.
+The revision added a suite of automated tests (`pytest`, more than fifty) that verify, offline and without downloading models or requiring a Zotero instance, the behaviour of the pure functions: parsing of page ranges, gazetteer matching, reading files in various formats, serialisation, and the exchange with Zotero's local API against a mock. It is a test of this kind that would have caught, at the time, the error in the gazetteer's regular expression.
 
 It is worth being explicit about the working method. The first version of geoNamesFromPdf, in October 2025, was written entirely with the assistance of Claude Sonnet 4.5 via GitHub Copilot. The August 2026 revision was carried out with Claude Sonnet 5 via Claude Code, in a session that began with a critical review of the existing code — which is how the gazetteer bug and the other problems surfaced — and continued with the redesign of the architecture, the addition of the new features, and the writing of the tests and documentation. It is a concrete example of how these tools can lower the technical threshold for those who, in humanities research, need bespoke software: not only for writing new code, but for reviewing and consolidating what already exists.
 
 ## Conclusions
 
-geoNamesFromPdf remains a deliberately narrow tool: it does one thing — find the places in a PDF — and tries to do it well, while staying simple to install and to use. The 2026 revision, however, also makes it suitable for work at a larger scale: processing of entire volumes, output that integrates with GIS and databases, gazetteers that carry coordinates, and a mode designed for ancient languages. All of this without giving up offline operation and without depending on external services.
+geoNamesFromPdf remains a deliberately narrow tool: it does one thing — find the places in a PDF — and tries to do it well, while staying simple to install and to use. The 2026 revision, however, also makes it suitable for work at a larger scale: processing of entire volumes, output that integrates with GIS and databases, gazetteers that carry coordinates, a mode designed for ancient languages, and an assistant that brings all of this inside Zotero. All without giving up offline operation and without depending on external services.
 
 ### Links and resources
 
