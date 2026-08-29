@@ -125,13 +125,25 @@ The provenance of each toponym (`ner:GPE`, `ner:LOC`, `gazetteer`) makes it poss
 
 For those who prefer not to use the terminal, `gui.py` offers an interface built with PyQt5 that exposes the same functions: PDF selection (including by drag and drop), page range, interactive management of the inclusion list (the gazetteer) and the exclusion list, and a view of the results with buttons to move a toponym quickly into one list or the other. In the revised version processing happens in a separate thread: the window stays responsive even on documents of several hundred pages.
 
+![geoNamesFromPdf: the single-PDF graphical interface](/blog/it/estrarre-nomi-geografici-da-file-pdf/01-interfaccia-grafica.png)
+
 ## Zotero assistant
 
 Many research groups already organise their bibliography in Zotero with thematic tags. `zotero_assistant.py` builds on that practice: assuming the convention of prefixing place names with `@` (`@Butrint`, `@Çuka e Ajtoit`), it uses the `@` tags already in the library as a gazetteer and proposes, for each article, which of those places actually occur in the attached PDF.
 
 The tool works offline, through Zotero's local API (version 10 or later). Once a library is chosen — personal or a group — the records not yet marked as done are listed. Selecting one, the assistant reads its PDF and shows two lists: the existing `@` tags found in the text, pre-checked, with occurrence count and page numbers; and the new places found by automatic recognition, each with an editable field to normalise the form and, when it resembles an existing tag, a button to adopt it. The user approves what looks right; the tool sorts the item's tags alphabetically, writes them and marks the record as done, so it does not come back in later sessions. Every action is written to a log file.
 
-For articles in languages with no recognition model — Albanian is the typical case in Balkan archaeological literature — a selector lets you force the language or switch to a *gazetteer-only* mode that matches the text against the existing tags alone, removing the false positives of automatic recognition. For PDFs with no text layer (scanned offprints), if `ocrmypdf` is installed the assistant can OCR the file on the fly and re-analyse; the resulting file can be saved to disk, while the attachment in Zotero is left unchanged.
+![The Zotero assistant: record list, current article and proposed tags](/blog/it/estrarre-nomi-geografici-da-file-pdf/02-assistente-zotero.png)
+
+![A new candidate with an editable field and a button to adopt an existing tag](/blog/it/estrarre-nomi-geografici-da-file-pdf/03-candidato-modificabile.png)
+
+For articles in languages with no recognition model — Albanian is the typical case in Balkan archaeological literature — a selector lets you force the language or switch to a *gazetteer-only* mode that matches the text against the existing tags alone, removing the false positives of automatic recognition.
+
+![Warning when the language model is missing: gazetteer-only mode is suggested](/blog/it/estrarre-nomi-geografici-da-file-pdf/04-lingua-senza-modello.png)
+
+For PDFs with no text layer (scanned offprints), if `ocrmypdf` is installed the assistant can OCR the file on the fly and re-analyse; the resulting file can be saved to disk, while the attachment in Zotero is left unchanged.
+
+![Scanned PDF: the button to run OCR with ocrmypdf](/blog/it/estrarre-nomi-geografici-da-file-pdf/05-pdf-scansionato-ocr.png)
 
 ## Use cases in research
 
