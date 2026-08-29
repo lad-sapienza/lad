@@ -1,11 +1,12 @@
 ---
-title: "geoNamesFromPdf: Estrazione automatica di toponimi da documenti PDF con intelligenza artificiale"
+title: "geoNamesFromPdf: estrazione automatica di toponimi da documenti PDF"
 author: Julian Bogdani
 date: 2025-10-20
 licenza: CC BY 4.0 International
 livello: avanzato
 img: geoNamesFromPdf.jpg
-description: "Presentazione di geoNamesFromPdf, uno strumento open-source per l'estrazione automatica di nomi geografici da documenti PDF, sviluppato per facilitare l'analisi spaziale e l'organizzazione geografica della bibliografia accademica."
+inhome: true
+description: "geoNamesFromPdf è uno strumento open source per l'estrazione automatica di nomi di luogo da file PDF, pensato per l'analisi spaziale della bibliografia scientifica. Presentato nell'ottobre 2025, è stato profondamente rivisto nell'agosto 2026: nuova architettura, correzione di bug, output strutturato e gazetteer con coordinate."
 tags:
   - Strumenti digitali
   - NLP
@@ -16,66 +17,50 @@ tags:
   - Digital Humanities
 ---
 
+# geoNamesFromPdf: estrazione automatica di toponimi da documenti PDF
 
-## Introduzione
+Nella ricerca umanistica — in archeologia, storia, geografia storica, studi sul paesaggio — la dimensione spaziale è quasi sempre parte dell'argomentazione. Sapere *quali luoghi* discute un contributo, e con quale frequenza, è un'informazione preziosa tanto quanto conoscerne il tema o la cronologia. Estrarla a mano da centinaia di PDF, però, non è praticabile.
 
-Nel lavoro di ricerca accademica, specialmente in discipline come l'archeologia, la storia, la geografia e le scienze sociali, la dimensione spaziale è spesso un elemento cruciale per l'analisi e l'interpretazione dei dati. La capacità di identificare rapidamente ed estrarre i riferimenti geografici da grandi volumi di letteratura scientifica può trasformare radicalmente il modo in cui organizziamo, analizziamo e comprendiamo le fonti bibliografiche.
+**geoNamesFromPdf** nasce per automatizzare questo passaggio. È uno strumento a riga di comando (con una interfaccia grafica opzionale) sviluppato presso il LAD – Laboratorio di Archeologia Digitale della Sapienza Università di Roma, che individua i toponimi presenti in un documento PDF e ne restituisce un elenco ordinato, eventualmente arricchito di coordinate. Il progetto è open source (licenza MIT) ed è disponibile su [GitHub](https://github.com/lad-sapienza/geoNamesFromPdf).
 
-È in questo contesto che nasce **geoNamesFromPdf**, uno strumento open-source sviluppato presso il LAD - Laboratorio di Archeologia Digitale della Sapienza Università di Roma, progettato per automatizzare l'estrazione di toponimi (nomi di luoghi) da documenti PDF utilizzando tecniche avanzate di Natural Language Processing (NLP).
+Lo strumento è stato presentato per la prima volta nell'ottobre 2025. Questo articolo ne descrive la versione rivista nell'agosto 2026, che introduce cambiamenti sostanziali sia nell'architettura sia nelle funzionalità.
 
-## Che cos'è geoNamesFromPdf
+## Che cosa è cambiato nella revisione del 2026
 
-geoNamesFromPdf è un'applicazione Python a riga di comando che sfrutta la potenza di **spaCy**, una delle librerie più avanzate per il processamento del linguaggio naturale, per identificare ed estrarre automaticamente nomi geografici da documenti PDF. Lo strumento è in grado di riconoscere entità geografiche come:
+La prima versione risolveva bene il caso d'uso essenziale — dammi un PDF, ti restituisco i nomi di luogo — ma mostrava alcuni limiti quando la si portava sul lavoro reale con volumi bibliografici ampi e con documentazione archeologica. La revisione interviene su quattro fronti.
 
-- **Città e località** (Roma, Milano, Atene, Il Cairo)
-- **Stati e regioni** (Italia, Lazio, Francia, Toscana)
-- **Elementi geografici naturali** (Alpi, Mar Mediterraneo, Fiume Tevere)
-- **Strutture e luoghi di interesse** (Colosseo, Acropoli, Foro Romano)
+*Correzioni.* La funzione che confrontava il testo con un gazetteer esterno conteneva un errore nell'espressione regolare (una sequenza di escape raddoppiata) che, di fatto, impediva qualunque corrispondenza: da riga di comando l'opzione `--gazetteer` non trovava mai nulla. Il messaggio di errore per un file inesistente era fuorviante, il rilevamento della lingua non era riproducibile fra esecuzioni successive, e i documenti molto lunghi superavano il limite interno di spaCy interrompendo l'analisi. Tutti questi problemi sono stati risolti.
 
-Il software si distingue per la sua capacità di **rilevare automaticamente la lingua** del documento e applicare il modello linguistico più appropriato, garantendo risultati accurati per testi in italiano, inglese, spagnolo, francese, tedesco e molte altre lingue.
+*Architettura.* Tutta la logica di estrazione è stata spostata in un modulo unico e privo di effetti collaterali (`core.py`), condiviso dalla riga di comando e dall'interfaccia grafica, che in precedenza duplicavano — e avevano cominciato a divergere — lo stesso codice. Il testo viene ora elaborato pagina per pagina, la pipeline linguistica carica solo i componenti necessari al riconoscimento delle entità e i modelli restano in cache: l'analisi è più rapida e la memoria richiesta è minore. L'interfaccia grafica esegue l'elaborazione in un thread separato e non si blocca più durante le attese.
 
-## Caratteristiche principali
+*Output strutturato.* Oltre all'elenco testuale, lo strumento produce ora CSV, JSON e GeoJSON. Ogni toponimo porta con sé il numero di occorrenze, le pagine in cui compare e la sua provenienza (riconoscimento automatico, gazetteer, o entrambi). Il risultato non è più una lista di stringhe ma un piccolo dataset pronto per un GIS o un database.
 
-### 🌍 Supporto multilingue
-Lo strumento supporta nativamente oltre 10 lingue, con possibilità di espansione. Il rilevamento automatico della lingua assicura che venga utilizzato il modello NER (Named Entity Recognition) più appropriato per ogni documento.
+*Gazetteer come dato geografico.* Il gazetteer può ora essere un file `.csv` o `.tsv` con colonne per identificativo e coordinate: quando ci sono, le coordinate vengono associate ai toponimi e riversate nel GeoJSON. È inoltre disponibile una modalità *solo gazetteer*, che disattiva il riconoscimento automatico ed è pensata per il latino, il greco antico e le altre lingue per cui non esistono modelli linguistici affidabili.
 
-### 🚀 Installazione zero-friction
-Al primo avvio, geoNamesFromPdf verifica automaticamente la presenza delle dipendenze necessarie e, con il consenso dell'utente, procede all'installazione di tutto il necessario, inclusi i modelli linguistici richiesti. Questo elimina le barriere tecniche per gli utenti meno esperti.
-
-### 🎯 Alta precisione
-Utilizzando i modelli "large" di spaCy, lo strumento garantisce un'elevata accuratezza nel riconoscimento delle entità geografiche, riducendo significativamente i falsi positivi rispetto ad approcci basati su semplici dizionari o espressioni regolari.
-
-### ⚡ Facilità d'uso
-L'interfaccia a riga di comando è intuitiva e richiede un singolo comando per processare un documento:
-
-```bash
-python geoNamesFromPdf.py documento.pdf
-```
-
-### 🔧 Flessibilità
-Gli utenti possono:
-- Forzare una lingua specifica per documenti particolari
-- Installare facilmente nuovi modelli linguistici
-- Visualizzare i modelli disponibili
-- Processare batch di documenti
+Una scelta di fondo è rimasta invariata ed è stata anzi consolidata: lo strumento funziona **interamente offline** e non dipende da servizi di intelligenza artificiale esterni. Tutti i modelli girano in locale sulla macchina dell'utente.
 
 ## Come funziona
 
-Il processo di estrazione si articola in diverse fasi:
+Il flusso di elaborazione si articola in sei fasi:
 
-1. **Estrazione del testo**: Utilizzo di PyMuPDF per estrarre il testo dal PDF
-2. **Rilevamento della lingua**: Analisi automatica del testo per identificare la lingua predominante
-3. **Caricamento del modello**: Selezione e caricamento del modello spaCy appropriato
-4. **Named Entity Recognition**: Identificazione delle entità geografiche nel testo
-5. **Post-processing**: Rimozione dei duplicati e ordinamento alfabetico dei risultati
+1. **Estrazione del testo** dal PDF con PyMuPDF, pagina per pagina, eventualmente limitata a un intervallo (`--pages "10-50"`).
+2. **Rilevamento della lingua** con langdetect, a seme fisso per garantire risultati riproducibili; è possibile forzare la lingua con `-l`.
+3. **Caricamento del modello**: viene caricata — e messa in cache — una pipeline spaCy ridotta al solo riconoscimento delle entità.
+4. **Riconoscimento delle entità geografiche** (`GPE`, `LOC`, `FAC`), raccolte per pagina con il conteggio delle occorrenze.
+5. **Confronto con il gazetteer**, se fornito: una singola passata sul testo, sensibile ai confini di parola, insensibile a maiuscole e diacritici, capace di riconoscere nomi composti.
+6. **Post-elaborazione**: rimozione dei nomi in lista di esclusione, deduplicazione, ordinamento e serializzazione nel formato richiesto.
 
-Esempio di output:
+Un'esecuzione tipica su un testo italiano:
 
 ```bash
-🌐 Detected language: it
-🧠 Using model: core_news_lg v3.8.0
+python geoNamesFromPdf.py articolo.pdf -l it
+```
 
-📍 Toponyms found in the PDF (15 total):
+```
+🌐 Detected language: it
+🧠 Using engine 'spacy' / model: core_news_lg v3.8.0
+
+📍 Toponyms found in the PDF (12 total):
 
 - Atene
 - Bologna
@@ -89,206 +74,19 @@ Esempio di output:
 - Roma
 - Sicilia
 - Tevere
-- Torino
-- Toscana
-- Venezia
 ```
 
-## Casi d'uso in ambito accademico
+Con `--details` lo stesso elenco riporta, per ciascun toponimo, l'etichetta, il numero di occorrenze e le pagine; con `-f csv` o `-f json` le stesse informazioni vengono esportate in forma tabellare o strutturata.
 
-### Organizzazione geografica della bibliografia
+## Motori di riconoscimento
 
-Uno dei casi d'uso più immediati e potenti è l'**organizzazione geografica della bibliografia scientifica**. Consideriamo alcuni scenari pratici:
+Il motore predefinito è quello dei modelli CNN «large» di spaCy, un buon compromesso fra accuratezza, velocità su CPU e dimensioni. Per casi in cui serve maggiore precisione su testo moderno, l'opzione `--engine spacy-trf` seleziona i modelli basati su transformer; l'opzione `--engine gliner` utilizza [GLiNER](https://github.com/urchade/GLiNER), un modello locale a cui si indicano le categorie da estrarre (per esempio «insediamento antico», «idronimo», «sito archeologico») senza bisogno di riaddestramento. Entrambe le alternative richiedono l'installazione di pacchetti aggiuntivi ma, come il motore predefinito, funzionano senza connessione e senza servizi esterni.
 
-#### Catalogazione per area geografica
-Un archeologo che lavora sull'archeologia romana può utilizzare geoNamesFromPdf per processare centinaia di articoli e monografie, estraendo automaticamente i toponimi menzionati. Questo permette di:
+Per il testo in lingue antiche il consiglio è diverso: piuttosto che affidarsi al riconoscimento automatico, che su latino e greco tende a sbagliare persino la lingua, conviene usare la modalità solo gazetteer descritta più avanti.
 
-- Creare indici geografici automatici della propria biblioteca digitale
-- Identificare rapidamente quali pubblicazioni trattano specifiche aree geografiche
-- Scoprire connessioni geografiche tra diverse ricerche
-- Organizzare le fonti bibliografiche per regioni di interesse
+## Il gazetteer: dalle liste di nomi ai dati geografici
 
-**Esempio pratico**: Un ricercatore che studia le vie commerciali nell'antichità può processare la sua collezione di 300 PDF e generare un database che mostra quali articoli menzionano specifiche città portuali del Mediterraneo, facilitando la ricerca tematica e comparativa.
-
-#### Database bibliografico geospaziale
-Integrando geoNamesFromPdf con un database geografico, è possibile creare un sistema bibliografico geospaziale dove:
-
-- Ogni riferimento bibliografico è associato ai luoghi geografici menzionati
-- Le ricerche possono essere filtrate per area geografica
-- È possibile visualizzare su mappa la distribuzione geografica della letteratura scientifica
-- Si possono identificare lacune nella copertura geografica degli studi
-
-### Analisi spaziale della letteratura
-
-geoNamesFromPdf può essere utilizzato per analisi più sofisticate della distribuzione geografica della ricerca accademica:
-
-#### Mappatura delle aree di ricerca
-Processando corpus significativi di letteratura scientifica, è possibile:
-
-- Identificare quali aree geografiche sono più studiate
-- Scoprire regioni sotto-rappresentate nella ricerca
-- Analizzare l'evoluzione temporale dell'interesse geografico
-- Confrontare la distribuzione geografica tra diverse discipline
-
-**Esempio**: Un'analisi di 1000 articoli di archeologia italiana potrebbe rivelare che mentre alcune regioni (es. Lazio, Toscana) sono ampiamente studiate, altre aree presentano lacune nella ricerca.
-
-#### Analisi delle reti geografiche
-Lo strumento può aiutare a identificare:
-
-- Connessioni geografiche frequenti nella letteratura (es. Roma-Atene, Venezia-Costantinopoli)
-- Schemi di diffusione culturale o commerciale studiati
-- Aree di interazione storica più analizzate
-
-### Gestione di archivi documentali
-
-Per istituzioni che gestiscono grandi archivi documentali:
-
-#### Indicizzazione automatica
-- Creazione automatica di indici geografici per documenti storici digitalizzati
-- Arricchimento dei metadati documentali con informazioni geografiche
-- Facilitazione della ricerca e del recupero di documenti per area geografica
-
-#### Controllo qualità
-- Verifica della completezza degli indici geografici esistenti
-- Identificazione di possibili errori o omissioni nella catalogazione manuale
-- Confronto tra diverse versioni o edizioni di documenti
-
-### Ricerca e sintesi geografica
-
-#### Review sistematiche
-Per chi conduce review sistematiche della letteratura:
-
-- Identificazione rapida della copertura geografica degli studi
-- Estrazione di informazioni geografiche da abstract e testi completi
-- Creazione di tabelle riassuntive della distribuzione geografica della ricerca
-
-#### Sintesi geografica rapida
-Prima di leggere un documento, è possibile:
-
-- Ottenere una panoramica immediata dei luoghi trattati
-- Valutare la rilevanza geografica per la propria ricerca
-- Decidere quali documenti approfondire in base alla copertura geografica
-
-### Esempio concreto: Organizzazione di una biblioteca di archeologia
-
-Immaginiamo di avere una biblioteca personale di 500 PDF su archeologia classica. Utilizzando geoNamesFromPdf, possiamo:
-
-1. **Fase 1 - Estrazione massiva**:
-   ```bash
-   for pdf in biblioteca/*.pdf; do
-       python geoNamesFromPdf.py "$pdf" > "toponimi/$(basename "$pdf" .pdf).txt"
-   done
-   ```
-
-2. **Fase 2 - Creazione database**:
-   Importare i risultati in un database (SQLite, PostgreSQL) o foglio di calcolo, creando una tabella che associa ogni PDF ai toponimi estratti.
-
-3. **Fase 3 - Analisi e query**:
-   - "Quali articoli parlano di Pompei?"
-   - "Trovare tutti i documenti che menzionano sia Roma che Cartagine"
-   - "Elencare la bibliografia per regione: Campania, Lazio, Sicilia, etc."
-
-4. **Fase 4 - Visualizzazione**:
-   Utilizzare i dati per creare mappe interattive che mostrano:
-   - La distribuzione geografica della propria bibliografia
-   - Le aree con maggiore copertura bibliografica
-   - Le connessioni tra luoghi frequentemente co-citati
-
-## Installazione e utilizzo
-
-### Installazione rapida
-
-Il progetto è disponibile su [GitHub](https://github.com/lad-sapienza/geoNamesFromPdf) ed è distribuito con licenza MIT open-source:
-
-```bash
-# Clone del repository
-git clone https://github.com/lad-sapienza/geoNamesFromPdf.git
-cd geoNamesFromPdf
-
-# Creazione ambiente virtuale (consigliato Python 3.12)
-python3.12 -m venv venv
-source venv/bin/activate  # su macOS/Linux
-
-# Primo avvio - installazione automatica
-python geoNamesFromPdf.py documento.pdf
-```
-
-Al primo avvio, lo strumento verifica le dipendenze e propone l'installazione automatica:
-
-```
-======================================================================
-🚀 FIRST RUN SETUP - geoNamesFromPdf
-======================================================================
-
-Checking dependencies...
-
-📦 Missing Python packages:
-   ❌ PyMuPDF
-   ❌ spacy
-   ❌ langdetect
-
-🌍 Missing essential language models:
-   ❌ EN - en_core_web_lg
-   ❌ IT - it_core_news_lg
-
-❓ Do you want to install missing dependencies now? (yes/no):
-```
-
-Rispondendo "yes", tutto viene installato automaticamente.
-
-### Utilizzo base
-
-```bash
-# Estrazione automatica con rilevamento lingua
-python geoNamesFromPdf.py articolo.pdf
-
-# Forzare una lingua specifica
-python geoNamesFromPdf.py -l it documento_italiano.pdf
-
-# Visualizzare lingue disponibili
-python geoNamesFromPdf.py --list-languages
-
-# Installare una nuova lingua
-python geoNamesFromPdf.py --install-language es
-```
-
-## Supporto multilingue
-
-geoNamesFromPdf supporta nativamente:
-
-- 🇮🇹 **Italiano** (it_core_news_lg)
-- 🇬🇧 **Inglese** (en_core_web_lg)
-- 🇪🇸 **Spagnolo** (es_core_news_lg)
-- 🇫🇷 **Francese** (fr_core_news_lg)
-- 🇩🇪 **Tedesco** (de_core_news_lg)
-- 🇵🇹 **Portoghese** (pt_core_news_lg)
-- 🇳🇱 **Olandese** (nl_core_news_lg)
-- 🇬🇷 **Greco** (el_core_news_lg)
-- 🇵🇱 **Polacco** (pl_core_news_lg)
-- 🇷🇴 **Rumeno** (ro_core_news_lg)
-
-Questa copertura multilingue è particolarmente preziosa in contesti accademici internazionali, dove è comune lavorare con bibliografia in diverse lingue.
-
-## Supporto per gazetteer esterni
-
-Una delle nuove funzionalità di **geoNamesFromPdf** è il supporto per l'utilizzo di gazetteer o liste di toponimi esterne. Questa opzione consente agli utenti di integrare il proprio dataset di nomi geografici, migliorando ulteriormente la precisione e la personalizzazione dello strumento.
-
-### Come funziona
-
-Gli utenti possono fornire un file di testo contenente una lista di toponimi, uno per riga. Durante l'elaborazione, geoNamesFromPdf utilizzerà questa lista per:
-
-- **Riconoscere toponimi specifici** che potrebbero non essere inclusi nei modelli linguistici standard.
-- **Prioritizzare i toponimi forniti** rispetto a quelli rilevati automaticamente.
-
-### Esempio di utilizzo
-
-Per utilizzare un gazetteer esterno, è sufficiente aggiungere l'opzione `--gazetteer` al comando:
-
-```bash
-python geoNamesFromPdf.py documento.pdf --gazetteer lista_toponimi.txt
-```
-
-Dove `lista_toponimi.txt` è un file di testo contenente i toponimi desiderati. Ad esempio:
+Un gazetteer è, nella forma più semplice, un elenco di nomi di luogo, uno per riga:
 
 ```
 Pompei
@@ -297,75 +95,95 @@ Stabia
 Oplontis
 ```
 
-### Vantaggi
+Fornendolo con `--gazetteer lista.txt`, i nomi presenti nel testo vengono riconosciuti e uniti ai risultati del riconoscimento automatico. Il confronto rispetta i confini di parola — «Como» non viene riconosciuto dentro «Comodo» — ed è insensibile a maiuscole e segni diacritici.
 
-- **Maggiore precisione**: Ideale per progetti che richiedono il riconoscimento di toponimi specifici o poco comuni.
-- **Flessibilità**: Gli utenti possono creare e aggiornare facilmente le proprie liste di toponimi.
-- **Applicazioni specializzate**: Perfetto per contesti accademici o professionali che necessitano di un focus geografico particolare.
+Il gazetteer può però anche essere un file `.csv` o `.tsv` con colonne aggiuntive per identificativo e coordinate:
 
-Questa funzionalità amplia le possibilità di utilizzo di geoNamesFromPdf, rendendolo uno strumento ancora più potente e adattabile alle esigenze degli utenti.
+```
+name	id	lat	lon
+Butrint	pleiades:530798	39.7456	20.0206
+Epiro	pleiades:991380	39.5000	20.5000
+```
 
-## Sviluppo assistito da AI
+In questo caso le coordinate vengono associate ai toponimi riconosciuti e, con `-f geojson`, esportate come geometrie puntuali. Questo rende immediato l'uso di estratti locali di gazetteer storici come [Pleiades](https://pleiades.stoa.org/) per il mondo antico o GeoNames per la geografia moderna: il PDF entra come testo, esce come strato cartografico.
 
-È interessante notare che **geoNamesFromPdf è stato interamente sviluppato utilizzando Claude Sonnet 4.5 tramite GitHub Copilot**. Questo rappresenta un esempio concreto di come l'intelligenza artificiale possa assistere lo sviluppo software in ambito accademico e di ricerca.
+Infine, la modalità `--no-ner --gazetteer lista.txt` disattiva del tutto il riconoscimento automatico e si limita al confronto con la lista. È deterministica, non richiede modelli linguistici né rilevamento della lingua, ed è la strada da preferire per corpora in latino, greco antico o altre lingue non coperte dai modelli.
 
-### Il processo di sviluppo
+## Formati di output
 
-Lo sviluppo è stato condotto attraverso una conversazione iterativa con Claude, dove:
+L'output predefinito resta l'elenco testuale, comodo per una lettura rapida. Gli altri tre formati servono a integrare i risultati in un flusso di lavoro:
 
-1. **Definizione dei requisiti**: Identificazione delle esigenze specifiche per l'estrazione di toponimi da PDF
-2. **Scelta delle tecnologie**: Selezione di spaCy, PyMuPDF e langdetect come librerie ottimali
-3. **Implementazione progressiva**: Sviluppo incrementale delle funzionalità:
-   - Estrazione base di toponimi
-   - Aggiunta del rilevamento automatico della lingua
-   - Implementazione del supporto multilingue
-   - Creazione del sistema di installazione automatica delle dipendenze
-   - Sviluppo dell'interfaccia a riga di comando
-4. **Testing e refinement**: Identificazione e correzione di problemi (es. compatibilità Python 3.14, gestione emoji nel README)
-5. **Documentazione**: Creazione di README completo, CONTRIBUTING.md, e documentazione d'uso
+- **CSV** — una riga per toponimo, con nome, etichetta, occorrenze, pagine, provenienza e, se disponibili, coordinate. Adatto a fogli di calcolo e importazioni in database.
+- **JSON** — l'intero risultato, inclusi metadati sull'esecuzione (lingua, modello, pagine elaborate).
+- **GeoJSON** — una collezione di feature puntuali per i soli toponimi dotati di coordinate, apribile direttamente in QGIS.
 
-### Vantaggi dello sviluppo assistito da AI
+La provenienza di ciascun toponimo (`ner:GPE`, `ner:LOC`, `gazetteer`) permette, per esempio, di distinguere i luoghi individuati dal modello da quelli confermati dalla propria lista di controllo.
 
-Questo approccio ha permesso di:
+## Interfaccia grafica
 
-- **Accelerare lo sviluppo**: Un progetto che avrebbe richiesto giorni è stato completato in una sessione di lavoro
-- **Migliorare la qualità**: Claude ha suggerito best practices, gestione errori robusta, e un'architettura pulita
-- **Ampliare le funzionalità**: Features come l'auto-setup e il supporto multilingue sono stati aggiunti naturalmente durante la conversazione
-- **Produrre documentazione completa**: README, CONTRIBUTING, e esempi d'uso sono stati generati contestualmente al codice
-- **Preparare per open-source**: Licenza MIT, .gitignore completo, e struttura GitHub-ready
+Per chi preferisce non usare il terminale, `gui.py` offre un'interfaccia costruita con PyQt5 che espone le stesse funzioni: selezione del PDF (anche per trascinamento), intervallo di pagine, gestione interattiva della lista di inclusione (il gazetteer) e di quella di esclusione, e visualizzazione dei risultati con pulsanti per spostare rapidamente un toponimo nell'una o nell'altra lista. Nella versione rivista l'elaborazione avviene in un thread separato: la finestra resta reattiva anche su documenti di centinaia di pagine.
 
-### Implicazioni per la ricerca accademica
+## Casi d'uso nella ricerca
 
-Questo esperimento dimostra come gli strumenti di AI generativa possano:
+L'applicazione più diretta è l'**organizzazione geografica della bibliografia**. Elaborando in blocco una raccolta di PDF e importando i CSV risultanti in un database, si ottiene una tabella che associa ogni pubblicazione ai luoghi che vi compaiono. Da qui si possono interrogare i dati in modo geografico: quali contributi trattano una certa area, quali menzionano insieme due luoghi distanti, come si distribuisce sulla carta la propria biblioteca digitale. Con l'output GeoJSON lo stesso materiale diventa una mappa della copertura bibliografica, utile a individuare regioni poco studiate.
 
-- Abbassare le barriere tecniche per ricercatori umanisti che necessitano di strumenti digitali personalizzati
-- Permettere la prototipazione rapida di soluzioni per problemi specifici di ricerca
-- Facilitare la creazione di strumenti open-source riutilizzabili dalla comunità accademica
-- Accelerare il ciclo di sviluppo-test-refinement degli strumenti di ricerca
+Su corpora più ampi, l'estrazione sistematica dei toponimi consente analisi della distribuzione geografica della ricerca: quali aree ricevono più attenzione, come cambia nel tempo l'interesse per un territorio, quali associazioni di luoghi ricorrono nella letteratura di un ambito disciplinare. Per chi conduce *review* sistematiche, una passata preliminare su abstract e testi completi fornisce rapidamente il quadro della copertura geografica degli studi esaminati.
+
+Un flusso di lavoro plausibile, a partire da una raccolta di 500 PDF di archeologia classica:
+
+```bash
+for pdf in biblioteca/*.pdf; do
+    python geoNamesFromPdf.py "$pdf" -f csv -o "toponimi/$(basename "$pdf" .pdf).csv"
+done
+```
+
+I CSV così prodotti si importano in SQLite o PostgreSQL e si interrogano con SQL ordinario; le colonne con le coordinate, se si è usato un gazetteer georiferito, permettono di passare direttamente alla visualizzazione cartografica.
+
+## Installazione e uso
+
+Il progetto richiede Python 3.11 o successivo.
+
+```bash
+git clone https://github.com/lad-sapienza/geoNamesFromPdf.git
+cd geoNamesFromPdf
+
+python3.12 -m venv venv
+source venv/bin/activate        # su macOS/Linux
+
+python geoNamesFromPdf.py documento.pdf
+```
+
+Al primo avvio lo strumento verifica le dipendenze e i modelli linguistici essenziali (italiano e inglese) e propone di installarli automaticamente. Le esecuzioni successive non ripetono il controllo.
+
+Comandi principali:
+
+```bash
+python geoNamesFromPdf.py articolo.pdf                    # rilevamento automatico della lingua
+python geoNamesFromPdf.py -l it documento.pdf             # lingua forzata
+python geoNamesFromPdf.py documento.pdf -p "10-50"        # solo alcune pagine
+python geoNamesFromPdf.py documento.pdf -f geojson -o out.geojson --gazetteer pleiades.tsv
+python geoNamesFromPdf.py --no-ner --gazetteer antichi.txt documento.pdf
+python geoNamesFromPdf.py --list-languages                # modelli installati
+python geoNamesFromPdf.py --install-language es           # aggiunge lo spagnolo
+```
+
+## Lingue supportate
+
+Lo strumento è preconfigurato per dieci lingue — italiano, inglese, spagnolo, francese, tedesco, portoghese, olandese, greco moderno, polacco e rumeno — installabili singolarmente con `--install-language`. L'elenco è definito nel modulo `core.py` e si estende facilmente ad altre lingue per cui esista un modello spaCy con riconoscimento delle entità. La copertura multilingue è particolarmente utile in contesti di ricerca internazionali, dove la bibliografia è spesso in più lingue.
+
+## Affidabilità e sviluppo assistito da IA
+
+La revisione ha aggiunto una suite di test automatici (`pytest`) che verifica offline, senza scaricare modelli, il comportamento delle funzioni pure: analisi degli intervalli di pagina, confronto con il gazetteer, lettura dei file in vari formati, serializzazione. È un test di questo tipo che avrebbe intercettato, a suo tempo, l'errore nell'espressione regolare del gazetteer.
+
+Vale la pena essere espliciti sul metodo di lavoro. La prima versione di geoNamesFromPdf, nell'ottobre 2025, era stata scritta interamente con l'assistenza di Claude Sonnet 4.5 tramite GitHub Copilot. La revisione dell'agosto 2026 è stata condotta con Claude Sonnet 5 tramite Claude Code, in una sessione che è partita da una revisione critica del codice esistente — è così che sono emersi il bug del gazetteer e gli altri problemi — ed è proseguita con la riprogettazione dell'architettura, l'aggiunta delle nuove funzionalità e la stesura dei test e della documentazione. È un esempio concreto di come questi strumenti possano abbassare la soglia tecnica per chi, nella ricerca umanistica, ha bisogno di software su misura: non solo per scrivere codice nuovo, ma per rivedere e consolidare quello esistente.
 
 ## Conclusioni
 
-geoNamesFromPdf rappresenta un esempio di come tecnologie avanzate di NLP possano essere rese accessibili e utili per la ricerca umanistica e scientifica. La capacità di estrarre automaticamente informazioni geografiche da grandi volumi di documenti apre nuove possibilità per:
-
-- L'organizzazione e la gestione della bibliografia accademica
-- L'analisi spaziale della letteratura scientifica
-- La scoperta di pattern e connessioni geografiche nella ricerca
-- La creazione di sistemi di information retrieval geograficamente consapevoli
-
-Lo strumento è completamente **open-source** e disponibile su GitHub, dove la comunità accademica può:
-
-- Utilizzarlo liberamente per le proprie ricerche
-- Contribuire con miglioramenti e nuove funzionalità
-- Adattarlo alle proprie esigenze specifiche
-- Condividere casi d'uso e best practices
+geoNamesFromPdf resta uno strumento volutamente circoscritto: fa una cosa — trovare i luoghi in un PDF — e cerca di farla bene, restando semplice da installare e da usare. La revisione del 2026 lo rende però adatto anche al lavoro su scala maggiore: elaborazione di interi volumi, output che si integra con GIS e database, gazetteer che portano coordinate, e una modalità pensata per le lingue antiche. Tutto questo senza rinunciare al funzionamento offline e senza dipendere da servizi esterni.
 
 ### Link e risorse
 
-- **Repository GitHub**: [https://github.com/lad-sapienza/geoNamesFromPdf](https://github.com/lad-sapienza/geoNamesFromPdf)
-- **Licenza**: MIT License
-- **Tecnologie utilizzate**: Python, spaCy, PyMuPDF, langdetect
-- **Supporto**: [Issues su GitHub](https://github.com/lad-sapienza/geoNamesFromPdf/issues)
-
-### Per iniziare
-
-Invitiamo tutti i ricercatori interessati a provare geoNamesFromPdf con i propri documenti e a condividere feedback ed esperienze. Il progetto è in continua evoluzione e il contributo della comunità accademica è fondamentale per migliorarlo e adattarlo alle diverse esigenze di ricerca.
+- Repository: [github.com/lad-sapienza/geoNamesFromPdf](https://github.com/lad-sapienza/geoNamesFromPdf)
+- Licenza: MIT
+- Tecnologie: Python, spaCy, PyMuPDF, langdetect; opzionali spacy-transformers e GLiNER
+- Segnalazioni e contributi: [Issues su GitHub](https://github.com/lad-sapienza/geoNamesFromPdf/issues)
