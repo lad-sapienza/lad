@@ -62,7 +62,7 @@ const publishedDate = entry.data.date
   description={entry.data.description}
   image={entryImage}
 >
-  <article class="lad-article">
+  <article class="lad-article" data-locale={locale}>
     <p class="lad-kicker">
       <a href={backHref} title={backLabel}>← {sectionLabel}</a>
     </p>
@@ -101,3 +101,97 @@ const publishedDate = entry.data.date
     </div>
   </article>
 </BaseLayout>
+
+<script>
+  // Every image in the article (hero + inline) opens in a shared PhotoSwipe
+  // gallery — click one, page through the rest. The colocated <Gallery> grid
+  // keeps its own lightbox, so it is excluded here.
+  import PhotoSwipeLightbox from "photoswipe/lightbox"
+  import "photoswipe/style.css"
+
+  const ZOOM_LABEL = { it: "Ingrandisci l'immagine", en: "Enlarge image" }
+
+  const article = document.querySelector(".lad-article")
+  if (article instanceof HTMLElement && !article.dataset.lightboxReady) {
+    article.dataset.lightboxReady = "1"
+    const locale = article.dataset.locale === "en" ? "en" : "it"
+    const zoomLabel = ZOOM_LABEL[locale]
+
+    const images = Array.from(article.querySelectorAll("img")).filter(
+      (img) => !img.closest(".gallery-grid") && !img.closest(".pswp"),
+    )
+
+    if (images.length > 0) {
+      const dims = (img: HTMLImageElement) => ({
+        width: parseInt(img.getAttribute("width") || "", 10) || img.naturalWidth || 1600,
+        height: parseInt(img.getAttribute("height") || "", 10) || img.naturalHeight || 1200,
+      })
+
+      const lightbox = new PhotoSwipeLightbox({
+        pswpModule: () => import("photoswipe"),
+        // fade, not zoom: the gallery is built on the fly without bound
+        // thumbnail elements, so there is no rect to zoom back to.
+        showHideAnimationType: "fade",
+        bgOpacity: 0.92,
+        loop: false,
+      })
+
+      // Skip captions that add nothing: a bare filename, or the article title
+      // repeated (the hero image alt is the title).
+      const pageTitle = (document.querySelector(".lad-title")?.textContent || "").trim()
+      const isFilename = (s: string) =>
+        /^[\w .,()+-]+\.(jpe?g|png|gif|webp|avif|svg)$/i.test(s)
+      const caption = (img: HTMLImageElement) => {
+        const alt = (img.alt || "").trim()
+        return !alt || isFilename(alt) || alt === pageTitle ? "" : alt
+      }
+
+      lightbox.on("uiRegister", () => {
+        lightbox.pswp?.ui?.registerElement({
+          name: "caption",
+          order: 9,
+          isButton: false,
+          appendTo: "root",
+          onInit: (el, pswp) => {
+            el.className = "pswp__custom-caption"
+            pswp.on("change", () => {
+              const text = (pswp.currSlide?.data as { alt?: string })?.alt || ""
+              el.textContent = text
+              el.style.display = text ? "block" : "none"
+            })
+          },
+        })
+      })
+
+      lightbox.init()
+
+      const open = (index: number) => {
+        lightbox.loadAndOpen(
+          index,
+          images.map((img) => {
+            const src = img.currentSrc || img.src
+            return { src, msrc: src, alt: caption(img), ...dims(img) }
+          }),
+        )
+      }
+
+      images.forEach((img, i) => {
+        img.style.cursor = "zoom-in"
+        img.setAttribute("role", "button")
+        img.setAttribute("tabindex", "0")
+        if (!img.hasAttribute("aria-label")) {
+          img.setAttribute("aria-label", img.alt ? `${zoomLabel}: ${img.alt}` : zoomLabel)
+        }
+        const fire = (e: Event) => {
+          e.preventDefault()
+          open(i)
+        }
+        img.addEventListener("click", fire)
+        img.addEventListener("keydown", (e) => {
+          if (e.key === "Enter" || e.key === " ") fire(e)
+        })
+        img.closest("a")?.addEventListener("click", (e) => e.preventDefault())
+      })
+    }
+  }
+</script>
