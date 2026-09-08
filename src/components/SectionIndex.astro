@@ -8,9 +8,11 @@ export interface Props {
   description: string
   collection: string
   locale: Locale
+  /** Render the page <h1> from `title`. Set false when the slot supplies its own heading. */
+  heading?: boolean
 }
 
-const { title, description, collection, locale } = Astro.props
+const { title, description, collection, locale, heading = true } = Astro.props
 
 const allowedCollections = ["blog", "didattica", "notizie", "ricerca", "sviluppo"] as const;
 type AllowedCollection = typeof allowedCollections[number];
@@ -28,62 +30,48 @@ const sortedArticles = articles.sort((a, b) => {
 })
 
 const STRINGS = {
-  it: { publishedOn: "Pubblicata il", readMore: "→ Leggi tutto" },
-  en: { publishedOn: "Published on", readMore: "→ Read more" },
+  it: { publishedOn: "Pubblicata il", readMore: "Leggi tutto →", pinned: "In evidenza" },
+  en: { publishedOn: "Published on", readMore: "Read more →", pinned: "Featured" },
 } as const
 const t = STRINGS[locale]
 const dateLocale = locale === "en" ? "en-GB" : "it-IT"
 ---
 
 <BaseLayout locale={locale} title={title} description={description}>
-  <slot />
+  <div class="lad-prose lad-prose--wide">
+    {heading && <h1 class="lad-title">{title}</h1>}
+    <slot />
+  </div>
 
   {sortedArticles && sortedArticles.length > 0 && (
-    <section>
+    <div class="lad-index lad-prose--wide">
       {sortedArticles.map(article => {
         const slug = slugFromRest(splitLocaleId(article.id).rest)
         const href = `/${locale}/${article.collection}/${slug}/`
         const imgHref = `/${article.collection}/it/${slug}/${article.data.img}`
+        const dateStr = article.data.date
+          ? new Date(article.data.date).toLocaleDateString(dateLocale, { year: "numeric", month: "long", day: "numeric" })
+          : ""
         return (
-        <div
-          class={`row my-5 py-5 border-bottom border-primary${article.data.pinned ? " shadow" : ""}`}
-        >
-          <div class="col-sm-4">
-            <a href={href}>
-              {article.data.img && (
-                <img
-                  src={imgHref}
-                  alt={article.data.title}
-                  class="img-fluid"
-                />
-              )}
-            </a>
-          </div>
-          <div class="col-sm-8">
-            <p class="text-secondary">
-              {t.publishedOn}{" "}
-              {article.data.date
-                ? new Date(article.data.date).toLocaleDateString(dateLocale)
-                : ""}
-            </p>
-            <h2>
-              <a
-                href={href}
-                class="text-body-emphasis text-decoration-none"
-              >
-                {article.data.title}
+          <article class:list={["lad-index__item", article.data.pinned && "lad-index__item--pinned"]}>
+            <div>
+              <p class="lad-index__meta">
+                {article.data.pinned ? t.pinned : dateStr ? `${t.publishedOn} ${dateStr}` : ""}
+              </p>
+              <h2 class="lad-index__title">
+                <a href={href}>{article.data.title}</a>
+              </h2>
+              <p class="lad-index__desc">{article.data.description}</p>
+              <p class="mt-2 mb-0"><a href={href}>{t.readMore}</a></p>
+            </div>
+            {article.data.img && (
+              <a href={href} aria-hidden="true" tabindex="-1">
+                <img src={imgHref} alt="" class="lad-index__thumb" loading="lazy" />
               </a>
-            </h2>
-            <p>{article.data.description}</p>
-            <p>
-              <a href={href}>
-                {t.readMore}
-              </a>
-            </p>
-          </div>
-        </div>
+            )}
+          </article>
         )
       })}
-    </section>
+    </div>
   )}
 </BaseLayout>

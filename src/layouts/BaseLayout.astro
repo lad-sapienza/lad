@@ -76,9 +76,9 @@ const f = FOOTER[locale]
     <ThemeToggle client:load />
     <LocaleSwitcher client:load locales={[...LOCALES]} currentLocale={locale} labels={LOCALE_LABELS} />
     <header>
-      <div class="container py-4">
-        <!-- First row: Logos and Mobile Menu Button -->
-        <div class="row">
+      <div class="container px-4 py-4">
+        <!-- Logos: LAD on the left axis (shared with nav + content), Sapienza pinned right -->
+        <div class="row align-items-center">
           <div class="col-6">
             <a href={`/${locale}/`} title={localizedMetadata.title}>
               <img

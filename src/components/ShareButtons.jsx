@@ -1,8 +1,6 @@
 import { SiBluesky, SiX, SiFacebook, SiWhatsapp, SiTelegram } from "react-icons/si"
 import { FaLinkedinIn } from "react-icons/fa"
 
-const size = 30
-
 const buttons = [
   {
     Icon: SiBluesky,
@@ -42,10 +40,15 @@ const buttons = [
   },
 ]
 
-const ShareButtons = ({ url, title, tags, locale = "it" }) => {
+const ShareButtons = ({ url, title, tags, locale = "it", variant = "block" }) => {
   const shareLabel = locale === "en" ? (label) => `Share on ${label}` : (label) => `Condividi su ${label}`
+  const inline = variant === "inline"
+  const size = inline ? 18 : 30
+  const wrapperClass = inline
+    ? "d-print-none d-inline-flex flex-wrap gap-2 align-items-center text-primary"
+    : "d-print-none d-flex flex-wrap gap-3 justify-content-center mt-5 text-primary"
   return (
-    <div className="d-print-none d-flex flex-wrap gap-3 justify-content-center mt-5 text-primary">
+    <div className={wrapperClass}>
       {buttons.map(({ Icon, label, getUrl }) => (
         <a
           key={label}

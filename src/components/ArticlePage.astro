@@ -51,6 +51,9 @@ const sectionLabel = SECTION_LABELS[collection as AllowedCollection][locale]
 const backHref = `/${locale}/${collection}/`
 const backLabel = locale === "en" ? `${t.back} ${sectionLabel} page` : `${t.back} ${sectionLabel}`
 const dateLocale = locale === "en" ? "en-GB" : "it-IT"
+const publishedDate = entry.data.date
+  ? new Date(entry.data.date).toLocaleDateString(dateLocale, { year: "numeric", month: "long", day: "numeric" })
+  : ""
 ---
 
 <BaseLayout
@@ -59,61 +62,42 @@ const dateLocale = locale === "en" ? "en-GB" : "it-IT"
   description={entry.data.description}
   image={entryImage}
 >
-  <main>
-    <a href={backHref} title={backLabel}>
-      {backLabel}
-    </a>
+  <article class="lad-article">
+    <p class="lad-kicker">
+      <a href={backHref} title={backLabel}>← {sectionLabel}</a>
+    </p>
+    <h1 class="lad-title">{entry.data.title}</h1>
 
-    <article>
-      <h1 class="my-5 text-center">{entry.data.title}</h1>
-
-      {
-        entry.data.tags && (
-          <div class="text-center font-monospace">
-            <div class="bg-light mb-3 pt-3 px-3 text-muted d-inline-block d-print-none">
-              <p>{t.tag}: {entry.data.tags?.join(", ")}</p>
-            </div>
-          </div>
-        )
-      }
-
-      <p class="text-center text-muted">
-        {t.publishedOn} {
-          entry.data.date
-            ? new Date(entry.data.date).toLocaleDateString(dateLocale, {
-                year: "numeric",
-                month: "long",
-                day: "numeric",
-              })
-            : ""
-        }
-      </p>
-
-      <ShareButtons
+    <div class="lad-article__meta">
+      <span class="lad-article__date">{publishedDate}</span>
+      <span class="lad-article__share d-print-none">
+        <ShareButtons
           client:load
+          variant="inline"
           url={Astro.url.href}
           title={entry.data.title}
           tags={entry.data.tags}
           locale={locale}
         />
-
+      </span>
       {
-        entry.data.img && (
-          <div class="my-5 py-5 text-center">
-            <img
-              src={entryImage}
-              alt={entry.data.title}
-              class="shadow img-fluid"
-            />
-          </div>
+        entry.data.tags && entry.data.tags.length > 0 && (
+          <span class="lad-article__tags d-print-none">{t.tag}: {entry.data.tags.join(", ")}</span>
         )
       }
+    </div>
 
-      <!-- Content -->
-      <div>
-        <Content />
-        <Gallery />
-      </div>
-    </article>
-  </main>
+    {
+      entry.data.img && (
+        <figure class="lad-article__figure">
+          <img src={entryImage} alt={entry.data.title} class="img-fluid" />
+        </figure>
+      )
+    }
+
+    <div class="lad-article__body">
+      <Content />
+      <Gallery />
+    </div>
+  </article>
 </BaseLayout>

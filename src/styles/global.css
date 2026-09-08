@@ -2,79 +2,422 @@
 @import "bootstrap/dist/css/bootstrap.min.css";
 
 /**
- * LAD Theme - Based on LAD Sapienza website
- * 
- * Color scheme and styling to match the original LAD website
- * https://lad-sapienza.github.io/lad/
+ * LAD Theme — Editorial (Direction A)
+ *
+ * Built on Bootstrap 5 + LAD brand blue.
+ *   · Lora            — display / headings
+ *   · system sans     — running text
+ *   · system mono     — eyebrows, meta, section labels
+ *
+ * One left axis from masthead to footer; prose held to a
+ * readable measure with an optional highlights rail alongside.
  */
 
 :root {
   /* Primary brand colors */
   --color-primary: #1963f7; /* LAD brand blue */
-  --color-primary-hover: #1557e8; /* Darker shade for hover */
-  --color-primary-light: #3b82f6; /* Lighter shade */
-  --color-primary-dark: #1248c7; /* Darker shade */
-  
-  /* Text colors for better contrast */
-  --color-text: #111827; /* Gray-900 */
-  --color-text-muted: #6b7280; /* Gray-500 */
-  --color-text-light: #9ca3af; /* Gray-400 */
-  
+  --color-primary-hover: #1450d6;
+  --color-primary-light: #3b82f6;
+  --color-primary-dark: #1248c7;
+
+  /* Text colors */
+  --color-text: #141a22;
+  --color-text-muted: #586170;
+  --color-text-light: #8b93a1;
+
   /* Background colors */
   --color-bg: #ffffff;
-  --color-bg-secondary: #f9fafb; /* Gray-50 */
-  --color-bg-tertiary: #f3f4f6; /* Gray-100 */
-  
+  --color-bg-secondary: #f7f8fa;
+  --color-bg-tertiary: #f1f3f6;
+
   /* Border colors */
-  --color-border: #e5e7eb; /* Gray-200 */
-  --color-border-light: #f3f4f6; /* Gray-100 */
-  
+  --color-border: #e3e7ee;
+  --color-border-light: #eef1f5;
+
   /* Shadows */
-  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-  --shadow-base: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
-  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-  
+  --shadow-sm: 0 1px 2px 0 rgba(20, 30, 50, 0.06);
+  --shadow-base: 0 1px 3px 0 rgba(20, 30, 50, 0.1), 0 1px 2px 0 rgba(20, 30, 50, 0.06);
+  --shadow-md: 0 8px 24px rgba(20, 30, 50, 0.12);
+
   /* Typography */
   --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  --font-serif: 'Lora', 'Georgia', 'Times New Roman', Times, serif;
-  
-  /* Spacing */
-  --space-section: 4rem;
-  --space-article: 2rem;
+  --font-serif: 'Lora', Georgia, 'Times New Roman', Times, serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', monospace;
+
+  /* Spacing scale — 8px base */
+  --space-1: 0.5rem;
+  --space-2: 1rem;
+  --space-3: 1.5rem;
+  --space-4: 2.5rem;
+  --space-5: 4rem;
+  --space-6: 6rem;
+
+  /* Editorial layout */
+  --measure: 34rem;       /* ~65-70 characters of body text */
+  --measure-wide: 46rem;  /* list pages / wider prose       */
+  --rail: 21rem;          /* highlights rail                */
+  --col-gap: 4rem;
 }
 
-/* Dark mode: LAD's own text tokens aren't Bootstrap variables, so they don't
-   follow bootstrap.min.css's built-in [data-bs-theme="dark"] flip on their
-   own — delegate to Bootstrap's already dark-aware tokens instead of picking
-   new hex values by hand. Everything else on the site (navbar, cards,
-   buttons, borders, text-muted) already uses Bootstrap classes/variables and
-   themes itself automatically once data-bs-theme is set. */
+/* Dark mode: LAD's own text/surface tokens aren't Bootstrap variables, so they
+   don't follow bootstrap.min.css's [data-bs-theme="dark"] flip on their own —
+   delegate to Bootstrap's already dark-aware tokens instead of hand-picking hex.
+   Everything else on the site uses Bootstrap classes/variables and themes
+   itself once data-bs-theme is set. */
 [data-bs-theme="dark"] {
   --color-text: var(--bs-body-color);
   --color-text-muted: var(--bs-secondary-color);
+  --color-text-light: var(--bs-tertiary-color);
+  --color-bg: var(--bs-body-bg);
+  --color-bg-secondary: var(--bs-tertiary-bg);
+  --color-bg-tertiary: var(--bs-secondary-bg);
+  --color-border: var(--bs-border-color);
+  --color-border-light: var(--bs-border-color);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.4);
 }
 
-/* Global typography improvements */
+/* ---------- base ---------- */
+
 body {
   font-family: var(--font-sans);
-  line-height: 1.6;
+  font-size: 1.0625rem; /* 17px */
+  line-height: 1.65;
   color: var(--color-text);
 }
 
-/* Global headers styling */
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-serif);
   color: var(--color-text);
-  line-height: 1.3;
+  line-height: 1.2;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  text-wrap: balance;
 }
 
+.main_content img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Consistent container width so header, nav, content and footer share one axis */
 @media (min-width: 1400px) {
   .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
-    max-width: 1100px;
+    max-width: 1120px;
   }
 }
 
-.main_content img{
-  max-width: 100%;
-  height: auto;
+/* ---------- editorial helpers ---------- */
+
+/* prose column at measure + optional rail, both left-aligned */
+.lad-shell {
+  display: grid;
+  grid-template-columns: minmax(0, var(--measure)) minmax(0, var(--rail));
+  gap: var(--col-gap);
+  align-items: start;
+  /* prose stays on the left axis; the rail is pushed to the right edge,
+     aligning with the Sapienza logo and the footer */
+  justify-content: space-between;
+}
+.lad-shell--wide {
+  grid-template-columns: minmax(0, var(--measure-wide));
+}
+@media (max-width: 991.98px) {
+  .lad-shell {
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--space-5);
+  }
+}
+
+.lad-prose {
+  max-width: var(--measure);
+}
+.lad-prose--wide {
+  max-width: var(--measure-wide);
+}
+.lad-prose > *:first-child {
+  margin-top: 0;
+}
+
+/* display heading + brand hairline */
+.lad-title,
+.lad-prose > h1:first-child {
+  font-size: clamp(2.1rem, 1.5rem + 2.4vw, 2.9rem);
+  line-height: 1.1;
+  letter-spacing: -0.022em;
+  margin: 0 0 var(--space-3);
+}
+.lad-title::after,
+.lad-prose > h1:first-child::after {
+  content: "";
+  display: block;
+  width: 4rem;
+  height: 3px;
+  margin-top: var(--space-3);
+  background: var(--color-primary);
+}
+
+/* mono eyebrow */
+.lad-kicker {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  margin-bottom: var(--space-1);
+}
+
+/* section rhythm: a hairline that hugs the content it divides */
+.lad-section {
+  margin-top: var(--space-3);
+}
+.lad-section--ruled {
+  border-top: 1px solid var(--color-border);
+  padding-top: var(--space-4);
+}
+
+.lad-lead,
+.lad-prose > .lead {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  font-weight: 400;
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-4);
+}
+
+.lad-prose p {
+  margin-bottom: var(--space-2);
+}
+.lad-prose h2 {
+  font-size: 1.5rem;
+  margin-bottom: var(--space-2);
+}
+.lad-prose .blockquote {
+  margin: var(--space-3) 0;
+  padding-left: var(--space-2);
+  border-left: 3px solid var(--color-primary);
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: var(--color-text);
+}
+.lad-prose a:not(.btn),
+.lad-article__body a {
+  color: var(--color-primary);
+  text-underline-offset: 0.15em;
+}
+.lad-prose a:not(.btn):hover,
+.lad-article__body a:hover {
+  color: var(--color-primary-hover);
+}
+
+/* ---------- highlights rail ---------- */
+
+.lad-rail {
+  position: sticky;
+  top: var(--space-3);
+}
+@media (max-width: 991.98px) {
+  .lad-rail {
+    position: static;
+  }
+}
+
+.lad-rail__head {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  padding-bottom: var(--space-2);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.lad-rail__item {
+  display: grid;
+  grid-template-columns: 4rem 1fr;
+  gap: var(--space-2);
+  padding: var(--space-2) 0;
+  border-bottom: 1px solid var(--color-border);
+  align-items: start;
+  color: inherit;
+  text-decoration: none;
+}
+.lad-rail__item:hover .lad-rail__title {
+  color: var(--color-primary);
+}
+.lad-rail__item--pinned {
+  box-shadow: inset 2px 0 0 var(--color-primary);
+  padding-left: 0.75rem;
+}
+
+.lad-rail__thumb {
+  width: 4rem;
+  height: 2.75rem;
+  object-fit: cover;
+  border-radius: 3px;
+  border: 1px solid var(--color-border);
+}
+.lad-rail__title {
+  display: block;
+  font-family: var(--font-sans);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  line-height: 1.35;
+  color: var(--color-text);
+}
+.lad-rail__section {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.625rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  margin-top: 0.35rem;
+}
+
+/* ---------- editorial index (list pages) ---------- */
+
+.lad-index {
+  margin-top: var(--space-4);
+}
+.lad-index__item {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 11.25rem;
+  gap: var(--space-3);
+  align-items: start;
+  padding: var(--space-4) 0;
+  border-top: 1px solid var(--color-border);
+}
+@media (max-width: 575.98px) {
+  .lad-index__item {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+.lad-index__item--pinned {
+  box-shadow: inset 3px 0 0 var(--color-primary);
+  padding-left: 1.25rem;
+}
+.lad-index__meta {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-1);
+}
+.lad-index__item--pinned .lad-index__meta {
+  color: var(--color-primary);
+}
+.lad-index__title {
+  font-size: 1.35rem;
+  margin: 0 0 var(--space-1);
+}
+.lad-index__title a {
+  color: var(--color-text);
+  text-decoration: none;
+}
+.lad-index__title a:hover {
+  color: var(--color-primary);
+}
+.lad-index__desc {
+  color: var(--color-text-muted);
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+.lad-index__thumb {
+  width: 11.25rem;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  border-radius: 4px;
+  border: 1px solid var(--color-border);
+}
+@media (max-width: 575.98px) {
+  .lad-index__thumb {
+    width: 100%;
+    max-width: 11.25rem;
+  }
+}
+
+/* ---------- article ---------- */
+
+/* Text blocks hold the reading measure; the figure is free to run wider. */
+.lad-article > * {
+  max-width: var(--measure);
+}
+.lad-article__meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.5rem 1rem;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.03em;
+  color: var(--color-text-muted);
+  padding-bottom: var(--space-2);
+  border-bottom: 1px solid var(--color-border);
+}
+.lad-article__share {
+  margin-left: auto;
+}
+.lad-article__tags {
+  flex-basis: 100%;
+  color: var(--color-text-light);
+}
+.lad-article__figure {
+  max-width: min(46rem, 100%);
+  width: min(42rem, 100%);
+  margin: var(--space-4) 0;
+}
+.lad-article__figure img {
+  display: block;
+  border-radius: 4px;
+  border: 1px solid var(--color-border);
+}
+.lad-article__body {
+  font-size: 1.0625rem;
+  line-height: 1.75;
+}
+.lad-article__body > :first-child {
+  margin-top: 0;
+}
+.lad-article__body > h2 {
+  font-size: 1.5rem;
+  margin: var(--space-4) 0 var(--space-2);
+}
+.lad-article__body > h3 {
+  font-size: 1.2rem;
+  margin: var(--space-3) 0 var(--space-1);
+}
+.lad-article__body > p {
+  margin: 0 0 var(--space-2);
+}
+/* drop cap when the article opens straight into a paragraph */
+.lad-article__body > p:first-child::first-letter {
+  float: left;
+  font-family: var(--font-serif);
+  font-size: 3.4rem;
+  line-height: 0.8;
+  font-weight: 600;
+  padding: 0.35rem 0.5rem 0 0;
+  color: var(--color-primary);
+}
+.lad-kicker a {
+  color: inherit;
+  text-decoration: none;
+}
+.lad-kicker a:hover {
+  text-decoration: underline;
+}
+.lad-article__body blockquote,
+.lad-article__body .blockquote {
+  margin: var(--space-3) 0;
+  padding-left: var(--space-2);
+  border-left: 3px solid var(--color-primary);
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1.15rem;
+  line-height: 1.55;
+  color: var(--color-text);
 }
