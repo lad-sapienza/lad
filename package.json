@@ -9,8 +9,7 @@
     "preview": "astro preview",
     "astro": "astro",
     "add-collection": "scms-add-collection",
-    "add-content": "scms-add-content",
-    "deploy": "bash scripts/deploy.sh"
+    "add-content": "scms-add-content"
   },
   "keywords": [
     "astro",
