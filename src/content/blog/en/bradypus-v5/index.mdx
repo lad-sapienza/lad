@@ -1,0 +1,98 @@
+---
+title: "BraDypUS 5: a new interface, an open API and the first archaeology plugins"
+description: "In 2021, version 4 rebuilt BraDypUS \"under the hood\" while leaving the interface almost untouched; version 5 does the opposite: a brand-new interface, a public API redesigned from scratch and a first family of archaeology-specific plugins. Data migration from existing applications is automatic and requires no manual work by administrators"
+date: "2026-09-08"
+author: "Julian Bogdani"
+img: "bradypus-v5-login-page.jpg"
+tags: ["BraDypUS", "database", "archaeology", "cultural heritage", "open source", "LAD", "PHP", "Vue", "REST API"]
+draft: false
+inhome: true
+pinned: true
+---
+
+# BraDypUS 5: a new interface, an open API and the first archaeology plugins
+
+In March 2021 we [announced BraDypUS version 4](https://lad-sapienza.it/it/notizie/2021-03-28-bdus-v4-0-0-released/): a deep rewrite that rebuilt the application from the ground up — cleanly separating the application logic from data handling — and refreshed the interface inherited from earlier versions. It was, above all, foundational work, and it explicitly opened the way to a later, complete rewrite of the user interface. That rewrite is version 5: where version 4 rebuilt the foundations, version 5 rebuilds everything you see on top of them, while the engine that safeguards the data stays the same, battle-tested one as always.
+
+BraDypUS is the online database system for archaeological and cultural-heritage research developed at the [LAD – Laboratory of Digital Archaeology, Sapienza University of Rome](https://lad.saras.uniroma1.it). It is free software (licensed under [GNU AGPL-3.0](https://www.gnu.org/licenses/agpl-3.0.html)), born in 2007 and used for years to manage excavations, surveys, catalogues and research-project archives. Version 5 has been available since June 2026 and has grown through dozens of releases since: it is already in production with real applications, and development is moving fast — especially on the more specialised features.
+
+![The new DataView, with the record list, the search bar and configurable columns](/blog/it/nuova-dataview.jpg)  
+*The new DataView, with the record list, the search bar and configurable columns.*
+
+## A brand-new interface
+
+The difference is obvious from the first login. The interface is no longer a set of pages that reload on every click, but a single-page application — smooth and responsive — that behaves like a desktop program while staying inside the browser. You can switch between Italian and English at any time, choose a light or dark theme, give each application an identifying colour so you can tell it apart at a glance when several are open, and work comfortably from a tablet or phone too.
+
+Underneath this new look, the working tools have been rethought:
+
+- **Search at several levels.** A quick search for everyday use, a visual advanced search for structured queries, and an "expert" mode for those who want to write the conditions by hand. The active filter is stored in the page URL: the browser's Back button returns to exactly the search you started from, and a shared link opens the same list for a colleague.
+- **A unified record view.** Viewing and editing in the same place, with an always-visible sidebar for links, geodata, bibliography, chronology and stratigraphic relations. A warning appears only if you leave the page with changes you have actually made and not saved.
+- **Version history.** Every change to every record is recorded automatically: you can browse the history, compare two versions field by field and restore any earlier state with one click.
+- **File management.** Drag-and-drop upload, previews, keywords, automatic image downscaling, and a dedicated view listing every file in the application, flagging the "orphans" not linked to any record.
+- **Exports** to CSV, XLSX and JSON, generated on the fly from any search, even over large numbers of records.
+- **Links between records** with a free-text label to describe the relationship (*cites*, *is part of*, …) and a navigable interactive graph.
+
+## Why a rewrite
+
+Readers who aren't interested in implementation details can skip this paragraph. Version 4 had already done the hard part: separating the data and the application rules from the way they are displayed. Version 5 reaps that reward. The PHP *backend* — the part that talks to the database, enforces permissions and guarantees data integrity — has been kept and extended; on top of it we built a JSON **REST API**, and it is that API the new interface consumes, exactly as an external program would. The *frontend* is now a [Vue 3](https://vuejs.org/) application built with [Vite](https://vite.dev/) and the [Ant Design Vue](https://antdv.com/) component library.
+
+On the authentication side, server-side PHP sessions give way to signed *tokens* (JWT): each browser tab carries its own, so several applications can stay open at once without interfering. You can sign in with Google or ORCID through OAuth2/SSO, with no local password; external integrations use API keys carrying an explicit privilege level; administrators can grant read and write permissions table by table, with a filter that restricts visibility to a subset of records. Three database engines are still supported — SQLite, MySQL/MariaDB and PostgreSQL — but the centre of gravity has shifted: where version 4 treated SQLite as the reference, version 5 looks to PostgreSQL as the primary engine and the recommended choice for production installations. The test suite — which in version 4 already ran to more than 200 unit tests — has been rewritten and extended: unit and integration tests, plus an *end-to-end* suite that walks through dozens of phases of an application's entire life cycle, run against all three engines.
+
+## A public API, meant to be used
+
+Every BraDypUS 5 dataset can be queried through a public REST API, with no need for a full interactive session. You authenticate with an API key (for automated access) or with the same token as the user session; the response is paginated JSON, with the list of fields and the data.
+
+The query language has changed since version 4: the old *ShortSQL* DSL has been retired in favour of a [Directus](https://directus.io/)-style filter format, easier to compose and to validate — comparison and text operators, `AND`/`OR` logical groups, sorting, pagination, export in several formats. Endpoints are organised per application (`/{app}/api/…`), consistently with the rest of the system, and a key is bound to a single application. The full documentation is available as a browsable [OpenAPI](https://www.openapis.org/) specification.
+
+## Migrating existing applications: no manual work on the data
+
+The API, as noted, is profoundly different from version 4's. That could have made upgrading an obstacle. To avoid it we built an **automatic migration system**, and it is the part of the project into which we have put the most caution and the most testing.
+
+On the first login after the update, BraDypUS recognises a version-4 application on its own and guides the administrator through a _one-time_ migration on a dedicated screen. The schema and data operations are *idempotent* (they can be re-run without harm) and are applied without anyone having to touch the database: the historic table-name prefix is removed automatically, stratigraphic relations are converted from text identifiers to real numeric keys, passwords are transparently upgraded to a modern algorithm, and the table and field configuration is moved out of files and into the database. **No data requires any manual work by the administrators.** The only thing to redo by hand is the handful of saved searches in the old format, which take a minute to rebuild with the new advanced search.
+
+The migration is also backed by a verification tool that compares the application before and after the update (counts, sample values, link integrity) and produces a report; before every major update a safety snapshot is saved, and there are backup and restore scripts for individual applications. We are already moving the lab's long-standing applications to the new version — the first was the [PAThs](https://atlas.paths-erc.eu) project's, one of the most complex, with custom-built plugins — and every real migration is a chance to harden the process further. For those who have entrusted us with their data over the years, the goal is for the upgrade to be a non-event: you log in, confirm, and carry on working.
+
+## Plugins for archaeology: active, young, open to your feedback
+
+The main direction of current development is the **domain plugins**: optional modules enabled table by table (in *Config → Tables*) that add specific features without burdening those who don't need them. Disabling a plugin is non-destructive — data already entered stays in the database and reappears when the plugin is switched back on.
+
+- **Stratigraphic relations and the Harris Matrix.** Manage relationships between stratigraphic units and visualise them as a directed graph (Harris Matrix) with cycles highlighted. In version 5 the relations were redesigned to use real numeric keys, with genuine referential integrity.
+- **Geodata and GeoFace.** Coordinates (points, lines, polygons) for records and display on an interactive [MapLibre GL](https://maplibre.org/) map, with geometry drawing and editing, WMS/WFS layers and local GeoJSON/KML, GeoJSON export and a temporal filter tied to the chronology.
+- **Chronology / uncertain dating (*fuzzy date*).** A compact grammar for recording approximate, range-based or one-sided dates (*ante quem* / *post quem*) — for example `c4l BCE` for the late 4th century BCE — with a certainty level and a period name. Dates become searchable by range overlap, and feed a **comparative chronological timeline** that lays records from several tables on the same axis, and a **derived chronological distribution** panel showing the temporal density of linked records.
+- **Osteological inventory.** For funerary contexts: the preservation state of more than fifty anatomical elements per individual, with multiple individuals per burial, preservation grade, anatomical and laterality certainty. Data is entered on an **interactive SVG skeleton** (zoom, pan, tooltip) or in a table view for those who prefer to work in bulk.
+- **Radiocarbon (C14).** Record determinations (BP and error) with **automatic calibration** against the IntCal20 curve (Reimer et al. 2020), computed server-side on every save; the calibrated ranges stay searchable and filterable like any other field. It is a deliberately simplified calibration, not a substitute for tools like OxCal when publication-grade precision is needed.
+- **Assemblage analysis.** A *wizard* for building pivot tables and bar charts on the composition of material assemblages (typological distribution by stratigraphic unit, quantities per class, and so on), with traversal across several relations, analyses that can be saved and shared, and CSV export.
+- **Zotero.** Link records to online Zotero libraries, with formatted citations shown directly in the record view.
+
+These modules are **under active development**. Some are very new, others are maturing in the field alongside the people who dig and catalogue. The modelling choices — which attributes to record, how to represent them, how to query them — are not final, and the best way to steer them is talking to the people who actually use them. If you work in physical anthropology, stratigraphy, chronology, material studies or absolute dating, **write to us**: concrete use cases, criticism and requests are exactly what we need at this stage.
+
+## Customising and extending
+
+Around the core, version 5 adds tools aimed at people who spend many hours inside the database and at those who tailor it to a specific project:
+
+- **Command palette (Ctrl/Cmd + K).** A single field from which to reach any table, view or action by typing its name, without taking your hands off the keyboard. Entries respect the user's permissions.
+- **Display templates.** A visual editor to define, table by table, how the record view is laid out: sections, field rows, widths, accordion panels. A print-template system for producing formatted record sheets is included too.
+- **Per-app widgets.** Developers can attach a custom JavaScript module to a field; it is loaded inside the record view and receives the live field value. It is already in production use: the [PAThs](https://bdus.lad-sapienza.it/paths/) project's application, for instance, uses a widget to draw the physical structure of a manuscript's quires.
+- **DBML import/export.** An application's whole structure (tables, fields, vocabularies) exports to an annotated DBML file — openable in diagram tools such as dbdiagram.io — and new tables can be created by describing them in DBML, with a preview and validation before anything is written.
+
+## Continuous release
+
+BraDypUS 5 follows a **continuous-release** model: frequent versions, semantic versioning, a [public CHANGELOG](https://github.com/lad-sapienza/BraDypUS/blob/v5/CHANGELOG.md) documenting every change. With the core now consolidated, the current phase is one of intense, focused work on the specialised features described above. Anyone wanting to follow the evolution closely can keep an eye on the repository and the changelog.
+
+## Try it
+
+We have set up a **public demo instance**, with a sample archaeological dataset already loaded (sites, complexes, trenches, stratigraphic units, finds, burials, stratigraphic relations, geodata, charts): it is the quickest way to get a feel for it.
+
+- **Demo:** https://demo.bdus.lad-sapienza.it
+- **Documentation:** https://docs.bdus.lad-sapienza.it
+- **Source code:** https://github.com/lad-sapienza/BraDypUS
+
+If you would like an instance hosted by the lab for your own project, or help migrating an application from version 4, write to **julian.bogdani@uniroma1.it**. If you would rather run it yourself, the documentation has instructions for installing with Docker (`docker compose up`) or on shared hosting.
+
+![The interactive Harris Matrix](/blog/it/harris-matrix-view.jpg)  
+*The interactive Harris Matrix.*
+
+![Dynamic map with a temporal filter](/blog/it/mappa-filtro-temporale.jpg)  
+*Dynamic map with a temporal filter.*
+
+BraDypUS 5 is the result of months of work, but above all it is a foundation to build on. The most interesting part — the tools designed around archaeological method — has only just begun, and we would like to grow it together with the people who will use it.
