@@ -12,8 +12,6 @@ tags:
   - minor cults
 ---
 
-# FACES: Fragments of Ancient CEStrine. Landscapes of the Sacred and Minor Cults in Northern Epirus
-
 ## Research project details
 -	P.I.: Francesca D'Ambola
 -	Funding: “Progetti per Avvio alla Ricerca” programme of Sapienza University of Rome

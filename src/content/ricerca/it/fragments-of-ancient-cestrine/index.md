@@ -12,8 +12,6 @@ tags:
   - culti minori
 ---
 
-# FACES: Fragments of Ancient CEStrine. Paesaggi del sacro e culti minori nell'Epiro Settentrionale
-
 ## Dettagli del progetto di ricerca
 -	P.I.: Francesca D’Ambola
 -	Finanziamento: Programma “Progetti per Avvio alla Ricerca” della Sapienza Università di Roma

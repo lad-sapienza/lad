@@ -8,10 +8,6 @@ pinned: true
 description: The Sapienza Archaeological Mission to Çuka e Ajtoit (Albania) is a joint project carried out in collaboration with the Albanian Institute of Archaeology of Tirana and the Academy of Albanological Studies, operating in the field with the official recognition of the Ministry of Foreign Affairs and International Cooperation of the Italian Republic. It has been active in the field since 2021 and is directed by Julian Bogdani (Sapienza, Rome) and Albana Meta (IA, Tirana).
 ---
 
-## News
-
-> Registration is now open for the 2026 excavation and research season at the site of Çuka e Ajtoit, in Albania. For more information and the link to the registration form, [see the dedicated page](../../notizie/2026-01-20-campagna-2026-scavi-albania/)!
-
 ## The Archaeological Mission
 
 The Sapienza Archaeological Mission to Çuka e Ajtoit (ancient _Kestría_) in southern Albania was launched in 2021 thanks to a research agreement between the [SARAS Department of Sapienza University of Rome](https://saras.uniroma1.it/) and the Institute of Archaeology of Tirana, part of the Academy of Sciences of Albania. The mission, directed by Julian Bogdani (Sapienza, Rome) and, since 2025, by Nevila Molla (IA, Tirana; for the period 2021-2024 by Albana Meta), has operated since 2022 with official recognition and, since 2023, with the financial support of the Ministry of Foreign Affairs and International Cooperation. Since 2025 the project has been funded by the [Bando Grandi Scavi programme of Sapienza University of Rome](https://www.uniroma1.it/it/node/264768).
