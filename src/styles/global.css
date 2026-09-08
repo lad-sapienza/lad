@@ -422,6 +422,54 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--color-text);
 }
 
+/* prose tables: hairline rows; may run wider than the text measure, and
+   scroll horizontally past that */
+.lad-article__body table,
+.lad-prose table {
+  display: block;
+  width: max-content;
+  max-width: 100%;
+  overflow-x: auto;
+  border-collapse: collapse;
+  margin: var(--space-3) 0;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+.lad-article__body table {
+  max-width: min(46rem, calc(100vw - 2rem));
+}
+.lad-article__body th,
+.lad-article__body td,
+.lad-prose th,
+.lad-prose td {
+  padding: 0.45rem 1.4rem 0.45rem 0;
+  text-align: left;
+  vertical-align: top;
+  border-bottom: 1px solid var(--color-border);
+}
+.lad-article__body thead th,
+.lad-prose thead th {
+  border-bottom: 2px solid var(--color-text);
+  font-family: var(--font-sans);
+  font-weight: 600;
+}
+.lad-article__body tbody tr:last-child td,
+.lad-prose tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+/* inline code: a quiet chip rather than Bootstrap's loud magenta */
+.lad-article__body :not(pre) > code,
+.lad-prose :not(pre) > code {
+  font-family: var(--font-mono);
+  font-size: 0.85em;
+  color: var(--color-text);
+  background: var(--color-bg-secondary);
+  border: 1px solid var(--color-border);
+  border-radius: 3px;
+  padding: 0.08em 0.34em;
+}
+
 /* ---------- article image lightbox (PhotoSwipe) ---------- */
 .lad-article img:focus-visible {
   outline: 2px solid var(--color-primary);

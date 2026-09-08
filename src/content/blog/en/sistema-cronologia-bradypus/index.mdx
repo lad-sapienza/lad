@@ -1,0 +1,243 @@
+---
+title: "Dating the uncertain: the chronology system of BraDypUS 5"
+author: Julian Bogdani
+licenza: CC BY 4.0 International
+tags: [BraDypUS, Chronology, Open Standard, EDTF, database, archaeology, open source]
+img: cronologia-bradypus.jpg
+date: 2026-09-09
+draft: false
+description: "In 2021 we reviewed the ways of encoding chronology in an archaeological database — a range of years, the EDTF standard, period gazetteers — and concluded that the only workable route was a hybrid. The fuzzy_date plugin in BraDypUS 5 is that hybrid, in production: searchable year-range storage, an expressive input grammar (centuries, quarter-centuries, ante and post quem), a certainty axis and a period label. Here we explain it from scratch, with many examples drawn from the excavation at Çuka e Ajtoit, and show how it interweaves with search, the map, the timeline and the derived chronological distribution."
+---
+
+Five years ago, in [*Digital encoding of chronology*](/en/blog/codifica-digitale-della-cronologia/), we tried to lay out a problem that anyone who has designed an archaeological database knows well: how do you record a dating. The hard part is not the precise date — that is easy — but everything around it: ranges, approximation, uncertainty, alternative dates, missing termini. And, above all, how do you then *search* by chronology.
+
+That article surveyed three families of solutions. The first: two fields, `data_from` and `data_to`, a start year and an end year — simple, compact, and above all searchable by the database, but unable to express approximation or uncertainty explicitly. The second: the [Extended Date/Time Format](https://www.loc.gov/standards/datetime/) (EDTF), an ISO standard, extraordinarily expressive — `Y-3345~/Y-3300~`, `[Y79-08-24,Y79-10-24]` — but which no database can query natively, shifting all the work onto the application. The third: period gazetteers such as [PeriodO](https://perio.do/), which assign a URI to each period and let different databases be linked together, but which are very awkward to use at data-entry time. The conclusion was that a universal solution does not exist, and that the most sensible route — at least for an excavation database — is a **hybrid**: a year range for searchability, a layer of expressiveness on top, and possibly a bridge towards period vocabularies.
+
+BraDypUS 5 — the version presented in [*BraDypUS 5: a new interface, an open API and the first archaeology plugins*](/en/blog/bradypus-v5/) — brings that hybrid into production, in the form of a system plugin called **`fuzzy_date`**. This article explains it from scratch: first the idea, then the syntax with many examples, then how it integrates with the rest of the system. Readers who only want to know *what to type* in the chronology box can jump straight to the [quick guide](#quick-guide) at the end.
+
+The examples that follow are drawn — or adapted — from the contexts of the [Sapienza Archaeological Mission to Çuka e Ajtoit](/en/ricerca/missione-archeologica-sapienza-a-cuka-e-ajtoit-albania/), ancient *Kestría*, a Hellenistic fortified centre of northern Epirus, in southern Albania.
+
+## What the `fuzzy_date` plugin does
+
+The plugin is enabled per table: **Config → Tables**, select the table, scroll to the *System plugins* section and switch on *Chronology (fuzzy date)*. On activation the system adds **five columns** to the table, with no further configuration:
+
+| Column | Type | Content |
+| --- | --- | --- |
+| `chrono_from` | integer | start year (negative = BCE); `NULL` for *ante quem* or undated |
+| `chrono_to` | integer | end year (negative = BCE); `NULL` for *post quem* or undated |
+| `chrono_label` | text (200) | human-readable label, **generated automatically** by the system |
+| `chrono_certainty` | text | certainty level: `certain` / `probable` / `possible` |
+| `chrono_period` | text | qualitative period name (e.g. "Hellenistic"); no numeric mapping |
+
+The design mirrors **Solution 1** from 2021: the dating lives in two integers, `chrono_from` and `chrono_to`, which the database can index, sort and compare. The new part is that those two numbers are not typed by hand. You write a **string** in a compact notation — `c4l BCE`, `-350 / -300`, `? / c4q3 BCE` — and the system parses it into `from` and `to`, generating the label at the same time. As you type, the panel shows a **live preview**: the generated label and the numeric range, so you can check the result before saving.
+
+![The "Chronology" panel in edit mode: the string `c4l BCE`, the preview "Late 4th cent. BCE (-325 – -301)", and the Certainty and Period controls.](/blog/it/sistema-cronologia-bradypus/edit-anteprima-live.jpg)
+*The "Chronology" panel in edit mode. The string `c4l BCE` produces the preview "Late 4th cent. BCE (−325 – −301)"; below, Certainty ("Probable") and Period ("Hellenistic").*
+
+The **dating type is not a field**: it is inferred from which of the two endpoints are set.
+
+| `chrono_from` | `chrono_to` | Dating type |
+| --- | --- | --- |
+| `NULL` | `NULL` | undated |
+| X | X | point date (exact year) |
+| X | Y (with X < Y) | range / *circa* |
+| `NULL` | Y | *ante quem* (no later than) |
+| X | `NULL` | *post quem* (no earlier than) |
+
+Compared with bare Solution 1 there is, however, one important addition: alongside the range, an explicit **certainty** axis (`certain` / `probable` / `possible`) and a free **period label**. On how these fields relate to the notions of *approximation* and *uncertainty*, see [below](#approximation-and-uncertainty).
+
+## The syntax, with examples
+
+The chronology string has a minimal structure:
+
+```
+input = token             → single date or century range
+      | token / token      → explicit range
+      | ? / token          → ante quem
+      | token / ?          → post quem
+      | ?                  → undated
+```
+
+A `token` is one of two types: **century** or **year**.
+
+### Century tokens
+
+Always begins with `c`, followed by the century number, an optional qualifier and the era (`BCE` / `CE`):
+
+```
+c{N}{qualifier} {BCE|CE}
+```
+
+| Qualifier | Meaning | Example | Range |
+| --- | --- | --- | --- |
+| *(none)* | full century | `c4 BCE` | 400–301 BCE |
+| `e` | early (~first 25%) | `c4e BCE` | 400–376 BCE |
+| `m` | mid (~middle 50%) | `c4m BCE` | 375–326 BCE |
+| `l` | late (~last 25%) | `c4l BCE` | 325–301 BCE |
+| `h1` | first half | `c4h1 BCE` | 400–351 BCE |
+| `h2` | second half | `c4h2 BCE` | 350–301 BCE |
+| `q1` … `q4` | first … fourth quarter | `c4q3 BCE` | 350–326 BCE |
+
+> **Careful: `4 BCE` is not the 4th century.** `4 BCE` is the *year* 4 BCE; the 4th century BCE is written `c4 BCE`. The `c` prefix is what distinguishes a century token from a year token.
+
+### Year tokens
+
+| Form | Example | Meaning |
+| --- | --- | --- |
+| `-N` | `-350` | year 350 BCE |
+| `N BCE` | `350 BCE` | year 350 BCE |
+| `N` or `N CE` | `300` / `300 CE` | year 300 CE |
+
+### Ranges and one-sided forms
+
+| String | Meaning | Stored as |
+| --- | --- | --- |
+| `c4l BCE / c3m CE` | late 4th BCE to mid 3rd CE | `from` = −325, `to` = 275 |
+| `-350 / -300` | years 350–300 BCE | `from` = −350, `to` = −300 |
+| `? / c4q3 BCE` | *ante quem*: no later than the 3rd quarter of the 4th BCE | `from` = `NULL`, `to` = −326 |
+| `c4l BCE / ?` | *post quem*: no earlier than the late 4th BCE | `from` = −325, `to` = `NULL` |
+| `?` | undated | `from` = `NULL`, `to` = `NULL` |
+
+### The correspondence table
+
+Here, side by side, are the three requested forms — **century string**, **year string**, **discursive dating** — with the value that is actually stored. The rows use plausible contexts from Çuka e Ajtoit: a stratigraphic unit, a stretch of fortification, a pottery sherd, a destruction layer.
+
+| String (centuries) | String (years) | In discursive form | `chrono_from` / `chrono_to` |
+| --- | --- | --- | --- |
+| `c4 BCE` | `-400 / -301` | 4th century BCE | −400 / −301 |
+| `c4h1 BCE` | `-400 / -351` | first half of the 4th century BCE | −400 / −351 |
+| `c4l BCE` | `-325 / -301` | late 4th century BCE | −325 / −301 |
+| `c4q3 BCE` | `-350 / -326` | third quarter of the 4th century BCE | −350 / −326 |
+| `c3m BCE` | `-275 / -226` | mid-3rd century BCE | −275 / −226 |
+| `c4 BCE / c2 BCE` | `-400 / -101` | 4th to 2nd century BCE | −400 / −101 |
+| `c1e CE` | `1 / 25` | early 1st century CE | 1 / 25 |
+| — | `-167` | 167 BCE (Roman campaign in Epirus) | −167 / −167 |
+| — | `-350 / -300` | c. 350–300 BCE | −350 / −300 |
+| `? / c4 BCE` | `? / -301` | no later than the 4th century BCE (*ante quem*) | — / −301 |
+| `c2l BCE / ?` | `-125 / ?` | no earlier than the late 2nd century BCE (*post quem*) | −125 / — |
+| `?` | `?` | undated | — / — |
+
+The boundaries of the quarters and fractions of a century are **conventional**: the system fixes them once and for all, so that two different cataloguers get the same numbers from the same indication. Any caveats stay with the record's text and the Certainty field.
+
+### Re-reading the 2021 "test bench"
+
+The 2021 article tested each solution on a handful of difficult dates. Let us redo the exercise with `fuzzy_date`.
+
+- **2 September 31 BCE** (the Battle of Actium). `fuzzy_date` works at the year level: you write `-31`, which produces `from` = `to` = −31. The day is lost — exactly as in Solution 1 — and goes, if relevant, into the record's descriptive text.
+- **44 BCE – 31 BCE** (the civil war that ends at Actium). `-44 / -31`, i.e. `from` = −44, `to` = −31.
+- **First half of the 1st century BCE.** In 2021 this was hand-coded as `data_from: -100`, `data_to: -51`. Now it is a single token: `c1h1 BCE`, which generates the same range, −100 / −51.
+- **24 August 79 *or* 24 October 79** (the two proposed dates for the eruption of Vesuvius). `fuzzy_date` does **not** represent exclusive alternative dates — like Solution 1, and unlike EDTF, which offers the `[..., ...]` notation. It falls back on `79` (a point date), noting the alternative in the text.
+- **c. 3345 BCE – c. 3300 BCE** (the lifespan of the Iceman). You write `-3345 / -3300` and set `chrono_certainty` to `probable` (or `possible`) to carry the "c.". The swing of the radiocarbon window has no marker of its own: it lives in the width of the range and in the certainty. For actual radiocarbon determinations there is a dedicated plugin (see [below](#and-radiocarbon)).
+- **42000 BP (2000) – 12001 BP (2000)** (the Sicilian Upper Palaeolithic as defined by ARIADNE). It is best, as the 2021 piece already advised, to convert to BCE first: `-40000 / -12001`. `fuzzy_date` does not convert from the *before present* scale.
+
+## Approximation and uncertainty
+
+The 2021 piece carefully distinguished two concepts that get blurred in practice. **Approximation** is inherent to the object: a sherd of amphora rarely interests us for the precise moment of its production, but for the span of its use-life; its dating is *by definition* broad. **Uncertainty**, on the other hand, concerns the method: how much we trust the attribution or the instrument.
+
+`fuzzy_date` treats the two asymmetrically, and it is worth saying so plainly. **Uncertainty** has a dedicated field, `chrono_certainty`, with three steps (`certain` / `probable` / `possible`). **Approximation** has no marker: it is expressed in the **width of the range**. A `c4 BCE` is "approximate" simply by being one hundred years wide; a `c4q3 BCE` much less so. This is a deliberate simplification: giving up a separate "circa" symbol is the price for keeping everything in two integer columns the database can search.
+
+## Integration with the rest of BraDypUS
+
+The advantage of storing chronology as a year range is that everything downstream can use it. This is where the plugin pays back the surrender of EDTF's expressiveness.
+
+### Search: the `_chrono_overlap` operator
+
+This is the direct answer to the central worry of 2021. Applied to `chrono_from`, the `_chrono_overlap` operator finds **all records whose dating overlaps** a given time window, correctly handling the `NULL` semantics of *ante quem* and *post quem*:
+
+```
+filter[chrono_from][_chrono_overlap][]=-400&filter[chrono_from][_chrono_overlap][]=-300
+```
+
+or, as a JSON body:
+
+```json
+{ "chrono_from": { "_chrono_overlap": [-400, -300] } }
+```
+
+The logic has three branches:
+
+| Record type | Included if |
+| --- | --- |
+| normal range (`from` and `to` set) | the range overlaps `[low, high]` |
+| *ante quem* (`from` is `NULL`) | `to >= low` |
+| *post quem* (`to` is `NULL`) | `from <= high` |
+| undated (both `NULL`) | never |
+
+So "all contexts that could fall in the 4th century BCE" is **a single** query, and it includes the wall dated `-380 / -320`, the fill `? / -350` (*ante quem*), and the layer `-330 / ?` (*post quem*) alike. It is precisely what in 2021 seemed to require "genuinely demanding programming work": today it is one operator.
+
+> **Careful.** `_chrono_overlap` must be used **only** on `chrono_from`. On the other fields the standard operators apply: `filter[chrono_certainty][_eq]=probable`, `filter[chrono_period][_icontains]=hellenistic`, `filter[chrono_to][_nnull]=true` for dated records only, and so on.
+
+### The comparative chronological Timeline
+
+A full-page view opened from the record list (the *calendar* button in the toolbar) that **overlays on a single time axis** all records with `fuzzy_date` data from the selected tables. Each row is a record, grouped by table; each bar runs from `chrono_from` to `chrono_to`. Every table has its own colour, and the **intensity** of the bar carries the certainty: solid for `certain`, progressively fainter for `probable` and `possible`. Hovering over a bar shows the title, the range (raw and human-readable), the period and the certainty. At the top you pick which tables to include and can narrow the axis to a range of years.
+
+![The comparative chronological Timeline: the demo's Stratigraphic units (blue) and Finds (orange), with the tooltip for US026 — 50 BCE → 200 CE, Roman, Certain.](/blog/it/sistema-cronologia-bradypus/timeline-comparata.jpg)
+*The comparative chronological Timeline with two tables overlaid on the year axis: colour distinguishes the table, opacity the certainty. The tooltip for US026 shows its range, period and certainty.*
+
+### The derived chronological distribution
+
+A panel that appears in the body of a record's page **when the table has relations to other tables with `fuzzy_date` enabled**. For each related table it computes the chronological density of the records linked to the current one — each record's `chrono_from`–`chrono_to` span is distributed over a sixty-interval axis — and draws it along the timeline. The busiest interval is highlighted with its *from* and *to* labels and the record count; each stretch is a link that opens the list of related records filtered to that period.
+
+Concretely: opening a site record, the panel shows how the datings of all the stratigraphic units (or all the finds) linked to it are distributed over time — a glance at "when is this context alive".
+
+![The "Derived chronological distribution" panel on a site record: the chronological density of the linked Stratigraphic units, with the peak interval labelled 700–489 BCE and the count (3).](/blog/it/sistema-cronologia-bradypus/distribuzione-derivata.jpg)
+*The derived chronological distribution: the datings of the records linked to a site, spread along the time axis, with the peak interval (here 700–489 BCE, 3 records) highlighted.*
+
+The default behaviour follows a single automatic hop: the direct child tables (foreign-key relation) that have `fuzzy_date`. To reach a more distant descendant — for example "from a Site, the Finds linked through the Stratigraphic units" — each table can have a **chronological distribution path** configured in *Config → Tables*: the intermediate tables act as a simple bridge (the SUs need not have a chronology of their own), and only the last table in the chain must have `fuzzy_date` enabled.
+
+### The map (GeoFace)
+
+When `fuzzy_date` is active on a table, the GeoFace map shows a **temporal filter bar**: a dual-handle year slider (from −3000 to 2000, in steps of 25 years). As you drag the handles, the map markers are filtered in real time with `_chrono_overlap` — again including the *ante quem* and *post quem* records that intersect the selected window. In practice you "scrub" along time and watch which sites or contexts light up.
+
+![The GeoFace map with the "Temporal filter" bar set to 350–150 BCE; the site markers compatible with that window remain on the map.](/blog/it/sistema-cronologia-bradypus/geoface-slider-temporale.jpg)
+*GeoFace with the temporal filter active (350–150 BCE): the dual-handle slider narrows the map markers in real time, using `_chrono_overlap`.*
+
+### The Harris Matrix on an absolute axis
+
+Already implemented, in a version still being refined: an absolute-chronology layout that places stratigraphic units on a vertical timeline using their `fuzzy_date`. The stratigraphic diagram, normally purely relative, thereby gains a scale: the units no longer just sit "above" or "below" one another, but take their place in time according to the dating assigned to them.
+
+### And radiocarbon?
+
+`fuzzy_date` is for *interpreted* datings, the ones you type. Scientific radiocarbon dates have a plugin of their own, `radiocarbon`: you enter the lab BP value and the error, and the server **calibrates** against the IntCal20 curve, storing the calendar-year ranges (at 1σ and 2σ) — again as plain integer columns. The philosophy is the same as `fuzzy_date`: a couple (in fact four) of indexable columns, at the price of a declared simplification — a single range enclosing the result, not the possibly disjoint highest-posterior-density regions that a tool like OxCal would return. The two plugins are independent: a radiocarbon determination does not automatically fill `chrono_from` and `chrono_to`. But nothing stops you reading the calibrated range and transcribing the corresponding `fuzzy_date` by hand — which is, concretely, the 2021 observation that radiocarbon "turns uncertainty into approximation".
+
+## Quick guide
+
+For those who do not want to read the documentation. A reference sheet.
+
+**1. Turn on the plugin.** *Config → Tables* → select the table → *System plugins* section → enable *Chronology (fuzzy date)*. Five columns appear, no other configuration. It can be turned off whenever you like: the data stays.
+
+**2. In the record page, type in the "Chronology string" box:**
+
+| If you have… | Write | Example |
+| --- | --- | --- |
+| a century | `c{N} BCE` or `c{N} CE` | `c4 BCE` |
+| part of a century | `c{N}` + `e` `m` `l` `h1` `h2` `q1`…`q4` + era | `c2l BCE`, `c1h1 BCE`, `c3q2 CE` |
+| precise years (a range) | `-{from} / -{to}` | `-350 / -300` |
+| a single year | `-{year}` or `{year} BCE` / `CE` | `-167`, `44 BCE`, `330 CE` |
+| only the upper bound (*ante quem*) | `? / {token}` | `? / c4 BCE`, `? / -300` |
+| only the lower bound (*post quem*) | `{token} / ?` | `c2 BCE / ?`, `-125 / ?` |
+| no dating | `?` | `?` |
+
+**3. Set the Certainty** (`certain` / `probable` / `possible`) and, if needed, the **Period** (free text, e.g. "Hellenistic").
+
+**4. Check the preview** (label + numeric range), then save.
+
+Four rules to stay out of trouble:
+
+- `c` in front = century; without `c` = year. `c4 BCE` is not `4 BCE`.
+- Always state the era: `BCE` / `CE`, or the minus sign for BCE years.
+- The `/` separates the two termini of a range; `?` stands for "missing endpoint" or "entirely unknown".
+- There is no "date type" field: point, range, *ante quem* and *post quem* are inferred from which endpoints you leave empty.
+
+## In conclusion
+
+In 2021 we foresaw a hybrid, and `fuzzy_date` is that hybrid:
+
+- the **storage** is Solution 1 — two integers the database can handle;
+- EDTF's **expressiveness** has been moved to **data-entry time**, in the form of a compiled grammar: there is no EDTF in the database, but there is also none of the work of searching over EDTF;
+- **uncertainty** has a dedicated axis, `chrono_certainty`; **approximation** lives in the width of the range;
+- the **period** has a field, `chrono_period` — for now a simple qualitative label. Linking to shared gazetteers such as PeriodO remains the missing piece, and is under evaluation for a future release of the plugin.
+
+Left out, by choice: sub-year granularity, the full EDTF of levels 1 and 2, exclusive alternative dates. In return, what is there is **genuinely searchable** — with `_chrono_overlap`, on the map, in the timeline, in the derived distribution — and for an excavation database that is often what matters most.
+
+**Further reading:** [Fuzzy date (Chronology)](https://docs.bdus.lad-sapienza.it/guide/system-plugins/fuzzy-date.html) · [Chronology](https://docs.bdus.lad-sapienza.it/guide/usage/chrono.html) · [Geodata & GeoFace](https://docs.bdus.lad-sapienza.it/guide/system-plugins/geodata.html) · [Radiocarbon dating](https://docs.bdus.lad-sapienza.it/guide/system-plugins/radiocarbon.html) · and the starting point: [Digital encoding of chronology](/en/blog/codifica-digitale-della-cronologia/).
