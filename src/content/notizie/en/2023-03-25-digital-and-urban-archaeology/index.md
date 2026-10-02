@@ -1,6 +1,6 @@
 ---
 title: "Digital and Urban Archaeology: from Urban Archaeology to Digital Archaeology"
-img: UrbanArchaeology2023.jpg
+img: UrbanArchaeology2023.webp
 date: 2023-05-25
 description: "On 3 May 2023, as part of the 'Landscape Archaeology' course of the Scuola di Specializzazione in Beni Archeologici 2022-2023 at the University of Bologna, the activities of LAD: Laboratorio di Archeologia Digitale at Sapienza will be presented"
 tags:

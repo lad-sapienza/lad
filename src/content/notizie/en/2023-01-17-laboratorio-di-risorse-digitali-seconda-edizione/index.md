@@ -1,6 +1,6 @@
 ---
 title: "Laboratorio di Risorse Digitali per la Ricerca"
-img: rdr-lab.jpg
+img: rdr-lab.webp
 date: 2023-01-17
 description: "Laboratorio di Risorse Digitali per la Ricerca — Experiences and Projects curated by Julian Bogdani and Federica Favino. DigiLab - Vetrerie Sciarra - Via dei Volsci, 122. Conference room (first floor) - 1-3 PM..."
 tags:

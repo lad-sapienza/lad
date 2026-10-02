@@ -3,7 +3,7 @@ title: "Datare l'incerto: il sistema di cronologia di BraDypUS 5"
 author: Julian Bogdani
 licenza: CC BY 4.0 International
 tags: [BraDypUS, Cronologia, Open Standard, EDTF, database, archeologia, open source]
-img: cronologia-bradypus.jpg
+img: cronologia-bradypus.webp
 date: 2026-09-09
 draft: false
 inhome: true
@@ -32,7 +32,7 @@ Il plugin si attiva per singola tabella: **Config → Tabelle**, si sceglie la t
 
 L'impianto ricalca la **Soluzione 1** del 2021: la datazione vive in due numeri interi, `chrono_from` e `chrono_to`, che il database sa indicizzare, ordinare e confrontare. La novità è che quei due numeri non si digitano a mano. Si scrive una **stringa** in una notazione compatta — `c4l BCE`, `-350 / -300`, `? / c4q3 BCE` — e il sistema la traduce (*parsing*) in `from` e `to`, generando insieme l'etichetta. Mentre si scrive, il pannello mostra un'**anteprima in tempo reale**: l'etichetta prodotta e l'intervallo numerico, così si verifica il risultato prima di salvare.
 
-![Il pannello «Chronology» in modifica: la stringa `c4l BCE`, l'anteprima «Late 4th cent. BCE (-325 – -301)» e i controlli Certainty e Period.](edit-anteprima-live.jpg)
+![Il pannello «Chronology» in modifica: la stringa `c4l BCE`, l'anteprima «Late 4th cent. BCE (-325 – -301)» e i controlli Certainty e Period.](edit-anteprima-live.webp)
 *Il pannello «Chronology» in modifica. La stringa `c4l BCE` genera l'anteprima «Late 4th cent. BCE (−325 – −301)»; sotto, Certezza («Probable») e Periodo («Hellenistic»). Nel demo l'interfaccia — e quindi l'etichetta generata — è in inglese.*
 
 Il **tipo di datazione non è un campo**: si deduce da quali dei due estremi sono valorizzati.
@@ -172,7 +172,7 @@ Così "tutti i contesti che possono cadere nel IV secolo a.C." è **una sola** i
 
 È una vista a pagina intera che si apre dalla lista dei record (il pulsante *calendario* nella barra degli strumenti) e **sovrappone sullo stesso asse temporale** tutti i record con dati `fuzzy_date` delle tabelle scelte. Ogni riga è un record, raggruppato per tabella; ogni barra si estende da `chrono_from` a `chrono_to`. Ogni tabella ha il proprio colore, e l'**intensità** della barra rende la certezza: piena per `certain`, via via più tenue per `probable` e `possible`. Passando il mouse su una barra compaiono titolo, intervallo (grezzo e in forma leggibile), periodo e certezza. In cima si scelgono le tabelle da includere e si può restringere l'asse a un intervallo di anni.
 
-![La Timeline cronologica comparata: le Unità stratigrafiche (blu) e i Reperti mobili (arancio) del demo, con il tooltip di US026 — 50 a.C. → 200 d.C., Romano, Certain.](timeline-comparata.jpg)
+![La Timeline cronologica comparata: le Unità stratigrafiche (blu) e i Reperti mobili (arancio) del demo, con il tooltip di US026 — 50 a.C. → 200 d.C., Romano, Certain.](timeline-comparata.webp)
 *La Timeline cronologica comparata con due tabelle sovrapposte sull'asse degli anni: il colore distingue la tabella, l'opacità la certezza. Il tooltip di US026 mostra intervallo, periodo e certezza.*
 
 ### La Distribuzione cronologica derivata
@@ -181,7 +181,7 @@ Così "tutti i contesti che possono cadere nel IV secolo a.C." è **una sola** i
 
 Concretamente: aprendo la scheda di un sito, il pannello mostra come si distribuiscono nel tempo le datazioni di tutte le unità stratigrafiche (o di tutti i reperti) a esso collegate — un colpo d'occhio su "quando vive questo contesto".
 
-![Il pannello «Derived chronological distribution» nella scheda di un sito: la densità cronologica delle Unità stratigrafiche collegate, con l'intervallo di picco 700–489 a.C. e il conteggio (3).](distribuzione-derivata.jpg)
+![Il pannello «Derived chronological distribution» nella scheda di un sito: la densità cronologica delle Unità stratigrafiche collegate, con l'intervallo di picco 700–489 a.C. e il conteggio (3).](distribuzione-derivata.webp)
 *La Distribuzione cronologica derivata: le datazioni dei record collegati a un sito, distribuite lungo l'asse del tempo, con l'intervallo di picco (qui 700–489 a.C., 3 record) in evidenza.*
 
 Il comportamento predefinito segue un solo salto automatico: le tabelle figlie dirette (relazione con chiave esterna) che hanno `fuzzy_date`. Per raggiungere un discendente più lontano — per esempio "da un Sito, i Reperti collegati attraverso le Unità stratigrafiche" — ogni tabella può avere un **percorso di distribuzione cronologica** configurato in *Config → Tabelle*: le tabelle intermedie fanno da semplice ponte (le US non devono avere una propria cronologia), e solo l'ultima della catena deve avere `fuzzy_date` attivo.
@@ -190,7 +190,7 @@ Il comportamento predefinito segue un solo salto automatico: le tabelle figlie d
 
 Quando `fuzzy_date` è attivo su una tabella, la mappa GeoFace mostra una **barra di filtro temporale**: un cursore a due maniglie sugli anni (da −3000 a 2000, passo di 25 anni). Trascinando le maniglie, i punti sulla mappa vengono filtrati in tempo reale con `_chrono_overlap` — inclusi, di nuovo, i record *ante quem* e *post quem* che intersecano la finestra selezionata. In pratica si "scorre" lungo il tempo e si guarda quali siti o contesti si accendono.
 
-![La mappa di GeoFace con la barra «Temporal filter» impostata su 350–150 a.C.; sulla carta restano i marker dei siti compatibili con quella finestra.](geoface-slider-temporale.jpg)
+![La mappa di GeoFace con la barra «Temporal filter» impostata su 350–150 a.C.; sulla carta restano i marker dei siti compatibili con quella finestra.](geoface-slider-temporale.webp)
 *GeoFace con il filtro temporale attivo (350–150 a.C.): il cursore a due maniglie restringe in tempo reale i marker sulla mappa, usando `_chrono_overlap`.*
 
 ### La Harris Matrix su asse assoluto

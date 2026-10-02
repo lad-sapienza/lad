@@ -3,7 +3,7 @@ title: Development of a new ICT tool for sharing and publishing bibliographic da
 author: Julian Bogdani
 date: 2022-12-27
 order: 14
-img: zotero-web-gis.jpg
+img: zotero-web-gis.webp
 description: Research project, P.I. Eleonora Iacopini, funded by the “Progetti per Avvio alla Ricerca” programme of Sapienza University of Rome, year 2022, prot. AR2221816BB57DE4
 ---
 

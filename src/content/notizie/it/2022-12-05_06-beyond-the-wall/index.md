@@ -1,6 +1,6 @@
 ---
 title: "Workshop: Beyond the Wall: City Walls & Urban planning"
-img: beyond_the_wall.jpg
+img: beyond_the_wall.webp
 date: 2022-12-05
 description: "Partecipazione di Julian Bogdani al workshop internazionale “Beyond the Wall: City Walls & Urban planning”"
 tags:
@@ -33,4 +33,4 @@ La conferenza si svolgerà presso Université de Lille Campus Pont de Bois Salle
 ---
 - [Sito web ufficiale](https://halma.univ-lille.fr/detail-event/workshop-beyond-the-wall)
 - [Scarica il programma in formato PDF](./Affiche_BtW-Lille_2022.pdf)
-- [Scarica la locandina in formato JPG](./beyond_the_wall.jpg)
+- [Scarica la locandina in formato JPG](./beyond_the_wall.webp)

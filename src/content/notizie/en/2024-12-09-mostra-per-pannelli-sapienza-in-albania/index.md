@@ -1,6 +1,6 @@
 ---
 title: "Panel exhibition “Sapienza in Albania. One hundred years since Luigi Maria Ugolini's first visit to the country”"
-img: sapienza-in-albania.jpg
+img: sapienza-in-albania.webp
 date: 2024-12-09
 description: "Panel exhibition curated by the Sapienza Archaeological Mission in Albania, marking one hundred years since Luigi Maria Ugolini's visit to Albania"
 tags:

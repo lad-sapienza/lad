@@ -1,6 +1,6 @@
 ---
 title: "[AY 25-26] Deep Learning for the classification of archaeological pottery"
-img: locadina_2026.jpg
+img: locadina_2026.webp
 date: 2026-02-28
 description: "LAD's theoretical-practical lab for learning to use Computer Vision and Deep Learning applied to the study and classification of archaeological pottery."
 tags:

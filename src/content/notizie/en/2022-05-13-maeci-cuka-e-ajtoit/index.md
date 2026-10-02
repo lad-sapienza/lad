@@ -1,6 +1,6 @@
 ---
 title: "Sapienza's mission at Çuka e Ajtoit officially recognised by MAECI"
-img: caj-maeci.jpg
+img: caj-maeci.webp
 date: 2022-05-12
 description: "The archaeological mission at Çuka e Ajtoit will operate in 2022 with the official recognition of the Ministry of Foreign Affairs and International Cooperation."
 tags:

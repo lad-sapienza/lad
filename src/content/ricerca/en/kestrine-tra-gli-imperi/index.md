@@ -3,7 +3,7 @@ title: "Kestríne: a frontier landscape across empires"
 author: Julian Bogdani
 date: 2022-12-27
 order: 15
-img: kestrine.jpg
+img: kestrine.webp
 description: Research project, P.I. Julian Bogdani, funded by the “Progetti di Ricerca - Progetti Medi” programme of Sapienza University of Rome, year 2021, prot. RM12117A420572AC
 ---
 

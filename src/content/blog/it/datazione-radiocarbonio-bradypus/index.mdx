@@ -3,7 +3,7 @@ title: "Dal decadimento alla data: la datazione al radiocarbonio in BraDypUS 5"
 author: Julian Bogdani
 licenza: CC BY 4.0 International
 tags: [BraDypUS, Radiocarbonio, C14, IntCal20, Cronologia, database, archeologia, open source]
-img: radiocarbonio-bradypus.jpg
+img: radiocarbonio-bradypus.webp
 date: 2026-09-15
 draft: false
 inhome: true
@@ -18,7 +18,7 @@ Prima di entrare nel merito, una premessa che vale per tutto l'articolo: **`radi
 
 L'attivazione è, in apparenza, identica a quella di `fuzzy_date`: **Config → Tabelle**, si sceglie la tabella, si scorre fino a *System plugins*, si accende *Radiocarbon dating*.
 
-![Il pannello System plugins in Config → Tabelle, con Radiocarbon dating attivato accanto agli altri plugin di sistema (Chronology, Pleiades, Stratigraphic relations, Geodata, Zotero).](config-system-plugins.jpg)
+![Il pannello System plugins in Config → Tabelle, con Radiocarbon dating attivato accanto agli altri plugin di sistema (Chronology, Pleiades, Stratigraphic relations, Geodata, Zotero).](config-system-plugins.webp)
 *Il pannello System plugins per la tabella Unità stratigrafiche: Radiocarbon dating è uno fra i plugin di sistema disponibili, qui attivato insieme a Chronology (fuzzy date) e agli altri.*
 
 Sotto il cofano, però, il meccanismo è diverso — e vale la pena spiegarlo perché non è un dettaglio implementativo, cambia cosa si può registrare. `fuzzy_date` aggiunge **cinque colonne alla tabella stessa**: una US ha *una* cronologia interpretata, punto. Il radiocarbonio no: uno stesso contesto può avere zero, una, o più determinazioni di laboratorio (campioni diversi, materiali diversi, magari anche laboratori diversi che ridatano lo stesso campione). Attivare `radiocarbon` non tocca quindi la tabella su cui lo attivate: crea una **tabella figlia** dedicata, chiamata `{tabella}_radiocarbon` (per `us` sarà `us_radiocarbon`), con una riga per ogni determinazione, collegata al record di partenza. È la stessa architettura generica delle "tabelle plugin" già usata per misure, reperti-in-US, e simili — non un caso a parte.
@@ -43,12 +43,12 @@ I quattro campi calibrati non si possono scrivere a mano: qualunque valore il cl
 
 Nella scheda del record compare la sezione *Radiocarbon dating*, con l'editor a righe già visto per le altre tabelle-plugin: si aggiunge una riga, si compilano codice di laboratorio, BP, errore e materiale, si salva.
 
-![Il pannello Radiocarbon dating in modifica: i campi Lab code, BP, Error, Material dated e Notes sono editabili; i quattro campi calibrati non compaiono perché sono di sola lettura.](edit-radiocarbonio.jpg)
+![Il pannello Radiocarbon dating in modifica: i campi Lab code, BP, Error, Material dated e Notes sono editabili; i quattro campi calibrati non compaiono perché sono di sola lettura.](edit-radiocarbonio.webp)
 *Il pannello in modifica. Gli unici campi assenti sono i quattro Cal BP, di sola lettura: tutto il resto — inclusi `d13c` e `curve`, qui ancora vuoti — è modificabile.*
 
 Dopo il salvataggio, il record mostra la riga completa, con gli intervalli calibrati calcolati dal server:
 
-![Il pannello Radiocarbon dating in lettura: Beta-412002, BP 1700 ± 30, bone collagen, con Cal BP (68.2%) 1544–1687 e Cal BP (95.4%) 1533–1696.](record-radiocarbonio.jpg)
+![Il pannello Radiocarbon dating in lettura: Beta-412002, BP 1700 ± 30, bone collagen, con Cal BP (68.2%) 1544–1687 e Cal BP (95.4%) 1533–1696.](record-radiocarbonio.webp)
 *Il pannello in lettura per US003: una determinazione su collagene osseo, BP 1700 ± 30, calibrata a 1544–1687 cal BP (68,2%) e 1533–1696 cal BP (95,4%).*
 
 Una notazione da chiarire subito, perché genera confusione con chi non la maneggia ogni giorno: **cal BP** significa "anni calibrati prima del presente", dove il presente convenzionale è fissato per definizione al 1950. Per tradurlo in anni di calendario si sottrae da 1950: l'esempio sopra, 1544–1687 cal BP, diventa **cal 263–406 d.C.** Non è un caso che US003 sia catalogata, nella cronologia interpretata (`fuzzy_date`), come "Tardo Antico", 300–450 d.C.: le due datazioni — una scientifica, una interpretativa — si sovrappongono ma non coincidono esattamente, ed è normale che sia così: sono due fonti di evidenza indipendenti, non una copia dell'altra.

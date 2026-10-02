@@ -1,6 +1,6 @@
 ---
 title: "Registration open for the 2026 campaign of the Sapienza Archaeological Mission in Albania (June 2026)"
-img: caj-2026.jpg
+img: caj-2026.webp
 date: 2026-01-20
 description: "2026 campaign of the Sapienza Archaeological Mission in Albania"
 tags:

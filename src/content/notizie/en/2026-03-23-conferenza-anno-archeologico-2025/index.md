@@ -1,6 +1,6 @@
 ---
 title: "Participation in the international conference “Viti Arkeologjik 2025”"
-img: konferenca-shkencore-viti-arkeologjik-2025.jpg
+img: konferenca-shkencore-viti-arkeologjik-2025.webp
 date: 2026-03-23
 description: "On Thursday 25 March 2026, the co-director of the Italian-Albanian Archaeological Mission at Çuka e Ajtoit will take part with a paper in the conference “Viti Arkeologjik 2025” at the Academy of Sciences of the Republic of Albania"
 tags:

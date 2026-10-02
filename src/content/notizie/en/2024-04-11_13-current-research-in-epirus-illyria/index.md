@@ -1,6 +1,6 @@
 ---
 title: "Participation in the international workshop “Current Research on Illyria and Epirus. 4th century BC – 1st century AD”"
-img: current-research-epirus-illyria.jpg
+img: current-research-epirus-illyria.webp
 date: 2024-04-11
 description: "Director Julian Bogdani will take part in the international workshop “Current Research on Illyria and Epirus. 4th century BC – 1st century AD” organised by the University of Trier (Germany), 11-13 April 2024"
 tags:

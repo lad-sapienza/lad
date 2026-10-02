@@ -4,7 +4,7 @@ author: Domenico Santoro, Julian Bogdani
 licenza: CC BY 4.0 International
 livello: avanzato
 tags: [Harris Matrix, Stratigraphy, Directus, HDME, Coding, Web Applications, Tutorial]
-img: 01-cover.jpg
+img: 01-cover.webp
 date: 2024-08-31
 description: "HDME: Harris Matrix Directus Extension is a new plugin developed by LAD for the interactive construction and visualization of Harris Matrices within relational databases built with the Directus.io platform. The plugin has been successfully tested in the excavation documentation of the LAD mission at Çuka e Ajtoit (Albania), where Directus.io has been in use for over a year."
 ---
@@ -32,17 +32,17 @@ _Directus.io_, however, was not designed specifically to handle stratigraphic da
 
 When dealing with complex data, the first and most immediate need to address is naturally that of its visualization. It is evident that visualizing stratigraphic data as a graph, in the typical form of the *Harris Matrix*, is preferable to the dry tabular representation of relationships.
 
-![From the database to the Harris Matrix](/blog/it/la-visualizzazione-del-dato-stratigrafico-in-directus-io/02-dbhm.jpg "From the database to the Harris Matrix")
+![From the database to the Harris Matrix](/blog/it/la-visualizzazione-del-dato-stratigrafico-in-directus-io/02-dbhm.webp "From the database to the Harris Matrix")
 
 _Directus.io_ allows for a wide range of Layouts — that is, ways of graphically representing lists of items — that can be associated with data, meaning that any table can be presented in one of the predefined formats, provided the layouts are configured to know how to give meaning to the data contained in the records. The original _layouts_ are `Calendar`, `Cards`, `Kanban`, `Map` and `Table`, which is the default one. Once the _layout_ of interest has been selected, one simply needs to tell the platform which column of the record should populate each particular graphic element of the chosen representation. For example, if we choose the *Map* layout and our table has columns relating to the geographic location of the record, then it is enough to indicate which of them should be considered the source of the latitude data and which the source of the longitude data for the marker representing the record.
 
 Let us take the case of a table with two geolocated records.
 
-![Table view of the Sites collection](/blog/it/la-visualizzazione-del-dato-stratigrafico-in-directus-io/03-tabcoords.jpg "Table view of the Sites collection")
+![Table view of the Sites collection](/blog/it/la-visualizzazione-del-dato-stratigrafico-in-directus-io/03-tabcoords.webp "Table view of the Sites collection")
 
 The tabular representation is not the only one available.
 
-![Map view of the Sites collection](/blog/it/la-visualizzazione-del-dato-stratigrafico-in-directus-io/04-mapcoords.jpg "Map view of the Sites collection")
+![Map view of the Sites collection](/blog/it/la-visualizzazione-del-dato-stratigrafico-in-directus-io/04-mapcoords.webp "Map view of the Sites collection")
 
 
 In the images above we can see how simply using _Directus.io_'s _layouting_ feature makes it possible to move from a cold, unwieldy tabular form to a very interesting map-based representation, which allows for some further customization (in the second image we used a base map, namely the [DARE: Digital Atlas of Roman Empire](https://dh.gu.se/dare/)). Fortunately, this mechanism is extensible, and as we shall see, it was possible to produce an additional layout that displays the data in the form of a _Harris Matrix_. _Directus.io_ refers to this kind of extension with the term _[Custom layouts](https://docs.directus.io/extensions/layouts.html)_.
@@ -51,7 +51,7 @@ In the images above we can see how simply using _Directus.io_'s _layouting_ feat
 
 The HDME, or Harris Matrix Directus Extension, is therefore a _custom layout_ for _Directus.io_ that represents stratigraphic data in the form most familiar to archaeologists today, namely the directed graph. As mentioned, it is enough to tell the platform which columns hold data such as the identifier of the Stratigraphic Unit, its description, etc.
 
-![The Harris Matrix Directus Extension](/blog/it/la-visualizzazione-del-dato-stratigrafico-in-directus-io/05-hmde.jpg "The Harris Matrix Directus Extension")
+![The Harris Matrix Directus Extension](/blog/it/la-visualizzazione-del-dato-stratigrafico-in-directus-io/05-hmde.webp "The Harris Matrix Directus Extension")
 
 A number of specifications also need to be followed when modelling the tables one wants to represent. These specifications are described in a [video tutorial](https://youtu.be/yEDQMQqO87I?si=cLKAWpcfR4NtguwU) available below, as well as on the project's [GitHub page](https://github.com/lab-archeologia-digitale/directus-extension-harris-matrix), which also contains detailed instructions for installing the extension on a dockerized instance of _Directus.io_.
 

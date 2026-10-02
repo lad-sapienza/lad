@@ -3,7 +3,7 @@ title: Survey and study of the Medieval church and monastery near Çiflik (Konis
 author: Julian Bogdani
 date: 2022-12-27
 order: 13
-img: monastero-ciflik.jpg
+img: monastero-ciflik.webp
 description: Research project, P.I. Paolo Rosati, funded by the “Progetti per Avvio alla Ricerca” programme of Sapienza University of Rome, year 2022, prot. AR22218166C6157C
 ---
 

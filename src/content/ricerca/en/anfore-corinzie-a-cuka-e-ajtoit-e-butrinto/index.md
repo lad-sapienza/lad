@@ -3,7 +3,7 @@ title: "Corinthian amphorae from Çuka e Ajtoit and Butrint: models, typologies 
 author: Julian Bogdani
 date: 2024-11-19
 order: 23
-img: anfore-corinzie-caj-butrinto.jpg
+img: anfore-corinzie-caj-butrinto.webp
 description: Research project, P.I. Nadia Aleotti, funded by the “Progetti per Avvio alla Ricerca” programme of Sapienza University of Rome, year 2024, prot. AR2241907808A0A6
 ---
 

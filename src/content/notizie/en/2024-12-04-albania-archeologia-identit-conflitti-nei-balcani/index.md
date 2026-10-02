@@ -1,6 +1,6 @@
 ---
 title: "Participation in the “Third meeting: Archaeology, Identity and Conflicts in the Balkans: The case of Albania”"
-img: albania-archeologia-identit-conflitti-nei-balcani.jpg
+img: albania-archeologia-identit-conflitti-nei-balcani.webp
 date: 2024-12-04
 description: "On Saturday 7 December 2024, from 10 AM to 2 PM, the third meeting “Archaeology, Identity and Conflicts in the Balkans: The case of Albania” will be held at INASA (Istituto Nazionale di Archeologia e Storia dell'Arte, Piazza di San Marco, 49)"
 tags:

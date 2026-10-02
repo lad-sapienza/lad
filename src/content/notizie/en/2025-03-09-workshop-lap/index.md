@@ -1,6 +1,6 @@
 ---
 title: "Laser Aided Profiler: Innovations and potential of the tool. Comparing experiences"
-img: workshop-lap.jpg
+img: workshop-lap.webp
 date: 2025-03-09
 description: "As part of its teaching activities, LAD is organising a round table on the theme: “Laser Aided Profiler: Innovations and potential of the tool. Comparing experiences“"
 tags:

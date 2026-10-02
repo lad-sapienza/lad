@@ -4,7 +4,7 @@ author: Julian Bogdani
 licenza: CC BY 4.0 International
 livello: base
 tags: [GIS, QGIS, Artificial Intelligence, Digitization, Photogrammetry, Raster, Coding, FLOSS]
-img: ai-tracer-cover.jpg
+img: ai-tracer-cover.webp
 date: 2026-04-27
 description: "We present AITracer, a QGIS 4 plugin developed by LAD that uses SAM2 (Segment Anything Model 2) to automatically digitize features from raster layers: just click on the object you want to vectorize."
 inhome: true
@@ -44,7 +44,7 @@ The model runs locally, on your own computer, without sending any data to extern
 
 Once installed, the plugin adds a side panel to the QGIS window.
 
-![01-pannello-aitracer.jpg](/blog/it/aitracer-digitalizzazione-raster-con-ia/01-pannello-aitracer.jpg)
+![01-pannello-aitracer.webp](/blog/it/aitracer-digitalizzazione-raster-con-ia/01-pannello-aitracer.webp)
 *The AITracer by LAD panel with the activation button, the simplification slider, the Accept and Cancel buttons, and links to GitHub and the documentation.*
 
 ---
@@ -58,12 +58,12 @@ The heart of the system is iterative interaction with the model through *prompts
 
 Each additional click refines the segmentation without recomputing the entire image analysis, thanks to an image-encoding cache that the backend keeps for the whole duration of the session.
 
-![02-primo-clic-anteprima.jpg](/blog/it/aitracer-digitalizzazione-raster-con-ia/02-primo-clic-anteprima.jpg)
+![02-primo-clic-anteprima.webp](/blog/it/aitracer-digitalizzazione-raster-con-ia/02-primo-clic-anteprima.webp)
 *After the first left click on the orthophoto, SAM2 almost immediately returns a preview of the polygon (in green) overlaid on the raster layer.*
 
 ---
 
-![03-raffinamento-prompt-negativi.jpg](/blog/it/aitracer-digitalizzazione-raster-con-ia/03-raffinamento-prompt-negativi.jpg)
+![03-raffinamento-prompt-negativi.webp](/blog/it/aitracer-digitalizzazione-raster-con-ia/03-raffinamento-prompt-negativi.webp)
 *Adding negative prompts (right click) to exclude adjacent areas mistakenly included in the initial segmentation. The preview polygon updates in real time.*
 
 ---
@@ -72,7 +72,7 @@ Each additional click refines the segmentation without recomputing the entire im
 
 The masks produced by SAM2 can contain a very high number of vertices. AITracer includes a **Douglas-Peucker simplification** slider that lets you control the vertex density of the final polygon before accepting it, with steps of 0.01 map units and a range from 0 (no simplification) to 0.50.
 
-![04-slider-semplificazione.jpg](/blog/it/aitracer-digitalizzazione-raster-con-ia/04-slider-semplificazione.jpg)
+![04-slider-semplificazione.webp](/blog/it/aitracer-digitalizzazione-raster-con-ia/04-slider-semplificazione.webp)
 *Comparison between the polygon with simplification at 0 (left, many vertices) and with simplification at 0.15 (right, simplified outline but faithful to the original shape).*
 
 ---
@@ -87,7 +87,7 @@ If a click was placed in the wrong spot, there is no need to cancel the entire s
 
 Once satisfied with the outline, press **Enter** (or the *Accept* button in the panel). The polygon is automatically added to a temporary in-memory layer called **AITracer**, created by the plugin with a semi-transparent orange style. The layer is fully integrated with the QGIS project and can be exported to any vector format.
 
-![05-feature-accettata-layer.jpg](/blog/it/aitracer-digitalizzazione-raster-con-ia/05-feature-accettata-layer.jpg)
+![05-feature-accettata-layer.webp](/blog/it/aitracer-digitalizzazione-raster-con-ia/05-feature-accettata-layer.webp)
 *The accepted feature appears in the AITracer layer (in semi-transparent orange) overlaid on the source raster layer. You can continue digitizing new features without interruption.*
 
 ---
@@ -106,7 +106,7 @@ Each accepted feature automatically records three attributes:
 | `timestamp` | Date and time of acceptance (ISO 8601) |
 | `raster` | Name of the source raster layer |
 
-![06-tabella-attributi.jpg](/blog/it/aitracer-digitalizzazione-raster-con-ia/06-tabella-attributi.jpg)
+![06-tabella-attributi.webp](/blog/it/aitracer-digitalizzazione-raster-con-ia/06-tabella-attributi.webp)
 *The attribute table of the AITracer layer with the fid, timestamp and raster fields automatically filled in for each accepted feature.*
 
 ---
@@ -145,10 +145,10 @@ For those who want to test specific or pre-release versions, the `aitracer-vX.Y.
 
 QGIS 4.0 is required. The necessary Python runtime is automatically downloaded and installed by the plugin on first launch via python-build-standalone: no manual Python installation is required.
 
-![07-repository-qgis.jpg](/blog/it/aitracer-digitalizzazione-raster-con-ia/07-repository-qgis.jpg)
+![07-repository-qgis.webp](/blog/it/aitracer-digitalizzazione-raster-con-ia/07-repository-qgis.webp)
 *The AITracer page on the official QGIS plugin repository.*
 
-![08-gestore-plugin-qgis.jpg](/blog/it/aitracer-digitalizzazione-raster-con-ia/08-gestore-plugin-qgis.jpg)
+![08-gestore-plugin-qgis.webp](/blog/it/aitracer-digitalizzazione-raster-con-ia/08-gestore-plugin-qgis.webp)
 *The QGIS plugin manager with AITracer found in the official repository, ready for installation.*
 
 ---

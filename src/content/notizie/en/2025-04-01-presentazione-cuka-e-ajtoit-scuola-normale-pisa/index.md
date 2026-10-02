@@ -1,6 +1,6 @@
 ---
 title: "Cestrine in Epirus: seminar at the Scuola Normale Superiore di Pisa"
-img: bogdani-sns.jpg
+img: bogdani-sns.webp
 date: 2025-04-01
 description: "On Monday 7 April 2025, the co-director of the Italian-Albanian Archaeological Mission at Çuka e Ajtoit, Julian Bogdani, will give a seminar at the Scuola Normale Superiore di Pisa entitled: “Cestrine in Epirus: myth, history and archaeology”"
 tags:

@@ -2,7 +2,7 @@
 title: Bradypus cloud databases
 date: 2022-02-04
 order: 9
-img: bdus.png
+img: bdus.webp
 description: This post presents Bradypus, an open-source software developed for creating and managing relational web databases, with a particular focus on archaeological research projects and Cultural Heritage. It illustrates the main features, the development philosophy and the databases supported by the platform.
 
 ---

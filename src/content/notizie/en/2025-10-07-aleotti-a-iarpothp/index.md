@@ -1,6 +1,6 @@
 ---
 title: "Participation of Nadia Aleotti in the seventh edition of the international conference IARPotHP - International Association for Research on Pottery of the Hellenistic Period: Hellenistic Pottery in Context"
-img: IARPotHP7.jpg
+img: IARPotHP7.webp
 date: 2025-09-15
 description: "LAD takes part in the seventh edition of the international conference IARPotHP - International Association for Research on Pottery of the Hellenistic Period: Hellenistic Pottery in Context."
 tags:

@@ -1,7 +1,7 @@
 ---
 title: "CeraLoop: an invitation to take part in collective research on the “similarity” of ceramic profiles in archaeology"
 order: 24
-img: partecipate-to-CeraLoop.jpg
+img: partecipate-to-CeraLoop.webp
 date: 2025-10-26
 description: "Take part in CeraLoop! 🏺 Collective research on the similarity of ceramic profiles in archaeology. Open to everyone: experts, students and enthusiasts. Contribute a few minutes of your time to AI-based archaeological classification"
 ---

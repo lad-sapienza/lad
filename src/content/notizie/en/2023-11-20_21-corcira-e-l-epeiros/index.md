@@ -1,6 +1,6 @@
 ---
 title: "Participation in the international conference “Between History and Archaeology: Corcyra and the Epeiros. New Data and Research Perspectives”"
-img: corcira-e-l-epeiros.jpg
+img: corcira-e-l-epeiros.webp
 date: 2023-11-20
 description: "Presentation of the research of the archaeological mission at Çuka e Ajtoit at the international conference “Between History and Archaeology: Corcyra and the Epeiros. New Data and Research Perspectives”"
 tags:

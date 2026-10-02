@@ -1,6 +1,6 @@
 ---
 title: "Text / Image interfaces in ancient cultures"
-img: text-image-conference.jpg
+img: text-image-conference.webp
 date: 2023-03-20
 description: "The director of LAD: Laboratorio di Archeologia Digitale at Sapienza will take part in the workshop “Text / Image interfaces in ancient cultures. Theoretical, methodological, and practical approaches to the combined analysis of textual and visual evidence” to be held at L'Orientale University of Naples, on 13 April 2022."
 tags:

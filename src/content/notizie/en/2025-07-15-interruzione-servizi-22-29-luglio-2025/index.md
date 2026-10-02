@@ -1,6 +1,6 @@
 ---
 title: "Notice of LAD online service interruption — 22-29 July 2025"
-img: interruzione-servizi-lad-luglio-2025.jpg
+img: interruzione-servizi-lad-luglio-2025.webp
 date: 2025-07-15
 description: "Due to major extraordinary maintenance work on the electrical system of the INFN-LNS data centre in Catania, which hosts all of LAD's online services, a complete shutdown of the infrastructure has been scheduled for the period between 22 and 29 July 2025"
 tags:

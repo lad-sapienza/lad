@@ -1,6 +1,6 @@
 ---
 title: "Sapienza's mission at Çuka e Ajtoit officially funded by MAECI"
-img: caj-maeci.jpg
+img: caj-maeci.webp
 date: 2023-07-26
 description: "The archaeological mission at Çuka e Ajtoit is operating in 2023 with the official recognition and financial support of the Ministry of Foreign Affairs and International Cooperation."
 tags:

@@ -1,6 +1,6 @@
 ---
 title: "LAD takes part in the 2024 edition of ArcheoFOSS 2024"
-img: ArcheoFOSS-2024.jpg
+img: ArcheoFOSS-2024.webp
 date: 2024-12-12
 description: "The 2024 edition of ArcheoFOSS 2024, the international conference on Open software, hardware, processes, data and formats in archaeological research, will be held on 19 and 20 December 2024. The eighteenth edition will take place in Chieti, at the University of Chieti-Pescara."
 tags:

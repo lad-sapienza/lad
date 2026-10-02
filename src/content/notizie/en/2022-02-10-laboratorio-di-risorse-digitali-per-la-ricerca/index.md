@@ -1,6 +1,6 @@
 ---
 title: "Launch of the RDR Lab: Laboratorio di Risorse Digitali per la Ricerca"
-img: rdr_lab_dottorato_sar.jpg
+img: rdr_lab_dottorato_sar.webp
 date: 2022-02-10
 description: "As part of the PhD programme in History, Anthropology and Religions at Sapienza Università di Roma, starting on 7 March 2022 the RDR Lab (Laboratorio di Risorse Digitali per la Ricerca — Digital Research Resources Lab) will be launched."
 tags:

@@ -2,7 +2,7 @@
 title: PAThs Atlas and web portal, An Archaeological Atlas of Coptic Literature (dir. Paola Buzi, Sapienza)
 date: 2022-02-04
 order: 8
-img: paths.jpg
+img: paths.webp
 description: This post presents an overview of the PAThs project, an archaeological atlas of Coptic literature that integrates geographical data, online resources and digital tools for the study of Coptic manuscript production between the 3rd and 13th centuries AD. It illustrates the project's objectives, the resources available and LAD's contribution to the creation of the database and the digital platforms.
 ---
 

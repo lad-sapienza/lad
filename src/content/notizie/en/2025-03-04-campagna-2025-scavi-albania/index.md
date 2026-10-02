@@ -1,6 +1,6 @@
 ---
 title: "Registration open for the 2025 campaign of the Sapienza Archaeological Mission in Albania (June 2025)"
-img: caj-2025.jpg
+img: caj-2025.webp
 date: 2025-03-04
 description: "2025 campaign of the Sapienza Archaeological Mission in Albania"
 tags:

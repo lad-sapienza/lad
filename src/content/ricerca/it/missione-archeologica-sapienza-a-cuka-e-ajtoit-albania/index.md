@@ -3,7 +3,7 @@ title: Missione Archeologica della Sapienza a Çuka e Ajtoit (Albania)
 author: Julian Bogdani
 date: 2022-03-03
 order: 100
-img: cuka_ajtoit.jpg
+img: cuka_ajtoit.webp
 pinned: true
 description: La Missione Archeologica della Sapienza a Çuka e Ajtoit (Albania) è un progetto congiunto in collaborazione con l'Istituto Archeologico Albanese di Tirana e l'Accademia degli Studi Albanologici e opera sul terreno con il riconoscimento ufficiale del Ministero degli Affari Esteri e della Cooperazione Internazionale della Repubblica Italiana. Opera sul terreno da 2021 ed è diretta da Julian Bogdani (Sapienza, Roma) e Albana Meta (IA, Tirana).
 ---
@@ -306,7 +306,7 @@ Le attività della Missione Archeologica della Sapienza a Çuka e Ajtoit sono st
 
 La Missione Archeologica della Sapienza a Çuka e Ajtoit ringrazia per il suo continuo e fondamentale supporto **Past & Present Journeys**, Tirana.
 
-[![Past & Present Journeys](./pastandpresent.png)](https://pastandpresent.al/)
+[![Past & Present Journeys](./pastandpresent.webp)](https://pastandpresent.al/)
 
 - Sito web: [https://pastandpresent.al/](https://pastandpresent.al/)
 - Facebook: [http://www.facebook.com/pages/PastandPresent-Travel-Company/106348866175295](http://www.facebook.com/pages/PastandPresent-Travel-Company/106348866175295)
@@ -315,7 +315,7 @@ La Missione Archeologica della Sapienza a Çuka e Ajtoit ringrazia per il suo co
 ---
 
 Si ringrazia Rilievi srl per la strumentazione GNSS e per il continuo supporto con strumentazione di rilievo e consigli  
-[![Rilievi srl](./rilievi.jpg)](https://rilievi.srl/)
+[![Rilievi srl](./rilievi.webp)](https://rilievi.srl/)
 
 ---
 
@@ -327,26 +327,26 @@ Infine, si ringrazia il programma ALBCORS del [Geoportale Nazionale Albanese (AS
 
 <div className="row text-center">
   <div className="col-sm-3">
-    ![Sapienza Università di Roma](./sapienza.png)  
+    ![Sapienza Università di Roma](./sapienza.webp)  
     Sapienza Università di Roma
   </div>
   <div className="col-sm-3">
-    ![Akademia e Shkencave të Shqipërisë](./ash.png)  
+    ![Akademia e Shkencave të Shqipërisë](./ash.webp)  
     Akademia e Shkencave të Shqipërisë
   </div>
   <div className="col-sm-3">
-    ![Instituti i Arkeologjisë Tiranë (Albania)](./iat.png)  
+    ![Instituti i Arkeologjisë Tiranë (Albania)](./iat.webp)  
     Instituti i Arkeologjisë Tiranë (Albania)
   </div>
   
   <div className="col-sm-3">
-    ![Laboratorio di Archeologia Digitale alla Sapienza](./lad-blue.png)  
+    ![Laboratorio di Archeologia Digitale alla Sapienza](./lad-blue.webp)  
     Laboratorio di Archeologia Digitale alla Sapienza
   </div>
 </div>
 <div className="row text-center">
   <div className="col-sm-6 offset-sm-3">
-    ![Ministero degli Affari Esteri e della Cooperazione Internazionale](./maeci.jpg)  
+    ![Ministero degli Affari Esteri e della Cooperazione Internazionale](./maeci.webp)  
     Con il riconoscimento ufficiale (dal 2022) e il supporto finanziario (dal 2023) del Ministero degli Affari Esteri e della Cooperazione Internazionale.
   </div>
 </div>

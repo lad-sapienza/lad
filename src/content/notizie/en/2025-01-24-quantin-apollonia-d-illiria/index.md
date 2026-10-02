@@ -1,6 +1,6 @@
 ---
 title: "Seminar by François Quantin on Franco-Albanian research at Apollonia in Illyria"
-img: apollonia-d-illira.jpg
+img: apollonia-d-illira.webp
 date: 2025-01-23
 description: "The Sapienza Archaeological Mission in Albania, as part of the Classical Archaeology Seminars of the Sapienza Università di Roma Doctoral School in Archaeology, is pleased to organise a meeting with François Quantin entitled “Research at Apollonia in Illyria by the Franco-Albanian Archaeological Mission”"
 tags:

@@ -1,6 +1,6 @@
 ---
 title: "Sapienza's mission at Çuka e Ajtoit funded as part of the Grandi Scavi Sapienza programme"
-img: sapienza-grandi-scavi.jpg
+img: sapienza-grandi-scavi.webp
 date: 2025-09-10
 description: "As of 2025, the Sapienza Archaeological Mission at Çuka e Ajtoit in Albania is funded as part of the prestigious Grandi Scavi Sapienza programme, a recognition of the excellence of the fieldwork carried out since 2021."
 tags:
@@ -19,5 +19,5 @@ As of 2025, the [Sapienza Archaeological Mission in Albania](../../ricerca/missi
 
 Beyond the essential financial support that allows us to continue our fieldwork, this is an important recognition of the work carried out in the field over these years (2021-2024) by a significant number of colleagues, collaborators, doctoral candidates and students at every level (from undergraduate to specialisation school), who with tireless commitment, passion, dedication and professionalism have carried out and continue to carry out this research. To them goes the Mission's most sincere and heartfelt thanks.
 
-![Group photo of the 2025 campaign at Çuka e Ajtoit](/notizie/it/2025-09-10-caj-grande-scavo-sapienza/foto-gruppo-2025.jpg)
+![Group photo of the 2025 campaign at Çuka e Ajtoit](/notizie/it/2025-09-10-caj-grande-scavo-sapienza/foto-gruppo-2025.webp)
    _Group photo of the 2025 campaign at Çuka e Ajtoit_

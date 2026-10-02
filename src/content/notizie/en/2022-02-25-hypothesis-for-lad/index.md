@@ -1,6 +1,6 @@
 ---
 title: Collaborative annotation now enabled for the LAD blog
-img: hypothesis-for-lad.jpg
+img: hypothesis-for-lad.webp
 date: 2022-02-25
 description: As of today, LAD blog articles can be annotated openly and collaboratively, thanks to the implementation of the Hypothesis client
 tags:

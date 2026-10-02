@@ -1,6 +1,6 @@
 ---
 title: "[AY 24-25] Internship activities in digital archaeological documentation for the Sapienza Archaeological Mission in Albania"
-img: tirocini-progetto-cuka-e-ajtoit.jpg
+img: tirocini-progetto-cuka-e-ajtoit.webp
 date: 2024-09-27
 description: "Internship activities in digital archaeological documentation for the Sapienza Archaeological Mission in Albania"
 tags:

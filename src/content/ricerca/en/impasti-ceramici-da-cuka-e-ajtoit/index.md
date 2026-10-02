@@ -3,7 +3,7 @@ title: "The ceramic fabrics from the excavations at Çuka e Ajtoit (Konispoli, A
 author: Julian Bogdani
 date: 2024-11-19
 order: 22
-img: impasti-ceramici-caj.jpg
+img: impasti-ceramici-caj.webp
 description: Project AR2231888A457752, P.I. Nadia Aleotti, funded by the “Progetti per Avvio alla Ricerca” programme of Sapienza University of Rome, year 2023, prot. AR2241907808A0A6
 tags:
   - pottery

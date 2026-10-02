@@ -1,6 +1,6 @@
 ---
 title: "Participation in the international conference “Butrinto Cento (1924-2024). Achievements and prospects”"
-img: butrinto-cento.jpg
+img: butrinto-cento.webp
 date: 2024-11-23
 description: "The director of the Italian-Albanian Archaeological Mission (Sapienza - Albanian Institute of Archaeology) Julian Bogdani will take part in the international conference “Butrinto Cento (1924-2024). Achievements and prospects” organised by the University of Bologna and the Albanian Institute of Archaeology"
 tags:

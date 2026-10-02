@@ -1,6 +1,6 @@
 ---
 title: "Conference “Aerial Archaeology 2022: The Invisible Cities”, Lecce, 19-21 May 2022"
-img: archeologia-aerea-2022.jpg
+img: archeologia-aerea-2022.webp
 date: 2022-05-12
 description: "“Landscape: a synthesis of diachronic elements” is an initiative launched by PhD students in Ancient Topography and related fields, in synergy with the Consulta di Topografia Antica, with the aim of connecting young researchers working on topics relating to landscape, cities and the environment in antiquity, in order to stimulate the circulation and exchange of ideas on these themes"
 tags:

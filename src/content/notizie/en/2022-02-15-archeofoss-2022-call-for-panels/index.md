@@ -1,6 +1,6 @@
 ---
 title: "The “call for panels” for ArcheoFOSS 2022 is now open!"
-img: archeofoss-2022.jpg
+img: archeofoss-2022.webp
 date: 2022-02-15
 description: "The “call for panels” for the sixteenth edition of ArcheoFOSS is now open. The conference will be hosted by Sapienza Università di Roma on 22-24 September 2022, in collaboration with Sapienza's Digilab Interdepartmental Research Centre."
 tags:

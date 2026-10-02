@@ -3,7 +3,7 @@ title: "FACES: Fragments of Ancient CEStrine. Landscapes of the Sacred and Minor
 description: "Project AR125199C3541023, P.I. Francesca D'Ambola, funded by the “Progetti per Avvio alla Ricerca” programme of Sapienza University of Rome, year 2025"
 date: "2025-09-01"
 draft: false
-img: faces.jpg
+img: faces.webp
 tags:
   - Epirus
   - sacred landscape

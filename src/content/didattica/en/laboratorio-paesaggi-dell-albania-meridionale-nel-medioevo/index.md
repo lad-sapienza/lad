@@ -1,6 +1,6 @@
 ---
 title: "[AY 23-24] Lab on the landscapes of southern Albania in the Middle Ages"
-img: cuka-ajtoit.jpg
+img: cuka-ajtoit.webp
 date: 2023-03-20
 description: "The Lab on the landscapes of southern Albania, linked to the “archaeological mission to Çuka e Ajtoit (ancient Kestría)” directed by Julian Bogdani, examines human settlement and the landscape of southern Albania from the Middle Ages to the modern era. The lab focuses on preparing a georeferenced bibliographic database, using Zotero and QGIS, for a better understanding of the territory and of the human communities that have inhabited it. The project is run by the Chair of Medieval Archaeology at Sapienza Università di Roma, under the guidance of Prof. Francesca Romana Stasolla."
 tags:
@@ -20,7 +20,7 @@ For further information about the days and times of the meetings, please contact
 
 ---
 
-- [**Download the lab's poster in PDF format**](/didattica/it/laboratorio-paesaggi-dell-albania-meridionale-nel-medioevo/locandina-paesaggi-albania-meridionale.jpg)
+- [**Download the lab's poster in PDF format**](/didattica/it/laboratorio-paesaggi-dell-albania-meridionale-nel-medioevo/locandina-paesaggi-albania-meridionale.webp)
 
 
 

@@ -1,6 +1,6 @@
 ---
 title: "LAD takes part in the sixth international conference of “The International Association for Research on Pottery of the Hellenistic Period”"
-img: 6th-IARPotHP.jpg
+img: 6th-IARPotHP.webp
 date: 2023-10-09
 description: "Julian Bogdani and Nadia Aleotti take part in the sixth meeting of The International Association for Research on Pottery of the Hellenistic Period"
 tags:

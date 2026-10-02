@@ -1,6 +1,6 @@
 ---
 title: "Partecipazione alla conferenza internazionale “Viti Arkeologjik 2025”"
-img: konferenca-shkencore-viti-arkeologjik-2025.jpg
+img: konferenca-shkencore-viti-arkeologjik-2025.webp
 date: 2026-03-23
 description: "Giovedì 25 marzo 2026 il condirettore della Missione Archeologica italo-albanese a Çuka e Ajtoit parteciperà con una comunicazione ai lavori della conferenza “Viti Arkeologjik 2025” presso l'Accademia delle Scienze della Repubblica Albanese"
 tags:

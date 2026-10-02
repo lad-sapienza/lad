@@ -4,7 +4,7 @@ author: Julian Bogdani
 date: 2025-10-20
 licenza: CC BY 4.0 International
 livello: avanzato
-img: geoNamesFromPdf.jpg
+img: geoNamesFromPdf.webp
 inhome: true
 description: "geoNamesFromPdf is an open-source tool for the automatic extraction of place names from PDF files, aimed at the spatial analysis of scholarly bibliography. First presented in October 2025, it was substantially revised in August 2026: new architecture, bug fixes, structured output and gazetteers with coordinates."
 tags:
@@ -123,7 +123,7 @@ The provenance of each toponym (`ner:GPE`, `ner:LOC`, `gazetteer`) makes it poss
 
 For those who prefer not to use the terminal, `gui.py` offers an interface built with PyQt5 that exposes the same functions: PDF selection (including by drag and drop), page range, interactive management of the inclusion list (the gazetteer) and the exclusion list, and a view of the results with buttons to move a toponym quickly into one list or the other. In the revised version processing happens in a separate thread: the window stays responsive even on documents of several hundred pages.
 
-![geoNamesFromPdf: the single-PDF graphical interface](/blog/it/estrarre-nomi-geografici-da-file-pdf/01-interfaccia-grafica.png)
+![geoNamesFromPdf: the single-PDF graphical interface](/blog/it/estrarre-nomi-geografici-da-file-pdf/01-interfaccia-grafica.webp)
 
 ## Zotero assistant
 
@@ -131,17 +131,17 @@ Many research groups already organise their bibliography in Zotero with thematic
 
 The tool works offline, through Zotero's local API (version 10 or later). Once a library is chosen — personal or a group — the records not yet marked as done are listed. Selecting one, the assistant reads its PDF and shows two lists: the existing `@` tags found in the text, pre-checked, with occurrence count and page numbers; and the new places found by automatic recognition, each with an editable field to normalise the form and, when it resembles an existing tag, a button to adopt it. The user approves what looks right; the tool sorts the item's tags alphabetically, writes them and marks the record as done, so it does not come back in later sessions. Every action is written to a log file.
 
-![The Zotero assistant: record list, current article and proposed tags](/blog/it/estrarre-nomi-geografici-da-file-pdf/02-assistente-zotero.png)
+![The Zotero assistant: record list, current article and proposed tags](/blog/it/estrarre-nomi-geografici-da-file-pdf/02-assistente-zotero.webp)
 
-![A new candidate with an editable field and a button to adopt an existing tag](/blog/it/estrarre-nomi-geografici-da-file-pdf/03-candidato-modificabile.png)
+![A new candidate with an editable field and a button to adopt an existing tag](/blog/it/estrarre-nomi-geografici-da-file-pdf/03-candidato-modificabile.webp)
 
 For articles in languages with no recognition model — Albanian is the typical case in Balkan archaeological literature — a selector lets you force the language or switch to a *gazetteer-only* mode that matches the text against the existing tags alone, removing the false positives of automatic recognition.
 
-![Warning when the language model is missing: gazetteer-only mode is suggested](/blog/it/estrarre-nomi-geografici-da-file-pdf/04-lingua-senza-modello.png)
+![Warning when the language model is missing: gazetteer-only mode is suggested](/blog/it/estrarre-nomi-geografici-da-file-pdf/04-lingua-senza-modello.webp)
 
 For PDFs with no text layer (scanned offprints), if `ocrmypdf` is installed the assistant can OCR the file on the fly and re-analyse; the resulting file can be saved to disk, while the attachment in Zotero is left unchanged.
 
-![Scanned PDF: the button to run OCR with ocrmypdf](/blog/it/estrarre-nomi-geografici-da-file-pdf/05-pdf-scansionato-ocr.png)
+![Scanned PDF: the button to run OCR with ocrmypdf](/blog/it/estrarre-nomi-geografici-da-file-pdf/05-pdf-scansionato-ocr.webp)
 
 ## Use cases in research
 

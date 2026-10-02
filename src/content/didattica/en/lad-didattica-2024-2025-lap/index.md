@@ -1,6 +1,6 @@
 ---
 title: "[AY 24-25] Using the Laser Aided Profiler (LAP) for the documentation of ceramic finds"
-img: lap-at-lad.jpg
+img: lap-at-lad.webp
 date: 2025-01-17
 description: "As part of its teaching offer for the 2024-2025 academic year, LAD is organising the teaching module: “Laser Aided Profiler (LAP) for the documentation of ceramic profiles”"
 tags:

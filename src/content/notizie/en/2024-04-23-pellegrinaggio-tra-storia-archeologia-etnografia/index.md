@@ -1,6 +1,6 @@
 ---
 title: "Participation in the workshop “Pilgrimage between History, Archaeology and Ethnography”"
-img: pellegrinaggio-tra-storia-archeologia-etnografia.jpg
+img: pellegrinaggio-tra-storia-archeologia-etnografia.webp
 date: 2024-04-23
 description: "Erasmo di Fonso will take part in the workshop “Pilgrimage between History, Archaeology and Ethnography – The Sanctuaries of the Santissima Trinità di Vallepietra (Rome) and San Michele al Monte Tancia (Rieti)”"
 tags:

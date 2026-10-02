@@ -3,7 +3,7 @@ title: Reconstructing the historical and archaeological landscapes of southern A
 author: Julian Bogdani
 date: 2022-12-27
 order: 16
-img: igm-foto-storiche.jpg
+img: igm-foto-storiche.webp
 description: Research project, P.I. Julian Bogdani, funded by the “Progetti di Ricerca - Progetti Piccoli” programme of Sapienza University of Rome, year 2022, prot. RP12218161C7325E
 ---
 

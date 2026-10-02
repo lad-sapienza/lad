@@ -2,7 +2,7 @@
 title: "Participation in the activities of the PNRR project “Archaeology of the Sacred” (PE5, Spoke 1, WP 5, LT 3)"
 date: 2024-07-16
 order: 21
-img: kircher-sabina.jpg
+img: kircher-sabina.webp
 description: LAD takes part in the activities of the PNRR project, Extended Partnership 5, Spoke 1 (“Historical landscapes, traditions and cultural identities”), WP 5 (“Archaeology of the Sacred”)
 
 ---

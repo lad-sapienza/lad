@@ -1,6 +1,6 @@
 ---
 title: "[AY 21-22] Digital Archaeology teaching labs 2021-2022: GIS and Databases"
-img: lab-lad.jpg
+img: lab-lad.webp
 date: 2022-02-04
 description: "LAD's teaching offer: teaching labs on GIS platforms and Databases for archaeology for the 2021-2022 academic year. Registration, participation, schedule, programme..."
 tags:

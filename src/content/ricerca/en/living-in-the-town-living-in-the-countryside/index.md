@@ -2,7 +2,7 @@
 title: Living in the Town, Living in the Countryside. Typologies, Models and Transformations of Residential Architecture in Hellenistic and Roman Epirus
 date: 2023-10-09
 order: 20
-img: living-in-the-town-living-in-the-countryside.jpg
+img: living-in-the-town-living-in-the-countryside.webp
 description: An international conference organised by the Joint Italo-Albanian Project at Çuka e Ajtoit on the topic of residential archeture in Epirus,  January 15 2024, Rome.
 ---
 
@@ -42,7 +42,7 @@ Download programme in PDF version:
 
 The workshop works can be followed online via Zoom. **Registration is required** and can be completed at: [https://uniroma1.zoom.us/meeting/register/tZIlc-GprzMqG9Yp8hvnGSfvF3KzrVBNeEs4](https://uniroma1.zoom.us/meeting/register/tZIlc-GprzMqG9Yp8hvnGSfvF3KzrVBNeEs4).
 
-[![Register on Zoom.us](/ricerca/it/living-in-the-town-living-in-the-countryside/qr-zoom.jpg)](https://uniroma1.zoom.us/meeting/register/tZIlc-GprzMqG9Yp8hvnGSfvF3KzrVBNeEs4)
+[![Register on Zoom.us](/ricerca/it/living-in-the-town-living-in-the-countryside/qr-zoom.webp)](https://uniroma1.zoom.us/meeting/register/tZIlc-GprzMqG9Yp8hvnGSfvF3KzrVBNeEs4)
 
 ---
 

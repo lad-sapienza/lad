@@ -1,6 +1,6 @@
 ---
 title: "[AY 24-25] Digital Archaeology teaching labs 2024-2025: GIS, Advanced GIS and Databases"
-img: lab-lad.jpg
+img: lab-lad.webp
 date: 2024-11-24
 description: "The teaching offer of the Digital Archaeology Lab for the 2023-2024 academic year. Registration, participation, schedule..."
 tags:

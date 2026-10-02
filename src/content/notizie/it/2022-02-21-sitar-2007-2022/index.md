@@ -1,6 +1,6 @@
 ---
 title: "Convegno: SITAR 2007-2022. 15 anni di progetto a servizio dell'Archeologia di Roma"
-img: sitar-2007-2022.jpg
+img: sitar-2007-2022.webp
 date: 2022-02-21
 description: "Sono state aperte le iscrizioni ai laboratori didattici di Archeologia digitale per l'anno accademico 2021-2022. Quest'anno sono disponibili tre moduli: GIS di Base, Banche dati web e GIS avanzato. A causa degli spazi a disposizione, il laboratorio prevede un numero limitato di partecipanti."
 tags:
@@ -23,5 +23,5 @@ Il convegno si svolgerà in presenza fino ad esaurimento posti. Non è prevista 
 
 Per gli ospiti in presenza è necessario il *green pass*.
 
-- [Scarica il programma](./sitar-2007-2022-locandina.jpg)  
-- Scarica il pieghevole [[pagina 1](./sitar-2007-2022-pieghevole-1.jpg), [pagina2](./sitar-2007-2022-pieghevole-1.jpg)]
+- [Scarica il programma](./sitar-2007-2022-locandina.webp)  
+- Scarica il pieghevole [[pagina 1](./sitar-2007-2022-pieghevole-1.webp), [pagina2](./sitar-2007-2022-pieghevole-1.webp)]

@@ -1,7 +1,7 @@
 ---
 title: "I materiali dai contesti-deposito del “Palazzo” di Çuka e Ajtoit (Albania meridionale): dallo studio delle caratteristiche tecnico-formali dei materiali a un caso di archeologia del culto per l’Epiro Settentrionale in età ellenistica"
 description: "Progetto AR2231888A457752, P.I. Nadia Aleotti, finanziato dal programma “Progetti per Avvio alla Ricerca” della Sapienza Università di Roma, anno 2023, prot. AR225199AE532AD8"
-img: materiali-dai-contesti-deposito-palazzo-di-cuka-e-ajtoit.jpg
+img: materiali-dai-contesti-deposito-palazzo-di-cuka-e-ajtoit.webp
 date: "2025-09-01"
 draft: false
 ---

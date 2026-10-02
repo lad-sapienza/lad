@@ -2,7 +2,7 @@
 title: Digitisation of the Napoleonic Cartography of Egypt
 date: 2022-06-21
 order: 1
-img: nepoleonic-egypt.jpg
+img: nepoleonic-egypt.webp
 description: This post illustrates the project to digitise and georeference the Napoleonic cartography of Egypt, carried out by Sapienza's LAD. It describes the GIS methodologies adopted, the results achieved in creating historical geographic data, and the open-access resources available for research on the Egyptian landscape of the 18th-19th centuries.
 ---
 

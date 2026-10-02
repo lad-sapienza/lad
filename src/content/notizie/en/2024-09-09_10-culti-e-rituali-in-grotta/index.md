@@ -1,6 +1,6 @@
 ---
 title: "Participation in the international conference ‘Cults and rituals in caves: forms and materials from the Late Antique Mediterranean’"
-img: culti-e-rituali-in-grotta.jpg
+img: culti-e-rituali-in-grotta.webp
 date: 2024-09-09
 description: "The director of the Italian-Albanian Archaeological Mission (Sapienza - Albanian Institute of Archaeology) Julian Bogdani will take part in the international conference ‘Cults and rituals in caves: forms and materials from the Late Antique Mediterranean’ at Sapienza Università di Roma."
 tags:

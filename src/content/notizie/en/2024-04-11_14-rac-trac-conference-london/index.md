@@ -1,6 +1,6 @@
 ---
 title: "Participation in the international conference “RAC/TRAC Conference 2024. Session “Urban Structures, Inscriptions and Interaction in Imperial Rome: new approaches”"
-img: rac-trac-2024-london.jpg
+img: rac-trac-2024-london.webp
 date: 2024-04-11
 description: "Eleonora Iacopini and Julian Bogdani present LAD's work for the Scuola Normale Superiore di Pisa's InRome project at RAC/TRAC 2024 in London"
 tags:

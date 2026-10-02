@@ -1,6 +1,6 @@
 ---
 title: "Participation in the international conference “Arkeologjia shqiptare në 75-vjetorin e krijimit të saj: arritje, risi dhe perspektiva”"
-img: 75-vjet-arkeologji.jpg
+img: 75-vjet-arkeologji.webp
 date: 2023-11-06
 description: "Participation of the Mission directors, Albana Meta and Julian Bogdani, in the international conference “Arkeologjia shqiptare në 75-vjetorin e krijimit të saj: arritje, risi dhe perspektiva”"
 tags:

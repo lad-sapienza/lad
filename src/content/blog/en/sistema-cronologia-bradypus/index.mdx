@@ -3,7 +3,7 @@ title: "Dating the uncertain: the chronology system of BraDypUS 5"
 author: Julian Bogdani
 licenza: CC BY 4.0 International
 tags: [BraDypUS, Chronology, Open Standard, EDTF, database, archaeology, open source]
-img: cronologia-bradypus.jpg
+img: cronologia-bradypus.webp
 date: 2026-09-09
 draft: false
 inhome: true
@@ -32,7 +32,7 @@ The plugin is enabled per table: **Config → Tables**, select the table, scroll
 
 The design mirrors **Solution 1** from 2021: the dating lives in two integers, `chrono_from` and `chrono_to`, which the database can index, sort and compare. The new part is that those two numbers are not typed by hand. You write a **string** in a compact notation — `c4l BCE`, `-350 / -300`, `? / c4q3 BCE` — and the system parses it into `from` and `to`, generating the label at the same time. As you type, the panel shows a **live preview**: the generated label and the numeric range, so you can check the result before saving.
 
-![The "Chronology" panel in edit mode: the string `c4l BCE`, the preview "Late 4th cent. BCE (-325 – -301)", and the Certainty and Period controls.](/blog/it/sistema-cronologia-bradypus/edit-anteprima-live.jpg)
+![The "Chronology" panel in edit mode: the string `c4l BCE`, the preview "Late 4th cent. BCE (-325 – -301)", and the Certainty and Period controls.](/blog/it/sistema-cronologia-bradypus/edit-anteprima-live.webp)
 *The "Chronology" panel in edit mode. The string `c4l BCE` produces the preview "Late 4th cent. BCE (−325 – −301)"; below, Certainty ("Probable") and Period ("Hellenistic").*
 
 The **dating type is not a field**: it is inferred from which of the two endpoints are set.
@@ -172,7 +172,7 @@ So "all contexts that could fall in the 4th century BCE" is **a single** query, 
 
 A full-page view opened from the record list (the *calendar* button in the toolbar) that **overlays on a single time axis** all records with `fuzzy_date` data from the selected tables. Each row is a record, grouped by table; each bar runs from `chrono_from` to `chrono_to`. Every table has its own colour, and the **intensity** of the bar carries the certainty: solid for `certain`, progressively fainter for `probable` and `possible`. Hovering over a bar shows the title, the range (raw and human-readable), the period and the certainty. At the top you pick which tables to include and can narrow the axis to a range of years.
 
-![The comparative chronological Timeline: the demo's Stratigraphic units (blue) and Finds (orange), with the tooltip for US026 — 50 BCE → 200 CE, Roman, Certain.](/blog/it/sistema-cronologia-bradypus/timeline-comparata.jpg)
+![The comparative chronological Timeline: the demo's Stratigraphic units (blue) and Finds (orange), with the tooltip for US026 — 50 BCE → 200 CE, Roman, Certain.](/blog/it/sistema-cronologia-bradypus/timeline-comparata.webp)
 *The comparative chronological Timeline with two tables overlaid on the year axis: colour distinguishes the table, opacity the certainty. The tooltip for US026 shows its range, period and certainty.*
 
 ### The derived chronological distribution
@@ -181,7 +181,7 @@ A panel that appears in the body of a record's page **when the table has relatio
 
 Concretely: opening a site record, the panel shows how the datings of all the stratigraphic units (or all the finds) linked to it are distributed over time — a glance at "when is this context alive".
 
-![The "Derived chronological distribution" panel on a site record: the chronological density of the linked Stratigraphic units, with the peak interval labelled 700–489 BCE and the count (3).](/blog/it/sistema-cronologia-bradypus/distribuzione-derivata.jpg)
+![The "Derived chronological distribution" panel on a site record: the chronological density of the linked Stratigraphic units, with the peak interval labelled 700–489 BCE and the count (3).](/blog/it/sistema-cronologia-bradypus/distribuzione-derivata.webp)
 *The derived chronological distribution: the datings of the records linked to a site, spread along the time axis, with the peak interval (here 700–489 BCE, 3 records) highlighted.*
 
 The default behaviour follows a single automatic hop: the direct child tables (foreign-key relation) that have `fuzzy_date`. To reach a more distant descendant — for example "from a Site, the Finds linked through the Stratigraphic units" — each table can have a **chronological distribution path** configured in *Config → Tables*: the intermediate tables act as a simple bridge (the SUs need not have a chronology of their own), and only the last table in the chain must have `fuzzy_date` enabled.
@@ -190,7 +190,7 @@ The default behaviour follows a single automatic hop: the direct child tables (f
 
 When `fuzzy_date` is active on a table, the GeoFace map shows a **temporal filter bar**: a dual-handle year slider (from −3000 to 2000, in steps of 25 years). As you drag the handles, the map markers are filtered in real time with `_chrono_overlap` — again including the *ante quem* and *post quem* records that intersect the selected window. In practice you "scrub" along time and watch which sites or contexts light up.
 
-![The GeoFace map with the "Temporal filter" bar set to 350–150 BCE; the site markers compatible with that window remain on the map.](/blog/it/sistema-cronologia-bradypus/geoface-slider-temporale.jpg)
+![The GeoFace map with the "Temporal filter" bar set to 350–150 BCE; the site markers compatible with that window remain on the map.](/blog/it/sistema-cronologia-bradypus/geoface-slider-temporale.webp)
 *GeoFace with the temporal filter active (350–150 BCE): the dual-handle slider narrows the map markers in real time, using `_chrono_overlap`.*
 
 ### The Harris Matrix on an absolute axis

@@ -4,7 +4,7 @@ author: Erasmo di Fonso
 licenza: CC BY 4.0 International
 livello: avanzato
 tags: [3D, Fotogrammetria, Metashape, Rilievo archeologico]
-img: fig-02-tracciare-linea.jpg
+img: fig-02-tracciare-linea.webp
 date: 2023-11-27
 description: "La difusione sempre più capillare di metodi di rilievo archeologico basati sulla tecnica della fotogrametria rende necessario la creazione di procedimenti che permettano di recupare dai modelli 3D “prodotti tradizionali” della documentazione archeologica. Se la creazione delle piante è gestita nativamente da software del settore, come il popolarissimo Agisoft Metashape, quella di prospetti e sezioni richiede del lavoro in più. Questo articolo vuole offrire qualche strumento in più in questa direzione."
 ---
@@ -24,11 +24,11 @@ Agisoft Metashape permette di creare ortofotomosaici e altri prodotti, come per 
 
 Come per il più classico rilievo diretto, la prima operazione da eseguire sarà quella di fissare il piano di riferimento orizzontale attraverso un ‘cordino’, digitalmente sostituito da un elemento lineare quotato (linestringZ). Per produrre la linea in Agisoft Metashape, sarà necessario anzitutto attivare il comando ```Draw Polyline``` dalla Toolbar (vd. immagine) o dal menù a tendina Model. 
 
-![Metashape: commando Draw polyline](./fig-01-draw-polyline.jpg)
+![Metashape: commando Draw polyline](./fig-01-draw-polyline.webp)
 
 Selezionata l’opzione, sarà quindi necessario tracciare la linea di riferimento, avendo cura di posizionare i punti di inizio e termine della geometria a una distanza adeguata dall’elemento da rilevare (la facciata) ed escludere quanto più possibile ‘intrusi’ in elevato che si possano frapporre tra quest’ultimo ed il nostro punto di vista simulato (v. immagine sotto). Terminato di disegnare la geometria, attribuiamole un nome facilmente riconoscibile e salviamo. Per il momento non dobbiamo preoccuparci della terza dimensione e dobbiamo solo assicurarci che la nostra linea (il ‘cordino’) sia il più possibile parallela alla superficie da rappresentare. È buona norma, infine, dare un nome significativo alla linea, nel caso in cui dovessimo estrarre molti prospetti dal nostro modello, es. ```prosp_1```, ```prosp_2```, ecc.
 
-![Metashape: tracciamento della linea](./fig-02-tracciare-linea.jpg)
+![Metashape: tracciamento della linea](./fig-02-tracciare-linea.webp)
 
 
 
@@ -151,11 +151,11 @@ Le coordinate `x` e `y` del punto `2-y` sono identiche a quelle del punto `2-o` 
 
 Ora che abbiamo i tre punti sui quali agganciare gli assi di riferimento e che li abbiamo organizzati in formato CSV, il passo successivo sarà quello di importarli all’interno del nostro progetto. Per far ciò, sarà sufficiente agire tramite il comando `File` > `Import` > `Import Reference di Metashape`. Prima di eseguire l’operazione, sarà importante assicurarsi che il sistema di coordinate, il carattere delimitatore di colonne (nel nostro caso **la virgola**) e la riga di partenza selezionate siano impostati correttamente. 
 
-![Import CSV](fig-03-import-csv.jpg)
+![Import CSV](fig-03-import-csv.webp)
 
 Una volta tenute tali accortezze, sarà possibile eseguire l’operazione e, nella finestra che segue, ci verrà richiesto di creare nuovi `markers` i cui nomi corrisponderanno al primo valore identificato per ogni elemento (nell’esempio al paragrafo precedente, `2-o`, `2-x` e `2-y`). Approvata quest’ulteriore richiesta, i `markers` saranno disponibili nel nostro progetto. Ad operazione eseguita possiamo assicurarci che i markers siano stati inseriti nella posizione corretta attivandole la visualizzazione attraverso il comando `Model` > `Show/Hide Items` > `Show Markers`.
 
-![Model > Show/Hide Items > Show markers](fig-04-show-markers.jpg)
+![Model > Show/Hide Items > Show markers](fig-04-show-markers.webp)
 
 **ATTENZIONE**: qualora markers con la stessa denominazione di quelli in ingresso siano già presenti nel progetto, il sistema passerà alla **sovrascrittura** dei dati per quest’ultimi.
 
@@ -167,11 +167,11 @@ Ora, non rimane che l’ultima operazione preliminare prima di procedere all’e
 
 Terminata anche l’ultima operazione preliminare, potremo infine procedere all’esportazione dell’ortofoto. Per far ciò, apriamo il pannello `Build orthomosaic` dalla voce di menù `Workflow`:
 
- ![Commando Build orthomosaic](fig-06-build-orthomosaic-command.jpg)
+ ![Commando Build orthomosaic](fig-06-build-orthomosaic-command.webp)
 
 Qui, scegliamo una proiezione di tipo planare ed impostiamo come riferimento i markers inseriti al punto precedente, avendo cura di inserirli correttamente. Nell’esempio fornito ai punti precedenti, i punti `2-o` e `2-x` fungeranno da riferimento per l’asse orizzontale, mentre `2-o` e `2-y` definiranno quello verticale:
 
-![Opzioni della funzione Build orthomosaic](fig-07-build-orthomosaic-options.jpg)
+![Opzioni della funzione Build orthomosaic](fig-07-build-orthomosaic-options.webp)
 
 
 Eseguite queste operazioni, potremo procedere alla creazione del nostro ortomosaico, che verrà quindi inserito nel progetto.
@@ -180,7 +180,7 @@ Eseguite queste operazioni, potremo procedere alla creazione del nostro ortomosa
 
 Verificato il risultato finale all’interno di Metashape, possiamo infine procedere all’esportazione dell’immagine bidimensionale in formato TIFF, cliccando con il tasto destro alla voce dell’ortomosaico nel pannello `Workspace` e selezionando `Export Orthomosaic`. Una volta selezionati il nome dell’immagine e la cartella di destinazione, si aprirà il riquadro di impostazioni necessarie per l’esportazione. Si consiglia di prestare attenzione alle voci `Clip to boundary shapes` e `Write Tile Scheme` che, per gli obiettivi prefissi in questo tutorial, devono essere entrambi **de-selezionate**, come nell’immagine. Qualora l’esportazione risultasse in un file vuoto, è stato talvolta utile de-selezionare anche l’impostazione ‘Write BigTIFF file’, che consigliamo comunque di tenere attivato qualora tale problematica non si presentasse. 
 
-![Opzioni di esportazione](fig-08-export-options.jpg)
+![Opzioni di esportazione](fig-08-export-options.webp)
 
 
 Al termine dell’operazione di esportazione dell’ortomosaico, che potrebbe richiedere anche moltissimo tempo (diverse ore, se il modello tridimensionale è ad alta definizione, l'area da esportare molto grande e la macchina con la quale si esegue il calcolo non particolarmente performante), avremo infine l’elevato del nostro prospetto in formato TIFF.

@@ -1,6 +1,6 @@
 ---
 title: "Participation in the meeting ‘Cultural Connections between Italy and Albania’"
-img: 2024-10-12-cerealia-tarquinia.jpg
+img: 2024-10-12-cerealia-tarquinia.webp
 date: 2024-10-12
 description: "The director of the Italian-Albanian Archaeological Mission (Sapienza - Albanian Institute of Archaeology) Julian Bogdani will take part in the meeting ‘Cultural Connections between Italy and Albania’"
 tags:

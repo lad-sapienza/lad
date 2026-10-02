@@ -1,6 +1,6 @@
 ---
 title: "[AY 24-25] Application of Computer Vision for managing archaeological Legacy Data"
-img: ia-at-lad.jpg
+img: ia-at-lad.webp
 date: 2025-02-28
 description: "As part of its teaching offer for the 2024-2025 academic year, LAD is organising the teaching module: “Application of Computer Vision for managing archaeological Legacy Data”"
 tags:

@@ -1,6 +1,6 @@
 ---
 title: "Participation in the opening event of the 14th edition of the Cerealia festival"
-img: apertura-14-edizione-cerealia.jpg
+img: apertura-14-edizione-cerealia.webp
 date: 2024-09-14
 description: "The director of the Italian-Albanian Archaeological Mission (Sapienza - Albanian Institute of Archaeology) Julian Bogdani will take part in the opening event of the 14th edition of the Cerealia festival."
 tags:

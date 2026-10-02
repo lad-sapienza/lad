@@ -3,7 +3,7 @@ title: "FACES: Fragments of Ancient CEStrine. Paesaggi del sacro e culti minori 
 description: "Progetto AR125199C3541023, P.I. Francesca D'Ambola, finanziato dal programma “Progetti per Avvio alla Ricerca” della Sapienza Università di Roma, anno 2025"
 date: "2025-09-01"
 draft: false
-img: faces.jpg
+img: faces.webp
 tags:
   - Epiro
   - paesaggio sacro

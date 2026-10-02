@@ -1,6 +1,6 @@
 ---
 title: "Presentation of the exhibition “Sapienza in Albania. One hundred years since Luigi Maria Ugolini's first visit to the country”"
-img: sapienza-in-albania.jpg
+img: sapienza-in-albania.webp
 date: 2024-11-28
 description: "On Friday 13 December 2024, at 10:00 AM, the exhibition “Sapienza in Albania” set up at the premises of the Museo dell'Arte Classica of Sapienza will be presented in Aula Simonetti"
 tags:

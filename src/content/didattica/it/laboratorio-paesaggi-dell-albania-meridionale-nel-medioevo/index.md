@@ -1,6 +1,6 @@
 ---
 title: "[a.a. 23-24] Laboratorio di paesaggi dell'Albania meridionale nel medioevo"
-img: cuka-ajtoit.jpg
+img: cuka-ajtoit.webp
 date: 2023-03-20
 description: "Il Laboratorio di paesaggi dell'Albania meridionale, legato alla “missione archeologica a Çuka e Ajtoit (antica Kestría)” diretta da Julian Bogdani, analizza l'insediamento umano e il paesaggio dell'Albania meridionale dal medioevo all'età moderna. Il laboratorio si focalizza sulla preparazione di una banca dati bibliografica georiferita, utilizzando Zotero e QGIS, per una migliore comprensione del territorio e delle comunità umane che lo hanno abitato. Il progetto è curato dalla Cattedra di Archeologia Medievale della Sapienza Università di Roma, sotto la guida della Prof.ssa Francesca Romana Stasolla."
 tags:
@@ -20,7 +20,7 @@ Per ulteriori informazioni circa giorni e orari degli incontri si prega di conta
 
 ---
 
-- [**Scarica la locandina del laboratorio in formato PDF**](./locandina-paesaggi-albania-meridionale.jpg)
+- [**Scarica la locandina del laboratorio in formato PDF**](./locandina-paesaggi-albania-meridionale.webp)
 
 
 

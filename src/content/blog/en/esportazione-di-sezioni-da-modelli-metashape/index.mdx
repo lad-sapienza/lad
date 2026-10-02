@@ -4,7 +4,7 @@ author: Erasmo di Fonso
 licenza: CC BY 4.0 International
 livello: avanzato
 tags: [3D, Photogrammetry, Metashape, Archaeological Survey]
-img: fig-02-tracciare-linea.jpg
+img: fig-02-tracciare-linea.webp
 date: 2023-11-27
 description: "The increasingly widespread use of archaeological survey methods based on photogrammetry makes it necessary to develop procedures that allow the “traditional products” of archaeological documentation to be recovered from 3D models. While the creation of plans is natively handled by specialized software, such as the extremely popular Agisoft Metashape, producing elevations and sections requires extra work. This article aims to offer a few more tools in this direction."
 ---
@@ -24,11 +24,11 @@ Agisoft Metashape makes it extremely easy to create orthomosaics and other produ
 
 As with the most classic direct survey, the first operation to perform will be to establish the horizontal reference plane using a 'string line', digitally replaced by a linear element with elevation values (a linestringZ). To produce the line in Agisoft Metashape, you will first need to activate the `Draw Polyline` command from the Toolbar (see image) or from the Model drop-down menu. 
 
-![Metashape: commando Draw polyline](/blog/it/esportazione-di-sezioni-da-modelli-metashape/fig-01-draw-polyline.jpg)
+![Metashape: commando Draw polyline](/blog/it/esportazione-di-sezioni-da-modelli-metashape/fig-01-draw-polyline.webp)
 
 Once the option is selected, you will need to trace the reference line, taking care to place the start and end points of the geometry at an appropriate distance from the element to be surveyed (the facade) and to exclude, as far as possible, any 'intruding' elements in elevation that might come between it and our simulated viewpoint (see image below). Once you have finished drawing the geometry, give it an easily recognizable name and save. For now we do not need to worry about the third dimension, and we only need to make sure our line (the 'string line') is as parallel as possible to the surface to be represented. Finally, it is good practice to give the line a meaningful name, in case we need to extract many elevations from our model, e.g. `prosp_1`, `prosp_2`, etc.
 
-![Metashape: tracciamento della linea](/blog/it/esportazione-di-sezioni-da-modelli-metashape/fig-02-tracciare-linea.jpg)
+![Metashape: tracciamento della linea](/blog/it/esportazione-di-sezioni-da-modelli-metashape/fig-02-tracciare-linea.webp)
 
 
 
@@ -151,11 +151,11 @@ The `x` and `y` coordinates of point `2-y` are identical to those of point `2-o`
 
 Now that we have the three points to which we will anchor the reference axes, and have organized them in CSV format, the next step will be to import them into our project. To do this, simply use Metashape's `File` > `Import` > `Import Reference` command. Before performing the operation, it will be important to make sure that the coordinate system, the column delimiter character (in our case **the comma**), and the selected starting row are set correctly. 
 
-![Import CSV](/blog/it/esportazione-di-sezioni-da-modelli-metashape/fig-03-import-csv.jpg)
+![Import CSV](/blog/it/esportazione-di-sezioni-da-modelli-metashape/fig-03-import-csv.webp)
 
 Once these precautions have been taken, you can perform the operation and, in the window that follows, you will be asked to create new `markers` whose names will correspond to the first value identified for each element (in the example in the previous paragraph, `2-o`, `2-x` and `2-y`). Once this further request is approved, the `markers` will be available in our project. Once the operation has been carried out, we can make sure the markers have been placed in the correct position by enabling their display through the `Model` > `Show/Hide Items` > `Show Markers` command.
 
-![Model > Show/Hide Items > Show markers](/blog/it/esportazione-di-sezioni-da-modelli-metashape/fig-04-show-markers.jpg)
+![Model > Show/Hide Items > Show markers](/blog/it/esportazione-di-sezioni-da-modelli-metashape/fig-04-show-markers.webp)
 
 **WARNING**: if markers with the same name as the incoming ones are already present in the project, the system will **overwrite** the data for those markers.
 
@@ -167,11 +167,11 @@ Now, only the last preliminary operation remains before proceeding to extract ou
 
 With this last preliminary operation complete, we can finally proceed to export the orthophoto. To do this, let's open the `Build orthomosaic` panel from the `Workflow` menu item:
 
- ![Commando Build orthomosaic](/blog/it/esportazione-di-sezioni-da-modelli-metashape/fig-06-build-orthomosaic-command.jpg)
+ ![Commando Build orthomosaic](/blog/it/esportazione-di-sezioni-da-modelli-metashape/fig-06-build-orthomosaic-command.webp)
 
 Here, we choose a planar-type projection and set as reference the markers entered in the previous step, taking care to enter them correctly. In the example given in the previous steps, points `2-o` and `2-x` will serve as the reference for the horizontal axis, while `2-o` and `2-y` will define the vertical one:
 
-![Opzioni della funzione Build orthomosaic](/blog/it/esportazione-di-sezioni-da-modelli-metashape/fig-07-build-orthomosaic-options.jpg)
+![Opzioni della funzione Build orthomosaic](/blog/it/esportazione-di-sezioni-da-modelli-metashape/fig-07-build-orthomosaic-options.webp)
 
 
 Once these operations have been carried out, we can proceed to create our orthomosaic, which will then be inserted into the project.
@@ -180,7 +180,7 @@ Once these operations have been carried out, we can proceed to create our orthom
 
 Once the final result has been checked within Metashape, we can finally proceed to export the two-dimensional image in TIFF format, by right-clicking on the orthomosaic entry in the `Workspace` panel and selecting `Export Orthomosaic`. Once the image name and destination folder have been selected, the export settings panel will open. It is recommended to pay attention to the `Clip to boundary shapes` and `Write Tile Scheme` options, which, for the purposes of this tutorial, should both be **unchecked**, as shown in the image. If the export results in an empty file, it has sometimes helped to also uncheck the 'Write BigTIFF file' setting, which we nevertheless recommend keeping enabled if this problem does not occur. 
 
-![Opzioni di esportazione](/blog/it/esportazione-di-sezioni-da-modelli-metashape/fig-08-export-options.jpg)
+![Opzioni di esportazione](/blog/it/esportazione-di-sezioni-da-modelli-metashape/fig-08-export-options.webp)
 
 
 Once the orthomosaic export operation is complete — which can take a very long time (several hours, if the three-dimensional model is high-resolution, the area to be exported is very large, and the machine performing the calculation is not particularly powerful) — we will finally have the elevation drawing of our facade in TIFF format.

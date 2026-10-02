@@ -1,6 +1,6 @@
 ---
 title: "Participation in the conference “Signs, Texts, Data Research Routes through the Documentary Written Culture in Late Antiquity and Early Middle Ages”"
-img: notae-final-conference.jpg
+img: notae-final-conference.webp
 date: 2024-06-01
 description: "LAD director Julian Bogdani will take part in the conference “Signs, Texts, Data Research Routes through the Documentary Written Culture in Late Antiquity and Early Middle Ages”"
 tags:

@@ -4,7 +4,7 @@ author: Domizia D'Erasmo, Julian Bogdani
 licenza: CC BY 4.0 International
 livello: avanzato
 tags: [GIS, Spatial analysis, Landscape archaeology, Tutorial]
-img: mca.jpg
+img: mca.webp
 date: 2022-10-28
 description: "In this guide we will look at a use case of multi criteria weighted-overlay analysis using QGIS software. We will consider a concrete case study, an archaeological question relating to a well-defined chronological and geographical context..."
 ---
@@ -83,8 +83,8 @@ We then proceed to rasterize the vector data contained in the `Step-1` group in 
 1. In `Rasterized`, save the new file as `strade-raster`
 1. Click the `Run` button to execute the algorithm.
 
-![rasterizza-strade-1.jpg](/blog/it/multi-criteria-analysis/rasterizza-strade-1.jpg)
-![rasterizza-strade-2.jpg](/blog/it/multi-criteria-analysis/rasterizza-strade-2.jpg)
+![rasterizza-strade-1.webp](/blog/it/multi-criteria-analysis/rasterizza-strade-1.webp)
+![rasterizza-strade-2.webp](/blog/it/multi-criteria-analysis/rasterizza-strade-2.webp)
 
 At this point, the operations described above can be repeated, with the same parameters, for all the other available layers, namely:
 - `fiumi-lazio`, 
@@ -101,7 +101,7 @@ At present, the hydrographic information is spread across two different rasters,
 1. Enter the expression: `"acque-interne-raster@1" + "fiumi-raster@1"`
 1. Use `confine-raster` as the `Reference layer(s)`
 1. Save the file as `idrografia-3-valori`
-![unione-fiumi-acque-interne.jpg](/blog/it/multi-criteria-analysis/unione-fiumi-acque-interne.jpg)
+![unione-fiumi-acque-interne.webp](/blog/it/multi-criteria-analysis/unione-fiumi-acque-interne.webp)
 
 The expression entered, `"acque-interne-raster@1" + "fiumi-raster@1"`, denotes a simple addition between the values of the individual pixels of each layer that occupy the same geographic space (i.e. that overlap). Note that here we are giving a precise indication of which band to use for each raster, through the `@1` suffix, even though these particular rasters have only one band. Other, more complex types of raster can have 3 or more bands. This is the case with RGB images, which have 3 bands (or channels), so that `image@1` refers to the red values (band 1), `image@2` to the green band values, and `image@3` to the blue values. This feature becomes much more interesting in the case of multi- or hyperspectral images, where the number of bands can be very high indeed.
 
@@ -120,7 +120,7 @@ The output raster, namely `raster_idrografia`, will have a value of 1 in pixels 
    4. Set `Maximum distance to be generated` to `6000` (= 6km)
    5. Set `NoData value` to `Not set`
    6. Save the file as `strade-prossimita`
-      ![prossimita-idrografia.jpg](/blog/it/multi-criteria-analysis/prossimita-idrografia.jpg)
+      ![prossimita-idrografia.webp](/blog/it/multi-criteria-analysis/prossimita-idrografia.webp)
    7. Open the `Layer Styling` panel
    8. In `Color ramp`, set the maximum value (max) to `6000`
    9. Repeat the same operations for the `idrografia-raster` and `insediamenti-raster` layers
@@ -133,8 +133,8 @@ The output raster, namely `raster_idrografia`, will have a value of 1 in pixels 
       `100*("strade-prossimita@1"<=1000) + 50*("strade-prossimita@1">1000)*("strade-prossimita@1"<=6000) + 10*("strade-prossimita@1">6000)`
    3. In `Reference layer(s)` select `confine-lazio`
    4. Save the file as `strade-riclassificato`
-      ![strade-classificate.jpg](/blog/it/multi-criteria-analysis/strade-classificate.jpg)
-      ![strade-riclassificate-2.jpg](/blog/it/multi-criteria-analysis/strade-riclassificate-2.jpg)
+      ![strade-classificate.webp](/blog/it/multi-criteria-analysis/strade-classificate.webp)
+      ![strade-riclassificate-2.webp](/blog/it/multi-criteria-analysis/strade-riclassificate-2.webp)
 
 The expression `100*("strade-prossimita@1"<=1000) + 50*("strade-prossimita@1">1000)*("strade-prossimita@1"<=6000) + 10*("strade-prossimita@1">6000)` deserves a bit of attention and needs some explanation to be understood, as it mixes arithmetic and boolean logic. In particular, the expressions in parentheses (`"strade-prossimita@1"<=1000`, `"strade-prossimita@1">1000` and `"strade-prossimita@1"<=6000`) are boolean expressions whose output can be either `0` (if false) or `1` (if true). An example will make this even clearer:
 - if a pixel has the value `4524`, then
@@ -158,7 +158,7 @@ The procedure is as follows:
    `100*("idrografia-prossimita@1">6000) + 50*("idrografia-prossimita@1">1000) * ("idrografia-prossimita@1"<=6000) + 10*("idrografia-prossimita@1"<1000)`
 1. In `Reference layer(s)` select `confine-lazio`
 1. Save the file as `idrografia-riclassificato`
-![idrografia-riclassificato.jpg](/blog/it/multi-criteria-analysis/idrografia-riclassificato.jpg)
+![idrografia-riclassificato.webp](/blog/it/multi-criteria-analysis/idrografia-riclassificato.webp)
 
 #### Settlements
 Finally, let's also reclassify the settlements, defining three classes, respectively:
@@ -170,7 +170,7 @@ Finally, let's also reclassify the settlements, defining three classes, respecti
    `100*("insediamenti-prossimita@1">6000) + 50*("insediamenti-prossimita@1">1000) * ("insediamenti-prossimita@1"<=6000) + 10*("insediamenti-prossimita@1"<1000)`
 1. In `Reference layer(s)` select `confine-lazio`
 1. Save the file as `insediamenti-riclassificato`
-![insediamenti-riclassificato.jpg](/blog/it/multi-criteria-analysis/insediamenti-riclassificato.jpg)
+![insediamenti-riclassificato.webp](/blog/it/multi-criteria-analysis/insediamenti-riclassificato.webp)
 
 ### 5. Combining the results
 At this point we have everything we need to proceed with the multi-criteria overlay analysis, in which all the reclassified rasters will be summed using the `Raster Calculator` tool, in order to obtain a single output that answers the question originally posed:  
@@ -194,7 +194,7 @@ The procedure is as follows:
 1. Open the layer's properties
 1. Under `Render type` set `Singleband pseudocolor`
 1. Classify
-![overlay.jpg](/blog/it/multi-criteria-analysis/overlay-finale.jpg)
+![overlay.webp](/blog/it/multi-criteria-analysis/overlay-finale.webp)
 
 
 ## Final note

@@ -2,7 +2,7 @@
 title: ⲘⲞvⲈⲒⲦ Road network graph of Late Antique and Medieval Egypt
 date: 2022-02-04
 order: 6
-img: moveit.jpg
+img: moveit.webp
 description: This post describes the MOvEIT project, a digital road network graph connecting the sites of the PAThs Atlas for Late Antique and Medieval Egypt. It presents the GIS technologies used, the resources available for download and the applications for historical and archaeological research.
 ---
 

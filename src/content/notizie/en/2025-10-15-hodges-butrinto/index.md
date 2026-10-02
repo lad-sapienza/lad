@@ -1,6 +1,6 @@
 ---
 title: "Butrint: crossroads of the Mediterranean. A meeting with Richard Hodges"
-img: hodges-butrint-sapienza.jpg
+img: hodges-butrint-sapienza.webp
 date: 2025-09-16
 description: "The Sapienza Archaeological Mission in Albania, as part of the PRIN 2022 FortNet project, is pleased to host a meeting with Richard Hodges on \"Butrint: crossroads of the Mediterranean\", on the occasion of the author's recent publication of two volumes on the ancient site."
 tags:

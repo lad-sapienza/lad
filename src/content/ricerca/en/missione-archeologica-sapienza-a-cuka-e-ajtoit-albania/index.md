@@ -3,7 +3,7 @@ title: Sapienza Archaeological Mission to Çuka e Ajtoit (Albania)
 author: Julian Bogdani
 date: 2022-03-03
 order: 100
-img: cuka_ajtoit.jpg
+img: cuka_ajtoit.webp
 pinned: true
 description: The Sapienza Archaeological Mission to Çuka e Ajtoit (Albania) is a joint project carried out in collaboration with the Albanian Institute of Archaeology of Tirana and the Academy of Albanological Studies, operating in the field with the official recognition of the Ministry of Foreign Affairs and International Cooperation of the Italian Republic. It has been active in the field since 2021 and is directed by Julian Bogdani (Sapienza, Rome) and Albana Meta (IA, Tirana).
 ---
@@ -306,7 +306,7 @@ The activities of the Sapienza Archaeological Mission to Çuka e Ajtoit have als
 
 The Sapienza Archaeological Mission to Çuka e Ajtoit thanks **Past & Present Journeys**, Tirana, for its continuous and essential support.
 
-[![Past & Present Journeys](/ricerca/it/missione-archeologica-sapienza-a-cuka-e-ajtoit-albania/pastandpresent.png)](https://pastandpresent.al/)
+[![Past & Present Journeys](/ricerca/it/missione-archeologica-sapienza-a-cuka-e-ajtoit-albania/pastandpresent.webp)](https://pastandpresent.al/)
 
 - Website: [https://pastandpresent.al/](https://pastandpresent.al/)
 - Facebook: [http://www.facebook.com/pages/PastandPresent-Travel-Company/106348866175295](http://www.facebook.com/pages/PastandPresent-Travel-Company/106348866175295)
@@ -315,7 +315,7 @@ The Sapienza Archaeological Mission to Çuka e Ajtoit thanks **Past & Present Jo
 ---
 
 Thanks to Rilievi srl for the GNSS equipment and for their continuous support with survey equipment and advice.  
-[![Rilievi srl](/ricerca/it/missione-archeologica-sapienza-a-cuka-e-ajtoit-albania/rilievi.jpg)](https://rilievi.srl/)
+[![Rilievi srl](/ricerca/it/missione-archeologica-sapienza-a-cuka-e-ajtoit-albania/rilievi.webp)](https://rilievi.srl/)
 
 ---
 
@@ -327,26 +327,26 @@ Finally, thanks go to the ALBCORS programme of the [National Geoportal of Albani
 
 <div className="row text-center">
   <div className="col-sm-3">
-    ![Sapienza Università di Roma](/ricerca/it/missione-archeologica-sapienza-a-cuka-e-ajtoit-albania/sapienza.png)  
+    ![Sapienza Università di Roma](/ricerca/it/missione-archeologica-sapienza-a-cuka-e-ajtoit-albania/sapienza.webp)  
     Sapienza University of Rome
   </div>
   <div className="col-sm-3">
-    ![Akademia e Shkencave të Shqipërisë](/ricerca/it/missione-archeologica-sapienza-a-cuka-e-ajtoit-albania/ash.png)  
+    ![Akademia e Shkencave të Shqipërisë](/ricerca/it/missione-archeologica-sapienza-a-cuka-e-ajtoit-albania/ash.webp)  
     Academy of Sciences of Albania
   </div>
   <div className="col-sm-3">
-    ![Instituti i Arkeologjisë Tiranë (Albania)](/ricerca/it/missione-archeologica-sapienza-a-cuka-e-ajtoit-albania/iat.png)  
+    ![Instituti i Arkeologjisë Tiranë (Albania)](/ricerca/it/missione-archeologica-sapienza-a-cuka-e-ajtoit-albania/iat.webp)  
     Institute of Archaeology, Tirana (Albania)
   </div>
   
   <div className="col-sm-3">
-    ![Laboratorio di Archeologia Digitale alla Sapienza](/ricerca/it/missione-archeologica-sapienza-a-cuka-e-ajtoit-albania/lad-blue.png)  
+    ![Laboratorio di Archeologia Digitale alla Sapienza](/ricerca/it/missione-archeologica-sapienza-a-cuka-e-ajtoit-albania/lad-blue.webp)  
     Digital Archaeology Laboratory at Sapienza
   </div>
 </div>
 <div className="row text-center">
   <div className="col-sm-6 offset-sm-3">
-    ![Ministero degli Affari Esteri e della Cooperazione Internazionale](/ricerca/it/missione-archeologica-sapienza-a-cuka-e-ajtoit-albania/maeci.jpg)  
+    ![Ministero degli Affari Esteri e della Cooperazione Internazionale](/ricerca/it/missione-archeologica-sapienza-a-cuka-e-ajtoit-albania/maeci.webp)  
     With the official recognition (since 2022) and financial support (since 2023) of the Ministry of Foreign Affairs and International Cooperation.
   </div>
 </div>

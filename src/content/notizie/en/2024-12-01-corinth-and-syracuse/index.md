@@ -1,6 +1,6 @@
 ---
 title: "Participation in the international conference “Corinth and Syracuse: Connections, Exchanges, Influences”"
-img: corinth-and-syracuse.jpg
+img: corinth-and-syracuse.webp
 date: 2024-11-28
 description: "Nadia Aleotti takes part with a paper at the international conference “Corinth and Syracuse: Connections, Exchanges, Influences” on 5-7 December 2024"
 tags:

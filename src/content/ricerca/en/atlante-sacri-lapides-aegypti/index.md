@@ -2,7 +2,7 @@
 title: Sacri Lapides Aegypti Atlas (dir. Paola Buzi, Sapienza)
 date: 2022-02-04
 order: 7
-img: sla-logo.png
+img: sla-logo.webp
 description: This post presents an overview of the Sacri Lapides Aegypti Atlas, illustrating the historical context, research methodology and main results of the project. The aim is to provide an accessible and informative summary for scholars and enthusiasts of the archaeology and history of ancient Egypt.
 ---
 

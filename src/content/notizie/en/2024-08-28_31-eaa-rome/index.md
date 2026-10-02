@@ -1,6 +1,6 @@
 ---
 title: "Members of the Sapienza Archaeological Mission at Çuka e Ajtoit take part in the EAA 2024 international conference"
-img: eaa-rome-2024.jpg
+img: eaa-rome-2024.webp
 date: 2024-08-21
 description: "Members of the Sapienza Archaeological Mission at Çuka e Ajtoit present their research at the EAA 2024 conference in Rome (28-31 August). Papers on sacred landscapes, fortified settlements and transformations in northern Epirus between the Classical and Hellenistic periods."
 tags:

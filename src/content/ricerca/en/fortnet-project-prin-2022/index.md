@@ -2,7 +2,7 @@
 title: "FortNet. Fortification and population network in coastal Chaonia, Northern Epirus (Albania) between Iron Age and the Medieval period: a longue durée approach to the study of settlements, economic and defensive systems"
 author: Julian Bogdani
 date: 2023-10-01
-img: fortnet-loghi-sapienza.jpg
+img: fortnet-loghi-sapienza.webp
 description: Research project, P.I. Julian Bogdani, funded by the “Progetti di Ricerca - Progetti Piccoli” programme of Sapienza University of Rome, year 2022, prot. RP12218161C7325E
 ---
 

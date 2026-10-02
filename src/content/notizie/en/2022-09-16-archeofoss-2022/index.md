@@ -1,6 +1,6 @@
 ---
 title: "International ArcheoFOSS Conference: 22-23 September 2022"
-img: archeofoss-2022.jpg
+img: archeofoss-2022.webp
 date: 2022-09-16
 description: "On Thursday 22 and Friday 23 September 2022, the sixteenth edition of the International ArcheoFOSS Conference will take place: Open software, hardware, processes, data and formats in the archaeological research."
 tags:

@@ -1,7 +1,7 @@
 ---
 title: Linking Pasts And Sharing Knowledge. Mapping Archaeological Heritage, Legacy Data Integration and Web Technologies for Modelling Historical Landscapes
 order: 19
-img: linking-pasts-and-sharing-knowledge.jpg
+img: linking-pasts-and-sharing-knowledge.webp
 description: A Hybrid Conference hosted by the University of Naples Federico II, and organised with the Sapienza University of Rome and the University of Sheffield on 13th - 14th November 2023
 date: 2023-11-13
 ---
@@ -193,7 +193,7 @@ Aula ex Cataloghi Lignei
       <hr />
       <a href="https://www.studiumanistici.unina.it/dipartimento/" title="Dipartimento Studi Umanistici. Università di Napoli Federico II">
         
-[![Dipartimento Studi Umanistici. Università di Napoli Federico II](./dsu-federico-ii.jpg)](https://www.studiumanistici.unina.it/dipartimento/)
+[![Dipartimento Studi Umanistici. Università di Napoli Federico II](./dsu-federico-ii.webp)](https://www.studiumanistici.unina.it/dipartimento/)
 
 </a>
     </div>
@@ -204,7 +204,7 @@ Aula ex Cataloghi Lignei
       <hr />
       <a href="https://www.sheffield.ac.uk/dhi" title="The Digital Humanities Institue. University of Sheffield">
         
-[![The Digital Humanities Institue. University of Sheffield](./DHI_Sheffield.jpeg)](https://www.sheffield.ac.uk/dhi)
+[![The Digital Humanities Institue. University of Sheffield](./DHI_Sheffield.webp)](https://www.sheffield.ac.uk/dhi)
 
 </a>
     </div>
@@ -215,7 +215,7 @@ Aula ex Cataloghi Lignei
       <hr />
       <a href="https://lad.saras.uniroma1.it/" title="LAD: Laboratorio di Archeologia Digitale alla Sapienza">
         
-[![LAD: Laboratorio di Archeologia Digitale alla Sapienza](./lad-sapienza.jpg)](https://lad.saras.uniroma1.it/)
+[![LAD: Laboratorio di Archeologia Digitale alla Sapienza](./lad-sapienza.webp)](https://lad.saras.uniroma1.it/)
 
 </a>
     </div>

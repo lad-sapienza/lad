@@ -3,7 +3,7 @@ title: "From decay to date: radiocarbon dating in BraDypUS 5"
 author: Julian Bogdani
 licenza: CC BY 4.0 International
 tags: [BraDypUS, Radiocarbon, C14, IntCal20, Chronology, database, archaeology, open source]
-img: radiocarbonio-bradypus.jpg
+img: radiocarbonio-bradypus.webp
 date: 2026-09-15
 draft: false
 inhome: true
@@ -18,7 +18,7 @@ Before getting into it, a premise that holds for the whole article: **`radiocarb
 
 Activation looks, on the surface, identical to `fuzzy_date`'s: **Config → Tables**, select the table, scroll to *System plugins*, switch on *Radiocarbon dating*.
 
-![The System plugins panel in Config → Tables, with Radiocarbon dating activated alongside the other system plugins (Chronology, Pleiades, Stratigraphic relations, Geodata, Zotero).](/blog/it/datazione-radiocarbonio-bradypus/config-system-plugins.jpg)
+![The System plugins panel in Config → Tables, with Radiocarbon dating activated alongside the other system plugins (Chronology, Pleiades, Stratigraphic relations, Geodata, Zotero).](/blog/it/datazione-radiocarbonio-bradypus/config-system-plugins.webp)
 *The System plugins panel for the Stratigraphic units table: Radiocarbon dating is one of the available system plugins, here activated together with Chronology (fuzzy date) and the others.*
 
 Underneath, though, the mechanism is different — and it's worth explaining, because it isn't an implementation detail, it changes what you can record. `fuzzy_date` adds **five columns to the table itself**: a stratigraphic unit has *one* interpreted chronology, full stop. Radiocarbon doesn't work that way — the same context can have zero, one, or several lab determinations (different samples, different materials, occasionally even different labs re-dating the same sample). Activating `radiocarbon` therefore doesn't touch the table you activate it on: it creates a dedicated **child table**, named `{table}_radiocarbon` (for `us` it will be `us_radiocarbon`), one row per determination, linked back to the parent record. It's the same generic "plugin table" architecture already used for measurements, finds-per-SU, and the like — not a special case.
@@ -43,12 +43,12 @@ The four calibrated fields cannot be typed in by hand: whatever value the client
 
 The record page gains a *Radiocarbon dating* section, with the same row-based editor already seen for other plugin tables: add a row, fill in lab code, BP, error and material, save.
 
-![The Radiocarbon dating panel in edit mode: the Lab code, BP, Error, Material dated and Notes fields are editable; the four calibrated fields are absent because they are read-only.](/blog/it/datazione-radiocarbonio-bradypus/edit-radiocarbonio.jpg)
+![The Radiocarbon dating panel in edit mode: the Lab code, BP, Error, Material dated and Notes fields are editable; the four calibrated fields are absent because they are read-only.](/blog/it/datazione-radiocarbonio-bradypus/edit-radiocarbonio.webp)
 *The panel in edit mode. The only fields missing are the four Cal BP ones, read-only: everything else — including `d13c` and `curve`, still empty here — is editable.*
 
 After saving, the record shows the full row, with the calibrated ranges computed by the server:
 
-![The Radiocarbon dating panel in read mode: Beta-412002, BP 1700 ± 30, bone collagen, with Cal BP (68.2%) 1544–1687 and Cal BP (95.4%) 1533–1696.](/blog/it/datazione-radiocarbonio-bradypus/record-radiocarbonio.jpg)
+![The Radiocarbon dating panel in read mode: Beta-412002, BP 1700 ± 30, bone collagen, with Cal BP (68.2%) 1544–1687 and Cal BP (95.4%) 1533–1696.](/blog/it/datazione-radiocarbonio-bradypus/record-radiocarbonio.webp)
 *The panel in read mode for US003: a determination on bone collagen, BP 1700 ± 30, calibrated to 1544–1687 cal BP (68.2%) and 1533–1696 cal BP (95.4%).*
 
 One notational point worth clarifying right away, since it trips up anyone who doesn't handle it daily: **cal BP** means "calibrated years before present", where "present" is conventionally fixed at 1950. To turn it into calendar years, subtract from 1950: the example above, 1544–1687 cal BP, becomes **cal AD 263–406**. It's not a coincidence that US003 is catalogued, in the interpreted chronology (`fuzzy_date`), as "Late Antique", AD 300–450: the two datings — one scientific, one interpretive — overlap but don't coincide exactly, and that's expected: they're two independent lines of evidence, not a copy of one another.

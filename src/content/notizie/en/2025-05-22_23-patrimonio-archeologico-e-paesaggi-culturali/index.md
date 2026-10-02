@@ -1,6 +1,6 @@
 ---
 title: "Participation in the workshop “Archaeological Heritage and Cultural Landscapes. National Research and Protection Programmes and Strategies”"
-img: workshop-archeologia-maggio-2025.jpg
+img: workshop-archeologia-maggio-2025.webp
 date: 2025-05-17
 description: "On 23 May, the scientific director of LAD: Laboratorio di Archeologia Digitale at Sapienza, Julian Bogdani, will take part in the round table as part of the conference “Archaeological Heritage and Cultural Landscapes. National Research and Protection Programmes and Strategies”, promoted by the Directorate-General for Archaeology, Fine Arts and Landscape (DGABAP) of the MiC"
 tags:

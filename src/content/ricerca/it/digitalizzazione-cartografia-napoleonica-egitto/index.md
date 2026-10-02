@@ -2,7 +2,7 @@
 title: Digitalizzazione della Cartografia Napoleonica dell'Egitto
 date: 2022-06-21
 order: 1
-img: nepoleonic-egypt.jpg
+img: nepoleonic-egypt.webp
 description: Questo post illustra il progetto di digitalizzazione e georeferenziazione della cartografia napoleonica dell'Egitto, realizzato dal LAD della Sapienza. Vengono descritte le metodologie GIS adottate, i risultati ottenuti nella creazione di dati geografici storici e le risorse open access disponibili per la ricerca sul paesaggio egiziano del XVIII-XIX secolo.
 
 ---

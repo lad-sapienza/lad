@@ -1,6 +1,6 @@
 ---
 title: "Julian Bogdani chairs the first AIAC Meeting of November 2025 at the KNIR, Rome"
-img: incontri-aiac-nov-2025.jpg
+img: incontri-aiac-nov-2025.webp
 date: 2025-11-04
 description: "On Monday 10 November, Julian Bogdani will chair the first meeting of the International Association for Classical Archaeology (AIAC) of autumn 2025, to be held at 5:00 PM at the Royal Netherlands Institute in Rome."
 tags:

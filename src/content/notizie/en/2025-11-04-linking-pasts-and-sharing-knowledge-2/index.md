@@ -1,6 +1,6 @@
 ---
 title: "Participation of J. Bogdani and L. Cardarelli in the second edition of the international conference “Linking Pasts and Sharing Knowledge”"
-img: 2025-11-25_26-linking-pasts-and-sharing-knowledge-2.jpg
+img: 2025-11-25_26-linking-pasts-and-sharing-knowledge-2.webp
 date: 2025-11-04
 description: "On Wednesday 26 November 2025, Julian Bogdani and Lorenzo Cardarelli will take part in the second edition of the international conference “Linking Pasts and Sharing Knowledge”"
 tags:

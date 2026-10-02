@@ -1,7 +1,7 @@
 ---
 title: "The materials from the deposit-contexts of the “Palace” of Çuka e Ajtoit (southern Albania): from the study of the technical-formal characteristics of the materials to a case study in the archaeology of cult for Hellenistic-period Northern Epirus"
 description: "Project AR2231888A457752, P.I. Nadia Aleotti, funded by the “Progetti per Avvio alla Ricerca” programme of Sapienza University of Rome, year 2023, prot. AR225199AE532AD8"
-img: materiali-dai-contesti-deposito-palazzo-di-cuka-e-ajtoit.jpg
+img: materiali-dai-contesti-deposito-palazzo-di-cuka-e-ajtoit.webp
 date: "2025-09-01"
 draft: false
 ---
