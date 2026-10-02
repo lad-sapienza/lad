@@ -35,5 +35,5 @@ La Missione copre tutte le spese di vitto e alloggio sul posto.
 
 ---
 
-- [Scarica in versione PDF](./caj-2026-a4.pdf)
+- [Scarica in versione PDF](/notizie/it/2026-01-20-campagna-2026-scavi-albania/caj-2026-a4.pdf)
 

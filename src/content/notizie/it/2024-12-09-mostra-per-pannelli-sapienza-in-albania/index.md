@@ -35,5 +35,5 @@ Per informazioni si prega di scrivere a [julian.bogdani@uniroma1.it](mailto:juli
 
 ---
 
-- [Scarica l'invito in formato PDF](./invito-presentazione-mostra-sapienza-in-albania.pdf)
+- [Scarica l'invito in formato PDF](/notizie/it/2024-12-09-mostra-per-pannelli-sapienza-in-albania/invito-presentazione-mostra-sapienza-in-albania.pdf)
 - [Aggiungi evento al calendario](https://calendar.google.com/calendar/event?action=TEMPLATE&amp;tmeid=MmljYzNzZzRoZzc1c2cwdnBiZXI1bjgxY2oganVsaWFuLmJvZ2RhbmlAdW5pcm9tYTEuaXQ&amp;tmsrc=julian.bogdani%40uniroma1.it)

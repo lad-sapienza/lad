@@ -19,7 +19,7 @@ Registration is now open for the Digital Archaeology teaching labs, organised as
 
 The labs will be held in person, with the possibility (still to be assessed) of a remote channel, at Sapienza Università di Roma. Aula III, Faculty of Letters and Philosophy building, CU003, on 2, 3, 4, 5, 6, 9 and 10 May 2022.
 
-[**Download the poster with the full programme in PDF format**](../../didattica/laboratorio-gis-db/lab-gis-2021-2022.pdf)
+[**Download the poster with the full programme in PDF format**](/didattica/lab-gis-2021-2022.pdf)
 
 ## Description
 
@@ -50,7 +50,7 @@ The lab is open to interested students at any level (bachelor's, master's, postg
 
 The three modules, totalling 24 hours, lead to a certificate of attendance that can be used to obtain 1 CFU, to be recorded with the relevant contact person for each degree programme. Additional hours of independent work can be arranged to obtain further CFU.
 
-More information and the poster (please help us spread the word): [click here](./LAD-GIS-DB-2021-2022.pdf).
+More information and the poster (please help us spread the word): [click here](/didattica/lab-gis-2021-2022.pdf).
 
 ### List of announcements
 

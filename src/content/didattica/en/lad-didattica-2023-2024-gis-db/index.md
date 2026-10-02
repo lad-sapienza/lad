@@ -19,7 +19,7 @@ The labs will be held in person at Sapienza Università di Roma, Aula III Multim
 Coordinator: Julian Bogdani ([julian.bogdani@uniroma1.it](mailto:julian.bogdani@uniroma1.it))  
 Tutor: Domizia D'Erasmo ([domizia.derasmo@uniroma1.it](mailto:domizia.derasmo@uniroma1.it))
 
-[**Download the poster with the full programme in PDF format**](../../didattica/laboratorio-gis-db/lab-gis-2023-2024.pdf)
+[**Download the poster with the full programme in PDF format**](/didattica/lab-gis-2023-2024.pdf)
 
 ## Calendar
 

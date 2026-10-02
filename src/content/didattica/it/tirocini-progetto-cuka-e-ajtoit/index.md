@@ -24,4 +24,4 @@ Le attività avranno luogo negli spazi del LAD, al terzo piano di Lettere e Filo
 > **Per manifestare il proprio interesse si prega di inviare un messaggio email al prof. Julian Bogdani scrivendo all'indirizzo:  [julian.bogdani@uniroma1.it](mailto:julian.bogdani@uniroma1.it)**. 
 
 ---
-[Scarica la locandina](./tirocini-progetto-cuka-e-ajtoit.pdf)
+[Scarica la locandina](/didattica/it/tirocini-progetto-cuka-e-ajtoit/tirocini-progetto-cuka-e-ajtoit.pdf)

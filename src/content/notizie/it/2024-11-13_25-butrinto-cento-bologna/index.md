@@ -156,5 +156,5 @@ _Discussion and end of activities for the day_
 
 ---
 
-- [Scarica il programma in formato PDF](./Butrinto-Cento-Programme.pdf)
+- [Scarica il programma in formato PDF](/notizie/it/2024-11-13_25-butrinto-cento-bologna/Butrinto-Cento-Programme.pdf)
 - Pagina web dell'evento: [https://site.unibo.it/butrint/en/butrinto-100/butrinto-cento-1924-2024-bilanci-e-prospettive](https://site.unibo.it/butrint/en/butrinto-100/butrinto-cento-1924-2024-bilanci-e-prospettive)

@@ -25,4 +25,4 @@ Il tema dell’incontro sarà “Urban Landscapes”. e prevede il seguente prog
 
 ---
 
-- [Scarica la locandina in formato PDF](./Incontri-AIAC-nov-2025.pdf)
+- [Scarica la locandina in formato PDF](/notizie/it/2025-11-05-incontri-aiac-nov-2025/Incontri-AIAC-nov-2025.pdf)

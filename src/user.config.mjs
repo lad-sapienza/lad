@@ -28,6 +28,9 @@ export const userConfig = {
   markdown: {
     // Your custom markdown config
   },
+
+  // Locales (keep aligned with LOCALES / DEFAULT_LOCALE in src/utils/i18n.ts)
+  i18n: { defaultLocale: 'it', locales: ['it', 'en'] },
 };
 
 /**

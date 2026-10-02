@@ -18,7 +18,7 @@ The labs will be held **in person** at Sapienza Università di Roma, **Aula III*
 Coordinator: **Julian Bogdani** ([julian.bogdani@uniroma1.it](mailto:julian.bogdani@uniroma1.it))  
 Tutor: **Erasmo Di Fonso** ([erasmo.difonso@uniroma1.it](mailto:erasmo.difonso@uniroma1.it))
 
-[**Download the poster with the full programme in PDF format**](../../didattica/laboratorio-gis-db/lab-gis-2024-2025.pdf)
+[**Download the poster with the full programme in PDF format**](/didattica/lab-gis-2024-2025.pdf)
 
 ## Calendar
 

@@ -26,4 +26,4 @@ La partecipazione di J. Bogdni è previstà nell'ambito della tavola rotonda fin
 ---
 
 - [Notizia nel sito web del DGAPAB](https://dgabap.cultura.gov.it/2025/05/save-the-date-patrimonio-archeologico-e-paesaggi-culturali-programmi-e-strategie-di-ricerca-e-tutela-sul-territorio-nazionale-22-23-maggio-2025/)
-- [Scarica il programma provvisoro in formato PDF](./programma-workshop-DGAPAB.pdf)
+- [Scarica il programma provvisoro in formato PDF](/notizie/it/2025-05-22_23-patrimonio-archeologico-e-paesaggi-culturali/programma-workshop-DGAPAB.pdf)

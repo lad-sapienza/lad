@@ -18,5 +18,5 @@ Il workshop viene organizzato nell'àmbito del progetto ADRIA – Die adriatisch
 
 ---
 
-- [Programma dell'evento in formato PDF](./program-current-research-epirus-illyria.pdf)
+- [Programma dell'evento in formato PDF](/notizie/it/2024-04-11_13-current-research-in-epirus-illyria/program-current-research-epirus-illyria.pdf)
 - [Pagina ufficiale](https://www.uni-trier.de/universitaet/fachbereiche-faecher/fachbereich-iii/faecher/geschichte/profil/fachgebiete/alte-geschichte-2/aktuelles/detailansicht)

@@ -58,4 +58,4 @@ Non è richiesto di portare il proprio computer.
 
 ---
 
-- [Scarica la locandina in formato PDF](./lap-2526-locandina.pdf)
+- [Scarica la locandina in formato PDF](/didattica/it/lad-didattica-2025-2026-lap/lap-2526-locandina.pdf)

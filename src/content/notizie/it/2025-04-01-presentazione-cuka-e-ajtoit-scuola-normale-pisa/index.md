@@ -24,5 +24,5 @@ Per informazioni:
 
 ---
 
-- [Scarica la locandina in formato PDF](./20250407_Julian_Bogdani.pdf)
+- [Scarica la locandina in formato PDF](/notizie/it/2025-04-01-presentazione-cuka-e-ajtoit-scuola-normale-pisa/20250407_Julian_Bogdani.pdf)
 - [Pagina web della SNS dedicata all'evento](https://www.sns.it/it/seminario/cestrine-epiro-mito-storia-e-archeologia)

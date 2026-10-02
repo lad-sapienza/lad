@@ -63,4 +63,4 @@ Meeting ID: 810 8004 2638 Passcode: 701006
 
 ---
 
-- [Scarica il programma in formato PDF](./konferenca-shkencore-viti-arkeologjik-2025-programme.pdf)
+- [Scarica il programma in formato PDF](/notizie/it/2026-03-23-conferenza-anno-archeologico-2025/konferenca-shkencore-viti-arkeologjik-2025-programme.pdf)

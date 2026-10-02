@@ -50,4 +50,4 @@ Giovedì 27 marzo 2025 il condirettore della Missione Archeologica italo-albanes
 
 ---
 
-- [Scarica il programma in formato PDF](./konferenca-shkencore-viti-arkeologjik-2024-programme.pdf)
+- [Scarica il programma in formato PDF](/notizie/it/2025-03-25-conferenza-anno-archeologico-2024/konferenca-shkencore-viti-arkeologjik-2024-programme.pdf)

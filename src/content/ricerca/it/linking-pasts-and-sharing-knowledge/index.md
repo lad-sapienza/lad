@@ -249,5 +249,5 @@ Aula ex Cataloghi Lignei
 
 ---
 
-[Download flyer (PDF file, 3.5 MB)](./linking-pasts-and-sharing-knowledge.pdf)
+[Download flyer (PDF file, 3.5 MB)](/ricerca/it/linking-pasts-and-sharing-knowledge/linking-pasts-and-sharing-knowledge.pdf)
 

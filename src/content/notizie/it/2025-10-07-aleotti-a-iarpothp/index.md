@@ -16,5 +16,5 @@ Nell'àmbito della [Missione Archeologica della Sapienza in Albania](../../ricer
 ---
 
 
-- [Scarica il programma in formato PDF](./IARPotHP7-Programme.pdf)
+- [Scarica il programma in formato PDF](/notizie/it/2025-10-07-aleotti-a-iarpothp/IARPotHP7-Programme.pdf)
 - [Sito web del convegno](https://iarpothp.org/conferences/)

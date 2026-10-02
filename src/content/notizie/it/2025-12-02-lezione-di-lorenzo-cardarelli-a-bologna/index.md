@@ -17,7 +17,7 @@ La lezione rientra nelle attività del “Laboratorio materiali preistorici” a
 
 ---
 
-- [Scarica la locandina in formato PDF](./cardarelli-unibo.pdf)
+- [Scarica la locandina in formato PDF](/notizie/it/2025-12-02-lezione-di-lorenzo-cardarelli-a-bologna/cardarelli-unibo.pdf)
 
 
 

@@ -80,4 +80,4 @@ Le attività di laboratorio verranno svolte secondo la modalità **BYOD** (Bring
 
 ---
 
-- [Scarica la locandina in PDF](./LAD-AI-25-26.pdf)
+- [Scarica la locandina in PDF](/didattica/it/lad-didattica-2025-2026-ia/LAD-AI-25-26.pdf)

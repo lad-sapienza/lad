@@ -35,8 +35,8 @@ The workshop is organised by:
 - the [PhD School of Archaeology of Sapienza University of Rome](https://phd.uniroma1.it/web/ARCHEOLOGIA_nD3482_IT.aspx).
 
 Download programme in PDF version:
-- [Print version (1,8 MB)](./epirus-residential-architecture-workshop.pdf)
-- [Web version (660 KB)](./epirus-residential-architecture-workshop-lt.pdf)
+- [Print version (1,8 MB)](/ricerca/it/living-in-the-town-living-in-the-countryside/epirus-residential-architecture-workshop.pdf)
+- [Web version (660 KB)](/ricerca/it/living-in-the-town-living-in-the-countryside/epirus-residential-architecture-workshop-lt.pdf)
 
 ## Follow the workshop online
 

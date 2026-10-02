@@ -99,5 +99,5 @@ University Club - UniCal
 
 ***
 
-- [Scarica la locandina dell'evento in formato PDF](./locandina-corcira-e-l-epeiros.pdf)
-- [Scarica il programma dell'evento in formato PDF](./programma-corcira-e-l-epeiros.pdf)
+- [Scarica la locandina dell'evento in formato PDF](/notizie/it/2023-11-20_21-corcira-e-l-epeiros/locandina-corcira-e-l-epeiros.pdf)
+- [Scarica il programma dell'evento in formato PDF](/notizie/it/2023-11-20_21-corcira-e-l-epeiros/programma-corcira-e-l-epeiros.pdf)

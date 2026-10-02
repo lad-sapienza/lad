@@ -35,7 +35,7 @@ Sarà possibile seguire il workshop _online_ attraverso la piattaforma Zoom, all
 
 ---
 
-- [**Scarica la locandina del laboratorio in formato PDF**](./text-image_workshop_poster.pdf)
+- [**Scarica la locandina del laboratorio in formato PDF**](/notizie/it/2023-03-22-text-image-interfaces-in-ancient-cultures/text-image_workshop_poster.pdf)
 - Pagina web dedicata all'evento: [https://sites.google.com/view/ductulivesuviani/text-image-interface/text-image-workshop-2023](https://sites.google.com/view/ductulivesuviani/text-image-interface/text-image-workshop-2023)
 
 

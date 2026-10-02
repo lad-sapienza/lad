@@ -18,7 +18,7 @@ I laboratori si terranno **in presenza** presso Sapienza Università di Roma, **
 Responsabile: **Julian Bogdani** ([julian.bogdani@uniroma1.it](mailto:julian.bogdani@uniroma1.it))  
 Tutor: **Erasmo Di Fonso** ([erasmo.difonso@uniroma1.it](mailto:erasmo.difonso@uniroma1.it))
 
-[**Scarica la locandina con il programma completo in formato PDF**](../../didattica/laboratorio-gis-db/lab-gis-2024-2025.pdf)
+[**Scarica la locandina con il programma completo in formato PDF**](/didattica/lab-gis-2024-2025.pdf)
 
 ## Calendario
 

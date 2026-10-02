@@ -52,4 +52,4 @@ Le attività di laboratorio verranno svolte utilizzando il proprio dispositivo, 
 
 ---
 
-- [Scarica in PDF](./LAD-AI-24-25.pdf)
+- [Scarica in PDF](/didattica/it/lad-didattica-2024-2025-ia/LAD-AI-24-25.pdf)

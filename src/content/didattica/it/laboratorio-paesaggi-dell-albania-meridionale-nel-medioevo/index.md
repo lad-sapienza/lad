@@ -20,7 +20,7 @@ Per ulteriori informazioni circa giorni e orari degli incontri si prega di conta
 
 ---
 
-- [**Scarica la locandina del laboratorio in formato PDF**](./locandina-paesaggi-albania-meridionale.webp)
+- [**Scarica la locandina del laboratorio in formato PDF**](/didattica/it/laboratorio-paesaggi-dell-albania-meridionale-nel-medioevo/locandina-paesaggi-albania-meridionale.webp)
 
 
 

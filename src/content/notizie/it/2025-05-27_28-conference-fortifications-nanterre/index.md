@@ -72,4 +72,4 @@ La partecipazione si svolge nell’àmbito delle attività della [Missione Arche
 
 ---
 
-- [Scarica il programma provvisorio in formato PDF](./colloque_forteresses_27_28_may.pdf)
+- [Scarica il programma provvisorio in formato PDF](/notizie/it/2025-05-27_28-conference-fortifications-nanterre/colloque_forteresses_27_28_may.pdf)

@@ -26,4 +26,4 @@ Seguirà una discussione con i presenti coordinata da **Julian Bogdani** ed **En
 ---
 
 
-[Scarica la locandina in formato PDF](./locandina-quantin-apollonia.pdf)
+[Scarica la locandina in formato PDF](/notizie/it/2025-01-24-quantin-apollonia-d-illiria/locandina-quantin-apollonia.pdf)

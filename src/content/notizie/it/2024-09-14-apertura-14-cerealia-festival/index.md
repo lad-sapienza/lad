@@ -50,4 +50,4 @@ Ingresso gratuito — prenotazione obbligatoria
 [convegni@vivariumnovum.net](mailto:convegni@vivariumnovum.net)  
 [cerealialudi@cerealialudi.org](https://cerealialudi@cerealialudi.org)
 Tel.: [+393500119692](tel:00393500119692) (Whatsapp)  
-[Scarica il programma in formato PDF](./apertura-14-edizione-cerealia.pdf)
+[Scarica il programma in formato PDF](/notizie/it/2024-09-14-apertura-14-cerealia-festival/apertura-14-edizione-cerealia.pdf)

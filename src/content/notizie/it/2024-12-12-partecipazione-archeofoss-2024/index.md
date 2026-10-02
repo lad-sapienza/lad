@@ -165,4 +165,4 @@ Dipartimento di Scienze
 
 ---
 
-- [Scarica il programma in formato PDF](./ArcheoFOSS-2024-Programme.pdf)
+- [Scarica il programma in formato PDF](/notizie/it/2024-12-12-partecipazione-archeofoss-2024/ArcheoFOSS-2024-Programme.pdf)

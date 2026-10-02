@@ -36,4 +36,4 @@ Informazioni e iscrizioni: [julian.bogdani@uniroma1.it](mailto:julian.bogdani@un
 Gli incontri si terranno nell'Aula 2 del dipartimento SARAS (piano I, sezione Arte) della Sapienza Università di Roma (Facoltà di Lettere e Filosofia, CU003) e saranno trasmessi online tramite il link: [https://uniroma1.zoom.us/j/83808083152?pwd=Z0FWbGM5TmJqRGZXaVZBWUJ6d0xVUT09](https://uniroma1.zoom.us/j/83808083152?pwd=Z0FWbGM5TmJqRGZXaVZBWUJ6d0xVUT09).
 
 
-[Clicca qui per scaricare la locandina in formato PDF](./RDR-Lab-Dottorato-SAR-Programma.pdf).
+[Clicca qui per scaricare la locandina in formato PDF](/notizie/it/2022-02-10-laboratorio-di-risorse-digitali-per-la-ricerca/RDR-Lab-Dottorato-SAR-Programma.pdf).

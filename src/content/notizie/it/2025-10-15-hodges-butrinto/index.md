@@ -24,7 +24,7 @@ L'incontro si terrà **mercoledì 15 ottobre 2025**, alle ore **10.30** in **aul
 ---
 
 
-- [Scarica la locandina in formato PDF](./locandina-hodges-butrint-sapienza.pdf)
+- [Scarica la locandina in formato PDF](/notizie/it/2025-10-15-hodges-butrinto/locandina-hodges-butrint-sapienza.pdf)
 - [Aggiungi evento in Calendario](https://calendar.google.com/calendar/event?action=TEMPLATE&tmeid=MXF0ODU0anB2ZHQ1Y2lxZWQ4ZmQybmM4Nm0ganVsaWFuLmJvZ2RhbmlAdW5pcm9tYTEuaXQ&tmsrc=julian.bogdani%40uniroma1.it)
 
 

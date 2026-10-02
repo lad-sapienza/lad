@@ -17,7 +17,7 @@ Attraverso una serie di incontri saranno affrontate tematiche legate all'utilizz
 
 Gli incontri saranno tenuti **in presenza** alla Sapienza Università di Roma, DigiLab, edificio di Ex Vetrerie Sciarra, Sala conferenze (primo piano), 13.00-15.00 e **a distanza** via [Google Meet](https://meet.google.com/wmp-xffy-njv).
 
-[**Scarica la locandina del laboratorio in formato pdf**](./RDR_Lab2_2023.pdf)
+[**Scarica la locandina del laboratorio in formato pdf**](/notizie/it/2023-01-17-laboratorio-di-risorse-digitali-seconda-edizione/RDR_Lab2_2023.pdf)
 
 ### Calendario dell'RDR Lab 2023
 

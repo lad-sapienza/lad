@@ -43,4 +43,4 @@ L'evento fa parte delle attività della 14° edizione di Cerealia Festival.
 ---
 
 Ingresso gratuito
-[Scarica il programma in formato PDF](./2024-10-12-cerealia-tarquinia.pdf)
+[Scarica il programma in formato PDF](/notizie/it/2024-10-12-cerealia-tarquinia/2024-10-12-cerealia-tarquinia.pdf)

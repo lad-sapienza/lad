@@ -23,7 +23,7 @@ Mercoledì 26 novembre 2025, Julian Bogdani e Lorenzo Cardarelli parteciperanno 
 
 [![QR Code per collegarsi su Zoom](./qr-code-for-zoom.gif)  
 È possibile seguire i lavori del convegno online sulla piattaforma Zoom.us](https://cnrs.zoom.us/j/91322947271?pwd=1h6wbv4uWy3iLJseWHtnQIUdMjA0bY.1)
-[Scarica il programma del workshop in formato PDF](./2025-11-25_26-linking-pasts-and-sharing-knowledge-2.pdf)
+[Scarica il programma del workshop in formato PDF](/notizie/it/2025-11-04-linking-pasts-and-sharing-knowledge-2/2025-11-25_26-linking-pasts-and-sharing-knowledge-2.pdf)
 
 ---
 

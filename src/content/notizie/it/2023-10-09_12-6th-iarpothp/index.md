@@ -16,5 +16,5 @@ Dal **9 al 12 ottobre 2023** il direttore della [Missione Archeologica a Çuka e
 
 
 - [Scarica il programma del convegno dal sito ufficiale e in formato PDF](https://iarpothp.org/wp-content/uploads/2023/11/6th-IARPotHP_Final-programm.pdf)
-- [Scarica programma](./6th-IARPotHP_Final-programm.pdf)
+- [Scarica programma](/notizie/it/2023-10-09_12-6th-iarpothp/6th-IARPotHP_Final-programm.pdf)
 - [Pagina web ufficilae](https://iarpothp.org/conferences/)

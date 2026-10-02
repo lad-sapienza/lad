@@ -20,4 +20,4 @@ Passcode: 910786.
 
 ---
 - [Pagina ufficiale](https://www.antichita.uniroma1.it/landscape-archaeology-discussion-between-new-paradigms-methodology)
-- [Scarica la locandina in formato PDF](./Landscape-2022-10-17.pdf)
+- [Scarica la locandina in formato PDF](/notizie/it/2022-10-17-landscape-archaeology-a-discussion-between-new-paradigms-of-methodology/Landscape-2022-10-17.pdf)

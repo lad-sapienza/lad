@@ -5,12 +5,13 @@
   "type": "module",
   "scripts": {
     "dev": "astro dev",
+    "prebuild": "scms-optimize-images --check",
     "build": "astro check && astro build",
     "preview": "astro preview",
     "astro": "astro",
     "add-collection": "scms-add-collection",
     "add-content": "scms-add-content",
-    "images": "node scripts/optimize-images.mjs"
+    "images": "scms-optimize-images"
   },
   "keywords": [
     "astro",
@@ -24,7 +25,7 @@
   "dependencies": {
     "@astrojs/check": "^0.9.10",
     "@astrojs/markdown-remark": "^7.2.4",
-    "@lad-sapienza/scms-core": "^0.1.0-alpha.11",
+    "@lad-sapienza/scms-core": "^0.1.0-alpha.12",
     "astro": "^7.2.4",
     "bootstrap": "^5.3.8",
     "lucide-react": "^1.8.0",

@@ -24,4 +24,4 @@ A live stream will in any case be available at: [facebook.com/archeoSITARproject
 Guests attending in person are required to have a *green pass*.
 
 - [Download the programme](/notizie/it/2022-02-21-sitar-2007-2022/sitar-2007-2022-locandina.webp)  
-- Download the leaflet [[page 1](/notizie/it/2022-02-21-sitar-2007-2022/sitar-2007-2022-pieghevole-1.webp), [page 2](/notizie/it/2022-02-21-sitar-2007-2022/sitar-2007-2022-pieghevole-1.webp)]
+- Download the leaflet [[page 1](/notizie/it/2022-02-21-sitar-2007-2022/sitar-2007-2022-pieghevole-1.webp), [page 2](/notizie/it/2022-02-21-sitar-2007-2022/sitar-2007-2022-pieghevole-2.webp)]

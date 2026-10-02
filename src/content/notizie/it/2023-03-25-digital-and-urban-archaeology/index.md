@@ -35,7 +35,7 @@ La giornata si terrà presso l'Aula Gambi del complesso di San Giovanni in Monte
 
 ---
 
-- [**Scarica la locandina dell’evento in formato PDF**](./UrbanArchaeology2023.pdf)
+- [**Scarica la locandina dell’evento in formato PDF**](/notizie/it/2023-03-25-digital-and-urban-archaeology/UrbanArchaeology2023.pdf)
 
 
 

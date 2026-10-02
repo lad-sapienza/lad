@@ -18,4 +18,4 @@ Nelle prossime giornate 5-7 Dicembre si svolgerà presso il Museo Archeologico R
 
 ---
 
-- [Scarica il programma in formato PDF](./Corinth-and-Syracuse-programme.pdf)
+- [Scarica il programma in formato PDF](/notizie/it/2024-12-01-corinth-and-syracuse/Corinth-and-Syracuse-programme.pdf)

@@ -19,5 +19,5 @@ La conferenza si svolgerà presso l'Aula Gambi, Dipartimento di Storia Culture C
 Per maggiori informazioni si prega di contattare [federica.carbotti@studio.unibo.it](mailto:federica.carbotti@studio.unibo.it) o [anna.gamberini3@unibo.it](mailto:anna.gamberini3@unibo.it).
 
 
-- [Scarica il programma in formato PDF](./Programme_Workshop_Bologna_Epirus_Butrint.pdf)
+- [Scarica il programma in formato PDF](/notizie/it/2022-11-10_11-epirus-in-the-roman-world/Programme_Workshop_Bologna_Epirus_Butrint.pdf)
 - [Visita il sito ufficiale del convegno](https://site.unibo.it/butrint/en/international-workshop-epirus-in-the-roman-world-and-the-new-research-on-the-acropolis-of-butrint/programme)

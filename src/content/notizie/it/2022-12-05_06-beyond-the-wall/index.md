@@ -32,5 +32,5 @@ La conferenza si svolgerà presso Université de Lille Campus Pont de Bois Salle
 
 ---
 - [Sito web ufficiale](https://halma.univ-lille.fr/detail-event/workshop-beyond-the-wall)
-- [Scarica il programma in formato PDF](./Affiche_BtW-Lille_2022.pdf)
-- [Scarica la locandina in formato JPG](./beyond_the_wall.webp)
+- [Scarica il programma in formato PDF](/notizie/it/2022-12-05_06-beyond-the-wall/Affiche_BtW-Lille_2022.pdf)
+- [Scarica la locandina in formato JPG](/notizie/it/2022-12-05_06-beyond-the-wall/beyond_the_wall.webp)

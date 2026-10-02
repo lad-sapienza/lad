@@ -41,4 +41,4 @@ Segue dibattico con il pubblico.
 
 ---
 
-- [Scarica il programma in formato PDF](./programma-albania-archeologia-identit-conflitti-nei-balcani.pdf)
+- [Scarica il programma in formato PDF](/notizie/it/2024-12-04-albania-archeologia-identit-conflitti-nei-balcani/programma-albania-archeologia-identit-conflitti-nei-balcani.pdf)

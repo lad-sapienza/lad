@@ -23,5 +23,5 @@ Il convegno si svolgerà in presenza fino ad esaurimento posti. Non è prevista 
 
 Per gli ospiti in presenza è necessario il *green pass*.
 
-- [Scarica il programma](./sitar-2007-2022-locandina.webp)  
-- Scarica il pieghevole [[pagina 1](./sitar-2007-2022-pieghevole-1.webp), [pagina2](./sitar-2007-2022-pieghevole-1.webp)]
+- [Scarica il programma](/notizie/it/2022-02-21-sitar-2007-2022/sitar-2007-2022-locandina.webp)  
+- Scarica il pieghevole [[pagina 1](/notizie/it/2022-02-21-sitar-2007-2022/sitar-2007-2022-pieghevole-1.webp), [pagina2](/notizie/it/2022-02-21-sitar-2007-2022/sitar-2007-2022-pieghevole-2.webp)]
