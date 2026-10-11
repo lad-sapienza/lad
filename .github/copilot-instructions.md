@@ -49,7 +49,7 @@ Example: `import { DataTb } from '@core/components/DataTb'`
 | `BSNavbar` | `default BSNavbar` | No — pure React, use `client:load` |
 | `DataTb` | `DataTb`, `CsvSource`, `JsonSource`, `DirectusSource`, `ApiSource` | Yes — `.astro` wrapper available |
 | `Gallery` | `GalleryAstro`, `Gallery`, `GalleryMdx`, `processGalleryImages` | Yes — `.astro` wrapper available |
-| `Map` | `MapComponent` | No — pure React, use `client:idle` |
+| `Map` | `Map` | No — pure React, use `client:idle` |
 | `Map/Search` | `SearchUI`, `SearchUISimple`, `SearchUIAdvanced` | No — pure React |
 | `Record` | `RecordProvider`, `Field`, `Image`, `RecordFetcher`, `useRecordFetcher`, `getValueByDotPath` | No — pure React |
 | `SEO` | `default SEO` | Astro component |
