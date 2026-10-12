@@ -135,37 +135,6 @@ const ricercaCollection = defineCollection({
   }),
 });
 
-// Schema for sviluppo (development) posts
-const sviluppoCollection = defineCollection({
-  loader: glob({ 
-    pattern: '**/*.{md,mdx}', 
-    base: './src/content/sviluppo' 
-  }),
-  schema: z.object({
-    title: z.string(),
-    description: z.string(),
-    order: z.number().optional(),
-    date: z.preprocess(
-      (arg) => {
-        if (
-          typeof arg === 'string' ||
-          typeof arg === 'number' ||
-          arg instanceof Date
-        ) {
-          return new Date(arg);
-        }
-        return undefined;
-      },
-      z.date().optional()
-    ),
-    img: z.string().optional(),
-    draft: z.boolean().optional(),
-    inhome: z.boolean().optional(),
-    pinned: z.boolean().optional(),
-    tags: z.array(z.string()).optional(),
-  }),
-});
-
 // Schema for static data files (CSV, JSON, YAML)
 // const dataCollection = defineCollection({
 //   loader: glob({ 
@@ -185,6 +154,5 @@ export const collections = {
   didattica: didatticaCollection,
   notizie: notizieCollection,
   ricerca: ricercaCollection,
-  sviluppo: sviluppoCollection,
   // data: dataCollection,
 };

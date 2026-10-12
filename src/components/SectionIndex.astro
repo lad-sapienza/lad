@@ -14,7 +14,7 @@ export interface Props {
 
 const { title, description, collection, locale, heading = true } = Astro.props
 
-const allowedCollections = ["blog", "didattica", "notizie", "ricerca", "sviluppo"] as const;
+const allowedCollections = ["blog", "didattica", "notizie", "ricerca"] as const;
 type AllowedCollection = typeof allowedCollections[number];
 if (!allowedCollections.includes(collection as AllowedCollection)) {
   throw new Error(`Invalid collection: ${collection}`);

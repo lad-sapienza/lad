@@ -196,7 +196,7 @@ Quasi sempre è un link relativo (`./file.pdf`). Sostituiscilo con il percorso a
 **`npm run images` non converte un JPG.**
 Se è elencato tra i file "kept" è normale: in WebP pesava di più ed è già abbastanza compresso. Per forzarlo, cancella la sua voce da `.scms-optimize-images.json`, oppure abbassa `quality` in `user.config.mjs` e rilancia.
 
-**Avvisi innocui in build.** `The collection "sviluppo" does not exist or is empty`, `Both esbuild and oxc options were set` e i warning TypeScript di `Team.jsx` sono noti e non bloccano nulla.
+**Avvisi innocui in build.** `Both esbuild and oxc options were set` e i warning TypeScript di `Team.jsx` sono noti e non bloccano nulla.
 
 **Il repository sta diventando pesante.**
 Immagini di grandi dimensioni committate in passato restano nella storia git anche se oggi sono ottimizzate. Per questo conviene far passare **sempre** le immagini da `npm run images` *prima* del commit e non dopo.

@@ -17,7 +17,6 @@ const allowedCollections = [
   "didattica",
   "notizie",
   "ricerca",
-  "sviluppo",
 ] as const
 type AllowedCollection = (typeof allowedCollections)[number]
 if (!allowedCollections.includes(collection as AllowedCollection)) {
@@ -40,7 +39,6 @@ const SECTION_LABELS: Record<AllowedCollection, { it: string; en: string }> = {
   didattica: { it: "Didattica", en: "Teaching" },
   notizie: { it: "Notizie", en: "News" },
   ricerca: { it: "Ricerca", en: "Research" },
-  sviluppo: { it: "Sviluppo", en: "Development" },
 }
 const STRINGS = {
   it: { back: "← Torna indietro alla pagina principale", tag: "Tag", publishedOn: "Pubblicato il" },

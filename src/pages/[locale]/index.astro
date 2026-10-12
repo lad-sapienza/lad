@@ -19,7 +19,6 @@ const blogArticles = inHomeForLocale(await getCollection("blog"))
 const didatticarticles = inHomeForLocale(await getCollection("didattica"))
 const notizieArticles = inHomeForLocale(await getCollection("notizie"))
 const ricercaArticles = inHomeForLocale(await getCollection("ricerca"))
-const sviluppoArticles = inHomeForLocale(await getCollection("sviluppo"))
 
 // Combine all home articles
 const homeArticles = [
@@ -27,7 +26,6 @@ const homeArticles = [
   ...didatticarticles,
   ...ricercaArticles,
   ...notizieArticles,
-  ...sviluppoArticles,
 ].sort((a, b) => {
   // First, prioritize pinned articles
   if (a.data.pinned && !b.data.pinned) return -1
@@ -51,7 +49,6 @@ const SECTION_LABELS: Record<string, { it: string; en: string }> = {
   didattica: { it: "didattica", en: "teaching" },
   notizie: { it: "notizie", en: "news" },
   ricerca: { it: "ricerca", en: "research" },
-  sviluppo: { it: "sviluppo", en: "development" },
 }
 
 const COPY = {
