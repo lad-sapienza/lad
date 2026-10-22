@@ -6,7 +6,7 @@ livello: base
 tags: [GIS, QGIS, Artificial Intelligence, Digitization, Photogrammetry, Raster, Coding, FLOSS]
 img: ai-tracer-cover.webp
 date: 2026-04-27
-description: "AITracer, the QGIS 4 plugin developed by LAD that uses SAM2 to digitize raster features with a single click, is now a stable release in the official QGIS plugin repository, field-tested at the 2026 Çuka and Ajtoit excavation. With selectable models, last-polygon editing and pixel-based simplification."
+description: "AITracer, the QGIS 4 plugin developed by LAD that uses SAM2 to digitize raster features with a single click, is now a stable release in the official QGIS plugin repository, field-tested at the 2026 Çuka e Ajtoit excavation. With selectable models, last-polygon editing and pixel-based simplification."
 inhome: true
 ---
 
@@ -17,7 +17,7 @@ inhome: true
 A lot has happened since the first presentation:
 
 - **No longer an experimental plugin.** Since version 0.2.0 the *experimental* flag has been removed and the plugin is a stable release. It is **available in the official QGIS plugin repository**: just search for it in *Plugins → Manage and Install Plugins*, with no need to enable experimental plugins any more. Community interest has grown too: at the time of writing the plugin has passed **1,500 downloads** from the official repository, against 6 at the time of the first presentation.
-- **Field-tested.** AITracer was used extensively during the **2026 excavation season of the [Sapienza Archaeological Mission at Çuka and Ajtoit](/en/ricerca/missione-archeologica-sapienza-a-cuka-e-ajtoit-albania/)** and, back at the lab, for documentation work. Daily use on real data and under tight schedules directly shaped the changes listed below. The time saved cannot be quantified in absolute terms, but the effect was clear: AITracer **changed the scale of the documentation we collected**, making it practical to digitize in detail what would previously have been recorded far more summarily.
+- **Field-tested.** AITracer was used extensively during the **2026 excavation season of the [Sapienza Archaeological Mission at Çuka e Ajtoit](/en/ricerca/missione-archeologica-sapienza-a-cuka-e-ajtoit-albania/)** and, back at the lab, for documentation work. Daily use on real data and under tight schedules directly shaped the changes listed below. The time saved cannot be quantified in absolute terms, but the effect was clear: AITracer **changed the scale of the documentation we collected**, making it practical to digitize in detail what would previously have been recorded far more summarily.
 - **Choice of model.** From the panel you can pick SAM2.1 **Tiny** (default, fastest), **Base+** (cleaner boundaries at little extra cost) or **Large** (most accurate, for hard cases). Larger models are downloaded, after confirmation, only the first time you select them; downloads are streamed to disk with real progress and a *Cancel* button. Your choice is remembered between sessions.
 - **Simplification in screen pixels.** The Douglas-Peucker slider now works in pixels (0 to 6, default 2.8), with finer steps and a live vertex count. Its effect is the same at any zoom level and in any coordinate reference system, and the value is remembered.
 - **Edit the last polygon.** One click on **✎ Edit last polygon** (or the **E** key) selects the polygon you just accepted and switches to QGIS’s Vertex tool so you can fix it.
@@ -209,7 +209,7 @@ This choice has three practical consequences that are important to know before y
 
 This plugin was also born as a methodological experiment. The entire design and development process — from the system architecture to individual Python functions, from backend management to the panel UI — was carried out in close collaboration with **[Claude](https://claude.ai)** by Anthropic, an assistant based on large language models.
 
-The result is code that works and has been field-tested at the Çuka and Ajtoit excavation and in the lab work that followed, but above all a concrete reflection on how generative AI can support — not replace — the researcher in producing digital tools for humanities research. Design control, interpretive choices and verification of results always remained with the human researcher.
+The result is code that works and has been field-tested at the Çuka e Ajtoit excavation and in the lab work that followed, but above all a concrete reflection on how generative AI can support — not replace — the researcher in producing digital tools for humanities research. Design control, interpretive choices and verification of results always remained with the human researcher.
 
 ---
 
