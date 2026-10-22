@@ -6,13 +6,47 @@ livello: base
 tags: [GIS, QGIS, Artificial Intelligence, Digitization, Photogrammetry, Raster, Coding, FLOSS]
 img: ai-tracer-cover.webp
 date: 2026-04-27
-description: "We present AITracer, a QGIS 4 plugin developed by LAD that uses SAM2 (Segment Anything Model 2) to automatically digitize features from raster layers: just click on the object you want to vectorize."
+description: "AITracer, the QGIS 4 plugin developed by LAD that uses SAM2 to digitize raster features with a single click, is now a stable release in the official QGIS plugin repository, field-tested at the 2026 Çuka and Ajtoit excavation. With selectable models, last-polygon editing and pixel-based simplification."
 inhome: true
 ---
 
+## What’s new: AITracer is no longer experimental
+
+> **Update, October 2026 — version 0.3.0.** This article, first published in April 2026 to introduce the plugin, has been updated to follow its development. The news comes first; the rest of the text describes the plugin as it is today.
+
+A lot has happened since the first presentation:
+
+- **No longer an experimental plugin.** Since version 0.2.0 the *experimental* flag has been removed and the plugin is a stable release. It is **available in the official QGIS plugin repository**: just search for it in *Plugins → Manage and Install Plugins*, with no need to enable experimental plugins any more. Community interest has grown too: at the time of writing the plugin has passed **1,500 downloads** from the official repository, against 6 at the time of the first presentation.
+- **Field-tested.** AITracer was used extensively during the **2026 excavation season of the [Sapienza Archaeological Mission at Çuka and Ajtoit](/en/ricerca/missione-archeologica-sapienza-a-cuka-e-ajtoit-albania/)** and, back at the lab, for documentation work. Daily use on real data and under tight schedules directly shaped the changes listed below. The time saved cannot be quantified in absolute terms, but the effect was clear: AITracer **changed the scale of the documentation we collected**, making it practical to digitize in detail what would previously have been recorded far more summarily.
+- **Choice of model.** From the panel you can pick SAM2.1 **Tiny** (default, fastest), **Base+** (cleaner boundaries at little extra cost) or **Large** (most accurate, for hard cases). Larger models are downloaded, after confirmation, only the first time you select them; downloads are streamed to disk with real progress and a *Cancel* button. Your choice is remembered between sessions.
+- **Simplification in screen pixels.** The Douglas-Peucker slider now works in pixels (0 to 6, default 2.8), with finer steps and a live vertex count. Its effect is the same at any zoom level and in any coordinate reference system, and the value is remembered.
+- **Edit the last polygon.** One click on **✎ Edit last polygon** (or the **E** key) selects the polygon you just accepted and switches to QGIS’s Vertex tool so you can fix it.
+- **Pause and resume.** If you pick another QGIS tool (Vertex, Identify, Pan…), AITracer pauses instead of getting out of sync; **▶ Resume** picks up with the same model, output layer and field values.
+- **Preset field values.** When you choose an existing output layer, a panel lets you preset attributes (using the editor widgets configured in the layer) that are applied to every accepted polygon — handy for digitizing series of features that share attributes, such as the same stratigraphic unit or material.
+- **More stable masks.** Refinement reuses the previous mask as its starting point, so successive clicks change the result far less.
+- **Model weights stay safe.** Model files are kept in `~/.aitracer/weights/` and survive plugin reinstalls.
+- **Compatibility and code quality.** Qt6 and Windows installation issues fixed, and the plugin passes the official QGIS repository quality checks.
+
+![09-selettore-modello.webp](/blog/it/aitracer-digitalizzazione-raster-con-ia/09-selettore-modello.webp)
+*The updated panel: the **Model** menu with Tiny, Base+ and Large, the pixel-based simplification slider and the field values panel.*
+
+![10-modifica-vertici-riprendi.webp](/blog/it/aitracer-digitalizzazione-raster-con-ia/10-modifica-vertici-riprendi.webp)
+*After pressing **E** the polygon you just accepted is selected (in yellow) and QGIS’s Vertex tool is active; AITracer is paused and **▶ Resume** takes you back to tracing.*
+
+![11-valori-campi-predefiniti.webp](/blog/it/aitracer-digitalizzazione-raster-con-ia/11-valori-campi-predefiniti.webp)
+*The **Field values** panel with the widgets configured in the layer (here a value list for the “material” field): the chosen value is applied to every accepted polygon.*
+
+The full per-version list of changes is in the plugin’s changelog and on the [GitHub releases](https://github.com/lad-sapienza/ai-tracer/releases) page.
+
+---
+
+## The original presentation
+
+The rest of the article is the original presentation text, updated where needed.
+
 We are pleased to present **AITracer by LAD**, a plugin for **QGIS 4** that brings artificial intelligence directly into the raster digitization workflow in archaeology. Developed by the Digital Archaeology Laboratory (LAD) at Sapienza, AITracer lets you vectorize any feature visible on a georeferenced raster layer — aerial photographs, drone orthophotos, scanned plans, photogrammetric surveys — with a simple mouse click.
 
-The plugin is released under the **GNU GPL 3 license** and is available on GitHub:  
+The plugin is released under the **GNU GPL 3 license** and is available in the official QGIS plugin repository and on GitHub:  
 🔗 [https://github.com/lad-sapienza/ai-tracer](https://github.com/lad-sapienza/ai-tracer)
 
 ---
@@ -70,10 +104,13 @@ Each additional click refines the segmentation without recomputing the entire im
 
 ## Real-time geometric simplification
 
-The masks produced by SAM2 can contain a very high number of vertices. AITracer includes a **Douglas-Peucker simplification** slider that lets you control the vertex density of the final polygon before accepting it, with steps of 0.01 map units and a range from 0 (no simplification) to 0.50.
+The masks produced by SAM2 can contain a very high number of vertices. AITracer includes a **Douglas-Peucker simplification** slider that lets you control the vertex density of the final polygon before accepting it, expressed in screen pixels, with a range from 0 (no simplification) to 6 px and a default of 2.8 px. The vertex count updates in real time, and because the unit is pixels the effect is the same at any zoom level and in any coordinate reference system.
 
-![04-slider-semplificazione.webp](/blog/it/aitracer-digitalizzazione-raster-con-ia/04-slider-semplificazione.webp)
-*Comparison between the polygon with simplification at 0 (left, many vertices) and with simplification at 0.15 (right, simplified outline but faithful to the original shape).*
+![13-semplificazione-0px.webp](/blog/it/aitracer-digitalizzazione-raster-con-ia/13-semplificazione-0px.webp)
+*Simplification at 0 px: 716 vertices, a close but jagged outline.*
+
+![12-semplificazione-6px.webp](/blog/it/aitracer-digitalizzazione-raster-con-ia/12-semplificazione-6px.webp)
+*Simplification at 6 px: 25 vertices, a cleaner outline that still follows the shape. The vertex count next to the slider updates in real time.*
 
 ---
 
@@ -130,8 +167,7 @@ AITracer is available on the **official QGIS plugin repository**: [plugins.qgis.
 ### Method 1 (recommended): directly from QGIS
 
 1. In QGIS, open **Plugins → Manage and Install Plugins**.
-2. Under **Settings**, check the **Show also experimental plugins** option (AITracer is currently classified as experimental).
-3. On the **All** tab, search for *AITracer* and click **Install Plugin**.
+2. On the **All** tab, search for *AITracer* and click **Install Plugin**. (Since version 0.2.0 the plugin is no longer experimental, so there is no need to enable experimental plugins in Settings.)
 
 With this method, QGIS will automatically notify you when new versions are available.
 
@@ -149,7 +185,7 @@ QGIS 4.0 is required. The necessary Python runtime is automatically downloaded a
 *The AITracer page on the official QGIS plugin repository.*
 
 ![08-gestore-plugin-qgis.webp](/blog/it/aitracer-digitalizzazione-raster-con-ia/08-gestore-plugin-qgis.webp)
-*The QGIS plugin manager with AITracer found in the official repository, ready for installation.*
+*The QGIS plugin manager with AITracer installed: the entry shows over 1,500 downloads from the official repository.*
 
 ---
 
@@ -173,15 +209,17 @@ This choice has three practical consequences that are important to know before y
 
 This plugin was also born as a methodological experiment. The entire design and development process — from the system architecture to individual Python functions, from backend management to the panel UI — was carried out in close collaboration with **[Claude](https://claude.ai)** by Anthropic, an assistant based on large language models.
 
-The result is code that works and has been field-tested, but above all a concrete reflection on how generative AI can support — not replace — the researcher in producing digital tools for humanities research. Design control, interpretive choices and verification of results always remained with the human researcher.
+The result is code that works and has been field-tested at the Çuka and Ajtoit excavation and in the lab work that followed, but above all a concrete reflection on how generative AI can support — not replace — the researcher in producing digital tools for humanities research. Design control, interpretive choices and verification of results always remained with the human researcher.
 
 ---
 
 ## Try it and contribute
 
-AITracer is under active development. Every field test, every issue report and every suggestion is valuable for improving it.
+AITracer is under active development. Every field test, every issue report and every suggestion is valuable for improving it. We welcome **suggestions, bug reports, development ideas and case studies**, and you can send them however you prefer: by opening an issue on the GitHub repository, by email, or by contacting Julian Bogdani on Bluesky or X.
 
 - 📦 **Source code and releases**: [github.com/lad-sapienza/ai-tracer](https://github.com/lad-sapienza/ai-tracer)
 - 🐛 **Report an issue**: [github.com/lad-sapienza/ai-tracer/issues](https://github.com/lad-sapienza/ai-tracer/issues)
 - 📖 **Learn more**: [lad.saras.uniroma1.it/blog/ai-tracer](https://lad.saras.uniroma1.it/blog/ai-tracer)
 - ✉️ **Contact**: [julian.bogdani@uniroma1.it](mailto:julian.bogdani@uniroma1.it)
+- 🦋 **Bluesky**: [@jbogdani.bsky.social](https://bsky.app/profile/jbogdani.bsky.social)
+- 𝕏 **X**: [@JulianBogdani](https://x.com/JulianBogdani)
