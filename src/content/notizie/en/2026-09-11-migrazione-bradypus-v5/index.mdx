@@ -1,6 +1,6 @@
 ---
-title: "The migration of BraDypUS applications from version 4 to version 5 begins"
-description: "The migration of BraDypUS applications hosted by LAD from version 4 (bdus.cloud/db) to version 5 (bdus.lad-sapienza.it) is underway. The old instances remain available read-only until their move to cold storage, planned for spring"
+title: "Migration of BraDypUS applications from version 4 to version 5: completed"
+description: "The migration of BraDypUS applications hosted by LAD from version 4 (bdus.cloud/db) to version 5 (bdus.lad-sapienza.it) is complete. For security reasons the old server was shut down early; all data has been saved"
 date: "2026-09-11"
 img: v4-v5-migration.webp
 draft: false
@@ -14,15 +14,21 @@ tags:
   - digital-archaeology
 ---
 
-The migration of BraDypUS applications hosted on the LAD infrastructure is underway: from version 4, so far available at [bdus.cloud/db](https://bdus.cloud/db), to the new version 5, reachable at [bdus.lad-sapienza.it](https://bdus.lad-sapienza.it/). Anyone wanting to know more about what's new in version 5 — a new interface, an open REST API, specialist plugins for archaeology — can read the [presentation article on the LAD blog](https://lad-sapienza.it/it/blog/bradypus-v5/).
+## Update of 23 October 2026
 
-## What changes right away
+**The migration is complete: all BraDypUS applications hosted by LAD are now available in version 5**, at [bdus.lad-sapienza.it](https://bdus.lad-sapienza.it/).
 
-Every migrated application remains reachable at its old address, but **read-only**: a necessary choice to avoid the two copies of the same data diverging during the transition period. The data has been migrated with care, but anyone noticing anomalies or malfunctions is kindly asked to report them to Julian Bogdani (julian.bogdani@uniroma1.it).
+Because of a security threat affecting the software of the old server, the version 4 server was **shut down earlier** than originally planned. **No data has been lost**: all installations, which are all based on SQLite and therefore fully contained in single archives, have been saved and preserved. They remain recoverable if needed.
 
-## Applications already migrated
+The old version 4 addresses (bdus.cloud/db) are therefore no longer reachable. Anyone holding links or references to those addresses is invited to update them, using the version 5 applications listed below. Anyone noticing anomalies or malfunctions, or needing to recover material from the old installations, can write to Julian Bogdani (julian.bogdani@uniroma1.it).
 
-The applications moved to version 5 so far are (list updated as of 11 September 2026):
+## The original announcement (11 September 2026)
+
+The migration of BraDypUS applications hosted on the LAD infrastructure was getting under way: from version 4, so far available at [bdus.cloud/db](https://bdus.cloud/db), to the new version 5, reachable at [bdus.lad-sapienza.it](https://bdus.lad-sapienza.it/). Anyone wanting to know more about what's new in version 5 — a new interface, an open REST API, specialist plugins for archaeology — can read the [presentation article on the LAD blog](https://lad-sapienza.it/it/blog/bradypus-v5/).
+
+## Migrated applications
+
+The applications moved to version 5 are:
 
 - `arche`
 - `avp`
@@ -52,9 +58,11 @@ The applications moved to version 5 so far are (list updated as of 11 September 
 - `suasa`
 - `trento`
 - `uddiyana`
+- `ghazni`
+- `paths`
 
 ## Migration timeline
 
-The plan is to complete the migration of all applications **by the end of 2026**. Afterwards, following a transition period of a few months (**April 2027**), the version 4 instances will be taken offline and stored in cold storage, remaining recoverable if needed.
+The original plan was to complete the migration by the end of 2026 and to take the version 4 instances offline into cold storage in April 2027. The migration has been completed, and the shutdown of the version 4 server, for the security reasons described above, has been brought forward.
 
 This effort is part of LAD's long-term strategy for maintaining the research data deposited on its infrastructure.
