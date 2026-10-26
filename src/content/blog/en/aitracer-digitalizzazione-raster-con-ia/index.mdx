@@ -6,18 +6,19 @@ livello: base
 tags: [GIS, QGIS, Artificial Intelligence, Digitization, Photogrammetry, Raster, Coding, FLOSS]
 img: ai-tracer-cover.webp
 date: 2026-04-27
-description: "AITracer, the QGIS 4 plugin developed by LAD that uses SAM2 to digitize raster features with a single click, is now a stable release in the official QGIS plugin repository, field-tested at the 2026 Çuka e Ajtoit excavation. With selectable models, last-polygon editing and pixel-based simplification."
+description: "AITracer, the QGIS 4 plugin developed by LAD that uses SAM2 to digitize raster features with a single click, is now a stable release in the official QGIS plugin repository, field-tested at the 2026 Çuka e Ajtoit excavation. With selectable models, topological snapping to neighbouring polygons, last-polygon editing and pixel-based simplification."
 inhome: true
 ---
 
 ## What’s new: AITracer is no longer experimental
 
-> **Update, October 2026 — version 0.3.0.** This article, first published in April 2026 to introduce the plugin, has been updated to follow its development. The news comes first; the rest of the text describes the plugin as it is today.
+> **Update, October 2026 — version 0.4.0.** This article, first published in April 2026 to introduce the plugin, has been updated to follow its development. The news comes first; the rest of the text describes the plugin as it is today.
 
 A lot has happened since the first presentation:
 
 - **No longer an experimental plugin.** Since version 0.2.0 the *experimental* flag has been removed and the plugin is a stable release. It is **available in the official QGIS plugin repository**: just search for it in *Plugins → Manage and Install Plugins*, with no need to enable experimental plugins any more. Community interest has grown too: at the time of writing the plugin has passed **1,500 downloads** from the official repository, against 6 at the time of the first presentation.
 - **Field-tested.** AITracer was used extensively during the **2026 excavation season of the [Sapienza Archaeological Mission at Çuka e Ajtoit](/en/ricerca/missione-archeologica-sapienza-a-cuka-e-ajtoit-albania/)** and, back at the lab, for documentation work. Daily use on real data and under tight schedules directly shaped the changes listed below. The time saved cannot be quantified in absolute terms, but the effect was clear: AITracer **changed the scale of the documentation we collected**, making it practical to digitize in detail what would previously have been recorded far more summarily.
+- **Topological snapping to neighbouring polygons (new in 0.4.0).** Tick **Snap to neighbours** and the new polygon shares its boundary with the polygons already in the output layer: overlaps are cut, small gaps are closed, and the outline follows one coherent perimeter even across several neighbours, like QGIS’s tracing tool. Matching vertices are added to the neighbours too, without changing their shape, so the layer stays topologically valid. It is meant for digitizing adjacent features, such as the stones of a wall, and opens the way to analyses that need correct topology. A single undo (QGIS’s Ctrl+Z) reverts everything. More details [below](#topological-snapping-to-neighbouring-polygons).
 - **Choice of model.** From the panel you can pick SAM2.1 **Tiny** (default, fastest), **Base+** (cleaner boundaries at little extra cost) or **Large** (most accurate, for hard cases). Larger models are downloaded, after confirmation, only the first time you select them; downloads are streamed to disk with real progress and a *Cancel* button. Your choice is remembered between sessions.
 - **Simplification in screen pixels.** The Douglas-Peucker slider now works in pixels (0 to 6, default 2.8), with finer steps and a live vertex count. Its effect is the same at any zoom level and in any coordinate reference system, and the value is remembered.
 - **Edit the last polygon.** One click on **✎ Edit last polygon** (or the **E** key) selects the polygon you just accepted and switches to QGIS’s Vertex tool so you can fix it.
@@ -114,6 +115,39 @@ The masks produced by SAM2 can contain a very high number of vertices. AITracer 
 
 ---
 
+## Topological snapping to neighbouring polygons
+
+When you digitize features that touch each other — the stones of a wall, the units of a paving, the fragments of a floor — the outlines of adjacent polygons should coincide. Traced one at a time, they leave gaps and overlaps instead. With the **Snap to neighbours** option in the panel, AITracer attaches the new polygon to those already in the output layer:
+
+1. parts of the new polygon covering an existing polygon are cut away;
+2. the outlines of all nearby polygons are treated as one network, and every edge of the new polygon that runs along it is replaced by the path on the network, crossing from one neighbour to the next where their outlines meet; where neighbours do not touch, the outline joins the two nearest points directly;
+3. vertices that now lie on a neighbour’s boundary are added to that neighbour, so the two outlines have coincident vertices. The neighbours’ shapes do not change.
+
+The snap distance is set next to the checkbox, in screen pixels (default 8 px), so it behaves the same at any zoom level. The preview already shows the snapped outline, and a single undo in QGIS reverts the new polygon together with the vertices added to its neighbours. The setting is remembered between sessions.
+
+![14-aggancio-dettaglio-senza.webp](/blog/it/aitracer-digitalizzazione-raster-con-ia/14-aggancio-dettaglio-senza.webp)
+*Without snapping: the outline of the new polygon (in red) enters the neighbouring polygon on the left and leaves a small step along the contact.*
+
+![15-aggancio-dettaglio-con.webp](/blog/it/aitracer-digitalizzazione-raster-con-ia/15-aggancio-dettaglio-con.webp)
+*Same click, with **Snap to neighbours** on: the outline follows the neighbour’s boundary exactly along the whole contact. Where there are no neighbours, the polygon stays as SAM2 proposed it.*
+
+You can judge the result in the preview, before accepting: tick or untick the checkbox to compare the two versions of the same polygon and keep the better one.
+
+![16-aggancio-pannello-senza.webp](/blog/it/aitracer-digitalizzazione-raster-con-ia/16-aggancio-pannello-senza.webp)
+*The panel with the option off: the preview is SAM2’s raw outline.*
+
+![17-aggancio-pannello-con.webp](/blog/it/aitracer-digitalizzazione-raster-con-ia/17-aggancio-pannello-con.webp)
+*With **Snap to neighbours** on (here with a 30 px distance) the same polygon attaches to its neighbours before you even press **Accept**.*
+
+Some practical notes:
+
+- Snapping works only if the output layer uses the same coordinate reference system as the map.
+- A lone vertex near another polygon is not snapped: the minimum contact is one segment.
+- Polygons covered for more than half by the new one, or lying entirely inside it, are left alone: that usually means a different object is being traced.
+- Snapped polygons can end up with more vertices, because they inherit those of the outlines they follow. The simplification slider and QGIS’s own tools help reduce them if needed.
+
+---
+
 ## Undo the last point
 
 If a click was placed in the wrong spot, there is no need to cancel the entire session. Ctrl+Z removes the last point entered — positive or negative — and immediately recalculates the segmentation with the remaining points. You can go back as far as you like, all the way to clearing every prompt.
@@ -154,7 +188,7 @@ The plugin manages its own computational infrastructure autonomously. On first l
 
 1. creates a Python virtual environment in `~/.aitracer/venv`;
 2. installs the necessary dependencies (FastAPI, PyTorch, SAM2, OpenCV);
-3. downloads the SAM2-tiny model weights (~40 MB).
+3. downloads the SAM2-tiny model weights (~156 MB).
 
 A progress dialog keeps the user informed at every stage. Subsequent activations take only a few seconds.
 

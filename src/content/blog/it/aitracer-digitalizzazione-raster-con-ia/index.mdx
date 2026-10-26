@@ -6,18 +6,19 @@ livello: base
 tags: [GIS, QGIS, Intelligenza Artificiale, Digitalizzazione, Fotogrammetria, Raster, Coding, FLOSS]
 img: ai-tracer-cover.webp
 date: 2026-04-27
-description: "AITracer, il plugin per QGIS 4 sviluppato dal LAD che usa SAM2 per digitalizzare feature da layer raster con un clic, è ora una versione stabile, nel repository ufficiale dei plugin di QGIS e collaudato sul campo a Çuka e Ajtoit 2026. Con modelli selezionabili, modifica dell'ultimo poligono e semplificazione in pixel."
+description: "AITracer, il plugin per QGIS 4 sviluppato dal LAD che usa SAM2 per digitalizzare feature da layer raster con un clic, è ora una versione stabile, nel repository ufficiale dei plugin di QGIS e collaudato sul campo a Çuka e Ajtoit 2026. Con modelli selezionabili, aggancio topologico ai poligoni vicini, modifica dell'ultimo poligono e semplificazione in pixel."
 inhome: true
 ---
 
 ## Novità: AITracer non è più sperimentale
 
-> **Aggiornamento di ottobre 2026 — versione 0.3.0.** Questo articolo, pubblicato in aprile 2026 per presentare il plugin, è stato aggiornato per raccontarne l'evoluzione. In cima trovate le novità; il resto del testo descrive il funzionamento del plugin nella sua versione attuale.
+> **Aggiornamento di ottobre 2026 — versione 0.4.0.** Questo articolo, pubblicato in aprile 2026 per presentare il plugin, è stato aggiornato per raccontarne l'evoluzione. In cima trovate le novità; il resto del testo descrive il funzionamento del plugin nella sua versione attuale.
 
 Dalla prima presentazione, AITracer ha fatto molta strada:
 
 - **Non è più un plugin sperimentale.** Dalla versione 0.2.0 il flag *sperimentale* è stato rimosso e il plugin è una versione stabile. È **disponibile nel repository ufficiale dei plugin di QGIS**: basta cercarlo in *Plugin → Gestisci e installa plugin*, senza dover più abilitare i plugin sperimentali. Anche l'interesse della comunità è cresciuto: al momento in cui scriviamo il plugin ha superato i **1.500 download** dal repository ufficiale, contro i 6 della prima presentazione.
 - **Collaudato sul campo.** AITracer è stato usato intensamente durante la **campagna di scavo 2026 della [Missione Archeologica della Sapienza a Çuka e Ajtoit](/it/ricerca/missione-archeologica-sapienza-a-cuka-e-ajtoit-albania/)** e, al rientro, in laboratorio per la documentazione. L'uso quotidiano, su dati reali e con tempi stretti, ha orientato direttamente le modifiche elencate qui sotto. Il tempo risparmiato non è quantificabile in termini assoluti, ma l'effetto è stato netto: AITracer ci ha fatto **cambiare la scala della documentazione raccolta**, rendendo praticabile digitalizzare in dettaglio ciò che prima si sarebbe documentato in modo molto più sommario.
+- **Aggancio topologico ai poligoni vicini (novità della 0.4.0).** Spuntando **Snap to neighbours** (aggancio ai vicini), il nuovo poligono condivide il proprio contorno con i poligoni già presenti nel layer di destinazione: le sovrapposizioni vengono tagliate, le piccole fessure chiuse e il contorno segue un unico perimetro coerente anche attraverso più vicini, come nello strumento di tracciamento (*trace*) di QGIS. I vertici corrispondenti vengono aggiunti anche ai vicini, senza cambiarne la forma, così il layer resta topologicamente valido. È pensato per digitalizzare elementi adiacenti, per esempio le pietre di un muro, e apre la strada ad analisi che richiedono una topologia corretta. Un solo annulla (Ctrl+Z di QGIS) riporta tutto allo stato precedente. Maggiori dettagli [più sotto](#aggancio-topologico-ai-poligoni-vicini).
 - **Scelta del modello.** Dal pannello si può scegliere fra SAM2.1 **Tiny** (predefinito, il più veloce), **Base+** (contorni più puliti con poco costo in più) e **Large** (il più accurato, per i casi difficili). I modelli più grandi vengono scaricati, dopo conferma, solo alla prima selezione; il download avviene in streaming su disco, con avanzamento reale e pulsante *Annulla*. La scelta è memorizzata fra una sessione e l'altra.
 - **Semplificazione in pixel dello schermo.** Il cursore Douglas-Peucker ora lavora in pixel (da 0 a 6, predefinito 2,8), con passi più fini e il conteggio dei vertici in tempo reale. Il suo effetto è lo stesso a qualsiasi zoom e in qualsiasi sistema di riferimento, e il valore viene ricordato.
 - **Modifica dell'ultimo poligono.** Un clic sul pulsante **✎ Modifica ultimo poligono** (o il tasto **E**) seleziona il poligono appena accettato e passa allo strumento Vertici di QGIS per correggerlo.
@@ -114,6 +115,39 @@ Le maschere prodotte da SAM2 possono contenere un numero molto elevato di vertic
 
 ---
 
+## Aggancio topologico ai poligoni vicini
+
+Quando si digitalizzano elementi che si toccano — le pietre di un muro, le unità di un lastricato, i frammenti di un pavimento — i contorni di poligoni adiacenti dovrebbero coincidere. Tracciati uno alla volta, invece, lasciano fessure e sovrapposizioni. Con l'opzione **Snap to neighbours** nel pannello, AITracer attacca il nuovo poligono a quelli già presenti nel layer di destinazione:
+
+1. le parti del nuovo poligono che coprono un poligono esistente vengono tagliate;
+2. i contorni di tutti i poligoni vicini vengono trattati come un'unica rete, e ogni lato del nuovo poligono che corre lungo di essa viene sostituito dal percorso sulla rete, passando da un vicino al successivo dove i loro contorni si incontrano; dove i vicini non si toccano, il contorno unisce direttamente i due punti più vicini;
+3. i vertici che ora giacciono sul bordo di un vicino vengono aggiunti a quel vicino, così i due contorni hanno vertici coincidenti. La forma dei vicini non cambia.
+
+La distanza di aggancio si imposta accanto alla casella, in pixel dello schermo (predefinito 8 px), per cui si comporta allo stesso modo a qualsiasi zoom. L'anteprima mostra già il contorno agganciato e un singolo annulla in QGIS riporta indietro il nuovo poligono insieme ai vertici aggiunti ai vicini. L'impostazione viene ricordata fra una sessione e l'altra.
+
+![14-aggancio-dettaglio-senza.webp](14-aggancio-dettaglio-senza.webp)
+*Senza aggancio: il contorno del nuovo poligono (in rosso) entra nel poligono vicino a sinistra e lascia un piccolo gradino lungo il contatto.*
+
+![15-aggancio-dettaglio-con.webp](15-aggancio-dettaglio-con.webp)
+*Stesso clic, con **Snap to neighbours** attivo: il contorno segue esattamente il bordo del vicino lungo tutto il contatto. Dove non ci sono vicini, il poligono resta quello proposto da SAM2.*
+
+Il risultato si vede nell'anteprima, prima di accettare: basta spuntare o togliere la casella per confrontare le due versioni sullo stesso poligono e scegliere quella migliore.
+
+![16-aggancio-pannello-senza.webp](16-aggancio-pannello-senza.webp)
+*Il pannello con l'opzione disattivata: l'anteprima è il contorno grezzo di SAM2.*
+
+![17-aggancio-pannello-con.webp](17-aggancio-pannello-con.webp)
+*Con **Snap to neighbours** attivo (qui con distanza di 30 px) lo stesso poligono si attacca ai vicini, ancora prima di premere **Accept**.*
+
+Alcune note pratiche:
+
+- L'aggancio funziona solo se il layer di destinazione ha lo stesso sistema di riferimento della mappa.
+- Un vertice isolato vicino a un altro poligono non viene agganciato: il contatto minimo è un lato.
+- I poligoni coperti per più della metà dal nuovo, o interamente contenuti in esso, vengono lasciati stare: di solito significa che si sta tracciando un oggetto diverso.
+- I poligoni agganciati possono avere più vertici, perché ereditano quelli dei contorni che seguono. Il cursore di semplificazione e gli strumenti di QGIS aiutano a ridurli, se serve.
+
+---
+
 ## Annulla l'ultimo punto
 
 Se un clic è stato piazzato nel punto sbagliato, non è necessario annullare l'intera sessione. Il tasto Ctrl+Z rimuove l'ultimo punto inserito — positivo o negativo — e ricalcola immediatamente la segmentazione con i punti rimanenti. È possibile tornare indietro quanto si vuole, fino ad azzerare tutti i prompt.
@@ -154,7 +188,7 @@ Il plugin gestisce autonomamente la propria infrastruttura computazionale. Al pr
 
 1. crea un ambiente virtuale Python in `~/.aitracer/venv`;
 2. installa le dipendenze necessarie (FastAPI, PyTorch, SAM2, OpenCV);
-3. scarica i pesi del modello SAM2-tiny (~40 MB).
+3. scarica i pesi del modello SAM2-tiny (~156 MB).
 
 Un dialogo di avanzamento informa l’utente in ogni fase. Le attivazioni successive richiedono pochi secondi.
 
