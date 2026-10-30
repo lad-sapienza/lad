@@ -1,0 +1,238 @@
+---
+title: "Dal foglio di calcolo al database: costruire un'app BraDypUS con l'aiuto di un LLM"
+author: Julian Bogdani
+tags: [BraDypUS, LLM, intelligenza artificiale, skill, database, archeologia, open source, guida]
+img: database-bradypus-with-llm.webp
+date: 2026-10-30
+inhome: true
+description: "Una guida passo passo, senza dare nulla per scontato, per progettare e caricare un database BraDypUS partendo dai propri fogli di calcolo e facendosi aiutare da un assistente LLM. Spieghiamo cos'è una skill, come si installa e seguiamo un esempio completo: una ricognizione di superficie con siti e reperti."
+---
+
+Quasi tutti i progetti di ricerca cominciano allo stesso modo: un foglio di calcolo. Poi i fogli diventano tre, quattro; qualcuno aggiunge una colonna «note2»; i riferimenti fra un foglio e l'altro si fanno a occhio. Il passo successivo, un vero database relazionale, è quello che molti rimandano perché sembra richiedere competenze che non si hanno: progettare le tabelle, decidere cosa è un elenco di valori e cosa un testo libero, installare un programma, importare i dati senza rovinarli.
+
+Una parte di queste barriere oggi si può abbassare. Molti di noi usano ogni giorno un assistente basato su un modello linguistico (un LLM) per scrivere, tradurre, ripulire tabelle. Abbiamo quindi preparato per BraDypUS una **skill**: un breve manuale operativo che l'assistente legge e segue per accompagnarti dal «ho questi file» al «i dati sono in un database funzionante». Questo articolo racconta, passo passo, come usarla. Non servono competenze di programmazione; servono pazienza, un po' di attenzione ai dati e la disponibilità a controllare quello che l'assistente propone.
+
+Una premessa onesta: l'assistente **non sostituisce il tuo giudizio** sui dati. Propone, tu approvi. La skill è costruita proprio così, con due punti di controllo obbligati (lo schema, prima di creare qualunque cosa; i dati caricati, prima di considerarli definitivi).
+
+## Che cos'è una skill
+
+Una skill è, nella sostanza, **una cartella con un file di testo dentro**. Il file spiega all'assistente *come svolgere un certo compito*: in che ordine procedere, quali errori evitare, quando fermarsi a chiedere conferma. Non è un programma, non installa nulla sul tuo computer oltre al testo, non si connette a niente da sola. È l'equivalente di un manuale di procedura che consegni a un collaboratore bravo ma nuovo del mestiere.
+
+Il vantaggio è pratico: senza la skill, dovresti spiegare ogni volta all'assistente cos'è BraDypUS, che formato vuole lo schema, come si importano i dati, quali sono le trappole. Con la skill lo sa già, e tu puoi limitarti a dire cosa vuoi ottenere.
+
+La skill di BraDypUS si chiama `bradypus-bootstrap`. In questo articolo la usiamo per quattro cose:
+
+1. **valutare** se i tuoi dati si prestano a un database BraDypUS;
+2. **progettare** le tabelle e le liste di valori;
+3. **creare** l'applicazione e il suo schema;
+4. **caricare** i dati e controllarli.
+
+## Che cosa ti serve
+
+- **Un assistente LLM.** Con **Claude Code** (l'applicazione desktop o il terminale) la skill si installa in un attimo e l'assistente può eseguire i passaggi da solo. Con altri assistenti (ChatGPT, Gemini e simili) il meccanismo può essere diverso o mancare del tutto, ma vedremo che la skill si può comunque usare.
+- **Un'istanza di BraDypUS.** Puoi usare l'istanza dimostrativa ospitata dal LAD, [demo.bdus.lad-sapienza.it](https://demo.bdus.lad-sapienza.it/), dove puoi creare la tua applicazione di prova senza installare nulla (è un'istanza di prova: usala per sperimentare e non per custodire dati che non potresti rifare), oppure avviarne una sul tuo computer seguendo la [guida all'installazione](https://docs.bdus.lad-sapienza.it/guide/install/).
+- **I tuoi dati in forma di file.** Meglio se un file per ogni «cosa» che descrivi (i siti, i reperti, le persone). Il formato più comodo è CSV: da Excel o LibreOffice si ottiene con *Salva con nome → CSV UTF-8*. Se hai un solo foglio che mescola più cose, nessun problema: è uno dei primi punti su cui l'assistente ti farà ragionare.
+- **Mezz'ora, per un primo esperimento.**
+
+> **Attenzione ai dati sensibili.** Quando carichi un file in una chat con un assistente, quel contenuto viene elaborato dal servizio che usi. Per un esperimento usa dati d'esempio o già pubblici. Per dati che non puoi condividere (coordinate di siti non ancora tutelati, dati personali) verifica le condizioni d'uso del servizio, oppure limita l'assistente alla struttura (i nomi delle colonne, poche righe finte) e carica i dati veri tu, a mano.
+
+## Installare la skill
+
+### In Claude Code
+
+1. **Scarica la skill**: [bradypus-bootstrap.zip](https://docs.bdus.lad-sapienza.it/bradypus-bootstrap.zip) (un file `bradypus-bootstrap.zip`). Se preferisci, è anche nel [repository di BraDypUS](https://github.com/lad-sapienza/BraDypUS/tree/v5/skills/bradypus-bootstrap), cartella `skills/bradypus-bootstrap`.
+2. **Decomprimi** l'archivio: otterrai una cartella `bradypus-bootstrap` con dentro un file `SKILL.md`.
+3. **Copia la cartella** nel posto in cui Claude Code cerca le skill personali:
+   - macOS e Linux: `~/.claude/skills/` (la cartella `.claude` nella tua cartella personale; se non la vedi, è nascosta: nel Finder premi Cmd+Maiusc+. per mostrare i file nascosti);
+   - Windows: `C:\Users\IlTuoNome\.claude\skills\`.
+
+   Se invece vuoi la skill solo per un progetto, copiala nella cartella `.claude/skills/` di quel progetto.
+4. **Verifica**: apri una nuova sessione di Claude Code e scrivi «Quali skill hai a disposizione?». Dovresti vedere `bradypus-bootstrap` nell'elenco.
+
+Da qui in avanti non devi «invocarla» in modo particolare: quando scrivi qualcosa come «voglio trasformare questi fogli in un database BraDypUS», l'assistente riconosce che la skill è pertinente e la usa.
+
+### Con altri assistenti
+
+Gli altri assistenti non usano necessariamente lo stesso formato, ma la skill è un testo: puoi aprire il file `SKILL.md` con un qualunque editor, copiarne il contenuto e incollarlo all'inizio della conversazione, oppure fra le «istruzioni del progetto» o le «istruzioni personalizzate» se il servizio le offre. Scrivi poi: «Segui queste istruzioni per aiutarmi a costruire un database BraDypUS dai miei file».
+
+C'è una differenza da sapere. Un assistente senza accesso al tuo computer **non può eseguire i comandi**: ti dirà cosa fare, e sarai tu a cliccare. Funziona lo stesso, e per molti è anzi più rassicurante: la skill prevede esplicitamente questo caso, in cui l'assistente prepara i file e ti accompagna dentro l'interfaccia di BraDypUS. Nell'esempio che segue indichiamo sempre entrambe le strade.
+
+## Un esempio concreto: una ricognizione di superficie
+
+Immaginiamo di aver concluso una piccola ricognizione di superficie (i dati sono inventati, ma la struttura è quella di tanti lavori reali). Abbiamo due fogli.
+
+**siti.csv**: sei siti, con un codice, un nome, il comune e un tipo.
+
+```csv
+codice,nome,comune,tipo
+RC-001,Colle Rotondo,Tivoli,insediamento
+RC-002,Fosso della Valle,Palestrina,fattoria
+RC-003,Casale Nuovo,Subiaco,area di frammenti
+RC-004,Monte Alto,Tivoli,necropoli
+RC-005,Podere Sant'Anna,Palestrina,villa
+RC-006,Vigna Vecchia,Subiaco,fattoria
+```
+
+**reperti.csv**: quattordici reperti, ognuno con il codice del sito dove è stato raccolto.
+
+```csv
+inventario,sito,materiale,periodo,descrizione,quantita
+RC001-001,RC-001,ceramica,età del ferro,orlo di olla in impasto,3
+RC001-002,RC-001,ceramica,età del ferro,fondo di ciotola,1
+RC001-003,RC-001,pietra,età del bronzo,macina in pietra lavica,1
+RC002-001,RC-002,ceramica,età romana,frammenti di anfora,7
+RC002-002,RC-002,metallo,età romana,chiodo in ferro,2
+RC002-003,RC-002,vetro,età romana,frammento di balsamario,1
+RC003-001,RC-003,ceramica,medievale,frammenti di ceramica invetriata,12
+RC004-001,RC-004,ceramica,età del ferro,vaso a collo,1
+RC004-002,RC-004,osso,età del ferro,spillone,1
+RC004-003,RC-004,metallo,età del ferro,fibula ad arco,1
+RC005-001,RC-005,ceramica,età romana,terra sigillata,5
+RC005-002,RC-005,pietra,età romana,tessera di mosaico,9
+RC005-003,RC-005,metallo,età romana,moneta di bronzo,1
+RC006-001,RC-006,ceramica,medievale,orlo di boccale,2
+```
+
+Più un file `siti.geojson` con le coordinate dei sei siti, esportato dal GIS (se non ne hai uno, salta pure quel passaggio: la mappa si può aggiungere dopo).
+
+Apriamo una sessione e scriviamo, in linguaggio naturale:
+
+> Ho questi tre file di una ricognizione di superficie. Vorrei trasformarli in un database BraDypUS. Prima dimmi se ha senso, poi aiutami a costruirlo.
+
+### Passo 0: la valutazione
+
+L'assistente legge una pagina di orientamento sul sito di BraDypUS ([Is BraDypUS right for your data?](https://docs.bdus.lad-sapienza.it/guide/evaluate)) e guarda i tuoi file. Poi ti risponde con le domande che contano: quante «cose» distinte ci sono? Come sono legate? C'è un identificatore stabile per ciascuna? Ci sono colonne che sono in realtà elenchi chiusi di valori? Ci sono geometrie o date incerte?
+
+Nel nostro caso la risposta è semplice e positiva: **due tabelle legate fra loro** (ogni reperto appartiene a un sito), **tre elenchi chiusi** (il tipo di sito, il materiale, il periodo), **una geometria** per ogni sito. È esattamente il tipo di dato per cui BraDypUS è fatto. Se i dati non fossero adatti (un foglio unico che nessun altro modifica, o milioni di righe da aggregare) l'assistente te lo direbbe senza giri di parole, e potresti fermarti qui.
+
+### Passo 1: lo schema, prima di tutto (primo punto di controllo)
+
+Prima di toccare qualsiasi cosa, l'assistente esamina i file riga per riga e ti propone, **a parole**, come strutturare il database. Per il nostro esempio una proposta ragionevole è:
+
+- una tabella **Siti**, identificata dal codice, con i campi nome, comune e tipo;
+- una tabella **Reperti**, identificata dal numero d'inventario, **collegata** al sito di provenienza;
+- tre **vocabolari** (liste di valori controllate): tipo di sito, materiale, periodo;
+- la tabella Siti con la **geometria** abilitata.
+
+È il momento in cui conviene discutere. «Il periodo dovrebbe stare nei siti e non nei reperti?» «Vorrei aggiungere il campo *affidabilità della datazione*.» «I materiali sono troppo pochi, aggiungiamo *laterizio*.» L'assistente corregge e ti ripropone. Segnala anche i problemi dei dati: due siti con lo stesso codice, un materiale scritto in due modi («ceramica» e «Ceramica »), un periodo mancante. **Non andare avanti finché lo schema non ti convince**: modificarlo dopo è possibile, ma più laborioso.
+
+### Passo 2: la descrizione dello schema
+
+Quando dici di sì, l'assistente traduce la proposta in un testo scritto in **DBML**, un linguaggio semplice per descrivere le tabelle (lo stesso usato da strumenti come dbdiagram.io, con qualche annotazione in più che BraDypUS capisce). Non devi impararlo; ma vederlo aiuta a capire cosa succederà. Per il nostro esempio:
+
+```dbml
+Enum materiale {
+  "ceramica"
+  "pietra"
+  "metallo"
+  "osso"
+  "vetro"
+  // bdus:vocabulary
+}
+
+Enum periodo {
+  "età del bronzo"
+  "età del ferro"
+  "età romana"
+  "medievale"
+  // bdus:vocabulary
+}
+
+Enum tipo_sito {
+  "insediamento"
+  "fattoria"
+  "villa"
+  "necropoli"
+  "area di frammenti"
+  // bdus:vocabulary
+}
+
+Table siti {
+  id      integer [pk, increment]
+  creator integer
+  codice  varchar
+  nome    varchar
+  comune  varchar
+  tipo    varchar [note: 'bdus:voc=tipo_sito']
+  Note: 'bdus:label=Siti bdus:preview=id,codice,nome bdus:id_field=codice bdus:geodata=1'
+}
+
+Table reperti {
+  id          integer [pk, increment]
+  creator     integer
+  inventario  varchar
+  sito_id     integer [ref: > siti.id, note: 'bdus:id_from_tb']
+  materiale   varchar [note: 'bdus:voc=materiale']
+  periodo     varchar [note: 'bdus:voc=periodo']
+  descrizione text
+  quantita    integer
+  Note: 'bdus:label=Reperti bdus:preview=id,inventario,materiale,periodo bdus:id_field=inventario'
+}
+```
+
+Si legge quasi da sé. Le tre liste `Enum` sono i vocabolari. `Table siti` e `Table reperti` sono le tabelle. La riga `sito_id ... ref: > siti.id` dice che ogni reperto rimanda a un sito: è il **collegamento**. `bdus:geodata=1` abilita la geometria sui siti.
+
+### Passo 3: creare l'applicazione e lo schema
+
+**Creare l'applicazione.** Se usi l'istanza del LAD, apri [demo.bdus.lad-sapienza.it](https://demo.bdus.lad-sapienza.it/), scegli *Crea una nuova applicazione*, dai un nome breve in minuscolo (per esempio `ricognizione`), inserisci la tua email e una password. Diventi così l'amministratore della tua applicazione. Se hai avviato BraDypUS in locale, la procedura è identica dall'indirizzo del tuo computer.
+
+> **La password è tua.** Scrivila nel modulo di BraDypUS, mai nella chat con l'assistente. La skill gli chiede esplicitamente di non maneggiarla.
+
+**Applicare lo schema.** Qui le strade si dividono.
+
+- *Con un assistente che esegue i comandi* (Claude Code): ti chiede un modo sicuro di autenticarsi, poi invia lo schema a BraDypUS, che lo **verifica prima di applicarlo** e gli risponde con eventuali errori o avvisi. L'assistente te li racconta; se tutto è a posto, procede.
+- *Con una chat semplice*: l'assistente ti dà il testo DBML e ti guida: in BraDypUS apri **Config → DBML**, incolli il testo, premi **Analizza**, leggi insieme all'assistente l'anteprima (le righe rosse sono errori, le gialle avvisi), poi premi **Applica**.
+
+In entrambi i casi il risultato è lo stesso: due tabelle, tre vocabolari, un collegamento. Se ora apri BraDypUS vedi *Siti* e *Reperti* nel menù, ancora vuote. Controlla anche che aprendo un sito compaia, più avanti, il pannello dei reperti collegati: nasce dal `ref`, non va aggiunto a mano.
+
+### Passo 4: caricare i dati (secondo punto di controllo)
+
+I dati si caricano **partendo dal «genitore»**: prima i siti, poi i reperti, perché ogni reperto deve poter indicare un sito che esiste già.
+
+Per i **siti** è lineare: il file ha già le colonne giuste. BraDypUS le associa ai campi della tabella e usa il campo `codice` come *chiave*: se un sito con quel codice esiste già lo aggiorna, altrimenti lo inserisce. Risultato: **6 siti inseriti**.
+
+Per i **reperti** c'è un passaggio che l'assistente fa al posto tuo, ed è quello che più spesso manda in crisi chi lo fa a mano. Nel tuo file il sito è indicato dal codice (`RC-001`), ma nel database il collegamento si salva con il **numero identificativo** del sito (`1`, `2`, `3`…). L'assistente legge dal database i numeri assegnati ai siti, li abbina ai codici e prepara una copia del file dei reperti in cui `RC-001` è diventato `1`. Con una chat semplice ti chiede di aprire l'elenco dei siti e di confermargli la colonna *Id*, e prepara il file di conseguenza: non dare per scontato che i numeri siano quelli che ti aspetti, controllali.
+
+Poi carica i reperti con `inventario` come chiave. Risultato: **14 reperti inseriti**.
+
+Due proprietà rendono l'operazione tranquilla:
+
+- **È tutto o niente.** Il caricamento è una singola operazione: se una riga ha un problema, non viene scritto nulla e puoi correggere il file e riprovare.
+- **Si può ripetere.** Se rilanci lo stesso caricamento, i reperti non si duplicano: vengono semplicemente aggiornati (nel nostro test, «0 inseriti, 14 aggiornati»). È utile quando scopri un errore nel file e lo vuoi correggere.
+
+Infine, la **geometria**: l'assistente carica `siti.geojson` abbinando a ogni punto il codice del sito, e BraDypUS risponde con «6 aggiornati, 0 non trovati». Nella mappa di BraDypUS (GeoFace) compaiono i sei siti.
+
+### Passo 5: controllare
+
+L'ultimo passo è il più importante e la skill lo mette per iscritto: **non fidarti, verifica**. L'assistente ti suggerisce di controllare tre cose:
+
+1. i **conteggi**: 6 siti e 14 reperti, come nei file di partenza;
+2. un **record aperto a mano**: per esempio il reperto `RC001-001`, che deve mostrare il sito *RC-001* e i valori scelti dai vocabolari;
+3. il **sito `RC-001`**, che deve mostrare nel pannello dei collegamenti 3 reperti.
+
+Se qualcosa non torna, è il momento di dirlo all'assistente: sa come correggere e ricaricare.
+
+## Cosa resta da fare a mano
+
+L'assistente ha costruito l'ossatura. Restano scelte che dipendono da come lavori e che è giusto prendere tu:
+
+- **Utenti, gruppi e permessi**: chi legge, chi modifica, chi vede soltanto una parte dei dati, quali record congelare dopo la revisione (vedi la [guida a gruppi e blocchi](https://docs.bdus.lad-sapienza.it/guide/setup/groups));
+- **Modelli di stampa** e **livelli cartografici** di sfondo;
+- eventuali **plugin** (relazioni stratigrafiche, cronologie incerte, datazioni al radiocarbonio, bibliografia Zotero), di cui abbiamo parlato negli articoli precedenti;
+- un **backup** regolare, e una password robusta per l'amministratore.
+
+## Qualche consiglio per partire bene
+
+- **Parti piccolo.** Il primo esperimento su una o due tabelle, con dati ripuliti, vale più di un caricamento ambizioso che si inceppa.
+- **Dì all'assistente che sei un principiante** (se lo sei) e chiedigli di spiegare ogni passo: la skill lo rende naturale.
+- **Pulisci prima, importa dopo.** I problemi che si pagano di più sono sempre gli stessi: identificativi duplicati, la stessa voce scritta in tre modi, celle unite. L'assistente li segnala; correggerli nel file è più semplice che nel database.
+- **Se un passaggio non è chiaro, chiedi.** Un assistente che ti propone qualcosa senza spiegarlo è un assistente che non sta seguendo la skill.
+
+## Per approfondire
+
+- [Is BraDypUS right for your data?](https://docs.bdus.lad-sapienza.it/guide/evaluate): la scheda di orientamento che l'assistente legge per prima (in inglese);
+- [Importazione e esportazione DBML](https://docs.bdus.lad-sapienza.it/guide/setup/dbml) e [importazione dei dati](https://docs.bdus.lad-sapienza.it/guide/usage/import): il dettaglio dei due strumenti che la skill usa;
+- [`llms.txt`](https://docs.bdus.lad-sapienza.it/llms.txt): l'indice pensato per gli assistenti, se vuoi che anche un altro progetto «sappia» cos'è BraDypUS;
+- il [codice della skill](https://github.com/lad-sapienza/BraDypUS/tree/v5/skills/bradypus-bootstrap): è un file di testo, leggibile e modificabile. Se ti accorgi che manca qualcosa, o che un passaggio andrebbe spiegato meglio, segnalacelo o proponi una correzione.
+
+L'obiettivo di questa skill non è fare a meno delle competenze, ma spostarle: meno tempo sulla sintassi e sui comandi, più tempo sulle domande che contano per una ricerca. Come strutturare i dati, cosa è davvero un vocabolario, cosa lega un reperto al suo contesto sono scelte di metodo. Quelle restano tue.

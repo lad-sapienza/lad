@@ -1,0 +1,240 @@
+---
+title: "From spreadsheet to database: building a BraDypUS app with the help of an LLM"
+author: Julian Bogdani
+tags: [BraDypUS, LLM, artificial intelligence, skill, database, archaeology, open source, guide]
+img: database-bradypus-with-llm.webp
+date: 2026-10-30
+inhome: true
+description: "A step-by-step guide, taking nothing for granted, to designing and loading a BraDypUS database from your own spreadsheets with the help of an LLM assistant. We explain what a skill is, how to install it, and follow a complete example: a field survey with sites and finds."
+---
+
+Almost every research project starts the same way: with a spreadsheet. Then the spreadsheets become three, four; someone adds a column called "notes2"; the references from one sheet to another are made by eye. The next step, a real relational database, is the one many people put off because it seems to require skills they do not have: designing tables, deciding what is a list of values and what is free text, installing a program, importing data without ruining it.
+
+Some of these barriers can now be lowered. Many of us use an assistant based on a language model (an LLM) every day to write, translate, clean up tables. So we prepared a **skill** for BraDypUS: a short operating manual that the assistant reads and follows to take you from "I have these files" to "my data is in a working database". This article shows, step by step, how to use it. You do not need programming skills; you need patience, some attention to your data, and the willingness to check what the assistant proposes.
+
+An honest premise: the assistant **does not replace your judgement** about the data. It proposes, you approve. The skill is built exactly that way, with two mandatory checkpoints: the schema, before anything is created; and the loaded data, before you treat it as final.
+
+## What is a skill
+
+A skill is, in essence, **a folder with a text file inside**. The file tells the assistant *how to carry out a certain task*: in what order to proceed, which mistakes to avoid, when to stop and ask for confirmation. It is not a program, it installs nothing on your computer besides the text, and it does not connect to anything by itself. It is the equivalent of a procedure manual you hand to a capable collaborator who is new to the job.
+
+The advantage is practical: without the skill, you would have to explain to the assistant every time what BraDypUS is, what format it expects for a schema, how data is imported, where the traps are. With the skill it already knows, and you can limit yourself to saying what you want to achieve.
+
+The BraDypUS skill is called `bradypus-bootstrap`. In this article we use it for four things:
+
+1. **evaluating** whether your data suits a BraDypUS database;
+2. **designing** the tables and the lists of values;
+3. **creating** the application and its schema;
+4. **loading** the data and checking it.
+
+## What you need
+
+- **An LLM assistant.** With **Claude Code** (the desktop app or the terminal) the skill installs in a moment and the assistant can carry out the steps on its own. Other assistants (ChatGPT, Gemini and the like) may use a different mechanism or none at all, but we will see that the skill can still be used.
+- **A BraDypUS instance.** You can use the demonstration instance hosted by LAD, [demo.bdus.lad-sapienza.it](https://demo.bdus.lad-sapienza.it/), where you can create your own test application without installing anything (it is a test instance: use it to experiment, not to keep data you could not recreate), or start one on your own computer following the [installation guide](https://docs.bdus.lad-sapienza.it/guide/install/).
+- **Your data as files.** Ideally one file for each "thing" you describe (sites, finds, people). The most convenient format is CSV: from Excel or LibreOffice you get it with *Save as → CSV UTF-8*. If you have a single sheet mixing several things, no problem: it is one of the first points on which the assistant will make you think.
+- **Half an hour, for a first experiment.**
+
+> **Beware of sensitive data.** When you upload a file to a chat with an assistant, its content is processed by the service you use. For an experiment, use sample data or data that is already public. For data you cannot share (coordinates of sites not yet protected, personal data) check the service's terms of use, or limit the assistant to the structure (column names, a few dummy rows) and load the real data yourself, by hand.
+
+## Installing the skill
+
+### In Claude Code
+
+1. **Download the skill**: [bradypus-bootstrap.zip](https://docs.bdus.lad-sapienza.it/bradypus-bootstrap.zip) (a `bradypus-bootstrap.zip` file). If you prefer, it is also in the [BraDypUS repository](https://github.com/lad-sapienza/BraDypUS/tree/v5/skills/bradypus-bootstrap), folder `skills/bradypus-bootstrap`.
+2. **Unzip** the archive: you will get a `bradypus-bootstrap` folder with a `SKILL.md` file inside.
+3. **Copy the folder** to the place where Claude Code looks for personal skills:
+   - macOS and Linux: `~/.claude/skills/` (the `.claude` folder in your home folder; if you cannot see it, it is hidden: in the Finder press Cmd+Shift+. to show hidden files);
+   - Windows: `C:\Users\YourName\.claude\skills\`.
+
+   If you want the skill for a single project only, copy it to the `.claude/skills/` folder of that project.
+4. **Check**: open a new Claude Code session and type "Which skills do you have available?". You should see `bradypus-bootstrap` in the list.
+
+From here on you do not have to "invoke" it in any special way: when you write something like "I want to turn these spreadsheets into a BraDypUS database", the assistant recognises that the skill is relevant and uses it.
+
+### With other assistants
+
+Other assistants do not necessarily use the same format, but the skill is text: you can open the `SKILL.md` file with any editor, copy its content and paste it at the start of the conversation, or into the "project instructions" or "custom instructions" if the service offers them. Then write: "Follow these instructions to help me build a BraDypUS database from my files".
+
+There is one difference to be aware of. An assistant with no access to your computer **cannot run commands**: it will tell you what to do, and you will do the clicking. It works all the same, and for many people it is even more reassuring: the skill explicitly covers this case, in which the assistant prepares the files and guides you through the BraDypUS interface. In the example below we always show both routes.
+
+## A concrete example: a field survey
+
+Let us imagine we have just finished a small surface survey (the data is invented, but the structure is that of many real projects). We have two spreadsheets.
+
+**sites.csv**: six sites, with a code, a name, the municipality and a type.
+
+```csv
+codice,nome,comune,tipo
+RC-001,Colle Rotondo,Tivoli,insediamento
+RC-002,Fosso della Valle,Palestrina,fattoria
+RC-003,Casale Nuovo,Subiaco,area di frammenti
+RC-004,Monte Alto,Tivoli,necropoli
+RC-005,Podere Sant'Anna,Palestrina,villa
+RC-006,Vigna Vecchia,Subiaco,fattoria
+```
+
+**finds.csv**: fourteen finds, each with the code of the site where it was collected.
+
+```csv
+inventario,sito,materiale,periodo,descrizione,quantita
+RC001-001,RC-001,ceramica,età del ferro,orlo di olla in impasto,3
+RC001-002,RC-001,ceramica,età del ferro,fondo di ciotola,1
+RC001-003,RC-001,pietra,età del bronzo,macina in pietra lavica,1
+RC002-001,RC-002,ceramica,età romana,frammenti di anfora,7
+RC002-002,RC-002,metallo,età romana,chiodo in ferro,2
+RC002-003,RC-002,vetro,età romana,frammento di balsamario,1
+RC003-001,RC-003,ceramica,medievale,frammenti di ceramica invetriata,12
+RC004-001,RC-004,ceramica,età del ferro,vaso a collo,1
+RC004-002,RC-004,osso,età del ferro,spillone,1
+RC004-003,RC-004,metallo,età del ferro,fibula ad arco,1
+RC005-001,RC-005,ceramica,età romana,terra sigillata,5
+RC005-002,RC-005,pietra,età romana,tessera di mosaico,9
+RC005-003,RC-005,metallo,età romana,moneta di bronzo,1
+RC006-001,RC-006,ceramica,medievale,orlo di boccale,2
+```
+
+(The data is in Italian, as in the original dataset; the column and value names are just text, BraDypUS does not care which language they are in.)
+
+Plus a `siti.geojson` file with the coordinates of the six sites, exported from your GIS (if you do not have one, skip that step: the map can be added later).
+
+We open a session and write, in plain language:
+
+> I have these three files from a surface survey. I would like to turn them into a BraDypUS database. First tell me whether it makes sense, then help me build it.
+
+### Step 0: the evaluation
+
+The assistant reads an orientation page on the BraDypUS site ([Is BraDypUS right for your data?](https://docs.bdus.lad-sapienza.it/guide/evaluate)) and looks at your files. Then it answers with the questions that matter: how many distinct "things" are there? How are they linked? Is there a stable identifier for each? Are there columns that are really closed lists of values? Are there geometries or uncertain dates?
+
+In our case the answer is simple and positive: **two tables linked to each other** (each find belongs to a site), **three closed lists** (site type, material, period), **one geometry** for each site. This is exactly the kind of data BraDypUS is made for. If the data were not suitable (a single sheet that nobody else edits, or millions of rows to aggregate) the assistant would tell you plainly, and you could stop here.
+
+### Step 1: the schema first (first checkpoint)
+
+Before touching anything, the assistant examines the files row by row and proposes, **in words**, how to structure the database. For our example a reasonable proposal is:
+
+- a **Sites** table, identified by the code, with the fields name, municipality and type;
+- a **Finds** table, identified by the inventory number, **linked** to the site of origin;
+- three **vocabularies** (controlled lists of values): site type, material, period;
+- the Sites table with **geometry** enabled.
+
+This is the moment to discuss. "Shouldn't the period be on the sites rather than on the finds?" "I would like to add a field for *dating reliability*." "There are too few materials, let's add *tile*." The assistant corrects and proposes again. It also points out problems in the data: two sites with the same code, a material written in two ways ("ceramica" and "Ceramica "), a missing period. **Do not go on until the schema convinces you**: changing it afterwards is possible, but more laborious.
+
+### Step 2: the description of the schema
+
+When you say yes, the assistant translates the proposal into a text written in **DBML**, a simple language for describing tables (the same used by tools such as dbdiagram.io, with a few extra annotations that BraDypUS understands). You do not have to learn it; but seeing it helps you understand what will happen. For our example:
+
+```dbml
+Enum materiale {
+  "ceramica"
+  "pietra"
+  "metallo"
+  "osso"
+  "vetro"
+  // bdus:vocabulary
+}
+
+Enum periodo {
+  "età del bronzo"
+  "età del ferro"
+  "età romana"
+  "medievale"
+  // bdus:vocabulary
+}
+
+Enum tipo_sito {
+  "insediamento"
+  "fattoria"
+  "villa"
+  "necropoli"
+  "area di frammenti"
+  // bdus:vocabulary
+}
+
+Table siti {
+  id      integer [pk, increment]
+  creator integer
+  codice  varchar
+  nome    varchar
+  comune  varchar
+  tipo    varchar [note: 'bdus:voc=tipo_sito']
+  Note: 'bdus:label=Siti bdus:preview=id,codice,nome bdus:id_field=codice bdus:geodata=1'
+}
+
+Table reperti {
+  id          integer [pk, increment]
+  creator     integer
+  inventario  varchar
+  sito_id     integer [ref: > siti.id, note: 'bdus:id_from_tb']
+  materiale   varchar [note: 'bdus:voc=materiale']
+  periodo     varchar [note: 'bdus:voc=periodo']
+  descrizione text
+  quantita    integer
+  Note: 'bdus:label=Reperti bdus:preview=id,inventario,materiale,periodo bdus:id_field=inventario'
+}
+```
+
+It almost reads by itself. The three `Enum` lists are the vocabularies. `Table siti` and `Table reperti` are the tables. The line `sito_id ... ref: > siti.id` says that each find points to a site: it is the **link**. `bdus:geodata=1` enables geometry on the sites.
+
+### Step 3: creating the application and the schema
+
+**Creating the application.** If you use the LAD instance, open [demo.bdus.lad-sapienza.it](https://demo.bdus.lad-sapienza.it/), choose *Create new application*, give it a short lowercase name (for example `ricognizione`), enter your email and a password. You thereby become the administrator of your application. If you started BraDypUS locally, the procedure is the same from your computer's address.
+
+> **The password is yours.** Type it in the BraDypUS form, never in the chat with the assistant. The skill explicitly tells the assistant not to handle it.
+
+**Applying the schema.** Here the routes split.
+
+- *With an assistant that runs commands* (Claude Code): it asks you for a safe way to authenticate, then sends the schema to BraDypUS, which **checks it before applying it** and replies with any errors or warnings. The assistant tells you about them; if all is well, it goes ahead.
+- *With a plain chat*: the assistant gives you the DBML text and guides you: in BraDypUS open **Config → DBML**, paste the text, press **Analyse**, read the preview together with the assistant (red rows are errors, yellow ones warnings), then press **Apply**.
+
+In both cases the result is the same: two tables, three vocabularies, one link. If you now open BraDypUS you see *Sites* and *Finds* in the menu, still empty. Later you will also see that opening a site shows the panel of linked finds: it comes from the `ref`, you do not need to add it by hand.
+
+### Step 4: loading the data (second checkpoint)
+
+Data is loaded **starting with the "parent"**: first the sites, then the finds, because each find must be able to name a site that already exists.
+
+For the **sites** it is straightforward: the file already has the right columns. BraDypUS matches them to the table's fields and uses the `codice` field as the *key*: if a site with that code already exists it is updated, otherwise it is inserted. Result: **6 sites inserted**.
+
+For the **finds** there is a step that the assistant does for you, and it is the one that most often defeats people doing it by hand. In your file the site is given by its code (`RC-001`), but in the database the link is stored with the site's **identification number** (`1`, `2`, `3`…). The assistant reads from the database the numbers assigned to the sites, matches them with the codes, and prepares a copy of the finds file in which `RC-001` has become `1`. With a plain chat it asks you to open the list of sites and confirm the *Id* column, and prepares the file accordingly: do not take it for granted that the numbers are what you expect, check them.
+
+Then it loads the finds with `inventario` as the key. Result: **14 finds inserted**.
+
+Two properties make the operation worry-free:
+
+- **All or nothing.** The load is a single operation: if a row has a problem, nothing is written and you can fix the file and try again.
+- **Repeatable.** If you rerun the same load, finds are not duplicated: they are simply updated (in our test, "0 inserted, 14 updated"). This is useful when you find an error in the file and want to correct it.
+
+Finally, the **geometry**: the assistant loads `siti.geojson`, matching each point with the site code, and BraDypUS replies "6 updated, 0 not found". The six sites appear on the BraDypUS map (GeoFace).
+
+### Step 5: checking
+
+The last step is the most important and the skill writes it down: **do not trust, verify**. The assistant suggests checking three things:
+
+1. the **counts**: 6 sites and 14 finds, as in the source files;
+2. **one record opened by hand**: for example the find `RC001-001`, which must show the site *RC-001* and the values chosen from the vocabularies;
+3. **site `RC-001`**, which must show 3 finds in the links panel.
+
+If something does not add up, now is the time to tell the assistant: it knows how to fix it and reload.
+
+## What remains to be done by hand
+
+The assistant has built the skeleton. What remains are choices that depend on how you work and that it is right for you to make:
+
+- **Users, groups and permissions**: who reads, who edits, who sees only part of the data, which records to freeze after review (see the [guide to groups and locks](https://docs.bdus.lad-sapienza.it/guide/setup/groups));
+- **Print templates** and background **map layers**;
+- any **plugins** (stratigraphic relations, uncertain chronologies, radiocarbon dates, Zotero bibliography), which we described in earlier articles;
+- regular **backups**, and a strong administrator password.
+
+## A few tips to start well
+
+- **Start small.** A first experiment on one or two tables, with cleaned-up data, is worth more than an ambitious load that jams.
+- **Tell the assistant you are a beginner** (if you are) and ask it to explain each step: the skill makes this natural.
+- **Clean first, import afterwards.** The problems that cost the most are always the same: duplicate identifiers, the same entry written three ways, merged cells. The assistant flags them; fixing them in the file is easier than in the database.
+- **If a step is not clear, ask.** An assistant that proposes something without explaining it is an assistant that is not following the skill.
+
+## Further reading
+
+- [Is BraDypUS right for your data?](https://docs.bdus.lad-sapienza.it/guide/evaluate): the orientation page the assistant reads first;
+- [DBML import and export](https://docs.bdus.lad-sapienza.it/guide/setup/dbml) and [data import](https://docs.bdus.lad-sapienza.it/guide/usage/import): the details of the two tools the skill uses;
+- [`llms.txt`](https://docs.bdus.lad-sapienza.it/llms.txt): the index designed for assistants, if you want another project to "know" what BraDypUS is;
+- the [skill's code](https://github.com/lad-sapienza/BraDypUS/tree/v5/skills/bradypus-bootstrap): it is a text file, readable and editable. If you notice something is missing, or a step should be explained better, let us know or propose a fix.
+
+The aim of this skill is not to do without expertise, but to move it: less time on syntax and commands, more time on the questions that matter for research. How to structure data, what a vocabulary really is, what links a find to its context are methodological choices. Those remain yours.
