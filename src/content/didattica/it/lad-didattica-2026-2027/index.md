@@ -30,11 +30,11 @@ Responsabile: **Julian Bogdani** ([julian.bogdani@uniroma1.it](mailto:julian.bog
 
 ## Calendario
 
-<mark>Da confermare in base alla disponibilità delle aule</mark>
+<mark>Da confermare in base alla disponibilità dell'aula</mark>
 
-<u>Gli incontri si svolegeranno per due settimane consecuttive, tutti i giorni, dalle 14:00 alle 18:00. Il calendario preciso verrà pubblicato appena si avrà la disponibilità delle aule, ma indicativamente il periodi sarà 18-30 gennaio 2027 o 25 gennaio-6 febbraio 2027.</u>
+<u>Gli incontri si svolegeranno per due settimane consecuttive, tutti i giorni, dalle 14:00 alle 18:00, presso l'Aula III, al primo piano della FAcoltà di Lettere e Filosofia (CU003).</u>
 
-<!-- - Modulo **GIS: Sistemi Informativi Geografici per l'Archeologia** (20 ore):
+- Modulo **GIS: Sistemi Informativi Geografici per l'Archeologia** (20 ore):
   - lun 25 gennaio 2027, ore 14.00-18.00
   - mar 26 gennaio 2027, ore 14.00-18.00
   - mer 27 gennaio 2027, ore 14.00-18:00
@@ -47,7 +47,7 @@ Responsabile: **Julian Bogdani** ([julian.bogdani@uniroma1.it](mailto:julian.bog
   - mer 3 Febbraio 2027, ore 14.00-18.00
 - **Deep Learning** per la classificazione della ceramica archeologica
   - gio 4 Febbraio 2027, ore 14.00-18.00
-  - ven 5 Febbraio 2027, ore 14.00-18.00 -->
+  - ven 5 Febbraio 2027, ore 14.00-18.00
 
 ## Iscrizione
 
