@@ -39,7 +39,7 @@ Responsabile: **Julian Bogdani** ([julian.bogdani@uniroma1.it](mailto:julian.bog
   - mar 26 gennaio 2027, ore 14.00-18.00
   - mer 27 gennaio 2027, ore 14.00-18:00
   - gio 28 gennaio 2027, ore 14.00-18:00
-  - gio 29 gennaio 2027, ore 14.00-18:00
+  - ven 29 gennaio 2027, ore 14.00-18:00
 - **Banche dati** per l'Archeologia (4h)
   - lun 1 Febbraio 2027, ore 14.00-18.00
 - **LAP: Laser Aided Profiler** per la documentazione dei reperti archeologici (8 ore)
@@ -51,7 +51,7 @@ Responsabile: **Julian Bogdani** ([julian.bogdani@uniroma1.it](mailto:julian.bog
 
 ## Iscrizione
 
-Per iscriversi è necessario compilare **entro il 6 gennaio 2026** il modulo Google disponibile all'indirizzo: [https://forms.gle/vDtT84FWcXmEFDTSA](https://forms.gle/vDtT84FWcXmEFDTSA).
+Per iscriversi è necessario compilare **entro il 6 gennaio 2027** il modulo Google disponibile all'indirizzo: [https://forms.gle/vDtT84FWcXmEFDTSA](https://forms.gle/vDtT84FWcXmEFDTSA).
 
 
 In caso di sopravvenute complicazioni è fondamentale notificare all’indirizzo [julian.bogdani@uniroma1.it](mailto:julian.bogdani@uniroma1.it).  
