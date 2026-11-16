@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arr" viewBox="0 0 26 26" refX="22" refY="13" markerWidth="26" markerHeight="26" markerUnits="userSpaceOnUse" orient="auto">
+      <path d="M2 3 L24 13 L2 23 Z" fill="#4A5BD9"/>
+    </marker>
+    <marker id="arrred" viewBox="0 0 26 26" refX="22" refY="13" markerWidth="26" markerHeight="26" markerUnits="userSpaceOnUse" orient="auto">
+      <path d="M2 3 L24 13 L2 23 Z" fill="#C8442F"/>
+    </marker>
+  </defs>
+  <rect width="1600" height="900" fill="#F5F3EE"/>
+
+  <!-- 1. assistant: cloud with chat bubble and sparkle -->
+  <g transform="translate(40,120)">
+    <path d="M110 250 A62 62 0 0 1 112 126 A88 88 0 0 1 282 108 A74 74 0 0 1 300 250 Z" fill="#FFFFFF" stroke="#1F2430" stroke-width="5" stroke-linejoin="round"/>
+    <rect x="130" y="118" width="150" height="92" rx="22" fill="#4A5BD9"/>
+    <path d="M160 210 L152 234 L186 210 Z" fill="#4A5BD9"/>
+    <path d="M205 138 L214 166 L242 175 L214 184 L205 212 L196 184 L168 175 L196 166 Z" fill="#FFFFFF"/>
+    <circle cx="256" cy="144" r="6" fill="#FFFFFF"/>
+  </g>
+
+  <!-- 2. key -->
+  <g transform="translate(470,150)">
+    <circle cx="70" cy="150" r="62" fill="none" stroke="#4A5BD9" stroke-width="26"/>
+    <circle cx="70" cy="150" r="14" fill="#F5F3EE"/>
+    <rect x="128" y="138" width="190" height="24" rx="6" fill="#4A5BD9"/>
+    <rect x="262" y="162" width="26" height="46" rx="5" fill="#4A5BD9"/>
+    <rect x="296" y="162" width="22" height="34" rx="5" fill="#4A5BD9"/>
+  </g>
+
+  <!-- 3. gate: shield with filter -->
+  <g transform="translate(850,95)">
+    <path d="M130 0 L250 40 L250 180 C250 262 196 318 130 346 C64 318 10 262 10 180 L10 40 Z" fill="#1F2430"/>
+    <path d="M70 100 L190 100 L150 172 L150 252 L110 232 L110 172 Z" fill="#F5F3EE"/>
+  </g>
+
+  <!-- 4. database: linked tables -->
+  <g stroke="#4A5BD9" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M1360 238 L1360 268 L1450 268 L1450 296"/>
+    <path d="M1300 238 L1300 296"/>
+  </g>
+  <g>
+    <g transform="translate(1220,130)">
+      <rect width="200" height="108" fill="#FFFFFF" stroke="#1F2430" stroke-width="4"/>
+      <rect width="200" height="30" fill="#1F2430"/>
+      <path d="M0 62 H200 M0 86 H200 M66 30 V108 M132 30 V108" stroke="#1F2430" stroke-width="2.5"/>
+    </g>
+    <g transform="translate(1190,296)">
+      <rect width="160" height="108" fill="#FFFFFF" stroke="#1F2430" stroke-width="4"/>
+      <rect width="160" height="30" fill="#1F2430"/>
+      <path d="M0 62 H160 M0 86 H160 M53 30 V108 M106 30 V108" stroke="#1F2430" stroke-width="2.5"/>
+    </g>
+    <g transform="translate(1390,296)">
+      <rect width="160" height="108" fill="#FFFFFF" stroke="#1F2430" stroke-width="4"/>
+      <rect width="160" height="30" fill="#1F2430"/>
+      <path d="M0 62 H160 M0 86 H160 M53 30 V108 M106 30 V108" stroke="#1F2430" stroke-width="2.5"/>
+    </g>
+  </g>
+
+  <!-- solid arrows -->
+  <g stroke="#4A5BD9" stroke-width="7" fill="none" stroke-linecap="round">
+    <path d="M396 290 L446 290" marker-end="url(#arr)"/>
+    <path d="M806 290 L846 290" marker-end="url(#arr)"/>
+    <path d="M1112 290 L1166 290" marker-end="url(#arr)"/>
+  </g>
+
+  <!-- captions -->
+  <g text-anchor="middle" fill="#1F2430">
+    <text x="210" y="510" font-size="34" font-weight="700">Assistente</text>
+    <text x="210" y="552" font-size="25" fill="#5A5F6B">il modello sta presso</text>
+    <text x="210" y="584" font-size="25" fill="#5A5F6B">il fornitore</text>
+
+    <text x="600" y="510" font-size="34" font-weight="700">Chiave API</text>
+    <text x="600" y="552" font-size="25" fill="#5A5F6B">una per assistente</text>
+
+    <text x="975" y="510" font-size="34" font-weight="700">BraDypUS</text>
+    <text x="975" y="552" font-size="25" fill="#5A5F6B">gruppo, regole su tabelle</text>
+    <text x="975" y="584" font-size="25" fill="#5A5F6B">e righe, blocchi</text>
+
+    <text x="1370" y="510" font-size="34" font-weight="700">Database</text>
+    <text x="1370" y="552" font-size="25" fill="#5A5F6B">solo ciò che la chiave</text>
+    <text x="1370" y="584" font-size="25" fill="#5A5F6B">può vedere</text>
+  </g>
+
+  <!-- data going back out to the provider -->
+  <path d="M975 640 L975 760 L210 760 L210 640" fill="none" stroke="#C8442F" stroke-width="6" stroke-dasharray="16 12" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrred)"/>
+  <text x="592" y="735" text-anchor="middle" font-size="29" font-weight="600" fill="#C8442F">Le risposte arrivano al fornitore del modello</text>
+</svg>

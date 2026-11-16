@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2000 1250" width="2000" height="1250">
+  <defs>
+    <marker id="a" viewBox="0 0 30 30" refX="26" refY="15" markerWidth="30" markerHeight="30" markerUnits="userSpaceOnUse" orient="auto">
+      <path d="M3 4 L27 15 L3 26 Z" fill="#4A5BD9"/>
+    </marker>
+  </defs>
+  <rect width="2000" height="1250" fill="#F5F3EE"/>
+  <g transform="translate(0,70)">
+
+  <!-- excavation square (terracotta grid) -->
+  <g>
+    <rect x="130" y="170" width="760" height="700" fill="#C9694B"/>
+    <g stroke="#B0553A" stroke-width="3">
+      <path d="M130 270H890 M130 370H890 M130 470H890 M130 570H890 M130 670H890 M130 770H890"/>
+      <path d="M230 170V870 M330 170V870 M430 170V870 M530 170V870 M630 170V870 M730 170V870 M830 170V870"/>
+    </g>
+    <path d="M990 870 V1040 M910 960 H1070" stroke="#C9694B" stroke-width="3" opacity=".8"/>
+  </g>
+
+  <!-- pot -->
+  <g>
+    <path d="M250 470 Q246 392 318 386 L402 386 Q474 392 470 470 Q468 568 360 604 Q252 568 250 470 Z" fill="#E08A66" stroke="#1F2430" stroke-width="5" stroke-linejoin="round"/>
+    <ellipse cx="360" cy="384" rx="70" ry="15" fill="#1F2430"/>
+    <path d="M262 480 L286 456 L310 480 L334 456 L358 480 L382 456 L406 480 L430 456 L454 480" fill="none" stroke="#1F2430" stroke-width="6" stroke-linejoin="round"/>
+    <path d="M276 520 H444" stroke="#1F2430" stroke-width="5"/>
+  </g>
+
+  <!-- fibula (brooch) -->
+  <g fill="none" stroke="#1F2430" stroke-width="9" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M556 640 C556 556 676 556 716 626"/>
+    <path d="M556 650 C600 660 690 660 752 654"/>
+    <circle cx="548" cy="640" r="15" fill="#C9694B"/>
+    <path d="M716 626 L726 676 H772 L762 640 Z" fill="#F5F3EE" stroke-width="6"/>
+  </g>
+  <!-- coin -->
+  <g>
+    <circle cx="640" cy="760" r="58" fill="#3C4150" stroke="#1F2430" stroke-width="5"/>
+    <circle cx="640" cy="760" r="42" fill="none" stroke="#7A7F8C" stroke-width="4"/>
+    <path d="M626 780 C618 756 628 738 648 736 C664 738 668 752 660 764 L652 780 Z" fill="#7A7F8C"/>
+  </g>
+
+  <!-- find tags -->
+  <g>
+    <g transform="rotate(-16 560 270)">
+      <rect x="500" y="236" width="150" height="76" rx="12" fill="#F5F3EE" stroke="#1F2430" stroke-width="4"/>
+      <circle cx="526" cy="274" r="9" fill="#C9694B" stroke="#1F2430" stroke-width="3"/>
+      <path d="M544 262H624 M544 284H600" stroke="#B9B2A8" stroke-width="6" stroke-linecap="round"/>
+    </g>
+    <path d="M486 256 C440 230 440 300 500 292" fill="none" stroke="#1F2430" stroke-width="3"/>
+    <g transform="rotate(14 250 760)">
+      <rect x="190" y="728" width="150" height="76" rx="12" fill="#F5F3EE" stroke="#1F2430" stroke-width="4"/>
+      <circle cx="216" cy="766" r="9" fill="#C9694B" stroke="#1F2430" stroke-width="3"/>
+      <path d="M234 754H314 M234 776H290" stroke="#B9B2A8" stroke-width="6" stroke-linecap="round"/>
+    </g>
+  </g>
+
+  <!-- link: assistant -> gate -> tables -->
+  <path d="M1190 420 H1480" fill="none" stroke="#4A5BD9" stroke-width="8" stroke-linecap="round" marker-end="url(#a)"/>
+
+  <!-- assistant: speech bubble with sparkle -->
+  <g>
+    <rect x="930" y="330" width="260" height="180" rx="40" fill="#4A5BD9"/>
+    <path d="M990 510 L968 568 L1050 510 Z" fill="#4A5BD9"/>
+    <path d="M1060 362 L1076 418 L1132 434 L1076 450 L1060 506 L1044 450 L988 434 L1044 418 Z" fill="#F5F3EE"/>
+    <circle cx="1144" cy="380" r="9" fill="#F5F3EE"/>
+  </g>
+
+  <!-- gate with a hanging key -->
+  <g>
+    <rect x="1272" y="360" width="34" height="270" fill="#1F2430"/>
+    <rect x="1372" y="360" width="34" height="270" fill="#1F2430"/>
+    <path d="M1252 360 H1426" stroke="#1F2430" stroke-width="34" stroke-linecap="round"/>
+    <g transform="translate(1294,377)">
+      <path d="M45 0 V82" stroke="#4A5BD9" stroke-width="10" stroke-linecap="round"/>
+      <circle cx="45" cy="124" r="40" fill="none" stroke="#4A5BD9" stroke-width="20"/>
+      <rect x="35" y="164" width="20" height="140" rx="5" fill="#4A5BD9"/>
+      <rect x="55" y="258" width="38" height="18" rx="4" fill="#4A5BD9"/>
+      <rect x="55" y="286" width="28" height="16" rx="4" fill="#4A5BD9"/>
+    </g>
+  </g>
+
+  <!-- tables -->
+  <g stroke="#4A5BD9" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M1620 335 V470 H1700 M1620 470 V610 H1560 M1780 520 V610 H1830 V690"/>
+  </g>
+  <g>
+    <g transform="translate(1500,200)">
+      <rect width="240" height="135" fill="#FFFFFF" stroke="#1F2430" stroke-width="5"/>
+      <rect width="240" height="38" fill="#1F2430"/>
+      <path d="M0 78H240 M0 108H240 M80 38V135 M160 38V135" stroke="#1F2430" stroke-width="3"/>
+    </g>
+    <g transform="translate(1660,430)">
+      <rect width="260" height="135" fill="#FFFFFF" stroke="#1F2430" stroke-width="5"/>
+      <rect width="260" height="38" fill="#1F2430"/>
+      <path d="M0 78H260 M0 108H260 M87 38V135 M174 38V135" stroke="#1F2430" stroke-width="3"/>
+    </g>
+    <g transform="translate(1420,600)">
+      <rect width="220" height="135" fill="#FFFFFF" stroke="#1F2430" stroke-width="5"/>
+      <rect width="220" height="38" fill="#1F2430"/>
+      <path d="M0 78H220 M0 108H220 M73 38V135 M146 38V135" stroke="#1F2430" stroke-width="3"/>
+    </g>
+    <g transform="translate(1690,690)">
+      <rect width="230" height="135" fill="#FFFFFF" stroke="#1F2430" stroke-width="5"/>
+      <rect width="230" height="38" fill="#1F2430"/>
+      <path d="M0 78H230 M0 108H230 M77 38V135 M154 38V135" stroke="#1F2430" stroke-width="3"/>
+    </g>
+  </g>
+    </g>
+</svg>
